@@ -1,0 +1,128 @@
+
+html {
+	--sans-serif: Rubik, Helvetica;
+	--serif: Noto Serif Display, Old Standard TT, Times New Roman;
+
+	
+}
+a {
+	font-family: var(--sans-serif);
+	font-weight: 200;
+	letter-spacing: .06rem;
+}
+
+
+a:hover {
+	text-decoration: underline;
+	color: var(--highlight);
+}
+
+@media (prefers-color-scheme: dark) {
+	a:hover {
+		color: var(--highlight);
+	}
+}
+/* Main header or banner text or similar */
+.screaming-voice {
+	font-family: var(--marker);
+	font-size: clamp(60px, 8vw, 160px);
+}
+
+/* Header text or similar */
+.loud-voice {
+	font-family: var(--sans-serif);
+	font-size: 2rem;
+}
+/* Sub-header text or similar */
+.attention-voice {
+	font-family: var(--sans-serif);
+	font-size: 1.5rem;
+}
+
+/* Paragraph text or similar */
+.normal-voice {
+	font-size: 1rem;
+}
+
+/* Caption text or similar */
+.calm-voice {
+
+}
+
+/* Fine print text or similar */
+.quiet-voice {
+
+}
+@media (min-width: 600px) {
+	.loud-voice {
+		font-weight: 700; /* or variable font */
+	}
+}
+
+.attention-voice	{
+	font-family: sans-serif;
+	font-size: clamp(1.2rem, 3vw, 1.7rem);
+	text-transform: uppercase;
+}
+
+
+.title {
+	font-family: var(--sans-serif);
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: clamp(1.5rem, 5vw, 2rem);
+}
+
+/* - - SITE MENU - - */
+.site-menu a {
+	font-size: .9rem;
+}
+
+.x-menu .strong-voice	{
+	font-family: var(--sans-serif);
+	font-size:  1.2rem;
+	text-transform: uppercase;
+}
+
+.x-menu a {
+	font-size: .9rem;
+}
+.calm-voice, p, li {
+	font-family: var(--sans-serif);
+	font-size: .8rem;
+	font-weight: 300;
+	line-height: 1.4;
+	letter-spacing: .05rem;
+}
+
+.calm-voice, articles-intro p {
+	font-family: var(--sans-serif);
+	font-size: clamp(.8rem 2vw 1.1rem);
+	font-weight: 300;
+	text-transform: uppercase;
+	line-height: 1.4;
+	letter-spacing: .05rem;
+}
+
+article-intro header h2, article-intro header p{
+	text-transform: uppercase;
+}
+
+@media (min-width: 600px) {
+	.calm-voice, p, li {
+		font-size: 1rem;
+		font-weight: 300;
+	}
+}
+
+:is(.calm-voice, p, li) em {
+	font-style: italic;
+}
+
+:is(.calm-voice, p, li) strong {
+	font-weight: 700;
+}
+
+
+
+
