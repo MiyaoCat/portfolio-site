@@ -1,9 +1,9 @@
 <?php include("header.php"); ?>
 
 	<section class='page-header'>
-		<div class='heading-wrap home'>
-			<h1 class="title1">JOHN</h1>
-			<h1 class="title2">MIYAO</h1>
+		<div class='heading-wrap'>
+			<h1 class="title1">Projects</h1>
+			<!-- <h1 class="title2">ME</h1> -->
 		</div>
 	</section>
 	
@@ -26,7 +26,6 @@
 
 
 <?php include("footer.php"); ?>
-
 
 
 

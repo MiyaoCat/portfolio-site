@@ -27,7 +27,7 @@ body {
 	min-height: 100vh;
 	grid-template-rows: auto repeat(7, 1fr) auto;
 	font-family: Rubik;
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -36,21 +36,22 @@ body {
 	grid-column: 1 / -1;
 	grid-row:  1 / 5;
 	background-color: lawngreen;
+	transition: 1s ease-in-out;
 }
 
 .site-header {
 	grid-row: 1;
-	grid-column-start: 15;
+	grid-column-start: 14;
 	border: 1px solid black;
 	display: flex;
 	justify-content: flex-end;
 }
 
 nav {
-	border: 1px solid black;
 	margin: 2px;
 	grid-column: span 6;
 }
+
 nav ul {
 	display: flex;
 	flex-direction: row;
@@ -118,11 +119,15 @@ nav a {
 	justify-content: center;
 }
 
+svg {
+	max-width: 30px;
+}
 
 @media (min-width: 650px) {
 	.background {
 		grid-column: 2 / 10;
 		grid-row: 1 / -1;
+			transition: 1s ease-in-out;
 	}
 
 	body {

@@ -23,7 +23,7 @@ html {
 @media (prefers-color-scheme: dark) {
 	html {
 		--paper: hsl(28, 17%, 30%); /* dark brown */
-		--ink: white;
+		--ink: black;
 		--highlight: yellow;
 	}
 
