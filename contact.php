@@ -2,8 +2,12 @@
 
 	<section class='page-header'>
 		<div class='heading-wrap'>
-			<h1 class="title1">CONTACT</h1>
-			<h1 class="title2">ME</h1>
+			<div class="title1">
+				<h1 class="title1">CONTACT</h1>
+			</div>
+			<div class="title2">
+				<h1 class="title2">ME</h1>
+			</div>
 		</div>
 	</section>
 	

@@ -26,6 +26,7 @@ a:hover {
 .screaming-voice {
 	font-family: var(--marker);
 	font-size: clamp(60px, 8vw, 160px);
+	font-weight: 700;
 }
 
 /* Header text or similar */

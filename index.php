@@ -2,8 +2,12 @@
 
 	<section class='page-header'>
 		<div class='heading-wrap home'>
-			<h1 class="title1">JOHN</h1>
-			<h1 class="title2">MIYAO</h1>
+			<div class="title1">
+				<h1 class="screaming-voice">JOHN</h1>
+			</div>
+			<div class="title2">
+				<h1 class="screaming-voice">MIYAO</h1>
+			</div>
 		</div>
 	</section>
 	

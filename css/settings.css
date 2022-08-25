@@ -1,4 +1,4 @@
-
+/*hsl(28, 17%, 30%);*/ /* dark brown */
 html {
 	--black: #111111;
 	--white: #FFF;
@@ -15,6 +15,7 @@ html {
 	--wide: 98vw;
 
 	--paper: hsl(37, 32%, 92%); /* light brown */
+	--background: lawngreen;
 
 	--ink: black;
 	--highlight: hsl(360, 100%, 39%); /* red */
@@ -22,9 +23,10 @@ html {
 
 @media (prefers-color-scheme: dark) {
 	html {
-		--paper: hsl(28, 17%, 30%); /* dark brown */
-		--ink: black;
+		--paper: #3f1414;
+		--ink: lawngreen;
 		--highlight: yellow;
+		--background: #14182f;
 	}
 
 	.logo {

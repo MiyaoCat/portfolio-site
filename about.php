@@ -1,13 +1,17 @@
 <?php include("header.php"); ?>
 
-	<section class='page-header'>
+	<section class='about page-header'>
 		<div class='heading-wrap'>
-			<h1 class="title1">ABOUT</h1>
-			<h1 class="title2">ME</h1>
+			<div class="title1">
+				<h1 class="screaming-voice">ABOUT ME</h1>
+			</div>
+			<div class="title2">
+				<!-- <h1 class="screaming-voice">ME</h1> -->
+			</div>
 		</div>
 	</section>
 	
-	<section class='page-content'>
+	<section class='about page-content'>
 		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus asperiores, fugiat repellendus explicabo perferendis, omnis beatae expedita accusantium tempora laborum.</p>
 	
 		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus asperiores, fugiat repellendus explicabo perferendis, omnis beatae expedita accusantium tempora laborum.</p>
@@ -15,9 +19,54 @@
 		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus asperiores, fugiat repellendus explicabo perferendis, omnis beatae expedita accusantium tempora laborum.</p>
 	</section>
 
+	<section class="socials">
+		<ul>
+			<li>
+				<div class='logo'>
+					<p>Hello</p>
+					<a href="#">
+						<svg viewBox="0 0 10 10">
+							<rect width="30" height="30" fill="blue" /></a>
+						</svg>
+					</a>
+				</div>
+			</li>
+			<li>
+				<div class='logo'>
+					<p>hello</p>
+					<a href="#">
+						<svg viewBox="0 0 10 10">
+							<rect width="30" height="30" fill="blue" /></a>
+						</svg>
+					</a>
+				</div>
+			</li>
+			<li>
+				<div class='logo'>
+					<p>hello</p>
+					<a href="#">
+						<svg viewBox="0 0 10 10">
+							<rect width="30" height="30" fill="blue" /></a>
+						</svg>
+					</a>
+				</div>
+			</li>
+
+			<li>
+				<div class='logo'>
+					<p>hello</p>
+					<a href="#">
+						<svg viewBox="0 0 10 10">
+							<rect width="50" height="50" fill="blue" /></a>
+						</svg>
+					</a>
+				</div>
+			</li>
+		</ul>
+	</section>
 	<section class="image">
 		<picture>
-			<img src="images/selfie.jpg" alt="">
+			<img src="images/selfie-gradient.png" alt="">
 		</picture>
 	</section>
 
