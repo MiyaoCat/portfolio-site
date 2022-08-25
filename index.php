@@ -1,32 +1,27 @@
 <?php include("header.php"); ?>
 
-	<section class='page-header'>
-		<div class='heading-wrap home'>
-			<div class="title1">
-				<h1 class="screaming-voice">JOHN</h1>
-			</div>
-			<div class="title2">
-				<h1 class="screaming-voice">MIYAO</h1>
-			</div>
-		</div>
-	</section>
+<section class='page-header'>
+	<?php 
+		$title1 = "john";
+		$title2 = "miyao";
+		include("modules/page-header/page-header.php"); 
+	?>
+</section>
 	
-	<section class='page-content'>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus asperiores, fugiat repellendus explicabo perferendis, omnis beatae expedita accusantium tempora laborum.</p>
+<section class="page-content">
 	
-		<!-- 	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus asperiores, fugiat repellendus explicabo perferendis, omnis beatae expedita accusantium tempora laborum.</p>
-	
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus asperiores, fugiat repellendus explicabo perferendis, omnis beatae expedita accusantium tempora laborum.</p> -->
-	</section>
+	<?php include("modules/generic-text/generic-text.php"); ?>
+		
+</section>
 
-	<!-- <section class='cta'>
-		<div class='button'>CTA</div>
-	</section> -->
+<!-- <section class='cta'>
+	<div class='button'>CTA</div>
+</section> -->
 
-	<section class='bonus-content'>
+<section class='bonus-content'>
 			
-	</section>
-	<!-- </main> -->
+</section>
+
 
 
 <?php include("footer.php"); ?>

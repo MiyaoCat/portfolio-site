@@ -8,7 +8,7 @@
 
 	<title>2</title>
 
-	<link rel="stylesheet" href="css/site.css">
+	<link rel="stylesheet" href="styles/site.css">
 </head>
 
 <body>
