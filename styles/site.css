@@ -34,7 +34,7 @@ body {
 }
 
 .background {
-	grid-column: 2 / -14;
+	grid-column: 2 / 14;
 	grid-row:  1 / 5;
 	background-color: var(--background);
 	/*transition: 1s ease-in-out;*/
@@ -92,7 +92,7 @@ nav a {
 
 
 .page-content {
-	grid-column: 1 / 14;
+	grid-column: 2 / 14;
 	grid-row: 5;
 	margin: 0;	
 }
@@ -113,8 +113,9 @@ nav a {
 
 .socials ul {
 	display: flex;
-	gap: 50px;
-	width: 100px;
+	justify-content: center;
+	gap: 20px;
+	border: 1px solid red;
 }
 
 .button {
@@ -132,30 +133,32 @@ nav a {
 }
 
 /* - - PROJECTS - -  */
-.projects.page-header {
-	grid-row: 2;
-}
-
-.projects.page-content {
-	grid-row: 3;
-	grid-column: 5 / 10;
-}
-
 project-card {
-	display: flex;
-	flex-direction: row;
-	grid-row: 4;
-	grid-column: 5 / span 6;
+	display: block;
+	grid-row: 6;
+	grid-column: 2 / 14;
+	margin-top: 20px;
 }
 
+.project-card.intro {
+	display: grid;
+	align-items: space-between;
+}
+
+.project-card h2 {
+	/*writing-mode: vertical-rl;*/
+}
 .project-image {
-	max-width: 400px;
-	margin-left: 100px;
+	max-width: 300px;
+}
+
+.project-image  {
+	box-shadow: 10px 10px black;
 }
 
 /* - - FOOTER - -  */
 .site-footer {
-	grid-row: 9;
+	grid-row: -1;
 	grid-column: 2 / 14;
 	border: 1px solid black;
 	display: flex;
@@ -210,7 +213,8 @@ svg {
 	}
 
 	.about.page-content {
-		grid-column: 3 / 9;
+		grid-row: 5;
+		grid-column: 6 / 10;
 	}
 	.about.page-header {
 		grid-row: 3;
@@ -219,13 +223,13 @@ svg {
 	}
 	.image {
 		display: block;
-		min-width: 150px;
-		grid-row: 3 / span 2;
-		grid-column: 11 ;
+		max-width: 250px;
+		grid-row: 4 / span 2;
+		grid-column: 12 ;
 		margin-top: 50px;
 	}
 
-	picture {
+	.image picture {
 		box-shadow: 5px 5px lawngreen;
 	}
 
@@ -240,6 +244,27 @@ svg {
 	.socials {
 	grid-row: 7;
 	grid-column: 4 / span 3;
-}
+	}
+
+	.projects.page-header {
+	grid-row: 2;
+	}
+
+	.projects.page-content {
+		grid-row: 3;
+		grid-column: 5 / 10;
+	}
+
+	project-card {
+		display: flex;
+		flex-direction: row;
+		grid-row: 4;
+		grid-column: 5 / span 6;
+	}
+
+	.project-image {
+		max-width: 400px;
+		margin-left: 100px;
+	}
 
 }
