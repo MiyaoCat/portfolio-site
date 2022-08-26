@@ -1,4 +1,4 @@
-<?php include("header.php"); ?>
+<?php include("partials/header/header.php"); ?>
 
 <section class='projects page-header'>
 	<?php 
@@ -9,24 +9,13 @@
 </section>
 
 <section class='projects page-content'>
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus asperiores, fugiat repellendus explicabo perferendis, omnis beatae expedita accusantium tempora laborum.</p>
+	<?php 
+		$content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, inventore!";
+		include("modules/generic-text/generic-text.php"); ?>
 
-	<!-- 	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus asperiores, fugiat repellendus explicabo perferendis, omnis beatae expedita accusantium tempora laborum.</p>
-
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus asperiores, fugiat repellendus explicabo perferendis, omnis beatae expedita accusantium tempora laborum.</p> -->
 </section>
 
-<project-card>
-	<div class="project-card intro">
-		<h2 class="loud-voice">Form Exercises</h2>
-		<p class="normal-voice">Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Ut obcaecati, modi, delectus nemo dignissimos eius nesciunt! Possimus a quos architecto?</p>
-	</div>
-
-	<picture class="project-image">
-		<img src="https://peprojects.dev/images/landscape.jpg" alt="">
-	</picture>
-	
-</project-card>
+<?php include("modules/project-card/project-card.php"); ?>
 <!-- <section class='cta'>
 	<div class='button'>CTA</div>
 </section> -->
@@ -37,7 +26,7 @@
 <!-- </main> -->
 
 
-<?php include("footer.php"); ?>
+<?php include("partials/footer/footer.php"); ?>
 
 
 

@@ -1,12 +1,12 @@
-<?php include("header.php"); ?>
+<?php include("partials/header/header.php"); ?>
 
-<section class='page-header'>
-	<?php 
-		$title1 = "john";
-		$title2 = "miyao";
-		include("modules/page-header/page-header.php"); 
-	?>
-</section>
+<!-- PAGE HEADER -->
+<?php 
+	$title1 = "john";
+	$title2 = "miyao";
+	include("modules/page-header/page-header.php"); 
+?>
+
 	
 <section class="page-content">
 	
@@ -18,13 +18,15 @@
 	<div class='button'>CTA</div>
 </section> -->
 
-<section class='bonus-content'>
-			
+<section class='latest-projects'>
+	<?php include("modules/projects-spotlight/projects-spotlight.php"); ?>
 </section>
 
 
 
-<?php include("footer.php"); ?>
+
+
+<?php include("partials/footer/footer.php"); ?>
 
 
 

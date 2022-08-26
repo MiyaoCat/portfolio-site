@@ -1,0 +1,34 @@
+.site-header {
+	grid-row: 1;
+	grid-column-end: 14;
+	border: 1px solid black;
+	display: flex;
+	justify-content: flex-end;
+}
+
+nav {
+	margin: 2px;
+	grid-column: span 6;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+	gap: 30px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+nav a {
+	writing-mode: vertical-rl;
+	text-decoration: none;
+}
+
+@media (min-width: 700px) {
+	.site-header {
+		grid-column-end: 14;
+	}
+	
+}

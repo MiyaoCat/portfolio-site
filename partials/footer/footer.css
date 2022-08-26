@@ -1,0 +1,11 @@
+/* - - FOOTER - -  */
+.site-footer {
+	grid-row: -1;
+	grid-column: 2 / 14;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px 0 50px 0;
+	gap: 10px;
+}
+

@@ -1,4 +1,4 @@
-<?php include("header.php"); ?>
+<?php include("partials/header/header.php"); ?>
 
 	<section class='page-header'>
 		<?php 
@@ -9,7 +9,9 @@
 	</section>
 	
 	<section class='page-content'>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus asperiores, fugiat repellendus explicabo perferendis, omnis beatae expedita accusantium tempora laborum.</p>
+		<?php 
+			include("modules/generic-text/generic-text.php"); 
+		?>
 	</section>
 
 	<!-- <section class='cta'>
@@ -21,7 +23,7 @@
 	</section>
 
 
-<?php include("footer.php"); ?>
+<?php include("partials/footer/footer.php"); ?>
 
 
 

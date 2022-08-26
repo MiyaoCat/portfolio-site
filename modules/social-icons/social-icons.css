@@ -1,0 +1,20 @@
+.socials {
+	grid-row-start: 8;
+	grid-column: 2 / 14;
+	border: 2px solid blue;
+}
+
+.socials ul {
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+	border: 1px solid red;
+}
+
+@media (min-width: 700px) {
+	.socials {
+		grid-row: 7;
+		grid-column: 4 / span 3;
+	}
+
+}

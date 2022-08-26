@@ -1,5 +1,4 @@
-<?php include("header.php"); ?>
-
+<?php include("partials/header/header.php"); ?>
 <section class="page-header">
 
 	<?php 
@@ -27,7 +26,7 @@
 
 <?php include("modules/social-icons/social-icons.php"); ?>
 
-<?php include("footer.php"); ?>
+<?php include("partials/footer/footer.php"); ?>
 
 
 
