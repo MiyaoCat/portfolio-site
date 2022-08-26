@@ -1,3 +1,7 @@
+social-icons {
+	display: block;
+}
+
 .socials {
 	grid-row-start: 8;
 	grid-column: 2 / 14;

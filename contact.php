@@ -8,18 +8,10 @@
 		?>
 	</section>
 	
-	<section class='page-content'>
+	<section class="contact page-intro">
 		<?php 
 			include("modules/generic-text/generic-text.php"); 
 		?>
-	</section>
-
-	<!-- <section class='cta'>
-		<div class='button'>CTA</div>
-	</section> -->
-
-	<section class='bonus-content'>
-			
 	</section>
 
 

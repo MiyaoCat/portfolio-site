@@ -8,21 +8,16 @@
 	?>
 </section>
 
-<section class='projects page-content'>
+<section class='projects page-intro'>
 	<?php 
 		$content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, inventore!";
 		include("modules/generic-text/generic-text.php"); ?>
 
 </section>
-
+	
 <?php include("modules/project-card/project-card.php"); ?>
-<!-- <section class='cta'>
-	<div class='button'>CTA</div>
-</section> -->
 
-<section class='bonus-content'>
-		
-</section>
+
 <!-- </main> -->
 
 

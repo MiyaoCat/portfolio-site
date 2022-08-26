@@ -27,7 +27,9 @@ a:hover {
 	font-family: var(--marker);
 	font-size: clamp(60px, 8vw, 160px);
 	font-weight: 700;
-	/*letter-spacing: -9em;*/
+	text-transform: uppercase;
+	letter-spacing: .034em;
+	line-height: .8em;
 }
 
 /* Header text or similar */

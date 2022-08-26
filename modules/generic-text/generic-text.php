@@ -4,5 +4,8 @@
 		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus asperiores, fugiat repellendus explicabo perferendis, omnis beatae expedita accusantium tempora laborum.</p>";
 ?>
 
-
+<generic-text>
 	<p class="normal-voice"><?=$content?></p>
+</generic-text>
+
+

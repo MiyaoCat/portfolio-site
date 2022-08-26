@@ -25,7 +25,7 @@ project-card {
 		grid-row: 2;
 	}
 
-	.projects.page-content {
+	.projects.page-intro {
 		grid-row: 3;
 		grid-column: 5 / 10;
 	}

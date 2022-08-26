@@ -1,24 +1,34 @@
 
+
 style-guide {
 	display: block;
 }
 
 style-guide.page-header {
-	grid-row-start: 2;
+	grid-row: 2;
 }
 
 style-guide.generic-text {
-	grid-row: 5;
-	grid-column: 2 / span 13;
+	grid-row: 3;
+	grid-column: 2/ 14;
 }
 
 body style-guide * {
 	margin: 5px;
 }
 
+style-guide.project-card {
+	grid-row: 4;
+	grid-column: 2 / 14;
+}
+
 @media (min-width: 700px) {
 	style-guide.generic-text {
 		grid-column: 2 / 10;
-		grid-row: 4;
 	}
+
+	style-guide.project-card {
+	grid-column: 2 / 10;
+	}
+
 }

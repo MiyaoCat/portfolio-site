@@ -8,20 +8,16 @@
 ?>
 
 	
-<section class="page-content">
+<section class="home page-intro">
 	
 	<?php include("modules/generic-text/generic-text.php"); ?>
 		
 </section>
 
-<!-- <section class='cta'>
-	<div class='button'>CTA</div>
-</section> -->
-
-<section class='latest-projects'>
-	<?php include("modules/projects-spotlight/projects-spotlight.php"); ?>
+<!-- <section class="cta">
+	
 </section>
-
+ -->
 
 
 

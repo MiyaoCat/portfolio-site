@@ -1,4 +1,4 @@
-<section class="socials">
+<social-icons>
 	<ul>
 		<li>
 			<div class='logo'>
@@ -42,4 +42,4 @@
 			</div>
 		</li>
 	</ul>
-</section>
+</social-icons>

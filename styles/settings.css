@@ -1,4 +1,5 @@
 /*hsl(28, 17%, 30%);*/ /* dark brown */
+/*hsl(37, 32%, 92%) light brown */
 html {
 	--black: #111111;
 	--white: #FFF;
@@ -14,7 +15,7 @@ html {
 	--tight: 800px;
 	--wide: 98vw;
 
-	--paper: hsl(37, 32%, 92%); /* light brown */
+	--paper: hsl(303, 100%, 50%); /*bright pink/purple */ 
 	--background: lawngreen;
 
 	--ink: black;
