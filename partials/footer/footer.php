@@ -1,5 +1,5 @@
 <footer class="site-footer">
-
+		<div class="query-string"><?php echo "?" . queryString(); ?></div>
 		<div class='logo'>
 			<a href="?page=home">
 				<svg viewBox="0 0 10 10">
@@ -8,7 +8,7 @@
 			</a>
 		</div>
 
-		<a href="../../style-guide.php">Style Guide</a>
+		<a href="?page=style-guide">Style Guide</a>
 	</footer>
 </body>
 

@@ -1,12 +1,11 @@
-<?php include("partials/header/header.php"); ?>
 
-	<section class='page-header'>
+	<header class="contact page-header">
 		<?php 
 			$title1 = "Contact";
 			$title2 = "Me";
 			include("modules/page-header/page-header.php"); 
 		?>
-	</section>
+	</header>
 	
 	<section class="contact page-intro">
 		<?php 
@@ -15,7 +14,6 @@
 	</section>
 
 
-<?php include("partials/footer/footer.php"); ?>
 
 
 

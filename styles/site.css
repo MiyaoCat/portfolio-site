@@ -5,7 +5,10 @@
 @import 'typography.css';
 
 /* - - PAGES - - */
+@import 'pages/home.css';
+@import 'pages/contact.css';
 @import 'pages/about.css';
+@import 'pages/projects.css';
 
 /* - - MODULES - - */
 @import 'modules.css';

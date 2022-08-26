@@ -2,22 +2,33 @@
 	display: none;
 }
 
+.about.social-icons {
+	grid-row: 8;
+	grid-column: 2 / 14;
+}
+
+
 @media (min-width: 700px) {
 	/* - - PAGE HEADER - - */
 	.about.page-header {
 		grid-row: 3;
 		grid-column-start: 3;
-		align-items: flex-start;
+		align-items: flex-end;
 	}
 	
-	.about .title2 {
-		transform: translateX(clamp(10em, 15em, 20em));
+	.about.title1 {
+		transform: rotate(-5deg) translateX(-5em);
+	}
+
+	.about.title2 {
+		text-align: right;
 	}
 
 	/* - - PAGE INTRO - - */
 	.about.page-intro {
 		grid-row: 4;
 		grid-column: 6 / 10;
+		transform: translateX(-5em);
 	}
 
 	/* - - FIGURE - - */
