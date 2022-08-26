@@ -1,7 +1,7 @@
 <footer class="site-footer">
 
 		<div class='logo'>
-			<a href="../../index.php">
+			<a href="?page=home">
 				<svg viewBox="0 0 10 10">
 					<circle cx="5" cy="5" r="5" fill="black" /></a>
 				</svg>

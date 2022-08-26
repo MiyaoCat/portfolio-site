@@ -17,9 +17,9 @@
 	<header class="site-header">
 		<nav>
 			<ul>
-				<li><a href="contact.php">Contact Me</a></li>
-				<li><a href="about.php">About Me</a></li>
-				<li><a href="projects.php">Projects</a></li>
+				<li><a href="?page=contact">Contact Me</a></li>
+				<li><a href="?page=about">About Me</a></li>
+				<li><a href="?page=projects">Projects</a></li>
 			</ul>
 		</nav>
 	</header>

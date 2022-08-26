@@ -1,25 +1,33 @@
 <?php include("partials/header/header.php"); ?>
-
+<?php include("functions.php"); ?>
 <!-- PAGE HEADER -->
-<?php 
-	$title1 = "john";
-	$title2 = "miyao";
-	include("modules/page-header/page-header.php"); 
-?>
+<?php echo "?" . queryString(); ?>
 
+
+<div class="router">
+	<?php 
+		$page = "home";
+		if ( isset($_GET["page"]) ) {
+			$page = $_GET["page"];
+		}
 	
-<section class="home page-intro">
+		if ($page == "home") {
+			echo "home";
+		}
 	
-	<?php include("modules/generic-text/generic-text.php"); ?>
-		
-</section>
-
-<!-- <section class="cta">
+		if ($page == "contact") {
+			echo "contact";
+		}
 	
-</section>
- -->
-
-
+		if ($page == "about") {
+			echo "about";
+		}
+	
+		if ($page == "projects") {
+			echo "projects";
+		}
+	?>
+</div>
 
 
 <?php include("partials/footer/footer.php"); ?>

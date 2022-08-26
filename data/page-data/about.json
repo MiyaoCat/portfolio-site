@@ -7,5 +7,12 @@
 			"title1": "About",
 			"title2": "Me"
 		}
+	],
+
+	"sections": [
+		{
+			"module": "generic-text",
+			"content": "Welcome to my site! Make yourself at home and click around."
+		}
 	]
 }
