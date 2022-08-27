@@ -7,7 +7,12 @@
 	grid-column: 2 / 14;
 }
 
+	/* - - BUTTON - - */
 
+button {
+	grid-row: 7;
+	grid-column: 7 / 9;
+}	
 @media (min-width: 700px) {
 	/* - - PAGE HEADER - - */
 	.about.page-header {
@@ -41,5 +46,10 @@
 	.about.photos picture {
 		box-shadow: 5px 5px lawngreen;
 	}
+
+	button {
+		grid-row: 7;
+		grid-column: 7 / 9;
+	}	
 
 }
