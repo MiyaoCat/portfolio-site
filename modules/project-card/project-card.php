@@ -1,12 +1,32 @@
-<project-card>
-	<div class="project-title">
-	<a href="#">
-		<h2 class="loud-voice">Form Exercises</h2>
-		<!-- <h2 class="loud-voice">Exercises</h2> -->
-	</a>
-	</div>
-	<p class="normal-voice">Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Ut obcaecati, modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quasi quibusdam libero laudantium possimus suscipit voluptates assumenda minima atque officiis nam tempora obcaecati nostrum impedit eveniet facere repellendus cum, molestias quo voluptatibus quisquam perferendis minus rem voluptatem recusandae. Non eaque laboriosam hic quae explicabo repellat nesciunt eos quas exercitationem, itaque.</p>
+<?php 
+	$json = file_get_contents("data/projects.json");
+	$projects = json_decode($json, true);
+?>
 
+<project-card>
+
+	<?php foreach ($projects as $project) { 
+		$title = $project["title"];
+		$slug = $project["slug"];
+		$teaser = $project["teaser"];
+		$url = $project["url"];
+	?>
+	<div class="project-title">
+		<a href="<?=$url?>">
+			<h2 class="loud-voice"><?=$title?></h2>
+			<!-- <h2 class="loud-voice">Exercises</h2> -->
+		</a>
+	</div>
+
+	<ul class="languages">
+		<?php foreach ($project["languages"] as $languages) { ?>
+			<li><?=$languages?></li>
+	<?php } ?>
+	</ul>
+	 
+	<p class="normal-voice"><?=$teaser?></p>
+
+	<?php } ?>
 		
 </project-card>
 

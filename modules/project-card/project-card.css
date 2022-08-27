@@ -13,7 +13,10 @@ project-card {
 	/*writing-mode: vertical-rl;*/
 }
 
-
+.languages {
+	display: flex;
+	flex-direction: row;
+}
 .project-image  {
 	box-shadow: 10px 10px black;
 	display: none;
