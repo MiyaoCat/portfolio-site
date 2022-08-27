@@ -22,7 +22,9 @@
 </section>
 
 
-
+<button class="resume">
+	<a href="?page=resume">Resume</a>
+</button>
 
 
 

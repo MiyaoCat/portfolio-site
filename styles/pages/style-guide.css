@@ -18,7 +18,7 @@ body style-guide * {
 }
 
 style-guide.project-card {
-	grid-row: 4;
+	grid-row-start: 9;
 	grid-column: 2 / 14;
 }
 
@@ -28,7 +28,8 @@ style-guide.project-card {
 	}
 
 	style-guide.project-card {
-	grid-column: 2 / 10;
+		grid-row: 4;
+		grid-column: 2 / 10;
 	}
 
 }

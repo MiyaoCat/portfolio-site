@@ -30,6 +30,10 @@
 		if ($page == "style-guide") {
 			include("pages/style-guide.php");
 		}
+
+		if ($page == "resume") {
+			include("pages/resume.php");
+		}
 	?>
 
 

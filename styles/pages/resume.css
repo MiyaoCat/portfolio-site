@@ -1,0 +1,73 @@
+.resume .page-header {
+	grid-row: 2;
+	grid-column: 2/14;
+}
+
+.experience {
+	grid-row: 3;
+	grid-column: 2/14;
+	margin: 5px 0;
+}
+
+.job {
+	margin: 5px 0;
+}
+
+.job-details {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+}
+
+.job-details .company {
+	grid-row: 1;
+	grid-column: 1;
+}
+
+.job-details .role {
+	grid-row: 2;
+	grid-column: 1;
+}
+
+.job-details .location {
+	grid-row: 1;
+	grid-column: 2;
+	text-align: right;
+}
+
+.job-details .dates {
+	grid-row: 2;
+	grid-column: 2;
+	text-align: right;
+}
+
+.skill {
+	grid-row: 6;
+	grid-column: 2/14;
+}
+
+.school {
+	grid-row: 67;
+	grid-column: 2/14;
+}
+
+@media (min-width: 700px) {
+	.experience {
+		grid-row: 4 ;
+		grid-column: 3 / 9;
+	}
+	.job {
+		box-shadow: 5px 5px black;
+	}
+
+	.skill {
+		grid-row: 4;
+		grid-column: 10 / 14;
+	}
+
+	.school {
+		grid-row: 5;
+		grid-column: 10 / 14;
+	}
+
+}

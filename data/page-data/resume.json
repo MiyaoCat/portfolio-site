@@ -1,0 +1,72 @@
+{	"id": "006",
+	
+	"template": "resume",
+	"title1": "This is My Resume",
+	"intro": "Cover Letter / Intro",
+	"sections" : [
+		{	
+			"type" : "experience",
+			"heading": "Work Experience",
+			"jobs": [
+				{
+					"company": "<a href=\"https://connectedtravel.com/\" target=\"_blank\">Connected Travel, LLC</a>",
+					"role": "Program Manager",
+					"location": "Remote",
+					"startDate": "January 2018",
+					"endDate": "Present",
+					"highlights": ["Managed Beta program for a safe driving mobile application and synthesized user feedback via surveys and focus groups to improve application prior to launch",
+							"Oversaw operational success of the app which reached 15,000 registered users, 4,500 DAUs and 6,500 MAUs with a 70% retention rate (90 days)",
+							"Increased app rating from 3.7 to 4.6 in Google Play and 4.5 to 4.8 in iTunes within one month",
+							"Defined and managed external communication channels (support, social media, marketing, app reviews, in-app messaging) with end-user community",
+							"Streamlined support process to reduce resolution time of our top customer issue from 2 days to less than 24 hours",
+							"Tracked and executed the delivery of new product features for both backend management portal and front-end application with off-shore Engineering team"
+					]
+				},
+				{
+					"company": "<a href=\"https://connectedtravel.com/\" target=\"_blank\">Connected Travel, LLC</a>",
+					"role": "Customer Operations Manager",
+					"location": "San Francisco",
+					"startDate": "January 2018",
+					"endDate": "December 2017",
+					"highlights": ["Managed Beta program for a safe driving mobile application and synthesized user feedback via surveys and focus groups to improve application prior to launch",
+							"Oversaw operational success of the app which reached 15,000 registered users, 4,500 DAUs and 6,500 MAUs with a 70% retention rate (90 days)",
+							"Increased app rating from 3.7 to 4.6 in Google Play and 4.5 to 4.8 in iTunes within one month",
+							"Defined and managed external communication channels (support, social media, marketing, app reviews, in-app messaging) with end-user community",
+							"Streamlined support process to reduce resolution time of our top customer issue from 2 days to less than 24 hours",
+							"Tracked and executed the delivery of new product features for both backend management portal and front-end application with off-shore Engineering team"
+					]
+				},
+				{
+					"company": "<a href=\"https://connectedtravel.com/\" target=\"_blank\">Connected Travel, LLC</a>",
+					"role": "Program Manager",
+					"location": "Remote",
+					"startDate": "01/18",
+					"endDate": "Present",
+					"highlights": ["Managed Beta program for a safe driving mobile application and synthesized user feedback via surveys and focus groups to improve application prior to launch",
+							"Oversaw operational success of the app which reached 15,000 registered users, 4,500 DAUs and 6,500 MAUs with a 70% retention rate (90 days)",
+							"Increased app rating from 3.7 to 4.6 in Google Play and 4.5 to 4.8 in iTunes within one month",
+							"Defined and managed external communication channels (support, social media, marketing, app reviews, in-app messaging) with end-user community",
+							"Streamlined support process to reduce resolution time of our top customer issue from 2 days to less than 24 hours",
+							"Tracked and executed the delivery of new product features for both backend management portal and front-end application with off-shore Engineering team"
+					]
+				}
+			]
+		},
+		{	
+			"type" : "skills",
+			"heading": "Skill",
+			"programs": ["JIRA", "Salesforce", "Zendesk", "Freshdesk", "Mixpanel", "Tableau", "PowerBI", "Basecamp", "Asana", "Slack", "Excel", 
+				"PowerPoint", "Keynote", "MailChimp", "SurveyMonkey", "Twilio", "Testflight"  
+			],
+			"langauges": "HTML, CSS, PHP, Javascript"
+		},
+
+		{	
+			"type" : "education",
+			"heading": "Education",
+			"school": "University of Washington",
+			"major": "Economics",
+			"logo": ""
+		}
+	]
+}

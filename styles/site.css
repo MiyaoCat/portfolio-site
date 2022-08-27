@@ -9,11 +9,13 @@
 @import 'pages/contact.css';
 @import 'pages/about.css';
 @import 'pages/projects.css';
+@import 'pages/resume.css';
+@import 'pages/style-guide.css';
 
 /* - - MODULES - - */
 @import 'modules.css';
-@import 'style-guide.css';
 
+/* - - DEV STYLING - - */
 @import 'development.css';
 
 * {
