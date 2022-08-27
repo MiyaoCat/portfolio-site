@@ -11,10 +11,14 @@
 			$page = $_GET["page"];
 		}
 		
-		if ($page = $_GET["page"]) {
-			include("pages/$page.php");
+		$pageFilePath = "pages/$page.php";
+		if ( file_exists($pageFilePath) ) {
+			include($pageFilePath);
+		} else {
+			echo "<div class='error'><h2>Error! Go back!</h2></div>";
 		}
 		
+
 		// if ($page == "home") {
 		// 	include("pages/home.php");
 		// }

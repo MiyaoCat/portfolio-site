@@ -1,0 +1,32 @@
+[
+	{
+		"title": "Responsive Layout Garden",
+		"slug": "layout-garden",
+		"teaser": "Not really a project, but shows off a bunch of responsive modules",
+		"url": "https://peprojects.dev/alpha-4/john/layout-challenges/index.php",
+		"feature": true,
+		"languages": [
+			"HTML", "CSS", "PHP"
+		]
+	},
+	{
+		"title": "Form Exercises",
+		"slug": "form-exercises",
+		"teaser": "We created a bunch of forms using the book, Exercises for Programmers. It gave us the opportunity to think through functions and create programs with PHP.",
+		"url": "https://peprojects.dev/alpha-4/john/layout-challenges/index.php",
+		"feature": true,
+		"languages": [
+			"HTML", "CSS", "PHP"
+		]
+	},
+	{
+		"title": "Luxury Streetwear",
+		"slug": "luxury-streetwear",
+		"teaser": "We created a bunch of forms using the book, Exercises for Programmers. It gave us the opportunity to think through functions and create programs with PHP.",
+		"url": "https://peprojects.dev/alpha-4/john/layout-challenges/index.php",
+		"feature": true,
+		"languages": [
+			"HTML", "CSS", "PHP"
+		]
+	}
+]

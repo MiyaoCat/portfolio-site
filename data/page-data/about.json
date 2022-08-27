@@ -1,20 +1,15 @@
 {
-	"page": "about",
+	"slug": "about",
 	"title1": "About",
 	"title2": "Me",
 	"intro": "Welcome to my site! Make yourself at home and click around.",
 
-	"heading": [
-		{
-			"title1": "About",
-			"title2": "Me"
-		}
-	],
-
 	"sections": [
 		{
 			"module": "generic-text",
-			"content": "Welcome to my site! Make yourself at home and click around."
+			"content": "Welcome to my site! Make yourself at home and click around.",
+
+			"module": "social-icons"
 		}
 	]
 }

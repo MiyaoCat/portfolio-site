@@ -41,10 +41,12 @@ button {
 		display: block;
 		grid-row: 3 / span 2;
 		grid-column: 10 / span 2;
+		margin-left: 15px;
+		transform: rotate(3deg);
 	}
 
 	.about.photos picture {
-		box-shadow: 5px 5px lawngreen;
+		box-shadow: 8px 8px lawngreen;
 	}
 
 	button {
