@@ -11,6 +11,7 @@
 @import 'pages/projects.css';
 @import 'pages/resume.css';
 @import 'pages/style-guide.css';
+@import 'pages/404.css';
 
 /* - - MODULES - - */
 @import 'modules.css';

@@ -9,3 +9,5 @@
 <section class="home page-intro">
 	<?php include("modules/generic-text/generic-text.php"); ?>
 </section>
+
+<div class="projects-spotlight"><?php include("modules/projects-spotlight/projects-spotlight.php"); ?></div>

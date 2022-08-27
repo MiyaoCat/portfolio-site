@@ -7,6 +7,12 @@
 		"feature": true,
 		"languages": [
 			"HTML", "CSS", "PHP"
+		], 
+
+		"sections": [
+			{
+				"module": "generic-text"
+			}
 		]
 	},
 	{
@@ -14,7 +20,7 @@
 		"slug": "form-exercises",
 		"teaser": "We created a bunch of forms using the book, Exercises for Programmers. It gave us the opportunity to think through functions and create programs with PHP.",
 		"url": "https://peprojects.dev/alpha-4/john/layout-challenges/index.php",
-		"feature": true,
+		"feature": false,
 		"languages": [
 			"HTML", "CSS", "PHP"
 		]
@@ -26,7 +32,7 @@
 		"url": "https://peprojects.dev/alpha-4/john/layout-challenges/index.php",
 		"feature": true,
 		"languages": [
-			"HTML", "CSS", "PHP"
+			"HTML", "CSS", "PHP", "LOVE"
 		]
 	}
 ]

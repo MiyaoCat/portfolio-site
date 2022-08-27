@@ -10,3 +10,7 @@ social-icons ul {
 	border: 1px solid red;
 }
 
+.section  {
+	grid-row: 8;
+	grid-column: 2 / 10;
+}

@@ -1,3 +1,8 @@
 generic-text {
 	display: block;
 }
+
+generic-text.home {
+	grid-row: 4;
+	grid-column: 2 / 10;
+}

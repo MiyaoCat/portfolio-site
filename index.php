@@ -15,7 +15,7 @@
 		if ( file_exists($pageFilePath) ) {
 			include($pageFilePath);
 		} else {
-			echo "<div class='error'><h2>Error! Go back!</h2></div>";
+			include("pages/404.php");
 		}
 		
 

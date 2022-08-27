@@ -11,25 +11,30 @@
 		$teaser = $project["teaser"];
 		$url = $project["url"];
 	?>
-	<div class="project-title">
-		<a href="<?=$url?>">
-			<h2 class="loud-voice"><?=$title?></h2>
-			<!-- <h2 class="loud-voice">Exercises</h2> -->
-		</a>
-	</div>
+		<div class="project-title">
+			<a href="<?=$url?>">
+				<h2 class="loud-voice"><?=$title?></h2>
+				<!-- <h2 class="loud-voice">Exercises</h2> -->
+			</a>
+		</div>
 
-	<ul class="languages">
-		<?php foreach ($project["languages"] as $languages) { ?>
-			<li><?=$languages?></li>
-	<?php } ?>
-	</ul>
-	 
-	<p class="normal-voice"><?=$teaser?></p>
+		<ul class="languages">
+			<?php foreach ($project["languages"] as $languages) { ?>
+				<li><?=$languages?></li>
+			<?php } ?>
+		</ul>
 
-	<?php } ?>
+		<p class="normal-voice"><?=$teaser?></p>
+
+		<div class="project-images">
+			<picture class="project-image">
+				<img src="https://peprojects.dev/images/landscape.jpg" alt="">
+			</picture>
 		
+	</div>
+	<?php } ?>
+
+	
 </project-card>
 
-<picture class="project-image">
-		<img src="https://peprojects.dev/images/landscape.jpg" alt="">
-</picture>
+

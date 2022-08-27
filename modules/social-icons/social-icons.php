@@ -1,4 +1,4 @@
-<social-icons>
+<social-icons class="<?=$page?>">
 	<ul>
 		<li>
 			<div class='logo'>
