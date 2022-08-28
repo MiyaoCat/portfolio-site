@@ -11,6 +11,9 @@
 
 		"sections": [
 			{
+				"module": "page-header"
+			},
+			{
 				"module": "generic-text"
 			}
 		]
@@ -23,6 +26,12 @@
 		"featured": false,
 		"languages": [
 			"HTML", "CSS", "PHP"
+		], 
+
+		"sections": [
+			{
+				"module": "generic-text"
+			}
 		]
 	},
 	{
@@ -33,6 +42,12 @@
 		"featured": true,
 		"languages": [
 			"HTML", "CSS", "PHP", "LOVE"
+		], 
+
+		"sections": [
+			{
+				"module": "generic-text"
+			}
 		]
 	}
 ]

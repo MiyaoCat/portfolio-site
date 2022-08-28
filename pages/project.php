@@ -12,6 +12,7 @@
 		$title = $caseStudy["title"];
 		$intro = $caseStudy["intro"];
 		$url = $caseStudy["url"];
+		$caseStudyModules = $caseStudy["sections"];
 	?>
 </generic-text>
 
@@ -22,4 +23,12 @@
 <section class="project page-intro">
 
 	<p class="normal-voice"><?=$intro?></p>
+</section>
+
+
+<section class="project module-intro">
+	<?php foreach ($caseStudyModules as $module) {?>
+		<h2>Sections HERE!</h2>
+	
+	<?php } ?>
 </section>
