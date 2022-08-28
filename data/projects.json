@@ -15,7 +15,11 @@
 			},
 			{
 				"module": "generic-text"
+			},
+			{
+				"module": "figure"
 			}
+
 		]
 	},
 	{
@@ -31,6 +35,9 @@
 		"sections": [
 			{
 				"module": "generic-text"
+			},
+			{
+				"module": "project-card"
 			}
 		]
 	},

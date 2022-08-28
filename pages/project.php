@@ -27,8 +27,10 @@
 
 
 <section class="project module-intro">
-	<?php foreach ($caseStudyModules as $module) {?>
-		<h2>Sections HERE!</h2>
+	<?php foreach ($caseStudyModules as $CaseStudymodule) {
+		$module = $CaseStudymodule["module"];
+	?>
+		<?php include("modules/$module/$module.php"); ?>
 	
 	<?php } ?>
 </section>
