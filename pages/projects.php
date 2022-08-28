@@ -22,8 +22,11 @@
 	
 <section class="projects">
 	<?php 
-		foreach ($projects as $project) { 	
-			include("modules/project-card/project-card.php"); 
+
+		foreach ($projects as $project) { 
+			if ( isset($project["url"]) ) {	
+				include("modules/project-card/project-card.php"); 
+			}
 		}
 	?>
 </section>

@@ -1,20 +1,19 @@
-<generic-text>
-	<?php 
-		$json = file_get_contents("data/projects.json");
-		$projects = json_decode($json, true);
-	
-		foreach ($projects as $caseStudies) {
-			if ($caseStudies["slug"] == $_GET["slug"]) {
-				$caseStudy = $caseStudies;
-			}
+<?php 
+	$json = file_get_contents("data/projects.json");
+	$projects = json_decode($json, true);
+
+	foreach ($projects as $caseStudies) {
+		if ($caseStudies["slug"] == $_GET["slug"]) {
+			$caseStudy = $caseStudies;
 		}
-	
-		$title = $caseStudy["title"];
-		$intro = $caseStudy["intro"];
-		$url = $caseStudy["url"];
-		$caseStudyModules = $caseStudy["sections"];
-	?>
-</generic-text>
+	}
+
+	$title = $caseStudy["title"];
+	$intro = $caseStudy["intro"];
+	$url = $caseStudy["url"];
+	$caseStudyModules = $caseStudy["sections"];
+?>
+
 
 <header class="project page-header">
 	<h1 class="loud-voice"><?=$title?></h1>
