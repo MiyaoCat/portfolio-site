@@ -11,9 +11,14 @@
 		<ul>
 			<?php 
 					if ($project["featured"])  {
-						$title = $project["title"]; ?>
+						$title = $project["title"]; 
+						$intro = $project["intro"];
+			?>
 				<li>
 					<h3 class="attention-voice"><?=$title?></h2>
+				</li>
+				<li>
+					<p class="normal-voice"><?=$intro?></p>
 				</li>
 			<?php } ?>
 		</ul>

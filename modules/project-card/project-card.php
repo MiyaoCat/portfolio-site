@@ -8,7 +8,7 @@
 <project-card>
 	
 		<div class="project-title">
-			<a href="<?=$url?>">
+			<a href="?page=project&slug=<?=$slug?>">
 				<h2 class="loud-voice"><?=$title?></h2>
 			</a>
 		</div>
