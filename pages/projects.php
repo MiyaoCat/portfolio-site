@@ -1,4 +1,9 @@
 
+<?php 
+	$json = file_get_contents("data/projects.json");
+	$projects = json_decode($json, true);
+?>
+
 <header class="projects page-header">
 	<?php 
 		$title1 = "Projects";
@@ -14,8 +19,14 @@
 
 </section>
 	
-<?php include("modules/project-card/project-card.php"); ?>
-
+	
+<section class="projects">
+	<?php 
+		foreach ($projects as $project) { 	
+			include("modules/project-card/project-card.php"); 
+		}
+	?>
+</section>
 
 
 

@@ -1,20 +1,15 @@
 <?php 
-	$json = file_get_contents("data/projects.json");
-	$projects = json_decode($json, true);
+	$title = $project["title"];
+	$slug = $project["slug"];
+	$intro = $project["intro"];
+	$url = $project["url"];
 ?>
 
 <project-card>
-
-	<?php foreach ($projects as $project) { 
-		$title = $project["title"];
-		$slug = $project["slug"];
-		$teaser = $project["teaser"];
-		$url = $project["url"];
-	?>
+	
 		<div class="project-title">
 			<a href="<?=$url?>">
 				<h2 class="loud-voice"><?=$title?></h2>
-				<!-- <h2 class="loud-voice">Exercises</h2> -->
 			</a>
 		</div>
 
@@ -24,17 +19,14 @@
 			<?php } ?>
 		</ul>
 
-		<p class="normal-voice"><?=$teaser?></p>
+		<p class="normal-voice"><?=$intro?></p>
 
 		<div class="project-images">
 			<picture class="project-image">
 				<img src="https://peprojects.dev/images/landscape.jpg" alt="">
 			</picture>
-		
-	</div>
-	<?php } ?>
+		</div>
 
-	
 </project-card>
 
 

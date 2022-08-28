@@ -1,4 +1,11 @@
-project-card {
-	display: block;
-	grid-row-start: 4;
+.projects {
+	grid: 4;
+	grid-column: 2 / 14;
+}
+
+@media (min-width: 700px) {
+	.projects {
+		grid-row: 4;
+		grid-column: 2 / 10;
+	}
 }
