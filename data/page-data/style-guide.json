@@ -1,5 +1,7 @@
 {
 	"slug": "style-guide",
+	"template": "style-guide",
+	
 	"title1": "Style",
 	"title2": "Guide",
 	"intro": "These are all of the modules used on this site.",

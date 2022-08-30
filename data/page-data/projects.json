@@ -1,0 +1,21 @@
+{
+	"slug": "projects",
+
+	"title1": "Projects",
+	"title2": "",
+	"intro": "These are some of my latest projects. Check 'em out!",
+
+	"sections": [
+		{
+			"module": "page-header"
+		},
+
+		{
+			"module": "projects-spotlight"
+		},
+	
+		{
+			"module": "project-card"
+		}
+	]
+}

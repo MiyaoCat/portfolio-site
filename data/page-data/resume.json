@@ -1,6 +1,7 @@
-{	"id": "006",
-	
+{	
+	"slug": "resume",
 	"template": "resume",
+	
 	"title1": "This is My Resume",
 	"intro": "Cover Letter / Intro",
 	"sections" : [

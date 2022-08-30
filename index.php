@@ -14,19 +14,18 @@
 		$thePageDataJson = file_get_contents("data/page-data/$page.json");
 		$pageData = json_decode($thePageDataJson, true);
 	}
+
+	if ($pageData) {
+		if ( !isset($pageData["template"]) )  {
+			 include("pages/default.php");
+		}
+	} else {
+		include("pages/404.php");
+	}
 ?>
 
-<?php if ($pageData) { ?>
-	<?php foreach ($pageData["sections"] as $sections) {
-		$module = $sections["module"];
-	?>
 
-		<section class="<?=$page?> <?=$module?>">
-			<?php include("modules/$module/$module.php"); ?>
-		</section>
 
-	<?php } ?>
-<?php } ?>
 
 <?php include("partials/footer/footer.php"); ?>
 
