@@ -1,9 +1,18 @@
+.project.page-header {
+	grid-row: 3;
+	grid-column: 2 / 14;
+}
+
 .project.module-intro {
 	grid-row: 6;
 	grid-column:  2 / 14;
 }
 
 @media (min-width: 700px) {
+	.project.page-header {
+		grid-column: 2 / 10;
+	}
+
 	.project.module-intro {
 		grid-row: 4;
 		grid-column:  2 / 10;

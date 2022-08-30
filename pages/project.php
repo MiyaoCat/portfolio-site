@@ -10,22 +10,20 @@
 
 	$title = $caseStudy["title"];
 	$intro = $caseStudy["intro"];
-	$url = $caseStudy["url"];
-	
 ?>
 
 
-<header class="project page-header">
+<header class="<?=$page?> page-header">
 	<h1 class="loud-voice"><?=$title?></h1>
 </header>
 
-<section class="project page-intro">
+<section class="<?=$page?> page-intro">
 
 	<p class="normal-voice"><?=$intro?></p>
 </section>
 
 
-<section class="project module-intro">
+<section class="<?=$page?> module-intro">
 	<?php 
 		$caseStudyModules = $caseStudy["sections"];
 		

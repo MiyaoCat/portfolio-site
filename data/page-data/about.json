@@ -7,13 +7,11 @@
 
 	"sections": [
 		{
-			"module": "page-header",
-			"title1": "About",
-			"title2": "Me"
-		},
-		{
 			"module": "generic-text",
 			"content": "Welcome to my site! Make yourself at home and click around."
+		},
+		{
+			"module": "figure"
 		},
 		{
 			"module": "social-icons"

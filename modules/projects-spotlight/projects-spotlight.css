@@ -1,7 +1,4 @@
-.latest-projects {
-	grid-row: 6;
-	grid-column: 2 /14;
-}
+
 
 projects-spotlight {
 	display: block;
@@ -12,9 +9,8 @@ projects-spotlight {
 	grid-column: 2 / 14;
 }
 @media (min-width: 700px) {
-	.latest-projects {
-		grid-row: 5;
-		grid-column: 3 / span 3;
-}
+	.projects.projects-spotlight {
+		grid-column: 2 / 10;
+	}
 
 }

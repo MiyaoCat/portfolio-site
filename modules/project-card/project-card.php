@@ -1,8 +1,9 @@
 <?php 
+	//Variable sets carried over from projects.php page
 	$title = $project["title"];
 	$slug = $project["slug"];
 	$intro = $project["intro"];
-	$url = $project["url"];
+	$image = $project["image"];
 ?>
 
 <project-card>
@@ -23,7 +24,7 @@
 
 		<div class="project-images">
 			<picture class="project-image">
-				<img src="https://peprojects.dev/images/landscape.jpg" alt="">
+				<img src="<?=$image?>" alt="image for <?=$title?>">
 			</picture>
 		</div>
 

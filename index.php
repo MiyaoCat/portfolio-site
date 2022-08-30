@@ -14,21 +14,32 @@
 		$thePageDataJson = file_get_contents("data/page-data/$page.json");
 		$pageData = json_decode($thePageDataJson, true);
 	}
+?>
 
+<?php
 	if ($pageData) {
 		if ( !isset($pageData["template"]) )  {
 			 include("pages/default.php");
-		}
-	} else {
-		include("pages/404.php");
-	}
 ?>
 
+	<header class="<?=$page?> page-header">
+		<?php include("modules/page-header/page-header.php"); ?>
+	</header>
 
+	<!-- <section class="<?=$page?> intro">
+		<p><?=$pageData["intro"]?></p>
+	</section> -->
 
+<?php
+		} else {
+			include("pages/$pageData[template].php");
+			}
+	} else {
+		include("pages/404.php");
+		}
+?>
 
 <?php include("partials/footer/footer.php"); ?>
-
 
 
 

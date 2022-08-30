@@ -1,10 +1,12 @@
 [
 	{
 		"slug": "layout-garden",
+		"template": "projects",
 
 		"title": "Responsive Layout Garden",
 		"intro": "Not really a project, but shows off a bunch of responsive modules that are common on modern websites",
 		"url": "https://peprojects.dev/alpha-4/john/layout-challenges/index.php",
+		"image": "https://peprojects.dev/images/landscape.jpg",
 		"featured": true,
 		"languages": [
 			"HTML", "CSS", "PHP"
@@ -12,7 +14,9 @@
 
 		"sections": [
 			{
-				"module": "page-header"
+				"module": "page-header",
+				"title1": "Responsive",
+				"title2": "Layout Garden"
 			},
 			{
 				"module": "generic-text",
@@ -31,6 +35,8 @@
 		"title": "Form Exercises",
 		"slug": "form-exercises",
 		"intro": "We created a bunch of forms using the book, Exercises for Programmers. It gave us the opportunity to think through functions and create programs with PHP.",
+		"url": "https://peprojects.dev/alpha-4/john/layout-challenges/index.php",
+		"image": "https://peprojects.dev/images/landscape.jpg",
 		"featured": false,
 		"languages": [
 			"HTML", "CSS", "PHP"
@@ -38,7 +44,8 @@
 
 		"sections": [
 			{
-				"module": "generic-text"
+				"module": "generic-text",
+				"content": "Click on a form!"
 			}
 		]
 	},
@@ -47,6 +54,7 @@
 		"slug": "luxury-streetwear",
 		"intro": "This is my luxurious streetwear site",
 		"url": "https://peprojects.dev/alpha-4/john/layout-challenges/index.php",
+		"image": "https://peprojects.dev/images/landscape.jpg",
 		"featured": true,
 		"languages": [
 			"HTML", "CSS", "PHP", "LOVE"

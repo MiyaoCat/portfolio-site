@@ -3,6 +3,7 @@
 	"template": "resume",
 	
 	"title1": "This is My Resume",
+	"title2": "",
 	"intro": "Cover Letter / Intro",
 	"sections" : [
 		{	

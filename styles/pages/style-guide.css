@@ -4,31 +4,27 @@ style-guide {
 	display: block;
 }
 
-style-guide.page-header {
+.style-guide.page-header {
 	grid-row: 2;
 }
 
-style-guide.generic-text {
+.style-guide.generic-text {
 	grid-row: 3;
 	grid-column: 2/ 14;
 }
 
-body style-guide * {
-	margin: 5px;
+.style-guide.social-icons {
+	grid-row: 8;
+	grid-column: 2/ 14;
 }
 
-style-guide.project-card {
-	grid-row-start: 9;
-	grid-column: 2 / 14;
+.style-guide.figure {
+	grid-row: 7;
+	grid-column: 4 / span 2;
 }
 
 @media (min-width: 700px) {
-	style-guide.generic-text {
-		grid-column: 2 / 10;
-	}
-
-	style-guide.project-card {
-		grid-row: 4;
+	.style-guide.generic-text {
 		grid-column: 2 / 10;
 	}
 
