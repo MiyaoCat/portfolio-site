@@ -46,35 +46,32 @@
 	<section class="skill">
 		<?php foreach($sections as $section) { ?>
 
-		<ol>
-		<?php 
-			if ( $section["type"] == "skills" ) {
-				echo "<h2 class='loud-voice'>" . $section["heading"] . "</h2>";
-				foreach ($section["programs"] as $programs) {
-		?>
-			<li><?=$programs?></li>
-				<?php } ?>
-			<?php } ?>
-		</ol>
+			<ol>
+				<?php 
+					if ( $section["type"] == "skills" ) {
+						echo "<h2 class='loud-voice'>" . $section["heading"] . "</h2>";
+						foreach ($section["programs"] as $programs) {
+				?>
+						<li><?=$programs?></li>
+						<?php } ?>
+					<?php } ?>
+			</ol>
 
 		<?php } ?>
-
-		
-
-		<ol>
 	</section>
 
 
 	<section class="school">
 		<?php foreach($sections as $section) { ?>
-		<?php 
-			if ( $section["type"] == "education" ) {
-		?>
-			<h2 class="loud-voice"><?= $section["heading"]?></h2>
-			<li><?=$section["school"]?></li>
-			<li><?=$section["major"]?></li>
-			<?php } ?>
-		</ol>
+			<ol>	
+				<?php 
+					if ( $section["type"] == "education" ) {
+				?>
+					<h2 class="loud-voice"><?= $section["heading"]?></h2>
+					<li><?=$section["school"]?></li>
+					<li><?=$section["major"]?></li>
+				<?php } ?>
+			</ol>
 		
 		<?php } ?>
 	</section>

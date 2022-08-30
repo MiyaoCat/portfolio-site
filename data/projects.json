@@ -14,11 +14,6 @@
 
 		"sections": [
 			{
-				"module": "page-header",
-				"title1": "Responsive",
-				"title2": "Layout Garden"
-			},
-			{
 				"module": "generic-text",
 				"content": "If you on a computer, try horizontally expanding and contracting your window to see how the modules <em>respond</em> to the window size :)"
 			},
@@ -28,7 +23,6 @@
 			{
 				"module": "generic-text"
 			}
-
 		]
 	},
 	{

@@ -26,10 +26,6 @@
 		<?php include("modules/page-header/page-header.php"); ?>
 	</header>
 
-	<!-- <section class="<?=$page?> intro">
-		<p><?=$pageData["intro"]?></p>
-	</section> -->
-
 <?php
 		} else {
 			include("pages/$pageData[template].php");
@@ -48,7 +44,9 @@
 
 
 
-
+<!-- <section class="<?=$page?> intro">
+		<p><?=$pageData["intro"]?></p>
+</section> -->
 
 
 

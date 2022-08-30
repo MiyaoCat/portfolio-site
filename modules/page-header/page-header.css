@@ -7,7 +7,9 @@
 
 }
 
-
+.title2 {
+	text-align: right;
+}
 @media (min-width: 700px) {
 	.page-header {
 		grid-row: 3;

@@ -56,7 +56,7 @@
 		},
 		{	
 			"type" : "skills",
-			"heading": "Skill",
+			"heading": "Programs",
 			"programs": ["JIRA", "Salesforce", "Zendesk", "Freshdesk", "Mixpanel", "Tableau", "PowerBI", "Basecamp", "Asana", "Slack", "Excel", 
 				"PowerPoint", "Keynote", "MailChimp", "SurveyMonkey", "Twilio", "Testflight"  
 			],
