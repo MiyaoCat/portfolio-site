@@ -2,5 +2,14 @@
 	"slug": "contact",
 	"title1": "Contact",
 	"title2": "Me",
-	"intro": "Wanna work together? Just fill out the form and I'll be sure to see it!"
+	"intro": "Wanna work together? Just fill out the form and I'll be sure to see it!",
+
+	"sections": [
+		{
+			"module": "page-header",
+
+			"module": "generic-text",
+			"content": "Welcome to my site! I’m a Web Developer who helps businesses standout online. Unlike my competitors, I translate my clients’ goals into beautiful, responsive design."
+		}
+	]
 }

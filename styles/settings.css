@@ -1,5 +1,6 @@
 /*hsl(28, 17%, 30%);*/ /* dark brown */
 /*hsl(37, 32%, 92%) light brown */
+/* hsl(303, 100%, 50%); bright pink/purple */ 
 html {
 	--black: #111111;
 	--white: #FFF;
@@ -7,7 +8,7 @@ html {
 	--color: #5E321F;
 	--highlight: #aadee9;
 
-	--shadow: rgba(0,0,0,.8);
+	--shadow: rgba(221, 53%, 24%);
 
 	--corners: 10px; /* or whatevers */
 
@@ -15,7 +16,7 @@ html {
 	--tight: 800px;
 	--wide: 98vw;
 
-	--paper: hsl(303, 100%, 50%); /*bright pink/purple */ 
+	--paper: hsl(219, 13%, 82%);
 	--background: lawngreen;
 
 	--ink: black;

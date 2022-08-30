@@ -7,17 +7,17 @@
 	?>
 </header>
 	
-<section class="<?=$title1?> page-intro">
+<section class="<?=$page?> page-intro">
 	<?php include("modules/generic-text/generic-text.php"); ?>
 </section>
 
 
-<section class="about photos">
+<section class="<?=$page?> photos">
 	<?php include("modules/figure/figure.php"); ?>
 </section>
 
 	
-<section class="about social-icons">
+<section class="<?=$page?> social-icons">
 	<?php include("modules/social-icons/social-icons.php"); ?>
 </section>
 

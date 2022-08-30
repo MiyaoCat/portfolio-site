@@ -1,0 +1,19 @@
+{
+	"slug": "style-guide",
+	"title1": "Style",
+	"title2": "Guide",
+	"intro": "These are all of the modules used on this site.",
+
+	"sections": [
+		{
+			"module": "page-header",
+			"title1": "Style",
+
+			"module": "generic-text",
+			"content": "This is my style-guide, guide",
+
+			"module": "project-card",
+			"content": "This is my project card module"
+		}
+	]
+}

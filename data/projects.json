@@ -2,7 +2,7 @@
 	{
 		"title": "Responsive Layout Garden",
 		"slug": "layout-garden",
-		"intro": "Not really a project, but shows off a bunch of responsive modules",
+		"intro": "Not really a project, but shows off a bunch of responsive modules that are common on modern websites",
 		"url": "https://peprojects.dev/alpha-4/john/layout-challenges/index.php",
 		"featured": true,
 		"languages": [
@@ -14,10 +14,14 @@
 				"module": "page-header"
 			},
 			{
-				"module": "generic-text"
+				"module": "generic-text",
+				"content": "If you on a computer, try horizontally expanding and contracting your window to see how the modules <em>respond</em> to the window size :)"
 			},
 			{
 				"module": "figure"
+			},
+			{
+				"module": "generic-text"
 			}
 
 		]
@@ -40,7 +44,7 @@
 	{
 		"title": "Luxury Streetwear",
 		"slug": "luxury-streetwear",
-		"intro": "We created a bunch of forms using the book, Exercises for Programmers. It gave us the opportunity to think through functions and create programs with PHP.",
+		"intro": "This is my luxurious streetwear site",
 		"url": "https://peprojects.dev/alpha-4/john/layout-challenges/index.php",
 		"featured": true,
 		"languages": [
@@ -49,7 +53,8 @@
 
 		"sections": [
 			{
-				"module": "generic-text"
+				"module": "generic-text",
+				"content": "This is luxury streetwear site called <b>Hi.So.</b>"
 			}
 		]
 	}

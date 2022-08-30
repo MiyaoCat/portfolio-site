@@ -2,7 +2,7 @@ generic-text {
 	display: block;
 }
 
-generic-text.home {
+.home.generic-text {
 	grid-row: 4;
 	grid-column: 2 / 10;
 }

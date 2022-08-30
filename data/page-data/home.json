@@ -1,18 +1,17 @@
 {
 	"slug": "home",
+
 	"title1": "John",
 	"title2": "Miyao",
 	"intro": "Welcome to my site! Make yourself at home and click around.",
 
 	"sections": [
 		{
-			"module": "page-header",
-			"title1": "John",
-
+			"module": "page-header"
+		},
+		{	
 			"module": "generic-text",
 			"content": "Welcome to my site! I’m a Web Developer who helps businesses standout online. Unlike my competitors, I translate my clients’ goals into beautiful, responsive design."
-
-
 		}
 	]
 }
