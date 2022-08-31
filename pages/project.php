@@ -14,7 +14,7 @@
 
 
 <header class="<?=$page?> page-header">
-	<h1 class="loud-voice"><?=$title?></h1>
+	<h1 class="screaming-voice"><?=$title?></h1>
 </header>
 
 <section class="<?=$page?> page-intro">
