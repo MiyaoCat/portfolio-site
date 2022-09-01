@@ -21,12 +21,9 @@ nav ul {
 	text-transform: uppercase;
 }
 
-nav a {
+nav li {
 	writing-mode: vertical-rl;
 	text-decoration: none;
-}
-
-nav li {
 	transition: .3s ease-in-out;
 }
 
@@ -34,6 +31,35 @@ nav li:hover {
 	transform: translateY(40px);
 	transition: .5s ease-in-out;
 }
+
+nav a.active {
+	transform: translateY(40px);
+}
+
+.contact nav li:nth-of-type(1) {
+	transform: translateY(0);
+}
+
+.contact nav li:hover:nth-of-type(1) {
+	transform: translateY(0);
+}
+
+.about nav li:nth-of-type(2) {
+	transform: translateY(0);
+}
+
+.about nav li:hover:nth-of-type(2) {
+	transform: translateY(0);
+}
+
+.home nav li:nth-of-type(3) {
+	transform: translateY(0);
+}
+
+.home nav li:hover:nth-of-type(3) {
+	transform: translateY(0);
+}
+
 
 /*.contact nav li:nth-of-type(1) {
 	transform: translateY(40px);

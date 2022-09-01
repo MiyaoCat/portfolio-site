@@ -17,9 +17,23 @@
 	<header class="site-header">
 		<nav>
 			<ul>
-				<li><a href="?page=contact">Contact Me</a></li>
-				<li><a href="?page=about">About Me</a></li>
-				<li><a href="?page=projects">Projects</a></li>
+				<li>
+					<a href="?page=contact" 
+						class="<?php if ($page == 'contact') { echo 'active'; } ?>">Contact Me
+					</a>
+				</li>
+
+				<li>
+					<a href="?page=about"
+						class="<?php if ($page == 'about') { echo 'active'; } ?>">About Me
+					</a>
+				</li>
+				
+				<li>
+					<a href="?page=projects"
+						class="<?php if ($page == 'projects') { echo 'active'; } ?>">Projects
+					</a>
+				</li>
 			</ul>
 		</nav>
 	</header>
