@@ -12,23 +12,13 @@ a {
 }
 
 
-a:hover {
-	text-decoration: underline;
-	color: var(--highlight);
-}
-
-@media (prefers-color-scheme: dark) {
-	a:hover {
-		color: var(--highlight);
-	}
-}
 /* Main header or banner text or similar */
 .screaming-voice {
 	font-family: var(--marker);
-	font-size: clamp(60px, 8vw, 160px);
+	font-size: clamp(50px, 10vw, 160px);
 	font-weight: 700;
 	text-transform: uppercase;
-	letter-spacing: .034em;
+	letter-spacing: -.045em;
 	line-height: .8em;
 }
 

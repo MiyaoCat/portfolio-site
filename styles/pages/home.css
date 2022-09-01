@@ -9,7 +9,7 @@
 
 /* - - GENERIC TEXT - - */
 .home .generic-text span {
-	color: red;
+	color: var(--contrast);
 }
 
 /* - - BUTTONS - - */

@@ -45,33 +45,11 @@ body {
 }
 
 
-/* MAIN SECTION */
-
-
-.page-intro {
-	grid-column: 2 / 14;
-	grid-row: 5;
-	margin: 0;	
-}
-
-.cta {
-	grid-row: 7;
-	grid-column: 1 / 14;
-}
 .image {
 	display: none;
 }
 
-/* - - ABOUT - -  */
-.about .page-intro {
-	grid-row: 5 / span 2;
-}
 
-.error {
-	grid-row: 3;
-	grid-column: 2 / 10;
-	color: red;
-}
 svg {
 	max-width: 30px;
 }
@@ -85,20 +63,6 @@ svg {
 
 	body {
 		grid-gap: 15px;
-	}
-
-	
-	.page-intro {
-		max-width: 65vw;
-	}
-
-	.page-intro {
-		grid-column: 10 / span 3;
-		grid-row: 3;
-	}
-
-	.page-intro p {
-		margin: 0;
 	}
 
 	

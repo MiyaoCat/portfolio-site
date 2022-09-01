@@ -4,13 +4,11 @@
 /*hsl(219, 13%, 82%)*/
 /*#5E321F */
 /*#aadee9 */
+/*hsl(360, 100%, 39%)*/
 
 html {
 	--black: #111111;
 	--white: #FFF;
-
-	--color: #5E321F;
-	--highlight: hsl(303, 100%, 50%);
 
 	--shadow: rgba(221, 53%, 24%);
 
@@ -24,7 +22,8 @@ html {
 	--background: lawngreen;
 
 	--ink: black;
-	--highlight: hsl(360, 100%, 39%); /* red */
+	--highlight: lawngreen; 
+	--contrast: hsl(38, 10%, 15%);
 }
 
 @media (prefers-color-scheme: dark) {
