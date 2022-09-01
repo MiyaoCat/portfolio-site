@@ -6,10 +6,10 @@
 	justify-content: flex-end;
 
 }
-
-.title2 {
-	text-align: right;
+.heading {
+	text-align: left;
 }
+
 @media (min-width: 700px) {
 	.page-header {
 		grid-row: 3;
@@ -18,9 +18,9 @@
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: flex-end;
-
 	}
-	.title1:not .projects {
-		transform: translateX(-7em);
-	}	
+
+	.heading {
+		text-align: right;
+	}
 }

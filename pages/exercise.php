@@ -5,25 +5,16 @@
 	foreach ($exercises as $exercise) {
 		if ($exercise["slug"] == $_GET["slug"]) { 
 			
-			$title = $exercise["title"];
+			$title = $exercise["title1"];
 			$intro = $exercise["intro"];
 			$slug = $exercise["slug"];	
 		}	
 	}
 ?>
 
-	<header class="page-header">
-		<inner-column>
-			<h1 class="loud-voice"><?=$title?></h1>
-			<p><?=$intro?></p>
-		</inner-column>
-	</header>
+<?php include("modules/page-header/page-header.php"); ?>
 
 
-		<section>
-
-				<?php 
-					include("form-exercises/$slug.php"); 
-				?>
-			</inner-column>
-		</section>
+<section>
+	<?php include("form-exercises/$slug.php"); ?>
+</section>

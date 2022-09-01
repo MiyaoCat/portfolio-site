@@ -13,6 +13,14 @@
 		{	
 			"module": "generic-text",
 			"content": "Welcome to my site! I’m a Web Developer who helps businesses standout online. Unlike my competitors, I translate my clients’ goals into beautiful, responsive design."
+		},
+		{	
+			"module": "contact-button",
+			"content": "Let's Work Together"
+		},
+		{	
+			"module": "projects-button",
+			"content": "<a href=?page=projects>Let me see what ya got</a>"
 		}
 	]
 }

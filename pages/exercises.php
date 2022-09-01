@@ -9,24 +9,21 @@
 ?>
 
 <section class="exercises-grid">
-	<inner-column>
-
-		<ul class="project-list">
-			<?php foreach ($exercises as $exercise) { 
-				$title = $exercise["title"];
-				$intro = $exercise["intro"];
-				$conclusion = $exercise["conclusion"];
-				$slug = $exercise["slug"];
-			?>
-				<li class="exercise">
-					<h2 class="attention-voice"><a href="?page=exercise&slug=<?=$slug?>"><?=$title?></a></h2>
-					<p class="quiet-voice"><?=$intro?></p>
-					<p><?=$conclusion?></p>
-					<a href="?page=exercise&slug=<?=$slug?>">See it!</a>
-				
-				</li>
-			<?php } ?>
-		</ul>
-
-	</inner-column>
+	<ul class="project-list">
+		<?php foreach ($exercises as $exercise) { 
+			$title1 = $exercise["title1"];
+			$intro = $exercise["intro"];
+			$conclusion = $exercise["conclusion"];
+			$slug = $exercise["slug"];
+		?>
+			<li class="exercise">
+				<h2 class="attention-voice"><a href="?page=exercise&slug=<?=$slug?>"><?=$title1?></a></h2>
+				<h3></h3>
+				<p class="quiet-voice"><?=$intro?></p>
+				<p><?=$conclusion?></p>
+				<a href="?page=exercise&slug=<?=$slug?>">See it!</a>
+			
+			</li>
+		<?php } ?>
+	</ul>
 </section>

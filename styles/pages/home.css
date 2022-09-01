@@ -1,21 +1,43 @@
-.home.page-header {
-	grid-row-end: 5;
-	grid-column: 2 / 14;
+/* - - PAGE HEADER - - */
+.home .page-header .title1 {
+	transform: rotate(-3deg);
 }
 
-.home.page-header .title2 {
-	transform: translateX(5em);
+.home .page-header .title2 {
+	transform: translateX(6em);
 }
+
+/* - - BUTTONS - - */
+.home.projects-button {
+	grid-row: 6;
+	grid-column: 7s / span 2;
+}
+
+.home.contact-button {
+	grid-row: 6;
+	grid-column: 5 / span 2;
+}
+
+a.contact-button {
+	display: block;
+	background-color: gray;
+	border-radius: 5px;
+}
+
 
 @media (min-width: 700px) {
-	.home.page-header {
+	/* - - PAGE HEADER - - */
+	.home .page-header {
 		grid-row: 3;
 		grid-column: 2 / 10;
 	}
-	.home.page-header .title2 {
+
+	}
+	.home .page-header .title1 {
+		transform: translateX(-60%) rotate(-6deg);
+	}
+
+	.home .page-header .title2 {
 		transform: translateX(0);
-	}
-	.home.page-header .title1 {
-		transform: translateX(-5em);
-	}
+	
 }
