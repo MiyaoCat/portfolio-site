@@ -1,13 +1,16 @@
-/*hsl(28, 17%, 30%);*/ /* dark brown */
-/*hsl(37, 32%, 92%) light brown */
-/* hsl(303, 100%, 50%); bright pink/purple */ 
-/*hsl(219, 13%, 82%); light grey*/
+/*hsl(28, 17%, 30%);*/ 
+/*hsl(37, 32%, 92%) */
+/* hsl(303, 100%, 50%); */
+/*hsl(219, 13%, 82%)*/
+/*#5E321F */
+/*#aadee9 */
+
 html {
 	--black: #111111;
 	--white: #FFF;
 
 	--color: #5E321F;
-	--highlight: #aadee9;
+	--highlight: hsl(303, 100%, 50%);
 
 	--shadow: rgba(221, 53%, 24%);
 
@@ -26,9 +29,9 @@ html {
 
 @media (prefers-color-scheme: dark) {
 	html {
-		--paper: #3f1414;
+		--paper: #231f20;
 		--ink: lawngreen;
-		--highlight: yellow;
+		--highlight: #6200ee;
 		--background: #14182f;
 	}
 

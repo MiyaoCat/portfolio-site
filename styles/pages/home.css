@@ -1,28 +1,28 @@
 /* - - PAGE HEADER - - */
 .home .page-header .title1 {
-	transform: rotate(-3deg);
+	transform: translateX(0) rotate(-3deg);
 }
 
 .home .page-header .title2 {
 	transform: translateX(6em);
 }
 
+/* - - GENERIC TEXT - - */
+.home .generic-text span {
+	color: red;
+}
+
 /* - - BUTTONS - - */
-.home.projects-button {
-	grid-row: 6;
-	grid-column: 7s / span 2;
+.home .contact-button {
+	grid-row: 7;
+	grid-column: 6 / span 4;
 }
 
-.home.contact-button {
-	grid-row: 6;
-	grid-column: 5 / span 2;
+.home .projects-button {
+	grid-row: 8;
+	grid-column: 6 / span 4;
 }
 
-a.contact-button {
-	display: block;
-	background-color: gray;
-	border-radius: 5px;
-}
 
 
 @media (min-width: 700px) {
@@ -32,7 +32,6 @@ a.contact-button {
 		grid-column: 2 / 10;
 	}
 
-	}
 	.home .page-header .title1 {
 		transform: translateX(-60%) rotate(-6deg);
 	}

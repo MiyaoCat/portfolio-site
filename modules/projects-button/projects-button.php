@@ -4,7 +4,7 @@
 	}
 ?>
 
-<a href="?page=projects" class="<?=$module?>">
+<a href="?page=projects">
 	<div class="button">
 		<p class="normal-voice"><?=$buttonText?></p>
 	</div>

@@ -17,16 +17,6 @@
 /* - - MODULES - - */
 @import 'modules.css';
 
-/* - - DEV STYLING - - */
-@import 'development.css';
-
-* {
-	box-sizing: border-box;
-}
-
-body * {
-		border: 1px solid black;
-}
 
 html {
 	justify-content: center;
@@ -48,8 +38,8 @@ body {
 }
 
 .background {
-	grid-column: 2 / 14;
-	grid-row:  1 / 5;
+	grid-column: 1 / -1;
+	grid-row:  1 / 4;
 	background-color: var(--background);
 	/*transition: 1s ease-in-out;*/
 }
@@ -70,15 +60,6 @@ body {
 }
 .image {
 	display: none;
-}
-
-
-
-.button {
-	grid-row: 7;
-	background-color: lawngreen;
-	border-radius: 15px;
-	padding: 5px 15px;
 }
 
 /* - - ABOUT - -  */
