@@ -10,6 +10,7 @@
 
 	$title = $caseStudy["title"];
 	$intro = $caseStudy["intro"];
+	$url = $caseStudy["url"];
 ?>
 
 
@@ -34,3 +35,7 @@
 	
 	<?php } ?>
 </section>
+
+<footer>
+	<a href="<?=$url?>" target="_blank">See the Live Project</a>
+</footer>

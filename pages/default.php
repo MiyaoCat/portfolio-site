@@ -4,7 +4,7 @@
 ?>
 
 	<section class="<?=$page?> <?=$module?>">
-		<a href="<?=$link?>" target="<?=$module?>">Detail</a>
+		<?php styleGuideDetailLink($module, $pageData["slug"]); ?>
 		<?php include("modules/$module/$module.php"); ?>
 	</section>
 

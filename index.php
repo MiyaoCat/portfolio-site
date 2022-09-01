@@ -1,4 +1,4 @@
-<?php include("partials/header/header.php"); ?>
+
 <?php include("functions.php"); ?>
 
 <?php 
@@ -15,6 +15,8 @@
 		$pageData = json_decode($thePageDataJson, true);
 	}
 ?>
+
+<?php include("partials/header/header.php"); ?>
 
 <?php
 	if ($pageData) {
@@ -43,10 +45,6 @@
 
 
 
-
-<!-- <section class="<?=$page?> intro">
-		<p><?=$pageData["intro"]?></p>
-</section> -->
 
 
 

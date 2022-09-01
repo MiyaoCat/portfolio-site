@@ -11,8 +11,8 @@
 	<link rel="stylesheet" href="styles/site.css">
 </head>
 
-<body>
-	<div class='background'></div>
+<body class="<?=$page?> <?=pageTemplateClass($pageData)?>">
+	<div class="background"></div>
 
 	<header class="site-header">
 		<nav>
