@@ -1,20 +1,20 @@
-.project.page-header {
-	grid-row: 3;
-	grid-column: 2 / 14;
+/* - - PAGE HEADER - - */
+.project .page-header .title1 {
+	transform: translateX(0) rotate(-3deg);
 }
 
-.project.module-intro {
-	grid-row: 6;
-	grid-column:  2 / 14;
+.project .page-header .title2 {
+	transform: translateX(8em);
 }
 
-@media (min-width: 700px) {
-	.project.page-header {
-		grid-column: 2 / 10;
+@media (min-width: 550px) {
+	.project .page-header .title2 {
+		transform: translateX(10em);
 	}
+}
 
-	.project.module-intro {
-		grid-row: 4;
-		grid-column:  2 / 10;
+@media (min-width: 630px) {
+	.project .page-header .title2 {
+		transform: translateX(12em);
 	}
 }

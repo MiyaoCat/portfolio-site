@@ -4,5 +4,12 @@
 
 	"title1": "Projects",
 	"title2": "",
-	"intro": "These are some of my latest projects. Check 'em out!"
+	"intro": "These are some of my latest projects. Check 'em out!",
+
+	"sections": [
+		{	
+			"module": "generic-text",
+			"content": "These are some of my latest projects. Check 'em out!"
+		}
+	]
 }

@@ -31,7 +31,7 @@ body {
 	gap: 5px;
 	grid-template-columns:  auto repeat(12, minmax(0, 120px)) auto;
 	min-height: 100vh;
-	grid-template-rows: auto repeat(7, 1fr) auto;
+	grid-template-rows: auto minmax(0, 70px) minmax(0, 70px) 1fr 1fr 1fr 1fr 1fr auto;
 	font-family: Rubik;
 	margin-left: auto;
 	margin-right: auto;
