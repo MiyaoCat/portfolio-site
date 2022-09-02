@@ -6,11 +6,6 @@
 	$sections = $resumeData["sections"];
 ?>
 
-<header class="resume page-header">
-	<?php  
-		include("modules/page-header/page-header.php");
-	?>
-</header>
 
 <?php 
 	foreach($sections as $section) {

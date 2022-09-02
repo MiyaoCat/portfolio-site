@@ -2,8 +2,8 @@
 	"slug": "resume",
 	"template": "resume",
 	
-	"title1": "This is My Resume",
-	"title2": "",
+	"title1": "My",
+	"title2": "Resume",
 	"intro": "Cover Letter / Intro",
 	"sections" : [
 		{	
