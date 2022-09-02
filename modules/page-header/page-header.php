@@ -5,8 +5,8 @@
 		$title2 = $pageData["title2"] ?? "World!"; 
 
 	} elseif ($page == "project") {
-		$json = file_get_contents("data/projects.json");
-		$projects = json_decode($json, true);
+			$json = file_get_contents("data/projects.json");
+			$projects = json_decode($json, true);
 		
 		foreach ($projects as $caseStudies) {
 			if ($caseStudies["slug"] == $_GET["slug"]) {
@@ -14,7 +14,14 @@
 			$title2 = $caseStudies["title2"];
 			}
 		}
-	}
+
+	} elseif ($page == "exercises") {
+			$json = file_get_contents("data/page-data/exercises.json");
+			$exercises = json_decode($json, true);
+
+			$title1 = $exercises["title1"];
+			$title2 = $exercises["title2"];
+		} 
 ?>
 
 <div class="heading">

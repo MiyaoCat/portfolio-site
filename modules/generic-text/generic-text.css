@@ -3,7 +3,6 @@ generic-text {
 }
 
 .generic-text {
-	grid-row: 4;
 	grid-column: 2 / 14;
 	margin: 5px;
 }

@@ -1,6 +1,7 @@
 [
 	{
 		"title1": "money",
+		"title2": "",
 		"intro": "Use this to find out how much you should tip",
 		"slug": "money",
 		"conclusion": "Here's what I learned when building this Tip calculator page"

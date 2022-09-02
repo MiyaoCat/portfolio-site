@@ -1,5 +1,5 @@
 <?php 
-	$json = file_get_contents("data/form-exercises.json");
+	$json = file_get_contents("data/exercises.json");
 	$exercises = json_decode($json, true);
 ?>
 

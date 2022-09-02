@@ -1,4 +1,5 @@
 .exercises-grid {
+	grid-row: 4;
 	grid-column: 2 / 14;
 }
 

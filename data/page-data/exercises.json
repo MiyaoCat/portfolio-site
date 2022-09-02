@@ -3,6 +3,7 @@
 	"slug": "exercises",
 	"template": "exercises",
 
-	"title": "Form Exercises",
+	"title1": "Form",
+	"title2": "Exercsises",
 	"intro": "This my work with the Exercises for Programmers page (E4P)"
 }

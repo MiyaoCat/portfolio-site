@@ -10,7 +10,7 @@
 
 		<a href="?page=style-guide">Style Guide</a>
 		<a href="?page=resume">Resume</a>
-		<a href="?page=form-exercises">Exercises</a>
+		<a href="?page=exercises">Exercises</a>
 	</footer>
 </body>
 
