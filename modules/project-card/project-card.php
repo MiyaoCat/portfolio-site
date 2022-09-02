@@ -1,6 +1,6 @@
 <?php 
 	//Variable sets carried over from projects.php page
-	$title = $project["title"];
+	$title1 = $project["title1"];
 	$slug = $project["slug"];
 	$intro = $project["intro"];
 	$image = $project["image"];
@@ -10,7 +10,7 @@
 	
 		<div class="project-title">
 			<a href="?page=project&slug=<?=$slug?>">
-				<h2 class="loud-voice"><?=$title?></h2>
+				<h2 class="loud-voice"><?=$title1?></h2>
 			</a>
 		</div>
 

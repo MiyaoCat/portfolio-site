@@ -8,7 +8,7 @@
 		}
 	}
 
-	$title = $caseStudy["title"];
+	$title = $caseStudy["title1"];
 	$intro = $caseStudy["intro"];
 	$url = $caseStudy["url"];
 ?>

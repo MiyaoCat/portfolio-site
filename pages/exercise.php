@@ -5,14 +5,17 @@
 	foreach ($exercises as $exercise) {
 		if ($exercise["slug"] == $_GET["slug"]) { 
 			
-			$title = $exercise["title1"];
+			$title1 = $exercise["title1"];
+			$title2 = $exercise["title2"];
 			$intro = $exercise["intro"];
 			$slug = $exercise["slug"];	
 		}	
 	}
 ?>
 
-<?php include("modules/page-header/page-header.php"); ?>
+<?php 
+	$title1 = $exercise["title1"];
+	include("modules/page-header/page-header.php"); ?>
 
 
 <section>

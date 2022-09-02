@@ -1,0 +1,7 @@
+.exercises-grid {
+	grid-column: 2 / 14;
+}
+
+.project-list .exercise {
+	margin: 20px 0;
+}

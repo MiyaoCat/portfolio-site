@@ -3,7 +3,8 @@
 		"slug": "layout-garden",
 		"template": "projects",
 
-		"title": "Responsive Layout Garden",
+		"title1": "Responsive Layout",
+		"title2": "Garden",
 		"intro": "Not really a project, but shows off a bunch of responsive modules that are common on modern websites",
 		"url": "https://peprojects.dev/alpha-4/john/layout-challenges/index.php",
 		"image": "https://peprojects.dev/images/landscape.jpg",
@@ -26,7 +27,8 @@
 		]
 	},
 	{
-		"title": "Form Exercises",
+		"title1": "Form Exercises",
+		"title2": "Form Exercises",
 		"slug": "form-exercises",
 		"intro": "We created a bunch of forms using the book, Exercises for Programmers. It gave us the opportunity to think through functions and create programs with PHP.",
 		"url": "https://peprojects.dev/alpha-4/john/layout-challenges/index.php",
@@ -44,7 +46,8 @@
 		]
 	},
 	{
-		"title": "Luxury Streetwear",
+		"title1": "Luxury",
+		"title2": "Streetwear",
 		"slug": "luxury-streetwear",
 		"intro": "This is my luxurious streetwear site",
 		"url": "https://peprojects.dev/alpha-4/john/layout-challenges/index.php",

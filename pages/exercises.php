@@ -3,10 +3,7 @@
 	$exercises = json_decode($json, true);
 ?>
 
-<?php  
-	$title = "My Form Exercises";
-	include("modules/page-header/page-header.php");
-?>
+
 
 <section class="exercises-grid">
 	<ul class="project-list">

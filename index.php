@@ -18,7 +18,7 @@
 
 <?php include("partials/header/header.php"); ?>
 
-<header class="<?=$page?> page-header">
+<header class="page-header">
 		<?php include("modules/page-header/page-header.php"); ?>
 </header>
 
