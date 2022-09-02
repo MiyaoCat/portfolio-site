@@ -5,14 +5,7 @@
 @import 'typography.css';
 
 /* - - PAGES - - */
-@import 'pages/home.css';
-@import 'pages/contact.css';
-@import 'pages/about.css';
-@import 'pages/projects.css';
-@import 'pages/project.css';
-@import 'pages/resume.css';
-@import 'pages/style-guide.css';
-@import 'pages/404.css';
+@import 'pages/pages.css';
 
 /* - - MODULES - - */
 @import 'modules.css';
