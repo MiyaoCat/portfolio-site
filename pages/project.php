@@ -14,28 +14,24 @@
 ?>
 
 
-<header class="<?=$page?> page-header">
-	<h1 class="loud-voice"><?=$title?></h1>
-</header>
-
-<section class="<?=$page?> page-intro">
-
+<section class="page-intro">
 	<p class="normal-voice"><?=$intro?></p>
 </section>
 
 
-<section class="<?=$page?> module-intro">
+
 	<?php 
 		$caseStudyModules = $caseStudy["sections"];
 		
 		foreach ($caseStudyModules as $CaseStudymodule) {
 		$module = $CaseStudymodule["module"];
 	?>
+		<section class="<?=$module?>">
 		<?php include("modules/$module/$module.php"); ?>
-	
+		</section>
 	<?php } ?>
-</section>
 
-<footer>
+
+<section class="project-url">
 	<a href="<?=$url?>" target="_blank">See the Live Project</a>
-</footer>
+</section>

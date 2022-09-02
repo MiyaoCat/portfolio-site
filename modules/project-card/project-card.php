@@ -9,9 +9,23 @@
 <project-card>
 	
 		<div class="project-title">
+
+			<?php  
+				if ($slug !== "exercises") {
+			?>
 			<a href="?page=project&slug=<?=$slug?>">
 				<h2 class="loud-voice"><?=$title1?></h2>
 			</a>
+
+			<?php } ?>
+
+			<?php  
+				if ($slug == "exercises") {
+			?>
+				<a href="?page=exercises">
+					<h2 class="loud-voice"><?=$title1?></h2>
+				</a>
+			<?php } ?>
 		</div>
 
 		<ul class="languages">
