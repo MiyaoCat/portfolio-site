@@ -13,17 +13,17 @@
 			<?php  
 				if ($slug !== "exercises") { ?>
 
-				<a href="?page=project&slug=<?=$slug?>">
-					<h2 class="loud-voice"><?=$title1?></h2>
-				</a>
+					<a href="?page=project&slug=<?=$slug?>">
+						<h2 class="loud-voice"><?=$title1?></h2>
+					</a>
 			<?php } ?>
 
 			<?php  
 				if ($slug == "exercises") { ?>
-
-				<a href="?page=exercises">
-					<h2 class="loud-voice"><?=$title1?></h2>
-				</a>
+					
+					<a href="?page=exercises">
+						<h2 class="loud-voice"><?=$title1?></h2>
+					</a>
 			<?php } ?>
 
 		</div>
@@ -33,7 +33,7 @@
 			<?php foreach ($project["languages"] as $languages) { ?>
 				<li><?=$languages?></li>
 			<?php } ?>
-			
+
 		</ul>
 
 		<p class="normal-voice"><?=$intro?></p>

@@ -1,21 +1,17 @@
 <?php 
 	$json = file_get_contents("data/exercises.json");
-	$exercises = json_decode($json, true);
+	$formExercises = json_decode($json, true);
  
-	foreach ($exercises as $exercise) {
-		if ($exercise["slug"] == $_GET["slug"]) { 
+	foreach ($formExercises as $form) {
+		if ($form["slug"] == $_GET["slug"]) { 
 			
-			$title1 = $exercise["title1"];
-			$title2 = $exercise["title2"];
-			$intro = $exercise["intro"];
-			$slug = $exercise["slug"];	
+			$title1 = $form["title1"];
+			$title2 = $form["title2"];
+			$intro = $form["intro"];
+			$slug = $form["slug"];	
 		}	
 	}
 ?>
-
-<?php 
-	$title1 = $exercise["title1"];
-	include("modules/page-header/page-header.php"); ?>
 
 
 <section>
