@@ -40,17 +40,12 @@ a {
 
 /* Caption text or similar */
 .calm-voice {
-
+	font-size: .8rem;
 }
 
 /* Fine print text or similar */
 .quiet-voice {
 
-}
-@media (min-width: 600px) {
-	.loud-voice {
-		font-weight: 700; /* or variable font */
-	}
 }
 
 .attention-voice	{
@@ -72,20 +67,11 @@ a {
 	font-size: .9rem;
 }
 
-.x-menu .strong-voice	{
-	font-family: var(--sans-serif);
-	font-size:  1.2rem;
-	text-transform: uppercase;
-}
-
-.x-menu a {
-	font-size: .9rem;
-}
 .calm-voice, p, li {
 	font-family: var(--sans-serif);
-	font-size: .8rem;
+	font-size: 1rem;
 	font-weight: 300;
-	line-height: 1.4;
+	line-height: 1.2;
 	letter-spacing: .05rem;
 }
 
@@ -96,17 +82,6 @@ a {
 	text-transform: uppercase;
 	line-height: 1.4;
 	letter-spacing: .05rem;
-}
-
-article-intro header h2, article-intro header p{
-	text-transform: uppercase;
-}
-
-@media (min-width: 600px) {
-	.calm-voice, p, li {
-		font-size: 1rem;
-		font-weight: 300;
-	}
 }
 
 :is(.calm-voice, p, li) em {

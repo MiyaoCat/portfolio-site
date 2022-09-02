@@ -16,17 +16,23 @@
 			<h2 class="loud-voice"><?=$section["heading"];?></h2>
 			
 			<ol>
-				<?php foreach($section["jobs"] as $job) { ?>
+				<?php foreach($section["jobs"] as $job) { 
+					$company = $job["company"];
+					$role = $job["role"];
+					$location = $job["location"];
+					$startDate = $job["startDate"];
+					$endDate = $job["endDate"];
+				?>
 					<li class="job">
 						<div class="job-details">
-							<h3 class="company"><?=$job["company"]?></h3>
-							<h3 class="role"><?=$job["role"]?></h3>
-							<h4 class="location"><?=$job["location"]?></h4>
-							<p class="dates"><?=$job["startDate"]?> - <?=$job["endDate"]?></p>
+							<h3 class="company"><?=$company?></h3>
+							<h3 class="role"><?=$role?></h3>
+							<h4 class="location"><?=$location?></h4>
+							<p class="dates"><?=$startDate?> - <?=$endDate?></p>
 						</div>
 						<ul>
 							<?php foreach($job["highlights"] as $highlight) { ?>
-							<li><?=$highlight?></li>
+							<li class="highlights"><?=$highlight?></li>
 							<?php } ?>
 						</ul>
 					</li>
