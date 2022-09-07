@@ -1,0 +1,94 @@
+/* EXPERIENCE BOXES */
+.experience {
+	grid-row: 4;
+	grid-column: 2/14;
+	margin: 5px 0;
+}
+
+.job {
+	margin: 25px 0;
+	padding: 10px;
+	border: 1px solid white;
+	box-shadow: 10px 10px black;
+	background-color: hsl(231, 17%, 22%);
+}
+
+.job-details {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+}
+
+.job-details .company {
+	grid-row: 1;
+	grid-column: 1;
+	font-weight: 700;
+}
+
+.job-details .role {
+	grid-row: 2;
+	grid-column: 1;
+	font-weight: 700;
+}
+
+.job-details .location {
+	grid-row: 1;
+	grid-column: 2;
+	text-align: right;
+}
+
+.job-details .dates {
+	grid-row: 2;
+	grid-column: 2;
+	text-align: right;
+}
+
+.job .highlights {
+	margin: 20px 0;
+}
+.skill {
+	grid-row: 5;
+	grid-column: 2/14;
+}
+
+.skill ol {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(2 minmax(0, 50px));
+}
+
+.skill ol h2 {
+	grid-row: 1;
+	grid-column: 1 / span 2;
+}
+
+.skill li {
+	/*grid-row: 2;*/
+}
+
+.school {
+	grid-row: 6;
+	grid-column: 2/14;
+}
+
+@media (min-width: 700px) {
+	.experience {
+		grid-column: 2 / 10;
+		margin: 10px;
+	}
+	.job {
+		padding: 10px;
+		
+	}
+
+	.skill {
+		grid-row: 4;
+		grid-column: 10 / 14;
+	}
+
+	.school {
+		grid-row: 5;
+		grid-column: 10 / 14;
+	}
+
+}
