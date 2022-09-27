@@ -7,6 +7,12 @@
 ?>
 
 
+<header class="<?=$page?> page-header">
+	<?php  
+		include("modules/page-header/page-header.php");
+	?>
+</header>
+
 <?php 
 	foreach($sections as $section) {
 		if ( $section["type"] == "experience" ) {

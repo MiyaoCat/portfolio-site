@@ -14,7 +14,12 @@
 ?>
 
 
-<section class="page-intro">
+
+<header class="<?=$page?> page-header">
+	<h1 class="screaming-voice"><?=$title?></h1>
+</header>
+
+<section class="<?=$page?> page-intro">
 	<p class="normal-voice"><?=$intro?></p>
 </section>
 
