@@ -23,9 +23,3 @@ style-guide {
 	grid-column: 4 / span 2;
 }
 
-@media (min-width: 700px) {
-	.style-guide.generic-text {
-		grid-column: 2 / 10;
-	}
-
-}

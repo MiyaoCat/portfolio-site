@@ -1,3 +1,7 @@
+project-card {
+	display: block;
+	margin: 0 5px;
+}
 
 .project-card.intro {
 	display: grid;
@@ -19,7 +23,9 @@
 
 
 @media (min-width: 700px) {
-
+	project-card {
+		grid-column: 2 / 10;
+	}
 	.project-images {
 		grid-column: 11;
 	}

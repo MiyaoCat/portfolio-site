@@ -1,7 +1,9 @@
-.contact-button a {
+.projects-button button {
 	border: 3px solid black;
 	text-align: center;
 	padding: 5px;
 	box-shadow: 5px 5px var(--highlight);
+	background: var(--paper);
+	min-width: 150px;
 }
 

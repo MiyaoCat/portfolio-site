@@ -12,15 +12,23 @@
 	color: var(--contrast);
 }
 
+.home span {
+	font-weight: 700;
+	text-transform: uppercase;
+	color: var(--highlight);
+
+}
 /* - - BUTTONS - - */
 .home .contact-button {
-	grid-row: 7;
-	grid-column: 6 / span 4;
+	grid-row: 6;
+	grid-column: 5;
+	display: flex;
+	align-items: center;
 }
 
 .home .projects-button {
-	grid-row: 8;
-	grid-column: 6 / span 4;
+	grid-row: 7;
+	grid-column: 5 ;
 }
 
 
@@ -38,5 +46,17 @@
 
 	.home .page-header .title2 {
 		transform: translateX(0);
-	
+	}
+
+	/* - - BUTTONS - - */
+	.home .contact-button {
+		grid-row: 6;
+		grid-column: 8 / span 3;
+	}
+
+	.home .projects-button {
+		grid-row: 7;
+		grid-column: 8 / span 4 ;
+	}
+
 }

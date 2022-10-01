@@ -9,13 +9,13 @@ generic-text {
 
 @media (min-width: 550px) {
 	.generic-text {
-		grid-column: 3 / 13;
+		grid-column: 2 / 10;
 	}
 }
 
 @media (min-width: 700px) {
 	.generic-text {
 		grid-row: 4;
-		grid-column: 10 / 14;
+		grid-column: 5 / 10;
 	}
 }

@@ -14,9 +14,7 @@
 }
 
 /* - - PAGE MODULES - - */
-section:is(.generic-text, .figure) {
-	grid-column: 2 / 14;
-}
+
 
 .project .generic-text {
 	grid-row: 5;
@@ -39,14 +37,3 @@ section:is(.generic-text, .figure) {
 	}
 }
 
-@media (min-width: 630px) {
-	.project .page-header .title2 {
-
-	}
-}
-
-@media (min-width: 700px) {
-	section:is(.project .page-intro, .project .generic-text) {
-		grid-column: 2 / 10;
-	}
-}

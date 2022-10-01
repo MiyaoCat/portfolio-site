@@ -4,8 +4,8 @@
 	}
 ?>
 
-<a href="?page=projects">
-	<div class="button">
+<button>
+	<a href="?page=projects">
 		<p class="normal-voice"><?=$buttonText?></p>
-	</div>
-</a>
+	</a>
+</button>
