@@ -21,6 +21,8 @@ generic-text {
 		grid-row: 4;
 		grid-column-end: span 5;
 		grid-column-end: 10;
+		margin: 20px;
+		text-align: right;
 	}
 }
 

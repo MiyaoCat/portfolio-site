@@ -46,17 +46,37 @@
 
 	.home .page-header .title2 {
 		transform: translateX(0);
-	}
+	}	
+}
 
-	/* - - BUTTONS - - */
+/* - - BUTTONS - - */
+@media (min-width: 900px) {
 	.home .contact-button {
-		grid-row: 6;
-		grid-column: 6;
+		grid-column: 4;
 	}
 
 	.home .projects-button {
-		grid-row: 7;
+		grid-row: 6;
+		grid-column: 8;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+}
+
+@media (min-width: 1150px) {
+	.home .contact-button {
+		grid-row: 6;
 		grid-column: 6;
+		justify-content: flex-end;
+		transform: translateX(37px);
 	}
 
+	.home .projects-button {
+		grid-row: 6;
+		grid-column-end: 9;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
 }
