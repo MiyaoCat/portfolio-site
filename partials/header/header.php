@@ -4,9 +4,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<meta property="og:image" content="[IMAGE URL]">
-	<meta name="description" content="[SHORT PAGE DESCRIPTION]">
+	<meta name="description" content="John Miyao's Portfolio">
 
-	<title>2</title>
+	<title>JM's Portoflio</title>
 
 	<link rel="stylesheet" href="styles/site.css">
 </head>
