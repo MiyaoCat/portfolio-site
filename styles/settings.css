@@ -7,8 +7,8 @@
 /*hsl(360, 100%, 39%)*/
 
 html {
-	--black: #111111;
-	--white: #FFF;
+	--darkest: #111111;
+	--lightest: #FFF;
 
 	--shadow: rgba(221, 53%, 24%);
 
@@ -35,6 +35,6 @@ html {
 	}
 
 	.logo {
-		fill: white;
+		fill: var(--lightest);
 	}
 }

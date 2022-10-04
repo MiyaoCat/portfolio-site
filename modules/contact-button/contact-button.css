@@ -2,7 +2,16 @@
 	border: 3px solid black;
 	text-align: center;
 	padding: 5px;
-	box-shadow: 5px 5px var(--highlight);
+	box-shadow: 5px 5px var(--contrast);
 	background: var(--paper);
 	min-width: 150px;
+}
+
+.contact-button button:active {
+	transform: translateX(5px) translateY(5px);
+	box-shadow: 0 0 var(--highlight);
+}
+
+.contact-button a {
+	color: var(--ink);
 }

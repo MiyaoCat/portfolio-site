@@ -69,7 +69,7 @@
 		grid-row: 6;
 		grid-column: 6;
 		justify-content: flex-end;
-		transform: translateX(37px);
+		transform: translateX(2em);
 	}
 
 	.home .projects-button {
