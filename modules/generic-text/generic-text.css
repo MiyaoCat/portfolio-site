@@ -27,6 +27,6 @@ generic-text {
 @media (min-width: 1100px) {
 	.generic-text {
 		grid-row: 4;
-
+		grid-column-start: 4;
 	}
 }

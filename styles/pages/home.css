@@ -9,14 +9,9 @@
 
 /* - - GENERIC TEXT - - */
 .home .generic-text span {
-	color: var(--contrast);
-}
-
-.home span {
+	color: var(--standout);
 	font-weight: 700;
 	text-transform: uppercase;
-	color: var(--highlight);
-
 }
 
 /* - - BUTTONS - - */

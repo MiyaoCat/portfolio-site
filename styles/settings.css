@@ -26,6 +26,7 @@ html {
 	--contrast: hsla(38, 10%, 15%, 1);
 	--alternate: hsla(0, 0%, 35%, 1);
 	--trim: black;
+	--standout: hsl(360, 100%, 39%);
 }
 
 @media (prefers-color-scheme: dark) {

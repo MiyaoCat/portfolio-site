@@ -1,3 +1,12 @@
+.email-form form {
+	display: flex;
+	flex-direction: column;
+}
+
+input[type='text']:nth-of-type(1), input[type='email'] {
+	max-width: 300px;
+}
+
 .email-form label  {
 	margin-top: 20px;
 	margin-bottom: 5px;
@@ -8,6 +17,7 @@
 	font-family: var(--sans-serif);
 	font-size: 1rem;
 	padding: 2px;
+	/*text-align: left;*/
 }
 
 .email-form .contact-form {
@@ -17,7 +27,7 @@
 	margin: 20px 0;
 	box-shadow: 5px 5px var(--contrast);
 	background: var(--background);
-	min-width: 150px;
+	/*min-width: 150px;*/
 	color: var(--ink);
 }
 
@@ -31,3 +41,9 @@
 	box-shadow: 0 0 var(--highlight);
 }
 
+@media (min-width: 700px) {
+	.contact .email-form  {
+		grid-column: 5 / 10;
+		margin: 0 20px;
+	}
+}
