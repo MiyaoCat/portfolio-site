@@ -21,10 +21,10 @@
 }
 ?>
 
-<form action="email-form.php" method="POST">
+<form method="POST">
 	
 	<label for="inputEmail">Email</label>
-	<input type="email" name="inputEmail" placeholder="youremail@email.com">
+	<input type="email" name="inputEmail" placeholder="youremail@email.com" required>
 	<label for="inputSubject">Subject</label>
 	<input type="text" name="inputSubject">
 
