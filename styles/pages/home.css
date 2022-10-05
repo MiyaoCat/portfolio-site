@@ -18,6 +18,7 @@
 	color: var(--highlight);
 
 }
+
 /* - - BUTTONS - - */
 .home .contact-button {
 	grid-row: 6;
@@ -31,7 +32,11 @@
 	grid-column: 5 ;
 }
 
-
+@media (min-width: 400px) {
+	.home .contact-button, .home .projects-button {
+		grid-column: 6;
+	}
+}
 
 @media (min-width: 700px) {
 	/* - - PAGE HEADER - - */
@@ -49,7 +54,7 @@
 	}	
 }
 
-/* - - BUTTONS - - */
+
 @media (min-width: 900px) {
 	.home .contact-button {
 		grid-column: 4;
