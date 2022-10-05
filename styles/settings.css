@@ -23,15 +23,18 @@ html {
 
 	--ink: black;
 	--highlight: lawngreen; 
-	--contrast: hsl(38, 10%, 15%);
+	--contrast: hsla(38, 10%, 15%, 1);
+	--alternate: hsla(0, 0%, 35%, 1);
+
 }
 
 @media (prefers-color-scheme: dark) {
 	html {
-		--paper: #231f20;
-		--ink: lawngreen;
+		--paper: black;
+		--ink: yellow;
 		--highlight: #6200ee;
-		--background: #14182f;
+		--background: hsla(0, 0%, 7%, 1);
+		--contrast:  lawngreen;
 	}
 
 	.logo {
