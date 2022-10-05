@@ -7,6 +7,12 @@
 	min-width: 150px;
 }
 
+.projects-button button:hover {
+	transform: translateX(5px) translateY(5px);
+	box-shadow: 0 0 var(--highlight);
+	cursor: pointer;
+}
+
 .projects-button button:active {
 	transform: translateX(5px) translateY(5px);
 	box-shadow: 0 0 var(--highlight);
