@@ -1,0 +1,28 @@
+.email-form label  {
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+
+.email-form input, .email-form textarea {
+	border: 3px solid var(--alternate);
+}
+.email-form .contact-form {
+	border: 3px solid var(--alternate);
+	text-align: center;
+	padding: 5px;
+	margin: 20px 0;
+	box-shadow: 5px 5px var(--contrast);
+	background: var(--paper);
+	min-width: 150px;
+	color: var(--ink);
+}
+
+.email-form .contact-form:active {
+	transform: translateX(5px) translateY(5px);
+	box-shadow: 0 0 var(--highlight);
+}
+
+.email-form textarea {
+	font-family: var(--sans-serif);
+	font-size: 1rem;
+}

@@ -3,7 +3,7 @@
 	text-align: center;
 	padding: 5px;
 	box-shadow: 5px 5px var(--contrast);
-	background: var(--paper);
+	background: var(--background);
 	min-width: 150px;
 }
 

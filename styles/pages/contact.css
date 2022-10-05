@@ -8,13 +8,17 @@
 }
 
 .contact .email-form {
-	grid-row: 5;
-	grid-column: 2 / 10;
+	grid-row: 6;
+	grid-column: 3 / 13;
 }
 
 .email-form form {
 	display: flex;
 	flex-direction: column;
+}
+
+input[type='text']:nth-of-type(1), input[type='email'] {
+	max-width: 300px;
 }
 
 @media (min-width: 550px) {
@@ -47,5 +51,29 @@
 
 	.contact .page-header .title2 {
 		transform: translateX(0);
-	
+	}
+
+	.contact .email-form  {
+		grid-column: 3 / 10;
+		margin: 0 20px;
+		max-width: 700px;
+	}
 }
+
+@media (min-width: 1000px) {
+	.contact .email-form  {
+		grid-column: 4 / 10;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

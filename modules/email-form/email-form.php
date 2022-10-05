@@ -3,6 +3,7 @@
 
 		$email = $_POST['inputEmail'];
 		$subject = $_POST['inputSubject'];
+		$name = $_POST['inputName'];
 		$message = $_POST['inputMessage'];
 
 		$to = "dftwjohn@gmail.com";
@@ -11,6 +12,7 @@
 
 		$body = "Email: " . $email . "\r\n";
 		$body = "Subject: " . $subject . "\r\n";
+		$body = "Name: " . $name . "\r\n";
 		$body = "Message: " . $message . "\r\n";
 
 
@@ -23,14 +25,14 @@
 	<label for="inputName">Name</label>
 	<input type="text" name="inputName">
 
-	<label for="inputEmail">Email</label>
+	<label for="inputEmail">* Email</label>
 	<input type="email" name="inputEmail" required>
 
 	<label for="inputSubject">Subject</label>
 	<input type="text" name="inputSubject">
 
-	<label for="inputMessage">Message</label>
-	<textarea rows="8" columns="10" name="inputMessage" required></textarea>
+	<label for="inputMessage">* Message</label>
+	<textarea rows="8" columns="10" name="inputMessage" placeholder="Hey John, I love your work. Let's collab!" required></textarea>
 
 	<button class="contact-form" type="submit" name="submitted">Send Message</button>
 
@@ -43,7 +45,7 @@
 		if ( isset($email) ) {
 		if ( isset($message) && $message > "0") {	
 ?>
-			<p class="normal-voice">Thank you for your message. I will get back to you ASAP!</p>
+			<p class="normal-voice">Thank you! Your message has been received and I will get back to you ASAP!</p>
 
 		<?php } ?>
 		
