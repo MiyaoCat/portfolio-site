@@ -1,7 +1,5 @@
 <?php  
 	if ( isset($_POST["submitted"]) ) {
-		echo "<p class='return-message'>Your message has been received </p>";
-	
 
 	echo "<pre>";
 		print_r($_POST);
@@ -14,12 +12,12 @@
 	$to = "dftwjohn@gmail.com";
 	$body = "";
 
-	$body = "Email: " . $email . "\r\n";
-	$body = "Subject: " . $subject . "\r\n";
-	$body = "Message: " . $message . "\r\n";
+	$body .= "Email: " . $email . "\r\n";
+	$body .= "Subject: " . $subject . "\r\n";
+	$body .= "Message: " . $message . "\r\n";
 
 
-	mail($to, $subject, $message);
+	mail($to, $subject, $body);
 }
 ?>
 
