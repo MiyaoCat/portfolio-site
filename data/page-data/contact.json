@@ -9,6 +9,10 @@
 		{
 			"module": "generic-text",
 			"content": "Welcome to my site! I’m a Web Developer who helps businesses standout online. Unlike my competitors, I translate my clients’ goals into beautiful, responsive design."
+		},
+		{
+			"module": "email-form",
+			"content": "send me a message!"
 		}
 	]
 }

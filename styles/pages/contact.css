@@ -7,6 +7,16 @@
 	transform: translateX(12em);
 }
 
+.contact .email-form {
+	grid-row: 5;
+	grid-column: 2 / 10;
+}
+
+.email-form form {
+	display: flex;
+	flex-direction: column;
+}
+
 @media (min-width: 550px) {
 	.contact .page-header .title2 {
 		transform: translateX(14em);
