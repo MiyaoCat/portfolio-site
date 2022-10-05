@@ -4,10 +4,10 @@
 }
 
 .email-form input, .email-form textarea {
-	border: 3px solid var(--alternate);
+	border: 3px solid var(--trim);
 }
 .email-form .contact-form {
-	border: 3px solid var(--alternate);
+	border: 3px solid var(--trim);
 	text-align: center;
 	padding: 5px;
 	margin: 20px 0;

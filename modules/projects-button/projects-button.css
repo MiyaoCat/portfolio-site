@@ -1,5 +1,5 @@
 .projects-button button {
-	border: 3px solid black;
+	border: 3px solid var(--trim);
 	text-align: center;
 	padding: 5px;
 	box-shadow: 5px 5px var(--contrast);
