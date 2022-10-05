@@ -20,6 +20,9 @@
 ?>
 <form method="POST">
 	
+	<label for="inputName">Name</label>
+	<input type="text" name="inputName">
+
 	<label for="inputEmail">Email</label>
 	<input type="email" name="inputEmail" required>
 
@@ -27,8 +30,7 @@
 	<input type="text" name="inputSubject">
 
 	<label for="inputMessage">Message</label>
-	<textarea rows="8" columns="10" name="inputMessage" required>
-	</textarea>
+	<textarea rows="8" columns="10" name="inputMessage" required></textarea>
 
 	<button class="contact-form" type="submit" name="submitted">Send Message</button>
 
