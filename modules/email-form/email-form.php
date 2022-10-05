@@ -34,7 +34,7 @@
 	<label for="inputMessage">* Message</label>
 	<textarea rows="8" columns="10" name="inputMessage" placeholder="Hey John, I love your work. Let's collab!" required></textarea>
 
-	<button class="contact-form" type="submit" name="submitted">Send Message</button>
+	<button class="normal-voice contact-form" type="submit" name="submitted">Send Message</button>
 
 </form>
 

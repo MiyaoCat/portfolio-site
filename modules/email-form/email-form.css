@@ -5,7 +5,11 @@
 
 .email-form input, .email-form textarea {
 	border: 3px solid var(--trim);
+	font-family: var(--sans-serif);
+	font-size: 1rem;
+	padding: 2px;
 }
+
 .email-form .contact-form {
 	border: 3px solid var(--trim);
 	text-align: center;
@@ -17,12 +21,13 @@
 	color: var(--ink);
 }
 
+.email-form .contact-form:hover  {
+	transform: translateX(5px) translateY(5px);
+	box-shadow: 0 0 var(--highlight);
+	cursor: pointer;
+}
 .email-form .contact-form:active {
 	transform: translateX(5px) translateY(5px);
 	box-shadow: 0 0 var(--highlight);
 }
 
-.email-form textarea {
-	font-family: var(--sans-serif);
-	font-size: 1rem;
-}
