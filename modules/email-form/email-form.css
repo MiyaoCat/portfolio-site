@@ -17,7 +17,6 @@ input[type='text']:nth-of-type(1), input[type='email'] {
 	font-family: var(--sans-serif);
 	font-size: 1rem;
 	padding: 2px;
-	/*text-align: left;*/
 }
 
 /*- - FORM BUTTON - - */
@@ -28,7 +27,6 @@ input[type='text']:nth-of-type(1), input[type='email'] {
 	margin: 20px 0;
 	box-shadow: 5px 5px var(--contrast);
 	background: var(--background);
-	/*min-width: 150px;*/
 	color: var(--ink);
 }
 
@@ -40,11 +38,4 @@ input[type='text']:nth-of-type(1), input[type='email'] {
 .email-form .contact-form:active {
 	transform: translateX(5px) translateY(5px);
 	box-shadow: 0 0 var(--highlight);
-}
-
-@media (min-width: 700px) {
-	.contact .email-form  {
-		grid-column: 5 / 10;
-		margin: 0 20px;
-	}
 }

@@ -6,7 +6,7 @@
 	$image = $project["image"];
 ?>
 
-<project-card>
+<project-card class="<?=$slug?>">
 	
 		<div class="project-title">
 

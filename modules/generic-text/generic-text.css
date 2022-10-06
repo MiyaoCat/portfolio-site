@@ -1,5 +1,5 @@
 .generic-text {
-	grid-row: 4;
+	grid-row: 3;
 	grid-column: 2 / 14;
 	margin: 5px;
 	display: flex;
@@ -18,17 +18,16 @@ generic-text {
 
 @media (min-width: 700px) {
 	.generic-text {
-		grid-row: 4;
-		/*grid-column-end: 10;*/
-		margin: 20px;
-		text-align: right;
-		justify-content: flex-end;
+		grid-column: 4 / 10;
+		margin-top: 30px;
+		margin-right: 20px;
+		/*text-align: right;*/
+		/*justify-content: flex-end;*/
 	}
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1000px) {
 	.generic-text {
-		grid-row: 4;
-		grid-column-start: 4;
+		grid-column: 5 / 10;
 	}
 }

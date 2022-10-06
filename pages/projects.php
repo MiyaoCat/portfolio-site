@@ -15,7 +15,7 @@
 	$projects = json_decode($json, true);
 ?>	
 
-<section class="project-card">
+<!-- <section class="project-card"> -->
 	<?php 
 
 		foreach ($projects as $project) { 
@@ -25,7 +25,7 @@
 			}
 		// }
 	?>
-</section>
+<!-- </section> -->
 
 
 

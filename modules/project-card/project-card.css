@@ -4,13 +4,17 @@ project-card {
 	margin: 0 5px;
 }
 
+project-card + project-card {
+	margin: 20px 0;
+}
+
+project-card * {
+	margin: 2px 0;
+}
+
 .project-card.intro {
 	display: grid;
 	align-items: space-between;
-}
-
-.project-card h2 {
-	/*writing-mode: vertical-rl;*/
 }
 
 .languages {
@@ -20,7 +24,7 @@ project-card {
 
 .languages li {
 	padding: 2px 5px;
-	margin: 5px 5px 5px 0;
+	margin: 0 5px 5px 0;
 	border: 2px solid var(--trim);
 }
 .project-image  {
@@ -30,11 +34,8 @@ project-card {
 
 
 @media (min-width: 700px) {
-	.project-card {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
-		gap: 20px;
+	project-card {
+		margin-right: 20px;
 	}
 
 	project-card p {

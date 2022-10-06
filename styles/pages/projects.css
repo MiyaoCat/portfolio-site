@@ -1,10 +1,28 @@
-.project-card {
-	grid-row: 5;
+project-card {
 	grid-column: 2 / 14;
+}
+project-card.layout-garden {
+	grid-row: 4;
+}
+
+project-card.exercises {
+	grid-row: 5;
+}
+
+project-card.luxury-streetwear {
+	grid-row: 6;
 }
 
 @media (min-width: 700px) {
-	.project-card {
-		grid-column: 2 / 10;
+	project-card {
+		grid-column: 4 / 10;
+		
+	}
+}
+
+@media (min-width: 1000px) {
+	project-card {
+		grid-column: 5 / 10;
+		
 	}
 }
