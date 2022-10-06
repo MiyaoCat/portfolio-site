@@ -2,9 +2,7 @@
 		<div class="query-string"><?php echo "?" . queryString(); ?></div>
 		<div class='logo'>
 			<a href="?page=home">
-				<svg viewBox="0 0 10 10">
-					<circle cx="5" cy="5" r="5" fill="black" /></a>
-				</svg>
+				<?php include("./images/icons/logo.svg"); ?>
 			</a>
 		</div>
 
