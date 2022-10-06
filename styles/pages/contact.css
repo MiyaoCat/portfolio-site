@@ -27,10 +27,6 @@
 
 @media (min-width: 700px) {
 	/* - - PAGE HEADER - - */
-	.contact .page-header {
-		grid-row: 3;
-		grid-column: 2 / 10;
-	}
 
 	.contact .page-header .title1 {
 		transform: translateX(-15%) rotate(-6deg);

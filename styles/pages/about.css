@@ -19,7 +19,6 @@
 	}
 }
 
-
 .about .figure {
 	display: none;
 }
@@ -33,12 +32,6 @@
 @media (min-width: 700px) {
 
 	/* - - PAGE HEADER - - */
-	.about .page-header {
-		grid-row: 3;
-		grid-column-start: 3;
-		align-items: flex-end;
-	}
-	
 	.about .page-header .title1 {
 		transform: translateX(-3em) rotate(-3deg);
 	}
@@ -46,7 +39,6 @@
 	.about .page-header .title2 {
 		transform: translateX(0);
 	}
-
 
 	/* - - PAGE INTRO - - */
 	.about .page-intro {

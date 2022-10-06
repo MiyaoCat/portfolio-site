@@ -35,11 +35,6 @@
 
 @media (min-width: 700px) {
 	/* - - PAGE HEADER - - */
-	.home .page-header {
-		grid-row: 3;
-		grid-column: 2 / 10;
-	}
-
 	.home .page-header .title1 {
 		transform: translateX(-60%) rotate(-6deg);
 	}
