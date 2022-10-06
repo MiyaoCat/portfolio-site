@@ -3,6 +3,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	 <link rel="icon" type="image/x-icon" href="./images/icons/logo.svg">
+	 
 	<meta property="og:image" content="[IMAGE URL]">
 	<meta name="description" content="John Miyao's Portfolio">
 
