@@ -1,45 +1,25 @@
 <social-icons class="<?=$page?>">
 	<ul>
-		<li>
-			<div class='logo'>
-				<p>Hello</p>
-				<a href="#">
-					<svg viewBox="0 0 10 10">
-						<rect width="30" height="30" fill="blue" /></a>
-					</svg>
-				</a>
-			</div>
+		<li class="logo">
+			<a href="#">
+				<?php include("./images/icons/github-circle.svg"); ?>
+			</a>
 		</li>
-		<li>
-			<div class='logo'>
-				<p>hello</p>
-				<a href="#">
-					<svg viewBox="0 0 10 10">
-						<rect width="30" height="30" fill="blue" /></a>
-					</svg>
-				</a>
-			</div>
+		<li class="logo">
+			<a href="#">
+				<?php include("./images/icons/twitter-large.svg"); ?>
+			</a>
 		</li>
-		<li>
-			<div class='logo'>
-				<p>hello</p>
-				<a href="#">
-					<svg viewBox="0 0 10 10">
-						<rect width="30" height="30" fill="blue" /></a>
-					</svg>
-				</a>
-			</div>
+		<li class="logo">
+			<a href="#">
+				<?php include("./images/icons/linkedin-letters.svg"); ?>
+			</a>
 		</li>
 
-		<li>
-			<div class='logo'>
-				<p>hello</p>
-				<a href="#">
-					<svg viewBox="0 0 10 10">
-						<rect width="50" height="50" fill="blue" /></a>
-					</svg>
-				</a>
-			</div>
+		<li class="logo">
+			<a href="#">
+				<?php include("./images/icons/substack-short.svg"); ?>
+			</a>
 		</li>
 	</ul>
 </social-icons>

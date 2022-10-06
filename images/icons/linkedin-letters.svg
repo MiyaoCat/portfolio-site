@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1000 1000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="logo" transform="matrix(4,0,0,4,0,0)">
+        <rect x="0" y="0" width="250" height="250" style="fill:none;"/>
+        <clipPath id="_clip1">
+            <rect x="0" y="0" width="250" height="250"/>
+        </clipPath>
+        <g clip-path="url(#_clip1)">
+            <g id="linkedin" transform="matrix(12.5,0,0,12.5,125.181,125.124)">
+                <g transform="matrix(1,0,0,1,-10,-10)">
+                    <clipPath id="_clip2">
+                        <rect x="0" y="0" width="20" height="20"/>
+                    </clipPath>
+                    <g clip-path="url(#_clip2)">
+                        <g transform="matrix(1,0,0,1,-124,-7319)">
+                            <g id="Page-1">
+                                <g id="Dribbble-Light-Preview">
+                                    <g id="icons">
+                                        <path id="linkedin---161-" serif:id="linkedin-[#161]" d="M144,7339L140,7339L140,7332C140,7330.08 139.153,7329.01 137.634,7329.01C135.981,7329.01 135,7330.13 135,7332L135,7339L131,7339L131,7326L135,7326L135,7327.46C135,7327.46 136.255,7325.26 139.083,7325.26C141.912,7325.26 144,7326.99 144,7330.56L144,7339ZM126.442,7323.92C125.093,7323.92 124,7322.82 124,7321.46C124,7320.1 125.093,7319 126.442,7319C127.79,7319 128.883,7320.1 128.883,7321.46C128.884,7322.82 127.79,7323.92 126.442,7323.92ZM124,7339L129,7339L129,7326L124,7326L124,7339Z"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

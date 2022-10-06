@@ -7,10 +7,19 @@ social-icons ul {
 	flex-direction: row;
 	justify-content: center;
 	gap: 40px;
-	border: 1px solid red;
 }
 
 .section  {
 	grid-row: 8;
 	grid-column: 2 / 10;
+}
+
+.logo a:hover {
+	fill: var(--background);
+}
+
+@media (min-width: 700px) {
+	.logo a:hover {
+		fill: var(--paper);
+	}
 }
