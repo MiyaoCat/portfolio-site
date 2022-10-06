@@ -13,12 +13,6 @@
 	grid-column: 2 / 14;
 }
 
-/* - - PAGE MODULES - - */
-
-
-.project .generic-text {
-	grid-row: 5;
-}
 
 
 .project .figure {
@@ -37,3 +31,8 @@
 	}
 }
 
+@media (min-width: 700px) {
+	.project .page-intro {
+		grid-column: 2 / 10;
+	}
+}

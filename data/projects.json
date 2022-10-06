@@ -4,7 +4,7 @@
 		"template": "projects",
 
 
-		"title1": "Responsive",
+		"title1": "Layout",
 		"title2": "Garden",
 		"intro": "Not really a project, but shows off a bunch of responsive modules that are common on modern websites",
 		"url": "https://peprojects.dev/alpha-4/john/layout-challenges/index.php",
@@ -18,9 +18,6 @@
 			{
 				"module": "generic-text",
 				"content": "If you on a computer, try horizontally expanding and contracting your window to see how the modules <em>respond</em> to the window size :)"
-			},
-			{
-				"module": "figure"
 			}
 		]
 	},

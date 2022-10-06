@@ -1,8 +1,9 @@
 .generic-text {
+	grid-row: 4;
 	grid-column: 2 / 14;
 	margin: 5px;
 	display: flex;
-	justify-content: flex-end;
+	
 }
 
 generic-text {
@@ -21,6 +22,7 @@ generic-text {
 		/*grid-column-end: 10;*/
 		margin: 20px;
 		text-align: right;
+		justify-content: flex-end;
 	}
 }
 

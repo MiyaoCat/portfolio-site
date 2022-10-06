@@ -1,8 +1,18 @@
 .exercises-grid {
-	grid-row: 4;
+	grid-row: 6;
 	grid-column: 2 / 14;
 }
 
 .project-list .exercise {
 	margin: 20px 0;
+}
+
+@media (min-width: 700px) {
+	.exercises-grid {
+		grid-row: 6;
+		grid-column-start:  10;
+		margin: 20px;
+		/*text-align: right;*/
+		justify-content: flex-start;
+	}
 }

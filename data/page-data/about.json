@@ -8,7 +8,7 @@
 	"sections": [
 		{
 			"module": "generic-text",
-			"content": "Welcome to my site! Make yourself at home and click around."
+			"content": "Welcome to my site! Make yourself at home and click around.<br>Next line of text."
 		},
 		{
 			"module": "figure"

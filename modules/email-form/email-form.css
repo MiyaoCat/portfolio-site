@@ -20,6 +20,7 @@ input[type='text']:nth-of-type(1), input[type='email'] {
 	/*text-align: left;*/
 }
 
+/*- - FORM BUTTON - - */
 .email-form .contact-form {
 	border: 3px solid var(--trim);
 	text-align: center;

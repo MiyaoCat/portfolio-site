@@ -1,5 +1,6 @@
 project-card {
-	display: block;
+	display: flex;
+	flex-direction: column;
 	margin: 0 5px;
 }
 
@@ -16,33 +17,23 @@ project-card {
 	display: flex;
 	flex-direction: row;
 }
+
+.languages li {
+	padding: 2px 5px;
+	margin: 5px 5px 5px 0;
+	border: 2px solid var(--trim);
+}
 .project-image  {
-	box-shadow: 10px 10px black;
+	box-shadow: 10px 10px var(--highlight);
 	display: none;
 }
 
 
 @media (min-width: 700px) {
-	project-card {
-		grid-column: 2 / 10;
-	}
-	.project-images {
-		grid-column: 11;
-	}
-	.projects.page-header {
-		grid-row: 2;
-	}
-
-	.projects.page-intro {
-		grid-row: 3;
-		grid-column: 5 / 10;
-	}
-
 	.project-card {
 		display: flex;
 		flex-direction: column;
-		grid-row: 4;
-		grid-column: 2 / 10;
+		align-items: flex-end;
 		gap: 20px;
 	}
 
@@ -57,10 +48,9 @@ project-card {
 
 	picture.project-image {
 		display: block;
-		max-width: 400px;
-		grid-column: 10 / span 2;
+		max-width: 300px;
 		grid-row: 4;
-		border: 2px solid green;
+		border: 3px solid var(--trim);
 	}
 
 	.project.project-card {

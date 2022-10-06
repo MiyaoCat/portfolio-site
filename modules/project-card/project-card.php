@@ -31,12 +31,12 @@
 		<ul class="languages">
 
 			<?php foreach ($project["languages"] as $languages) { ?>
-				<li><?=$languages?></li>
+				<li class="calm-voice"><?=$languages?></li>
 			<?php } ?>
 
 		</ul>
 
-		<p class="normal-voice"><?=$intro?></p>
+		<p class="normal-voice intro"><?=$intro?></p>
 
 		<div class="project-images">
 			<picture class="project-image">

@@ -24,6 +24,7 @@ nav li {
 	writing-mode: vertical-rl;
 	text-decoration: none;
 	transition: .3s ease-in-out;
+	margin-top: 5px;
 }
 
 nav li:hover {

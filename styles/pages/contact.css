@@ -9,7 +9,8 @@
 
 .contact .email-form {
 	grid-row: 6;
-	grid-column: 3 / 13;
+	grid-column: 2 / 14;
+	margin: 5px;
 }
 
 @media (min-width: 550px) {
