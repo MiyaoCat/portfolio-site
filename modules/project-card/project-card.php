@@ -1,6 +1,7 @@
 <?php 
 	//Variable sets carried over from projects.php page
 	$title1 = $project["title1"];
+	$title2 = $project["title2"];
 	$slug = $project["slug"];
 	$intro = $project["intro"];
 	$image = $project["image"];
@@ -44,7 +45,7 @@
 
 		<div class="project-images">
 			<picture class="project-image">
-				<img src="<?=$image?>" alt="image for <?=$title?>">
+				<img src="<?=$image?>" alt="image for <?=$title1?> <?=$title2?>">
 			</picture>
 		</div>
 
