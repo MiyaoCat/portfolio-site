@@ -2,13 +2,16 @@ project-card {
 	display: flex;
 	flex-direction: column;
 	margin: 0 5px;
+	border-top: 3px solid var(--trim);
+	border-bottom: 3px solid var(--trim);
+	padding: 10px 10px 20px 0;
 }
 
 project-card + project-card {
 	margin-top: 20px;
 }
 
-project-card * {
+project-card .project-details * {
 	margin: 2px 0;
 }
 
@@ -25,36 +28,50 @@ project-card * {
 .languages li {
 	padding: 2px 5px;
 	margin: 0 5px 5px 0;
+	max-height: 1.2rem;
 	border: 2px solid var(--trim);
 }
 .project-image  {
-	box-shadow: 10px 10px var(--highlight);
+	box-shadow: 10px 10px var(--alternate);
 	display: none;
 }
 
 
 @media (min-width: 700px) {
-	project-card {
-		margin-right: 20px;
-	}
-
-	project-card p {
-		align-items: center;
-		justify-items: center;
-	}
-	project-card a {
-		grid-row: 2;
-		grid-column: 2;
-	}
-
 	picture.project-image {
 		display: block;
-		max-width: 300px;
+		max-width: 250px;
 		grid-row: 4;
 		border: 3px solid var(--trim);
 	}
+}
 
-	.project.project-card {
-		grid-row: 8;
+@media (min-width: 900px) {
+	project-card {
+		flex-direction: row;
+		justify-content: space-between;
+		margin-right: 20px;
+	}
+
+	.project-details {
+		max-width: 50%;
+		margin-right: 5px;
+	}
+
+	.project-images {
+		max-width: 50%;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
