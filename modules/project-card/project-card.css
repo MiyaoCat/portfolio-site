@@ -2,9 +2,9 @@ project-card {
 	display: flex;
 	flex-direction: column;
 	margin: 0 5px;
+	padding: 10px 10px 20px 0;
 	border-top: 3px solid var(--trim);
 	border-bottom: 3px solid var(--trim);
-	padding: 10px 10px 20px 0;
 }
 
 project-card + project-card {
@@ -32,17 +32,32 @@ project-card .project-details * {
 	border: 2px solid var(--trim);
 }
 .project-image  {
-	box-shadow: 10px 10px var(--alternate);
+	box-shadow: 10px 10px var(--contrast);
 	display: none;
 }
 
 
 @media (min-width: 700px) {
+	project-card {
+		margin-right: 20px;
+	}
 	picture.project-image {
 		display: block;
 		max-width: 250px;
+		max-height: 200px;
 		grid-row: 4;
 		border: 3px solid var(--trim);
+	}
+
+	picture.project-image:hover {
+		transform: translateX(5px) translateY(5px);
+		box-shadow: 0 0 var(--contrast);
+		cursor: pointer;
+	}
+
+	picture.project-image:active {
+		transform: translateX(5px) translateY(5px);
+		box-shadow: 0 0 var(--contrast);
 	}
 }
 

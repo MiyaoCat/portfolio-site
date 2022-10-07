@@ -45,7 +45,9 @@
 
 		<div class="project-images">
 			<picture class="project-image">
-				<img src="<?=$image?>" alt="image for <?=$title1?> <?=$title2?>">
+				<a href="?page=project&slug=<?=$slug?>">
+					<img src="<?=$image?>" alt="image for <?=$title1?> <?=$title2?>">
+				</a>
 			</picture>
 		</div>
 
