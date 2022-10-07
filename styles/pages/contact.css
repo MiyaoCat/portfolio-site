@@ -43,6 +43,11 @@
 	}
 }
 
+@media (min-width: 1000px) {
+	.contact .email-form  {
+		/*grid-column: 5 / 10;*/
+	}
+}
 
 
 

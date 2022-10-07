@@ -8,7 +8,7 @@
 	"sections": [
 		{
 			"module": "generic-text",
-			"content": "Welcome to my site! Make yourself at home and click around.<br>Next line of text."
+			"content": "Welcome to my site! Make yourself at home and click around. <br><br> My name is John Miyao and I currently live in sunny Seattle, WA. I've worked in tech most of my career, but this year (2022), I finally decided to make the transition into Engineering. It's been a fun journey learning to code, but I know it's only just the beginning. <br><br>  Outside of work, I prioritize my family and friends who I consider family, my health and my time. I like to stay active and run, cycle, play basketball, golf and I really want to try pickle ball. Don't get me wrong though, I spend more than my fair share lounging. I'd call myself lazy active if such a term exists.<br><br>"
 		},
 		{
 			"module": "figure"
