@@ -57,7 +57,7 @@
 		transform: rotate(3deg);
 	}
 
-	.about .photos picture {
-		box-shadow: 8px 8px lawngreen;
+	.about picture {
+		box-shadow: 10px 10px var(--trim);
 	}
 }
