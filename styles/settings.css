@@ -31,15 +31,12 @@ html {
 
 @media (prefers-color-scheme: dark) {
 	html {
-		--paper: black;
+		--paper: hsla(0, 0%, 7%, 1);
 		--ink: yellow;
 		--highlight: #6200ee;
-		--background: hsla(0, 0%, 7%, 1);
+		--background: hsla(38, 10%, 15%, 1);
 		--contrast:  yellow;
 		--trim: hsla(0, 0%, 35%, 1);
-	}
-
-	.logo {
-		fill: var(--lightest);
+		--lightest: #FFF;
 	}
 }

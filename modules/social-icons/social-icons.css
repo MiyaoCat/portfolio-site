@@ -15,11 +15,6 @@ social-icons ul {
 }
 
 .logo a:hover {
-	fill: var(--background);
+	fill: var(--lightest);
 }
 
-@media (min-width: 700px) {
-	.logo a:hover {
-		fill: var(--paper);
-	}
-}
