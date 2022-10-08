@@ -12,6 +12,7 @@
 			"jobs": [
 				{
 					"company": "<a href=\"https://connectedtravel.com/\" target=\"_blank\">Connected Travel, LLC</a>",
+					"slug": "connected-travel",
 					"role": "Program Manager",
 					"location": "Remote",
 					"startDate": "January 2018",
@@ -26,6 +27,7 @@
 				},
 				{
 					"company": "<a href=\"https://connectedtravel.com/\" target=\"_blank\">Connected Travel, LLC</a>",
+					"slug": "shopco",
 					"role": "Customer Operations Manager",
 					"location": "San Francisco",
 					"startDate": "January 2018",
@@ -40,6 +42,7 @@
 				},
 				{
 					"company": "<a href=\"https://connectedtravel.com/\" target=\"_blank\">Connected Travel, LLC</a>",
+					"slug": "eventbrite",
 					"role": "Program Manager",
 					"location": "Remote",
 					"startDate": "01/18",
