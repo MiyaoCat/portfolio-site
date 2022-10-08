@@ -60,4 +60,30 @@
 	.about picture {
 		box-shadow: 10px 10px var(--trim);
 	}
+
+	/* - - SOCIAL ICONS - - */
+	.about .social-icons {
+		grid-column: 4 / 10;
+	}
+
+	@media (min-width: 1000px) {
+	.about .social-icons {
+		grid-column: 5 / 10;
+	}
 }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
