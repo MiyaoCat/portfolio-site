@@ -26,33 +26,43 @@
 					]
 				},
 				{
-					"company": "<a href=\"https://connectedtravel.com/\" target=\"_blank\">Connected Travel, LLC</a>",
+					"company": "<a href=\"https://connectedtravel.com/\" target=\"_blank\">ShopCo, LLC</a>",
 					"slug": "shopco",
-					"role": "Customer Operations Manager",
+					"role": "Customer Operations Manager & Support Manager",
 					"location": "San Francisco",
-					"startDate": "January 2018",
+					"startDate": "June 2017",
 					"endDate": "December 2017",
-					"highlights": ["Managed Beta program for a safe driving mobile application and synthesized user feedback via surveys and focus groups to improve application prior to launch",
-							"Oversaw operational success of the app which reached 15,000 registered users, 4,500 DAUs and 6,500 MAUs with a 70% retention rate (90 days)",
-							"Increased app rating from 3.7 to 4.6 in Google Play and 4.5 to 4.8 in iTunes within one month",
-							"Defined and managed external communication channels (support, social media, marketing, app reviews, in-app messaging) with end-user community",
-							"Streamlined support process to reduce resolution time of our top customer issue from 2 days to less than 24 hours",
-							"Tracked and executed the delivery of new product features for both backend management portal and front-end application with off-shore Engineering team"
+					"highlights": [
+							"Analyzed customer and NPS data to reduce order fulfillment costs by 30%, a core business KPI",
+							"Defined new features, functions, and UI experiences based on customer feedback, click-throughs and mouse tracking patterns (Analytics)",
+							"Led cross-collaboration efforts with engineering and product teams to improve performance for AI machine learning eCommerce platform",
+							"Created quality assurance program based on the rubric, SLA’s and ticket hierarchy to benchmark customer success"
 					]
 				},
 				{
-					"company": "<a href=\"https://connectedtravel.com/\" target=\"_blank\">Connected Travel, LLC</a>",
+					"company": "<a href=\"https://www.eventbrite.com/\" target=\"_blank\">Eventbrite</a>",
 					"slug": "eventbrite",
-					"role": "Program Manager",
-					"location": "Remote",
-					"startDate": "01/18",
-					"endDate": "Present",
-					"highlights": ["Managed Beta program for a safe driving mobile application and synthesized user feedback via surveys and focus groups to improve application prior to launch",
-							"Oversaw operational success of the app which reached 15,000 registered users, 4,500 DAUs and 6,500 MAUs with a 70% retention rate (90 days)",
-							"Increased app rating from 3.7 to 4.6 in Google Play and 4.5 to 4.8 in iTunes within one month",
-							"Defined and managed external communication channels (support, social media, marketing, app reviews, in-app messaging) with end-user community",
-							"Streamlined support process to reduce resolution time of our top customer issue from 2 days to less than 24 hours",
-							"Tracked and executed the delivery of new product features for both backend management portal and front-end application with off-shore Engineering team"
+					"role": "Customer Success Manager",
+					"location": "San Francisco",
+					"startDate": "May 2015",
+					"endDate": "Decemeber 2016",
+					"highlights": [
+							"Developed short and long-term project plans that align with enterprise clients’ business goals, requirements, and conditions of satisfaction",
+							"Consulted with clients in key business impact areas that included: trend analytics, performance metrics, product adoption, operational improvements, and on-site event execution",
+							"Reported “actionable” client feedback and recommendations to cross-functional teams: Product, Engineering, Support, and Finance "
+					]
+				},
+				{
+					"company": "<a href=\"https://www.eventbrite.com/\" target=\"_blank\">Eventbrite</a>",
+					"slug": "eventbrite2",
+					"role": "Customer Support Associate",
+					"location": "San Francisco",
+					"startDate": "May 2013",
+					"endDate": "May 2015",
+					"highlights": [
+							"Led the pilot and roll-out of a global chat messaging platform for channel communications",
+							"Developed global quality rubric, metrics, escalation paths and training materials for chat support",
+							"Trained global support team on enterprise clients’ processes and was the key facilitator between sales and support teams"
 					]
 				}
 			]

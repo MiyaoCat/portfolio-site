@@ -56,7 +56,6 @@
 		if ( $section["type"] == "skills" ) {
 ?>
 			<section class="skill">
-
 				<ol>
 					<?php 
 						echo "<h2 class='loud-voice'>" . $section["heading"] . "</h2>";

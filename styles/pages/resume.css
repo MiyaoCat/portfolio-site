@@ -1,23 +1,43 @@
 /* EXPERIENCE BOXES */
-.experience {
-	grid-row: 5;
-
+.job {
 	grid-column: 2/14;
 	margin: 5px 0;
-}
-
-.job {
-	margin: 25px 0;
 	padding: 10px;
 	border: 1px solid white;
 	box-shadow: 10px 10px black;
-	background-color: hsl(231, 17%, 22%);
+	background-color: hsla(231, 17%, 22%, .7);
 }
+
+.resume h2 {
+	grid-column: 2 / 14;
+}
+.connected-travel {
+		grid-row: 4;
+	}
+
+.shopco {
+	grid-row: 5;
+}
+
+.eventbrite {
+	grid-row: 6;
+}	
+
+.eventbrite2 {
+	grid-row: 7;
+}
+
+.skill {
+	grid-column: 2 / 14;
+	grid-row: 8;
+}
+
 
 .job-details {
 	display: grid;
 	grid-template-rows: 1fr 1fr;
 	grid-template-columns: 1fr 1fr;
+	grid-gap: 5px;
 }
 
 .job-details .company {
@@ -47,14 +67,9 @@
 .job .highlights {
 	margin: 20px 0;
 }
-.skill {
-	grid-row: 5;
-	grid-column: 2/14;
-}
 
 .school {
-	grid-row: 7;
-
+	grid-row: 8;
 	grid-column: 2/14;
 }
 
