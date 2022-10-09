@@ -102,13 +102,14 @@
 </form>
 				
 			
-			<div class="return-values">
-			<?php if ( isset($_POST['submitted']) ) {
-						 ?>
-
-					<p><?=$message?></p>		
-					
-			<?php } ?>
-			</div>
+			
+<output>
+	<?php if ( isset($_POST['submitted']) ) { ?>
+	
+		<p><?=$message?></p>		
+			
+	<?php } ?>
+</output>
+			
 			
 			

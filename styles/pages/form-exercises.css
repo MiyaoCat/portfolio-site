@@ -14,6 +14,10 @@
 	grid-column: 2 / 14;
 }
 
+output {
+	grid-row: 7;
+	grid-column: 2 /14;
+}
 @media (min-width: 700px) {
 	.exercise heading {
 		grid-column: 4 / 10;
@@ -25,5 +29,10 @@
 
 	.exercise form {
 		grid-column: 4 / 10;
+	}
+
+	output {
+		grid-row: 4 / span 3;
+		grid-column: 10 / 14;
 	}
 }
