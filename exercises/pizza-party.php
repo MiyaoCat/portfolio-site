@@ -93,15 +93,13 @@
 		<?php } ?>	
 	</pizza>	
 
-	<button1>
-		<button type="submit" name="submitted">Submit</button>
-	</button1>
+	
+	<button type="submit" name="submitted">Submit</button>
+
 
 	</form-wrap>
-
 </form>
 				
-			
 			
 <output>
 	<?php if ( isset($_POST['submitted']) ) { ?>

@@ -7,6 +7,9 @@
 	margin: 20px 0;
 }
 
+/* - - SUBMIT BUTTON - - */
+
+
 @media (min-width: 700px) {
 	.exercises-grid {
 		grid-row: 6;

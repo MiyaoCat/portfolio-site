@@ -13,6 +13,27 @@
 	grid-row: 5;
 	grid-column: 2 / 14;
 }
+/* - - SUBMIT BUTTON - - */
+.exercise button {
+	border: 3px solid var(--trim);
+	text-align: center;
+	padding: 5px;
+	box-shadow: 5px 5px var(--contrast);
+	background: var(--background);
+	min-width: 150px;
+}
+
+.exercise button:hover {
+	transform: translateX(5px) translateY(5px);
+	box-shadow: 0 0 var(--highlight);
+	cursor: pointer;
+}
+
+.exercise button:active {
+	transform: translateX(5px) translateY(5px);
+	box-shadow: 0 0 var(--highlight);
+}
+
 
 output {
 	grid-row: 7;
