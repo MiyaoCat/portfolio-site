@@ -1,1 +1,29 @@
-exercises.css
+.exercise heading {
+	display: block;
+	grid-row: 3;
+	grid-column: 2 / 14;
+}
+
+.exercise .instructions {
+	grid-row: 4;
+	grid-column: 2 / 14;
+}
+
+.exercise form {
+	grid-row: 5;
+	grid-column: 2 / 14;
+}
+
+@media (min-width: 700px) {
+	.exercise heading {
+		grid-column: 4 / 10;
+	}
+
+	.exercise .instructions {
+		grid-column: 4 / 10;
+	}
+
+	.exercise form {
+		grid-column: 4 / 10;
+	}
+}

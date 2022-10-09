@@ -13,7 +13,4 @@
 	}
 ?>
 
-
-<section>
-	<?php include("exercises/$slug.php"); ?>
-</section>
+<?php include("exercises/$slug.php"); ?>

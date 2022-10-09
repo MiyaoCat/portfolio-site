@@ -63,12 +63,12 @@ $answerFormatted = number_format($answer, 2);
 
 
 
-<heading style="display: block">
-	<h1 class="loud-voice"><a href="?">Invest Your Moolah! DEPLOYBOT</a></h1>
+<heading>
+	<h1 class="loud-voice"><a href="?">Invest Your Moolah!</a></h1>
 </heading>
 
 
-<inner-column class='interest'>
+
 	<div class="instructions">
 		<p class="normal-voice">Let's see how much your money can grow over time. Follow the instructions below.</p>
 	</div>
@@ -123,10 +123,6 @@ $answerFormatted = number_format($answer, 2);
 		</form-wrap>
 
 	</form>
-	
-	<div class="answer">
-		
-	</div>	
 
 	<?php if( isset($_POST['submitted']) ) { ?>
 	<output>
@@ -134,6 +130,6 @@ $answerFormatted = number_format($answer, 2);
 	</output>
 	<?php } ?>
 
-</inner-column>
+
 
 
