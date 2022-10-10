@@ -55,8 +55,8 @@
 	}
 ?>
 <form method="POST">
-	<form-wrap>
-	<people>
+
+	<div class="entry one">
 	 	<p class="normal-voice">How many people will be attending?</p>
 		<input 
 			type="number" 
@@ -73,9 +73,9 @@
 			<p class="error normal-voice"><?=$valueError?></p>
 		</error>
 		<?php } ?>	
-	</people>	
+	</div>	
 
-	<pizza>
+	<div class="entry two">
 	 	<p class="normal-voice">How many pizzas do you think you'll purchase?</p>
 		<input 
 			type="number" 
@@ -91,13 +91,11 @@
 			<p class="error normal-voice"><?=$valueError?></p>
 		</error>
 		<?php } ?>	
-	</pizza>	
+		
+	</div>	
 
 	
 	<button type="submit" name="submitted">Submit</button>
-
-
-	</form-wrap>
 </form>
 				
 			

@@ -7,20 +7,39 @@
 .exercise .instructions {
 	grid-row: 4;
 	grid-column: 2 / 14;
+	max-width: 700px;
+	margin-right: 20px;
 }
 
 .exercise form {
+	display: flex;
+	flex-direction: column;
 	grid-row: 5;
 	grid-column: 2 / 14;
 }
+
+.exercise input {
+	margin: 5px 0;
+}
+
+.exercise .entry {
+	margin-top: 10px;
+}
+
+.exercise form:nth-of-type(3) {
+	align-items: center;
+}
+
 /* - - SUBMIT BUTTON - - */
 .exercise button {
 	border: 3px solid var(--trim);
 	text-align: center;
 	padding: 5px;
+	margin: 10px 0;
 	box-shadow: 5px 5px var(--contrast);
 	background: var(--background);
 	min-width: 150px;
+	max-width: 30%;
 }
 
 .exercise button:hover {
@@ -34,11 +53,11 @@
 	box-shadow: 0 0 var(--highlight);
 }
 
-
 output {
 	grid-row: 7;
 	grid-column: 2 /14;
 }
+
 @media (min-width: 700px) {
 	.exercise heading {
 		grid-column: 4 / 10;

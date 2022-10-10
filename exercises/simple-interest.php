@@ -68,28 +68,31 @@ $answerFormatted = number_format($answer, 2);
 </heading>
 
 
-
-	<div class="instructions">
-		<p class="normal-voice">Let's see how much your money can grow over time. Follow the instructions below.</p>
-	</div>
+<div class="instructions">
+	<p class="normal-voice">Let's see how much your money can grow over time. Follow the instructions below.</p>
+</div>
 
 	<form method="POST">
-		<form-wrap>
+
+		<div class="entry principal">
 			<p class="normal-voice">Enter the principal amount you'll invest</p>
 			<input type="number" 
 				name='principal' 
 				value="<?=$principal?>" 
 				placeholder ="0" 
 				min = "1">
-
+			
 			<return-message style="display: block">	
 				<?php if ( isset($_POST['principal']) ) { ?>	
 				<p class='returnMessage normal-voice'><?=$priMessage?></p>
 				<?php } ?>	
-			</return-message>	
-				
+			</return-message>
+		</div>
+			
 
+		<div class="entry interest">
 			<p class="normal-voice">Now enter the interst rate. Standard interest is 7% APY.</p>
+			
 			<input type="number" 
 				name='interest' 
 				value="<?=$interest?>" 
@@ -97,30 +100,32 @@ $answerFormatted = number_format($answer, 2);
 				min = "1"
 				step = "0.01">	
 				
-
+			
 			<return-message style="display: block">	
 				<?php if ( isset($_POST['interest']) ) { ?>
 				<p class='returnMessage normal-voice'><?=$intMessage?></p>
 				<?php } ?>	
-			</return-message>	
+			</return-message>
+		</div>
+
+		<div class="entry years">
 			<p class="normal-voice">Enter the number of years you wish to invest.</p>
+			
 			<input type="number" 
 				name='years' 
 				value="<?=$years?>" 
 				placeholder ="0" 
 				min = "1">	
-
+			
 			<return-message style="display: block">	
 				<?php if ( isset($_POST['years']) ) { ?>
 				<p class='returnMessage normal-voice'><?=$yrMessage?></p>
 				<?php } ?>	
-			</return-message>		
+			</return-message>
+		</div>
 
-			
-			<button type="submit" name="submitted">Submit</button>
 		
-
-		</form-wrap>
+		<button type="submit" name="submitted">Submit</button>
 
 	</form>
 
