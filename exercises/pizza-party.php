@@ -56,7 +56,7 @@
 ?>
 <form method="POST">
 
-	<div class="entry one">
+	<div class="entry people">
 	 	<p class="normal-voice">How many people will be attending?</p>
 		<input 
 			type="number" 
@@ -75,7 +75,7 @@
 		<?php } ?>	
 	</div>	
 
-	<div class="entry two">
+	<div class="entry pizza">
 	 	<p class="normal-voice">How many pizzas do you think you'll purchase?</p>
 		<input 
 			type="number" 
