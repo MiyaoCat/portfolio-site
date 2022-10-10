@@ -14,22 +14,17 @@
 ?>
 
 
-<section class="<?=$page?> page-intro">
-	<p class="normal-voice"><?=$intro?></p>
-</section>
-
-
-
-	<?php 
-		$caseStudyModules = $caseStudy["sections"];
-		
-		foreach ($caseStudyModules as $CaseStudymodule) {
-		$module = $CaseStudymodule["module"];
-	?>
-		<section class="<?=$module?>">
-		<?php include("modules/$module/$module.php"); ?>
-		</section>
-	<?php } ?>
+<?php 
+	$caseStudyModules = $caseStudy["sections"];
+	
+	foreach ($caseStudyModules as $CaseStudymodule) {
+	$module = $CaseStudymodule["module"];
+	$content = $CaseStudymodule["content"];
+?>
+	<section class="<?=$module?>">
+	<?php include("modules/$module/$module.php"); ?>
+	</section>
+<?php } ?>
 
 
 <section class="project-url">

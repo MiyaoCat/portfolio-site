@@ -44,8 +44,8 @@
 		"title1": "Luxury",
 		"title2": "Streetwear",
 		"slug": "luxury-streetwear",
-		"intro": "This is my luxurious streetwear site",
-		"url": "https://peprojects.dev/alpha-4/john/layout-challenges/index.php",
+		"intro": "We were given a base code to style and emulate an industry of our choice. I chose, 'Luxury Streetwear' for my project.",
+		"url": "https://peprojects.dev/alpha-4/john/projects/layout-theme-challenge/index.php",
 		"image": "images/fashion-site.png",
 		"featured": true,
 		"languages": [
@@ -55,7 +55,7 @@
 		"sections": [
 			{
 				"module": "generic-text",
-				"content": "This is luxury streetwear site called \"Hi. So.\""
+				"content": "We were first tasked with picking an industry.  I chose “luxury streetwear”. I don’t know if that’s a real term, but I'd describe it as high quality, expensive, everyday clothes that can be dressed up or down. <br><br>Back to the project. We’ve always been instructed to create work that will fit a field we want to work in. Currently, my interests lie in sports, fashion and web3.<br><br> I researched sites in all three industries, but I liked the high end streetwear sites the most. They had some unique layouts and I liked their clean, modern aesthetics.  I looked at Kith, Acne Studios, Staruday’s NYC, Fear of God and John Elliott. They all employed very similar styles. They used only white and black and let their photos carry all of the color. They all include large pictures that may cover the entire width of the screen to showcase their products and bring emotion to the site. <br><br>I also noticed they mostly used uppercase, sans-serif fonts."
 			}
 		]
 	}
