@@ -17,7 +17,7 @@
 		"sections": [
 			{
 				"module": "generic-text",
-				"content": "If you on a computer, try horizontally expanding and contracting your window to see how the modules <em>respond</em> to the window size :)"
+				"content": "If you're on a computer, try horizontally expanding and contracting your window to see how the modules <em>respond</em> to the window size :)"
 			}
 		]
 	},
@@ -25,12 +25,12 @@
 		"title1": "Form",
 		"title2": "Exercises",
 		"slug": "exercises",
-		"intro": "We created a bunch of forms using the book, Exercises for Programmers. It gave us the opportunity to think through functions and create programs with PHP.",
+		"intro": "We created a bunch of forms using the book, Exercises for Programmers. It gave us the opportunity to think through functions and create programs with PHP and Javascript.",
 		"url": "https://peprojects.dev/alpha-4/john/layout-challenges/index.php",
 		"image": "images/forms2.jpg",
 		"featured": false,
 		"languages": [
-			"HTML", "CSS", "PHP"
+			"HTML", "CSS", "PHP", "Javascript"
 		], 
 
 		"sections": [
@@ -49,13 +49,13 @@
 		"image": "images/fashion-site.png",
 		"featured": true,
 		"languages": [
-			"HTML", "CSS", "PHP", "LOVE"
+			"HTML", "CSS", "PHP"
 		], 
 
 		"sections": [
 			{
 				"module": "generic-text",
-				"content": "This is luxury streetwear site called <b>Hi.So.</b>"
+				"content": "This is luxury streetwear site called \"Hi. So.\""
 			}
 		]
 	}
