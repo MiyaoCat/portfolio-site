@@ -12,6 +12,7 @@
 <?php
 	} elseif ($page == "project") { 
 		$content = $CaseStudymodule["content"] ?? "<p>This is generic text for the individual project pages. Hope you enjoyed reading!</p>";
+
 ?>
 
 		<generic-text>
