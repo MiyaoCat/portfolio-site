@@ -3,10 +3,6 @@
 	transform: translateX(0) rotate(-3deg);
 }
 
-.home .page-header .title1:hover {
-	transform: translateX(-60%) rotate(0);
-}
-
 .home .page-header .title2 {
 	transform: translateX(6em);
 }
@@ -41,6 +37,10 @@
 	/* - - PAGE HEADER - - */
 	.home .page-header .title1 {
 		transform: translateX(-60%) rotate(-6deg);
+	}
+
+	.home .page-header .title1:hover {
+		transform: translateX(-60%) rotate(0);
 	}
 
 	.home .page-header .title2 {
