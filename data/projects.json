@@ -77,10 +77,10 @@
 			},
 			{
 				"module": "figure",
-				"filePath": "images/luxury-streetwear-mood-board.png",
+				"filePath": "images/luxury-streetwear-style-tile.png",
 				"altText":	"Luxury streetwear moodboard from researched sites.",
 				"figureHeading": "Moodboard",
-				"caption": "The moodboard where I pulled visual treatments from the researched sites."
+				"caption": "The visual language of my site represented through a Style Tile."
 			}
 		]
 	}
