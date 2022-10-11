@@ -33,7 +33,9 @@
 .project .figure:nth-of-type(5) {
 	grid-row: 8;
 }
-
+.project .generic-text:nth-of-type(6) {
+	grid-row: 9;
+}
 .project image-caption {
 	display: block;
 	text-align: center;
