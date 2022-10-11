@@ -73,7 +73,7 @@
 			{	
 				"module": "generic-text",
 				"subHeader": "The Style",
-				"content": "After getting an idea of the overall look and feel of a Luxury Streetwear site, it was time to build the visual language of my site. Still without coding anything yet, we created <b>Style Tiles</b>. This allows us to communicate a visual story with examples of colors, headers, font sizes and styles, images and any other visual elements that may be employed on the actual site. "
+				"content": "After getting an idea of the overall look and feel of a Luxury Streetwear site, it was time to build the visual language of my site. Before coding anything yet, we created <b>Style Tiles</b>. This allowed us to communicate a visual story with examples of colors, headers, font sizes and styles, images and any other visual elements that may be employed on the actual site. "
 			},
 			{
 				"module": "figure",
