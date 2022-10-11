@@ -9,14 +9,29 @@
 
 
 /* - - CASE STUDY MODULES - - */
-sub-header {
-	display: block;
+.project .figure {
+	grid-column: 2 / 14;
+	max-width: 550px;
+}
+
+.project .generic-text:nth-of-type(2) {
+	grid-row: 4;
 }
 
 .project .figure {
-	grid-row: 4;
-	grid-column: 2 / 14;
-	max-width: 550px;
+	grid-row: 5;
+}
+
+.project .generic-text:nth-of-type(3) {
+	grid-row: 6;
+}
+
+.project .generic-text:nth-of-type(4) {
+	grid-row: 7;
+}
+
+.project .figure:nth-of-type(2) {
+	grid-row: 8;
 }
 
 .project image-caption {
@@ -25,8 +40,8 @@ sub-header {
 	margin-top: 5px;
 }
 .project .generic-text  {
-		flex-direction: column;
-	}
+	flex-direction: column;
+}
 
 .project .project-url {
 	grid-row: 8;
@@ -46,10 +61,7 @@ sub-header {
 
 	.project .figure {
 		display: flex;
-		grid-row: 4;
-		grid-column: 7 / 12;
-		/*margin-left: auto;*/
+		grid-column: 4 / 10;
 		margin-right: 20px;
-
 	}
 }
