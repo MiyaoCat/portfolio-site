@@ -17,8 +17,8 @@
 <?php 
 	$caseStudyModules = $caseStudy["sections"];
 	
-	foreach ($caseStudyModules as $CaseStudymodule) {
-	$module = $CaseStudymodule["module"];
+	foreach ($caseStudyModules as $CaseStudyModule) {
+	$module = $CaseStudyModule["module"];
 	// $content = $CaseStudymodule["content"];
 ?>
 	<section class="<?=$module?>">

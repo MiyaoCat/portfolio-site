@@ -11,10 +11,13 @@
 
 <?php
 	} elseif ($page == "project") { 
-		$content = $CaseStudymodule["content"] ?? "<p>This is generic text for the individual project pages. Hope you enjoyed reading!</p>";
+		$content = $CaseStudyModule["content"] ?? "<p>This is generic text for the individual project pages. Hope you enjoyed reading!</p>";
+		$subHeader = $CaseStudyModule["subHeader"] ?? "Section Header";
 
 ?>
-
+		<sub-header>
+			<p class="loud-voice"><?=$subHeader?></p>
+		</sub-header>
 		<generic-text>
 			<p class="normal-voice"><?=$content?></p>
 		</generic-text>

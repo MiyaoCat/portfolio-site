@@ -1,6 +1,6 @@
 <?php 
 
-	$subHeader = $CaseStudymodule["subHeader"];
+	$subHeader = $CaseStudyModule["subHeader"];
 
 ?>
 
