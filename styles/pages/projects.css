@@ -22,6 +22,6 @@ project-card.luxury-streetwear {
 
 @media (min-width: 1000px) {
 	project-card {
-		grid-column: 5 / 10;
+		/*grid-column: 5 / 10;*/
 	}
 }
