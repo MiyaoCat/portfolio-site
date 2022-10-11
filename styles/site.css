@@ -50,6 +50,10 @@ nav a.active {
 	display: none;
 }
 
+picture {
+	box-shadow: 0 0 10px var(--trim);
+}
+
 svg {
 	max-width: 30px;
 }
