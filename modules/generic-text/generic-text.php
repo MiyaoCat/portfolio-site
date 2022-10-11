@@ -18,6 +18,7 @@
 		<sub-header>
 			<p class="loud-voice"><?=$subHeader?></p>
 		</sub-header>
+		
 		<generic-text>
 			<p class="normal-voice"><?=$content?></p>
 		</generic-text>

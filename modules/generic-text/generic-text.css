@@ -28,6 +28,6 @@ generic-text {
 
 @media (min-width: 1000px) {
 	.generic-text {
-		grid-column: 5 / 10;
+		/*grid-column: 5 / 10;*/
 	}
 }
