@@ -37,7 +37,11 @@ body {
 	grid-column: 1 / 15;
 	grid-row:  1 / 3;
 	background-color: var(--background);
-	transition: 1s ease-in-out;
+	/*transition: 1s ease-in-out;*/
+}
+
+a {
+	color: var(--standout);
 }
 
 nav a.active {

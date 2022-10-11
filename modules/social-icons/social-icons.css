@@ -15,6 +15,6 @@ social-icons ul {
 }
 
 .logo a:hover {
-	fill: var(--lightest);
+	fill: var(--standout);
 }
 

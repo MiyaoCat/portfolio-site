@@ -1,11 +1,3 @@
-/*hsl(28, 17%, 30%);*/ 
-/*hsl(37, 32%, 92%) */
-/* hsl(303, 100%, 50%); */
-/*hsl(219, 13%, 82%)*/
-/*#5E321F */
-/*#aadee9 */
-/*hsl(360, 100%, 39%)*/
-
 html {
 	--darkest: #111111;
 	--lightest: #FFF;
@@ -19,7 +11,7 @@ html {
 	--wide: 98vw;
 
 	--paper: white;
-	--background: lawngreen;
+	--background: hsla(50, 100%, 80%, 1);
 
 	--ink: black;
 	--highlight: lawngreen; 
@@ -27,16 +19,19 @@ html {
 	--alternate: hsla(0, 0%, 35%, 1);
 	--trim: black;
 	--standout: hsl(360, 100%, 39%);
+
+	--link: red;
 }
 
 @media (prefers-color-scheme: dark) {
 	html {
-		--paper: hsla(0, 0%, 7%, 1);
-		--ink: yellow;
+		--paper: hsla(0, 0%, 2%, 1);
+		--ink: hsla(0 0% 67%, 1);
 		--highlight: #6200ee;
-		--background: hsla(38, 10%, 15%, 1);
-		--contrast:  yellow;
-		--trim: hsla(0, 0%, 35%, 1);
+		--background: hsla(0, 0%, 31%, 1);
+		--contrast:  black;
+		--trim: black;
 		--lightest: #FFF;
+		--standout: white;
 	}
 }
