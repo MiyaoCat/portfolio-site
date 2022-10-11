@@ -7,18 +7,26 @@
 	transform: translateX(8em);
 }
 
-/* - - PAGE INTRO - - */
-.project .page-intro {
-	grid-row: 5;
-	grid-column: 2 / 14;
+
+/* - - CASE STUDY MODULES - - */
+sub-header {
+	display: block;
 }
-
-
 
 .project .figure {
-	grid-row: 7;
-	max-width: 200px;
+	grid-row: 4;
+	grid-column: 2 / 14;
+	max-width: 550px;
 }
+
+.project image-caption {
+	display: block;
+	text-align: center;
+	margin-top: 5px;
+}
+.project .generic-text  {
+		flex-direction: column;
+	}
 
 .project .project-url {
 	grid-row: 8;
@@ -34,5 +42,15 @@
 @media (min-width: 700px) {
 	.project .page-intro {
 		grid-column: 2 / 10;
+	}
+
+	.project .figure {
+		display: flex;
+		flex-direction: row;
+		grid-row: 4;
+		grid-column: 7 / 12;
+		/*margin-left: auto;*/
+		margin-right: 20px;
+
 	}
 }
