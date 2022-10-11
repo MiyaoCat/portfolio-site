@@ -56,12 +56,30 @@
 			{	
 				"module": "generic-text",
 				"subHeader": "The Challenge",
-				"content": "We were first tasked with picking an industry.  I chose “luxury streetwear”. I don’t know if that’s a real term, but I'd describe it as high quality, expensive, everyday clothes that can be dressed up or down. <br><br>Back to the project. We’ve always been instructed to create work that will fit a field we want to work in. Currently, my interests lie in sports, fashion and web3.<br><br> I researched sites in all three industries, but I liked the high end streetwear sites the most. They had some unique layouts and I liked their clean, modern aesthetics.  I looked at <a href='https://kith.com/' target='_blank'>Kith</a>, <a href='https://www.acnestudios.com/us/en/home' target='_blank'>Acne Studios</a>, <a href='https://www.saturdaysnyc.com/' target='_blank'>Staruday’s NYC</a>, <a href='https://fearofgod.com/' target='_blank'>Fear of God</a> and <a href='https://www.johnelliott.com/' target='_blank'>John Elliott</a> to draw inspiration. They all employed very similar styles. They used only white and black and let their photos carry all of the color. They all include large pictures that may cover the entire width of the screen to showcase their products and bring emotion to the site. <br><br>I also noticed they mostly used uppercase, sans-serif fonts."
+				"content": "We were tasked to emulate a website in an industry of our choice. The goal was to make it look it <i>belonged</i> and indistinguishable from another site within that industry. We've always been told to build something toward a field we want to work in. Currently my interests lie in sports, fashion and web3 so I chose \"Luxury Streetwear\" to emulate as their sites were the most interesting. They had some unique layouts and I liked their clean, modern aesthetics."
+			},
+			{	
+				"module": "generic-text",
+				"subHeader": "The Research",
+				"content": "The first step was to research different sites within our chosen industry. I looked at <a href='https://kith.com/' target='_blank'>Kith</a>, <a href='https://www.acnestudios.com/us/en/home' target='_blank'>Acne Studios</a>, <a href='https://www.saturdaysnyc.com/' target='_blank'>Staruday’s NYC</a>, <a href='https://fearofgod.com/' target='_blank'>Fear of God</a> and <a href='https://www.johnelliott.com/' target='_blank'>John Elliott</a> to draw inspiration. They all employed very similar styles. They used only white and black and let their photos carry all of the color. They all included large images that sometimes covered the entire width of the screen to showcase their products and bring emotion to the site. <br><br>I also noticed they mostly used uppercase, sans-serif fonts. Below is the moodboard I created where I pulled different headers, fonts, images and visual treatments they used for my own inspiration."
 			},
 			{
 				"module": "figure",
 				"filePath": "images/luxury-streetwear-mood-board.png",
 				"altText":	"Luxury streetwear moodboard from researched sites.",
+				"figureHeading": "Moodboard",
+				"caption": "The moodboard where I pulled visual treatments from the researched sites."
+			},
+			{	
+				"module": "generic-text",
+				"subHeader": "The Style",
+				"content": "After getting an idea of the overall look and feel of a Luxury Streetwear site, it was time to build the visual language of my site. Still without coding anything yet, we created <b>Style Tiles</b>. This allows us to communicate a visual story with examples of colors, headers, font sizes and styles, images and any other visual elements that may be employed on the actual site. "
+			},
+			{
+				"module": "figure",
+				"filePath": "images/luxury-streetwear-mood-board.png",
+				"altText":	"Luxury streetwear moodboard from researched sites.",
+				"figureHeading": "Moodboard",
 				"caption": "The moodboard where I pulled visual treatments from the researched sites."
 			}
 		]
