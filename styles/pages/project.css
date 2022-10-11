@@ -46,7 +46,6 @@ sub-header {
 
 	.project .figure {
 		display: flex;
-		flex-direction: row;
 		grid-row: 4;
 		grid-column: 7 / 12;
 		/*margin-left: auto;*/
