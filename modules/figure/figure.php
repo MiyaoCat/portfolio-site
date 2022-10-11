@@ -17,10 +17,13 @@
 	$filePath = $CaseStudyModule["filePath"];
 	$altText = $CaseStudyModule["altText"];
 	$caption = $CaseStudyModule["caption"];
+	$figureHeading = $CaseStudyModule["figureHeading"];
 
 ?>
 
 <figure>
+	<!-- <h4 class="attention-voice"><?=$figureHeading?></h4> -->
+	
 	<picture>
 		<img src="<?=$filePath?>" alt="<?=$altText?>">
 	</picture>
