@@ -27,7 +27,7 @@ body {
 	gap: 5px;
 	grid-template-columns:  auto repeat(12, minmax(0, 120px)) auto;
 	min-height: 100vh;
-	grid-template-rows: auto auto auto 1fr 1fr 1fr 1fr 1fr auto;
+	grid-template-rows: repeat(10, auto);
 	font-family: var(--sans-serif);
 	margin-left: auto;
 	margin-right: auto;
@@ -65,7 +65,7 @@ svg {
 @media (min-width: 700px) {
 	.background {
 		grid-column: 2 / 10;
-		grid-row: 1 / 12;
+		grid-row: 1 / 16;
 		/*transition: 1s ease-in-out;*/
 	}
 
