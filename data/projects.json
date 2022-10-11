@@ -53,9 +53,16 @@
 		], 
 
 		"sections": [
-			{
+			{	
 				"module": "generic-text",
-				"content": "We were first tasked with picking an industry.  I chose “luxury streetwear”. I don’t know if that’s a real term, but I'd describe it as high quality, expensive, everyday clothes that can be dressed up or down. <br><br>Back to the project. We’ve always been instructed to create work that will fit a field we want to work in. Currently, my interests lie in sports, fashion and web3.<br><br> I researched sites in all three industries, but I liked the high end streetwear sites the most. They had some unique layouts and I liked their clean, modern aesthetics.  I looked at Kith, Acne Studios, Staruday’s NYC, Fear of God and John Elliott. They all employed very similar styles. They used only white and black and let their photos carry all of the color. They all include large pictures that may cover the entire width of the screen to showcase their products and bring emotion to the site. <br><br>I also noticed they mostly used uppercase, sans-serif fonts."
+				"subHeader": "The Challenge",
+				"content": "We were first tasked with picking an industry.  I chose “luxury streetwear”. I don’t know if that’s a real term, but I'd describe it as high quality, expensive, everyday clothes that can be dressed up or down. <br><br>Back to the project. We’ve always been instructed to create work that will fit a field we want to work in. Currently, my interests lie in sports, fashion and web3.<br><br> I researched sites in all three industries, but I liked the high end streetwear sites the most. They had some unique layouts and I liked their clean, modern aesthetics.  I looked at <a href='https://kith.com/' target='_blank'>Kith</a>, <a href='https://www.acnestudios.com/us/en/home' target='_blank'>Acne Studios</a>, <a href='https://www.saturdaysnyc.com/' target='_blank'>Staruday’s NYC</a>, <a href='https://fearofgod.com/' target='_blank'>Fear of God</a> and <a href='https://www.johnelliott.com/' target='_blank'>John Elliott</a> to draw inspiration. They all employed very similar styles. They used only white and black and let their photos carry all of the color. They all include large pictures that may cover the entire width of the screen to showcase their products and bring emotion to the site. <br><br>I also noticed they mostly used uppercase, sans-serif fonts."
+			},
+			{
+				"module": "figure",
+				"filePath": "images/luxury-streetwear-mood-board.png",
+				"altText":	"Luxury streetwear moodboard from researched sites.",
+				"caption": "The moodboard where I pulled visual treatments from the researched sites."
 			}
 		]
 	}
