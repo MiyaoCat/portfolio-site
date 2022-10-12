@@ -145,6 +145,7 @@ sub-header.skill {
 		font-size: 1rem;
 	}
 }
+
 /*- - EDUCATION - -*/
 .school {
 	grid-row: 10;
@@ -168,13 +169,14 @@ sub-header.skill {
 }
 
 .school .uni {
-	text-decoration: underline;
+	font-weight: 700;
 	padding-bottom: 5px;
 }
 
 @media (min-width: 700px) {
 	.resume sub-header {
 		grid-column: 2 / 10;
+		margin-left: 0;
 	}
 
 	.resume h2 {

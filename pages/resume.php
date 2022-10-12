@@ -76,28 +76,49 @@
 			</section>
 
 
-	<?php 
-		foreach($sections as $section) { 
-			if ( $section["type"] == "education" ) {
-	?>
-		<section class="school">
-			<h2 class="loud-voice"><?=$section["heading"]?></h2>
+<?php 
+	foreach($sections as $section) { 
+		if ( $section["type"] == "education" ) {
+?>
+	<section class="school">
+		<h2 class="loud-voice"><?=$section["heading"]?></h2>
 
-			<ol>	
-				<li class="uni"><?=$section["school"]?></li>
-				<li><?=$section["major"]?></li>
-			</ol>
-			
-			<ol>	
-				<li class="uni"><?=$section["school2"]?></li>
-				<li><?=$section["major2"]?></li>
-			</ol>
+		<ol>	
+			<li class="uni"><?=$section["school"]?></li>
+			<li><?=$section["major"]?></li>
+		</ol>
+		
+		<ol>	
+			<li class="uni"><?=$section["school2"]?></li>
+			<li><?=$section["major2"]?></li>
+		</ol>
 
-			<?php } ?>
 		<?php } ?>
+	<?php } ?>
 
-		</section>
+	</section>
 	
+<?php 
+	foreach($sections as $section) { 
+		if ( $section["type"] == "languages" ) {
+?>	
+	
+		
+				<h2 class="loud-voice"><?=$section["heading"]?></h2>
+		
+			
+			<section class="languages">
+				<ol>					
+					<?php foreach ($section["languages"] as $language) { ?>
+						
+						<li><?=$language?></li>
 
+					<?php } ?>	
+				</ol>
+
+		<?php } ?>
+	<?php } ?>
+			
+			</section>
 	
 
