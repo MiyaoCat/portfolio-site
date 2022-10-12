@@ -13,9 +13,8 @@
 @media (min-width: 700px) {
 	.exercises-grid {
 		grid-row: 6;
-		grid-column-start:  10;
+		grid-column: 4 / 10;
 		margin: 20px;
-		/*text-align: right;*/
 		justify-content: flex-start;
 	}
 }

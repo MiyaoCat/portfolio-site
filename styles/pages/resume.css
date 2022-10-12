@@ -1,3 +1,9 @@
+.resume:not .background {
+	margin-left: 5px;
+}
+
+
+
 /* - - PAGE HEADER - - */
 .resume .page-header .title1 {
 	transform: translateY(-13px) rotate(-6deg);
@@ -32,7 +38,6 @@
 .job {
 	grid-column: 2/14;
 	margin-right: 20px;
-	margin-left: 5px;
 	padding: 15px 10px;
 	border: 3px solid var(--trim);
 	box-shadow: 10px 10px var(--contrast);
@@ -52,7 +57,6 @@
 	grid-row: 3;
 	grid-column: 2 / 14;
 	margin-top: 30px;
-	margin-left: 5px;
 	margin-bottom: -2px;
 }
 
@@ -147,7 +151,6 @@ sub-header.skill {
 .school {
 	grid-row: 10;
 	grid-column: 2/14;
-	margin-left: 5px;
 }
 
 .school ol {
@@ -170,7 +173,6 @@ sub-header.skill {
 .languages {
 	grid-row: 11;
 	grid-column: 2 / 14;
-	margin-left: 5px;
 	margin-top: 30px;
 	margin-bottom: 50px;
 }
@@ -256,6 +258,7 @@ sub-header.skill {
 		grid-row: 5;
 		grid-column: 10 / 14;
 		margin-top: 15px;
+		margin-left: 10px;
 	}
 
 	.school h2 {
@@ -266,7 +269,8 @@ sub-header.skill {
 	.resume .languages {
 		grid-row: 6;
 		grid-column: 10 / 14;
-		margin-top: 15px;
+		margin-top: 10px;
+		margin-left: 10px;
 	}
 
 	.resume .languages h2 {

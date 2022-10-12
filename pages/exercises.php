@@ -4,23 +4,23 @@
 ?>
 
 
-
-<section class="exercises-grid">
-	<ul class="project-list">
-		<?php foreach ($exercises as $exercise) { 
-			$title1 = $exercise["title1"];
-			$intro = $exercise["intro"];
-			$conclusion = $exercise["conclusion"];
-			$slug = $exercise["slug"];
-		?>
-			<li class="exercise">
-				<h2 class="attention-voice"><a href="?page=exercise&slug=<?=$slug?>"><?=$title1?></a></h2>
-				<h3></h3>
-				<p class="quiet-voice"><?=$intro?></p>
-				<p><?=$conclusion?></p>
-				<a href="?page=exercise&slug=<?=$slug?>">See it!</a>
+<?php 
+	foreach ($exercises as $exercise) { 
+		if ($exercise["type"] == "calculations") {
+			$type = $exercise["type"];
 			
-			</li>
+?>
+			<section class="<?=$type?>">
+
+				<?php foreach ($exercise["forms"] as $form) {
+						$slug = $form["slug"];
+				?>
+					<a href="?page=exercise&slug=<?=$slug?>">slug</a>
+					<h2><?=$form["title1"]?> <?=$form["title2"]?></h2>
+
+				<?php } ?>	
+
+			</section>
+
 		<?php } ?>
-	</ul>
-</section>
+	<?php } ?>
