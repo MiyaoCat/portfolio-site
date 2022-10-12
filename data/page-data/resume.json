@@ -84,11 +84,9 @@
 			"major2": "Web Development & Web Design"
 		},
 		{	
-			"type" : "langauges",
+			"type" : "languages",
 			"heading": "Languages",
-			"languages": [
-				"HTML/CSS", "PHP", "Javascript"
-			]
+			"languages": ["HTML/CSS", "PHP", "Javascript"]
 		}
 	]
 }

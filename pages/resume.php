@@ -102,12 +102,9 @@
 	foreach($sections as $section) { 
 		if ( $section["type"] == "languages" ) {
 ?>	
-	
-		
-				<h2 class="loud-voice"><?=$section["heading"]?></h2>
-		
 			
 			<section class="languages">
+				<h2 class="loud-voice"><?=$section["heading"]?></h2>
 				<ol>					
 					<?php foreach ($section["languages"] as $language) { ?>
 						
@@ -120,5 +117,4 @@
 	<?php } ?>
 			
 			</section>
-	
 
