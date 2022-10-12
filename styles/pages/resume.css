@@ -88,7 +88,7 @@
 .skill ol {
 	display: grid;
 	grid-template-rows: 1fr auto;
-	grid-template-columns: repeat(5, auto);
+	grid-template-columns: repeat(3, auto);
 	grid-gap: 10px;
 	margin-right: 15px;
 }
@@ -99,13 +99,14 @@
 }
 
 .skill li {
-	padding: 2px;
+	padding: 3px;
 	text-align: center;
 	border: 3px solid var(--trim);
 	background: var(--background);
-	box-shadow: 5px 5px var(--contrast);
+	box-shadow: 4px 4px var(--contrast);
 }
 
+/*- - EDUCATION - -*/
 .school {
 	grid-row: 9;
 	grid-column: 2/14;
@@ -137,12 +138,26 @@
 	}	
 
 	.school {
-		grid-row: 4;
+		grid-row: 5;
 		grid-column: 10 / 14;
 	}
 
 	.skill {
-		grid-row: 6;
-		grid-column: 10 / 14;
+		grid-row: 4;
+		grid-column: 10;
 	}
+
+	.skill ol {
+		display: grid;
+		grid-template-rows: 1fr auto;
+		grid-template-columns: repeat(3, auto);
+		margin-left: 20px;
+		margin-top: 0;
+	}
+
+	.skill h2 {
+		grid-row: 1;
+		grid-column: 1 / -1;
+	}
+
 }

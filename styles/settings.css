@@ -32,7 +32,7 @@ html {
 		--highlight: #6200ee;
 		--background: hsla(0, 0%, 31%, 1);
 		/*--contrast:  black;*/
-		--trim: hsla(0, 0%, 31%, 1);
+		--trim: black;
 		--lightest: #FFF;
 		--standout: hsla(170, 56%, 49%, 1);
 	}
