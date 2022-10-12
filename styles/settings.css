@@ -32,7 +32,7 @@ html {
 		--highlight: #6200ee;
 		--background: hsla(189, 20%, 12%, 1);
 		/*--contrast:  black;*/
-		--trim: black;
+		--trim: hsla(60, 7%, 40%, 1);
 		--lightest: #FFF;
 		--standout: hsla(170, 56%, 49%, 1);
 	}
@@ -40,7 +40,6 @@ html {
 	@media (min-width: 700px) {
 		html {
 			--ink: hsla(50, 100%, 86%, 1);
-			--trim: black;
 		}
 	}
 }
