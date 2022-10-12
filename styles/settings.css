@@ -28,7 +28,7 @@ html {
 @media (prefers-color-scheme: dark) {
 	html {
 		--paper: hsla(0, 0%, 4%, 1);
-		--ink: hsla(50, 20%, 60%, 1);
+		--ink: hsla(50, 70%, 80%, 1);
 		--highlight: #6200ee;
 		--background: hsla(0, 0%, 31%, 1);
 		/*--contrast:  black;*/

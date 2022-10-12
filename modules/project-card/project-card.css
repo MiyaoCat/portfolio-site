@@ -20,6 +20,10 @@ project-card .project-details * {
 	align-items: space-between;
 }
 
+project-card .project-title {
+	margin-bottom: 8px;
+}
+
 .languages {
 	display: flex;
 	flex-direction: row;
