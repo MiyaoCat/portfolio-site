@@ -15,7 +15,7 @@ project-card .project-details * {
 	margin: 2px 0;
 }
 
-.project-card.intro {
+project-card .project-card.intro {
 	display: grid;
 	align-items: space-between;
 }
@@ -24,18 +24,18 @@ project-card .project-title {
 	margin-bottom: 8px;
 }
 
-.languages {
+project-card .languages {
 	display: flex;
 	flex-direction: row;
 }
 
-.languages li {
+project-card .languages li {
 	padding: 2px 5px;
 	margin: 0 5px 5px 0;
 	max-height: 1.2rem;
 	border: 2px solid var(--trim);
 }
-.project-image  {
+project-card .project-image  {
 	box-shadow: 10px 10px var(--contrast);
 	display: none;
 }
@@ -72,12 +72,12 @@ project-card .project-title {
 		margin-right: 20px;
 	}
 
-	.project-details {
+	project-card .project-details {
 		max-width: 50%;
 		margin-right: 5px;
 	}
 
-	.project-images {
+	project-card .project-images {
 		max-width: 50%;
 	}
 }
