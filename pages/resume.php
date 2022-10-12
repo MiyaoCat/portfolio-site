@@ -15,7 +15,9 @@
 		if ( $section["type"] == "experience" ) {
 ?>
 
-<h2 class="loud-voice"><?=$section["heading"];?></h2>
+	<sub-header>
+		<h2 class="loud-voice"><?=$section["heading"];?></h2>
+	</sub-header>
 	
 		<?php
 			foreach($section["jobs"] as $job) { 

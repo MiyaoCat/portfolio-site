@@ -19,6 +19,9 @@ social-icons ul {
 }
 
 @media (prefers-color-scheme: dark) {
+	.logo a {
+		fill: var(--ink);
+	}
 	.logo a:hover {
 	fill: var(--standout);
 }

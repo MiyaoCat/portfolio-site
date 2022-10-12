@@ -1,3 +1,5 @@
+/*hsla(81, 56%, 46%, 1);*/
+
 html {
 	--darkest: #111111;
 	--lightest: #FFF;
@@ -25,13 +27,21 @@ html {
 
 @media (prefers-color-scheme: dark) {
 	html {
-		--paper: hsla(0, 0%, 2%, 1);
-		--ink: hsla(0 0% 67%, 1);
+		--paper: hsla(0, 0%, 4%, 1);
+		--ink: hsla(50, 20%, 60%, 1);
 		--highlight: #6200ee;
 		--background: hsla(0, 0%, 31%, 1);
-		--contrast:  black;
-		--trim: black;
+		/*--contrast:  black;*/
+		--trim: hsla(0, 0%, 31%, 1);
 		--lightest: #FFF;
-		--standout: white;
+		--standout: hsla(170, 56%, 49%, 1);
+	}
+
+	@media (min-width: 700px) {
+		html {
+			--ink: hsla(50, 100%, 86%, 1);
+			--trim: black;
+		}
 	}
 }
+
