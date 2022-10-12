@@ -15,7 +15,7 @@
 		if ( $section["type"] == "experience" ) {
 ?>
 
-	<sub-header>
+	<sub-header class="experience">
 		<h2 class="loud-voice"><?=$section["heading"];?></h2>
 	</sub-header>
 	
@@ -57,9 +57,11 @@
 	foreach($sections as $section) { 
 		if ( $section["type"] == "skills" ) {
 ?>
-			<section class="skill">
+			<sub-header class="skill">
 				<h2 class="loud-voice"><?=$section["heading"]?></h2>
-
+			</sub-header>
+			
+			<section class="skill">
 				<ol>					
 					<?php foreach ($section["programs"] as $programs) { ?>
 						
@@ -80,6 +82,7 @@
 	?>
 		<section class="school">
 			<h2 class="loud-voice"><?=$section["heading"]?></h2>
+
 			<ol>	
 				<li class="uni"><?=$section["school"]?></li>
 				<li><?=$section["major"]?></li>
@@ -89,6 +92,7 @@
 				<li class="uni"><?=$section["school2"]?></li>
 				<li><?=$section["major2"]?></li>
 			</ol>
+
 			<?php } ?>
 		<?php } ?>
 
