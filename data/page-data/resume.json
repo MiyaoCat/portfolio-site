@@ -70,7 +70,7 @@
 		{	
 			"type" : "skills",
 			"heading": "Programs",
-			"programs": ["JIRA", "Salesforce", "Zendesk", "Freshdesk", "Mixpanel", "Tableau", "PowerBI", "Basecamp", "Asana", "Slack", "Excel", 
+			"programs": ["Jira", "Salesforce", "Zendesk", "Freshdesk", "Mixpanel", "Tableau", "PowerBI", "Basecamp", "Asana", "Slack", "Excel", 
 				"PowerPoint", "Keynote", "MailChimp", "SurveyMonkey", "Twilio", "Testflight"  
 			],
 			"langauges": "HTML, CSS, PHP, Javascript"
@@ -80,7 +80,9 @@
 			"heading": "Education",
 			"school": "University of Washington",
 			"major": "Economics",
-			"logo": ""
+			"logo": "",
+			"school2": "Perpetual Education",
+			"major2": "Web Development & Web Design"
 		}
 	]
 }

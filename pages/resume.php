@@ -58,13 +58,14 @@
 		if ( $section["type"] == "skills" ) {
 ?>
 			<section class="skill">
-				<ol>
-					<?php 
-						echo "<h2 class='loud-voice'>" . $section["heading"] . "</h2>";
-						foreach ($section["programs"] as $programs) {
-					?>
-							<li><?=$programs?></li>
-						<?php } ?>	
+				<h2 class="loud-voice"><?=$section["heading"]?></h2>
+
+				<ol>					
+					<?php foreach ($section["programs"] as $programs) { ?>
+						
+						<li><?=$programs?></li>
+
+					<?php } ?>	
 				</ol>
 
 		<?php } ?>
@@ -78,13 +79,16 @@
 			if ( $section["type"] == "education" ) {
 	?>
 		<section class="school">
-
+			<h2 class="loud-voice"><?=$section["heading"]?></h2>
 			<ol>	
-				<h2 class="loud-voice"><?= $section["heading"]?></h2>
-				<li><?=$section["school"]?></li>
+				<li class="uni"><?=$section["school"]?></li>
 				<li><?=$section["major"]?></li>
 			</ol>
 			
+			<ol>	
+				<li class="uni"><?=$section["school2"]?></li>
+				<li><?=$section["major2"]?></li>
+			</ol>
 			<?php } ?>
 		<?php } ?>
 
