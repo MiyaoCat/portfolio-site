@@ -51,10 +51,10 @@
 		"title": "Decision Making",
 		"forms": [
 			{
-				"title1": "money",
-				"title2": "",
+				"title1": "Tax",
+				"title2": "Calculator",
 				"intro": "Use this to find out how much you should tip",
-				"slug": "money",
+				"slug": "tax-calculator",
 				"conclusion": "Here's what I learned" 
 			}
 		]
