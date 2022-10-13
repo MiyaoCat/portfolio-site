@@ -16,6 +16,13 @@
 				"intro": "Use this to find out how much your items will be with tax",
 				"slug": "self-checkout",
 				"conclusion": "Here's what I learned when building this Pizza page"
+			},
+			{
+				"title1": "Tip",
+				"title2": "Calculator",
+				"intro": "Use this to find out how much tip you should pay",
+				"slug": "tip-calculator",
+				"conclusion": "Here's what I learned when building this Pizza page"
 			}
 		]
 	},
