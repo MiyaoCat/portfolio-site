@@ -15,14 +15,12 @@
 			if ( isset ($_POST["number2"]) ) {
 				$number2 = $_POST["number2"];
 
-				$multiply = $number1 * $number2;
-			$divide = $number1 / $number2;
-			$add = $number1 + $number2;
-			}
-
-			
-
-		?>
+				$add = number_format($number1 + $number2, 4, '.', ',');
+				$subtract = number_format($number1 - $number2, 4, '.', ',');
+				$multiply = number_format($number1 * $number2, 4, '.', ',');
+				$divide = number_format($number1 / $number2, 4, '.', ',');
+			}			
+	?>
 		
 	<form method="POST">
 
@@ -30,15 +28,15 @@
 			type="number" 
 			name="number1" 
 			value="<?=$number1?>"
-			min="0"
+			step="any"
 			placeholder="Enter your first number"
-			label="write your number"
 			required>
 
 		<input 
 			type="number" 
 			name="number2" 
 			value="<?=$number2?>"
+			step="any"
 			placeholder="Enter your second number"
 			required>
 
@@ -51,8 +49,9 @@
 
 <output>
 	<?php if ( isset($_POST["submitted"]) ) { ?>	
+		<p>Your total is: <span class="special"><?=$add?></span></p>
+		<p>Your total is: <span class="special"><?=$subtract?></span></p>
 		<p>Your total is: <span class="special"><?=$multiply?></span></p>
 		<p>Your total is: <span class="special"><?=$divide?></span></p>
-		<p>Your total is: <span class="special"><?=$add?></span></p>
 	<?php } ?>	
 </output>
