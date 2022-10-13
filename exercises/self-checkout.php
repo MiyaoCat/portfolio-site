@@ -1,29 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<meta property="og:image" content="[IMAGE URL]">
-	<meta name="description" content="What's your total?">
-	<title></title>
-
-	<link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-	<header>
-		<section class='inner-column'>
-			
-		</section>
-	</header>
-
-	<main>
-		<heading>
-			<h1 class="loud-voice"><a href="?">Calculate Your Total Purchase</h1></a>
-		</heading>
-
-
-		<inner-column>
 			<?php 
 			//prompt for the prices and quatities of 3 items
 				$quantity = ""; //number provided by user
@@ -324,7 +299,8 @@
 				</div>
 
 				<button type="submit" name="submitted">Submit</button>
-			</form-wrap>			
+			</form-wrap>
+
 			</form>
 
 			<?php if ( isset($_POST['submitted']) ) { ?>
@@ -346,24 +322,14 @@
 					<p> Item 3 price: $<?=$price3?>. </p>
 					<p> Item 3 sub-total: <?php echo ($quantity3 * $price3) ?></p>
 				</total>	
+
 				<total>
 					<p>Tax rate: <?=$formattedTax?></p>
 				</total>
+				
 				<total>
 					<p> Grand Total: <?=$formattedGrandTotal?></p>
 				</total>	
 
 			</output>
 			<?php } ?>
-		</inner-column>
-
-	</main>
-
-	<footer>
-		<section class="inner-column">
-			
-		</section>
-	</footer>
-	
-</body>
-</html>
