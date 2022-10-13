@@ -21,10 +21,6 @@
 // Then only supply the order amount. 
 
 	$state = "";
-	$taxAmount = 0;
-	$taxTotal = 0;
-	$subTotal = 0;
-	$taxOutput = 0;
 	$totalWI = 0;
 	$order = 0;
 
@@ -32,16 +28,16 @@
 		$order = $_POST["order-amount"];
 		$state = $_POST["state-selected"];
 
-		if ($state == "wi") {
+		if ($state == "wi" OR "WI" OR "Wi" OR "iW" OR "Wisconsin" OR "wisconsin" OR "WISCONSIN") {
 			$totalWI = $order * 1.055;
 
-			echo $totalWI;
+			echo "<output>" . $totalWI . "</output>";
 		}
 
-		if ($state !== "wi") {
-			echo "Your total is " . $order;
-		}
-}
+// 		if ($state !== "wi" OR "WI" OR "Wi" OR "iW" OR "Wisconsin" OR "wisconsin" OR "WISCONSIN") {
+// 			echo "<output> Your total is " . $order . "</output>";
+// 		}
+	} echo $order;
 
 ?>
 
