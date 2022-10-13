@@ -15,10 +15,10 @@
 			if ( isset ($_POST["number2"]) ) {
 				$number2 = $_POST["number2"];
 
-				$add = number_format($number1 + $number2, 4, '.', ',');
-				$subtract = number_format($number1 - $number2, 4, '.', ',');
-				$multiply = number_format($number1 * $number2, 4, '.', ',');
-				$divide = number_format($number1 / $number2, 4, '.', ',');
+				$add = number_format($number1 + $number2, 2, '.', ',');
+				$subtract = number_format($number1 - $number2, 2, '.', ',');
+				$multiply = number_format($number1 * $number2, 2, '.', ',');
+				$divide = number_format($number1 / $number2, 2, '.', ',');
 			}			
 	?>
 		

@@ -8,15 +8,13 @@
 				"title2": "Interest",
 				"intro": "Use this to find out how much you'll make",
 				"slug": "simple-interest",
-				"direction": "simple-interest",
 				"conclusion": "Here's what I learned when building this interest calculator page"
 			},
 			{
-				"title1": "Pizza",
-				"title2": "Party",
-				"intro": "Use this to find out how many pizzas you should buy",
-				"slug": "pizza-party",
-				"direction": "pizza-party",
+				"title1": "Self-Checkout",
+				"title2": "",
+				"intro": "Use this to find out how much your items will be with tax",
+				"slug": "self-checkout",
 				"conclusion": "Here's what I learned when building this Pizza page"
 			}
 		]
