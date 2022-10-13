@@ -3,8 +3,8 @@
 	flex-direction: column;
 }
 
-input[type='text']:nth-of-type(1), input[type='email'] {
-	max-width: 300px;
+.email-form input[type='text']:nth-of-type(1), .email-form input[type='email'] {
+	max-width: 250px;
 }
 
 .email-form label  {
@@ -12,12 +12,6 @@ input[type='text']:nth-of-type(1), input[type='email'] {
 	margin-bottom: 5px;
 }
 
-.email-form input, .email-form textarea {
-	border: 3px solid var(--trim);
-	font-family: var(--sans-serif);
-	font-size: 1rem;
-	padding: 2px;
-}
 
 /*- - FORM BUTTON - - */
 .email-form .contact-form {

@@ -27,6 +27,3 @@
 <?php } ?>
 
 
-<!-- <section class="project-url">
-	<a href="<?=$url?>" target="_blank">See the Live Project</a>
-</section> -->

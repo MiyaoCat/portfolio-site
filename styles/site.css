@@ -62,6 +62,13 @@ svg {
 	max-width: 30px;
 }
 
+input, textarea {
+	border: 3px solid var(--trim);
+	font-family: var(--sans-serif);
+	font-size: 1rem;
+	padding: 2px;
+}
+
 @media (min-width: 700px) {
 	.background {
 		grid-column: 2 / 10;

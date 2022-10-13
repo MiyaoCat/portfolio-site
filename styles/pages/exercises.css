@@ -1,20 +1,28 @@
-.exercises-grid {
-	grid-row: 6;
+form-exercise {
+	grid-row: 3;
 	grid-column: 2 / 14;
+	margin-left: 5px;
+	max-width: 50%;
 }
 
-.project-list .exercise {
-	margin: 20px 0;
+form-exercise .exercises li {
+	padding: 5px;
+	text-align: left;
+	line-height: 1.2rem;
+	max-width: 18rem;
+	border: 3px solid var(--trim);
+	background: var(--background);
+	box-shadow: 5px 5px var(--contrast);
+	margin-top: 15px;
+}
+.calculations {
+	grid-row: 3;
 }
 
-/* - - SUBMIT BUTTON - - */
+.input-output {
+	grid-row: 4;
+}
 
-
-@media (min-width: 700px) {
-	.exercises-grid {
-		grid-row: 6;
-		grid-column: 4 / 10;
-		margin: 20px;
-		justify-content: flex-start;
-	}
+.decision-making {
+	grid-row: 5;
 }

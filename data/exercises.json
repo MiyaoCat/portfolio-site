@@ -26,6 +26,26 @@
 		"title": "Input/Output",
 		"forms": [
 			{
+				"title1": "Simple",
+				"title2": "Math",
+				"intro": "Easy arithmetic",
+				"slug": "simple-math",
+				"conclusion": "Here's what I learned" 
+			},
+			{
+				"title1": "money",
+				"title2": "",
+				"intro": "Use this to find out how much you should tip",
+				"slug": "money",
+				"conclusion": "Here's what I learned" 
+			}
+		]
+	},
+	{
+		"type": "decision-making",
+		"title": "Decision Making",
+		"forms": [
+			{
 				"title1": "money",
 				"title2": "",
 				"intro": "Use this to find out how much you should tip",
