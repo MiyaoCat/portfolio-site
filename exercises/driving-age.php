@@ -1,16 +1,23 @@
 <?php 
 $age = 0;
 $message = "";
+
 // prompt for the user's age (from input below)
 	if ( isset($_POST["submitted"]) ) {
+		$age = $_POST["age"];
 
+		if ( empty($age) ) {
 
+			echo "YOU DO NOT EXIST";
+		} 
 		// If their age is less than 16 return message they're too young
 		// If their age is equal to or greater than 16, return message they can drive
 
-		$message = ( $_POST["age"] >= 16 ? "You may drive" : "You're too young son!");
+		if ($age > 0) {
+			$message = ( $age >= 16 ? "You may drive" : "You're too young son!");
+		}
 		
-	}
+	} 
 
 
 
@@ -35,5 +42,7 @@ $message = "";
 </form>
 
 <output>
+	<?php if ( isset($_POST["submitted"]) ) { ?>
 	<?=$message?>
+<?php } ?>
 </output>
