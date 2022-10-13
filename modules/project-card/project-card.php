@@ -16,7 +16,7 @@
 					if ($slug !== "exercises") { ?>
 			
 						<a href="?page=project&slug=<?=$slug?>">
-							<h2 class="loud-voice"><?=$title1?></h2>
+							<h2 class="loud-voice"><?=$title1?> <?=$title2?></h2>
 						</a>
 				<?php } ?>
 			
@@ -24,7 +24,7 @@
 					if ($slug == "exercises") { ?>
 						
 						<a href="?page=exercises">
-							<h2 class="loud-voice"><?=$title1?></h2>
+							<h2 class="loud-voice"><?=$title1?> <?=$title2?></h2>
 						</a>
 				<?php } ?>
 			
@@ -45,9 +45,26 @@
 
 		<div class="project-images">
 			<picture class="project-image">
+
+				<?php  
+					if ($slug !== "exercises") { ?>
+
 				<a href="?page=project&slug=<?=$slug?>">
 					<img src="<?=$image?>" alt="image for <?=$title1?> <?=$title2?>">
 				</a>
+
+				<?php } ?>	
+
+				<?php  
+					if ($slug == "exercises") { ?>
+
+				<a href="?page=exercises">
+					<img src="<?=$image?>" alt="image for <?=$title1?> <?=$title2?>">
+				</a>
+
+				<?php } ?>	
+
+
 			</picture>
 		</div>
 
