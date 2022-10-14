@@ -8,7 +8,7 @@ $message = "";
 
 		if ( empty($age) ) {
 
-			echo "<output>YOU DO NOT EXIST</output>";
+			echo "<output>YOU ARE UNBORN</output>";
 		} 
 		// If their age is less than 16 return message they're too young
 		// If their age is equal to or greater than 16, return message they can drive
