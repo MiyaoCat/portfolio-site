@@ -2,7 +2,7 @@ form-exercise {
 	grid-row: 3;
 	grid-column: 2 / 14;
 	margin-left: 5px;
-	max-width: 50%;
+	max-width: 200px;
 }
 
 form-exercise .exercises li {
@@ -15,6 +15,13 @@ form-exercise .exercises li {
 	box-shadow: 5px 5px var(--contrast);
 	margin-top: 15px;
 }
+
+form-exercise .exercises li:hover {
+	transform: translateX(5px) translateY(5px);
+	box-shadow: 0 0 var(--highlight);
+	cursor: pointer;
+}
+
 .calculations {
 	grid-row: 3;
 }
@@ -25,4 +32,10 @@ form-exercise .exercises li {
 
 .decision-making {
 	grid-row: 5;
+}
+
+@media (min-width: 700px) {
+	form-exercise {
+		grid-column: 7 / 10;
+	}
 }
