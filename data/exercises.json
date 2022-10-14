@@ -63,6 +63,13 @@
 				"intro": "Use this to find out how much you should tip",
 				"slug": "driving-age",
 				"conclusion": "Here's what I learned" 
+			},
+			{
+				"title1": "Temperature",
+				"title2": "Converter",
+				"intro": "Use this to find out how much you should tip",
+				"slug": "temperature-converter",
+				"conclusion": "Here's what I learned" 
 			}
 		]
 	}

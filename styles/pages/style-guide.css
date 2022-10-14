@@ -1,25 +1,69 @@
-
-
-style-guide {
-	display: block;
+.style-guide section > a {
+	text-align: center;
+	margin-top: 10px;
+	/*padding-bottom: 5px;*/
 }
 
-.style-guide.page-header {
+.style-guide > section {
+	grid-column: 2 / 14;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: flex-end;
+	border-bottom: 3px dashed var(--trim);
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 20px;
+}
+
+.style-guide .page-header {
 	grid-row: 2;
+	grid-column: 2 / 14;
 }
 
-.style-guide.generic-text {
+.style-guide .generic-text {
 	grid-row: 3;
 	grid-column: 2/ 14;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: flex-end;
 }
 
-.style-guide.social-icons {
-	grid-row: 8;
+.style-guide .figure {
+	grid-row: 4;
+	grid-column: 2/ 14;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: flex-end;
+
+}
+
+.style-guide figure {
+	max-width: 250px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.style-guide .contact-button {
+	grid-row: 5;
 	grid-column: 2/ 14;
 }
 
-.style-guide.figure {
-	grid-row: 7;
-	grid-column: 4 / span 2;
+.style-guide .projects-button {
+	grid-row: 6;
+	grid-column: 2/ 14;
 }
+.style-guide .email-form {
+	grid-row: 7;
+	grid-column: 2/ 14;
+}
+
+.social-icons {
+	grid-row: 9;
+	grid-column: 2/ 14;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: flex-end;
+}
+
+
 

@@ -58,6 +58,11 @@ output {
 	grid-column: 2 /14;
 }
 
+.exercise form input[type="radio"] {
+   border: 3px solid black;
+   cursor: pointer;
+}
+
 @media (min-width: 700px) {
 	.exercise heading {
 		grid-column: 4 / 10;

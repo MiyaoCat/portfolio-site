@@ -8,13 +8,27 @@
 	"sections": [
 		{
 			"module": "generic-text",
-			"content": "These are all the modules used on my site."
-		},
-		{
-			"module": "figure"
+			"content": "This is my generic text module. If I want to add a block of text, I will insert this module. All modules will then be placed onto my site grid."
 		},
 		{
 			"module": "social-icons"
+		},
+		{
+			"module": "figure",
+			"filePath": "images/selfie-gradient.png",
+			"altText": "selfie of John Miyao in wtih a gradient background from blue (top) to purple (bottom)"
+		},
+		{
+			"module": "email-form",
+			"content": "send me a message!"
+		},
+		{	
+			"module": "contact-button",
+			"content": "Work together"
+		},
+		{	
+			"module": "projects-button",
+			"content": "See my work"
 		}
 	]
 }
