@@ -27,15 +27,12 @@
 							<h2 class="loud-voice"><?=$title1?> <?=$title2?></h2>
 						</a>
 				<?php } ?>
-			
 			</div>
 			
 			<ul class="languages">
-			
 				<?php foreach ($project["languages"] as $languages) { ?>
 					<li class="calm-voice"><?=$languages?></li>
 				<?php } ?>
-			
 			</ul>
 			
 			<div class="intro">
@@ -49,21 +46,18 @@
 				<?php  
 					if ($slug !== "exercises") { ?>
 
-				<a href="?page=project&slug=<?=$slug?>">
-					<img src="<?=$image?>" alt="image for <?=$title1?> <?=$title2?>">
-				</a>
-
+					<a href="?page=project&slug=<?=$slug?>">
+						<img src="<?=$image?>" alt="image for <?=$title1?> <?=$title2?>">
+					</a>
 				<?php } ?>	
 
 				<?php  
 					if ($slug == "exercises") { ?>
 
-				<a href="?page=exercises">
-					<img src="<?=$image?>" alt="image for <?=$title1?> <?=$title2?>">
-				</a>
-
+					<a href="?page=exercises">
+						<img src="<?=$image?>" alt="image for <?=$title1?> <?=$title2?>">
+					</a>
 				<?php } ?>	
-
 
 			</picture>
 		</div>

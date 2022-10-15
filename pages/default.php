@@ -1,7 +1,6 @@
 <?php foreach ($pageData["sections"] as $sections) {
+
 	$module = $sections["module"];
-	$content = $sections["content"];
-	
 	$link = "?page=module&slug=$sections[module]";
 ?>
 
