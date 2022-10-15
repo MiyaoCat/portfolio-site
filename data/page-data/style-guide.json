@@ -1,6 +1,7 @@
 {
 	"slug": "style-guide",
 
+
 	"title1": "Style",
 	"title2": "Guide",
 	"intro": "These are all of the modules used on this site.",
@@ -27,7 +28,7 @@
 			"content": "Work together"
 		},
 		{	
-			"module": "projects-button",
+			"module": "project-card",
 			"content": "See my work"
 		}
 	]

@@ -19,7 +19,7 @@
 	<?php 
 
 		foreach ($projects as $project) { 
-
+			
 			// if ( !isset($project["url"]) ) {	
 				include("modules/project-card/project-card.php"); 
 			}

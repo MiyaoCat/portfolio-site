@@ -1,4 +1,6 @@
-<?php $moduleName = $_GET["slug"]; ?>
+<?php 
+	$moduleName = $_GET["slug"]; 
+?>
 
 <section class="<?=$page?> <?=$moduleName?>">
 	<?php 
