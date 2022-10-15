@@ -12,12 +12,14 @@
 			"content": "This is my generic text module. If I want to add a block of text, I will insert this module. All modules will then be placed onto my site grid."
 		},
 		{
-			"module": "social-icons"
+			"module": "social-icons",
+			"content": "These are my social icons"
 		},
 		{
 			"module": "figure",
 			"filePath": "images/selfie-gradient.png",
-			"altText": "selfie of John Miyao in wtih a gradient background from blue (top) to purple (bottom)"
+			"altText": "selfie of John Miyao in wtih a gradient background from blue (top) to purple (bottom)",
+			"content": "These are my social icons"
 		},
 		{
 			"module": "email-form",
@@ -29,7 +31,7 @@
 		},
 		{	
 			"module": "project-card",
-			"content": "See my work"
+			"content": "Work together"
 		}
 	]
 }
