@@ -17,9 +17,22 @@
 // Ask if they want to convert the number to Farenheit or Celsius by having them select from radio button
 
 // If they select fahrenheit. Run the formula to convert the temperature number to celsius
-if ( isset($_POST["submitted"]) ) {
+$temp = 0;
+$tempType = "";
 
-}
+if ( isset($_POST["submitted"]) ) {
+	if ( isset($_POST["temp-type"])  && isset($_POST["temp"]) ) {
+		$tempType = $_POST["temp-type"];
+		$temp = $_POST["temp"];
+	} if ($tempType == "") {
+		echo "<output>Select what you want the temp to convert to</output>";
+	} else {
+				echo "<output>". $temp . " " . $tempType . "</output>";
+			}
+}	
+	
+
+	
 
 
 
