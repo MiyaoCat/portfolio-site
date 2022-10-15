@@ -79,6 +79,7 @@ project-card .project-image  {
 
 	project-card .project-images {
 		max-width: 50%;
+		margin-top: 5px;
 	}
 }
 
