@@ -2,7 +2,7 @@
 	if ($page !== "project") {
 
 		$filePath = $sections["filePath"];
-		$altText = $sections["altText"];
+		$altText = $sections["altText"]
 ?>
 
 <figure>
