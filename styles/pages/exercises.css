@@ -5,6 +5,10 @@ form-exercise {
 	max-width: 200px;
 }
 
+form-exercise h2 {
+	margin-bottom: 5px;
+}
+
 form-exercise .exercises li {
 	padding: 5px;
 	text-align: left;
@@ -13,7 +17,7 @@ form-exercise .exercises li {
 	border: 3px solid var(--trim);
 	background: var(--background);
 	box-shadow: 5px 5px var(--contrast);
-	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 form-exercise .exercises li:hover {

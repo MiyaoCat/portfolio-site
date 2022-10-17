@@ -26,8 +26,9 @@
 			"content": "send me a message!"
 		},
 		{	
-			"module": "contact-button",
-			"content": "Work together"
+			"module": "button",
+			"content": "Work together",
+			"class": "contact"
 		}
 	]
 }

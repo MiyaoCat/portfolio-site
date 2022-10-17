@@ -12,12 +12,14 @@
 			"content": "Welcome to my site! I’m a Web Developer and Designer who helps businesses <span>standout</span> online. Unlike my competitors, I translate my clients’ goals into beautiful, responsive design."
 		},
 		{	
-			"module": "contact-button",
-			"content": "Work together"
+			"module": "button",
+			"content": "Work together",
+			"class": "contact"
 		},
 		{	
-			"module": "projects-button",
-			"content": "See my work"
+			"module": "button",
+			"content": "See my work",
+			"class": "projects"
 		}
 	]
 }
