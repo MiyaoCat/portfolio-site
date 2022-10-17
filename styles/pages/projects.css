@@ -8,6 +8,7 @@ project-card.layout-garden {
 
 project-card.exercises {
 	grid-row: 5;
+	gap: 10px;
 }
 
 project-card.luxury-streetwear {
