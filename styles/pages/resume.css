@@ -273,10 +273,7 @@ sub-header.skill {
 
 	.resume .languages h2 {
 		margin-left: 0;
-	}
-
-	.resume .languages li {
-		margin-top: 15px;
+		margin-bottom: 15px;
 	}
 }
 
