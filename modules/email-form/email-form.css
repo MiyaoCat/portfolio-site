@@ -15,13 +15,13 @@
 
 /*- - FORM BUTTON - - */
 .email-form .contact-form {
-	border: 3px solid var(--trim);
-	text-align: center;
+/*	border: 3px solid var(--trim);
+	text-align: center;*/
 	padding: 5px;
 	margin: 20px 0;
-	box-shadow: 5px 5px var(--contrast);
+	/*box-shadow: 5px 5px var(--contrast);
 	background: var(--background);
-	color: var(--ink);
+	color: var(--ink);*/
 	max-width: 50%;
 	margin-left: 24%;
 }

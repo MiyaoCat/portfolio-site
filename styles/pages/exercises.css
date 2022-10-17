@@ -11,7 +11,7 @@ form-exercise h2 {
 
 form-exercise .exercises li {
 	padding: 5px;
-	text-align: left;
+	text-align: center;
 	line-height: 1.2rem;
 	max-width: 18rem;
 	border: 3px solid var(--trim);
