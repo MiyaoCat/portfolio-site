@@ -2,8 +2,6 @@
 	margin-left: 5px;
 }
 
-
-
 /* - - PAGE HEADER - - */
 .resume .page-header .title1 {
 	transform: translateY(-13px) rotate(-6deg);
@@ -170,20 +168,20 @@ sub-header.skill {
 }
 
 /*- - LANGUAGES - -*/
-.languages {
+.resume .languages {
 	grid-row: 11;
 	grid-column: 2 / 14;
 	margin-top: 30px;
 	margin-bottom: 50px;
 }
 
-.languages ol {
+.resume .languages ol {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 }
 
-.languages li {
+.resume .languages li {
 	padding: 4px;
 	text-align: center;
 	border: 3px solid var(--trim);
