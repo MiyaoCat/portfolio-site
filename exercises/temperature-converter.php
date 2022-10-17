@@ -2,54 +2,63 @@
 
 // The formulas are
 // C = (F − 32) × 5 / 9
-// and
+function convertToCelsius($f) {
+	return ($f - 32) * 5 / 9;
+}
+
 // F = (C × 9 / 5) + 32
+function convertToFahrenheit($c) {
+	return ($c * 9 / 5) + 32;
+}
 
-// Example Output
-// Press C to convert from Fahrenheit to Celsius.
-// Press F to convert from Celsius to Fahrenheit.
-// Your choice: C
-// Please enter the temperature in Fahrenheit: 32
-// The temperature in Celsius is 0.
-
-// Ask for a temperature number
-// Get the temperature number from user
-// Ask if they want to convert the number to Farenheit or Celsius by having them select from radio button
-
-// If they select fahrenheit. Run the formula to convert the temperature number to celsius
+function isChecked($type, $name) {
+	if ($type == $name) {
+		return "checked";
+	} 
+}
+//Default setup
 $temp = 0;
-$tempType = "";
+$tempType = "celsius";
+$converted = null;
 
+//If there's any user input
 if ( isset($_POST["submitted"]) ) {
-	if ( isset($_POST["temp-type"])  && isset($_POST["temp"]) ) {
+
+	//Check if user selected a temp type. If so, use that temp type
+	if ( isset($_POST["temp-type"]) ) {
 		$tempType = $_POST["temp-type"];
+	}	
+
+	//Check if user has input a temp number. If so, use that number
+	if ( isset($_POST["temp"]) ) {
 		$temp = $_POST["temp"];
-	} if ($tempType == "") {
-		echo "<output>Select what you want the temp to convert to</output>";
-	} else {
-				echo "<output>". $temp . " " . $tempType . "</output>";
-			}
-}	
-	
+	}
+}
 
-	
+//Calculate temperature conversion
+if ($tempType == "fahrenheit") {
+	$converted = convertToCelsius($temp);
+} elseif ($tempType == "celsius") {
+	$converted = convertToFahrenheit($temp);
+} 
 
+//PHP function to round number to nearest whole number
+$rounded = round($converted);
 
-
-
-
-
-
+//Display output
+echo "<output>That converts to ". $rounded . " " . $tempType . "</output>";
 ?>
 
 
 <form method ="POST">
-	<input type="number" step="0.1" name="temp" value="temp" placeholder="Enter the temperature">
-	<label for="fahrenheit">Convert to Fahrenheit</label>
-	<input type="radio" name="temp-type" value="fahrenheit">
 	
-	<label for="celsius">Convert to Celsius</label>
-	<input type="radio" name="temp-type" value="celsius">
+	<label for="fahrenheit">Fahrenheit</label>
+	<input type="radio" name="temp-type" value="fahrenheit" <?=isChecked($tempType, "fahrenheit")?> >
+	
+	<label for="celsius">Celsius</label>
+	<input type="radio" name="temp-type" value="celsius" <?=isChecked($tempType, "celsius")?> >
+
+	<input type="number" step="0.1" name="temp" value="<?=$temp?>" placeholder="Enter the temperature">
 
 	<button type="submit" name="submitted">Submit</button>
 </form>
@@ -57,3 +66,140 @@ if ( isset($_POST["submitted"]) ) {
 <output>
 	
 </output>
+
+
+<script>
+	console.clear();
+
+	function noParameters() {
+		console.log(10 + 10);
+	}
+	console.log( "noParameters" );
+	
+	noParameters();
+
+// --- //
+
+	function oneParameter(age) {
+		console.log(age + 10);
+	}
+
+	oneParameter(30);
+
+// --- //
+	function twoParameters(age, yearsPassed) {
+		console.log(age + yearsPassed);
+	}
+
+	twoParameters(30, 5);
+
+// --- //
+	function defaultParameter(age, yearsPassed = 10) {
+		console.log(age + yearsPassed);
+	}
+
+	defaultParameter(30);
+
+// --- //
+
+	function withReturn() {
+		return "This is a function with a return";
+	}
+
+	console.log( withReturn() );
+
+// --- //
+	function doubleNumber(num1) {
+		return num1 * 2;
+	}
+
+	console.log( doubleNumber(50) );
+
+// --- //
+	var basketball = {
+		name : "Basketball",
+		season: "winter",
+		invented: 1981
+	}
+
+	function getName(object) {
+		return object.name;
+	}
+
+	console.log(`${getName(basketball)} is a sport invented in ${basketball.invented}`);
+
+// object[key] This gets the value based on the key
+
+	function listKeys(object) {
+		for(key in object ) {
+			console.log(key, object[key]);
+		}
+	}
+
+	listKeys(basketball);
+
+
+// --- //
+
+
+
+
+	var form = document.querySelector("form");
+	var output = document.querySelector("output");
+
+	form.querySelector("button").style.display = "none";
+
+	function convertToCelsius(f) {
+		return (f - 32) * 5 / 9;
+	}
+
+	// F = (C × 9 / 5) + 32
+	function convertToFahrenheit(c) {
+		return (c * 9 / 5) + 32;
+	}
+
+	function updateInterface() {
+		var tempType = document.querySelector(":checked").value;
+
+		console.log("tempType", tempType);
+
+		var temp = document.querySelector("[name='temp']").value;
+
+		console.log("temp", temp);
+
+		if (tempType == "fahrenheit") {
+			var converted = convertToCelsius(temp);
+		} 
+
+		if (tempType == "celsius") {
+			var converted = convertToFahrenheit(temp);
+		}
+
+		var rounded = converted.toFixed(2);
+
+		//document.querySelector("output") = `This converts to ${rounded} degrees ${tempType}`;	
+		output.textContent = `This converts to ${rounded} degrees ${tempType}`;		
+	}
+	
+	updateInterface();
+
+	form.addEventListener("input", function(event){
+		event.preventDefault();
+
+		updateInterface();
+	})
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
