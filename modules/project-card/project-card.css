@@ -31,10 +31,14 @@ project-card .languages {
 
 project-card .languages li {
 	padding: 2px 5px;
-	margin: 0 5px 5px 0;
+	margin: 0 8px 5px 0;
 	max-height: 1.2rem;
 	border: 2px solid var(--trim);
+	text-align: center;
+	background: var(--background);
+	box-shadow: 3px 3px var(--contrast);
 }
+
 project-card .project-image  {
 	box-shadow: 10px 10px var(--contrast);
 	display: none;
