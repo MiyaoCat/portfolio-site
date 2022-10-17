@@ -32,12 +32,13 @@ a {
 .attention-voice {
 	font-family: var(--sans-serif);
 	font-size: 1.5rem;
+	font-weight: 500;
 }
 
 /* Paragraph text or similar */
 .normal-voice {
 	font-size: 1rem;
-	line-height: 1.7rem;
+	line-height: 1.5rem;
 }
 
 /* Caption text or similar */
