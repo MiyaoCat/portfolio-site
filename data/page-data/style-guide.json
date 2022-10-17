@@ -28,10 +28,6 @@
 		{	
 			"module": "contact-button",
 			"content": "Work together"
-		},
-		{	
-			"module": "project-card",
-			"content": "Work together"
 		}
 	]
 }
