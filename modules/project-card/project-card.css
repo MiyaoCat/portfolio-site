@@ -27,6 +27,7 @@ project-card .project-title {
 project-card .languages {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 project-card .languages li {
