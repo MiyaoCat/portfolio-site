@@ -23,6 +23,7 @@
 	grid-row: 6;
 	grid-column: 5;
 	align-items: center;
+	margin-bottom: 15px;
 }
 
 .home .button:nth-of-type(3) {
@@ -64,6 +65,7 @@
 		grid-column-start: 5;
 		display: flex;
 		justify-content: flex-end;
+		margin-bottom: 0;
 	}
 
 	.home .button:nth-of-type(3) {
