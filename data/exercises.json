@@ -38,10 +38,10 @@
 				"conclusion": "Here's what I learned" 
 			},
 			{
-				"title1": "money",
-				"title2": "",
+				"title1": "Count",
+				"title2": "Characters",
 				"intro": "Use this to find out how much you should tip",
-				"slug": "money",
+				"slug": "count-characters",
 				"conclusion": "Here's what I learned" 
 			}
 		]
