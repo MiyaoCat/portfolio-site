@@ -20,6 +20,11 @@ form-exercise .exercises li {
 	background: var(--background);
 	max-width: 18rem;
 }
+
+.array {
+	grid-row: 6;
+	grid-column: 10 / 14;
+}
 @media (prefers-color-scheme: dark) {
 	form-exercise .exercises li {
 		box-shadow: 5px 5px var(--ink);

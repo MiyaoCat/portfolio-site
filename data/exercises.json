@@ -43,6 +43,13 @@
 				"intro": "Use this to find out how much you should tip",
 				"slug": "count-characters",
 				"conclusion": "Here's what I learned" 
+			},
+			{
+				"title1": "mad",
+				"title2": "libs",
+				"intro": "Use this to find out how much you should tip",
+				"slug": "mad-libs",
+				"conclusion": "Here's what I learned" 
 			}
 		]
 	},
