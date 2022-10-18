@@ -20,6 +20,11 @@ form-exercise .exercises li {
 	background: var(--background);
 	max-width: 18rem;
 }
+@media (prefers-color-scheme: dark) {
+	form-exercise .exercises li {
+		box-shadow: 5px 5px var(--ink);
+	}
+}
 
 form-exercise .exercises li:hover {
 	transform: translateX(5px) translateY(5px);
