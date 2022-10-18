@@ -3,7 +3,7 @@ button {
 	text-align: center;
 	padding: 5px;
 	box-shadow: 5px 5px var(--contrast);
-	background: var(--background);
+	/*background: var(--background);*/
 	min-width: 150px;
 	color: var(--standout);
 	font-weight: 500;

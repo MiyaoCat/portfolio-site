@@ -6,7 +6,7 @@
 
 
 	<section class="<?=$module?>">
-		<?php styleGuideDetailLink($module, $pageData["slug"]); ?>
+		<div class="link"><?php styleGuideDetailLink($module, $pageData["slug"]); ?></div>
 
 		<?php include("modules/$module/$module.php"); ?>
 	</section>

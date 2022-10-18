@@ -1,12 +1,13 @@
 form-exercise {
 	grid-row: 3;
 	grid-column: 2 / 14;
+	margin-top: 15px;
 	margin-left: 5px;
 	max-width: 200px;
 }
 
 form-exercise h2 {
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 }
 
 form-exercise .exercises li {
@@ -38,8 +39,37 @@ form-exercise .exercises li:hover {
 	grid-row: 5;
 }
 
+@media (min-width: 500px) {
+	.input-output {
+		grid-row: 3;
+		grid-column: 8 / 14;
+	}
+}
+
+@media (min-width: 600px) {
+	.input-output {
+		grid-column: 7 / 14;
+	}
+}
+
 @media (min-width: 700px) {
 	form-exercise {
+		margin-right: 20px;
+	}
+
+	.calculations, .input-output {
+		margin-top: 20px;
+	}
+
+	.calculations {
+		grid-column: 4 / 7;
+	}
+
+	.decision-making {
+		grid-row: 5;
+	}
+
+	.decision-making, .input-output{
 		grid-column: 7 / 10;
 	}
 }
