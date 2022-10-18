@@ -66,7 +66,7 @@ $totalOutput = "$taxOutput <p>The total is \$" . number_format($total, 2) . ".</
 </output>
 
 
-
+<?php if ($submittedPOST) { ?>
 <div class="array">
 	<?php
 	
@@ -83,3 +83,5 @@ $totalOutput = "$taxOutput <p>The total is \$" . number_format($total, 2) . ".</
 	
 	?>
 </div>
+
+<?php } ?>
