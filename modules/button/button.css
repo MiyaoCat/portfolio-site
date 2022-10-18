@@ -1,11 +1,14 @@
 button {
-	border: 3px solid var(--trim);
-	text-align: center;
 	padding: 5px;
+	text-align: center;
+	line-height: 1.2rem;
+	border: 3px solid var(--trim);
 	box-shadow: 5px 5px var(--contrast);
-	/*background: var(--background);*/
+	background: var(--background);
 	min-width: 150px;
 	color: var(--standout);
+	font-family: var(--sans-serif);
+	font-size: 1rem;
 	font-weight: 500;
 }
 
@@ -18,4 +21,10 @@ button:hover {
 button:active {
 	transform: translateX(5px) translateY(5px);
 	box-shadow: 0 0 var(--highlight);
+}
+
+@media (prefers-color-scheme: dark) {
+	button {
+		box-shadow: 5px 5px var(--ink);
+	}
 }

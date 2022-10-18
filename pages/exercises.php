@@ -18,7 +18,7 @@
 				?>
 					<ol class="exercises">
 						<li>
-							<a href="?page=exercise&slug=<?=$slug?>">
+							<a href="?page=exercise&slug=<?=$slug?>" class="normal-voice">
 								<h3 class="normal-voice"><?=$form["title1"]?> <?=$form["title2"]?></h2>
 							</a>
 						</li>

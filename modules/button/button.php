@@ -6,7 +6,7 @@
 ?>
 
 <button class="<?=$class?>">
-	<a href="?page=projects">
-		<p class="normal-voice"><?=$buttonText?></p>
+	<a href="?page=<?=$class?>">
+		<?=$buttonText?>
 	</a>
 </button>

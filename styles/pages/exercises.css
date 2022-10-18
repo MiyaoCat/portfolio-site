@@ -12,13 +12,13 @@ form-exercise h2 {
 
 form-exercise .exercises li {
 	padding: 5px;
+	margin-bottom: 15px;
 	text-align: center;
 	line-height: 1.2rem;
-	max-width: 18rem;
 	border: 3px solid var(--trim);
-	background: var(--background);
 	box-shadow: 5px 5px var(--contrast);
-	margin-bottom: 15px;
+	background: var(--background);
+	max-width: 18rem;
 }
 
 form-exercise .exercises li:hover {
