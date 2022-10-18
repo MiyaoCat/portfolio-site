@@ -50,6 +50,13 @@
 				"intro": "Use this to find out how much you should tip",
 				"slug": "mad-libs",
 				"conclusion": "Here's what I learned" 
+			},
+			{
+				"title1": "Say",
+				"title2": "Hello",
+				"intro": "Use this to find out how much you should tip",
+				"slug": "hello",
+				"conclusion": "Here's what I learned" 
 			}
 		]
 	},
