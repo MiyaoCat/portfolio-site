@@ -5,11 +5,11 @@
 
 	<?php  
 
-		$scarface = "./images/scarface-puppy.jpg";
-		$lionel = "./images/lionel-richie.jpg";
-		$adelle = "./images/adelle.jpg";
-		$sAndG = "./images/simon-garfunkel.jpg";
-		$jerryMaguire = "./images/jerry-maguire.png";
+		$scarface = "./images/forms/scarface-puppy.jpg";
+		$lionel = "./images/forms/lionel-richie.jpg";
+		$adelle = "./images/forms/adelle.jpg";
+		$sAndG = "./images/forms/simon-garfunkel.jpg";
+		$jerryMaguire = "./images/forms/jerry-maguire.png";
 
 		$images =[$scarface, $lionel, $adelle, $sAndG, $jerryMaguire ];
 		$imagesRand = $images[rand(0,4)];
