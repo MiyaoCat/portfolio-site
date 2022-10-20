@@ -41,22 +41,15 @@
 	$message = "You entered \"<span>$string</span>\". It is <span class='length'>$length</span> characters long without spaces";
 
  ?>
+
 	<p class="regular-voice"><?=$message?></p><br>
+
 	<p class="regular-voice">Or it's <?=$lengthWithSpaces?> characters WITH spaces.</p>
 	<br>
-	
-
-	<p>WOuld you like to know how many words that is?</p>
-	<form method="POST"><button type="submit" name="yes">Yes</button></form>
-<?php  } 
-if ( isset($_POST["yes"]) ) {
-		$string = $_POST["string"];
-		$word = str_word_count($string, 0);
-
-?>
 	<p class="regular-voice">Or it's <?=$word?> word(s).</p>
+
+<?php } ?>	
 <?php } ?>
-	<?php } ?>	
 </output>
 
 
