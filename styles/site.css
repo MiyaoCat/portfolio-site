@@ -59,7 +59,7 @@ picture {
 }
 
 svg {
-	max-width: 30px;
+	width: clamp(40px, 6vw, 60px);
 }
 
 input, textarea {
