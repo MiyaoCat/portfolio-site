@@ -18,8 +18,10 @@
 	<div class="background"></div>
 
 	<header class="site-header">
-		<div class="header-logo">
-			<a href="?page=home"><?php include("images/icons/logo.svg"); ?></a>
+		<div class="logo">
+			<a href="?page=home">
+				<?php include("images/icons/logo.svg"); ?>
+			</a>
 		</div>
 
 		<nav>
