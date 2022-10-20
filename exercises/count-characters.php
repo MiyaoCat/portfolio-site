@@ -48,14 +48,14 @@
 
 	<p>WOuld you like to know how many words that is?</p>
 	<form method="POST"><button type="submit" name="yes">Yes</button></form>
-<?php  } ?>
-	<?php } ?>
-
-<?php 
-	if ( isset($_POST["yes"]) ) {
+<?php  } 
+if ( isset($_POST["yes"]) ) {
+		$string = $_POST["string"];
 		$word = str_word_count($string, 0);
+
 ?>
 	<p class="regular-voice">Or it's <?=$word?> word(s).</p>
+<?php } ?>
 	<?php } ?>	
 </output>
 
