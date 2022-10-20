@@ -95,7 +95,7 @@
 		"slug": "portfolio-site",
 		"intro": "The design process of this site",
 		"url": "https://peprojects.dev/alpha-4/john/",
-		"image":"",
+		"image":"images/projects/portfolio.png",
 		"featured": false,
 		"languages": [
 			"HTML", "CSS", "PHP"
