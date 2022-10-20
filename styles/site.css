@@ -73,7 +73,7 @@ input, textarea {
 	.background {
 		grid-column: 2 / 10;
 		grid-row: 1 / 16;
-		/*transition: 1s ease-in-out;*/
+		transition: 1s ease-in-out;
 	}
 
 	body {
@@ -86,10 +86,6 @@ input, textarea {
 		grid-row: 4 / span 2;
 		grid-column: 12 ;
 		margin-top: 50px;
-	}
-
-	.image picture {
-		box-shadow: 5px 5px lawngreen;
 	}
 
 }
