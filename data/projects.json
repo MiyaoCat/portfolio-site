@@ -8,7 +8,7 @@
 		"title2": "Garden",
 		"intro": "Not really a project, but shows off a bunch of responsive modules that are common on modern websites",
 		"url": "https://peprojects.dev/alpha-4/john/layout-challenges/index.php",
-		"image": "images/layouts.png",
+		"image": "images/projects/layouts.png",
 		"featured": true,
 		"languages": [
 			"HTML", "CSS", "PHP"
@@ -27,7 +27,7 @@
 		"slug": "exercises",
 		"intro": "We created a bunch of forms using the book, Exercises for Programmers. It gave us the opportunity to think through functions and create programs with PHP and Javascript.",
 		"url": "https://peprojects.dev/alpha-4/john/layout-challenges/index.php",
-		"image": "images/forms2.jpg",
+		"image": "images/projects/forms2.jpg",
 		"featured": false,
 		"languages": [
 			"HTML", "CSS", "PHP", "Javascript"
@@ -46,7 +46,7 @@
 		"slug": "luxury-streetwear",
 		"intro": "We were given a base code to style and emulate an industry of our choice. I chose, 'Luxury Streetwear' for my project.",
 		"url": "https://peprojects.dev/alpha-4/john/projects/layout-theme-challenge/index.php",
-		"image": "images/fashion-site.png",
+		"image": "images/projects/fashion-site.png",
 		"featured": true,
 		"languages": [
 			"HTML", "CSS", "PHP"
@@ -65,7 +65,7 @@
 			},
 			{
 				"module": "figure",
-				"filePath": "images/luxury-streetwear-mood-board.png",
+				"filePath": "images/luxury-streetwear/luxury-streetwear-mood-board.png",
 				"altText":	"Luxury streetwear moodboard from researched sites.",
 				"figureHeading": "Moodboard",
 				"caption": "The moodboard where I pulled visual treatments from the researched sites."
@@ -77,7 +77,7 @@
 			},
 			{
 				"module": "figure",
-				"filePath": "images/luxury-streetwear-style-tile.png",
+				"filePath": "images/luxury-streetwear/luxury-streetwear-style-tile.png",
 				"altText":	"Luxury streetwear moodboard from researched sites.",
 				"figureHeading": "Moodboard",
 				"caption": "The visual language of my site represented through a Style Tile."
@@ -86,6 +86,62 @@
 				"module": "generic-text",
 				"subHeader": "The Finished Product",
 				"content": "Now that I had the visual langauge done, it was time to build the site. We were given the base code and it was our job to style it according to our Style Tile. It was interesting to see how different each student's page was despite having the same base code. It was the first time we worked with a large file system so it was a bit of a learning curve to get used to working with a robust website. However, this set the foundation for all future sites, including this one with.<br><br><a href='https://peprojects.dev/alpha-4/john/projects/layout-theme-challenge/index.php'>Visit the Site here!</a>"
+			}
+		]
+	},
+	{
+		"title1": "Portfolio",
+		"title2": "Site",
+		"slug": "portfolio-site",
+		"intro": "The design process of this site",
+		"url": "https://peprojects.dev/alpha-4/john/",
+		"image":"",
+		"featured": false,
+		"languages": [
+			"HTML", "CSS", "PHP"
+		], 
+
+		"sections": [
+			{	
+				"module": "generic-text",
+				"subHeader": "The Content",
+				"content": "First we wrote out the goals and content for our site. What do we want to achieve with our personal site and what are it’s intentions? Mine of course is to showcase my work and ultimately help me get a job as Web Developer.<br><br>We need to know what we’re going to fill our site with before we start building it. For some reason this was a hard concept for me to grasp. It felt like I was furnishing a house that hadn’t been built yet. When building out a site, it’s easier to build when we know the size and amount of content we’re building for. For example what will the header titles be? Will it be a couple long words or a bunch of short words? Once we have a good idea of the content, then we can start designing with intention."
+			},
+			{
+				"module": "figure",
+				"filePath": "images/luxury-streetwear-style-tile.png",
+				"altText":	"Luxury streetwear moodboard from researched sites.",
+				"figureHeading": "Moodboard",
+				"caption": "The visual language of my site represented through a Style Tile."
+			},
+			{	
+				"module": "generic-text",
+				"subHeader": "Content In Context",
+				"content": "Next we started creating some design with a bit of content. This helped us visualize how we wanted the content to sit on the page or modules. We’re able to explore different ways to display the content. I focused primarily on the Project Cards. I had a pretty good idea of how I wanted to display the info so I mocked up how it might appear on mobile and desktop. "
+			},
+			{
+				"module": "figure",
+				"filePath": "images/luxury-streetwear/luxury-streetwear-mood-board.png",
+				"altText":	"Luxury streetwear moodboard from researched sites.",
+				"figureHeading": "Moodboard",
+				"caption": "The moodboard where I pulled visual treatments from the researched sites."
+			},
+			{	
+				"module": "generic-text",
+				"subHeader": "Type Detail",
+				"content": "We spent an entire day playing with type design. First we picked out a few font styles we would potentially use. I ended up with a sans-serif font called, Rubik. I like it because it has a lot of different weights to choose from and it has a business casual feel. It’s straight, but the edges are slightly rounded, which makes it a bit more approachable than something like Arial. <br><br>Once we figured out our font style, we tried different ways to display a header and paragraph text. I experimented with a lot of different styles and variations of line-spacing, column widths, font weights and header shapes. I tried everything from a header that sat on a wavy line to one that runs along a corner. It was fun to see every different style and combination, but I ended up going with the regular horizontal header over a block of text."
+			},
+			{
+				"module": "figure",
+				"filePath": "images/luxury-streetwear/luxury-streetwear-style-tile.png",
+				"altText":	"Luxury streetwear moodboard from researched sites.",
+				"figureHeading": "Moodboard",
+				"caption": "The visual language of my site represented through a Style Tile."
+			},
+			{	
+				"module": "generic-text",
+				"subHeader": "Layout on the Grid",
+				"content": "Now it was time to create mockups of our site in Affinity Designer. When the options are limitless, it’s hard for me to start. I knew I didn’t want a traditional top down site with a header, main body and footer. While I still have those three components, I wanted it to be “different” than your normal site you see 1000 times a day. I was actually inspired by the very first part of this site https://www.wokine.com/en/. I liked how the page was divided. I decided I would incorporate that divide throughout my portfolio. I went through numerous iterations of each page with different fonts (yes, I changed my mind on it a few times).<br><br>Once I felt good about my layout it was time to actually build it…but how? I really struggled with how I was going to build it because of my unique layout (unique to me at least). I went into codepen to try to figure out how I was going to get this almost-two-third, split background using grid. I tried several different ways, but none of them achieved what I wanted. I was actually close to giving up and just switching to a traditional layout, but after talking to my mentor, Derek he let me know I can do whatever I want to make it work. Ah ha! I was trying to build my unorthodox layout using the traditional blueprint we’ve been taught. Once I let that go, I was able to get a bit more creative with my solution and build my layout exactly how I envisioned it!"
 			}
 		]
 	}
