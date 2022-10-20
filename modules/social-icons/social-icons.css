@@ -1,5 +1,6 @@
 social-icons {
 	display: block;
+	margin-top: 20px;
 }
 
 social-icons ul {
@@ -7,6 +8,9 @@ social-icons ul {
 	flex-direction: row;
 	justify-content: center;
 	gap: 40px;
+}
+social-icons svg {
+	max-width: clamp(30px, 4vw, 40px)
 }
 
 .section  {
