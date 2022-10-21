@@ -56,8 +56,7 @@ if ( isset($_POST['submitted']) ) {
 }
 //answer = principal(1 + annual interest rate * years)
 $percentInterest = $interest * .01;
-$percentFormatted = number_format($percentInterest, 2);
-$answer = $principal * (1 + $percentFormatted * $years);
+$answer = $principal * (1 + ($percentInterest * $years));
 $answerFormatted = number_format($answer, 2);
 ?>
 
