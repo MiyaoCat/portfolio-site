@@ -1,7 +1,4 @@
 <?php
-
-
-
 //initialize & check if form submitted
 $subtotal = 0;
 $state = "";
@@ -18,7 +15,6 @@ if ($submittedPOST) {
 $subtotal = round($_POST['subtotal'], 2);
 $state = $_POST['state'];
 
-
 //if the state is WI
 if ($state == "WI") {
 	// echo "<p>The subtotal is \$$subtotal.</p>";
@@ -34,26 +30,24 @@ if ($state == "WI") {
 	//show total
 
 $total = $tax + $subtotal;
-$totalOutput = "$taxOutput <p>The total is \$" . number_format($total, 2) . ".</p>";
+$totalOutput = "$taxOutput <p>The Grand total is \$" . number_format($total, 2) . ".</p>";
 }
 ?>
 
-
-
-
-
 <form method="POST">
-<h1 class="loud-voice">Exercise- Tax Calculator</h1>
-<h2>Let us know the amount of your order, and what state you live in. We'll let you know the amount of state sales tax (WI only) and your grand total.</h2>
-	<div class="field">
-		<label for="">What is the order amount?</label>
+	<h2 class="loud-voice">Tip Calculator</h2>
+
+	<p class="instructions normal-voice">Let us know the amount of your order, and what state you live in. We'll let you know the amount of state sales tax (WI only) and your grand total.</p>
+
+	<!-- <div class="field"> -->
+		<label for="subtotal">What is the order amount?</label>
 		<input type="number" name="subtotal" value="<?=$subtotal?>" min=0 required>
-	</div>
+	<!-- </div> -->
 	
-	<div class="field">
-		<label for="">What is the state?</label>
+	<!-- <div class="field"> -->
+		<label for="state">What is the state?</label>
 		<input type="text" name="state" value="<?=$state?>"required>
-	</div>
+	<!-- </div> -->
 
 	<button type="submit" name="submitted">
 		Submit
@@ -61,10 +55,11 @@ $totalOutput = "$taxOutput <p>The total is \$" . number_format($total, 2) . ".</
 
 </form>
 
+<?php if ($submittedPOST) { ?>
 <output>
 	<?=$totalOutput?>
 </output>
-
+<?php } ?>
 
 <?php if ($submittedPOST) { ?>
 <div class="array">
