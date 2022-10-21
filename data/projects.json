@@ -17,7 +17,7 @@
 		"sections": [
 			{
 				"module": "generic-text",
-				"content": "If you're on a computer, try horizontally expanding and contracting your window to see how the modules <em>respond</em> to the window size :)<br><br>View the site <a href='https://peprojects.dev/alpha-4/john/layout-challenges/index.php'>here</a>"
+				"content": "This is a colelction of responsive modules we've built throughout the course. They're common modules you see on many websites and employ either flexbox, grid or both. If you're on a computer, try expanding and contracting your window to see how the modules <em>respond</em> to the window size :)<br><br>View the modules <a href='https://peprojects.dev/alpha-4/john/layout-challenges/index.php' target='_blank'>here</a>"
 			}
 		]
 	},
