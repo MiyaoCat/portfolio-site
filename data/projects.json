@@ -55,6 +55,7 @@
 		"sections": [
 			{	
 				"module": "generic-text",
+				"class": "luxury-streetwear",
 				"subHeader": "The Challenge",
 				"content": "We were tasked to emulate a website in an industry of our choice. The goal was to make it look it <i>belonged</i> and indistinguishable from another site within that industry. We've always been told to build something toward a field we want to work in. Currently my interests lie in sports, fashion and web3 so I chose \"Luxury Streetwear\" to emulate as their sites were the most interesting. They had some unique layouts and I liked their clean, modern aesthetics."
 			},
@@ -109,10 +110,10 @@
 			},
 			{
 				"module": "figure",
-				"filePath": "images/luxury-streetwear-style-tile.png",
+				"filePath": "images/portfolio/outline.png",
 				"altText":	"Luxury streetwear moodboard from researched sites.",
-				"figureHeading": "Moodboard",
-				"caption": "The visual language of my site represented through a Style Tile."
+				"figureHeading": "Style Tile",
+				"caption": "Writing out the content of my portfolio."
 			},
 			{	
 				"module": "generic-text",
@@ -121,7 +122,7 @@
 			},
 			{
 				"module": "figure",
-				"filePath": "images/luxury-streetwear/luxury-streetwear-mood-board.png",
+				"filePath": "images/portfolio/context.png",
 				"altText":	"Luxury streetwear moodboard from researched sites.",
 				"figureHeading": "Moodboard",
 				"caption": "The moodboard where I pulled visual treatments from the researched sites."
@@ -133,7 +134,7 @@
 			},
 			{
 				"module": "figure",
-				"filePath": "images/luxury-streetwear/luxury-streetwear-style-tile.png",
+				"filePath": "images/portfolio/personal-site-type-design.png",
 				"altText":	"Luxury streetwear moodboard from researched sites.",
 				"figureHeading": "Moodboard",
 				"caption": "The visual language of my site represented through a Style Tile."
@@ -142,6 +143,13 @@
 				"module": "generic-text",
 				"subHeader": "Layout on the Grid",
 				"content": "Now it was time to create mockups of our site in Affinity Designer. When the options are limitless, it’s hard for me to start. I knew I didn’t want a traditional top down site with a header, main body and footer. While I still have those three components, I wanted it to be “different” than your normal site you see 1000 times a day. I was actually inspired by the very first part of this site https://www.wokine.com/en/. I liked how the page was divided. I decided I would incorporate that divide throughout my portfolio. I went through numerous iterations of each page with different fonts (yes, I changed my mind on it a few times).<br><br>Once I felt good about my layout it was time to actually build it…but how? I really struggled with how I was going to build it because of my unique layout (unique to me at least). I went into codepen to try to figure out how I was going to get this almost-two-third, split background using grid. I tried several different ways, but none of them achieved what I wanted. I was actually close to giving up and just switching to a traditional layout, but after talking to my mentor, Derek he let me know I can do whatever I want to make it work. Ah ha! I was trying to build my unorthodox layout using the traditional blueprint we’ve been taught. Once I let that go, I was able to get a bit more creative with my solution and build my layout exactly how I envisioned it!"
+			},
+			{
+				"module": "figure",
+				"filePath": "images/portfolio/layout-on-grid.png",
+				"altText":	"Luxury streetwear moodboard from researched sites.",
+				"figureHeading": "Moodboard",
+				"caption": "The visual language of my site represented through a Style Tile."
 			}
 		]
 	}

@@ -11,6 +11,7 @@
 	$title = $caseStudy["title1"];
 	$intro = $caseStudy["intro"];
 	$url = $caseStudy["url"];
+	$slug = $caseStudy["slug"];
 ?>
 
 
@@ -18,12 +19,12 @@
 	$caseStudyModules = $caseStudy["sections"];
 	
 	foreach ($caseStudyModules as $CaseStudyModule) {
-	$module = $CaseStudyModule["module"];
-	// $content = $CaseStudymodule["content"];
+		$module = $CaseStudyModule["module"];
+		// $content = $CaseStudymodule["content"];
 ?>
-	<section class="<?=$module?>">
-	<?php include("modules/$module/$module.php"); ?>
-	</section>
+		<section class="<?=$slug?> <?=$module?>">
+			<?php include("modules/$module/$module.php"); ?>
+		</section>
 <?php } ?>
 
 

@@ -13,36 +13,61 @@
 	flex-direction: column;
 	margin-top: 20px;
 }
-.project .generic-text:nth-of-type(2) {
+
+
+/*- - LUXURY-STREETWEAR - - - - - - - - - - - - - */
+.luxury-streetwear.generic-text:nth-of-type(2) {
 	grid-row: 4;
 }
 
-.project .figure img {
-	/*border: 3px solid var(--trim);*/
-}
-.project .figure {
-	grid-row: 5;
-	grid-column: 2 / 14;
-}
-
-.project .figure:nth-of-type(3) {
+.luxury-streetwear.figure:nth-of-type(3) {
 	grid-row: 5;
 }
 
-.project .generic-text:nth-of-type(3) {
+.luxury-streetwear.generic-text:nth-of-type(3) {
 	grid-row: 6;
 }
 
-.project .generic-text:nth-of-type(4) {
+.luxury-streetwear.generic-text:nth-of-type(4) {
 	grid-row: 7;
 }
 
-.project .figure:nth-of-type(5) {
+.luxury-streetwear.figure:nth-of-type(5) {
 	grid-row: 8;
 }
-.project .generic-text:nth-of-type(6) {
+.luxury-streetwear.generic-text:nth-of-type(6) {
 	grid-row: 9;
 }
+
+/*- - PORTFOLIO-SITE - - - - - - - - - - - - - */
+.portfolio-site:nth-of-type(2) {
+	grid-row: 4;
+}
+
+.portfolio-site:nth-of-type(3) {
+	grid-row: 5;
+}
+
+.portfolio-site:nth-of-type(4) {
+	grid-row: 6;
+}
+
+.portfolio-site:nth-of-type(5) {
+	grid-row: 7;
+}
+
+.portfolio-site:nth-of-type(6) {
+	grid-row: 8;
+}
+
+.portfolio-site:nth-of-type(7) {
+	grid-row: 9;
+}
+
+.portfolio-site:nth-of-type(8) {
+	grid-row: 10;
+}
+
 .project image-caption {
 	display: block;
 	text-align: center;
