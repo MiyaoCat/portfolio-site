@@ -32,12 +32,7 @@
 
 /* - - SUBMIT BUTTON - - */
 .exercise button {
-	/*border: 3px solid var(--trim);
-	text-align: center;
-	padding: 5px;
-	margin: 10px 0;
-	box-shadow: 5px 5px var(--contrast);
-	background: var(--background);*/
+	margin-top: 20px;
 	min-width: 150px;
 	max-width: 30%;
 }
@@ -56,11 +51,37 @@
 output {
 	grid-row: 7;
 	grid-column: 2 /14;
+	margin-top: 20px;
+	border: 3px solid var(--trim);
+	background: var(--contrast);
+	padding: 5px;
 }
 
+.warning {
+	color: red;
+	font-size: ;
+}
+
+quantity, price {
+	display: block;
+}
+
+quantity + price {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+price + quantity {
+	margin: 20px;
+}
 .exercise form input[type="radio"] {
    border: 3px solid black;
    cursor: pointer;
+}
+@media (min-width: 550px) {
+	.exercise heading, .exercise .instructions, form, output {
+		grid-column: 2 / 11;
+	}
 }
 
 @media (min-width: 700px) {
@@ -77,7 +98,11 @@ output {
 	}
 
 	output {
-		grid-row: 4 / span 3;
+		grid-row: 5;
 		grid-column: 10 / 14;
+		margin-top: 0;
+		max-height: 50%;
+		/*align-self: end;*/
+
 	}
 }

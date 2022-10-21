@@ -41,7 +41,7 @@
 					if ($quantity > 0 ) {
 						$hasQuantity = true;
 					} else {
-						$valueError = "If you don't buy anything, you don't owe anything. Enter a quantity!";
+						$valueError = "<p class='calm-voice warning'>If you don't buy anything, you don't owe anything. Enter a quantity!</p>";
 					}
 				}
 
@@ -55,7 +55,7 @@
 					if ($price > 0) {
 						$hasPrice = true;
 					} else {
-						$priceValueError = "If it doesn't have a price, then it's free!";
+						$priceValueError = "<p class='calm-voice warning'>If it doesn't have a price, then it's free!</p>";
 					}
 					
 				}
@@ -71,7 +71,7 @@
 					if ($quantity2 > 0 ) {
 						$hasQuantity2 = true;
 					} else {
-						$valueError2 = "If you don't buy anything, you don't owe anything. Enter a quantity!";
+						$valueError2 = "<p class='calm-voice warning'>If you don't buy anything, you don't owe anything. Enter a quantity!</p>";
 					}
 				}
 
@@ -86,7 +86,7 @@
 					if ($price2 > 0) {
 						$hasPrice2 = true;
 					} else {
-						$priceValueError2 = "If it doesn't have a price, then it's free!";
+						$priceValueError2 = "<p class='calm-voice warning'>If it doesn't have a price, then it's free!</p>";
 					}					
 				}
 
@@ -101,13 +101,12 @@
 					if ($quantity3 > 0 ) {
 						$hasquantity3 = true;
 					} else {
-						$valueError3 = "If you don't buy anything, you don't owe anything. Enter a quantity!";
+						$valueError3 = "<p class='calm-voice warning'>If you don't buy anything, you don't owe anything. Enter a quantity!</p>";
 					}
 				}
 
 				if ( isset($_POST['price3']) ) {
 					$price3 = $_POST['price3'];
-
 
 					if ( empty($price3) ) {
 						$price3 = 0;
@@ -116,13 +115,10 @@
 					if ($price3 > 0) {
 						$hasprice3 = true;
 					} else {
-						$priceValueError3 = "If it doesn't have a price, then it's free!";
+						$priceValueError3 = "<p class='calm-voice warning'>If it doesn't have a price, then it's free!</p>";
 					}
 					
 				}
-
-				
-				
 
 				//subtotal (add all quantities)
 				$subTotal = ($quantity * $price) + ($quantity2 * $price2) + ($quantity3 * $price3);
@@ -145,8 +141,6 @@
 				//grand total
 				$grandTotal= number_format($subTotal + $tax, 2);
 			}	
-
-
 			?>
 			
 			 <form method="POST">
@@ -160,12 +154,12 @@
 							min="0"
 							placeholder="0"
 							label="write your number"
-							>
+						>
 
 						<?php if($valueError) {?>
-						<error>
-							<p class="error normal-voice"><?=$valueError?></p>
-						</error>
+							<error>
+								<p class="error normal-voice"><?=$valueError?></p>
+							</error>
 						<?php } ?>	
 					</quantity>		
 
@@ -263,7 +257,7 @@
 
 					</price>
 
-					<button type="submit" name="submitted">Submit</button>
+					
 				</div>
 
 				<?php 
@@ -271,7 +265,7 @@
 					$formattedGrandTotal = 0;
 				 ?>
 
-			
+			<button type="submit" name="submitted">Submit</button>
 
 			</form>
 
@@ -307,31 +301,6 @@
 
 				
 			</form-wrap>
-	<!-- 			<total>
-					<p> Item 1 quantity entered: <?=$quantity?></p> 
-					<p> Item 1 price: $<?=$price?>. </p>
-					<p> Item 1 sub-total: <?php echo ($quantity * $price) ?></p>
-				</total>				
-
-				<total>		
-					<p> Item 2 quantity entered: <?=$quantity2?></p> 
-					<p> Item 2 price: $<?=$price2?>. </p>
-					<p> Item 2 sub-total: <?php echo ($quantity2 * $price2) ?></p>
-				</total>	
-
-				<total>
-					<p> Item 3 quantity entered: <?=$quantity3?></p> 
-					<p> Item 3 price: $<?=$price3?>. </p>
-					<p> Item 3 sub-total: <?php echo ($quantity3 * $price3) ?></p>
-				</total>	
-
-				<total>
-					<p>Tax rate: <?=$formattedTax?></p>
-				</total>
-
-				<total>
-					<p> Grand Total: <?=$formattedGrandTotal?></p>
-				</total>	 -->
 
 			</output>
 			<?php } ?>

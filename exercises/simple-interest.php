@@ -21,7 +21,7 @@ if ( isset($_POST['submitted']) ) {
 	} if ($principal > 0) {
 		$hasPrincipal = true;
 	} else {
-		$priMessage = "You're broke!";
+		$priMessage = "<p class='calm-voice warning'>You're broke!";
 	}
 
 	if ( isset($_POST['interest']) ) {
@@ -29,13 +29,13 @@ if ( isset($_POST['submitted']) ) {
 	} if ($interest > 0) {
 		$hasinterest = true;
 	} if ($interest <= 3 AND $interest > 0) {
-		$intMessage = "Put your money elsewhere";
+		$intMessage = "<p class='calm-voice warning'>Put your money elsewhere</p>";
 	} if ($interest > 3 AND $interest < 7)	{
-		$intMessage = "You better live a long time!";
+		$intMessage = "Y<p class='calm-voice warning'>ou better live a long time!</p>";
 	} if ($interest >= 7 AND $interest < 10) {
-		$intMessage = "Niiice! Your Dad will be proud!";
+		$intMessage = "<p class='calm-voice warning'>Niiice! Your Dad will be proud!</p>";
 	}  elseif ($interest >= 10) {
-		$intMessage = "Sounds fishy...";
+		$intMessage = "<p class='calm-voice warning'>Sounds fishy...</p>";
 	}
 
 	if ( isset($_POST['years']) ) {
@@ -43,15 +43,15 @@ if ( isset($_POST['submitted']) ) {
 	} if ($years > 0) {
 		$hasYears = true;
 	} if ($years <= 5) {
-		$yrMessage = "What's the point?";
+		$yrMessage = "<p class='calm-voice warning'>What's the point?</p>";
 	} if ($years > 5 AND $years <= 10) {
-		$yrMessage = "That might work";
+		$yrMessage = "<p class='calm-voice warning'>That might work</p>";
 	} if ($years > 10 AND $years <= 20) {
-		$yrMessage = "You'll see some returns";
+		$yrMessage = "<p class='calm-voice warning'>You'll see some returns</p>";
 	} if ($years > 20 AND $years <= 30) {
-		$yrMessage = "You'll be able buy somethin' big!";
+		$yrMessage = "<p class='calm-voice warning'>You'll be able buy somethin' big!</p>";
 	} elseif ($years > 30) {
-		$yrMessage = "That'll be a nice egg nest";
+		$yrMessage = "<p class='calm-voice warning'>That'll be a nice egg nest</p>";
 	}
 }
 //answer = principal(1 + annual interest rate * years)
