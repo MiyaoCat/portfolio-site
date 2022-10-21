@@ -1,27 +1,27 @@
-project-card {
+.projects project-card {
 	grid-column: 2 / 14;
 }
 
-project-card.layout-garden {
+.projects project-card.layout-garden {
 	grid-row: 4;
 }
 
-project-card.exercises {
+.projects project-card.exercises {
 	grid-row: 5;
 	gap: 10px;
 }
 
-project-card.luxury-streetwear {
+.projects project-card.luxury-streetwear {
 	grid-row: 6;
 }
 
-project-card.portfolio-site {
+.projects project-card.portfolio-site {
 	grid-row: 7;
 	gap: 10px;
 }
 
 @media (min-width: 700px) {
-	project-card {
+	.projects project-card {
 		grid-column: 4 / 10;
 	}
 }

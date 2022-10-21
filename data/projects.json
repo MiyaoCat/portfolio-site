@@ -17,7 +17,7 @@
 		"sections": [
 			{
 				"module": "generic-text",
-				"content": "If you're on a computer, try horizontally expanding and contracting your window to see how the modules <em>respond</em> to the window size :)"
+				"content": "If you're on a computer, try horizontally expanding and contracting your window to see how the modules <em>respond</em> to the window size :)<br><br>View the site <a href='https://peprojects.dev/alpha-4/john/layout-challenges/index.php'>here</a>"
 			}
 		]
 	},
