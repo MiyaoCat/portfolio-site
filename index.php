@@ -15,7 +15,9 @@
 		$pageData = json_decode($thePageDataJson, true);
 	}
 
-	$intro = $pageData["intro"];
+	if ( isset($pageData["intro"]) ) {
+		$intro = $pageData["intro"];
+	} 
 ?>
 
 <?php include("partials/header/header.php"); ?>
