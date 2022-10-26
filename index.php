@@ -14,6 +14,8 @@
 		$thePageDataJson = file_get_contents("data/page-data/$page.json");
 		$pageData = json_decode($thePageDataJson, true);
 	}
+
+	$intro = $pageData["intro"];
 ?>
 
 <?php include("partials/header/header.php"); ?>
