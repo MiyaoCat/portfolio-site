@@ -25,6 +25,10 @@ html {
 	--standout: hsl(360, 100%, 39%);
 
 	--link: red;
+
+	--tilt-small: 3deg;
+	--tilt: 4deg;
+	--tilt-large: 6deg;
 }
 
 @media (prefers-color-scheme: dark) {
