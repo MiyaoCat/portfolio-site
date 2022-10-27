@@ -1,3 +1,18 @@
+/* - - - - PAGE HEADER- - - - - - - - - - - - */
+.exercises.heading .title1 {
+	transform: translateY(-.5em) rotate(-4deg);
+	transition: .2s ease-in-out;
+}
+
+.exercises.heading .title1:hover {
+	transform: translateX(0) translateY(0) rotate(0);
+	transition: .2s ease-in-out;
+}
+
+.exercises.heading .title2 {
+	transform: translateX(4em);
+}
+
 form-exercise {
 	grid-row: 3;
 	grid-column: 2 / 14;
@@ -63,6 +78,19 @@ form-exercise .exercises li:hover {
 }
 
 @media (min-width: 700px) {
+	/* - - PAGE HEADER - - */
+	.exercises.heading .title1 {
+		transform: translateX(-75%) translateY(1em) rotate(-4deg);
+	}
+	.exercises.heading .title1:hover {
+		transform: translateX(-75%) rotate(0);
+		transition: .2s ease-in-out;
+	}
+	
+	.exercises.heading .title2 {
+		transform: translateX(0);
+	}
+
 	form-exercise {
 		margin-right: 20px;
 	}
