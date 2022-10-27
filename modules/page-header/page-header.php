@@ -3,6 +3,7 @@
 
 		$title1 = $pageData["title1"] ?? "Hello,"; 
 		$title2 = $pageData["title2"] ?? "World!"; 
+		$slug = $pageData["slug"];
 
 	} elseif ($page == "project") {
 			$json = file_get_contents("data/projects.json");
@@ -12,6 +13,7 @@
 				if ($caseStudies["slug"] == $_GET["slug"]) {
 					$title1 = $caseStudies["title1"];
 					$title2 = $caseStudies["title2"];
+					$slug = $caseStudies["slug"];
 				}
 			}
 		}	
@@ -22,6 +24,7 @@
 
 			$title1 = $exercises["title1"];
 			$title2 = $exercises["title2"];
+			$slug = $exercises["slug"];
 		} 
 
 		elseif ($page == "exercise") {
@@ -31,15 +34,17 @@
 			foreach ($formExercises as $forms) {
 				foreach ($forms["forms"] as $form) {
 					if ($form["slug"] == $_GET["slug"]) {
+						
 						$title1 = $form["title1"];
 						$title2 = $form["title2"];
+						$slug = $form["slug"];
 					}
 				}	
 			}
 		}
 ?>
 
-<div class="heading">
+<div class="<?=$slug?> heading">
 
 	<div class="title1">
 		<h1 class="screaming-voice"><?=$title1?></h1>

@@ -18,6 +18,20 @@
 	grid-column: 2 / 14;
 }
 /*- - LUXURY-STREETWEAR - - - - - - - - - - - - - */
+.page-header .luxury-streetwear .title1 {
+	transform: translateX(0) rotate(-3deg);
+	transition: .2s ease-in-out;
+}
+
+.page-header .luxury-streetwear .title1:hover {
+	transform: translateX(0) rotate(0);
+	transition: .2s ease-in-out;
+}
+
+.page-header .luxury-streetwear .title2 {
+	transform: translateX(7em);
+}
+
 .luxury-streetwear.generic-text:nth-of-type(2) {
 	grid-row: 4;
 }
