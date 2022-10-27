@@ -12,12 +12,13 @@ project-card + project-card {
 }
 
 project-card .project-details * {
-	margin: 2px 0;
+	margin: 5px 0;
 }
 
-project-card .project-card.intro {
+project-card .intro {
 	display: grid;
 	align-items: space-between;
+	margin-top: 10px;
 }
 
 project-card .project-title {

@@ -14,10 +14,8 @@
 }
 
 form-exercise {
-	grid-row: 3;
 	grid-column: 2 / 14;
-	margin-top: 15px;
-	margin-left: 5px;
+	margin: 15px 20px 0 5px;
 	max-width: 200px;
 }
 
@@ -40,11 +38,6 @@ form-exercise .exercises li {
 	grid-row: 6;
 	grid-column: 10 / 14;
 }
-@media (prefers-color-scheme: dark) {
-	form-exercise .exercises li {
-		box-shadow: 5px 5px var(--ink);
-	}
-}
 
 form-exercise .exercises li:hover {
 	transform: translateX(5px) translateY(5px);
@@ -53,26 +46,26 @@ form-exercise .exercises li:hover {
 }
 
 .calculations {
-	grid-row: 3;
-}
-
-.input-output {
 	grid-row: 4;
 }
 
-.decision-making {
+.input-output {
 	grid-row: 5;
+}
+
+.decision-making {
+	grid-row: 6;
 }
 
 @media (min-width: 500px) {
 	.input-output {
-		grid-row: 3;
 		grid-column: 8 / 14;
 	}
 }
 
 @media (min-width: 600px) {
 	.input-output {
+		grid-row: 4;
 		grid-column: 7 / 14;
 	}
 }
@@ -91,10 +84,6 @@ form-exercise .exercises li:hover {
 		transform: translateX(0);
 	}
 
-	form-exercise {
-		margin-right: 20px;
-	}
-
 	.calculations, .input-output {
 		margin-top: 20px;
 	}
@@ -104,10 +93,16 @@ form-exercise .exercises li:hover {
 	}
 
 	.decision-making {
-		grid-row: 4;
+		grid-row: 5;
 	}
 
 	.decision-making, .input-output{
 		grid-column: 7 / 10;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	form-exercise .exercises li {
+		box-shadow: 5px 5px var(--ink);
 	}
 }

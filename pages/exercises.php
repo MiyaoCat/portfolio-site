@@ -3,10 +3,9 @@
 	$exercises = json_decode($json, true);
 ?>
 
-
 <?php 
 	foreach ($exercises as $exercise) { 
-		// if ($exercise["type"] == "calculations") {
+		if ($exercise["type"] !== "generic-text") {
 			$type = $exercise["type"];
 			$title = $exercise["title"];
 ?>
@@ -19,7 +18,7 @@
 					<ol class="exercises">
 						<li>
 							<a href="?page=exercise&slug=<?=$slug?>" class="normal-voice">
-								<h3 class="normal-voice"><?=$form["title1"]?> <?=$form["title2"]?></h2>
+								<h3 class="normal-voice"><?=$form["title1"]?> <?=$form["title2"]?></h3>
 							</a>
 						</li>
 					</ol>
@@ -27,5 +26,9 @@
 				<?php } ?>	
 
 			</form-exercise>
-	
-	<?php } ?>
+		<?php } 
+			else {
+		?>
+			<section class="generic-text"><?=$exercise["content"]?></section>
+			<?php } ?>
+<?php } ?>
