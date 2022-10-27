@@ -6,7 +6,7 @@
 
 		"title1": "Layout",
 		"title2": "Garden",
-		"intro": "Not really a project, but shows off a bunch of responsive modules that are common on modern websites",
+		"intro": "Not necessarily a project, rather a collection of responsive modules I've built that are common on modern websites",
 		"url": "https://peprojects.dev/alpha-4/john/layout-challenges/index.php",
 		"image": "images/projects/layouts.png",
 		"featured": true,
@@ -18,7 +18,7 @@
 			{
 				"module": "generic-text",
 				"subHeader": "Modules",
-				"content": "This is a colelction of responsive modules we've built throughout the course. They're common modules you see on many websites and employ either flexbox, grid or both. If you're on a computer, try expanding and contracting your window to see how the modules <em>respond</em> to the window size :)<br><br>View the modules <a href='https://peprojects.dev/alpha-4/john/layout-challenges/index.php' target='_blank'>here</a>"
+				"content": "This is a collection of responsive modules we've built throughout the course. They're common modules you see on many websites and employ either flexbox, grid or both. If you're on a computer, try expanding and contracting your window to see how the modules <em>respond</em> to the window size :)<br><br>View the modules <a href='https://peprojects.dev/alpha-4/john/layout-challenges/index.php' target='_blank'>here</a>"
 			}
 		]
 	},
@@ -26,7 +26,7 @@
 		"title1": "Form",
 		"title2": "Exercises",
 		"slug": "exercises",
-		"intro": "We created a bunch of forms using the book, Exercises for Programmers. It gave us the opportunity to think through functions and create programs with PHP and Javascript.",
+		"intro": "A variety of forms derived from the book, Exercises for Programmers by Brian Hogan.",
 		"url": "https://peprojects.dev/alpha-4/john/layout-challenges/index.php",
 		"image": "images/projects/forms2.jpg",
 		"featured": false,
@@ -45,7 +45,7 @@
 		"title1": "Luxury",
 		"title2": "Streetwear",
 		"slug": "luxury-streetwear",
-		"intro": "We were given a base code to style and emulate an industry of our choice. I chose, 'Luxury Streetwear' for my project.",
+		"intro": "My attempt at emulating a website in the \"Luxury Streetwear\" industry.",
 		"url": "https://peprojects.dev/alpha-4/john/projects/layout-theme-challenge/index.php",
 		"image": "images/projects/fashion-site.png",
 		"featured": true,
@@ -95,7 +95,7 @@
 		"title1": "Portfolio",
 		"title2": "Site",
 		"slug": "portfolio-site",
-		"intro": "The design process of this site",
+		"intro": "I walk you through the process and struggles of building this site.",
 		"url": "https://peprojects.dev/alpha-4/john/",
 		"image":"images/projects/portfolio.png",
 		"featured": false,
