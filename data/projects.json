@@ -6,7 +6,7 @@
 
 		"title1": "Layout",
 		"title2": "Garden",
-		"intro": "Not necessarily a project, rather a collection of responsive modules I've built that are common on modern websites",
+		"intro": "Not necessarily a project, rather a collection of responsive modules I've built that are common on modern websites.",
 		"url": "https://peprojects.dev/alpha-4/john/layout-challenges/index.php",
 		"image": "images/projects/layouts.png",
 		"featured": true,
@@ -37,7 +37,7 @@
 		"sections": [
 			{
 				"module": "generic-text",
-				"content": "Click on a form!"
+				"content": "We worked through the book, Exercises for Programmers to build out each form. This book is great because it's language agnostic and tests your ability to use functions and logic to create each form. I think it's great practive when learning any new language. <br><br> Now click on a form and test them out!"
 			}
 		]
 	},
