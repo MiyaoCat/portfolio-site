@@ -1,10 +1,16 @@
-/* - - PAGE HEADER - - */
+/* - - PAGE HEADER - - - - - - - - - - - - - - */
 .contact .page-header .title1 {
-	transform: translateX(0) rotate(-3deg);
+	transform: translateX(0) rotate(-4deg);
+	transition: .2s ease-in-out;
+}
+
+.contact .page-header .title1:hover {
+	transform: translateX(0) rotate(0);
+	transition: .2s ease-in-out;
 }
 
 .contact .page-header .title2 {
-	transform: translateX(12em);
+	transform: translateX(9em);
 }
 
 .contact .email-form {
@@ -14,23 +20,30 @@
 }
 
 @media (min-width: 550px) {
+	.contact .page-header .title1 {
+		transform: translateY(-5px) rotate(-4deg);
+	}
+
 	.contact .page-header .title2 {
-		transform: translateX(14em);
+		transform: translateX(clamp(9em, 30vw, 13em));
 	}
 }
 
 @media (min-width: 630px) {
 	.contact .page-header .title2 {
-		transform: translateX(15em);
+		/*transform: translateX(15em);*/
 	}
 }
 
 
 @media (min-width: 700px) {
-	/* - - PAGE HEADER - - */
-
+	/* - - PAGE HEADER - - - - - - - - - - - - - - */
 	.contact .page-header .title1 {
-		transform: translateX(-15%) rotate(-6deg);
+		transform: translateX(-15%) rotate(-4deg);
+	}
+
+	.contact .page-header .title1:hover {
+		transform: translateX(-15%) rotate(0);
 	}
 
 	.contact .page-header .title2 {

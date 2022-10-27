@@ -4,9 +4,10 @@
 	transition: .2s ease-in-out;
 }
 .home .page-header .title1:hover {
-		transform: translateX(3%) rotate(0);
-		transition: .2s ease-in-out;
-	}
+	transform: translateX(3%) rotate(0);
+	transition: .2s ease-in-out;
+}
+
 .home .page-header .title2 {
 	transform: translateX(6em);
 }

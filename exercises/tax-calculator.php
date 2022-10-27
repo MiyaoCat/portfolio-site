@@ -28,16 +28,12 @@
 		$order = $_POST["order-amount"];
 		$state = $_POST["state-selected"];
 
-		if ($state == "wi" OR "WI" OR "Wi" OR "iW" OR "Wisconsin" OR "wisconsin" OR "WISCONSIN") {
-			$totalWI = $order * 1.055;
-
-			echo "<output>" . $totalWI . "</output>";
-		}
+		if ($state == "wi" OR "WI" OR "Wi" OR "iW" OR "Wisconsin" OR "wisconsin" OR "WISCONSIN") ;
 
 // 		if ($state !== "wi" OR "WI" OR "Wi" OR "iW" OR "Wisconsin" OR "wisconsin" OR "WISCONSIN") {
 // 			echo "<output> Your total is " . $order . "</output>";
 // 		}
-	} echo $order;
+	} 
 
 ?>
 
@@ -62,10 +58,13 @@
 	<button type="submit" name="submitted">Submit</button>
 </form>
 
-<output>
+<?php  
+	if ( isset($_POST["submitted"]) ) {
+?>
+	<output>
+		<?=$totalWI?>
+	</output>
 
-</output>
-
-
+<?php } ?>
 
 

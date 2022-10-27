@@ -1,21 +1,21 @@
 /* - - PAGE HEADER - - */
 .about .page-header .title1 {
 	transform: translateX(0) rotate(-3deg);
+	transition: .2s ease-in-out;
+}
+
+.about .page-header .title1:hover {
+	transform: translateX(0) rotate(0);
+	transition: .2s ease-in-out;
 }
 
 .about .page-header .title2 {
-	transform: translateX(8em);
+	transform: translateX(7em);
 }
 
 @media (min-width: 550px) {
 	.about .page-header .title2 {
-		transform: translateX(10em);
-	}
-}
-
-@media (min-width: 630px) {
-	.about .page-header .title2 {
-		transform: translateX(12em);
+		transform: translateX(22%);
 	}
 }
 
@@ -30,10 +30,13 @@
 
 
 @media (min-width: 700px) {
-
 	/* - - PAGE HEADER - - */
 	.about .page-header .title1 {
 		transform: translateX(-3em) rotate(-3deg);
+	}
+
+	.about .page-header .title1:hover {
+		transform: translateX(-3em) rotate(0);
 	}
 
 	.about .page-header .title2 {
