@@ -26,9 +26,9 @@ html {
 
 	--link: red;
 
-	--tilt-small: 3deg;
-	--tilt: 4deg;
-	--tilt-large: 6deg;
+	--tilt-small: -3deg;
+	--tilt: -4deg;
+	--tilt-large: -6deg;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -6,21 +6,10 @@
 
 @media (min-width: 700px) {
 	/* - - PAGE HEADER - - */
-	.default-template .page-header .title1 {
-		transform: translateX(-70%) rotate(-6deg);
-	}
-
-	.default-template .page-header .title1:hover {
-		transform: translateX(-70%) rotate(0);
-	}
-
-	.default-template .page-header .title2 {
-		transform: translateX(0);
-	}	
 
 	.default-template generic-text {
-	grid-column: 5 / 10;
-}
+		grid-column: 5 / 10;
+	}
 }
 
 

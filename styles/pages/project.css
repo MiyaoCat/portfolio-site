@@ -1,10 +1,11 @@
 /* - - PAGE HEADER - - */
 .project .page-header .title1 {
-	transform: translateX(0) rotate(-3deg);
+	transform: translateX(0) rotate(var(--tilt));
+	transition: .2s ease-in-out;
 }
 
 .project .page-header .title2 {
-	transform: translateX(8em);
+	transform: translateX(6em);
 }
 
 
@@ -17,6 +18,34 @@
 .project .figure {
 	grid-column: 2 / 14;
 }
+
+/*- - LAYOUT GARDEN - - - - - - - - - - - - - - - */
+.layout-garden.heading .title2 {
+	transform: translateX(6em); 
+}
+
+.layout-garden.heading .title1:hover {
+	transform: translateX(0) rotate(0);
+	transition: .2s ease-in-out;
+}
+
+@media (min-width: 550px) {
+	.layout-garden.heading .title1 {
+		transform: translateX(0) translateY(-15px) rotate(var(--tilt));
+	}
+}
+
+@media (min-width: 700px) {
+	.layout-garden.heading .title1 {
+		transform: translateX(-9em) rotate(var(--tilt));
+	}
+
+	.layout-garden.heading .title1:hover {
+		transform: translateX(-9em) rotate(0);
+		transition: .2s ease-in-out;
+	}
+}
+
 /*- - LUXURY-STREETWEAR - - - - - - - - - - - - - */
 .page-header .luxury-streetwear .title1 {
 	transform: translateX(0) rotate(-3deg);
@@ -98,7 +127,7 @@
 
 @media (min-width: 550px) {
 	.project .page-header .title2 {
-		transform: translateX(0);
+		/*transform: translateX(0);*/
 	}
 
 	.project .figure {
@@ -107,6 +136,10 @@
 }
 
 @media (min-width: 700px) {
+	.project .heading .title2 {
+		transform: translateX(0);
+	}
+
 	.project .page-intro {
 		grid-column: 2 / 10;
 	}
