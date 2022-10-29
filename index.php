@@ -41,6 +41,7 @@
 <header class="page-header">
 	<?php include("modules/page-header/page-header.php"); ?>
 </header>
+
 <?php include("partials/footer/footer.php"); ?>
 
 
