@@ -4,9 +4,8 @@
 		$class = $sections["class"];
 	}
 ?>
-
-<button class="<?=$class?>">
-	<a href="?page=<?=$class?>">
-		<?=$buttonText?>
-	</a>
-</button>
+<a href="?page=<?=$class?>">
+	<button class="<?=$class?>">
+		<?=$buttonText?>	
+	</button>
+</a>
