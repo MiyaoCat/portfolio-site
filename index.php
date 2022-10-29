@@ -22,10 +22,6 @@
 
 <?php include("partials/header/header.php"); ?>
 
-<!-- <header class="page-header">
-	<?php include("modules/page-header/page-header.php"); ?>
-</header> -->
-
 <?php
 	if ($pageData) {
 		if ( !isset($pageData["template"]) )  {
