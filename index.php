@@ -23,7 +23,7 @@
 <?php include("partials/header/header.php"); ?>
 
 <header class="page-header">
-		<?php include("modules/page-header/page-header.php"); ?>
+	<?php include("modules/page-header/page-header.php"); ?>
 </header>
 
 <?php
