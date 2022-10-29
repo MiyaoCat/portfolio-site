@@ -5,5 +5,9 @@
 		$title2 = $errorPageData["title2"];
 		$slug = $errorPageData["slug"];
 
-	// include("modules/generic-text/generic-text.php");
+	foreach ($errorPageData["sections"] as $sections) {
+		$module =$sections["module"];
+	}	
+
+	include("modules/$module/$module.php");
 ?>
