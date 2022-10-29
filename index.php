@@ -22,9 +22,9 @@
 
 <?php include("partials/header/header.php"); ?>
 
-<header class="page-header">
+<!-- <header class="page-header">
 	<?php include("modules/page-header/page-header.php"); ?>
-</header>
+</header> -->
 
 <?php
 	if ($pageData) {
@@ -39,9 +39,12 @@
 			
 	} else {
 		include("pages/404.php");
-		}
+	}
+		
 ?>
-
+<header class="page-header">
+	<?php include("modules/page-header/page-header.php"); ?>
+</header>
 <?php include("partials/footer/footer.php"); ?>
 
 

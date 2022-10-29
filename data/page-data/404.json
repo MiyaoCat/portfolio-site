@@ -1,0 +1,14 @@
+{
+	"slug": "404",
+
+	"title1": "404",
+	"title2": "Me",
+	"intro": "Technically this page doesn't exist...",
+
+	"sections": [
+		{
+			"module": "generic-text",
+			"content": "Technically this page doesn't exist...so...go back to where you came from."
+		}
+	]
+}

@@ -1,5 +1,5 @@
 <?php 
-	if ($page == "home" or $page == "contact" or $page == "projects" or $page == "about" or $page == "resume" or $page == "style-guide" or $page == "module") {
+	if ($page == "home" or $page == "contact" or $page == "projects" or $page == "about" or $page == "resume" or $page == "style-guide" or $page == "module" or $page == "404") {
 
 		$title1 = $pageData["title1"] ?? "Hello,"; 
 		$title2 = $pageData["title2"] ?? "World!"; 
@@ -45,6 +45,16 @@
 			}	
 		}
 	}
+
+	// else ($page == "404"); 
+	// 	// $errorPage = file_get_contents("data/page-data/$page.json");
+	// 	// $errorPageData = json_decode($errorPage, true);
+
+	// 	$title1 = "";
+	// 	$title2 = "";
+	// 	$slug = "404";
+
+	
 ?>
 
 <div class="<?=$slug?> heading">

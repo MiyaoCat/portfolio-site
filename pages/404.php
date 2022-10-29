@@ -1,6 +1,9 @@
 <?php  
-	include("modules/page-header/page-header.php");
+	$errorPage = file_get_contents("data/page-data/404.json");
+	$errorPageData = json_decode($errorPage, true);
+		$title1 = $errorPageData["title1"];
+		$title2 = $errorPageData["title2"];
+		$slug = $errorPageData["slug"];
 
-	$content = "That's the internet police code for page not found. Why 404? Couldn't tell ya, but I recommend going back to a real page.";
-	include("modules/generic-text/generic-text.php");
+	// include("modules/generic-text/generic-text.php");
 ?>
