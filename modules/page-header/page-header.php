@@ -55,11 +55,6 @@
 		$title2 = $errorPageData["title2"];
 		$slug = $errorPageData["slug"];
 	}
-	
-
-
-
-	
 ?>
 
 <div class="<?=$slug?> heading">
