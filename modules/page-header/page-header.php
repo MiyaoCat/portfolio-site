@@ -44,15 +44,20 @@
 				}
 			}	
 		}
+	} 
+
+	else {
+		$page == "404";
+		$errorPage = file_get_contents("data/page-data/404.json");
+		$errorPageData = json_decode($errorPage, true);
+		
+		$title1 = $errorPageData["title1"];
+		$title2 = $errorPageData["title2"];
+		$slug = $errorPageData["slug"];
 	}
+	
 
-	// else ($page == "404"); 
-	// 	// $errorPage = file_get_contents("data/page-data/$page.json");
-	// 	// $errorPageData = json_decode($errorPage, true);
 
-	// 	$title1 = "";
-	// 	$title2 = "";
-	// 	$slug = "404";
 
 	
 ?>
