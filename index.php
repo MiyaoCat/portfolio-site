@@ -18,9 +18,14 @@
 	if ( isset($pageData["intro"]) ) {
 		$intro = $pageData["intro"];
 	} 
+
 ?>
 
 <?php include("partials/header/header.php"); ?>
+
+<header class="page-header">
+	<?php include("modules/page-header/page-header.php"); ?>
+</header>
 
 <?php
 	if ($pageData) {
@@ -33,14 +38,12 @@
 			include("pages/$pageData[template].php");
 			}
 			
-	} else {
-		include("pages/404.php");
-	}
+		} else {
+			include("pages/404.php");
+		}
 		
 ?>
-<header class="page-header">
-	<?php include("modules/page-header/page-header.php"); ?>
-</header>
+
 
 <?php include("partials/footer/footer.php"); ?>
 
