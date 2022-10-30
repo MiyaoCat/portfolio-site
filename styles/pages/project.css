@@ -1,7 +1,6 @@
 /* - - PAGE HEADER - - */
 .project .page-header .title1 {
-	transform: translateX(0) rotate(var(--tilt));
-	transition: .2s ease-in-out;
+	transform: translateX(0);
 }
 
 .project .page-header .title2 {
@@ -31,24 +30,25 @@
 
 @media (min-width: 550px) {
 	.layout-garden.heading .title1 {
-		transform: translateX(0) translateY(-15px) rotate(var(--tilt));
+		transform: translateX(0) translateY(-5px) rotate(var(--tilt));
 	}
 }
 
 @media (min-width: 700px) {
 	.layout-garden.heading .title1 {
-		transform: translateX(-9em) rotate(var(--tilt));
+		transform: translateX(-70%) translateY(10px) rotate(var(--tilt));
 	}
 
 	.layout-garden.heading .title1:hover {
-		transform: translateX(-9em) rotate(0);
+		transform: translateX(-70%) rotate(0);
 		transition: .2s ease-in-out;
 	}
 }
 
-/*- - LUXURY-STREETWEAR - - - - - - - - - - - - - */
+/*- - LUXURY-STREETWEAR - - - - - - - - - - - - - - - - - */
+/* - - PAGE HEADER - - */
 .page-header .luxury-streetwear .title1 {
-	transform: translateX(0) rotate(-3deg);
+	transform: translateX(0) translateY(-5px) rotate(var(--tilt));
 	transition: .2s ease-in-out;
 }
 
@@ -58,9 +58,32 @@
 }
 
 .page-header .luxury-streetwear .title2 {
-	transform: translateX(7em);
+	transform: translateX(10%);
 }
 
+@media (min-width: 400px) {
+	.page-header .luxury-streetwear .title1 {
+		transform: translateX(0) translateY(-1em) rotate(var(--tilt));
+	}
+
+	.page-header .luxury-streetwear .title2 {
+		transform: translateX(20%) translateY(-5px);
+	}
+}
+
+@media (min-width: 700px) {
+	.page-header .luxury-streetwear .title1 {
+		transform: translateX(-55%) translateY(.7em) rotate(var(--tilt));
+		transition: 0 ease-in-out;
+	}
+
+	.page-header .luxury-streetwear .title1:hover {
+		transform: translateX(-55%) translateY(0em) rotate(0);
+		transition: .2s ease-in-out;
+	}
+}
+
+/* - - MODULES - - */
 .luxury-streetwear.generic-text:nth-of-type(2) {
 	grid-row: 4;
 }
@@ -84,7 +107,21 @@
 	grid-row: 9;
 }
 
-/*- - PORTFOLIO-SITE - - - - - - - - - - - - - */
+/*- - PORTFOLIO-SITE - - - - - - - - - - - - - - - - - - - */
+/* - - - - PAGE HEADER - - */
+.page-header .portfolio-site .title1 {
+	transform: translateY(-.5em) rotate(var(--tilt));
+	transition: .2s ease-in-out;
+}
+
+.page-header .portfolio-site .title1:hover {
+	transform: translateX(0) translateY(0) rotate(0);
+	transition: .2s ease-in-out;
+}
+
+.page-header .portfolio-site .title2 {
+	transform: translateX(4em);
+}
 .portfolio-site:nth-of-type(2) {
 	grid-row: 4;
 	grid-column: 10 / 14;

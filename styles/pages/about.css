@@ -1,6 +1,6 @@
 /* - - - - PAGE HEADER- - - - - - - - - - - - */
 .about .page-header .title1 {
-	transform: translateX(0) rotate(-3deg);
+	transform: translateX(0) rotate(var(--tilt));
 	transition: .2s ease-in-out;
 }
 
@@ -10,7 +10,13 @@
 }
 
 .about .page-header .title2 {
-	transform: translateX(7em);
+	transform: translateX(6.4em);
+}
+
+@media (min-width: 500px) {
+	.about .page-header .title1 {
+		transform: translateX(0) translateY(-0.5em) rotate(var(--tilt));
+	}
 }
 
 @media (min-width: 550px) {
@@ -32,7 +38,7 @@
 @media (min-width: 700px) {
 	/* - - PAGE HEADER - - */
 	.about .page-header .title1 {
-		transform: translateX(-3em) rotate(-3deg);
+		transform: translateX(-3em) translateY(0.5em) rotate(var(--tilt));
 	}
 
 	.about .page-header .title1:hover {

@@ -38,7 +38,7 @@
 @media (min-width: 700px) {
 	/* - - PAGE HEADER - - - - - - - - - - - - */
 	.projects .page-header .title1 {
-		transform: translateX(-85%) translateY(5px) rotate(-4deg);
+		transform: translateX(-85%) translateY(22%) rotate(var(--tilt));
 		transition: .2s ease-in-out;
 	}
 

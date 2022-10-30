@@ -1,6 +1,6 @@
 /* - - PAGE HEADER - - - - - - - - - - - - - - */
 .contact .page-header .title1 {
-	transform: translateX(0) rotate(-4deg);
+	transform: translateX(0) rotate(var(--tilt));
 	transition: .2s ease-in-out;
 }
 
@@ -21,11 +21,12 @@
 
 @media (min-width: 550px) {
 	.contact .page-header .title1 {
-		transform: translateY(-5px) rotate(-4deg);
+		transform: translateY(-5px) rotate(var(--tilt));
 	}
 
 	.contact .page-header .title2 {
-		transform: translateX(clamp(9em, 30vw, 13em));
+		transform: translateX(30%);
+		/*clamp(9em, 30vw, 13em)*/
 	}
 }
 
@@ -39,7 +40,7 @@
 @media (min-width: 700px) {
 	/* - - PAGE HEADER - - - - - - - - - - - - - - */
 	.contact .page-header .title1 {
-		transform: translateX(-15%) rotate(-4deg);
+		transform: translateX(-15%) translateY(1em) rotate(var(--tilt));
 	}
 
 	.contact .page-header .title1:hover {
