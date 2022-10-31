@@ -110,7 +110,7 @@
 /*- - PORTFOLIO-SITE - - - - - - - - - - - - - - - - - - - */
 /* - - - - PAGE HEADER - - */
 .page-header .portfolio-site .title1 {
-	transform: translateY(-.5em) rotate(var(--tilt));
+	transform: rotate(var(--tilt));
 	transition: .2s ease-in-out;
 }
 
@@ -120,11 +120,10 @@
 }
 
 .page-header .portfolio-site .title2 {
-	transform: translateX(4em);
+	transform: translateX(11em);
 }
 .portfolio-site:nth-of-type(2) {
 	grid-row: 4;
-	grid-column: 10 / 14;
 }
 
 .portfolio-site:nth-of-type(3) {
@@ -164,7 +163,7 @@
 
 @media (min-width: 550px) {
 	.project .page-header .title2 {
-		/*transform: translateX(0);*/
+		transform: translateX(36%);
 	}
 
 	.project .figure {
@@ -173,6 +172,14 @@
 }
 
 @media (min-width: 700px) {
+	.page-header .portfolio-site .title1 {
+		transform: translateX(-20%) translateY(1em) rotate(var(--tilt));
+	}
+
+	.page-header .portfolio-site .title1:hover {
+		transform: translateX(-21%) translateY(0) rotate(0);
+	}
+	
 	.project .heading .title2 {
 		transform: translateX(0);
 	}
