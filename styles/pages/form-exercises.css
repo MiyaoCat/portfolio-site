@@ -106,9 +106,8 @@ price + quantity {
 	output {
 		grid-row: 5;
 		grid-column: 10 / 14;
-		margin-top: 0;
-		/*max-height: 50%;*/
-		/*align-self: end;*/
+		margin-top: auto;
+		margin-bottom: auto;
 
 	}
 }

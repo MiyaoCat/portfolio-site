@@ -60,21 +60,14 @@ $answer = $principal * (1 + ($percentInterest * $years));
 $answerFormatted = number_format($answer, 2);
 ?>
 
-
-
-<heading>
-	<h1 class="loud-voice"><a href="?">Invest Your Moolah!</a></h1>
-</heading>
-
-
 <div class="instructions">
-	<p class="normal-voice">Let's see how much your money can grow over time. Follow the instructions below.</p>
+	<p class="normal-voice">Let's see how much your money can grow over time. Follow the instructions below. Note, this is not calculating compound growth. Only *simple* growth.</p>
 </div>
 
 	<form method="POST">
 
 		<div class="entry principal">
-			<p class="normal-voice">Enter the principal amount you'll invest</p>
+			<p class="normal-voice">Enter the principal amount you'll invest.</p>
 			<input type="number" 
 				name='principal' 
 				value="<?=$principal?>" 
