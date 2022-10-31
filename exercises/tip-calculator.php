@@ -43,20 +43,26 @@ $tipAmount = $totalOutput - $subTotal;
 		<p class="normal-voice">Let us know the amount of your order and the tip percentage you'd like to leave. We'll provide the grand total.</p>
 	</div>
 
-	<div class="order-amount">
+	<div class="input-one">
 		<label for="subtotal">What is the order amount?</label>
 		<input type="number" name="subtotal" value="<?=$subTotal?>" min=0 required>
 	</div>
 	
 	<div class="tip-select">
-		<label for="ten-percent">10 Percent</label>
-		<input type="radio" name="tip" id="ten-percent" value="ten">
+		<div class="ten">
+			<label for="ten-percent">10 Percent</label>
+			<input type="radio" name="tip" class="percent" value="ten">
+		</div>
 
-		<label for="fifteen-percent">15 Percent</label>
-		<input type="radio" name="tip" id="fifteen-percent" value="fifteen">
+		<div class="fifteen">
+			<label for="fifteen-percent">15 Percent</label>
+			<input type="radio" name="tip" class="percent" value="fifteen">
+		</div>
 
-		<label for="twenty-percent">20 Percent</label>
-		<input type="radio" name="tip" id="twenty-percent" value="twenty">
+		<div class="twenty">
+			<label for="twenty-percent">20 Percent</label>
+			<input type="radio" name="tip" class="percent" value="twenty">
+		</div>
 	</div>
 
 	<button type="submit" name="submitted">
@@ -68,9 +74,29 @@ $tipAmount = $totalOutput - $subTotal;
 <?php if ($submittedPOST) {?>
 
 	<output>
-		<p class="normal-voice">Your subtotal is: <b>$<?=$subTotal?></b></p>
-		<p class="normal-voice">Your tip amount is: <b>$<?=$tipAmount?></b></p>
-		<p class="normal-voice">Your grand total is: <b>$<?=$totalOutput?></b></p>
+		<table>
+			<tr>
+				<td>
+					<p class="normal-voice">Your subtotal is:</p>
+				</td>
+				<td><p><b>$<?=$subTotal?></b></p></td>
+			</tr>
+
+			<tr>
+				<td>
+					<p class="normal-voice">Your tip amount is:</p>
+				</td>
+				<td><p><b>$<?=$tipAmount?></b></p></td>
+			</tr>
+			<tr>
+				<td>
+					<p class="normal-voice">Your grand total is:</p>
+				</td>
+				<td>
+					<p><b>$<?=$totalOutput?></b></p>
+				</td>
+			</tr>
+		</table>
 	</output>
 
 <?php } ?>

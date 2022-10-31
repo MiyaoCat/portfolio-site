@@ -36,7 +36,29 @@
 	align-items: center;
 }
 
-/* - - SUBMIT BUTTON - - - - - - - - - */
+.exercise .input-one {
+	display: flex;
+	flex-direction: column;
+}
+
+.exercise input[type="number"] {
+	max-width: 100px;
+	padding: 5px;
+}
+
+td:nth-of-type(2) {
+	padding-left: 20px;
+}
+/* - - RADIO BUTTON - - - - - - - - - - - - - - - */
+.exercise form input[type="radio"] {
+   border: 3px solid black;
+   cursor: pointer;
+}
+.exercise form input[type="radio"] .percent {
+	border: 1px solid black;
+}
+
+/* - - SUBMIT BUTTON - - - - - - - - - - - - - - - */
 .exercise button {
 	margin-top: 20px;
 	min-width: 150px;
@@ -82,10 +104,7 @@ quantity + price {
 price + quantity {
 	/*margin: 20px;*/
 }
-.exercise form input[type="radio"] {
-   border: 3px solid black;
-   cursor: pointer;
-}
+
 @media (min-width: 550px) {
 	.exercise heading, form, output {
 		grid-column: 2 / 8;
