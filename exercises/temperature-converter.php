@@ -45,13 +45,14 @@ if ($tempType == "fahrenheit") {
 //PHP function to round number to nearest whole number
 $rounded = round($converted);
 
-//Display output
-echo "<output>That converts to ". $rounded . " " . $tempType . "</output>";
 ?>
 
 
 <form method ="POST">
-	
+	<div class="instructions">
+		<p class="normal-voice">First select whether you want to convert to Fahrenheit or Celsius. Then enter the degrees you want to convert. For example, if you want to know what 100 degrees Fahrenheit is in Celsius, select Celsius and enter 100.</p>
+	</div>
+
 	<label for="fahrenheit">Fahrenheit</label>
 	<input type="radio" name="temp-type" value="fahrenheit" <?=isChecked($tempType, "fahrenheit")?> >
 	
@@ -63,131 +64,132 @@ echo "<output>That converts to ". $rounded . " " . $tempType . "</output>";
 	<button type="submit" name="submitted">Submit</button>
 </form>
 
-<output>
-	
-</output>
-
+<?php if ( isset($_POST["submitted"]) ) { ?>
+	<output>
+		<p class="normal-voice">That converts to <?=$rounded?> degrees <?=$tempType?></p>
+	</output>
+<?php } ?>
 
 <script>
-	console.clear();
+// 	console.clear();
 
-	function noParameters() {
-		console.log(10 + 10);
-	}
-	console.log( "noParameters" );
+// 	function noParameters() {
+// 		console.log(10 + 10);
+// 	}
+// 	console.log( "noParameters" );
 	
-	noParameters();
+// 	noParameters();
 
-// --- //
+// // --- //
 
-	function oneParameter(age) {
-		console.log(age + 10);
-	}
+// 	function oneParameter(age) {
+// 		console.log(age + 10);
+// 	}
 
-	oneParameter(30);
+// 	oneParameter(30);
 
-// --- //
-	function twoParameters(age, yearsPassed) {
-		console.log(age + yearsPassed);
-	}
+// // --- //
+// 	function twoParameters(age, yearsPassed) {
+// 		console.log(age + yearsPassed);
+// 	}
 
-	twoParameters(30, 5);
+// 	twoParameters(30, 5);
 
-// --- //
-	function defaultParameter(age, yearsPassed = 10) {
-		console.log(age + yearsPassed);
-	}
+// // --- //
+// 	function defaultParameter(age, yearsPassed = 10) {
+// 		console.log(age + yearsPassed);
+// 	}
 
-	defaultParameter(30);
+// 	defaultParameter(30);
 
-// --- //
+// // --- //
 
-	function withReturn() {
-		return "This is a function with a return";
-	}
+// 	function withReturn() {
+// 		return "This is a function with a return";
+// 	}
 
-	console.log( withReturn() );
+// 	console.log( withReturn() );
 
-// --- //
-	function doubleNumber(num1) {
-		return num1 * 2;
-	}
+// // --- //
+// 	function doubleNumber(num1) {
+// 		return num1 * 2;
+// 	}
 
-	console.log( doubleNumber(50) );
+// 	console.log( doubleNumber(50) );
 
-// --- //
-	var basketball = {
-		name : "Basketball",
-		season: "winter",
-		invented: 1981
-	}
+// // --- //
+// 	var basketball = {
+// 		name : "Basketball",
+// 		season: "winter",
+// 		invented: 1981
+// 	}
 
-	function getName(object) {
-		return object.name;
-	}
+// 	function getName(object) {
+// 		return object.name;
+// 	}
 
-	console.log(`${getName(basketball)} is a sport invented in ${basketball.invented}`);
+// 	console.log(`${getName(basketball)} is a sport invented in ${basketball.invented}`);
 
-// object[key] This gets the value based on the key
+// // object[key] This gets the value based on the key
 
-	function listKeys(object) {
-		for(key in object ) {
-			console.log(key, object[key]);
-		}
-	}
+// 	function listKeys(object) {
+// 		for(key in object ) {
+// 			console.log(key, object[key]);
+// 		}
+// 	}
 
-	listKeys(basketball);
-
-
-// --- //
+// 	listKeys(basketball);
 
 
+// // --- //
 
 
-	var form = document.querySelector("form");
-	var output = document.querySelector("output");
 
-	form.querySelector("button").style.display = "none";
 
-	function convertToCelsius(f) {
-		return (f - 32) * 5 / 9;
-	}
+// 	var form = document.querySelector("form");
+// 	var output = document.querySelector("output");
 
-	// F = (C × 9 / 5) + 32
-	function convertToFahrenheit(c) {
-		return (c * 9 / 5) + 32;
-	}
+// 	form.querySelector("button").style.display = "none";
 
-	function updateInterface() {
-		var tempType = document.querySelector(":checked").value;
+// 	function convertToCelsius(f) {
+// 		return (f - 32) * 5 / 9;
+// 	}
 
-		console.log("tempType", tempType);
+// 	// F = (C × 9 / 5) + 32
+// 	function convertToFahrenheit(c) {
+// 		return (c * 9 / 5) + 32;
+// 	}
 
-		var temp = document.querySelector("[name='temp']").value;
+// 	function updateInterface() {
+// 		var tempType = document.querySelector(":checked").value;
 
-		console.log("temp", temp);
+// 		console.log("tempType", tempType);
 
-		if (tempType == "fahrenheit") {
-			var converted = convertToCelsius(temp);
-		} 
+// 		var temp = document.querySelector("[name='temp']").value;
 
-		if (tempType == "celsius") {
-			var converted = convertToFahrenheit(temp);
-		}
+// 		console.log("temp", temp);
 
-		var rounded = converted.toFixed(2);
+// 		if (tempType == "fahrenheit") {
+// 			var converted = convertToCelsius(temp);
+// 		} 
 
-		//document.querySelector("output") = `This converts to ${rounded} degrees ${tempType}`;	
-		output.textContent = `This converts to ${rounded} degrees ${tempType}`;		
-	}
+// 		if (tempType == "celsius") {
+// 			var converted = convertToFahrenheit(temp);
+// 		}
+
+// 		var rounded = converted.toFixed(2);
+
+// 		//document.querySelector("output") = `This converts to ${rounded} degrees ${tempType}`;	
+// 		output.textContent = `This converts to ${rounded} degrees ${tempType}`;		
+// 	}
 	
-	updateInterface();
+// 	updateInterface();
 
-	form.addEventListener("input", function(event){
-		event.preventDefault();
+// 	form.addEventListener("input", function(event){
+// 		event.preventDefault();
 
-		updateInterface();
-	})
+// 		updateInterface();
+// 	})
 
 </script>
 
