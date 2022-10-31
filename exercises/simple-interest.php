@@ -29,7 +29,7 @@ if ( isset($_POST['submitted']) ) {
 	} if ($interest > 0) {
 		$hasinterest = true;
 	} if ($interest <= 3 AND $interest > 0) {
-		$intMessage = "<p class='calm-voice warning'>Put your money elsewhere</p>";
+		$intMessage = "<p class='calm-voice warning'>Put your money elsewhere.</p>";
 	} if ($interest > 3 AND $interest < 7)	{
 		$intMessage = "Y<p class='calm-voice warning'>ou better live a long time!</p>";
 	} if ($interest >= 7 AND $interest < 10) {
