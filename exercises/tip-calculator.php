@@ -5,7 +5,7 @@ $subTotal = 0;
 $total = 0;
 $tip = "";
 $tipTotal = 0;
-$totalOutput = "";
+$grandTotal = "";
 $tipPercent = 0;
 
 $submittedPOST = isset($_POST["submitted"]);
@@ -30,11 +30,17 @@ if ($submittedPOST) {
 		if ($tip == "twenty") {
 			$tipPercent = 1.20;
 		}
-	}
-}
+	} 
 
-$totalOutput = $subTotal * $tipPercent;
-$tipAmount = $totalOutput - $subTotal;
+	if ( !isset($_POST["tip"]) ) {
+		$tipPercent = 1;
+		$message = "<p class='calm-voice warning'>No tip? Service was that bad?</p>";
+	}
+
+}	
+
+$grandTotal = number_format($subTotal * $tipPercent, 2);
+$tipAmount = number_format($subTotal * $tipPercent - $subTotal, 2);
 
 ?>
 
@@ -45,10 +51,11 @@ $tipAmount = $totalOutput - $subTotal;
 
 	<div class="input-one">
 		<label for="subtotal">What is the order amount?</label>
-		<input type="number" name="subtotal" value="<?=$subTotal?>" min=0 required>
+		<input type="number" name="subtotal" value="<?=$subTotal?>" step="0.01" min=0 required>
 	</div>
 	
 	<div class="tip-select">
+		<p class="normal-voice">How much would you like to tip?</p>
 		<div class="ten">
 			<label for="ten-percent">10 Percent</label>
 			<input type="radio" name="tip" class="percent" value="ten">
@@ -63,15 +70,25 @@ $tipAmount = $totalOutput - $subTotal;
 			<label for="twenty-percent">20 Percent</label>
 			<input type="radio" name="tip" class="percent" value="twenty">
 		</div>
-	</div>
 
+		<?php 
+		if ( isset($_POST["submitted"]) ) {
+			if ( !isset($_POST["tip"]) ) { 
+				$message = "<p class='calm-voice warning'>No tip? Service was that bad?</p>";
+		?>
+				<p class="calm-voice warning"><?=$message?></p>
+			<?php } ?>		
+		<?php } ?>	
+
+	</div>
+	
 	<button type="submit" name="submitted">
 		Submit
 	</button>
 
 </form>
 
-<?php if ($submittedPOST) {?>
+<?php if ($submittedPOST) { ?>
 
 	<output>
 		<table>
@@ -93,7 +110,7 @@ $tipAmount = $totalOutput - $subTotal;
 					<p class="normal-voice">Your grand total is:</p>
 				</td>
 				<td>
-					<p><b>$<?=$totalOutput?></b></p>
+					<p><b>$<?=$grandTotal?></b></p>
 				</td>
 			</tr>
 		</table>

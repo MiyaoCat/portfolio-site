@@ -33,11 +33,11 @@
 
 @media (min-width: 700px) {
 	.simple-interest.heading .title1 {
-		transform: translateX(-80%) translateY(.3em) rotate(var(--tilt));
+		transform: translateX(-70%) translateY(.3em) rotate(var(--tilt));
 	}
 
 	.simple-interest.heading .title1:hover {
-		transform: translateX(-80%) translateY(.3em) rotate(0);
+		transform: translateX(-70%) translateY(.3em) rotate(0);
 		transition: .2s ease-in-out;
 	}	
 }

@@ -46,9 +46,6 @@
 	padding: 5px;
 }
 
-td:nth-of-type(2) {
-	padding-left: 20px;
-}
 /* - - RADIO BUTTON - - - - - - - - - - - - - - - */
 .exercise form input[type="radio"] {
    border: 3px solid black;
@@ -82,6 +79,7 @@ output {
 	grid-column: 2 /14;
 	margin-top: 20px;
 	margin-left: 5px;
+	margin-right: auto;
 	border: 3px solid var(--trim);
 	background: var(--background);
 	padding: 5px;
@@ -131,6 +129,15 @@ price + quantity {
 		margin-top: auto;
 		margin-bottom: auto;
 		margin-left: 20px;
-		margin-right: 20px;
+		margin-right: auto;
 	}
+}
+
+/* - - TIP-CALCULATOR - - - - - - - - - - - - - - - */
+td:nth-of-type(2) {
+	padding-left: 20px;
+}
+
+.tip-select {
+	margin: 15px 0;
 }
