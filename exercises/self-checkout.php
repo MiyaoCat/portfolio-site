@@ -185,7 +185,7 @@ if ( isset($_POST['submitted']) ) {
 	 	
 	 	<div class="item-wrap">
 	 		<quantity>	
-			 	<p class="normal-voice">Quantity</p>
+			 	<p class="calm-voice">Quantity</p>
 				<input 
 					type="number" 
 					name="quantity" 
@@ -197,13 +197,13 @@ if ( isset($_POST['submitted']) ) {
 	
 				<?php if($valueError) {?>
 					<error>
-						<p class="error normal-voice"><?=$valueError?></p>
+						<p class="error calm-voice"><?=$valueError?></p>
 					</error>
 				<?php } ?>	
 			</quantity>		
 	
 			<price>
-				<p class="normal-voice">Price</p>	
+				<p class="calm-voice">Price</p>	
 				<input 
 					type="number" 
 					name="price" 
@@ -214,7 +214,7 @@ if ( isset($_POST['submitted']) ) {
 	
 				<?php if($priceValueError) {?>
 				<error>
-					<!-- <p class="error normal-voice"><?=$priceValueError?></p> -->
+					<!-- <p class="error calm-voice"><?=$priceValueError?></p> -->
 				</error>
 				<?php } ?>	
 	
@@ -227,7 +227,7 @@ if ( isset($_POST['submitted']) ) {
 
 	 	<div class="item-wrap">
 	 		<quantity>	
-			 	<p class="normal-voice">Quantity</p>
+			 	<p class="calm-voice">Quantity</p>
 				<input 
 					type="number" 
 					name="quantity2" 
@@ -238,13 +238,13 @@ if ( isset($_POST['submitted']) ) {
 	
 				<?php if($valueError2) {?>
 				<error>
-					<!-- <p class="error normal-voice"><?=$valueError2?></p> -->
+					<!-- <p class="error calm-voice"><?=$valueError2?></p> -->
 				</error>
 				<?php } ?>	
 			</quantity>		
 	
 			<price>
-				<p class="normal-voice">Price</p>	
+				<p class="calm-voice">Price</p>	
 				<input 
 					type="number" 
 					name="price2" 
@@ -255,7 +255,7 @@ if ( isset($_POST['submitted']) ) {
 	
 				<?php if($priceValueError2) {?>
 				<error>
-					<!-- <p class="error normal-voice"><?=$priceValueError2?></p> -->
+					<!-- <p class="error calm-voice"><?=$priceValueError2?></p> -->
 				</error>
 				<?php } ?>	
 			</price>
@@ -268,7 +268,7 @@ if ( isset($_POST['submitted']) ) {
 
 	 	<div class="item-wrap">
 	 		<quantity>	
-			 	<p class="normal-voice">Quantity</p>
+			 	<p class="calm-voice">Quantity</p>
 				<input 
 					type="number" 
 					name="quantity3" 
@@ -279,13 +279,13 @@ if ( isset($_POST['submitted']) ) {
 	
 				<?php if($valueError3) {?>
 				<error>
-					<!-- <p class="error normal-voice"><?=$valueError3?></p> -->
+					<!-- <p class="error calm-voice"><?=$valueError3?></p> -->
 				</error>
 				<?php } ?>	
 			</quantity>		
 	
 			<price>
-				<p class="normal-voice">Price</p>	
+				<p class="calm-voice">Price</p>	
 				<input 
 					type="number" 
 					name="price3" 
@@ -296,7 +296,7 @@ if ( isset($_POST['submitted']) ) {
 	
 				<?php if($priceValueError3) {?>
 				<error>
-					<!-- <p class="error normal-voice"><?=$priceValueError3?></p> -->
+					<!-- <p class="error calm-voice"><?=$priceValueError3?></p> -->
 				</error>
 				<?php } ?>	
 			</price>
@@ -308,7 +308,7 @@ if ( isset($_POST['submitted']) ) {
 		
 		<div class="item-wrap">	
 			<quantity>	
-			 	<p class="normal-voice">Quantity</p>
+			 	<p class="calm-voice">Quantity</p>
 				<input 
 					type="number" 
 					name="quantity4" 
@@ -319,13 +319,13 @@ if ( isset($_POST['submitted']) ) {
 			
 				<?php if($valueError4) {?>
 				<error>
-					<!-- <p class="error normal-voice"><?=$valueError4?></p> -->
+					<!-- <p class="error calm-voice"><?=$valueError4?></p> -->
 				</error>
 				<?php } ?>	
 			</quantity>		
 			
 			<price>
-				<p class="normal-voice">Price</p>	
+				<p class="calm-voice">Price</p>	
 				<input 
 					type="number" 
 					name="price4" 
@@ -336,7 +336,7 @@ if ( isset($_POST['submitted']) ) {
 			
 				<?php if($priceValueError4) {?>
 				<error>
-					<!-- <p class="error normal-voice"><?=$priceValueError4?></p> -->
+					<!-- <p class="error calm-voice"><?=$priceValueError4?></p> -->
 				</error>
 				<?php } ?>	
 			</price>
@@ -361,19 +361,19 @@ if ( isset($_POST['submitted']) ) {
 <output>
 	<sub-total>
 		<?php if($subTotal){ ?>
-			<p class="normal-voice">Your Sub-total is: <b>$<?=$formattedSubTotal?></b></p>
+			<p class="calm-voice">Your Sub-total is: <b>$<?=$formattedSubTotal?></b></p>
 		<?php } ?>
 	</sub-total>
 
 	<?php if( isset($_POST['submitted']) ) { ?>
 		<tax-total>
-			<p class="normal-voice">You total tax amount is: <b>$<?=$tax?></b></p>
+			<p class="calm-voice">You total tax amount is: <b>$<?=$tax?></b></p>
 		</tax-total>
 	<?php } ?>	
 
 	<grand-total>
 		<?php if($grandTotal > 0){ ?>
-			<p class="normal-voice">Your grand total is: <b>$<?=$grandTotal?></b></p>
+			<p class="calm-voice">Your grand total is: <b>$<?=$grandTotal?></b></p>
 		<?php } ?>
 	</grand-total>
 </output>
