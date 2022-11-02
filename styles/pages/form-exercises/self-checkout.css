@@ -6,11 +6,47 @@ form.self-checkout {
 form.self-checkout input {
 	margin: 0;
 }
+
+form.self-checkout tax {
+	margin-top: 20px;
+	display: block;
+}
+
+form.self-checkout .item {
+	margin-top: 25px;
+}
+
+form.self-checkout quantity, form.self-checkout price {
+	display: block;
+}
+
+form.self-checkout quantity {
+	margin: 5px 0;
+}
+
+@media (min-width: 350px) {
+	form.self-checkout {
+		grid-column: 2 / 10;
+		display: grid;
+		grid-template-rows: 1fr 1fr auto; 
+		grid-template-columns: 1fr 1fr;
+		gap: 15px;
+	}
+
+	form.self-checkout button {
+		grid-row: 4;
+	}
+
+	tax {
+		grid-row: 3;
+		grid-column: 1 / span 2;
+	}
+}
+
 @media (min-width: 700px) {
 	form.self-checkout {
-		display: grid;
-		grid-template-rows: 1fr 1fr;
-		grid-template-columns: 1fr 1fr;
+		grid-column: 4 / 10;
+		gap: 0;
 	}
 
 	form.self-checkout .item.one {
@@ -33,8 +69,25 @@ form.self-checkout input {
 		grid-column: 2;
 	}
 
+	form.self-checkout tax {
+		display: block;
+		grid-column: 1 / -1;
+	}
 	form.self-checkout button {
 		/*grid-row: 3;*/
 		grid-column:  1 / -1;
 	}
+}
+
+@media (min-width: 1000px) {
+	form.self-checkout .item-wrap {
+		display: flex;
+		gap: 15px;
+	}
+
+	:is(quantity, price)  {
+		margin-top: 5px;
+		margin-bottom: 0;
+	}
+
 }

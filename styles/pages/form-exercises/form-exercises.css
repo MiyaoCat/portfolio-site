@@ -6,8 +6,9 @@
 
 .exercise .instructions {
 	grid-row: 4;
-	grid-column: 2 / 10;
+	grid-column: 2 / 14;
 	max-width: 700px;
+	margin-left: 5px;
 	margin-right: 20px;
 }
 
@@ -90,22 +91,13 @@ output {
 	font-size: ;
 }
 
-quantity, price {
-	display: block;
-}
-
-quantity + price {
-	margin-top: 10px;
-	margin-bottom: 20px;
-}
-
-price + quantity {
-	/*margin: 20px;*/
-}
-
 @media (min-width: 550px) {
 	.exercise heading, form, output {
 		grid-column: 2 / 8;
+	}
+
+	.exercise .instructions {
+		grid-column: 2 / 10;
 	}
 }
 

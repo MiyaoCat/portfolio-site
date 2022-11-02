@@ -28,6 +28,7 @@ a {
 	font-size: 2rem;
 	font-weight: 500;
 }
+
 /* Sub-header text or similar */
 .attention-voice {
 	font-family: var(--sans-serif);

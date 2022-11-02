@@ -176,179 +176,189 @@ if ( isset($_POST['submitted']) ) {
 ?>
 
 <div class="instructions">
-	<p class="normal-voice">Let's see how much you'll owe if you purchase up to 3 items in the state of Washington.</p>
+	<p class="normal-voice">Let's see how much you'll owe if you purchase up to 4 items in the state of Washington.</p>
 </div>
 			
 <form class="self-checkout" method="POST">
 	<div class="item one">
- 	<quantity>	
-	 	<p class="normal-voice">Quantity of item 1:</p>
-		<input 
-			type="number" 
-			name="quantity" 
-			value="<?=$quantity?>"
-			min="0"
-			placeholder="0"
-			label="write your number"
-		>
+		<h3 class="attention-voice">Item 1</h3>
+	 	
+	 	<div class="item-wrap">
+	 		<quantity>	
+			 	<p class="normal-voice">Quantity</p>
+				<input 
+					type="number" 
+					name="quantity" 
+					value="<?=$quantity?>"
+					min="0"
+					placeholder="0"
+					label="write your number"
+				>
+	
+				<?php if($valueError) {?>
+					<error>
+						<p class="error normal-voice"><?=$valueError?></p>
+					</error>
+				<?php } ?>	
+			</quantity>		
+	
+			<price>
+				<p class="normal-voice">Price</p>	
+				<input 
+					type="number" 
+					name="price" 
+					value="<?=$price?>"
+					step= '0.01'
+					min='0'
+					placeholder="0.00">
+	
+				<?php if($priceValueError) {?>
+				<error>
+					<!-- <p class="error normal-voice"><?=$priceValueError?></p> -->
+				</error>
+				<?php } ?>	
+	
+			</price>
+	 	</div>
+	</div>
 
-		<?php if($valueError) {?>
-			<error>
-				<p class="error normal-voice"><?=$valueError?></p>
-			</error>
-		<?php } ?>	
-	</quantity>		
+	<div class="item two">
+		<h3 class="attention-voice">Item 2</h3>
 
-	<price>
-		<p class="normal-voice">Price of item 1:</p>	
-		<input 
-			type="number" 
-			name="price" 
-			value="<?=$price?>"
-			step= '0.01'
-			min='0'
-			placeholder="0.00">
+	 	<div class="item-wrap">
+	 		<quantity>	
+			 	<p class="normal-voice">Quantity</p>
+				<input 
+					type="number" 
+					name="quantity2" 
+					value="<?=$quantity2?>"
+					min="0"
+					placeholder="0"
+					label="write your number">
+	
+				<?php if($valueError2) {?>
+				<error>
+					<!-- <p class="error normal-voice"><?=$valueError2?></p> -->
+				</error>
+				<?php } ?>	
+			</quantity>		
+	
+			<price>
+				<p class="normal-voice">Price</p>	
+				<input 
+					type="number" 
+					name="price2" 
+					value="<?=$price2?>"
+					step= '0.01'
+					min='0'
+					placeholder="0.00">
+	
+				<?php if($priceValueError2) {?>
+				<error>
+					<!-- <p class="error normal-voice"><?=$priceValueError2?></p> -->
+				</error>
+				<?php } ?>	
+			</price>
+	 	</div>
 
-		<?php if($priceValueError) {?>
-		<error>
-			<!-- <p class="error normal-voice"><?=$priceValueError?></p> -->
-		</error>
-		<?php } ?>	
+	</div>
 
-	</price>
+	<div class="item three">
+		<h3 class="attention-voice">Item 3</h3>
 
+	 	<div class="item-wrap">
+	 		<quantity>	
+			 	<p class="normal-voice">Quantity</p>
+				<input 
+					type="number" 
+					name="quantity3" 
+					value="<?=$quantity3?>"
+					min="0"
+					placeholder="0"
+					label="write your number">
+	
+				<?php if($valueError3) {?>
+				<error>
+					<!-- <p class="error normal-voice"><?=$valueError3?></p> -->
+				</error>
+				<?php } ?>	
+			</quantity>		
+	
+			<price>
+				<p class="normal-voice">Price</p>	
+				<input 
+					type="number" 
+					name="price3" 
+					value="<?=$price3?>"
+					step= '0.01'
+					min='0'
+					placeholder="0.00">
+	
+				<?php if($priceValueError3) {?>
+				<error>
+					<!-- <p class="error normal-voice"><?=$priceValueError3?></p> -->
+				</error>
+				<?php } ?>	
+			</price>
+	 	</div>
+	</div>
 
-</div>
+	<div class="item four">
+		<h3 class="attention-voice">Item 4</h3>
+		
+		<div class="item-wrap">	
+			<quantity>	
+			 	<p class="normal-voice">Quantity</p>
+				<input 
+					type="number" 
+					name="quantity4" 
+					value="<?=$quantity4?>"
+					min="0"
+					placeholder="0"
+					label="write your number">
+			
+				<?php if($valueError4) {?>
+				<error>
+					<!-- <p class="error normal-voice"><?=$valueError4?></p> -->
+				</error>
+				<?php } ?>	
+			</quantity>		
+			
+			<price>
+				<p class="normal-voice">Price</p>	
+				<input 
+					type="number" 
+					name="price4" 
+					value="<?=$price4?>"
+					step= '0.01'
+					min='0'
+					placeholder="0.00">
+			
+				<?php if($priceValueError4) {?>
+				<error>
+					<!-- <p class="error normal-voice"><?=$priceValueError4?></p> -->
+				</error>
+				<?php } ?>	
+			</price>
+		</div>
+	</div>
 
-<div class="item two">
- 	<quantity>	
-	 	<p class="normal-voice">Quantity of item 2:</p>
-		<input 
-			type="number" 
-			name="quantity2" 
-			value="<?=$quantity2?>"
-			min="0"
-			placeholder="0"
-			label="write your number">
+	<?php 
+		$formattedTax = $taxRate * 100;
+		$formattedGrandTotal = 0;
+	 ?>
 
-		<?php if($valueError2) {?>
-		<error>
-			<!-- <p class="error normal-voice"><?=$valueError2?></p> -->
-		</error>
-		<?php } ?>	
-	</quantity>		
+	<tax>
+		<p class="normal-voice">The Washington State sales tax rate is <?=$formattedTax?>%						
+		</p>
+	</tax>
 
-	<price>
-		<p class="normal-voice">Price of item 2:</p>	
-		<input 
-			type="number" 
-			name="price2" 
-			value="<?=$price2?>"
-			step= '0.01'
-			min='0'
-			placeholder="0.00">
-
-		<?php if($priceValueError2) {?>
-		<error>
-			<!-- <p class="error normal-voice"><?=$priceValueError2?></p> -->
-		</error>
-		<?php } ?>	
-
-	</price>
-</div>
-
-<div class="item three">
- 	<quantity>	
-	 	<p class="normal-voice">Quantity of item 3:</p>
-		<input 
-			type="number" 
-			name="quantity3" 
-			value="<?=$quantity3?>"
-			min="0"
-			placeholder="0"
-			label="write your number">
-
-		<?php if($valueError3) {?>
-		<error>
-			<!-- <p class="error normal-voice"><?=$valueError3?></p> -->
-		</error>
-		<?php } ?>	
-	</quantity>		
-
-	<price>
-		<p class="normal-voice">Price of item 3:</p>	
-		<input 
-			type="number" 
-			name="price3" 
-			value="<?=$price3?>"
-			step= '0.01'
-			min='0'
-			placeholder="0.00">
-
-		<?php if($priceValueError3) {?>
-		<error>
-			<!-- <p class="error normal-voice"><?=$priceValueError3?></p> -->
-		</error>
-		<?php } ?>	
-
-	</price>
-</div>
-
-<div class="item four">
-	<quantity>	
-	 	<p class="normal-voice">Quantity of item 4:</p>
-		<input 
-			type="number" 
-			name="quantity4" 
-			value="<?=$quantity4?>"
-			min="0"
-			placeholder="0"
-			label="write your number">
-
-		<?php if($valueError4) {?>
-		<error>
-			<!-- <p class="error normal-voice"><?=$valueError4?></p> -->
-		</error>
-		<?php } ?>	
-	</quantity>		
-
-	<price>
-		<p class="normal-voice">Price of item 4:</p>	
-		<input 
-			type="number" 
-			name="price4" 
-			value="<?=$price4?>"
-			step= '0.01'
-			min='0'
-			placeholder="0.00">
-
-		<?php if($priceValueError4) {?>
-		<error>
-			<!-- <p class="error normal-voice"><?=$priceValueError4?></p> -->
-		</error>
-		<?php } ?>	
-
-	</price>
-</div>
-
-<?php 
-	$formattedTax = $taxRate * 100;
-	$formattedGrandTotal = 0;
- ?>
-
-<button type="submit" name="submitted">Submit</button>
+	<button type="submit" name="submitted">Submit</button>
 
 </form>
 
 <?php if ( isset($_POST['submitted']) ) { ?>
 <output>
-<form-wrap> 
-<div class="return-values">
-	<tax>
-		<p class="normal-voice">The Washington State sales tax rate is <?=$formattedTax?>%						
-		</p>
-	</tax>	
-
 	<sub-total>
 		<?php if($subTotal){ ?>
 			<p class="normal-voice">Your Sub-total is: <b>$<?=$formattedSubTotal?></b></p>
@@ -356,22 +366,15 @@ if ( isset($_POST['submitted']) ) {
 	</sub-total>
 
 	<?php if( isset($_POST['submitted']) ) { ?>
-	<tax-total>
-		
+		<tax-total>
 			<p class="normal-voice">You total tax amount is: <b>$<?=$tax?></b></p>
-		
-	</tax-total>
+		</tax-total>
 	<?php } ?>	
+
 	<grand-total>
 		<?php if($grandTotal > 0){ ?>
 			<p class="normal-voice">Your grand total is: <b>$<?=$grandTotal?></b></p>
 		<?php } ?>
-
 	</grand-total>
-</div>
-
-
-</form-wrap>
-
 </output>
 <?php } ?>
