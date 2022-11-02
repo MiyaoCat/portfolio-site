@@ -361,19 +361,19 @@ if ( isset($_POST['submitted']) ) {
 <output>
 	<sub-total>
 		<?php if($subTotal){ ?>
-			<p class="calm-voice">Your Sub-total is: <b>$<?=$formattedSubTotal?></b></p>
+			<p class="normal-voice">Your Sub-total is: <b>$<?=$formattedSubTotal?></b></p>
 		<?php } ?>
 	</sub-total>
 
 	<?php if( isset($_POST['submitted']) ) { ?>
 		<tax-total>
-			<p class="calm-voice">You total tax amount is: <b>$<?=$tax?></b></p>
+			<p class="normal-voice">You total tax amount is: <b>$<?=$tax?></b></p>
 		</tax-total>
 	<?php } ?>	
 
 	<grand-total>
 		<?php if($grandTotal > 0){ ?>
-			<p class="calm-voice">Your grand total is: <b>$<?=$grandTotal?></b></p>
+			<p class="normal-voice">Your grand total is: <b>$<?=$grandTotal?></b></p>
 		<?php } ?>
 	</grand-total>
 </output>
