@@ -6,6 +6,10 @@
 	"title2": "Resume",
 	"intro": "Cover Letter / Intro",
 	"sections" : [
+		{
+			"type": "generic-text",
+			"content": "My work"
+		},
 		{	
 			"type" : "experience",
 			"heading": "Work Experience",

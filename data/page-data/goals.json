@@ -1,0 +1,39 @@
+{	
+	"slug": "goals",
+	"template": "goals",
+	
+	"title1": "My",
+	"title2": "Goals",
+	"intro": "Cover Letter / Intro",
+	"sections" : [
+		{	
+			"heading": "In 5 years I will...",
+			"class": "five-years",
+			"goals": [ 
+				"Become a Senior Dev or Manager",
+				"Have steady freelance work",
+				"Work part-time overseas"
+			]
+		},
+		{
+			"heading": "Within 60 Days of Graduating I will..",
+			"class": "sixty-days",
+			"goals": [
+				"Get a full time job as a Web Developer making 100k in total comp",
+				"Work in a sports, fashion or art/design related company",
+				"Complete a client project"
+			]
+		},	
+		{
+			"heading": "By the end of the class I will...",
+			"class": "class-end",
+			"goals": [
+				"Build a food menu with Javascript",
+				"Build a web app that automatically checks you in at Southwest Airlines",
+				"Obtain a paid client",
+				"Build an online presence toward landing a Front End Dev role"
+			]
+		}
+	]
+
+}
