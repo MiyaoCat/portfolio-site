@@ -16,11 +16,11 @@
 				<h2 class="attention-voice"><?=$heading;?></h2>
 			</sub-header>
 			
-			<ul class="goals">
+			<ol class="goals">
 				<?php foreach ($section["goals"] as $goals) { ?>
 					<li><p class="normal-voice"><?=$goals?></p></li>		
 				<?php } ?>
-			</ul>
+			</ol>
 
 		</div>
 <?php } ?>
