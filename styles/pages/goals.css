@@ -58,7 +58,7 @@
 	grid-row: 5;
 }
 
-.goals li {
+.goals-section li {
 	list-style-type: decimal;
 	margin-left: 20px;
 }
