@@ -1,8 +1,27 @@
 <?php 
-	if ($page !== "project") {
+	if ($page == "module") {
+		if ($moduleName == "figure") {
+			$json = file_get_contents("data/page-data/style-guide.json");
+			$styleGuideData = json_decode($json, true);
+
+			foreach ($styleGuideData["sections"] as $modules) {
+					$filePath = $modules["filePath"];
+					$altText = $modules["altText"];
+				}
+		}		
+?>
+
+<figure>
+	<picture>
+		<img src="<?=$filePath?>" alt="<?=$altText?>">
+	</picture>
+</figure>	
+
+<?php } 
+	elseif ($page !== "project") {
 
 		$filePath = $sections["filePath"];
-		$altText = $sections["altText"]
+		$altText = $sections["altText"];
 ?>
 
 <figure>

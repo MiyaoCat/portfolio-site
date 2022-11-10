@@ -1,5 +1,5 @@
 <?php 
-	if ($page == "home" or $page == "contact" or $page == "projects" or $page == "about" or $page == "resume" or $page == "style-guide" or $page == "module" or $page == "goals" or $page == "404") {
+	if ($page == "home" or $page == "contact" or $page == "projects" or $page == "about" or $page == "resume" or $page == "style-guide" or $page == "goals" or $page == "404") {
 
 		$title1 = $pageData["title1"] ?? "Hello,"; 
 		$title2 = $pageData["title2"] ?? "World!"; 
@@ -18,6 +18,15 @@
 			}
 		}
 	}	
+
+	elseif ($page == "module") {
+		$json = file_get_contents("data/page-data/style-guide.json");
+		$styleGuideData = json_decode($json, true);
+
+		$title1 = $styleGuideData["title1"];
+		$title2 = $styleGuideData["title2"];
+		$slug = $styleGuideData["slug"];
+	}
 
 	elseif ($page == "exercises") {
 		$json = file_get_contents("data/page-data/exercises.json");
