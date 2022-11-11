@@ -1,5 +1,6 @@
 {
 	"slug": "style-guide",
+	"template": "style-guide",
 
 	"title1": "Style",
 	"title2": "Guide",
@@ -22,8 +23,8 @@
 			"title1": "Figure",
 			"title2": "",
 			"module": "figure",
-			"filePath": "images/selfie-gradient.png",
-			"altText": "selfie of John Miyao in wtih a gradient background from blue (top) to purple (bottom)",
+			"filePath": "https://peprojects.dev/images/portrait.jpg",
+			"altText": "Placeholder image.",
 			"content": "These are my social icons"
 		},
 		{
@@ -45,11 +46,11 @@
 			"module": "project-card",
 			"content": "Work together",
 			"slug": "project-card",
-			"intro": "This is the intro text explaining the project for the project card module",
+			"intro": "This is the intro text explaining the project for the project card module.",
 			"url": "https://peprojects.dev/alpha-4/john/projects/layout-theme-challenge/index.php",
 			"image": "https://peprojects.dev/images/landscape.jpg",
 			"languages": [
-				"HTML", "CSS", "PHP"
+				"HTML", "CSS", "PHP", "JS", "English"
 			]
 		}
 	]
