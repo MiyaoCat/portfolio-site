@@ -1,6 +1,6 @@
 <?php foreach ($pageData["sections"] as $sections) {
 	$module = $sections["module"];
-	$link = "?page=module&slug=$sections[module]";
+	// $link = "?page=module&slug=$sections[module]";
 ?>
 
 	<section class="<?=$module?>">
@@ -13,19 +13,11 @@
 <?php 
 	$json = file_get_contents("data/projects.json");
 	$projects = json_decode($json, true);
-?>	
-
-<!-- <section class="project-card"> -->
-	<?php 
-
 		foreach ($projects as $project) { 
+			include("modules/project-card/project-card.php"); 
+		}
+?>
 
-			// if ( !isset($project["url"]) ) {	
-				include("modules/project-card/project-card.php"); 
-			}
-		// }
-	?>
-<!-- </section> -->
 
 
 

@@ -1,4 +1,4 @@
-.module-template :is(.figure, .generic-text, .social-icons, .email-form) {
+.module-template :is(.figure, .generic-text, .social-icons, .email-form, .project-card) {
 	grid-row: 3;
 	grid-column: 2 / 10;
 	margin: 0 20px;
