@@ -4,7 +4,6 @@
 
 	<section class="<?=$module?>">
 		<?php styleGuideDetailLink($module, $pageData["slug"]); ?>
-
 		<?php include("modules/$module/$module.php"); ?>
 	</section>
 

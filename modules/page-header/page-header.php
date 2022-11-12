@@ -23,9 +23,9 @@
 		$json = file_get_contents("data/page-data/style-guide.json");
 		$styleGuideData = json_decode($json, true);
 
+		$slug = $styleGuideData["slug"];
 		$title1 = $styleGuideData["title1"];
 		$title2 = $styleGuideData["title2"];
-		$slug = $styleGuideData["slug"];
 	}
 
 	elseif ($page == "exercises") {
@@ -77,4 +77,3 @@
 	</div>
 
 </div>
-

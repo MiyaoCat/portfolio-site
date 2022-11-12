@@ -6,7 +6,7 @@ html {
 	--darkest: #111111;
 	--lightest: #FFF;
 
-	--shadow: rgba(221, 53%, 24%);
+	--shadow: rgba(221, 53%, 24%, 1);
 
 	--corners: 10px; /* or whatevers */
 
@@ -14,15 +14,15 @@ html {
 	--tight: 800px;
 	--wide: 98vw;
 
-	--paper: white;
+	--paper: hsla(0, 0%, 100%, 1.00);
 	--background: hsla(50, 100%, 86%, 1);
 
 	--ink: black;
 	--highlight: lawngreen; 
 	--contrast: hsla(38, 10%, 15%, 1);
 	--alternate: hsla(0, 0%, 35%, 1);
-	--trim: black;
-	--standout: hsl(360, 100%, 39%);
+	--trim: hsla(38, 10%, 15%, 1);
+	--standout: hsla(360, 100%, 39%, 1);
 
 	--link: red;
 

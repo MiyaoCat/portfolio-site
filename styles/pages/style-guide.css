@@ -1,7 +1,7 @@
-.style-guide section > a {
-	text-align: center;
+detail-link {
+	display: block;
 	margin-top: 30px;
-	margin-bottom: 50px;
+	margin-bottom: 15px;
 }
 
 .style-guide > section {
@@ -15,19 +15,148 @@
 	margin: 20px 5px;
 }
 
+.style-guide .style-header {
+	margin-bottom: 25px;
+}
+
 .style-guide .page-header {
 	grid-row: 2;
 	grid-column: 2 / 14;
 }
 
-.style-guide .generic-text {
+@media (min-width: 700px) {
+	.style-guide .page-header {
+		grid-column: 2 / 10;
+	}
+	.style-guide > section {
+		grid-column: 4 / 10;
+		margin-right: 20px;
+		border: 3px dashed var(--trim);
+		padding: 15px;
+		margin-bottom: 20px;
+	}
+}
+
+/* - - - - TYPOGRAPHY  - - - - - - - - - - - - */
+.style-guide .typography {
 	grid-row: 3;
+}
+
+.style-guide .typography-examples {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+/* - - - - VOICES  - - - - - - - - - - - - */
+.style-guide .voices {
+	grid-row: 4;
+}
+
+.style-guide .voice-examples {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+/* - - - - COLOR PALETTES  - - - - - - - - - - - - */
+.style-guide .colors  {
+	grid-row: 5;
+}
+
+.style-guide .colors :is(.light-mode, .dark-mode)  {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+}
+
+.light-scheme {
+	margin-bottom: 20px;
+}
+
+.light-scheme h4, .dark-scheme h4 {
+	margin-bottom: 10px;
+}
+
+.style-guide .colors li {
+	width: 200px;
+	height: 100px;
+	border: 3px solid var(--ink);
+	padding: 5px;
+}
+
+/* - - - - COLOR PALETTES LIGHT MODE - - - - - - - - - - - - */
+.style-guide .light-mode li:nth-of-type(1) {
+	background-color: hsla(50, 100%, 86%, 1);
+}
+
+.style-guide .light-mode li:nth-of-type(2) {
+	color: var(--background);
+	background-color: var(--ink);
+}
+
+.style-guide .light-mode li:nth-of-type(2) {
+	color: hsla(50, 70%, 80%, 1);
+	background-color: hsla(360, 100%, 39%, 1);
+}
+
+.style-guide .light-mode li:nth-of-type(3) {
+	color: hsla(50, 70%, 80%, 1);
+	background-color: hsla(38, 10%, 15%, 1);
+}
+
+.style-guide .light-mode li:nth-of-type(4) {
+	background-color: hsla(0, 0%, 100%, 1.00);
+}
+
+@media (prefers-color-scheme: dark) {
+	.style-guide .light-mode li:nth-of-type(1) {
+		color: hsla(189, 20%, 12%, 1);
+	}
+
+	.style-guide .light-mode li:nth-of-type(4) {
+		color: hsla(189, 20%, 12%, 1);
+	}
+}
+/* - - - - COLOR PALETTES DARK MODE - - - - - - - - - - - - */
+.style-guide .dark-mode li:nth-of-type(1) {
+	color: hsla(50, 70%, 80%, 1);
+	background-color: hsla(189, 20%, 12%, 1);
+}
+
+.style-guide .dark-mode li:nth-of-type(2) {
+	background-color:hsla(170, 56%, 49%, 1);
+	color: hsla(189, 20%, 12%, 1);
+}
+
+.style-guide .dark-mode li:nth-of-type(3) {
+	background-color: hsla(60, 7%, 40%, 1);
+}
+
+.style-guide .dark-mode li:nth-of-type(4) {
+	background-color: hsla(50, 70%, 80%, 1);
+}
+
+.style-guide .dark-mode li:nth-of-type(4) {
+	background-color: hsla(0, 0%, 4%, 1);
+}
+
+@media (prefers-color-scheme: light) {
+	.style-guide .dark-mode li:nth-of-type(4) {
+		color: hsla(50, 70%, 80%, 1);
+	}
+}
+
+/* - - - - GENERIC TEXT - - - - - - - - - - - - */
+.style-guide .generic-text {
+	grid-row: 6;
 	display: flex;
 	justify-content: flex-end;
 }
 
+/* - - - - FIGURE - - - - - - - - - - - - */
 .style-guide .figure {
-	grid-row: 4;
+	grid-row: 7;
 	display: flex;
 	justify-content: flex-end;
 
@@ -39,34 +168,26 @@
 	margin-right: auto;
 }
 
+/* - - - - BUTTON - - - - - - - - - - - - */
 .style-guide .button {
-	grid-row: 5;
+	grid-row: 8;
 }
 
+/* - - - - EMAIL FORM - - - - - - - - - - - - */
 .style-guide .email-form {
-	grid-row: 7;
+	grid-row: 9;
 }
 
+/* - - - - SOCIAL ICONS - - - - - - - - - - - - */
 .style-guide .social-icons {
-	grid-row: 9;
+	grid-row: 10;
 	display: flex;
 	justify-content: flex-end;
 }
+
+/* - - - - PROJECT CARD - - - - - - - - - - - - */
 .style-guide .project-card {
-	grid-row: 10;
+	grid-row: 11;
 } 
-@media (min-width: 700px) {
-	.style-guide .page-header {
-		grid-column: 2 / 10;
-	}
-	.style-guide > section {
-		grid-column: 4 / 10;
-		margin-right: 20px;
-		display: flex;
-		justify-content: flex-end;
-		border: 3px dashed var(--trim);
-		padding: 10px;
-		margin-bottom: 20px;
-	}
-}
+
 
