@@ -1,11 +1,36 @@
 <?php 
-	if ($sections["module"] == "button") {
-		$buttonText = $sections["content"];
-		$class = $sections["class"];
-	}
+	if ($page !== "module") {
+		if ($sections["module"] == "button") {
+			$buttonText = $sections["content"];
+			$class = $sections["class"];
+		}
 ?>
-<a href="?page=<?=$class?>">
-	<button class="<?=$class?>">
-		<?=$buttonText?>	
-	</button>
-</a>
+	<a href="?page=<?=$class?>">
+		<button class="<?=$class?>">
+			<?=$buttonText?>	
+		</button>
+	</a>
+<?php } ?>
+
+
+<?php 
+	//This is the for the button detail page
+	if ($page == "module") {
+		$json = file_get_contents("data/page-data/style-guide.json");
+		$styleGuideData = json_decode($json, true);
+
+		foreach ($styleGuideData["sections"] as $modules) {
+			if ($modules["module"] == "button") {
+				$buttonText = $modules["content"];
+				$class = $modules["class"];
+				$intro = $modules["intro"];
+			}
+		}	
+?>
+	<a href="?page=<?=$class?>">
+		<button class="<?=$class?>">
+			<?=$buttonText?>	
+		</button>
+	</a>
+
+<?php }  ?>
