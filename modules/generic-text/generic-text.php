@@ -1,6 +1,6 @@
 <?php 
 	if ($page !== "project") {
-		$content = $sections["content"] ?? "<p>This is generic content text for the generic-text module. Hope you enjoyed reading!</p>";
+		$content = $sections["content"] ?? "<p class='normal-voice'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo velit deserunt eius dicta suscipit, ea, amet quidem laboriosam accusamus. Minus odit ratione iure architecto aperiam inventore? Laudantium optio eligendi esse necessitatibus molestiae debitis, tenetur odio nostrum ea quos, ipsam, laborum sint, natus temporibus officiis consequuntur corrupti veritatis nihil sequi neque!</p>";
 ?>
 
 		<generic-text>

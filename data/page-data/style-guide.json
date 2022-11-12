@@ -38,7 +38,8 @@
 			"title2": "",
 			"module": "button",
 			"content": "Click Me!",
-			"class": "style-guide"
+			"class": "style-guide",
+			"intro": "This is a reusable button"
 		},
 		{	
 			"title1": "Project",

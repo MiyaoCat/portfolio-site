@@ -5,14 +5,17 @@
 	foreach ($styleGuideData["sections"] as $sections) {
 		$module = $sections["module"];
 		$title1 = $sections["title1"];
-		$title2 = $sections["title2"];		
+		$title2 = $sections["title2"];	
 ?>
 
 	<section class="<?=$page?> <?=$module?>">
 		<h2 class="style-header loud-voice"><?=$title1?> <?=$title2?></h2>
 		
 		<?php include("modules/$module/$module.php"); ?>
-		<detail-link><?php styleGuideDetailLink($module, $pageData["slug"]); ?></detail-link>
+
+		<detail-link>
+			<?php styleGuideDetailLink($module, $pageData["slug"]); ?>
+		</detail-link>
 	</section>
 
 <?php } ?>
@@ -22,10 +25,10 @@
 	<h2 class="style-header loud-voice">Typography</h2>
 	<div class="typography-examples">
 		<h3 class="alert-voice">Font Family: Rubik</h3>
-		<p class="normal-voice">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
-		<p class="normal-voice">a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
-		<p class="normal-voice">1 2 3 4 5 6 7 8 9 0</p>
-		<p class="normal-voice">! @ # $ % ^ & * ( ) _ + = , . / < > ? ; ' : " [ ] { } \ | ~ `</p>
+		<p class="normal-voice">abcdefghijklmnopqrstuvwxyz</p>
+		<p class="normal-voice">abcdefghijklmnopqrstuvwxyz</p>
+		<p class="normal-voice">1234567890</p>
+		<p class="normal-voice">!@#$%&()_[]\{}|;:,./<>+?~`^*'"</p>
 	</div>
 </section>
 
