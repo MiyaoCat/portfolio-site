@@ -48,6 +48,6 @@
 	}
 }
 
-.module-template .module.figure {
+body.module.module-template:nth-child(5) {
 	justify-items: end;
 }
