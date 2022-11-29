@@ -1,6 +1,6 @@
 
 <div class="instructions">
-	<p class="normal-voice">Enter the number of people and pizzas at the party and we'll tell you how many slices each person gets! test</p>
+	<p class="normal-voice">Enter the number of people and pizzas at the party and we'll tell you how many slices each person gets assuming each pie has 8 slices.</p>
 </div>
 	<?php 
 	//prompt number of pizza
@@ -58,6 +58,7 @@
 
 	<div class="entry people">
 	 	<p class="normal-voice">How many people will be attending?</p>
+
 		<input 
 			type="number" 
 			name="people" 
@@ -77,6 +78,7 @@
 
 	<div class="entry pizza">
 	 	<p class="normal-voice">How many pizzas do you think you'll purchase?</p>
+
 		<input 
 			type="number" 
 			name="pizza" 
