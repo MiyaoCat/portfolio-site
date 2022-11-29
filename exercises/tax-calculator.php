@@ -21,40 +21,74 @@
 // Then only supply the order amount. 
 
 	$state = "";
-	$totalWI = 0;
+	$total = 0;
 	$order = 0;
+	$tax = 0;
 
 	if ( isset($_POST["submitted"]) ) {
 		$order = $_POST["order-amount"];
 		$state = $_POST["state-selected"];
 
-		if ($state == "wi" OR "WI" OR "Wi" OR "iW" OR "Wisconsin" OR "wisconsin" OR "WISCONSIN") ;
+		if ($state == "CA") {
+			$tax = .0725;
+		};
 
-// 		if ($state !== "wi" OR "WI" OR "Wi" OR "iW" OR "Wisconsin" OR "wisconsin" OR "WISCONSIN") {
-// 			echo "<output> Your total is " . $order . "</output>";
-// 		}
+		if ($state == "FL") {
+			$tax = .06;
+		};
+
+		if ($state == "HI") {
+			$tax = .04;
+		};
+
+		if ($state == "NY") {
+			$tax = .04;
+		};
+
+		if ($state == "OR") {
+			$tax = 0;
+		};
+
+		if ($state == "WA") {
+			$tax = .065;
+		};
+
+		if ($state == "WI") {
+			$tax = .05;
+		};
+
+		if ($state == "WY") {
+			$tax = .04;
+		};
 	} 
 
+	$total = $order * (1 + $tax);
 ?>
 
 <form method="POST">
+	<p class="calm-voice">Enter the price of your item</p>	
 	<input 
 		type="number"
 		name="order-amount"
 		value = "<?=$order?>"
 		step=".01"
 		placeholder="Enter a number"
-
 	>
 
-	<input 
-		type="text"
-		name="state-selected"
-		value="<?=$state?>"
-		placeholder="Enter a state"
+	<label for="state-selected">Please select a state:</label>
 
-	>
+	<select name="state-selected" id="state">
+		<option value="">--Select a State--</option>
 
+		<option value="CA">CA</option>
+		<option value="FL">FL</option>
+		<option value="HI">HI</option>
+		<option value="NY">NY</option>
+		<option value="OR">OR</option>
+		<option value="WA">WA</option>
+		<option value="WI">WI</option>
+		<option value="WY">WY</option>
+	</select>
 	<button type="submit" name="submitted">Submit</button>
 </form>
 
@@ -62,7 +96,10 @@
 	if ( isset($_POST["submitted"]) ) {
 ?>
 	<output>
-		<?=$totalWI?>
+		<p class="normal-voice"><?=$state?> has a tax rate of <?=100*$tax?>%</p>
+
+		<p class="normal-voice">Your tax amount is: $<?=$total - $order?></p>
+		<p class="normal-voice">Your grand total is: $<?=$total?> </p>
 	</output>
 
 <?php } ?>

@@ -105,6 +105,7 @@ $tipAmount = number_format($subTotal * $tipPercent - $subTotal, 2);
 				</td>
 				<td><p><b>$<?=$tipAmount?></b></p></td>
 			</tr>
+			
 			<tr>
 				<td>
 					<p class="normal-voice">Your grand total is:</p>
