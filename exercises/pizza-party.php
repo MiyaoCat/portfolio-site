@@ -21,28 +21,12 @@
 
 		if ( isset($_POST['pizza']) ) {
 			$pizza = $_POST['pizza'];
-
-			// if ( empty($pizza) ) {
-			// 		$pizza = 0;
-			// 	} else {
-			// 		$valueError = "If you don't buy anything, you don't owe anything. Enter a pizza!";
-			// 	}
 		}
 
 		if ( isset($_POST['people']) ) {
 			$people = $_POST['people'];
-
-			// if ( empty($people) ) {
-			// 		$people = 0;
-			// 	}
-				
-			// 	if ($people > 0 ) {
-			// 		$haspeople = true;
-
-			// 	} else {
-			// 		$valueError = "If you don't buy anything, you don't owe anything. Enter a people!";
-		// 		}
 		} 
+
 		$leftOverSlices = "";
 		$totalSlices = "";
 		$slicesPerPerson = "";
@@ -51,7 +35,7 @@
 		$leftOverSlices = $totalSlices % $people;
 
 		$slicesPerPerson = ($totalSlices - $leftOverSlices) / $people;
-		$message = "There are $slicesPerPerson slices per person and $leftOverSlices slices left over. Go party!";
+		$message = "There will be $slicesPerPerson slices per person and $leftOverSlices slices left over. Go party!";
 	}
 ?>
 <form method="POST">
@@ -100,14 +84,11 @@
 	<button type="submit" name="submitted">Submit</button>
 </form>
 				
-			
-<output>
-	<?php if ( isset($_POST['submitted']) ) { ?>
-	
-		<p><?=$message?></p>		
-			
-	<?php } ?>
-</output>
-			
+<?php if ( isset($_POST['submitted']) ) { ?>			
+	<output>
+		<p class="normal-voice"><?=$message?></p>		
+	</output>
+<?php } ?>			
+
 			
 			
