@@ -2,19 +2,20 @@
 $age = 0;
 $message = "";
 
+$submittedPOST = isset($_POST["submitted"]);
 // prompt for the user's age (from input below)
-	if ( isset($_POST["submitted"]) ) {
+	if ($submittedPOST) {
 		$age = $_POST["age"];
 
 		if ( empty($age) ) {
 
-			echo "<output>YOU ARE UNBORN</output>";
+			$message = "YOU ARE UNBORN";
 		} 
 		// If their age is less than 16 return message they're too young
 		// If their age is equal to or greater than 16, return message they can drive
 
 		if ($age > 0) {
-			$message = ( $age >= 16 ? "You may drive" : "You're too young son!");
+			$message = ( $age >= 16 ? "You may drive" : "You're too young kiddo!");
 		}
 		
 	} 
@@ -29,20 +30,21 @@ $message = "";
 </div>
 
 <form method="POST">
+	<p class="normal-voice">Enter your age:</p>
 	<input 
 		type="number"
 		name="age"
 		
 		step="1"
-		placeholder="Enter your age"
+		placeholder="age"
 
 	>
 
 	<button type="submit" name="submitted">Submit</button>
 </form>
 
-<output>
-	<?php if ( isset($_POST["submitted"]) ) { ?>
-	<?=$message?>
+<?php if ($submittedPOST ) { ?>
+	<output>
+		<?=$message?>
+	</output>
 <?php } ?>
-</output>
