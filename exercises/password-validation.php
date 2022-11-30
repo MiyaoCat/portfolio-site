@@ -31,18 +31,25 @@
 			<input type="text" name="password" value="<?=$passwordEnter?>">
 		</form-wrap>
 
+		<?php  
+			$passwordEnter = "";
+			if ($submitted) {
+				if ($passwordEnter == $password) {
+		?>
+			<output>
+				Correct!
+			</output>
+				<?php } ?>
+			<?php } 
+				else { ?>
+
+			<output>
+				wrong!
+			</output>
+					
+			<?php } ?>		
 	<?php } ?>
 	<button type="submit" name="submitted">Submit</button>
 
 </form>
 
-<?php  
-	$passwordEnter = "";
-	if ($submitted) {
-		if ($password == $passwordEnter) {
-?>
-<output>
-	Correct!
-</output>
-	<?php } ?>
-<?php } ?>
