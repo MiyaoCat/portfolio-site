@@ -88,6 +88,13 @@
 				"intro": "Use this to find out how much you should tip",
 				"slug": "temperature-converter",
 				"conclusion": "Here's what I learned" 
+			},
+			{
+				"title1": "Password",
+				"title2": "Validation",
+				"intro": "Use this to find out how much you should tip",
+				"slug": "password-validation",
+				"conclusion": "Here's what I learned" 
 			}
 		]
 	}
