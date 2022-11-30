@@ -24,8 +24,11 @@
 	$total = 0;
 	$order = 0;
 	$tax = 0;
+	$message = "";
+	$orderMessage = "";
+	$submitted = isset($_POST["submitted"]);
 
-	if ( isset($_POST["submitted"]) ) {
+	if ( $submitted ) {
 		$order = $_POST["order-amount"];
 		$state = $_POST["state-selected"];
 
@@ -59,14 +62,26 @@
 
 		if ($state == "WY") {
 			$tax = .04;
-		};
+		} 
 	} 
+	
+	$total = number_format($order * (1 + $tax), 2);
 
-	$total = $order * (1 + $tax);
+	if ($submitted) {
+		if ($state == "") {
+			$message = "<p class='calm-voice warning'>You didn't select a state!</p>";
+		}
+	}	
+
+	if ($submitted) {
+		if ($order == 0) {
+			$orderMessage = "<p class='calm-voice warning'>Either you're stealing or it's free</p>";
+		}
+	}
 ?>
 
 <form method="POST">
-	<p class="calm-voice">Enter the price of your item</p>	
+	<p class="normal-voice">Enter the price of your item.</p>	
 	<input 
 		type="number"
 		name="order-amount"
@@ -74,8 +89,13 @@
 		step=".01"
 		placeholder="Enter a number"
 	>
+	<?php if($orderMessage) { ?>
+		<error>
+			<p class="error calm-voice"><?=$orderMessage?></p>
+		</error>
+	<?php } ?>
 
-	<label for="state-selected">Please select a state:</label>
+	<label for="state-selected" class="normal-voice">Please select a state:</label>
 
 	<select name="state-selected" id="state">
 		<option value="">--Select a State--</option>
@@ -89,19 +109,27 @@
 		<option value="WI">WI</option>
 		<option value="WY">WY</option>
 	</select>
+
+	<?php if($message) { ?>
+		<error>
+			<p class="error calm-voice"><?=$message?></p>
+		</error>
+	<?php } ?>
+
 	<button type="submit" name="submitted">Submit</button>
 </form>
 
 <?php  
-	if ( isset($_POST["submitted"]) ) {
+	if ( $submitted ) {
+
+		if ($order > 0) {
+		if ($state !== "") {
 ?>
 	<output>
 		<p class="normal-voice"><?=$state?> has a tax rate of <?=100*$tax?>%</p>
-
 		<p class="normal-voice">Your tax amount is: $<?=$total - $order?></p>
 		<p class="normal-voice">Your grand total is: $<?=$total?> </p>
 	</output>
-
+	<?php } ?>
+	<?php } ?>
 <?php } ?>
-
-

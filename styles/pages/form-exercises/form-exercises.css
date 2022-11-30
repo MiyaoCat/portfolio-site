@@ -89,7 +89,7 @@ output {
 
 .warning {
 	color: red;
-	font-size: ;
+	margin-top: 5px;
 }
 
 @media (min-width: 550px) {
@@ -126,11 +126,4 @@ output {
 	}
 }
 
-/* - - TIP-CALCULATOR - - - - - - - - - - - - - - - */
-td:nth-of-type(2) {
-	padding-left: 20px;
-}
 
-.tip-select {
-	margin: 15px 0;
-}
