@@ -74,7 +74,7 @@
 	}	
 
 	if ($submitted) {
-		if ($order == 0) {
+		if ($order <= 0) {
 			$orderMessage = "<p class='calm-voice warning'>Either you're stealing or it's free</p>";
 		}
 	}
@@ -110,11 +110,13 @@
 		<option value="WY">WY</option>
 	</select>
 
-	<?php if($message) { ?>
+	
 		<error>
+			<?php if($message) { ?>
 			<p class="error calm-voice"><?=$message?></p>
+			<?php } ?>
 		</error>
-	<?php } ?>
+	
 
 	<button type="submit" name="submitted">Submit</button>
 </form>
