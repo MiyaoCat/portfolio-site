@@ -21,16 +21,26 @@
 	grid-column: 2 / 14;
 }
 
+/* - - - - PASSWORD VALIDATION - - -*/
 .exercise form.password {
 	grid-row: 7;
 }
 
+.password-create {
+	display: flex;
+	flex-direction: column;
+}
 form-wrap {
 	display: flex;
 	flex-direction: column;
 	grid-row: 8;
 	grid-column: 2 / 14;
 }
+
+form-wrap .hidden {
+	display: none;
+}
+
 .exercise input {
 	margin: 5px 0;
 	max-width: 250px;
