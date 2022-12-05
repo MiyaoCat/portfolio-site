@@ -1,0 +1,60 @@
+[
+	{
+		"state": "CA",
+		"tax": 7.5,
+		"counties" : [
+			{
+				"county": "alameda",
+				"tax": 10.75
+			},
+			{
+				"county": "san fancisco",
+				"tax": 8.625
+			},
+			{
+				"county": "alameda",
+				"tax": 8.75
+			},
+			{
+				"county": "los angeles",
+				"tax": 9.5
+			}
+		]
+	},
+	{
+		"state": "OR",
+		"tax": 0,
+		"counties" : [
+			{
+				"county": "baker",
+				"tax": 0
+			},
+			{
+				"county": "deschutes",
+				"tax": 0
+			},
+			{
+				"county": "hood river",
+				"tax": 0
+			}
+		]
+	},
+	{
+		"state": "WA",
+		"tax": 7.5,
+		"counties" : [
+			{
+				"county": "king",
+				"tax": 10.5
+			},
+			{
+				"county": "spokane",
+				"tax": 9.1
+			},
+			{
+				"county": "yakima",
+				"tax": 8.7
+			}
+		]
+	}
+]
