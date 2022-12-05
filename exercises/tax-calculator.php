@@ -7,7 +7,7 @@ $stateSelected = "";
 $order = "";
 $orderMessage = "";
 $message = "";
-
+// $tax = 0;
 
 
 if($submitted) {
@@ -16,15 +16,17 @@ if($submitted) {
 	foreach($taxData as $states) {
 		$state = $states["state"];
 
-		$tax = $states["tax"] / 100;
+		
 	
 		if ($_POST["state-selected"] == $state) {
-			echo "<output>" . $state . " " . $tax . "</output>";
+			$tax = $states["tax"] / 100;
 		}
 	}
+
+	$total = number_format($order * (1 + $tax), 2);
 }
 
-$total = number_format($order * (1 + $tax), 2);
+
 
 ?>
 
