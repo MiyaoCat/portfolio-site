@@ -7,18 +7,17 @@ $stateSelected = "";
 $order = "";
 $orderMessage = "";
 $message = "";
-// $tax = 0;
+$tax = 0;
 
 
 if($submitted) {
-	$order = $_POST["order-amount"];
+	$order = isset($_POST["order-amount"]);
+	$stateSelected = $_POST["state-selected"];
 
 	foreach($taxData as $states) {
 		$state = $states["state"];
-
-		
 	
-		if ($_POST["state-selected"] == $state) {
+		if ($stateSelected == $state) {
 			$tax = $states["tax"] / 100;
 		}
 	}
@@ -26,7 +25,17 @@ if($submitted) {
 	$total = number_format($order * (1 + $tax), 2);
 }
 
+if ($submitted) {
+	if ($stateSelected == "") {
+		$message = "<p class='calm-voice warning'>You didn't select a state!</p>";
+	}
+}	
 
+if ($submitted) {
+	if ($_POST["order-amount"] <= 0) {
+		$orderMessage = "<p class='calm-voice warning'>Either you're stealing or it's free</p>";
+	}
+}
 
 ?>
 
