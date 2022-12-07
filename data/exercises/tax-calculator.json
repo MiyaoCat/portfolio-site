@@ -1,6 +1,6 @@
 [
 	{
-		"state": "CA",
+		"id": "CA",
 		"tax": 7.5,
 		"counties" : [
 			{
@@ -14,15 +14,11 @@
 			{
 				"county": "alameda",
 				"tax": 8.75
-			},
-			{
-				"county": "los angeles",
-				"tax": 9.5
 			}
 		]
 	},
 	{
-		"state": "OR",
+		"id": "OR",
 		"tax": 0,
 		"counties" : [
 			{
@@ -40,8 +36,8 @@
 		]
 	},
 	{
-		"state": "WA",
-		"tax": 7.5,
+		"id": "WA",
+		"tax": 8.5,
 		"counties" : [
 			{
 				"county": "king",

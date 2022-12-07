@@ -4,28 +4,35 @@ $taxData = json_decode($json, true);
 
 $submitted = isset($_POST["submitted"]);
 $stateSelected = "";
-$order = "";
+$order = 10;
 $orderMessage = "";
 $message = "";
 $tax = 0;
+var_dump($_POST);
 
+function total($taxData, $choice) {
+	if( isset($choice["submitted"]) ) {
+		$order = isset($choice["order-amount"]);
+		$stateSelected = $choice["state-selected"];
 
-if($submitted) {
-	$order = isset($_POST["order-amount"]);
-	$stateSelected = $_POST["state-selected"];
-
-	foreach($taxData as $states) {
-		$state = $states["state"];
-	
-		if ($stateSelected == $state) {
-			$tax = $states["tax"] / 100;
+		foreach($taxData as $state) {
+			$id = $state["id"];
+		
+			if ($stateSelected == $id) {
+				$tax = $state["tax"] / 100;
+			}
 		}
-	}
 
-	$total = number_format($order * (1 + $tax), 2);
+		return number_format($order * (1 + $tax), 2);
+	}
 }
 
+echo total($taxData, $_POST);
+
 if ($submitted) {
+	if ( isset($_POST["state-selected"]) ) { 
+		$stateSelected = $_POST["state-selected"];
+	}
 	if ($stateSelected == "") {
 		$message = "<p class='calm-voice warning'>You didn't select a state!</p>";
 	}
@@ -37,6 +44,11 @@ if ($submitted) {
 	}
 }
 
+function isSelected($chosen, $current) {
+	if ($chosen == $current) {
+		return "selected";
+	}
+}
 ?>
 
 <form method="POST">
@@ -44,9 +56,10 @@ if ($submitted) {
 	<input 
 		type="number"
 		name="order-amount"
-		value = "<?=$order?>"
+		value="<?=$order?>"
 		step=".01"
 		placeholder="Enter a number"
+		autocomplete="off"
 	>
 	<?php if($orderMessage) { ?>
 		<error>
@@ -59,12 +72,17 @@ if ($submitted) {
 	<select name="state-selected" id="state">
 		<option value="">--Select a State--</option>
 
-		<option value="CA">CA</option>
-		<option value="OR">OR</option>
-		<option value="WA">WA</option>
+		<?php 
+			foreach($taxData as $state) {
+				$id = $state["id"];		
+		?>
+			<option value="<?=$id?>" <?=isSelected($stateSelected, $id)?>><?=$id?>
+				
+			</option>
+		<?php } ?>
 	</select>
 
-	
+		
 		<error>
 			<?php if($message) { ?>
 			<p class="error calm-voice"><?=$message?></p>
@@ -78,13 +96,20 @@ if ($submitted) {
 <?php  
 	if ( $submitted ) {
 		if ($order > 0) {
-		if ($_POST["state-selected"] !== "") {
+			if ($_POST["state-selected"] !== "") {
 ?>
 	<output>
 		<p class="normal-voice"><?=$_POST["state-selected"]?> has a tax rate of <?=100*$tax?>%</p>
-		<p class="normal-voice">Your tax amount is: $<?=$total - $order?></p>
-		<p class="normal-voice">Your grand total is: $<?=$total?> </p>
+		<p class="normal-voice">Your tax amount is: $<?=total($taxData, $_POST) - $order?></p>
+		<p class="normal-voice">Your grand total is: $<?=total($taxData, $_POST)?> </p>
 	</output>
-	<?php } ?>
+		<?php } ?>
 	<?php } ?>
 <?php } ?>
+
+
+
+
+
+
+
