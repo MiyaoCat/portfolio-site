@@ -5,6 +5,9 @@
 	$word = 0;
 	$message = 0;
 	$errorMessage = "";
+	$messageWithSpaces = "";
+	$messageWords = "";
+
 
 	if ( isset($_POST["string"]) ) {
 		$string = $_POST["string"];
@@ -18,7 +21,9 @@
 			$lengthWithSpaces = strlen($string);
 			$word = str_word_count($string, 0);
 
-			$message = "<output>You entered \"<span>$string</span>\". It is <span class='length'>$length</span> characters long without spaces</output>";
+			$message = "It is $length characters long without spaces.";
+			$messageWithSpaces = "Or it's $lengthWithSpaces characters WITH spaces.";
+			$messageWords = "Or it's $word word(s).";
 		}
 	}
 
@@ -42,33 +47,28 @@
 	<button type="submit" name="enter">Submit</button>
  </form>
 
+<?php 
+	if ( isset($_POST["string"]) && $string != "") { 
+?>
 
-<?=$message?>
+	<output>
+		<ul>
+			<li>
+				<p class="normal-voice">You entered "<?=$string?>".</p>
+			</li>
+			<li>
+				<p class="normal-voice"><?=$message?></p>
+			</li>
+			<li>
+				<p class="normal-voice"><?=$messageWithSpaces?></p>
+			</li>
+			<li>
+				<p class="normal-voice"><?=$messageWords?></p>
+			</li>
+		</ul>
+	</output>
 
-
-	
-
-
-
-
-
-
-<div class="test" style="grid-row: 8; grid-column: 4 / 10;">
-	<?php
-$a = 10;
-echo 'Value of $a is :'.$a;
-echo '<br />After Pre-increment value of $a ( i.e. ++$a ) is: '.++$a;
-$a = 20;
-echo '<br />Value of $a is :'.$a;
-echo '<br />After Post-increment value of $a ( i.e. $a++ ) is: '.$a++;
-$a = 30;
-echo '<br />Value of $a is :'.$a;
-echo '<br />After Pre-decrement value of $a ( i.e. --$a ) is: '.--$a;
-$a = 40;
-echo '<br />Value of $a is :'.$a;
-echo '<br />After Post-decrement value of $a ( i.e. $a-- ) is: '.$a--;
-	?>
-</div>
+<?php } ?>
 
 
 
