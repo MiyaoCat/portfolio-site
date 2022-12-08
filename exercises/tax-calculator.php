@@ -49,6 +49,15 @@ function isSelected($chosen, $current) {
 		return "selected";
 	}
 }
+
+
+function output() {
+	if (isset($_POST["submitted"]) && $_POST["order-amount"] > 0 && $_POST["state-selected"] !== "") {
+		
+	}
+	
+}
+
 ?>
 
 <form method="POST">
@@ -93,19 +102,13 @@ function isSelected($chosen, $current) {
 	<button type="submit" name="submitted">Submit</button>
 </form>
 
-<?php  
-	if ( $submitted ) {
-		if ($order > 0) {
-			if ($_POST["state-selected"] !== "") {
-?>
 	<output>
-		<p class="normal-voice"><?=$_POST["state-selected"]?> has a tax rate of <?=100*$tax?>%</p>
-		<p class="normal-voice">Your tax amount is: $<?=total($taxData, $_POST) - $order?></p>
-		<p class="normal-voice">Your grand total is: $<?=total($taxData, $_POST)?> </p>
+		<p class="normal-voice"><?=$_POST["state-selected"]?> has a tax rate of <?=$tax?>%</p>
+		<p class="normal-voice">Your tax amount is: $<?=total($taxData, $_POST)?></p>
+		<p class="normal-voice">Your grand total is: $<?=total($taxData, $_POST) + $order?> </p>
+		<p><?=output()?></p>
 	</output>
-		<?php } ?>
-	<?php } ?>
-<?php } ?>
+
 
 
 

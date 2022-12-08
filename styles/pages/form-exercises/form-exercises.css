@@ -107,9 +107,10 @@ output {
 	padding: 5px;
 }
 
-.warning {
+.warning, error {
 	color: red;
 	margin-top: 5px;
+	display: block;
 }
 
 @media (min-width: 550px) {
