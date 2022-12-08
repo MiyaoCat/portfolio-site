@@ -9,13 +9,13 @@ $submittedPOST = isset($_POST["submitted"]);
 
 		if ( empty($age) ) {
 
-			$message = "YOU ARE UNBORN";
+			$message = "<output>YOU ARE UNBORN</output>";
 		} 
 		// If their age is less than 16 return message they're too young
 		// If their age is equal to or greater than 16, return message they can drive
 
 		if ($age > 0) {
-			$message = ( $age >= 16 ? "You may drive" : "You're too young kiddo!");
+			$message = ($age >= 16 ? "<output>You may drive</output>" : "<output>You're too young kiddo!</output>");
 		}
 		
 	} 
@@ -43,8 +43,5 @@ $submittedPOST = isset($_POST["submitted"]);
 	<button type="submit" name="submitted">Submit</button>
 </form>
 
-<?php if ($submittedPOST ) { ?>
-	<output>
-		<?=$message?>
-	</output>
-<?php } ?>
+
+<?=$message?>
