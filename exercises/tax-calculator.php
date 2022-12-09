@@ -51,15 +51,10 @@ function isSelected($chosen, $current) {
 }
 
 
-function output() {
-	if (isset($_POST["submitted"]) && $_POST["order-amount"] > 0 && $_POST["state-selected"] !== "") {
-		
-	}
-	
-}
 
 ?>
 
+<h3 class="attention-voice"><a href="#">Reset</a></h3>
 <form method="POST">
 	<p class="normal-voice">Enter the price of your item.</p>	
 	<input 
@@ -106,7 +101,6 @@ function output() {
 		<p class="normal-voice"><?=$_POST["state-selected"]?> has a tax rate of <?=$tax?>%</p>
 		<p class="normal-voice">Your tax amount is: $<?=total($taxData, $_POST)?></p>
 		<p class="normal-voice">Your grand total is: $<?=total($taxData, $_POST) + $order?> </p>
-		<p><?=output()?></p>
 	</output>
 
 
