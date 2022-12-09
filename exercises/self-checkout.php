@@ -196,9 +196,9 @@ if ( isset($_POST['submitted']) ) {
 				>
 	
 				<?php if($valueError) {?>
-					<error>
-						<p class="error calm-voice"><?=$valueError?></p>
-					</error>
+
+						<p class="calm-voice warning"><?=$valueError?></p>
+
 				<?php } ?>	
 			</quantity>		
 	
@@ -213,9 +213,7 @@ if ( isset($_POST['submitted']) ) {
 					placeholder="0.00">
 	
 				<?php if($priceValueError) {?>
-				<error>
-					<!-- <p class="error calm-voice"><?=$priceValueError?></p> -->
-				</error>
+					<!-- <p class="calm-voice warning"><?=$priceValueError?></p> -->
 				<?php } ?>	
 	
 			</price>
@@ -237,9 +235,7 @@ if ( isset($_POST['submitted']) ) {
 					label="write your number">
 	
 				<?php if($valueError2) {?>
-				<error>
-					<!-- <p class="error calm-voice"><?=$valueError2?></p> -->
-				</error>
+					<!-- <p class="calm-voice warning"><?=$valueError2?></p> -->
 				<?php } ?>	
 			</quantity>		
 	
@@ -254,9 +250,7 @@ if ( isset($_POST['submitted']) ) {
 					placeholder="0.00">
 	
 				<?php if($priceValueError2) {?>
-				<error>
-					<!-- <p class="error calm-voice"><?=$priceValueError2?></p> -->
-				</error>
+					<!-- <p class="calm-voice warning"><?=$priceValueError2?></p> -->
 				<?php } ?>	
 			</price>
 	 	</div>
@@ -278,9 +272,7 @@ if ( isset($_POST['submitted']) ) {
 					label="write your number">
 	
 				<?php if($valueError3) {?>
-				<error>
-					<!-- <p class="error calm-voice"><?=$valueError3?></p> -->
-				</error>
+					<!-- <p class="calm-voice warning"><?=$valueError3?></p> -->
 				<?php } ?>	
 			</quantity>		
 	
@@ -295,9 +287,7 @@ if ( isset($_POST['submitted']) ) {
 					placeholder="0.00">
 	
 				<?php if($priceValueError3) {?>
-				<error>
-					<!-- <p class="error calm-voice"><?=$priceValueError3?></p> -->
-				</error>
+					<!-- <p class="calm-voice warning"><?=$priceValueError3?></p> -->
 				<?php } ?>	
 			</price>
 	 	</div>
@@ -318,9 +308,7 @@ if ( isset($_POST['submitted']) ) {
 					label="write your number">
 			
 				<?php if($valueError4) {?>
-				<error>
-					<!-- <p class="error calm-voice"><?=$valueError4?></p> -->
-				</error>
+					<!-- <p class="calm-voice warning"><?=$valueError4?></p> -->
 				<?php } ?>	
 			</quantity>		
 			
@@ -335,9 +323,7 @@ if ( isset($_POST['submitted']) ) {
 					placeholder="0.00">
 			
 				<?php if($priceValueError4) {?>
-				<error>
-					<!-- <p class="error calm-voice"><?=$priceValueError4?></p> -->
-				</error>
+					<!-- <p class="calm-voice warning"><?=$priceValueError4?></p> -->
 				<?php } ?>	
 			</price>
 		</div>
