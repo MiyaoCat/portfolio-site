@@ -12,8 +12,6 @@ $imagesRand = $images[rand(0,4)];
 $message = "";
 
 function randomMessage($imageData, $inputName) {
-	//Get the input name
-
 	//Return a message and include a random image from the array
 	return "Hi, " . $inputName . "! It's nice to meet you. Here is your random quote." . "<picture><img src='" . $imageData . "'></picture>";	
 }
@@ -44,14 +42,14 @@ function emptyMessage($inputName) {
 		placeholder="Enter your government name"
 	>
 
-	<warning-message>
+	<p class="calm-voice warning">
 		<?php 
 			if ( isset($_POST["name"]) ) { 
 				echo blankMessage($_POST["name"]); 
 				echo emptyMessage($_POST["name"]);
 			}
 		?>				
-	</warning-message>
+	</p>
 
 	<button type="submit" name="submitted">
 		Submit
@@ -62,6 +60,8 @@ function emptyMessage($inputName) {
 	if ( isset( $_POST["name"]) && !empty($_POST["name"]) && !ctype_space($_POST["name"]) ) { 
 ?>
 	<output>
-		<?php echo randomMessage($imagesRand, $_POST["name"]); ?>
+		<p class="normal-voice">
+			<?php echo randomMessage($imagesRand, $_POST["name"]); ?>
+		</p>
 	</output>
 <?php } ?>

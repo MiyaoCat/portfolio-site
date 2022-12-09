@@ -22,8 +22,8 @@
 			$word = str_word_count($string, 0);
 
 			$message = "It is $length characters long without spaces.";
-			$messageWithSpaces = "Or it's $lengthWithSpaces characters WITH spaces.";
-			$messageWords = "Or it's $word word(s).";
+			$messageWithSpaces = "With spaces its $lengthWithSpaces characters.";
+			$messageWords = "It has $word word(s).";
 		}
 	}
 
