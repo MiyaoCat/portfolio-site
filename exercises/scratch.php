@@ -228,6 +228,63 @@
 <?php } ?>
 </output>
 
+<!-- -- -- -- -- -- SIMPLE MATH -- -- -- -- -- -- -->
+
+<?php 
+	$number1 = "";
+	$number2 = "";
+
+	if ( isset ($_POST["number1"]) ) {
+		$number1 = $_POST["number1"];
+	}
+
+	if ( isset ($_POST["number2"]) ) {
+		$number2 = $_POST["number2"];
+
+		$add = number_format($number1 + $number2, 2, '.', ',');
+		$subtract = number_format($number1 - $number2, 2, '.', ',');
+		$multiply = number_format($number1 * $number2, 2, '.', ',');
+		$divide = number_format($number1 / $number2, 2, '.', ',');
+	}			
+?>
+		
+<form method="POST">
+	<h1 class="loud-voice">Let's do Math!</h1>
+
+	<div class="instructions">
+		<p class="regular-voice">Just type in your numbers and watch the magic happen!</p>
+	</div>
+	
+	<input 
+		type="number" 
+		name="number1" 
+		value="<?=$number1?>"
+		step="any"
+		placeholder="Enter your first number"
+		required>
+	<p class="calm-voice warning"></p>
+
+	<input 
+		type="number" 
+		name="number2" 
+		value="<?=$number2?>"
+		step="any"
+		placeholder="Enter your second number"
+		required>
+	<p class="calm-voice warning"></p>
+	
+	<button type="submit" name="submitted">Submit</button>
+</form>
+
+<?php if ( isset($_POST["submitted"]) ) { ?>	
+	<output>
+		<p class="normal-voice">You entered <?=$number1?> & <?=$number2?>.</p>
+		<p>Addition: <span class="special"><?=$add?></span></p>
+		<p>Subtraction: <span class="special"><?=$subtract?></span></p>
+		<p>Multiplication: <span class="special"><?=$multiply?></span></p>
+		<p>Division: <span class="special"><?=$divide?></span></p>
+<?php } ?>	
+	</output>
 
 
 
@@ -357,8 +414,33 @@ echo "<li>Total: $prettyTotal</li>";
 echo "</ul>";
 
 
+?>
 
+<?php 
+function isAnagram($word1, $word2) {
+  // First, make sure that both words are the same length
+  if (strlen($word1) != strlen($word2)) {
+    return false;
+  }
 
+  // Then, convert the words to lowercase and sort the characters
+  $word1 = strtolower($word1);
+  $word1 = str_split($word1);
+  sort($word1);
+  $word1 = implode($word1);
 
+  $word2 = strtolower($word2);
+  $word2 = str_split($word2);
+  sort($word2);
+  $word2 = implode($word2);
+
+  // Finally, compare the sorted words to see if they are the same
+  if ($word1 == $word2) {
+    return true;
+  } else {
+    return false;
+  }
+}
+ ?>
 
 

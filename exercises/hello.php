@@ -12,7 +12,7 @@ $imagesRand = $images[rand(0,4)];
 $message = "";
 
 function randomMessage($imageData, $inputName) {
-	if ( isset($_POST["submitted"]) && isset( $inputName) ) { 
+	if ( isset($_POST["submitted"]) && isset($inputName) ) { 
 		
 		//Return a message and include a random image from the array
 		return "Hi, " . $inputName . "! It's nice to meet you. Here is your random quote." . "<picture><img src='" . $imageData . "'></picture>";	
@@ -21,7 +21,7 @@ function randomMessage($imageData, $inputName) {
 
 //If the input is blank, send an error message
 function blankMessage($inputName) {
-	if( empty($inputName)) {
+	if( isset($_POST["name"]) && empty($inputName)) {
 		return "You didn't enter anything, bruv.";
 	}
 }

@@ -1,19 +1,58 @@
 <?php 
-	$number1 = "";
-	$number2 = "";
+	// $number1 = "";
+	// $number2 = "";
+	$message = "";
 
-	if ( isset ($_POST["number1"]) ) {
-		$number1 = $_POST["number1"];
-	}
+	// if ( isset ($_POST["number1"]) ) {
+	// 	$number1 = floatval($_POST["number1"]);
+	// }
 
-	if ( isset ($_POST["number2"]) ) {
-		$number2 = $_POST["number2"];
+	// if ( isset ($_POST["number2"]) ) {
+	// 	$number2 = floatval($_POST["number2"]);
+	// } 
 
-		$add = number_format($number1 + $number2, 2, '.', ',');
-		$subtract = number_format($number1 - $number2, 2, '.', ',');
-		$multiply = number_format($number1 * $number2, 2, '.', ',');
-		$divide = number_format($number1 / $number2, 2, '.', ',');
-	}			
+	// if ( isset($_POST["submitted"]) ) {
+	// 	if ( empty($_POST["number1"]) or empty($_POST["number2"]) ) {
+
+	// 		$message = "Please enter a number";
+
+	// 	}
+	// }
+
+	// $add = number_format($number1 + $number2, 2, '.', ',');
+	// $subtract = number_format($number1 - $number2, 2, '.', ',');
+	// $multiply = number_format($number1 * $number2, 2, '.', ',');
+	// $divide = number_format($number1 / $number2, 2, '.', ',');			
+
+	function add($inputNumber1, $inputNumber2) {
+		if ( isset($inputNumber1) && isset($inputNumber2) ) {
+			return number_format($inputNumber1 + $inputNumber2, 2, '.', ',');
+		}
+	};
+
+	function subtract($inputNumber1, $inputNumber2) {
+		if ( isset($inputNumber1) && isset($inputNumber2) ) {
+			return number_format($inputNumber1 - $inputNumber2, 2, '.', ',');
+		}		
+	};
+
+	function multiply($inputNumber1, $inputNumber2) {
+		if ( isset($inputNumber1) && isset($inputNumber2) ) {
+			return number_format($inputNumber1 * $inputNumber2, 2, '.', ',');
+		}		
+	};
+
+	function divide($inputNumber1, $inputNumber2) {
+		if ( isset($inputNumber1) && isset($inputNumber2) ) {
+			if ($inputNumber2 !== 0) {
+				return number_format($inputNumber1 / $inputNumber2, 2, '.', ',');	
+			}
+		}
+		if ($inputNumber2 == 0) {
+			return $message = "Undefined. 0 has no multiplicative inverse."; 
+		}		
+	};
+
 ?>
 		
 <form method="POST">
@@ -26,28 +65,37 @@
 	<input 
 		type="number" 
 		name="number1" 
-		value="<?=$number1?>"
 		step="any"
 		placeholder="Enter your first number"
-		required>
-
+	>
+	
+		<p class="calm-voice warning"><?=$message?></p>
+	
 	<input 
 		type="number" 
 		name="number2" 
-		value="<?=$number2?>"
 		step="any"
 		placeholder="Enter your second number"
-		required>
+	>
+	<p class="calm-voice warning"><?=$message?></p>
 
 	<button type="submit" name="submitted">Submit</button>
 </form>
 
-<?php if ( isset($_POST["submitted"]) ) { ?>	
+<?php if ( isset($_POST["submitted"]) && ($_POST["number1"] != "") && ($_POST["number2"] != "") ) { ?>	
+
 	<output>
-		<p class="normal-voice">You entered <?=$number1?> & <?=$number2?>.</p>
-		<p>Addition: <span class="special"><?=$add?></span></p>
-		<p>Subtraction: <span class="special"><?=$subtract?></span></p>
-		<p>Multiplication: <span class="special"><?=$multiply?></span></p>
-		<p>Division: <span class="special"><?=$divide?></span></p>
-<?php } ?>	
+		<p class="normal-voice">You entered <?=$_POST["number1"]?> & <?=$_POST["number2"]?>.</p>
+		
+		<p>Addition: <?= add($_POST["number1"], $_POST["number2"]);?></p>
+		
+		<p>Subtraction: <?= subtract($_POST["number1"], $_POST["number2"]);?></p>
+		
+		<p>Multiplication: <?= multiply($_POST["number1"], $_POST["number2"]);?></p>
+		
+		<?php if ($_POST["number2"] != 0) { ?>
+			<p>Division:<?= divide($_POST["number1"], $_POST["number2"]);?></p>
+		<?php  } ?>	
 	</output>
+	
+<?php  } ?>	
