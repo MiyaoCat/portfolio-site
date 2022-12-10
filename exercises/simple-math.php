@@ -94,8 +94,12 @@
 		<p>Multiplication: <?= multiply($_POST["number1"], $_POST["number2"]);?></p>
 		
 		<?php if ($_POST["number2"] != 0) { ?>
-			<p>Division:<?= divide($_POST["number1"], $_POST["number2"]);?></p>
-		<?php  } ?>	
+			<p>Division: <?= divide($_POST["number1"], $_POST["number2"]);?></p>
+		<?php  } 
+			else {
+				echo "Division: Undefined. 0 has no multiplicative inverse.";
+			}
+		?>	
 	</output>
-	
+
 <?php  } ?>	
