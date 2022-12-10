@@ -1,7 +1,7 @@
 <?php 
 	// $number1 = "";
 	// $number2 = "";
-	$message = "";
+	// $message = "";
 
 	// if ( isset ($_POST["number1"]) ) {
 	// 	$number1 = floatval($_POST["number1"]);
@@ -43,28 +43,17 @@
 	};
 
 	function divide($inputNumber1, $inputNumber2) {
+		if ($inputNumber2 == 0) {
+			return $message = "Undefined. 0 has no multiplicative inverse."; 
+		}
+
 		if ( isset($inputNumber1) && isset($inputNumber2) ) {
-			if ($inputNumber2 !== 0) {
+			if ($inputNumber2 != 0) {
 				return number_format($inputNumber1 / $inputNumber2, 2, '.', ',');	
 			}
-		}	
-	};
-
-	function errorMessage1() {
-		if ( isset($_POST["submitted"]) ) {
-			if ($_POST["number1"] == "") {
-				return $message = "Please enter a number!";
-			}
 		}
 	};
 
-	function errorMessage2() {
-		if ( isset($_POST["submitted"]) ) {
-			if ($_POST["number2"] == "") {
-				return $message = "Please enter a number!";
-			}
-		}
-	};
 ?>
 		
 <form method="POST">
@@ -81,7 +70,7 @@
 		placeholder="Enter your first number"
 	>
 	
-		<p class="calm-voice warning"><?=errorMessage1();?></p>
+		<p class="calm-voice warning"><?=$message?></p>
 	
 	<input 
 		type="number" 
@@ -89,7 +78,7 @@
 		step="any"
 		placeholder="Enter your second number"
 	>
-	<p class="calm-voice warning"><?=errorMessage2();?></p>
+	<p class="calm-voice warning"><?=$message?></p>
 
 	<button type="submit" name="submitted">Submit</button>
 </form>
@@ -99,21 +88,13 @@
 	<output>
 		<p class="normal-voice">You entered <?=$_POST["number1"]?> & <?=$_POST["number2"]?>.</p>
 		
-		<p>Addition: <?= add($_POST["number1"], $_POST["number2"]);?></p>
+		<p class="normal-voice">Addition: <?= add($_POST["number1"], $_POST["number2"]);?></p>
 		
-		<p>Subtraction: <?= subtract($_POST["number1"], $_POST["number2"]);?></p>
+		<p class="normal-voice">Subtraction: <?= subtract($_POST["number1"], $_POST["number2"]);?></p>
 		
-		<p>Multiplication: <?= multiply($_POST["number1"], $_POST["number2"]);?></p>
+		<p class="normal-voice">Multiplication: <?= multiply($_POST["number1"], $_POST["number2"]);?></p>
 		
-		<?php if ($_POST["number2"] != 0) { ?>
-			
-			<p>Division: <?= divide($_POST["number1"], $_POST["number2"]);?></p>
-
-		<?php  } 
-			else {
-				echo "Division: Undefined. 0 has no multiplicative inverse.";
-			}
-		?>	
+		<p class="normal-voice">Division: <?= divide($_POST["number1"], $_POST["number2"]);?></p>	
 	</output>
 
 <?php  } ?>	
