@@ -1,7 +1,8 @@
 <?php 
+	//*********CODE PRIOR TO USING FUNCTIONS*********
 	// $number1 = "";
 	// $number2 = "";
-	// $message = "";
+	$message = "";
 
 	// if ( isset ($_POST["number1"]) ) {
 	// 	$number1 = floatval($_POST["number1"]);
@@ -24,36 +25,62 @@
 	// $multiply = number_format($number1 * $number2, 2, '.', ',');
 	// $divide = number_format($number1 / $number2, 2, '.', ',');			
 
-	function add($inputNumber1, $inputNumber2) {
-		if ( isset($inputNumber1) && isset($inputNumber2) ) {
-			return number_format($inputNumber1 + $inputNumber2, 2, '.', ',');
-		}
-	};
+	//*********FIRST ITERATION OF FUNCTIONS*********
+	// function add($inputNumber1, $inputNumber2) {
+	// 	if ( isset($inputNumber1) && isset($inputNumber2) ) {
+	// 		return number_format($inputNumber1 + $inputNumber2, 2, '.', ',');
+	// 	}
+	// };
 
-	function subtract($inputNumber1, $inputNumber2) {
-		if ( isset($inputNumber1) && isset($inputNumber2) ) {
-			return number_format($inputNumber1 - $inputNumber2, 2, '.', ',');
-		}		
-	};
+	// function subtract($inputNumber1, $inputNumber2) {
+	// 	if ( isset($inputNumber1) && isset($inputNumber2) ) {
+	// 		return number_format($inputNumber1 - $inputNumber2, 2, '.', ',');
+	// 	}		
+	// };
 
-	function multiply($inputNumber1, $inputNumber2) {
-		if ( isset($inputNumber1) && isset($inputNumber2) ) {
-			return number_format($inputNumber1 * $inputNumber2, 2, '.', ',');
-		}		
-	};
+	// function multiply($inputNumber1, $inputNumber2) {
+	// 	if ( isset($inputNumber1) && isset($inputNumber2) ) {
+	// 		return number_format($inputNumber1 * $inputNumber2, 2, '.', ',');
+	// 	}		
+	// };
 
-	function divide($inputNumber1, $inputNumber2) {
-		if ($inputNumber2 == 0) {
-			return $message = "Undefined. 0 has no multiplicative inverse."; 
-		}
+	// function divide($inputNumber1, $inputNumber2) {
+	// 	if ($inputNumber2 == 0) {
+	// 		return $message = "Undefined. 0 has no multiplicative inverse."; 
+	// 	}
 
-		if ( isset($inputNumber1) && isset($inputNumber2) ) {
-			if ($inputNumber2 != 0) {
-				return number_format($inputNumber1 / $inputNumber2, 2, '.', ',');	
-			}
-		}
-	};
+	// 	if ( isset($inputNumber1) && isset($inputNumber2) ) {
+	// 		if ($inputNumber2 != 0) {
+	// 			return number_format($inputNumber1 / $inputNumber2, 2, '.', ',');	
+	// 		}
+	// 	}
+	// };
 
+	//*********CONDENSED FUNCTION LEARNED FROM CHATGPT*********
+	function calculate($number1, $number2) {
+		if ( isset($number1) && isset($number2) ) {
+			if ( $number2 != 0) {
+			   $add = number_format($number1 + $number2, 2, '.', ',');
+			  	$subtract = number_format($number1 - $number2, 2, '.', ',');
+			   $multiply = number_format($number1 * $number2, 2, '.', ',');
+			   $divide = number_format($number1 / $number2, 2, '.', ',');
+		   	
+		   	return array($add, $subtract, $multiply, $divide);
+		   }
+	 	}
+	 	if ($number2 == 0) {
+	 		$add = number_format($number1 + $number2, 2, '.', ',');
+			$subtract = number_format($number1 - $number2, 2, '.', ',');
+			$multiply = number_format($number1 * $number2, 2, '.', ',');
+	 		$divide = "Undefined. 0 has no multiplicative inverse.";
+
+	 		return array($add, $subtract, $multiply, $divide);
+	 	}
+   };
+   
+   if ( isset($_POST["number1"]) && isset($_POST["number2"]) ) {
+   	$result = calculate($_POST["number1"], $_POST["number2"]); 
+   }
 ?>
 		
 <form method="POST">
@@ -87,14 +114,22 @@
 
 	<output>
 		<p class="normal-voice">You entered <?=$_POST["number1"]?> & <?=$_POST["number2"]?>.</p>
-		
-		<p class="normal-voice">Addition: <?= add($_POST["number1"], $_POST["number2"]);?></p>
-		
-		<p class="normal-voice">Subtraction: <?= subtract($_POST["number1"], $_POST["number2"]);?></p>
-		
-		<p class="normal-voice">Multiplication: <?= multiply($_POST["number1"], $_POST["number2"]);?></p>
-		
-		<p class="normal-voice">Division: <?= divide($_POST["number1"], $_POST["number2"]);?></p>	
+
+		<p class="normal-voice">Add:  
+			<?php echo $result[0]; ?>
+		</p>
+
+		<p class="normal-voice">Subtract:  
+			<?php echo $result[1]; ?>
+		</p>
+
+		<p class="normal-voice">Multiply:  
+			<?php echo $result[2]; ?>
+		</p>
+
+		<p class="normal-voice">Divide:  
+			<?php echo $result[3]; ?>
+		</p>	
 	</output>
 
 <?php  } ?>	
