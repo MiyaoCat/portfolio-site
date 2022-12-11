@@ -63,11 +63,12 @@
 			   $add = number_format($number1 + $number2, 2, '.', ',');
 			  	$subtract = number_format($number1 - $number2, 2, '.', ',');
 			   $multiply = number_format($number1 * $number2, 2, '.', ',');
-			   $divide = number_format($number1 / $number2, 2, '.', ',');
-		   	
-		   	return array($add, $subtract, $multiply, $divide);
-		   }
+			   $divide = number_format($number1 / $number2, 2, '.', ',');	 
+
+			   return array($add, $subtract, $multiply, $divide);  	
+		   }		   
 	 	}
+
 	 	if ($number2 == 0) {
 	 		$add = number_format($number1 + $number2, 2, '.', ',');
 			$subtract = number_format($number1 - $number2, 2, '.', ',');
@@ -110,7 +111,7 @@
 	<button type="submit" name="submitted">Submit</button>
 </form>
 
-<?php if ( isset($_POST["submitted"]) && ($_POST["number1"] != "") && ($_POST["number2"] != "") ) { ?>	
+<?php if ( isset($_POST["submitted"]) ) { ?>	
 
 	<output>
 		<p class="normal-voice">You entered <?=$_POST["number1"]?> & <?=$_POST["number2"]?>.</p>
