@@ -58,7 +58,7 @@
 
 	//*********CONDENSED FUNCTION LEARNED FROM CHATGPT*********
 	function calculate($number1, $number2) {
-		if ( isset($number1) && isset($number2) ) {
+		if ( ($number1 !== "") && ($number2 !== "") ) {
 			if ( $number2 != 0) {
 			   $add = number_format($number1 + $number2, 2, '.', ',');
 			  	$subtract = number_format($number1 - $number2, 2, '.', ',');
@@ -82,6 +82,18 @@
    if ( isset($_POST["number1"]) && isset($_POST["number2"]) ) {
    	$result = calculate($_POST["number1"], $_POST["number2"]); 
    }
+
+   function errorMessage() {
+   	if ( isset($_POST["number1"]) && ($_POST["number1"] == "") ) {
+   		return $message = "Please enter a number";
+   	}
+
+   	if ( isset($_POST["number2"]) && ($_POST["number2"] == "") ) {
+   		return $message = "Please enter a number";
+   	}
+   }
+
+   $errorMessage = errorMessage();
 ?>
 		
 <form method="POST">
@@ -98,7 +110,7 @@
 		placeholder="Enter your first number"
 	>
 	
-		<p class="calm-voice warning"><?=$message?></p>
+	<p class="calm-voice warning"><?php echo errorMessage(); ?></p>
 	
 	<input 
 		type="number" 
@@ -106,7 +118,7 @@
 		step="any"
 		placeholder="Enter your second number"
 	>
-	<p class="calm-voice warning"><?=$message?></p>
+	<p class="calm-voice warning"><?php echo errorMessage(); ?></p>
 
 	<button type="submit" name="submitted">Submit</button>
 </form>
