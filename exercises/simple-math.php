@@ -83,18 +83,17 @@
    	$result = calculate($_POST["number1"], $_POST["number2"]); 
    }
 
-   function errorMessage() {
-   	if ( isset($_POST["number1"]) && ($_POST["number1"] == "") ) {
-   		$_POST["number1"] == 0;
-   		return $message = "Please enter a number";
-   	}
-
-   	if ( isset($_POST["number2"]) && ($_POST["number2"] == "") ) {
+   function errorMessage1() {
+   	if ( isset($_POST["number1"]) && ($_POST["number1"] == null) ) {
    		return $message = "Please enter a number";
    	}
    }
 
-   $errorMessage = errorMessage();
+   function errorMessage2() {
+   	if ( isset($_POST["number2"]) && ($_POST["number2"] == null) ) {
+   		return $message = "Please enter a number";
+   	}
+   }
 ?>
 		
 <form method="POST">
@@ -111,7 +110,7 @@
 		placeholder="Enter your first number"
 	>
 	
-	<p class="calm-voice warning"><?php echo errorMessage(); ?></p>
+	<p class="calm-voice warning"><?php echo errorMessage1(); ?></p>
 	
 	<input 
 		type="number" 
@@ -119,13 +118,15 @@
 		step="any"
 		placeholder="Enter your second number"
 	>
-	<p class="calm-voice warning"><?php echo errorMessage(); ?></p>
+	<p class="calm-voice warning"><?php echo errorMessage2(); ?></p>
 
 	<button type="submit" name="submitted">Submit</button>
 </form>
 
-<?php if ( isset($_POST["submitted"]) ) { ?>	
-
+<?php 
+	if ( isset($_POST["submitted"]) ) { 
+		if ($_POST["number1"] != null and $_POST["number2"] != null) {
+?>	
 	<output>
 		<p class="normal-voice">You entered <?=$_POST["number1"]?> & <?=$_POST["number2"]?>.</p>
 
@@ -146,4 +147,5 @@
 		</p>	
 	</output>
 
+	<?php  } ?>	
 <?php  } ?>	
