@@ -58,24 +58,24 @@
 
 	//*********CONDENSED FUNCTION LEARNED FROM CHATGPT*********
 	function calculate($number1, $number2) {
-		if ( ($number1 !== "") && ($number2 !== "") ) {
+		if ( ($number1 !== "" && $number2 !== "") ) {
 			if ( $number2 != 0) {
-			   $add = number_format($number1 + $number2, 2, '.', ',');
-			  	$subtract = number_format($number1 - $number2, 2, '.', ',');
-			   $multiply = number_format($number1 * $number2, 2, '.', ',');
-			   $divide = number_format($number1 / $number2, 2, '.', ',');	 
+			   $add = floatval( number_format($number1 + $number2, 2, '.', ',') );
+			  	$subtract = floatval( number_format($number1 - $number2, 2, '.', ',') );
+			   $multiply = floatval( number_format($number1 * $number2, 2, '.', ',') );
+			   $divide = floatval( number_format($number1 / $number2, 2, '.', ',') );	 
 
 			   return array($add, $subtract, $multiply, $divide);  	
 		   }		   
-	 	}
 
-	 	if ($number2 == 0) {
-	 		$add = number_format($number1 + $number2, 2, '.', ',');
-			$subtract = number_format($number1 - $number2, 2, '.', ',');
-			$multiply = number_format($number1 * $number2, 2, '.', ',');
-	 		$divide = "Undefined. 0 has no multiplicative inverse.";
+		   if ($number2 == 0) {
+			   $add = floatval( number_format($number1 + $number2, 2, '.', ',') );
+			  	$subtract = floatval( number_format($number1 - $number2, 2, '.', ',') );
+			   $multiply = floatval( number_format($number1 * $number2, 2, '.', ',') );
+		 		$divide = "Undefined. 0 has no multiplicative inverse.";
 
-	 		return array($add, $subtract, $multiply, $divide);
+		 		return array($add, $subtract, $multiply, $divide); 
+		 	}	  
 	 	}
    };
    
@@ -85,6 +85,7 @@
 
    function errorMessage() {
    	if ( isset($_POST["number1"]) && ($_POST["number1"] == "") ) {
+   		$_POST["number1"] == 0;
    		return $message = "Please enter a number";
    	}
 
