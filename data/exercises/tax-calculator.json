@@ -1,6 +1,7 @@
 [
 	{
-		"id": "CA",
+		"state": "california",
+		"abbr": "CA",
 		"tax": 7.5,
 		"counties" : [
 			{
@@ -17,8 +18,9 @@
 			}
 		]
 	},
-	{
-		"id": "OR",
+	{	
+		"state": "oregon",
+		"abbr": "OR",
 		"tax": 0,
 		"counties" : [
 			{
@@ -35,8 +37,9 @@
 			}
 		]
 	},
-	{
-		"id": "WA",
+	{	
+		"state": "washington",
+		"abbr": "WA",
 		"tax": 8.5,
 		"counties" : [
 			{
