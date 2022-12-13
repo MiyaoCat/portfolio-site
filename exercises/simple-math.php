@@ -97,8 +97,6 @@
 ?>
 		
 <form method="POST">
-	<h1 class="loud-voice">Let's do Math!</h1>
-
 	<div class="instructions">
 		<p class="regular-voice">Just type in your numbers and watch the magic happen!</p>
 	</div>
