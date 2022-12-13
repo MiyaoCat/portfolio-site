@@ -1,56 +1,64 @@
 <?php  
-$json = file_get_contents("data/exercises/tax-calculator.json");
-$taxData = json_decode($json, true);
-
-$submitted = isset($_POST["submitted"]);
-$stateSelected = "";
-$order = 10;
-$orderMessage = "";
-$message = "";
-$tax = 0;
-var_dump($_POST);
-
-function total($taxData, $choice) {
-	if( isset($choice["submitted"]) ) {
-		$order = isset($choice["order-amount"]);
-		$stateSelected = $choice["state-selected"];
-
-		foreach($taxData as $state) {
-			$id = $state["id"];
-		
-			if ($stateSelected == $id) {
-				$tax = $state["tax"] / 100;
-			}
-		}
-
-		return number_format($order * (1 + $tax), 2);
-	}
-}
-
-echo total($taxData, $_POST);
-
-if ($submitted) {
-	if ( isset($_POST["state-selected"]) ) { 
-		$stateSelected = $_POST["state-selected"];
-	}
-	if ($stateSelected == "") {
-		$message = "<p class='calm-voice warning'>You didn't select a state!</p>";
-	}
-}	
-
-if ($submitted) {
-	if ($_POST["order-amount"] <= 0) {
-		$orderMessage = "<p class='calm-voice warning'>Either you're stealing or it's free</p>";
-	}
-}
-
 function isSelected($chosen, $current) {
 	if ($chosen == $current) {
 		return "selected";
 	}
 }
 
+$stateMessage = "";
 
+// GOALS: Calculate tax based on state and county
+
+// USER input
+// price (the value of item) = number
+// state (the chosen state)
+
+// CALCULATED in the program
+// taxRate (based on state choice) = number
+// total (calculated total) = number
+
+// state data
+$json = file_get_contents("data/exercises/tax-calculator.json");
+$statesData = json_decode($json, true);
+
+$stateMessage = "";
+
+// USER INPUT 
+$submitted = isset($_POST["submitted"]);
+var_dump($_POST);
+
+if ($submitted) {
+
+
+	if ( isset($_POST["state-selected"]) ) { 
+
+		//variable to reuse state user selected
+		$stateSelected = $_POST["state-selected"];
+	}
+
+	if ($stateSelected == "") {
+			$StateMessage = "<p class='calm-voice warning'>You didn't select a state!</p>";
+	}
+
+	if ( isset($_POST["county-selected"]) ) { 
+
+		//variable to resuse county user selected
+		$countySelected = $_POST["county-selected"];
+
+		if ($countySelected == "") {
+			$countyMessage = "<p class='calm-voice warning'>You didn't select a state!</p>";
+		}
+	}
+}	
+
+// DATA
+function findStateTaxData($statesData, $stateId) {
+	foreach ($statesData as $state) {
+		if ($stateId == $state["abbr"]) {
+			return $state;
+		}
+	}
+}
 
 ?>
 
@@ -60,16 +68,13 @@ function isSelected($chosen, $current) {
 	<input 
 		type="number"
 		name="order-amount"
-		value="<?=$order?>"
+		value=""
 		step=".01"
 		placeholder="Enter a number"
 		autocomplete="off"
 	>
-	<?php if($orderMessage) { ?>
-		<error>
-			<p class="error calm-voice"><?=$orderMessage?></p>
-		</error>
-	<?php } ?>
+
+	<p class="warning calm-voice"></p>
 
 	<label for="state-selected" class="normal-voice">Please select a state:</label>
 
@@ -77,21 +82,39 @@ function isSelected($chosen, $current) {
 		<option value="">--Select a State--</option>
 
 		<?php 
-			foreach($taxData as $state) {
-				$id = $state["id"];		
+			foreach($statesData as $state) {
+				$id = $state["abbr"];		
 		?>
 			<option value="<?=$id?>" <?=isSelected($stateSelected, $id)?>><?=$id?>
 				
 			</option>
 		<?php } ?>
+
+		<?php if($stateMessage) { ?>
+			<p class="warning calm-voice"><?=$stateMessage?></p>
+		<?php } ?>
 	</select>
 
-		
-		<error>
-			<?php if($message) { ?>
-			<p class="error calm-voice"><?=$message?></p>
+	<label for="county-selected" class="normal-voice">Please select a county:</label>
+
+	<select name="county-selected" id="county">
+		<option value="">--Select a State--</option>
+
+		<?php 
+			foreach($statesData as $state) {
+				$county = $state["counties"];
+
+				
+					// foreach($county as $county) {
+		?>
+			<option value="<?=$county?>" <?=isSelected($countySelected, $id)?>><?=$id?>
+				
+			</option>
+					
 			<?php } ?>
-		</error>
+	</select>
+		
+	<p class="warning calm-voice"></p>
 	
 
 	<button type="submit" name="submitted">Submit</button>
