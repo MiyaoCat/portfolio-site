@@ -31,7 +31,7 @@ if ( isset($_POST['submitted']) ) {
 	} if ($interest <= 3 AND $interest > 0) {
 		$intMessage = "<p class='calm-voice warning'>Put your money elsewhere.</p>";
 	} if ($interest > 3 AND $interest < 7)	{
-		$intMessage = "Y<p class='calm-voice warning'>ou better live a long time!</p>";
+		$intMessage = "Y<p class='calm-voice warning'>You better live a long time!</p>";
 	} if ($interest >= 7 AND $interest < 10) {
 		$intMessage = "<p class='calm-voice warning'>Niiice! Your Dad will be proud!</p>";
 	}  elseif ($interest >= 10) {
@@ -45,13 +45,13 @@ if ( isset($_POST['submitted']) ) {
 	} if ($years <= 5) {
 		$yrMessage = "<p class='calm-voice warning'>What's the point?</p>";
 	} if ($years > 5 AND $years <= 10) {
-		$yrMessage = "<p class='calm-voice warning'>That might work</p>";
+		$yrMessage = "<p class='calm-voice warning'>Not bad, that's a decent amount of time.</p>";
 	} if ($years > 10 AND $years <= 20) {
-		$yrMessage = "<p class='calm-voice warning'>You'll see some returns</p>";
+		$yrMessage = "<p class='calm-voice warning'>You'll see some returns.</p>";
 	} if ($years > 20 AND $years <= 30) {
 		$yrMessage = "<p class='calm-voice warning'>You'll be able buy somethin' big!</p>";
 	} elseif ($years > 30) {
-		$yrMessage = "<p class='calm-voice warning'>That'll be a nice egg nest</p>";
+		$yrMessage = "<p class='calm-voice warning'>That'll be a nice egg nest.</p>";
 	}
 }
 //answer = principal(1 + annual interest rate * years)
@@ -83,7 +83,7 @@ $answerFormatted = number_format($answer, 2);
 			
 
 		<div class="entry interest">
-			<p class="normal-voice">Now enter the interst rate. Standard interest is 7% APY.</p>
+			<p class="normal-voice">Now enter the interest rate. Standard interest is 7% APY.</p>
 			
 			<input type="number" 
 				name='interest' 
