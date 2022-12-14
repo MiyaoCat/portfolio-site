@@ -20,13 +20,15 @@ $statesData = json_decode($json, true);
 $stateMessage = "";
 $selectedStateAbbr = null;
 $selectedState = null;
+$stateTax = null;
 $countySelected = null;
 $countyTax = null;
+
+$itemPrice = null;
 
 $state = null;
 // USER INPUT 
 $submitted = isset($_POST["submitted"]);
-var_dump($_POST);
 
 if ($submitted) {
 
@@ -36,6 +38,7 @@ if ($submitted) {
 		foreach($statesData as $state) {
 			if ($selectedStateAbbr == $state["abbr"]) {
 				$selectedState = $state;
+				$stateTax = $selectedState["tax"];
 			}
 		}
 	}
@@ -43,6 +46,8 @@ if ($submitted) {
 	if ( isset($_POST["county-selected"]) ) { 
 		$countySelected = $_POST["county-selected"];
 	}
+
+	$itemPrice = $_POST["order-amount"];
 }	
 
 // DATA
@@ -53,7 +58,8 @@ function findStateTaxData($statesData, $stateId) {
 		}
 	}
 }
- $stateData = findStateTaxData($statesData, $selectedStateAbbr);
+
+$stateData = findStateTaxData($statesData, $selectedStateAbbr);
 
 function isSelected($chosen, $current) {
 	if ($chosen == $current) {
@@ -61,10 +67,19 @@ function isSelected($chosen, $current) {
 	}
 }
 
+function taxTotal($item, $stateTax, $countyTax) {
+	return number_format($item * $stateTax / 100 + $item * $countyTax / 100, 2, '.', ',');
+}
 
+$taxAmount = taxTotal($itemPrice, $stateTax, $countyTax);
+
+function grandTotal($item, $taxTotal) {
+	return number_format($item + $taxTotal, 2, '.', ',');
+}
+
+// $totalTax = taxAmount($itemPrice, $, $countyTax);
 ?>
 
-<h3 class="attention-voice"><a href="#">Reset</a></h3>
 <form method="POST">
 	<p class="normal-voice">Enter the price of your item.</p>	
 
@@ -109,7 +124,9 @@ function isSelected($chosen, $current) {
 
 			<?php  
 				foreach($selectedState["counties"] as $county) {
-
+					if ($countySelected == $county["name"]) {
+						$countyTax = $county["tax"];
+				}
 			?>	
 					<option value="<?=$county["name"]?>" <?=isSelected($countySelected, $county["name"])?>>
 
@@ -121,21 +138,29 @@ function isSelected($chosen, $current) {
 
 	<?php } ?>
 	<p class="warning calm-voice"></p>
-	
+
 	<button type="submit" name="submitted">Submit</button>
 </form>
 
 <?php 
+	$taxAmount = taxTotal($itemPrice, $stateTax, $countyTax);
+
 	if($submitted) { 
 		if($_POST["state-selected"] != null && $_POST["order-amount"] != null) {
 ?>
 	<output>
 		<p class="normal-voice">You selected <?=$countySelected?> county in <?=$selectedState["state"]?>.</p>
-		<p class="normal-voice">Your order price was $<?=$_POST["order-amount"]?>.</p>
-		<p class="normal-voice">State sales tax rate: <?=$selectedState["tax"]?>% </p>
-		<p class="normal-voice">County sales tax rate: % </p>
-		<p class="normal-voice">Your tax amount is: </p>
-		<p class="normal-voice">Your grand total is: </p>
+		
+		<p class="normal-voice">State sales tax rate: <?=$selectedState["tax"]?>%</p>
+
+		<p class="normal-voice">County sales tax rate: <?=$countyTax?>% </p>
+		
+		<p class="normal-voice">Your subtotal is: $<?=$_POST["order-amount"]?>.</p>
+
+		<p class="normal-voice">Your tax amount is: $<?=taxTotal($_POST["order-amount"], $selectedState["tax"],$countyTax )?></p>
+		<p class="normal-voice">Your grand total is: $<?=grandTotal($_POST["order-amount"], $taxAmount)?></p>
+
+
 	</output>
 <?php } ?>
 
