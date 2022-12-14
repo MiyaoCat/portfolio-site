@@ -65,7 +65,7 @@
 			   $multiply = floatval( number_format($number1 * $number2, 2, '.', ',') );
 			   $divide = floatval( number_format($number1 / $number2, 2, '.', ',') );	 
 
-			   return array($add, $subtract, $multiply, $divide);  	
+			   return [$add, $subtract, $multiply, $divide];  	
 		   }		   
 
 		   if ($number2 == 0) {
@@ -74,7 +74,7 @@
 			   $multiply = floatval( number_format($number1 * $number2, 2, '.', ',') );
 		 		$divide = "Undefined. 0 has no multiplicative inverse.";
 
-		 		return array($add, $subtract, $multiply, $divide); 
+		 		return [$add, $subtract, $multiply, $divide]; 
 		 	}	  
 	 	}
    };
