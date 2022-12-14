@@ -5,15 +5,15 @@
 		"tax": 7.5,
 		"counties" : [
 			{
-				"county": "alameda",
+				"name": "alameda",
 				"tax": 10.75
 			},
 			{
-				"county": "san fancisco",
+				"name": "san fancisco",
 				"tax": 8.625
 			},
 			{
-				"county": "alameda",
+				"name": "alameda",
 				"tax": 8.75
 			}
 		]
@@ -24,15 +24,15 @@
 		"tax": 0,
 		"counties" : [
 			{
-				"county": "baker",
+				"name": "baker",
 				"tax": 0
 			},
 			{
-				"county": "deschutes",
+				"name": "deschutes",
 				"tax": 0
 			},
 			{
-				"county": "hood river",
+				"name": "hood river",
 				"tax": 0
 			}
 		]
@@ -43,15 +43,15 @@
 		"tax": 8.5,
 		"counties" : [
 			{
-				"county": "king",
+				"name": "king",
 				"tax": 10.5
 			},
 			{
-				"county": "spokane",
+				"name": "spokane",
 				"tax": 9.1
 			},
 			{
-				"county": "yakima",
+				"name": "yakima",
 				"tax": 8.7
 			}
 		]
