@@ -133,7 +133,7 @@ output {
 	}
 
 	.exercise form {
-		grid-column: 4 / 10;
+		grid-column: 6 / 10;
 	}
 
 	output {

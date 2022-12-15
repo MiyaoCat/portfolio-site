@@ -45,9 +45,11 @@ if ($submitted) {
 
 	if ( isset($_POST["county-selected"]) ) { 
 		$countySelected = $_POST["county-selected"];
+
+		$itemPrice = $_POST["order-amount"];
 	}
 
-	$itemPrice = $_POST["order-amount"];
+	
 }	
 
 function getState() {
@@ -107,18 +109,6 @@ function errorMessageCounty() {
 
 
 <form method="POST">
-	<p class="normal-voice">Enter the price of your item.</p>	
-
-	<input 
-		type="number"
-		name="order-amount"
-		step=".01"
-		autocomplete="off"
-	>
-
-	<p class="warning calm-voice"><?php echo errorMessageOrder() ?></p>
-
-
 	<label for="state-selected" class="normal-voice">Please select a state:</label>
 
 	<select name="state-selected" id="state">
@@ -161,6 +151,16 @@ function errorMessageCounty() {
 		</select>
 		<p class="warning calm-voice"><?php echo errorMessageCounty() ?></p>
 
+		<p class="normal-voice">Enter the price of your item.</p>	
+
+		<input 
+			type="number"
+			name="order-amount"
+			step=".01"
+			autocomplete="off"
+		>
+
+		<p class="warning calm-voice"><?php echo errorMessageOrder() ?></p>
 	<?php } ?>
 	<p class="warning calm-voice"><?php echo errorMessageState() ?></p>
 
@@ -170,9 +170,10 @@ function errorMessageCounty() {
 <?php 
 	$taxAmount = taxTotal($itemPrice, $stateTax, $countyTax);
 
-	if($submitted) { 
+	if ( isset($_POST["order-amount"]) && isset($_POST["state-selected"]) && isset($_POST["county-selected"]) ) { 
 
-		if($_POST["order-amount"] != null && $_POST["state-selected"] != null && $_POST["county-selected"] != null) {
+		if ($_POST["order-amount"] != null && $_POST["state-selected"] != null) {
+			if ($_POST["county-selected"] != null) {
 ?>
 	<output>
 		<p class="normal-voice">You selected <?=$countySelected?> county in <?=$selectedState["state"]?>.</p>
@@ -188,8 +189,8 @@ function errorMessageCounty() {
 
 
 	</output>
-<?php } ?>
-
+			<?php } ?>
+		<?php } ?>
 <?php } ?>
 
 
