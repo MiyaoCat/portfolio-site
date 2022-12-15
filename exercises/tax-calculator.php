@@ -50,6 +50,9 @@ if ($submitted) {
 	$itemPrice = $_POST["order-amount"];
 }	
 
+function getState() {
+
+}
 // DATA
 function findStateTaxData($statesData, $stateId) {
 	foreach ($statesData as $state) {
@@ -68,7 +71,11 @@ function isSelected($chosen, $current) {
 }
 
 function taxTotal($item, $stateTax, $countyTax) {
-	return number_format($item * $stateTax / 100 + $item * $countyTax / 100, 2, '.', ',');
+	if ( !empty($_POST["order-amount"]) ) {
+		if ($_POST["state-selected"] != null) {
+			return number_format($item * $stateTax / 100 + $item * $countyTax / 100, 2, '.', ',');
+		}
+	}
 }
 
 $taxAmount = taxTotal($itemPrice, $stateTax, $countyTax);
@@ -86,7 +93,7 @@ function grandTotal($item, $taxTotal) {
 	<input 
 		type="number"
 		name="order-amount"
-		value="10"
+		value=""
 		step=".01"
 		placeholder="Enter a number"
 		autocomplete="off"
@@ -146,6 +153,7 @@ function grandTotal($item, $taxTotal) {
 	$taxAmount = taxTotal($itemPrice, $stateTax, $countyTax);
 
 	if($submitted) { 
+
 		if($_POST["state-selected"] != null && $_POST["order-amount"] != null) {
 ?>
 	<output>
