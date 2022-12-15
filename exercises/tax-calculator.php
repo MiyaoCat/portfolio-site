@@ -85,7 +85,26 @@ function grandTotal($item, $taxTotal) {
 }
 
 // $totalTax = taxAmount($itemPrice, $, $countyTax);
+
+function errorMessageOrder() {
+	if ( isset($_POST["order-amount"]) && ($_POST["order-amount"] == null) ) {
+		return $message = "Please enter a number";
+	}
+}
+
+function errorMessageState() {
+	if ( isset($_POST["state-selected"]) && ($_POST["state-selected"] == null) ) {
+		return $message = "Please select a state";
+	}
+}
+
+function errorMessageCounty() {
+	if ( isset($_POST["county-selected"]) && ($_POST["county-selected"] == null) ) {
+		return $message = "Please select a county";
+	}
+}
 ?>
+
 
 <form method="POST">
 	<p class="normal-voice">Enter the price of your item.</p>	
@@ -97,7 +116,7 @@ function grandTotal($item, $taxTotal) {
 		autocomplete="off"
 	>
 
-	<p class="warning calm-voice"></p>
+	<p class="warning calm-voice"><?php echo errorMessageOrder() ?></p>
 
 
 	<label for="state-selected" class="normal-voice">Please select a state:</label>
@@ -114,7 +133,7 @@ function grandTotal($item, $taxTotal) {
 		<?php } ?>
 
 		<?php if($message) { ?>
-			<p class="warning calm-voice"><?=$message?></p>
+			<p class="warning calm-voice"><?php echo errorMessageState() ?></p>
 		<?php } ?>
 	</select>
 
@@ -140,9 +159,10 @@ function grandTotal($item, $taxTotal) {
 					</option>
 			<?php } ?>
 		</select>
+		<p class="warning calm-voice"><?php echo errorMessageCounty() ?></p>
 
 	<?php } ?>
-	<p class="warning calm-voice"></p>
+	<p class="warning calm-voice"><?php echo errorMessageState() ?></p>
 
 	<button type="submit" name="submitted">Submit</button>
 </form>
@@ -152,7 +172,7 @@ function grandTotal($item, $taxTotal) {
 
 	if($submitted) { 
 
-		if($_POST["state-selected"] != null && $_POST["order-amount"] != null) {
+		if($_POST["order-amount"] != null && $_POST["state-selected"] != null && $_POST["county-selected"] != null) {
 ?>
 	<output>
 		<p class="normal-voice">You selected <?=$countySelected?> county in <?=$selectedState["state"]?>.</p>
@@ -163,7 +183,7 @@ function grandTotal($item, $taxTotal) {
 		
 		<p class="normal-voice">Your subtotal is: $<?=$_POST["order-amount"]?>.</p>
 
-		<p class="normal-voice">Your tax amount is: $<?=taxTotal($_POST["order-amount"], $selectedState["tax"],$countyTax )?></p>
+		<p class="normal-voice">Your total tax amount is: $<?=taxTotal($_POST["order-amount"], $selectedState["tax"],$countyTax )?></p>
 		<p class="normal-voice">Your grand total is: $<?=grandTotal($_POST["order-amount"], $taxAmount)?></p>
 
 
