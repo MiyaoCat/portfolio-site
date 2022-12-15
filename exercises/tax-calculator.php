@@ -93,9 +93,7 @@ function grandTotal($item, $taxTotal) {
 	<input 
 		type="number"
 		name="order-amount"
-		value=""
 		step=".01"
-		placeholder="Enter a number"
 		autocomplete="off"
 	>
 
