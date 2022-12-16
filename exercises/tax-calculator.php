@@ -48,6 +48,7 @@ if ($submitted) {
 	}	
 }	
 
+
 // // DATA
 // function findStateTaxData($statesData, $stateId) {
 // 	foreach ($statesData as $state) {
@@ -129,13 +130,13 @@ function errorMessageCounty() {
 
 			<?php  
 				foreach($selectedState["counties"] as $county) {
-					if ($countySelected == $county["name"]) {
+					if ($countySelected == ucwords($county["name"])) {
 						$countyTax = $county["tax"];
 				}
 			?>	
-					<option value="<?=ucwords($county["name"])?>" <?=isSelected($countySelected, $county["name"])?>>
+					<option value="<?=$county["name"]?>" <?=isSelected($countySelected, $county["name"])?>>
 
-						<?=ucwords($county["name"])?>
+						<?=$county["name"]?>
 
 					</option>
 			<?php } ?>
