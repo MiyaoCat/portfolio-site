@@ -40,7 +40,7 @@
 	{	
 		"state": "washington",
 		"abbr": "WA",
-		"tax": 8.5,
+		"tax": 6.5,
 		"counties" : [
 			{
 				"name": "king",

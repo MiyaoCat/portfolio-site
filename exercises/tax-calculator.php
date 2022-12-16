@@ -23,10 +23,9 @@ $selectedState = null;
 $stateTax = null;
 $countySelected = null;
 $countyTax = null;
-
 $itemPrice = null;
-
 $state = null;
+
 // USER INPUT 
 $submitted = isset($_POST["submitted"]);
 
@@ -45,26 +44,20 @@ if ($submitted) {
 
 	if ( isset($_POST["county-selected"]) ) { 
 		$countySelected = $_POST["county-selected"];
-
 		$itemPrice = $_POST["order-amount"];
-	}
-
-	
+	}	
 }	
 
-function getState() {
+// // DATA
+// function findStateTaxData($statesData, $stateId) {
+// 	foreach ($statesData as $state) {
+// 		if ($stateId == $state["abbr"]) {
+// 			return $state;
+// 		}
+// 	}
+// }
 
-}
-// DATA
-function findStateTaxData($statesData, $stateId) {
-	foreach ($statesData as $state) {
-		if ($stateId == $state["abbr"]) {
-			return $state;
-		}
-	}
-}
-
-$stateData = findStateTaxData($statesData, $selectedStateAbbr);
+// $stateData = findStateTaxData($statesData, $selectedStateAbbr);
 
 function isSelected($chosen, $current) {
 	if ($chosen == $current) {
@@ -88,6 +81,7 @@ function grandTotal($item, $taxTotal) {
 
 // $totalTax = taxAmount($itemPrice, $, $countyTax);
 
+// * - - - ERROR MESSAGE FUNCTIONS - - - *
 function errorMessageOrder() {
 	if ( isset($_POST["order-amount"]) && ($_POST["order-amount"] == null) ) {
 		return $message = "Please enter a number";
@@ -96,19 +90,19 @@ function errorMessageOrder() {
 
 function errorMessageState() {
 	if ( isset($_POST["state-selected"]) && ($_POST["state-selected"] == null) ) {
-		return $message = "Please select a state";
+		echo "Please select a state";
 	}
 }
 
 function errorMessageCounty() {
 	if ( isset($_POST["county-selected"]) && ($_POST["county-selected"] == null) ) {
-		return $message = "Please select a county";
+		echo "Please select a county";
 	}
 }
 ?>
 
 
-<form method="POST">
+<form method="POST" class="tax-calc">
 	<label for="state-selected" class="normal-voice">Please select a state:</label>
 
 	<select name="state-selected" id="state">
@@ -118,12 +112,9 @@ function errorMessageCounty() {
 			foreach($statesData as $state) {
 				$id = $state["abbr"];		
 		?>
-			<option value="<?=$id?>" <?=isSelected($selectedStateAbbr, $id)?>>	<?=$id?>
+			<option value="<?=$id?>" <?=isSelected($selectedStateAbbr, $id)?>> 
+				<?=$id?> 
 			</option>
-		<?php } ?>
-
-		<?php if($message) { ?>
-			<p class="warning calm-voice"><?php echo errorMessageState() ?></p>
 		<?php } ?>
 	</select>
 
@@ -142,27 +133,30 @@ function errorMessageCounty() {
 						$countyTax = $county["tax"];
 				}
 			?>	
-					<option value="<?=$county["name"]?>" <?=isSelected($countySelected, $county["name"])?>>
+					<option value="<?=ucwords($county["name"])?>" <?=isSelected($countySelected, $county["name"])?>>
 
-						<?=$county["name"]?>
+						<?=ucwords($county["name"])?>
 
 					</option>
 			<?php } ?>
 		</select>
-		<p class="warning calm-voice"><?php echo errorMessageCounty() ?></p>
+		<p class="warning calm-voice"><?php errorMessageCounty() ?></p>
 
-		<p class="normal-voice">Enter the price of your item.</p>	
-
-		<input 
-			type="number"
-			name="order-amount"
-			step=".01"
-			autocomplete="off"
-		>
-
-		<p class="warning calm-voice"><?php echo errorMessageOrder() ?></p>
+		<order-amount>
+			<p class="normal-voice">Enter the price of your item.</p>	
+			
+			<input 
+				class="tax-calc order-amount"
+				type="number"
+				name="order-amount"
+				step=".01"
+				autocomplete="off"
+			>
+			
+			<p class="warning calm-voice"><?php errorMessageOrder() ?></p>
+		</order-amount>
 	<?php } ?>
-	<p class="warning calm-voice"><?php echo errorMessageState() ?></p>
+	<p class="warning calm-voice"><?php errorMessageState() ?></p>
 
 	<button type="submit" name="submitted">Submit</button>
 </form>
@@ -172,8 +166,7 @@ function errorMessageCounty() {
 
 	if ( isset($_POST["order-amount"]) && isset($_POST["state-selected"]) && isset($_POST["county-selected"]) ) { 
 
-		if ($_POST["order-amount"] != null && $_POST["state-selected"] != null) {
-			if ($_POST["county-selected"] != null) {
+		if ($_POST["order-amount"] != null && $_POST["state-selected"] != null && $_POST["county-selected"] != null) {
 ?>
 	<output>
 		<p class="normal-voice">You selected <?=$countySelected?> county in <?=$selectedState["state"]?>.</p>
@@ -182,14 +175,11 @@ function errorMessageCounty() {
 
 		<p class="normal-voice">County sales tax rate: <?=$countyTax?>% </p>
 		
-		<p class="normal-voice">Your subtotal is: $<?=$_POST["order-amount"]?>.</p>
+		<p class="normal-voice">Your subtotal is: $<?=$_POST["order-amount"]?></p>
 
 		<p class="normal-voice">Your total tax amount is: $<?=taxTotal($_POST["order-amount"], $selectedState["tax"],$countyTax )?></p>
 		<p class="normal-voice">Your grand total is: $<?=grandTotal($_POST["order-amount"], $taxAmount)?></p>
-
-
 	</output>
-			<?php } ?>
 		<?php } ?>
 <?php } ?>
 
