@@ -8,7 +8,7 @@ $submittedPost = isset($_POST["submitted"]);
 		$age = $_POST["age"];
 
 		if ($age < 0) {
-			$message = "You're dead and decomposing";
+			$message = "You're dead and decomposing so no, you can't drive.";
 		}
 		if ( empty($age) ) {
 			$message = "YOU ARE UNBORN";
