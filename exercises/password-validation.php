@@ -10,6 +10,22 @@
 		$createdPassword = $fruit . $number;
 		$passwordEnter = "";
 	}
+
+
+	if($submitted) {
+		if ( isset($_POST["fruit"]) && isset($_POST["number"]) && isset($_POST["password"]) ) {
+			if ( $_POST["number"] != null  && $_POST["number"] != null ) {
+					if ($createdPassword == $_POST["password"]) {
+
+						echo "<output>
+							<p class='normal-voice'>You did it!</p>
+						</output>";
+					}
+					
+			}
+		} 
+	} 
+
 ?>
 
 <form method="POST" class="password">
@@ -58,7 +74,7 @@
 						<output>
 							<p class="normal-voice">You did it!</p>
 						</output>
-						
+
 					<?php } ?>
 				<?php } ?>
 			<?php } ?>
