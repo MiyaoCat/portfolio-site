@@ -12,16 +12,19 @@
 	}
 
 
+function password($fruit, $number, $password) {
+
+}
 	if($submitted) {
+
+		$successMessage = "";
+
 		if ( isset($_POST["fruit"]) && isset($_POST["number"]) && isset($_POST["password"]) ) {
 			if ( $_POST["number"] != null  && $_POST["number"] != null ) {
 					if ($createdPassword == $_POST["password"]) {
 
-						echo "<output>
-							<p class='normal-voice'>You did it!</p>
-						</output>";
-					}
-					
+						 $successMessage = "You're in!";
+					}				
 			}
 		} 
 	} 
@@ -43,16 +46,16 @@
 			if ( isset($_POST["fruit"]) && $_POST["fruit"] != null ) {
 				if ( isset($_POST["number"]) && $_POST["number"] != null ) {
 	?>
-					<output>
+					<div class="password-output">
 						<p class="normal-voice">You entered:</p>
-						<?php  $createdPassword = $fruit . $number; ?>		
-						<?=$createdPassword?>	
+							<span class="alert-voice"><?php  $createdPassword = $fruit . $number; ?>		
+						<?=$createdPassword?></span>
 						
-						<p class="normal-voice">This will be your password</p>
-					</output>
+						<p class="normal-voice">This will be your password.</p>
+					</div>
 
 					<password-enter>
-						<label for="password">Please enter your password</label>
+						<label for="password">Please enter your password:</label>
 						
 						<input type="text" name="password" value="">
 					</password-enter>
@@ -65,18 +68,12 @@
 </form>
 
 <?php  
-	if($submitted) {
-		if ( isset($_POST["fruit"]) && $_POST["fruit"] != null ) {
-			if ( isset($_POST["number"]) && $_POST["number"] != null ) {
-				if ( isset($_POST["password"]) ) {
-					if ($createdPassword == $_POST["password"]) {
+	if(isset($_POST["password"]) ) {
+		if ($createdPassword == $_POST["password"]) {
 ?>
-						<output>
-							<p class="normal-voice">You did it!</p>
-						</output>
+			<output>
+				<p class="normal-voice"><?=$successMessage?></p>
+			</output>
 
-					<?php } ?>
-				<?php } ?>
-			<?php } ?>
 		<?php } ?>
-	<?php } ?>
+<?php } ?>

@@ -68,6 +68,18 @@ form-wrap .hidden {
 	padding: 5px;
 }
 
+.exercise .password-output {
+	margin: 10px 0;
+	padding: 5px;
+	border: 3px solid var(--ink);
+}
+
+.password-output > span {
+	color: var(--standout);
+	margin: 5px 0;
+}
+
+
 /* - - RADIO BUTTON - - - - - - - - - - - - - - - */
 .exercise form input[type="radio"] {
    border: 3px solid black;
