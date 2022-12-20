@@ -11,9 +11,9 @@
 		$body = "";
 
 		$body = "Email: " . $email . "\r\n" . 
-			"<br>Subject: " . $subject . "\r\n" . 
-			"<br>Name: " . $name . "\r\n" . 
-			"<br>Message: " . $message . "\r\n";
+			"Subject: " . $subject . "\r\n" . 
+			"Name: " . $name . "\r\n" . 
+			"Message: " . $message . "\r\n";
 
 
 		mail($to, $subject, $body);
