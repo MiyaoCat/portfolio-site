@@ -22,9 +22,7 @@
 }
 
 /* - - - - PASSWORD VALIDATION - - -*/
-.exercise form.password {
-	grid-row: 7;
-}
+
 
 .password-create {
 	display: flex;
