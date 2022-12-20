@@ -10,13 +10,13 @@
 
 		$body = "";
 
-		$email = "Email: " . $email . "\r\n";
-		$emailSubject = "Subject: " . $subject . "\r\n";
-		$emailName = "Name: " . $name . "\r\n";
-		$emailMessage = "Message: " . $message . "\r\n";
+		// $body = "Email: " . $email . "\r\n";
+		// $body = "Subject: " . $subject . "\r\n";
+		// $body = "Name: " . $name . "\r\n";
+		$body = "Message: " . $message . "\r\n";
 
 
-		mail($to, $emailSubject, $email, $emailName, $emailMessage);
+		mail($to, $subject, $email, $body);
 
 	}
 ?>
