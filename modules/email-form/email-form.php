@@ -46,8 +46,10 @@
 
 		if ( isset($email) ) {
 			if ( isset($message) && $message > "0") {	
-?>
-			<button class="normal-voice contact-form"><a href="?page=contact">Send another Message</a></button>
+?>	
+			<p class="normal-voice">Thank you! Your message has been received and I will get back to you ASAP! Usually within 2 business days. </p>
+			<button class="normal-voice contact-form"><a href="?page=contact">Send 	another Message</a>
+			</button>
 
 			<?php } ?>
 		
