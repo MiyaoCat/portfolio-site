@@ -29,6 +29,10 @@ html {
 	--tilt-small: -3deg;
 	--tilt: -4deg;
 	--tilt-large: -6deg;
+
+	--border-light: 1px;
+	--border-med: 3px;
+	--border-thick: 5px;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,7 +1,7 @@
 [	
 	{
 		"type": "generic-text",
-		"content": "<p class='normal-voice'>We worked through the book, Exercises for Programmers to build out each form. This book is great because it's language agnostic and tests your ability to use functions and logic to create each form. I think it's great practive when learning any new language. <br><br> Now click on a form and test them out!</p>"
+		"content": "<p class='normal-voice'>We worked through the book, Exercises for Programmers to build out each form. This book is great because it's language agnostic and tests your ability to use functions and logic to create each form. I think it's great practice when learning any new language. <br><br> Now click on a form and test them out!</p>"
 	},
 	{
 		"type": "calculations",
