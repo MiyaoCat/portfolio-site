@@ -11,12 +11,12 @@
 		$body = "";
 
 		$email = "Email: " . $email . "\r\n";
-		$body = "Subject: " . $subject . "\r\n";
-		$body = "Name: " . $name . "\r\n";
-		$body = "Message: " . $message . "\r\n";
+		$subject = "Subject: " . $subject . "\r\n";
+		$name = "Name: " . $name . "\r\n";
+		$message = "Message: " . $message . "\r\n";
 
 
-		mail($to, $subject, $email, $body);
+		mail($to, $subject, $email, $name, $message);
 
 	}
 ?>
