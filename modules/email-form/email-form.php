@@ -10,10 +10,10 @@
 
 		$body = "";
 
-		$body = "Email: " . $email . "\r\n";
-		$body = "Subject: " . $subject . "\r\n";
-		$body = "Name: " . $name . "\r\n";
-		$body = "Message: " . $message . "\r\n";
+		$body = "Email: " . $email . "\r\n" . 
+			"<br>Subject: " . $subject . "\r\n" . 
+			"<br>Name: " . $name . "\r\n" . 
+			"<br>Message: " . $message . "\r\n";
 
 
 		mail($to, $subject, $email, $body);
