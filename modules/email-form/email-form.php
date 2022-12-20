@@ -10,9 +10,9 @@
 
 		$body = "";
 
-		// $body = "Email: " . $email . "\r\n";
-		// $body = "Subject: " . $subject . "\r\n";
-		// $body = "Name: " . $name . "\r\n";
+		$body = "Email: " . $email . "\r\n";
+		$body = "Subject: " . $subject . "\r\n";
+		$body = "Name: " . $name . "\r\n";
 		$body = "Message: " . $message . "\r\n";
 
 
