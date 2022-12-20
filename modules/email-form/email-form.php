@@ -10,46 +10,44 @@
 
 		$body = "";
 
-		$body = "Email: " . $email . "\r\n" . 
-			"<br>Subject: " . $subject . "\r\n" . 
-			"<br>Name: " . $name . "\r\n" . 
-			"<br>Message: " . $message . "\r\n";
+		$body = "Email: " . $email . "\r\n";
+		$body = "Subject: " . $subject . "\r\n";
+		$body = "Name: " . $name . "\r\n";
+		$body = "Message: " . $message . "\r\n";
 
 
-		mail($to, $subject, $email, $body);
+		mail($to, $subject, $body);
 
 	}
 ?>
+<form method="POST">
+	
+	<label for="inputName">Name</label>
+	<input type="text" name="inputName">
 
-<div class="form" <?php if(isset($_POST['submitted'])){ echo "style='display:none'"; } ?>>   
-	<form method="POST">
-		
-		<label for="inputName">Name</label>
-		<input type="text" name="inputName">
+	<label for="inputEmail">* Email</label>
+	<input type="email" name="inputEmail" required>
 
-		<label for="inputEmail">* Email</label>
-		<input type="email" name="inputEmail" required>
+	<label for="inputSubject">Subject</label>
+	<input type="text" name="inputSubject">
 
-		<label for="inputSubject">Subject</label>
-		<input type="text" name="inputSubject">
+	<label for="inputMessage">* Message</label>
+	<textarea rows="8" columns="10" name="inputMessage" placeholder="Hey John, I love your work. Let's collab!" required></textarea>
 
-		<label for="inputMessage">* Message</label>
-		<textarea rows="8" columns="10" name="inputMessage" placeholder="Hey John, I love your work. Let's collab!" required></textarea>
+	<button class="normal-voice contact-form" type="submit" name="submitted">Send Message</button>
 
-		<button class="normal-voice contact-form" type="submit" name="submitted">Send Message</button>
+</form>
 
-	</form>
-</div>
 
 <?php  
 	if ( isset($_POST["submitted"]) ) {
 
 		if ( isset($email) ) {
-			if ( isset($message) && $message > "0") {	
+		if ( isset($message) && $message > "0") {	
 ?>
 			<p class="normal-voice">Thank you! Your message has been received and I will get back to you ASAP!</p>
 
-			<?php } ?>
+		<?php } ?>
 		
 		<?php } ?>
 
