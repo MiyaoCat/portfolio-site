@@ -162,10 +162,6 @@
 }
 
 @media (min-width: 550px) {
-	.project .page-header .title2 {
-		transform: translateX(36%);
-	}
-
 	.project .figure {
 		grid-column: 2 / 10;
 	}

@@ -1,11 +1,11 @@
 /* - - PAGE HEADER - - */
 .home .page-header .title1 {
-	transform: translateX(3%) rotate(var(--tilt));
+	transform: translateX(0) translateY(-.4em) rotate(var(--tilt));
 	transition: .2s ease-in-out;
 }
 
 .home .page-header .title1:hover {
-	transform: translateX(3%) rotate(0);
+	transform: translateX(0) rotate(0);
 	transition: .2s ease-in-out;
 }
 
@@ -13,9 +13,9 @@
 	transform: translateX(5em);
 }
 
-@media (min-width: 400px) {
+@media (min-width: 550px) {
 	.home .page-header .title1 {
-		transform: translateY(-.5em) translateX(3%) rotate(var(--tilt));
+		transform: translateY(-.5em) rotate(var(--tilt));
 		transition: .2s ease-in-out;
 	}
 }

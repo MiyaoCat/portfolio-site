@@ -21,18 +21,11 @@
 
 @media (min-width: 550px) {
 	.contact .page-header .title1 {
-		transform: translateY(-5px) rotate(var(--tilt));
+		transform: translateY(-.5em) rotate(var(--tilt));
 	}
 
 	.contact .page-header .title2 {
 		transform: translateX(30%);
-		/*clamp(9em, 30vw, 13em)*/
-	}
-}
-
-@media (min-width: 630px) {
-	.contact .page-header .title2 {
-		/*transform: translateX(15em);*/
 	}
 }
 
