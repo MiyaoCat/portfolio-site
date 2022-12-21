@@ -6,8 +6,6 @@
 	transition: .2s ease-in-out;
 }
 
-
-
 /*- - SIMPLE-INTEREST - - - - - - - - - - - - - - - - - - - */
 .simple-interest.heading .title1 {
 	transform: translateY(-.2em) rotate(var(--tilt));
@@ -85,3 +83,121 @@
 		transform: translateX(0);
 	}	
 }
+
+/*- - SIMPLE-MATH - - - - - - - - - - - - - - - - - - - */
+.count-characters.heading .title1 {
+	transform: translateY(-.2em) rotate(var(--tilt));
+}
+
+.count-characters.heading .title1:hover {
+	transform: translateX(0) translateY(0) rotate(0);
+}
+
+.count-characters.heading .title2 {
+	transform: translateX(4.5em);
+}
+
+@media (min-width: 550px) {
+	.count-characters.heading .title1 {
+		transform: translateY(-.5em) rotate(var(--tilt));
+	}
+
+	.count-characters.heading .title2 {
+		transform: translateX(7em);
+	}
+}
+
+@media (min-width: 700px) {
+	.count-characters.heading .title1 {
+		transform: translateX(-67%) translateY(.6em) rotate(var(--tilt));
+	}
+
+	.count-characters.heading .title1:hover {
+		transform: translateX(-67%) translateY(.6em) rotate(0);
+		transition: .2s ease-in-out;
+	}
+
+	.count-characters.heading .title2 {
+		transform: translateX(0);
+	}	
+}
+
+@media (min-width: 800px) {
+	.count-characters.heading .title1 {
+		transform: translateX(-71%) translateY(.8em) rotate(var(--tilt));
+	}
+
+	.count-characters.heading .title1:hover {
+		transform: translateX(-71%) translateY(.8em) rotate(0);
+		transition: .2s ease-in-out;
+	}
+}
+
+@media (min-width: 1000px) {
+	.count-characters.heading .title1 {
+		transform: translateX(-72%) translateY(.9em) rotate(var(--tilt));
+	}
+
+	.count-characters.heading .title1:hover {
+		transform: translateX(-72%) translateY(.9em) rotate(0);
+		transition: .2s ease-in-out;
+	}	
+}
+
+/*- - PIZZA PARTY - - - - - - - - - - - - - - - - - - - */
+.pizza-party.heading .title1 {
+	transform: translateY(-.4em) rotate(var(--tilt));
+}
+
+.pizza-party.heading .title1:hover {
+	transform: translateX(0) translateY(0) rotate(0);
+}
+
+.pizza-party.heading .title2 {
+	transform: translateX(4em);
+}
+
+@media (min-width: 550px) {
+	.pizza-party.heading .title1 {
+		transform: translateY(-.5em) rotate(var(--tilt));
+	}
+
+	.pizza-party.heading .title2 {
+		transform: translateX(6em);
+	}
+}
+
+@media (min-width: 700px) {
+	.pizza-party.heading .title1 {
+		transform: translateX(-60%) translateY(.3em) rotate(var(--tilt));
+	}
+
+	.pizza-party.heading .title1:hover {
+		transform: translateX(-60%) translateY(.3em) rotate(0);
+		transition: .2s ease-in-out;
+	}
+
+	.pizza-party.heading .title2 {
+		transform: translateX(0);
+	}	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
