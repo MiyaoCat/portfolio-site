@@ -29,9 +29,6 @@
 
 ?>
 
-<form method="POST">
-<h1 class="loud-voice">Character Count</h1>
- 	
 <form method="POST">	
 	<div class="instructions">
 		<p class="regular-voice">Type in a string of text and I'll count how many characters you entered. </p>

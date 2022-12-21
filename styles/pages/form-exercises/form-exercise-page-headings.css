@@ -84,7 +84,7 @@
 	}	
 }
 
-/*- - SIMPLE-MATH - - - - - - - - - - - - - - - - - - - */
+/*- - CHARACTER-COUNT - - - - - - - - - - - - - - - - - - - */
 .count-characters.heading .title1 {
 	transform: translateY(-.2em) rotate(var(--tilt));
 }
@@ -182,22 +182,201 @@
 	}	
 }
 
+/*- - SAY HELLO - - - - - - - - - - - - - - - - - - - */
+.hello.heading .title1 {
+	transform: translateY(-.4em) rotate(var(--tilt));
+}
 
+.hello.heading .title1:hover {
+	transform: translateX(0) translateY(0) rotate(0);
+}
 
+.hello.heading .title2 {
+	transform: translateX(1.5em);
+}
 
+@media (min-width: 550px) {
+	.hello.heading .title1 {
+		transform: translateY(-.9em) rotate(var(--tilt));
+	}
 
+	.hello.heading .title2 {
+		transform: translateX(3em);
+	}
+}
 
+@media (min-width: 700px) {
+	.hello.heading .title1 {
+		transform: translateX(-65%) translateY(.3em) rotate(var(--tilt));
+	}
 
+	.hello.heading .title1:hover {
+		transform: translateX(-65%) translateY(.3em) rotate(0);
+		transition: .2s ease-in-out;
+	}
 
+	.hello.heading .title2 {
+		transform: translateX(0);
+	}	
+}
 
+/*- - TAX-CALCULATOR - - - - - - - - - - - - - - - - - - - */
+.tax-calculator.heading .title1 {
+	transform: translateY(-0.3em) rotate(-4deg);
+	transition: .2s ease-in-out;
+}
 
+.tax-calculator.heading .title1:hover {
+	transform: translateY(-0.3em) rotate(0);
+	transition: .2s ease-in-out;
+}
 
+.tax-calculator.heading .title2 {
+	transform: translateX(2em);
+}
 
+@media (min-width: 500px) {
+	.tax-calculator.heading .title1 {
+		transform: translateY(-.9em) rotate(var(--tilt));
+	}
 
+	.tax-calculator.heading .title2 {
+		transform: translateX(3em);
+	}
+}
 
+@media (min-width: 700px) {
+	.tax-calculator.heading .title1 {
+		transform: translateX(-85%) translateY(.8em) rotate(var(--tilt));
+		transition: .2s ease-in-out;
+	}
 
+	.tax-calculator.heading .title1:hover {
+		transform: translateX(-85%) translateY(0) rotate(0);
+		transition: .2s ease-in-out;
+	}
 
+	.tax-calculator.heading .title2 {
+		transform: translateX(0);
+	}
 
+@media (min-width: 1000px) {
+	.tax-calculator.heading .title1 {
+		transform: translateX(-85%) translateY(1.4em) rotate(var(--tilt));
+	}
+}
 
+/*- - TIP-CALCULATOR - - - - - - - - - - - - - - - - - - - */
+.tip-calculator.heading .title1 {
+	transform: translateY(-35%) rotate(-4deg);
+	transition: .2s ease-in-out;
+}
 
+.tip-calculator.heading .title1:hover {
+	transform: translateX(0) rotate(0);
+	transition: .2s ease-in-out;
+}
 
+.tip-calculator.heading .title2 {
+	transform: translateX(2em);
+}
+
+@media (min-width: 700px) {
+	/* - - PAGE HEADER - - - - - - - - - - - - */
+	.tip-calculator.heading .title1 {
+		transform: translateX(-88%) translateY(22%) rotate(var(--tilt));
+		transition: .2s ease-in-out;
+	}
+
+	.tip-calculator.heading .title1:hover {
+		transform: translateX(-88%) translateY(0) rotate(0);
+		transition: .2s ease-in-out;
+	}
+
+	.tip-calculator.heading .title2 {
+		transform: translateX(0);
+	}
+
+/*- - SELF-CHECKOUT - - - - - - - - - - - - - - - - - - - */
+.self-checkout.heading .title1{
+	transform: translateY(-.5em) rotate(var(--tilt));
+	transition: .2s ease-in-out;
+}
+
+.self-checkout.heading .title1:hover {
+	transform: translateX(0) translateY(0) rotate(0);
+	transition: .2s ease-in-out;
+}
+
+.self-checkout.heading .title2 {
+	transform: translateX(4em);
+}
+
+@media (min-width: 500px) {
+	.self-checkout.heading .title1{
+		transform: translateY(-.7em) rotate(var(--tilt));
+	}
+
+	.self-checkout.heading .title1:hover {
+		transform: translateX(0) translateY(0) rotate(0);
+		transition: .2s ease-in-out;
+	}
+
+	.self-checkout.heading .title2 {
+		transform: translateX(5em);
+	}
+}
+
+@media (min-width: 700px) {
+	/* - - PAGE HEADER - - */
+	.self-checkout.heading .title1 {
+		transform: translateX(-80%) translateY(1em) rotate(var(--tilt));
+	}
+
+	.self-checkout.heading .title1:hover {
+		transform: translateX(-80%) rotate(0);
+		transition: .2s ease-in-out;
+	}
+	
+	.self-checkout.heading .title2 {
+		transform: translateX(0);
+	}
+}
+
+/*- - DRIVING-AGE - - - - - - - - - - - - - - - - - - - */
+.driving-age.heading .title1 {
+	transform: translateY(-.4em) rotate(var(--tilt));
+}
+
+.driving-age.heading .title1:hover {
+	transform: translateX(0) translateY(0) rotate(0);
+}
+
+.driving-age.heading .title2 {
+	transform: translateX(5em);
+}
+
+@media (min-width: 550px) {
+	.driving-age.heading .title1 {
+		transform: translateY(-.9em) rotate(var(--tilt));
+	}
+
+	.driving-age.heading .title2 {
+		transform: translateX(3em);
+	}
+}
+
+@media (min-width: 700px) {
+	.driving-age.heading .title1 {
+		transform: translateX(-23%) translateY(.3em) rotate(var(--tilt));
+	}
+
+	.driving-age.heading .title1:hover {
+		transform: translateX(-23%) translateY(.3em) rotate(0);
+		transition: .2s ease-in-out;
+	}
+
+	.driving-age.heading .title2 {
+		transform: translateX(0);
+	}	
+}

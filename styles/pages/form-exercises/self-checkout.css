@@ -1,17 +1,4 @@
-/* - - - - PAGE HEADER- - - - - - - - - - - - */
-.self-checkout.heading .title1{
-	transform: translateY(-.5em) rotate(var(--tilt));
-	transition: .2s ease-in-out;
-}
 
-.self-checkout.heading .title1:hover {
-	transform: translateX(0) translateY(0) rotate(0);
-	transition: .2s ease-in-out;
-}
-
-.self-checkout.heading .title2 {
-	transform: translateX(4em);
-}
 
 /* - - - - FORM - - - - - - - - - - - - */
 form.self-checkout {
@@ -63,36 +50,7 @@ form.self-checkout .warning {
 	}
 }
 
-@media (min-width: 500px) {
-	.self-checkout.heading .title1{
-		transform: translateY(-.7em) rotate(var(--tilt));
-	}
-
-	.self-checkout.heading .title1:hover {
-		transform: translateX(0) translateY(0) rotate(0);
-		transition: .2s ease-in-out;
-	}
-
-	.self-checkout.heading .title2 {
-		transform: translateX(5em);
-	}
-}
-
 @media (min-width: 700px) {
-	/* - - PAGE HEADER - - */
-	.self-checkout.heading .title1 {
-		transform: translateX(-80%) translateY(1em) rotate(var(--tilt));
-	}
-
-	.self-checkout.heading .title1:hover {
-		transform: translateX(-80%) rotate(0);
-		transition: .2s ease-in-out;
-	}
-	
-	.self-checkout.heading .title2 {
-		transform: translateX(0);
-	}
-
 	form.self-checkout {
 		grid-column: 4 / 10;
 		gap: 0;

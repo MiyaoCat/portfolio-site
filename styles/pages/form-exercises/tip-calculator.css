@@ -1,24 +1,9 @@
-
 td:nth-of-type(2) {
 	padding-left: 20px;
 }
 
 .tip-select {
 	margin: 15px 0;
-}
-
-.tip-calculator.heading .title1 {
-	transform: translateY(-35%) rotate(-4deg);
-	transition: .2s ease-in-out;
-}
-
-.tip-calculator.heading .title1:hover {
-	transform: translateX(0) rotate(0);
-	transition: .2s ease-in-out;
-}
-
-.tip-calculator.heading .title2 {
-	transform: translateX(2em);
 }
 
 tr:nth-of-type(3){
@@ -28,19 +13,3 @@ tr:nth-of-type(3){
 td:nth-of-type(2) p {
 	text-align: right;
 }
-
-@media (min-width: 700px) {
-	/* - - PAGE HEADER - - - - - - - - - - - - */
-	.tip-calculator.heading .title1 {
-		transform: translateX(-88%) translateY(22%) rotate(var(--tilt));
-		transition: .2s ease-in-out;
-	}
-
-	.tip-calculator.heading .title1:hover {
-		transform: translateX(-88%) translateY(0) rotate(0);
-		transition: .2s ease-in-out;
-	}
-
-	.tip-calculator.heading .title2 {
-		transform: translateX(0);
-	}
