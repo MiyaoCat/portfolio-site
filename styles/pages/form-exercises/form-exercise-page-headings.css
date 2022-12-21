@@ -31,12 +31,11 @@
 
 @media (min-width: 700px) {
 	.simple-interest.heading .title1 {
-		transform: translateX(-70%) translateY(.3em) rotate(var(--tilt));
+		transform: translateX(-76%) translateY(.3em) rotate(var(--tilt));
 	}
 
 	.simple-interest.heading .title1:hover {
-		transform: translateX(-70%) translateY(.3em) rotate(0);
-		transition: .2s ease-in-out;
+		transform: translateX(-76%) translateY(.3em) rotate(0);
 	}	
 }
 
@@ -76,7 +75,6 @@
 
 	.simple-math.heading .title1:hover {
 		transform: translateX(-45%) translateY(.3em) rotate(0);
-		transition: .2s ease-in-out;
 	}
 
 	.simple-math.heading .title2 {
@@ -129,7 +127,6 @@
 
 	.count-characters.heading .title1:hover {
 		transform: translateX(-71%) translateY(.8em) rotate(0);
-		transition: .2s ease-in-out;
 	}
 }
 
@@ -140,7 +137,6 @@
 
 	.count-characters.heading .title1:hover {
 		transform: translateX(-72%) translateY(.9em) rotate(0);
-		transition: .2s ease-in-out;
 	}	
 }
 
@@ -174,7 +170,6 @@
 
 	.pizza-party.heading .title1:hover {
 		transform: translateX(-60%) translateY(.3em) rotate(0);
-		transition: .2s ease-in-out;
 	}
 
 	.pizza-party.heading .title2 {
@@ -223,12 +218,10 @@
 /*- - TAX-CALCULATOR - - - - - - - - - - - - - - - - - - - */
 .tax-calculator.heading .title1 {
 	transform: translateY(-0.3em) rotate(-4deg);
-	transition: .2s ease-in-out;
 }
 
 .tax-calculator.heading .title1:hover {
 	transform: translateY(-0.3em) rotate(0);
-	transition: .2s ease-in-out;
 }
 
 .tax-calculator.heading .title2 {
@@ -248,33 +241,30 @@
 @media (min-width: 700px) {
 	.tax-calculator.heading .title1 {
 		transform: translateX(-85%) translateY(.8em) rotate(var(--tilt));
-		transition: .2s ease-in-out;
 	}
 
 	.tax-calculator.heading .title1:hover {
 		transform: translateX(-85%) translateY(0) rotate(0);
-		transition: .2s ease-in-out;
 	}
 
 	.tax-calculator.heading .title2 {
 		transform: translateX(0);
 	}
+}
 
 @media (min-width: 1000px) {
 	.tax-calculator.heading .title1 {
-		transform: translateX(-85%) translateY(1.4em) rotate(var(--tilt));
+		transform: translateX(-85%) translateY(1.4em) rotate( var(--tilt) );
 	}
 }
 
 /*- - TIP-CALCULATOR - - - - - - - - - - - - - - - - - - - */
 .tip-calculator.heading .title1 {
 	transform: translateY(-35%) rotate(-4deg);
-	transition: .2s ease-in-out;
 }
 
 .tip-calculator.heading .title1:hover {
 	transform: translateX(0) rotate(0);
-	transition: .2s ease-in-out;
 }
 
 .tip-calculator.heading .title2 {
@@ -282,20 +272,18 @@
 }
 
 @media (min-width: 700px) {
-	/* - - PAGE HEADER - - - - - - - - - - - - */
 	.tip-calculator.heading .title1 {
 		transform: translateX(-88%) translateY(22%) rotate(var(--tilt));
-		transition: .2s ease-in-out;
 	}
 
 	.tip-calculator.heading .title1:hover {
 		transform: translateX(-88%) translateY(0) rotate(0);
-		transition: .2s ease-in-out;
 	}
 
 	.tip-calculator.heading .title2 {
 		transform: translateX(0);
 	}
+}
 
 /*- - SELF-CHECKOUT - - - - - - - - - - - - - - - - - - - */
 .self-checkout.heading .title1{
@@ -305,7 +293,6 @@
 
 .self-checkout.heading .title1:hover {
 	transform: translateX(0) translateY(0) rotate(0);
-	transition: .2s ease-in-out;
 }
 
 .self-checkout.heading .title2 {
@@ -319,7 +306,6 @@
 
 	.self-checkout.heading .title1:hover {
 		transform: translateX(0) translateY(0) rotate(0);
-		transition: .2s ease-in-out;
 	}
 
 	.self-checkout.heading .title2 {
@@ -328,14 +314,12 @@
 }
 
 @media (min-width: 700px) {
-	/* - - PAGE HEADER - - */
 	.self-checkout.heading .title1 {
 		transform: translateX(-80%) translateY(1em) rotate(var(--tilt));
 	}
 
 	.self-checkout.heading .title1:hover {
 		transform: translateX(-80%) rotate(0);
-		transition: .2s ease-in-out;
 	}
 	
 	.self-checkout.heading .title2 {
@@ -345,38 +329,150 @@
 
 /*- - DRIVING-AGE - - - - - - - - - - - - - - - - - - - */
 .driving-age.heading .title1 {
-	transform: translateY(-.4em) rotate(var(--tilt));
+	transform: translateY(-0.3em) rotate(-4deg);
 }
 
 .driving-age.heading .title1:hover {
-	transform: translateX(0) translateY(0) rotate(0);
+	transform: translateY(-0.3em) rotate(0);
 }
 
 .driving-age.heading .title2 {
-	transform: translateX(5em);
+	transform: translateX(7em);
 }
 
 @media (min-width: 550px) {
 	.driving-age.heading .title1 {
-		transform: translateY(-.9em) rotate(var(--tilt));
+		transform: translateY(-.6em) rotate(var(--tilt));
 	}
 
 	.driving-age.heading .title2 {
-		transform: translateX(3em);
+		transform: translateX(9em);
 	}
 }
 
 @media (min-width: 700px) {
 	.driving-age.heading .title1 {
-		transform: translateX(-23%) translateY(.3em) rotate(var(--tilt));
+		transform: translateX(-23%) translateY(.6em) rotate(var(--tilt));
 	}
 
 	.driving-age.heading .title1:hover {
-		transform: translateX(-23%) translateY(.3em) rotate(0);
-		transition: .2s ease-in-out;
+		transform: translateX(-23%) translateY(.6em) rotate(0);
 	}
 
 	.driving-age.heading .title2 {
 		transform: translateX(0);
 	}	
 }
+
+/*- - TEMP-CONVERTER - - - - - - - - - - - - - - - - - - - */
+.temp-converter.heading .title1{
+	transform: translateY(-.5em) rotate(var(--tilt));
+	transition: .2s ease-in-out;
+}
+
+.temp-converter.heading .title1:hover {
+	transform: translateX(0) translateY(0) rotate(0);
+}
+
+.temp-converter.heading .title2 {
+	transform: translateX(4em);
+}
+
+@media (min-width: 500px) {
+	.temp-converter.heading .title1{
+		transform: translateY(-.7em) rotate(var(--tilt));
+	}
+
+	.temp-converter.heading .title1:hover {
+		transform: translateX(0) translateY(0) rotate(0);
+	}
+
+	.temp-converter.heading .title2 {
+		transform: translateX(5em);
+	}
+}
+
+@media (min-width: 700px) {
+	.temp-converter.heading .title1 {
+		transform: translateX(-80%) translateY(1.1em) rotate(var(--tilt));
+	}
+
+	.temp-converter.heading .title1:hover {
+		transform: translateX(-80%) rotate(0);
+	}
+	
+	.temp-converter.heading .title2 {
+		transform: translateX(0);
+	}
+}
+
+
+/*- - PASSWORD VALIDATION - - - - - - - - - - - - - - - - - - - */
+.password-validation.heading .title1 {
+	transform: translateY(-.2em) rotate(var(--tilt));
+}
+
+.password-validation.heading .title1:hover {
+	transform: translateX(0) translateY(0) rotate(0);
+}
+
+.password-validation.heading .title2 {
+	transform: translateX(4.5em);
+}
+
+@media (min-width: 400px) {
+	.password-validation.heading .title2 {
+	transform: translateX(9em);
+}
+}
+
+@media (min-width: 550px) {
+	.password-validation.heading .title1 {
+		transform: translateY(-.5em) rotate(var(--tilt));
+	}
+
+	.password-validation.heading .title2 {
+		transform: translateX(10em);
+	}
+}
+
+@media (min-width: 700px) {
+	.password-validation.heading .title1 {
+		transform: translateX(-43%) translateY(0) rotate(var(--tilt));
+	}
+
+	.password-validation.heading .title1:hover {
+		transform: translateX(-43%) translateY(0) rotate(0);
+		transition: .2s ease-in-out;
+	}
+
+	.password-validation.heading .title2 {
+		transform: translateX(0);
+	}	
+}
+
+@media (min-width: 1000px) {
+	.password-validation.heading .title1 {
+		transform: translateX(-47%) translateY(.5em) rotate(var(--tilt));
+	}
+
+	.password-validation.heading .title1:hover {
+		transform: translateX(-47%) translateY(.5em) rotate(0);
+	}	
+}
+
+@media (min-width: 1500px) {
+	.password-validation.heading .title1 {
+		transform: translateX(-50%) translateY(.5em) rotate(var(--tilt));
+	}
+
+	.password-validation.heading .title1:hover {
+		transform: translateX(-50%) translateY(.5em) rotate(0);
+	}	
+}
+
+
+
+
+
+
