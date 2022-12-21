@@ -42,10 +42,46 @@
 	}	
 }
 
-
-
 @media (min-width: 700px) {
 	.exercise .heading .title2 {
 		transform: translateX(0);
 	}
+}
+
+/*- - SIMPLE-MATH - - - - - - - - - - - - - - - - - - - */
+.simple-math.heading .title1 {
+	transform: translateY(-.2em) rotate(var(--tilt));
+}
+
+.simple-math.heading .title1:hover {
+	transform: translateX(0) translateY(0) rotate(0);
+}
+
+.simple-math.heading .title2 {
+	transform: translateX(6em);
+}
+
+@media (min-width: 550px) {
+	.simple-math.heading .title1 {
+		transform: translateY(-.5em) rotate(var(--tilt));
+	}
+
+	.simple-math.heading .title2 {
+		transform: translateX(7em);
+	}
+}
+
+@media (min-width: 700px) {
+	.simple-math.heading .title1 {
+		transform: translateX(-45%) translateY(.3em) rotate(var(--tilt));
+	}
+
+	.simple-math.heading .title1:hover {
+		transform: translateX(-45%) translateY(.3em) rotate(0);
+		transition: .2s ease-in-out;
+	}
+
+	.simple-math.heading .title2 {
+		transform: translateX(0);
+	}	
 }

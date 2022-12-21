@@ -45,7 +45,7 @@ if ( isset($_POST['submitted']) ) {
 		if ($quantity > 0 ) {
 			$hasQuantity = true;
 		} else {
-			$valueError = "<p class='calm-voice warning'>If you don't buy anything, you don't owe anything. Enter a quantity!</p>";
+			$valueError = "<p class='calm-voice warning'>Enter a quantity!</p>";
 		}
 	}
 
@@ -59,7 +59,7 @@ if ( isset($_POST['submitted']) ) {
 		if ($price > 0) {
 			$hasPrice = true;
 		} else {
-			$priceValueError = "<p class='calm-voice warning'>If it doesn't have a price, then it's free!</p>";
+			$priceValueError = "<p class='calm-voice warning'>Is it free?</p>";
 		}
 		
 	}
@@ -67,7 +67,6 @@ if ( isset($_POST['submitted']) ) {
 	if ( isset($_POST['quantity2']) ) {
 		$quantity2 = $_POST['quantity2'];
 		
-
 		if ( empty($quantity2) ) {
 			$quantity2 = 0;
 		}
@@ -75,13 +74,12 @@ if ( isset($_POST['submitted']) ) {
 		if ($quantity2 > 0 ) {
 			$hasQuantity2 = true;
 		} else {
-			$valueError2 = "<p class='calm-voice warning'>If you don't buy anything, you don't owe anything. Enter a quantity!</p>";
+			$valueError2 = "<p class='calm-voice warning'>Enter a quantity!</p>";
 		}
 	}
 
 	if ( isset($_POST['price2']) ) {
 		$price2 = $_POST['price2'];
-
 
 		if ( empty($price2) ) {
 			$price2 = 0;
@@ -90,13 +88,12 @@ if ( isset($_POST['submitted']) ) {
 		if ($price2 > 0) {
 			$hasPrice2 = true;
 		} else {
-			$priceValueError2 = "<p class='calm-voice warning'>If it doesn't have a price, then it's free!</p>";
+			$priceValueError2 = "<p class='calm-voice warning'>Is it free?</p>";
 		}					
 	}
 
 	if ( isset($_POST['quantity3']) ) {
 		$quantity3 = $_POST['quantity3'];
-		
 
 		if ( empty($quantity3) ) {
 			$quantity3 = 0;
@@ -105,7 +102,7 @@ if ( isset($_POST['submitted']) ) {
 		if ($quantity3 > 0 ) {
 			$hasquantity3 = true;
 		} else {
-			$valueError3 = "<p class='calm-voice warning'>If you don't buy anything, you don't owe anything. Enter a quantity!</p>";
+			$valueError3 = "<p class='calm-voice warning'>Enter a quantity!</p>";
 		}
 	}
 
@@ -119,13 +116,12 @@ if ( isset($_POST['submitted']) ) {
 		if ($price3 > 0) {
 			$hasprice3 = true;
 		} else {
-			$priceValueError3 = "<p class='calm-voice warning'>If it doesn't have a price, then it's free!</p>";
+			$priceValueError3 = "<p class='calm-voice warning'>Is it free?</p>";
 		}	
 	}
 
 	if ( isset($_POST['quantity4']) ) {
-		$quantity4 = $_POST['quantity4'];
-		
+		$quantity4 = $_POST['quantity4'];		
 
 		if ( empty($quantity4) ) {
 			$quantity4 = 0;
@@ -134,7 +130,7 @@ if ( isset($_POST['submitted']) ) {
 		if ($quantity4 > 0 ) {
 			$hasquantity4 = true;
 		} else {
-			$valueError4 = "<p class='calm-voice warning'>If you don't buy anything, you don't owe anything. Enter a quantity!</p>";
+			$valueError4 = "<p class='calm-voice warning'>Enter a quantity!</p>";
 		}
 	}
 
@@ -148,7 +144,7 @@ if ( isset($_POST['submitted']) ) {
 		if ($price4 > 0) {
 			$hasprice4 = true;
 		} else {
-			$priceValueError4 = "<p class='calm-voice warning'>If it doesn't have a price, then it's free!</p>";
+			$priceValueError4 = "<p class='calm-voice warning'>Is it free?</p>";
 		}
 	}
 		
@@ -213,7 +209,7 @@ if ( isset($_POST['submitted']) ) {
 					placeholder="0.00">
 	
 				<?php if($priceValueError) {?>
-					<!-- <p class="calm-voice warning"><?=$priceValueError?></p> -->
+					<p class="calm-voice warning"><?=$priceValueError?></p>
 				<?php } ?>	
 	
 			</price>
@@ -235,7 +231,7 @@ if ( isset($_POST['submitted']) ) {
 					label="write your number">
 	
 				<?php if($valueError2) {?>
-					<!-- <p class="calm-voice warning"><?=$valueError2?></p> -->
+					<p class="calm-voice warning"><?=$valueError2?></p>
 				<?php } ?>	
 			</quantity>		
 	
@@ -250,7 +246,7 @@ if ( isset($_POST['submitted']) ) {
 					placeholder="0.00">
 	
 				<?php if($priceValueError2) {?>
-					<!-- <p class="calm-voice warning"><?=$priceValueError2?></p> -->
+					<p class="calm-voice warning"><?=$priceValueError2?></p>
 				<?php } ?>	
 			</price>
 	 	</div>
@@ -272,7 +268,7 @@ if ( isset($_POST['submitted']) ) {
 					label="write your number">
 	
 				<?php if($valueError3) {?>
-					<!-- <p class="calm-voice warning"><?=$valueError3?></p> -->
+					<p class="calm-voice warning"><?=$valueError3?></p>
 				<?php } ?>	
 			</quantity>		
 	
@@ -287,7 +283,7 @@ if ( isset($_POST['submitted']) ) {
 					placeholder="0.00">
 	
 				<?php if($priceValueError3) {?>
-					<!-- <p class="calm-voice warning"><?=$priceValueError3?></p> -->
+					<p class="calm-voice warning"><?=$priceValueError3?></p>
 				<?php } ?>	
 			</price>
 	 	</div>
@@ -308,7 +304,7 @@ if ( isset($_POST['submitted']) ) {
 					label="write your number">
 			
 				<?php if($valueError4) {?>
-					<!-- <p class="calm-voice warning"><?=$valueError4?></p> -->
+					<p class="calm-voice warning"><?=$valueError4?></p>
 				<?php } ?>	
 			</quantity>		
 			
@@ -323,7 +319,7 @@ if ( isset($_POST['submitted']) ) {
 					placeholder="0.00">
 			
 				<?php if($priceValueError4) {?>
-					<!-- <p class="calm-voice warning"><?=$priceValueError4?></p> -->
+					<p class="calm-voice warning"><?=$priceValueError4?></p>
 				<?php } ?>	
 			</price>
 		</div>

@@ -105,7 +105,7 @@
 		type="number" 
 		name="number1" 
 		step="any"
-		placeholder="Enter your first number"
+		placeholder="First Number"
 	>
 	
 	<p class="calm-voice warning"><?php echo errorMessage1(); ?></p>
@@ -114,7 +114,7 @@
 		type="number" 
 		name="number2" 
 		step="any"
-		placeholder="Enter your second number"
+		placeholder="Second Number"
 	>
 	<p class="calm-voice warning"><?php echo errorMessage2(); ?></p>
 

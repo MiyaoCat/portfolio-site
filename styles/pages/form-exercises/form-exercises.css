@@ -62,7 +62,7 @@ form-wrap .hidden {
 }
 
 .exercise input[type="number"] {
-	max-width: 100px;
+	max-width: 150px;
 	padding: 5px;
 }
 
