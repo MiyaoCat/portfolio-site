@@ -35,7 +35,7 @@ project-card .languages li {
 	padding: 2px 5px 14px 5px;
 	margin: 0 8px 5px 0;
 	max-height: 1.2rem;
-	border: 2px solid var(--trim);
+	border: var(--border-thin) solid var(--trim);
 	text-align: center;
 	background: var(--background);
 	box-shadow: 3px 3px var(--contrast);
@@ -56,7 +56,7 @@ project-card .project-image  {
 		max-width: 250px;
 		max-height: 200px;
 		grid-row: 4;
-		border: 3px solid var(--trim);
+/*		border: 3px solid var(--trim);*/
 	}
 
 	picture.project-image:hover {
