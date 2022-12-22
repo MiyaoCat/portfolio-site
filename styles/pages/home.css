@@ -15,7 +15,7 @@
 
 @media (min-width: 550px) {
 	.home .page-header .title1 {
-		transform: translateY(-.5em) rotate(var(--tilt));
+		transform: translateY(-.8em) rotate(var(--tilt));
 		transition: .2s ease-in-out;
 	}
 }
