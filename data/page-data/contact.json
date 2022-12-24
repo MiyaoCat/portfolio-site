@@ -13,6 +13,9 @@
 		{
 			"module": "email-form",
 			"content": "send me a message!"
+		},
+		{
+			"module": "social-icons"
 		}
 	]
 }
