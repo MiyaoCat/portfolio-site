@@ -51,6 +51,7 @@ project-card .project-image  {
 	project-card {
 		margin-right: 20px;
 	}
+
 	picture.project-image {
 		display: block;
 		max-width: 250px;

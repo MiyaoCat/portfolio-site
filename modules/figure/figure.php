@@ -27,25 +27,22 @@
 		$altText = $sections["altText"];
 ?>
 
-<figure>
-	<picture>
-		<img src="<?=$filePath?>" alt="<?=$altText?>">
-	</picture>
-</figure>	
+	<figure>
+		<picture>
+			<img src="<?=$filePath?>" alt="<?=$altText?>">
+		</picture>
+	</figure>	
+<?php } ?>
 
 <?php 
-	} elseif ($page == "project") {
+	if ($page == "project") {
 
-	$filePath = $CaseStudyModule["filePath"];
-	$altText = $CaseStudyModule["altText"];
-	$caption = $CaseStudyModule["caption"];
-	$figureHeading = $CaseStudyModule["figureHeading"];
-
+		$filePath = $CaseStudyModule["filePath"];
+		$altText = $CaseStudyModule["altText"];
+		$caption = $CaseStudyModule["caption"];
 ?>
 
 <figure>
-	<!-- <h4 class="attention-voice"><?=$figureHeading?></h4> -->
-	
 	<picture>
 		<img src="<?=$filePath?>" alt="<?=$altText?>">
 	</picture>

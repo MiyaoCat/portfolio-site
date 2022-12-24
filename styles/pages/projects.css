@@ -15,6 +15,7 @@
 
 .projects project-card {
 	grid-column: 2 / 14;
+	gap: 10px;
 }
 
 .projects project-card.layout-garden {
@@ -23,7 +24,6 @@
 
 .projects project-card.exercises {
 	grid-row: 5;
-	gap: 10px;
 }
 
 .projects project-card.luxury-streetwear {
@@ -32,7 +32,6 @@
 
 .projects project-card.portfolio-site {
 	grid-row: 7;
-	gap: 10px;
 }
 
 @media (min-width: 700px) {
