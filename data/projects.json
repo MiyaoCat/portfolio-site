@@ -67,7 +67,7 @@
 			},
 			{
 				"module": "figure",
-				"filePath": "images/luxury-streetwear/luxury-streetwear-mood-board.png",
+				"filePath": "images/projects/luxury-streetwear/luxury-streetwear-mood-board.png",
 				"altText":	"Luxury streetwear moodboard from researched sites.",
 				"figureHeading": "Moodboard",
 				"caption": "The moodboard where I pulled visual treatments from the researched sites."
@@ -79,7 +79,7 @@
 			},
 			{
 				"module": "figure",
-				"filePath": "images/luxury-streetwear/luxury-streetwear-style-tile.png",
+				"filePath": "images/projects/luxury-streetwear/luxury-streetwear-style-tile.png",
 				"altText":	"Luxury streetwear moodboard from researched sites.",
 				"figureHeading": "Moodboard",
 				"caption": "The visual language of my site represented through a Style Tile."
@@ -111,7 +111,7 @@
 			},
 			{
 				"module": "figure",
-				"filePath": "images/portfolio/outline.png",
+				"filePath": "images/projects/portfolio/outline.png",
 				"altText":	"Luxury streetwear moodboard from researched sites.",
 				"figureHeading": "Style Tile",
 				"caption": "Writing out the content of my portfolio."
@@ -123,7 +123,7 @@
 			},
 			{
 				"module": "figure",
-				"filePath": "images/portfolio/context.png",
+				"filePath": "images/projects/portfolio/context.png",
 				"altText":	"Visual ideas of the menu, footer, proejct cards and About Me pages.",
 				"figureHeading": "Moodboard",
 				"caption": "Adding some visual context with the content I wrote out."
@@ -135,7 +135,7 @@
 			},
 			{
 				"module": "figure",
-				"filePath": "images/portfolio/personal-site-type-design.png",
+				"filePath": "images/projects/portfolio/personal-site-type-design.png",
 				"altText":	"Variations of the header and paragraph text.",
 				"figureHeading": "Moodboard",
 				"caption": "Trying different variations of the header and paragraph. Played with line spacing, font weights, text-alignments and more."
@@ -147,7 +147,7 @@
 			},
 			{
 				"module": "figure",
-				"filePath": "images/portfolio/layout-on-grid.png",
+				"filePath": "images/projects/portfolio/layout-on-grid.png",
 				"altText":	"Mockup of portfolio site in Affinity Designer.",
 				"figureHeading": "Moodboard",
 				"caption": "Mockup of my site in Affinity Designer accounting for different screen sizes."
