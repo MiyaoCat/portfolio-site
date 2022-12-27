@@ -19,10 +19,13 @@ generic-text {
 @media (min-width: 700px) {
 	.generic-text {
 		grid-column: 4 / 10;
-		margin-top: 30px;
 		margin-right: 20px;
 		/*text-align: right;*/
 		/*justify-content: flex-end;*/
+	}
+
+	.generic-text:first-of-type {
+		margin-top: 20px;
 	}
 }
 
