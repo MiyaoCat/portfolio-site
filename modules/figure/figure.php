@@ -13,20 +13,19 @@
 			}
 		}		
 ?>
+	<figure>
+		<picture>
+			<img src="<?=$filePath?>" alt="<?=$altText?>">
+		</picture>
+	</figure>	
+<?php } ?>
 
-<figure>
-	<picture>
-		<img src="<?=$filePath?>" alt="<?=$altText?>">
-	</picture>
-</figure>	
-
-<?php } 
-	elseif ($page !== "project") {
+<?php 
+	if ($page !== "project") {
 
 		$filePath = $sections["filePath"];
 		$altText = $sections["altText"];
 ?>
-
 	<figure>
 		<picture>
 			<img src="<?=$filePath?>" alt="<?=$altText?>">
@@ -42,14 +41,14 @@
 		$caption = $CaseStudyModule["caption"];
 ?>
 
-<figure>
-	<picture>
-		<img src="<?=$filePath?>" alt="<?=$altText?>">
-	</picture>
+	<figure>
+		<picture>
+			<img src="<?=$filePath?>" alt="<?=$altText?>">
+		</picture>
 
-	<image-caption>
-		<p class="calm-voice"><?=$caption?></p>
-	</image-caption>
-</figure>	
+		<image-caption>
+			<p class="calm-voice"><?=$caption?></p>
+		</image-caption>
+	</figure>	
 
 <?php } ?>

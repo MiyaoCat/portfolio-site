@@ -74,9 +74,9 @@
 	.about .figure {
 		margin-top: auto;
 		margin-bottom: auto;
-		margin-left: 20px;
-		max-width: 135px;
-		grid-column: 10 / span 3;
+/*		margin-left: 20px;*/
+/*		max-width: 135px;*/
+/*		grid-column: 10 / span 3;*/
 	}
 
 	.about .figure:nth-of-type(4)  {
@@ -84,18 +84,21 @@
 		grid-row: 3;
 		transform: rotate(3deg);
 		justify-content: center;
+		grid-column: 10;
 	}
 
 	.about .figure:nth-of-type(5)  {
 		display: block;
-		grid-row: 4;
+		grid-row: 3;
 		transform: rotate(-3deg);
+		grid-column: 11;
 	}
 
 	.about .figure:nth-of-type(6)  {
 		display: block;
-		grid-row: 5;
+		grid-row: 3;
 		transform: rotate(3deg);
+		grid-column: 12;
 	}
 
 	.about picture {
