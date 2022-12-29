@@ -82,7 +82,7 @@
 	.about .figure:nth-of-type(4)  {
 		display: block;
 		grid-row: 3;
-		transform: rotate(3deg);
+/*		transform: rotate(3deg);*/
 		justify-content: center;
 		grid-column: 10;
 	}
@@ -90,17 +90,38 @@
 	.about .figure:nth-of-type(5)  {
 		display: block;
 		grid-row: 3;
-		transform: rotate(-3deg);
+/*		transform: rotate(-3deg);*/
 		grid-column: 11;
 	}
 
 	.about .figure:nth-of-type(6)  {
 		display: block;
 		grid-row: 3;
-		transform: rotate(3deg);
+/*		transform: rotate(3deg);*/
 		grid-column: 12;
 	}
 
+	.about .figure:nth-of-type(7)  {
+		display: block;
+		grid-row: 4;
+/*		transform: rotate(3deg);*/
+		justify-content: center;
+		grid-column: 10;
+	}
+
+	.about .figure:nth-of-type(8)  {
+		display: block;
+		grid-row: 4;
+/*		transform: rotate(-3deg);*/
+		grid-column: 11;
+	}
+
+	.about .figure:nth-of-type(9)  {
+		display: block;
+		grid-row: 4;
+/*		transform: rotate(3deg);*/
+		grid-column: 12;
+	}
 	.about picture {
 		box-shadow: 10px 10px var(--trim);
 	}
