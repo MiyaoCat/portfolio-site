@@ -107,7 +107,7 @@ function errorMessageCounty() {
 	<label for="state-selected" class="normal-voice">Please select a state:</label>
 
 	<select name="state-selected" id="state">
-		<option value="">--Select a State--</option>
+		<option value="" >Select State</option>
 
 		<?php 
 			foreach($statesData as $state) {
@@ -123,10 +123,10 @@ function errorMessageCounty() {
 	<?php 
 		if ($selectedStateAbbr) {
 	?>
-		<label for="county-selected" class="normal-voice">Please select a county:</label>
+		<label for="county-selected">Please select a county:</label>
 
 		<select name="county-selected" id="county">
-			<option value="">--Select a County--</option>
+			<option value="" >Select County</option>
 
 			<?php  
 				foreach($selectedState["counties"] as $county) {

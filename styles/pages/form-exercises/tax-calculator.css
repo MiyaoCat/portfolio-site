@@ -4,7 +4,7 @@
 	padding: 5px;
 	border: 3px solid var(--ink);
 	font-family: var(--sans-serif);
-	font-size: clamp(.8rem, 1.5vw, 1rem);
+/*	font-size: clamp(.8rem, 1.5vw, 1rem);*/
 	line-height: 1.5rem;
 }
 
