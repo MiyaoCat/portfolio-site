@@ -130,13 +130,13 @@ function errorMessageCounty() {
 
 			<?php  
 				foreach($selectedState["counties"] as $county) {
-					if ($countySelected == ucwords($county["name"])) {
+					if ($countySelected == $county["name"]) {
 						$countyTax = $county["tax"];
 				}
 			?>	
 					<option value="<?=$county["name"]?>" <?=isSelected($countySelected, $county["name"])?>>
 
-						<?=$county["name"]?>
+						<?=ucwords($county["name"])?>
 
 					</option>
 			<?php } ?>
