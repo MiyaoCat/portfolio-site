@@ -75,6 +75,10 @@ nav a.active {
 		background-color: transparent;
 	}
 
+	.resume .site-header {
+		background-color: var(--background);
+	}
+	
 	.site-header .logo {
 		grid-column: 2;
 	}
