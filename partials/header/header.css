@@ -1,17 +1,20 @@
 .site-header {
 	grid-row: 1;
-	grid-column: 2 / 14;
+	grid-column: 1 / 14;
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 40px;
 	margin-top: 5px;
 	position: sticky;
 	top: 0;
+	background-color: var(--background);
+	z-index: 1;
 }
 
 .site-header .logo {
 	margin-left: 5px;
 }
+
 
 nav ul {
 	display: flex;
@@ -65,7 +68,24 @@ nav a.active {
 
 
 @media (min-width: 700px) {
-	
+	.site-header {
+		grid-column: 2 / 14;
+		display: grid;
+		grid-template-columns: auto repeat(12, minmax(0, 120px)) auto;
+		transition: 1s ease-in-out;
+	}
+
+	.site-header .logo {
+		grid-column: 2;
+	}
+
+	nav {
+		background-color: var(--paper);
+		grid-column: 10 / 14;
+		margin-left: -4px;
+		display: flex;
+		justify-content: flex-end;
+	}
 	nav ul {
 		gap: 30px;
 	}
