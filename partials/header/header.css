@@ -72,11 +72,16 @@ nav a.active {
 		grid-column: 2 / 14;
 		display: grid;
 		grid-template-columns: auto repeat(12, minmax(0, 120px)) auto;
-		transition: 1s ease-in-out;
+		background-color: transparent;
 	}
 
 	.site-header .logo {
 		grid-column: 2;
+	}
+
+	.middle {
+		grid-column: 3 / 10;
+		opacity: 0;
 	}
 
 	nav {
