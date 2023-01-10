@@ -14,7 +14,7 @@
 }
 
 form-exercise {
-	grid-column: 2 / 14;
+	grid-column: 1 / 14;
 	margin: 15px 20px 0 5px;
 	max-width: 200px;
 }

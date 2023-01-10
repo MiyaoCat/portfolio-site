@@ -33,6 +33,9 @@ body {
 	margin-right: auto;
 }
 
+body > * {
+	padding: 0 5px;
+}
 .background {
 	grid-column: 1 / -1;
 	grid-row:  1 / 3;
@@ -80,6 +83,10 @@ input, textarea {
 
 	body {
 		grid-gap: 12px;
+	}
+	
+	body > * {
+		padding: 0;
 	}
 	
 	.image {

@@ -13,11 +13,6 @@
 	transform: translateX(2em);
 }
 
-.projects project-card {
-	grid-column: 2 / 14;
-	gap: 10px;
-}
-
 .projects project-card.layout-garden {
 	grid-row: 4;
 }

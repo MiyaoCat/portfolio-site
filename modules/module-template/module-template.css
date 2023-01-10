@@ -12,7 +12,7 @@
 }
 /* - - - - GENERIC-TEXT  - - - - - - - - - - - - */
 .module-template .module.generic-text::after {
-	context: 'asdf';
+/*	context: 'asdf';*/
 }
 
 /* - - - - FIGURE  - - - - - - - - - - - - */

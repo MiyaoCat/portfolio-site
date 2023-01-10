@@ -5,6 +5,9 @@ project-card {
 	padding: 15px 10px 25px 0;
 	border-top: 3px solid var(--trim);
 	border-bottom: 3px solid var(--trim);
+
+	grid-column: 1 / 14;
+	gap: 10px;
 }
 
 project-card + project-card {

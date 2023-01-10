@@ -25,13 +25,13 @@
 
 .contact .email-form {
 	grid-row: 4;
-	grid-column: 2 / 14;
+	grid-column: 1 / 14;
 	margin: 5px;
 }
 
 .contact .social-icons {
 	grid-row: 8;
-	grid-column: 2 / 14;
+	grid-column: 1 / 14;
 }
 
 @media (min-width: 700px) {
