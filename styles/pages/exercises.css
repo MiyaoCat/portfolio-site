@@ -64,7 +64,7 @@ form-exercise .exercises li:hover {
 
 	.input-output {
 		grid-row: 4;
-		grid-column: 7 / 14;
+		grid-column: 2 / 14;
 	}
 }
 
