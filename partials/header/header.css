@@ -5,6 +5,7 @@
 	justify-content: space-between;
 	margin-bottom: 40px;
 	margin-top: 5px;
+	position: sticky;
 }
 
 .site-header .logo {
