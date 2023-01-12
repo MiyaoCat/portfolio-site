@@ -45,20 +45,37 @@
 /* - - BUTTONS - - */
 .home .button:nth-of-type(2) {
 	grid-row: 6;
-	grid-column: 5;
+	grid-column: 2;
 	align-items: center;
+	margin-top: 20px;
 	margin-bottom: 15px;
 }
 
 .home .button:nth-of-type(3) {
 	grid-row: 7;
-	grid-column: 5;
+	grid-column: 2;
 	align-items: center;
 }
 
 @media (min-width: 400px) {
-	.home .button {
-		grid-column: 6;
+	.home .button:nth-of-type(2) {
+		grid-column: 4;
+	}
+
+	.home .button:nth-of-type(3) {
+		grid-column: 4;
+	}
+}
+
+@media (min-width: 700px) {
+	.home .button:nth-of-type(2) {
+		grid-column: 5;
+		margin-left: 15px;
+	}
+
+	.home .button:nth-of-type(3) {
+		grid-column: 5;
+		margin-left: 15px;
 	}
 }
 
@@ -74,13 +91,14 @@
 		grid-column-start: 5;
 		display: flex;
 		justify-content: flex-end;
-		margin-bottom: 0;
+		margin: 0;
 	}
 
 	.home .button:nth-of-type(3) {
 		grid-row: 6;
 		grid-column: 7;
 		display: flex;
+		margin: 0;
 	}
 }
 
