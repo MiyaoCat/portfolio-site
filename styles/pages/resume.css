@@ -142,7 +142,7 @@ sub-header.skill {
 	text-align: center;
 	border: 3px solid var(--trim);
 	background: var(--background);
-	box-shadow: 4px 4px var(--contrast);
+/*	box-shadow: 4px 4px var(--contrast);*/
 	/*font-size: .9rem;*/
 }
 
@@ -159,7 +159,7 @@ sub-header.skill {
 	max-width: 18rem;
 	border: 3px solid var(--trim);
 	background: var(--background);
-	box-shadow: 5px 5px var(--contrast);
+/*	box-shadow: 5px 5px var(--contrast);*/
 	margin-top: 15px;
 }
 
@@ -187,7 +187,7 @@ sub-header.skill {
 	text-align: center;
 	border: 3px solid var(--trim);
 	background: var(--background);
-	box-shadow: 5px 5px var(--contrast);
+/*	box-shadow: 5px 5px var(--contrast);*/
 	margin: 0 15px 10px 0;
 	max-width: 8rem;
 }

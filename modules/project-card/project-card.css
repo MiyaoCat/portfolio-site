@@ -41,7 +41,7 @@ project-card .languages li {
 	border: var(--border-thin) solid var(--trim);
 	text-align: center;
 	background: var(--background);
-	box-shadow: 3px 3px var(--contrast);
+/*	box-shadow: 3px 3px var(--contrast);*/
 }
 
 project-card .project-image  {
