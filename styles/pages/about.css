@@ -123,7 +123,7 @@
 		grid-column: 12;
 	}
 	.about picture {
-		box-shadow: 10px 10px var(--trim);
+/*		box-shadow: 10px 10px var(--trim);*/
 	}
 
 	/* - - SOCIAL ICONS - - - - - - - - */
