@@ -81,9 +81,14 @@ detail-link {
 	}
 }
 
+/* - - - - KEYWORDS  - - - - - - - - - - - - */
+.style-guide .keywords {
+	grid-row: 3;
+}
+
 /* - - - - TYPOGRAPHY  - - - - - - - - - - - - */
 .style-guide .typography {
-	grid-row: 3;
+	grid-row: 4;
 }
 
 .style-guide .typography-examples {
@@ -129,7 +134,7 @@ detail-link {
 }
 /* - - - - VOICES  - - - - - - - - - - - - */
 .style-guide .voices {
-	grid-row: 4;
+	grid-row: 5;
 }
 
 .style-guide .voice-examples {
@@ -140,7 +145,7 @@ detail-link {
 
 /* - - - - COLOR PALETTES  - - - - - - - - - - - - */
 .style-guide .colors  {
-	grid-row: 5;
+	grid-row: 6;
 }
 
 .style-guide .colors :is(.light-mode, .dark-mode)  {
@@ -229,14 +234,14 @@ detail-link {
 
 /* - - - - GENERIC TEXT - - - - - - - - - - - - */
 .style-guide .generic-text {
-	grid-row: 6;
+	grid-row: 7;
 	display: flex;
 	justify-content: flex-end;
 }
 
 /* - - - - FIGURE - - - - - - - - - - - - */
 .style-guide .figure {
-	grid-row: 7;
+	grid-row: 8;
 	display: flex;
 	justify-content: flex-end;
 
@@ -250,24 +255,24 @@ detail-link {
 
 /* - - - - BUTTON - - - - - - - - - - - - */
 .style-guide .button {
-	grid-row: 8;
+	grid-row: 9;
 }
 
 /* - - - - EMAIL FORM - - - - - - - - - - - - */
 .style-guide .email-form {
-	grid-row: 9;
-}
-
-/* - - - - SOCIAL ICONS - - - - - - - - - - - - */
-.style-guide .social-icons {
 	grid-row: 10;
-	display: flex;
-	justify-content: flex-end;
 }
 
 /* - - - - PROJECT CARD - - - - - - - - - - - - */
 .style-guide .project-card {
 	grid-row: 11;
 } 
+
+/* - - - - SOCIAL ICONS - - - - - - - - - - - - */
+.style-guide .social-icons {
+	grid-row: 12;
+	display: flex;
+	justify-content: flex-end;
+}
 
 

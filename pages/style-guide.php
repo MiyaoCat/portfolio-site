@@ -20,6 +20,11 @@
 
 <?php } ?>
 	
+<section class="keywords">
+	<h2 class="style-header loud-voice">Unique. Playful. Organized.</h2>	
+
+	<p class="normal-voice">These are the keywords I want my site to evoke. I aim to provide a unique viewing experience. Something different than your cookie-cutter layout while maintaining organization and ease-of-use. I also want you to have fun while you make your way through each page by adding small visual effects to keep it entertaining.</p>
+</section>
 
 <section class="typography">
 	<h2 class="style-header loud-voice">Typography</h2>
