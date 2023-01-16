@@ -25,6 +25,7 @@
 
 <header class="page-header">
 	<?php include("modules/page-header/page-header.php"); ?>
+	<p>Test</p>
 </header>
 
 <?php
