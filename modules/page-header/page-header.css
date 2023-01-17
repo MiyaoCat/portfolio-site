@@ -11,6 +11,9 @@
 	text-align: left;
 }
 
+.bg-color {
+	background-color: hotpink;
+}
 @media (min-width: 700px) {
 	.page-header {
 		grid-column: 2 / 10;
