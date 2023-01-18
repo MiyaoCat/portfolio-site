@@ -96,9 +96,9 @@
    }
 ?>
 		
-<form method="POST">
+<form id="simple-math" method="POST">
 	<div class="instructions">
-		<p class="regular-voice">Just type in your numbers and watch the magic happen!</p>
+		<p class="normal-voice">Just type in your numbers and watch the magic happen!</p>
 	</div>
 	
 	<input 

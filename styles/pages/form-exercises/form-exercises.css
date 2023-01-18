@@ -116,7 +116,7 @@ output {
 }
 
 output p {
-	text-align: center;
+	vertical-align: middle;
 }
 .warning, error {
 	color: red;

@@ -34,7 +34,7 @@ function emptyMessage($inputName) {
 }
 ?>
 
-<form method="POST">
+<form id="hello" method="POST">
 	<h1 class='loud-voice'>Say Hello!</h1>
 
 	<p class="normal-voice">Hey stranger, what's your name?</p>

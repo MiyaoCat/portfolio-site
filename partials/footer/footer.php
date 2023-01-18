@@ -11,7 +11,9 @@
 	<a href="?page=resume">Resume</a>
 	<a href="?page=exercises">Exercises</a>
 	</footer>
-	
+
+<script src='javascript/exercises.js'></script>	
+
 </body>
 
 </html>
