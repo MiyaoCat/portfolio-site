@@ -33,7 +33,7 @@ body {
 	margin-right: auto;
 }
 
-body > * {
+body > div, header, section, footer, project-card {
 	padding: 0 5px;
 }
 .background {

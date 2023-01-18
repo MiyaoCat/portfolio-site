@@ -7,6 +7,12 @@
 	margin: 5px;
 }
 
+.exercise .page-header {
+	grid-column: 2 / 14;
+	margin: 0 0 5px 0;
+	padding: 0;
+}
+
 .heading {
 	text-align: left;
 }
@@ -15,7 +21,7 @@
 	background-color: hotpink;
 }
 @media (min-width: 700px) {
-	.page-header {
+	.page-header, .exercise .page-header {
 		grid-column: 2 / 10;
 		flex-direction: column;
 /*		justify-content: flex-start;*/
