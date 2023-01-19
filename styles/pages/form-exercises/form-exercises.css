@@ -20,8 +20,12 @@
 	grid-column: 1 / 14;
 	padding: 0;
 }
+/* - - - COUNT CHARACTERS - - - - - - -*/
+.exercise #words {
+	color: var(--standout);
+}
 
-/* - - - - PASSWORD VALIDATION - - -*/
+/* - - - PASSWORD VALIDATION - - - - - - -*/
 .password-create {
 	display: flex;
 	flex-direction: column;
@@ -39,7 +43,6 @@ form-wrap .hidden {
 
 .exercise input {
 	margin: 5px 0;
-	max-width: 250px;
 }
 
 .exercise form label {
@@ -69,7 +72,6 @@ form-wrap .hidden {
 	padding: 5px;
 	border: 3px solid var(--ink);
 	background-color: var(--background);
-	max-width: 250px;
 	display: flex;
 	flex-direction: column;
 }
@@ -117,15 +119,17 @@ output {
 	grid-row: 7;
 	grid-column: 1 / 14;
 	margin-top: 20px;
+	margin-left: 5px;
 	margin-right: 20px;
-	border: 3px solid var(--trim);
+	border: 3px solid var(--ink);
 	background: var(--background);
 	padding: 5px;
 }
 
 output p {
-	vertical-align: middle;
+	padding: 5px;
 }
+
 .warning, error {
 	color: red;
 	margin-top: 5px;
@@ -133,12 +137,12 @@ output p {
 }
 
 @media (min-width: 550px) {
-	.exercise heading, form, output {
-		grid-column: 2 / 8;
+	.exercise heading, .exercise form, output {
+		grid-column: 1 / 5;
 	}
 
 	.exercise .instructions {
-		grid-column: 2 / 10;
+		grid-column: 1 / 10;
 	}
 }
 
@@ -148,22 +152,26 @@ output p {
 	}
 
 	.exercise .instructions {
-		grid-column: 6 / 10;
+		grid-column: 4 / 10;
 	}
 
 	.exercise form {
-		grid-column: 5 / 10;
+		grid-column: 4 / 10;
 	}
 
+	input, .password-output {
+		max-width: 250px;
+	}
 	output {
 		grid-row: 5;
-		grid-column: 10 / 14;
-		padding: 10px;
+		grid-column: 10 / 13;
+		padding: 5px;
 		margin-top: auto;
 		margin-bottom: auto;
 		margin-left: 20px;
 		margin-right: auto;
 	}
+
 }
 
 

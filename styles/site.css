@@ -61,7 +61,7 @@ nav a.active {
 }
 
 picture {
-/*	border: 3px solid var(--trim);*/
+/*	border: 3px solid var(--ink);*/
 }
 
 svg {
@@ -69,7 +69,7 @@ svg {
 }
 
 input, textarea {
-	border: var(--border-med) solid var(--trim);
+	border: var(--border-med) solid var(--ink);
 	font-family: var(--sans-serif);
 	font-size: 1rem;
 	padding: 5px;
@@ -86,7 +86,7 @@ input, textarea {
 	}
 	
 	body > * {
-		padding: 0;
+/*		padding: 0;*/
 	}
 	
 	.image {
