@@ -1,3 +1,4 @@
+// - - - - HELLO - - - - - - - - 
 // var $form = document.querySelector('#hello');
 // var $nameInput = document.querySelector("[name='name']");
 
@@ -79,42 +80,51 @@
 // });
 
 // - - - - PASSWORD VALIDATION - - - - - - - - 
-var $password = document.querySelector('.password');
+// var $password = document.querySelector('.password');
 
-var $fruit = document.querySelector("[name='fruit']");
-var $number = document.querySelector("[name='number']");
+// var $fruit = document.querySelector("[name='fruit']");
+// var $number = document.querySelector("[name='number']");
 
-$password.addEventListener('submit', function(event) {
+// $password.addEventListener('submit', function(event) {
+// 	event.preventDefault();
+
+// 	let fruitInput = $fruit.value;
+// 	let numberInput = $number.value;
+// 	let passwordInput = fruitInput + numberInput;
+
+// 	var $passwordDiv = document.querySelector('.password-create');
+
+// 	$passwordDiv.insertAdjacentHTML('afterend', '<div class="password-output"></div>');
+
+// 	var $passwordOutput = document.querySelector('.password-output');
+
+// 	$passwordOutput.innerHTML = `<p class="normal-voice">You entered:</p> <span class="alert-voice">${passwordInput}</span> <p class="normal-voice">This will be your password.</p>`;
+
+// 	var $passwordEnter = document.createElement('password-enter');
+// 	// document.body.appendChild($passwordEnter);
+	
+// 	console.log(passwordInput);
+// });
+
+// - - - - COUNT CHARACTERS - - - - - - - - 
+var $countChar = document.querySelector('#count-char');
+
+var $string = document.querySelector("[name='string']");
+
+$countChar.addEventListener('submit', function(event) {
 	event.preventDefault();
 
-	let fruitInput = $fruit.value;
-	let numberInput = $number.value;
-	let passwordInput = fruitInput + numberInput;
+	let stringInput = $string.value;
+	let stringLength = stringInput.length;
 
-	const $passwordDiv = document.querySelector('.password-create');
+	console.log(stringInput);
 
-	$passwordDiv.insertAdjacentHTML('afterend', '<div class="password-output"></div>');
+	let $output = document.createElement("output");
+	document.body.appendChild($output);
 
-	const $passwordOutput = document.querySelector('.password-output');
+	$output.innerHTML = `You entered "${stringInput}". It has ${stringLength} characters.`
 
-	$passwordOutput.innerHTML = `<p class="normal-voice">You entered:</p> <span class="alert-voice">${passwordInput}</span> <p class="normal-voice">This will be your password.</p>`;
-
-	let $passwordEnter = document.createElement('password-enter');
-	document.body.appendChild($passwordEnter);
-	
-	console.log(passwordInput);
 });
-
-
-
-
-
-
-
-
-
-
-
 
 
 
