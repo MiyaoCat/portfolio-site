@@ -115,7 +115,7 @@ password-enter {
 /* - - OUTPUT - - - - - - - - - - - - */
 output {
 	grid-row: 7;
-	grid-column: 2 / 14;
+	grid-column: 1 / 14;
 	margin-top: 20px;
 	margin-right: 20px;
 	border: 3px solid var(--trim);
