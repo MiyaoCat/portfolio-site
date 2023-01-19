@@ -1,4 +1,4 @@
-// - - - - HELLO - - - - - - - - 
+// - - - - HELLO - - - - - - - - - - - - - - - - - 
 // var $form = document.querySelector('#hello');
 // var $nameInput = document.querySelector("[name='name']");
 
@@ -17,7 +17,7 @@
 // 	$output.innerHTML = `<p class="normal-voice"> Hello, ${myText}. Nice to meet ya. </p>`;
 // });
 
-// - - - - SIMPLE MATH - - - - - - - - 
+// - - - - SIMPLE MATH - - - - - - - - - - - - - - 
 //Query form
 // var $simpleMath = document.querySelector('#simple-math');
 
@@ -55,7 +55,7 @@
 // });
 
 
-// - - - - SIMPLE INTEREST - - - - - - - - 
+// - - - - SIMPLE INTEREST - - - - - - - - - - - - - - 
 // var $form = document.querySelector("#simple-interest");
 
 // var $principalInput = document.querySelector("[name='principal']");
@@ -79,7 +79,7 @@
 // 	console.log(totalEarned);
 // });
 
-// - - - - PASSWORD VALIDATION - - - - - - - - 
+// - - - - PASSWORD VALIDATION - - - - - - - - - - - 
 // var $password = document.querySelector('.password');
 
 // var $fruit = document.querySelector("[name='fruit']");
@@ -106,7 +106,7 @@
 // 	console.log(passwordInput);
 // });
 
-// - - - - COUNT CHARACTERS - - - - - - - - 
+// - - - - COUNT CHARACTERS - - - - - - - - - - - - - - 
 var $countChar = document.querySelector('#count-char');
 
 var $string = document.querySelector("[name='string']");
@@ -116,13 +116,27 @@ $countChar.addEventListener('submit', function(event) {
 
 	let stringInput = $string.value;
 	let stringLength = stringInput.length;
+	let stringNoSpace = stringInput.replace(/ /g, "");
+	let stringNoSpaceLength = stringNoSpace.length;
 
-	console.log(stringInput);
+	function wordCount(string){
+		return string.split(" ").length;
+	}
+
+	console.log(wordCount(stringInput));
+
+	let words = wordCount(stringInput);
 
 	let $output = document.createElement("output");
 	document.body.appendChild($output);
 
-	$output.innerHTML = `You entered "${stringInput}". It has ${stringLength} characters.`
+	$output.innerHTML = `<p class="normal-voice">You entered: "<span id="words">${stringInput}</span>".</p> 
+
+		<p class="normal-voice">Total characters: ${stringLength}</p>
+
+		<p class="normal-voice">Total characters without spaces: ${stringNoSpaceLength}</p>
+
+		<p class="normal-voice">Total words: ${words}</p>`
 
 });
 

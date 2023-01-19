@@ -33,7 +33,7 @@ form.self-checkout .warning {
 
 @media (min-width: 350px) {
 	form.self-checkout {
-		grid-column: 2 / 10;
+		grid-column: 1 / 10;
 		display: grid;
 		grid-template-rows: 1fr 1fr auto; 
 		grid-template-columns: 1fr 1fr;
