@@ -6,7 +6,7 @@
 
 .exercise .instructions {
 	grid-row: 4;
-	grid-column: 2 / 14;
+	grid-column: 1 / 14;
 	max-width: 700px;
 	margin-right: 20px;
 }
@@ -15,14 +15,13 @@
 	display: flex;
 	flex-direction: column;
 	margin-right: 20px;
+	margin-left: 5px;
 	grid-row: 5;
-	grid-column: 2 / 14;
+	grid-column: 1 / 14;
 	padding: 0;
 }
 
 /* - - - - PASSWORD VALIDATION - - -*/
-
-
 .password-create {
 	display: flex;
 	flex-direction: column;
@@ -69,13 +68,22 @@ form-wrap .hidden {
 	margin: 10px 0;
 	padding: 5px;
 	border: 3px solid var(--ink);
+	background-color: var(--background);
+	max-width: 250px;
+	display: flex;
+	flex-direction: column;
 }
 
-.password-output > span {
+.password-output span {
 	color: var(--standout);
 	margin: 5px 0;
+/*	overflow: auto;*/
 }
 
+password-enter {
+	display: flex;
+	flex-direction: column;
+}
 
 /* - - RADIO BUTTON - - - - - - - - - - - - - - - */
 .exercise form input[type="radio"] {

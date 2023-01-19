@@ -8,8 +8,8 @@
 }
 
 .exercise .page-header {
-	grid-column: 2 / 14;
-	margin: 0 0 5px 0;
+	grid-column: 1 / 14;
+	margin: 0 0 5px 5px;
 	padding: 0;
 }
 

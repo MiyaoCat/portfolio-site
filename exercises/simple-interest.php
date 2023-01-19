@@ -64,7 +64,7 @@ $answerFormatted = number_format($answer, 2);
 	<p class="normal-voice">Let's see how much your money can grow over time. Follow the instructions below. Note, this is not calculating compound growth. Only *simple* growth.</p>
 </div>
 
-	<form method="POST">
+	<form id="simple-interest" method="POST">
 
 		<div class="entry principal">
 			<p class="normal-voice">Enter the principal amount you'll invest.</p>
