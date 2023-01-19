@@ -1,8 +1,6 @@
 <?php  
 	$fruit = "";
 	$number = "";
-	$postFruit = "";
-	$postNumber = "";
 
 	$submitted = isset($_POST["submitted"]);
 
@@ -10,7 +8,6 @@
 		$fruit = $_POST["fruit"];
 		$number = $_POST["number"];
 		$createdPassword = $fruit . $number;
-		$passwordEnter = "";
 	}
 
 if($submitted) {
@@ -87,7 +84,7 @@ function errorMessageNumber() {
 			<div class="password-output">
 				<p class="normal-voice">You entered:</p>
 					
-					<span class="alert-voice"><?=$createdPassword?></span>
+				<span class="alert-voice"><?=$createdPassword?></span>
 				
 				<p class="normal-voice">This will be your password.</p>
 			</div>
@@ -98,7 +95,6 @@ function errorMessageNumber() {
 				<input type="text" name="password" value="">
 
 				<p class="calm-voice warning"><?=$passwordErrorMessage?></p>
-
 			</password-enter>
 				<?php } ?>
 			<?php } ?>
