@@ -23,9 +23,9 @@
 
 <?php include("partials/header/header.php"); ?>
 
-<header class="page-header">
+<div class="page-header">
 	<?php include("modules/page-header/page-header.php"); ?>
-</header>
+</div>
 
 <?php
 	if ($pageData) {
