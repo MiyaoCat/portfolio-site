@@ -152,6 +152,7 @@ function errorMessageCounty() {
 				name="order-amount"
 				step=".01"
 				autocomplete="off"
+				value= "";
 			>
 			
 			<p class="warning calm-voice"><?php errorMessageOrder() ?></p>

@@ -58,17 +58,17 @@ $tipAmount = number_format($subTotal * $tipPercent - $subTotal, 2);
 		<p class="normal-voice">How much would you like to tip?</p>
 		<div class="ten">
 			<label for="ten-percent">10 Percent</label>
-			<input type="radio" name="tip" class="percent" value="ten">
+			<input type="radio" name="tip" class="percent" value=0.10>
 		</div>
 
 		<div class="fifteen">
 			<label for="fifteen-percent">15 Percent</label>
-			<input type="radio" name="tip" class="percent" value="fifteen">
+			<input type="radio" name="tip" class="percent" value=0.15>
 		</div>
 
 		<div class="twenty">
 			<label for="twenty-percent">20 Percent</label>
-			<input type="radio" name="tip" class="percent" value="twenty">
+			<input type="radio" name="tip" class="percent" value=.20>
 		</div>
 
 		<?php 
