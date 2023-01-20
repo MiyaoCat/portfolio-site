@@ -1,4 +1,7 @@
 /* - - PAGE HEADER - - */
+.page-header .title2 {
+	max-width: 65%;
+}
 .home .page-header .title1 {
 	transform: translateX(0) translateY(-.4em) rotate(var(--tilt));
 	transition: .2s ease-in-out;
@@ -11,6 +14,7 @@
 
 .home .page-header .title2 {
 	transform: translateX(5em);
+	transform-origin: 50% 50%;
 }
 
 @media (min-width: 550px) {
