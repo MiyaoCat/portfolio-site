@@ -25,6 +25,9 @@
 	color: var(--standout);
 }
 
+#count-char textarea {
+	resize: vertical;
+}
 /* - - - PASSWORD VALIDATION - - - - - - -*/
 .password-create {
 	display: flex;
