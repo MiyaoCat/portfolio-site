@@ -10,7 +10,7 @@
 .exercise .page-header {
 	grid-column: 1 / 14;
 	margin: 0 0 5px 5px;
-	padding: 0;
+	padding: 0 5px;
 }
 
 .heading {
