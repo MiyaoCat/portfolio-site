@@ -5,8 +5,8 @@
 }
 
 .exercise .instructions {
-	grid-row: 4;
-	grid-column: 1 / 14;
+/*	grid-row: 3;*/
+/*	grid-column: 1 / 14;*/
 	max-width: 700px;
 	margin-right: 20px;
 }
@@ -16,7 +16,7 @@
 	flex-direction: column;
 	margin-right: 20px;
 	margin-left: 5px;
-	grid-row: 5;
+	grid-row: 3;
 	grid-column: 1 / 14;
 	padding: 0;
 }

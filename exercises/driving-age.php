@@ -22,12 +22,15 @@ $submittedPost = isset($_POST["submitted"]);
 	} 
  ?>
 
-<div class="instructions">
-	<p class="normal-voice">Are you old enough to drive? Let's find out!</p>
-</div>
+
 
 <form method="POST">
+	<div class="instructions">
+		<p class="normal-voice">Are you old enough 	to drive? Let's find out!</p>
+	</div>
+
 	<p class="normal-voice">Enter your age:</p>
+	
 	<input 
 		type="number"
 		name="age"

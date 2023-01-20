@@ -34,11 +34,12 @@ function emptyMessage($inputName) {
 }
 ?>
 
+
 <form id="hello" method="POST">
-	<h1 class='loud-voice'>Say Hello!</h1>
-
-	<p class="normal-voice">Hey stranger, what's your name?</p>
-
+	<div class="instructions">
+		<p class="normal-voice">Hey stranger, what's your name?</p>
+	</div>
+	
 	<input type="text" 
 		name="name" 
 		value="" 

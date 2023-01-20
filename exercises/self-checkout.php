@@ -171,11 +171,15 @@ if ( isset($_POST['submitted']) ) {
 }	
 ?>
 
-<div class="instructions">
-	<p class="normal-voice">Let's see how much you'll owe if you purchase up to 4 items in the state of Washington.</p>
-</div>
+
 			
 <form class="self-checkout" method="POST">
+
+	<div class="instructions">
+		<p class="normal-voice">Let's see how much you'll owe if you purchase up to 4 items in the state of Washington.</p>
+	</div>
+
+
 	<div class="item one">
 		<h3 class="attention-voice">Item 1</h3>
 	 	

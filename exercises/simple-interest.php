@@ -60,72 +60,72 @@ $answer = $principal * (1 + ($percentInterest * $years));
 $answerFormatted = number_format($answer, 2);
 ?>
 
-<div class="instructions">
-	<p class="normal-voice">Let's see how much your money can grow over time. Follow the instructions below. Note, this is not calculating compound growth. Only *simple* growth.</p>
-</div>
+<form id="simple-interest" method="POST">
 
-	<form id="simple-interest" method="POST">
+	<div class="instructions">
+		<p class="normal-voice">Let's see how much your money can grow over time. Follow the instructions below. Note, this is not calculating compound growth. Only *simple* growth.</p>
+	</div>
 
-		<div class="entry principal">
-			<p class="normal-voice">Enter the principal amount you'll invest.</p>
-			<input type="number" 
-				name='principal' 
-				value="<?=$principal?>" 
-				placeholder ="0" 
-				min = "1">
-			
-			<return-message style="display: block">	
-				<?php if ( isset($_POST['principal']) ) { ?>	
-				<p class='returnMessage normal-voice'><?=$priMessage?></p>
-				<?php } ?>	
-			</return-message>
-		</div>
-			
-
-		<div class="entry interest">
-			<p class="normal-voice">Now enter the interest rate. Standard interest is 7% APY.</p>
-			
-			<input type="number" 
-				name='interest' 
-				value="<?=$interest?>" 
-				placeholder ="7%" 
-				min = "1"
-				step = "0.01">	
-				
-			
-			<return-message style="display: block">	
-				<?php if ( isset($_POST['interest']) ) { ?>
-				<p class='returnMessage normal-voice'><?=$intMessage?></p>
-				<?php } ?>	
-			</return-message>
-		</div>
-
-		<div class="entry years">
-			<p class="normal-voice">Enter the number of years you wish to invest.</p>
-			
-			<input type="number" 
-				name='years' 
-				value="<?=$years?>" 
-				placeholder ="0" 
-				min = "1">	
-			
-			<return-message style="display: block">	
-				<?php if ( isset($_POST['years']) ) { ?>
-				<p class='returnMessage normal-voice'><?=$yrMessage?></p>
-				<?php } ?>	
-			</return-message>
-		</div>
-
+	<div class="entry principal">
+		<p class="normal-voice">Enter the principal amount you'll invest.</p>
+		<input type="number" 
+			name='principal' 
+			value="<?=$principal?>" 
+			placeholder ="0" 
+			min = "1">
 		
-		<button type="submit" name="submitted">Submit</button>
+		<return-message style="display: block">	
+			<?php if ( isset($_POST['principal']) ) { ?>	
+			<p class='returnMessage normal-voice'><?=$priMessage?></p>
+			<?php } ?>	
+		</return-message>
+	</div>
+		
 
-	</form>
+	<div class="entry interest">
+		<p class="normal-voice">Now enter the interest rate. Standard interest is 7% APY.</p>
+		
+		<input type="number" 
+			name='interest' 
+			value="<?=$interest?>" 
+			placeholder ="7%" 
+			min = "1"
+			step = "0.01">	
+			
+		
+		<return-message style="display: block">	
+			<?php if ( isset($_POST['interest']) ) { ?>
+			<p class='returnMessage normal-voice'><?=$intMessage?></p>
+			<?php } ?>	
+		</return-message>
+	</div>
 
-	<?php if( isset($_POST['submitted']) ) { ?>
+	<div class="entry years">
+		<p class="normal-voice">Enter the number of years you wish to invest.</p>
+		
+		<input type="number" 
+			name='years' 
+			value="<?=$years?>" 
+			placeholder ="0" 
+			min = "1">	
+		
+		<return-message style="display: block">	
+			<?php if ( isset($_POST['years']) ) { ?>
+			<p class='returnMessage normal-voice'><?=$yrMessage?></p>
+			<?php } ?>	
+		</return-message>
+	</div>
+
+	
+	<button type="submit" name="submitted">Submit</button>
+
+</form>
+
+<?php if( isset($_POST['submitted']) ) { ?>
 	<output>
 		<p class="normal-voice">You'll earn <span class="int-total">$<?=$answerFormatted?></span> after <?=$years?> years at a <?=$interest?>% interest rate.</p>
 	</output>
-	<?php } ?>
+<?php } ?>
 
 
 
