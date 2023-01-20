@@ -27,17 +27,14 @@ form.self-checkout quantity {
 	margin: 5px 0;
 }
 
-form.self-checkout .warning {
-	
-}
-
 @media (min-width: 350px) {
-	form.self-checkout {
+	form.self-checkout .items-wrap {
 		grid-column: 1 / 10;
 		display: grid;
 		grid-template-rows: 1fr 1fr auto; 
 		grid-template-columns: 1fr 1fr;
 		gap: 15px;
+		margin-right: 20px;
 	}
 
 	form.self-checkout button {
@@ -87,14 +84,8 @@ form.self-checkout .warning {
 }
 
 @media (min-width: 1000px) {
-	form.self-checkout .item-wrap {
-		display: flex;
-		gap: 15px;
-	}
-
 	:is(quantity, price)  {
 		margin-top: 5px;
 		margin-bottom: 0;
 	}
-
 }

@@ -123,8 +123,6 @@ $countChar.addEventListener('submit', function(event) {
 		return string.split(" ").length;
 	}
 
-	console.log(wordCount(stringInput));
-
 	let words = wordCount(stringInput);
 
 	let $output = document.createElement("output");
@@ -140,14 +138,21 @@ $countChar.addEventListener('submit', function(event) {
 
 });
 
+// - - - - SELF-CHECKOUT - - - - - - - - - - - - - - 
+var $selfCheckout = document.querySelector(".self-checkout");
 
+var $quantity1 = document.querySelector("[name='quantity']");
+var price1 = document.querySelector("[name='price']");
 
+var $quantity2 = document.querySelector("[name='quantity2']");
+var price2 = document.querySelector("[name='price2']");
 
+var $quantity3 = document.querySelector("[name='quantity3']");
+var price3 = document.querySelector("[name='price3']");
 
-
-
-
-
+$selfCheckout.addEventListener('submit', function(myEvent) {
+	
+})
 
 
 

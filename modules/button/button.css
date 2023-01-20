@@ -25,6 +25,6 @@ button:active {
 
 @media (prefers-color-scheme: dark) {
 	button {
-		box-shadow: 5px 5px var(--ink);
+		box-shadow: 5px 5px var(--trim);
 	}
 }

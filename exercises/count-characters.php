@@ -31,15 +31,16 @@
 
 <form id="count-char" method="POST">	
 	<div class="instructions">
-		<p class="regular-voice">Type in a string of text and I'll count how many characters you entered. </p>
+		<p class="normal-voice">Type in a string of text and I'll count how many characters you entered. </p>
 	</div>
 
-	<input 
+	<textarea 
 		type="text" 
 		name="string" 
+		rows="2";
 		value="" 
 		placeholder="Type whatever you want"
-	>
+	></textarea>
 	<p class="calm-voice warning"><?=$errorMessage?></p>
 
 	<button type="submit" name="enter">Submit</button>

@@ -180,152 +180,154 @@ if ( isset($_POST['submitted']) ) {
 	</div>
 
 
-	<div class="item one">
-		<h3 class="attention-voice">Item 1</h3>
-	 	
-	 	<div class="item-wrap">
-	 		<quantity>	
-			 	<p class="calm-voice">Quantity</p>
-				<input 
-					type="number" 
-					name="quantity" 
-					value="<?=$quantity?>"
-					min="0"
-					placeholder="0"
-					label="write your number"
-				>
-	
-				<?php if($valueError) {?>
-
-						<p class="calm-voice warning"><?=$valueError?></p>
-
-				<?php } ?>	
-			</quantity>		
-	
-			<price>
-				<p class="calm-voice">Price</p>	
-				<input 
-					type="number" 
-					name="price" 
-					value="<?=$price?>"
-					step= '0.01'
-					min='0'
-					placeholder="0.00">
-	
-				<?php if($priceValueError) {?>
-					<p class="calm-voice warning"><?=$priceValueError?></p>
-				<?php } ?>	
-	
-			</price>
-	 	</div>
-	</div>
-
-	<div class="item two">
-		<h3 class="attention-voice">Item 2</h3>
-
-	 	<div class="item-wrap">
-	 		<quantity>	
-			 	<p class="calm-voice">Quantity</p>
-				<input 
-					type="number" 
-					name="quantity2" 
-					value="<?=$quantity2?>"
-					min="0"
-					placeholder="0"
-					label="write your number">
-	
-				<?php if($valueError2) {?>
-					<p class="calm-voice warning"><?=$valueError2?></p>
-				<?php } ?>	
-			</quantity>		
-	
-			<price>
-				<p class="calm-voice">Price</p>	
-				<input 
-					type="number" 
-					name="price2" 
-					value="<?=$price2?>"
-					step= '0.01'
-					min='0'
-					placeholder="0.00">
-	
-				<?php if($priceValueError2) {?>
-					<p class="calm-voice warning"><?=$priceValueError2?></p>
-				<?php } ?>	
-			</price>
-	 	</div>
-
-	</div>
-
-	<div class="item three">
-		<h3 class="attention-voice">Item 3</h3>
-
-	 	<div class="item-wrap">
-	 		<quantity>	
-			 	<p class="calm-voice">Quantity</p>
-				<input 
-					type="number" 
-					name="quantity3" 
-					value="<?=$quantity3?>"
-					min="0"
-					placeholder="0"
-					label="write your number">
-	
-				<?php if($valueError3) {?>
-					<p class="calm-voice warning"><?=$valueError3?></p>
-				<?php } ?>	
-			</quantity>		
-	
-			<price>
-				<p class="calm-voice">Price</p>	
-				<input 
-					type="number" 
-					name="price3" 
-					value="<?=$price3?>"
-					step= '0.01'
-					min='0'
-					placeholder="0.00">
-	
-				<?php if($priceValueError3) {?>
-					<p class="calm-voice warning"><?=$priceValueError3?></p>
-				<?php } ?>	
-			</price>
-	 	</div>
-	</div>
-
-	<div class="item four">
-		<h3 class="attention-voice">Item 4</h3>
+	<div class="items-wrap">
+		<div class="item one">
+			<h3 class="attention-voice">Item 1</h3>
+		 	
+		 	<div class="item-wrap">
+		 		<quantity>	
+				 	<p class="calm-voice">Quantity</p>
+					<input 
+						type="number" 
+						name="quantity" 
+						value="<?=$quantity?>"
+						min="0"
+						placeholder="0"
+						label="write your number"
+					>
 		
-		<div class="item-wrap">	
-			<quantity>	
-			 	<p class="calm-voice">Quantity</p>
-				<input 
-					type="number" 
-					name="quantity4" 
-					value="<?=$quantity4?>"
-					min="0"
-					placeholder="0"
-					label="write your number">
+					<?php if($valueError) {?>
+		
+							<p class="calm-voice warning"><?=$valueError?></p>
+		
+					<?php } ?>	
+				</quantity>		
+		
+				<price>
+					<p class="calm-voice">Price</p>	
+					<input 
+						type="number" 
+						name="price" 
+						value="<?=$price?>"
+						step= '0.01'
+						min='0'
+						placeholder="0.00">
+		
+					<?php if($priceValueError) {?>
+						<p class="calm-voice warning"><?=$priceValueError?></p>
+					<?php } ?>	
+		
+				</price>
+		 	</div>
+		</div>
+		
+		<div class="item two">
+			<h3 class="attention-voice">Item 2</h3>
+		
+		 	<div class="item-wrap">
+		 		<quantity>	
+				 	<p class="calm-voice">Quantity</p>
+					<input 
+						type="number" 
+						name="quantity2" 
+						value="<?=$quantity2?>"
+						min="0"
+						placeholder="0"
+						label="write your number">
+		
+					<?php if($valueError2) {?>
+						<p class="calm-voice warning"><?=$valueError2?></p>
+					<?php } ?>	
+				</quantity>		
+		
+				<price>
+					<p class="calm-voice">Price</p>	
+					<input 
+						type="number" 
+						name="price2" 
+						value="<?=$price2?>"
+						step= '0.01'
+						min='0'
+						placeholder="0.00">
+		
+					<?php if($priceValueError2) {?>
+						<p class="calm-voice warning"><?=$priceValueError2?></p>
+					<?php } ?>	
+				</price>
+		 	</div>
+		
+		</div>
+		
+		<div class="item three">
+			<h3 class="attention-voice">Item 3</h3>
+		
+		 	<div class="item-wrap">
+		 		<quantity>	
+				 	<p class="calm-voice">Quantity</p>
+					<input 
+						type="number" 
+						name="quantity3" 
+						value="<?=$quantity3?>"
+						min="0"
+						placeholder="0"
+						label="write your number">
+		
+					<?php if($valueError3) {?>
+						<p class="calm-voice warning"><?=$valueError3?></p>
+					<?php } ?>	
+				</quantity>		
+		
+				<price>
+					<p class="calm-voice">Price</p>	
+					<input 
+						type="number" 
+						name="price3" 
+						value="<?=$price3?>"
+						step= '0.01'
+						min='0'
+						placeholder="0.00">
+		
+					<?php if($priceValueError3) {?>
+						<p class="calm-voice warning"><?=$priceValueError3?></p>
+					<?php } ?>	
+				</price>
+		 	</div>
+		</div>
+		
+		<div class="item four">
+			<h3 class="attention-voice">Item 4</h3>
 			
-				<?php if($valueError4) {?>
-					<p class="calm-voice warning"><?=$valueError4?></p>
-				<?php } ?>	
-			</quantity>		
-			
-			<price>
-				<p class="calm-voice">Price</p>	
-				<input 
-					type="number" 
-					name="price4" 
-					value="<?=$price4?>"
-					step= '0.01'
-					min='0'
-					placeholder="0.00">
-			
-				<?php if($priceValueError4) {?>
-					<p class="calm-voice warning"><?=$priceValueError4?></p>
-				<?php } ?>	
-			</price>
+			<div class="item-wrap">	
+				<quantity>	
+				 	<p class="calm-voice">Quantity</p>
+					<input 
+						type="number" 
+						name="quantity4" 
+						value="<?=$quantity4?>"
+						min="0"
+						placeholder="0"
+						label="write your number">
+				
+					<?php if($valueError4) {?>
+						<p class="calm-voice warning"><?=$valueError4?></p>
+					<?php } ?>	
+				</quantity>		
+				
+				<price>
+					<p class="calm-voice">Price</p>	
+					<input 
+						type="number" 
+						name="price4" 
+						value="<?=$price4?>"
+						step= '0.01'
+						min='0'
+						placeholder="0.00">
+				
+					<?php if($priceValueError4) {?>
+						<p class="calm-voice warning"><?=$priceValueError4?></p>
+					<?php } ?>	
+				</price>
+			</div>
 		</div>
 	</div>
 
