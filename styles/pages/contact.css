@@ -19,7 +19,7 @@
 	}
 
 	.contact .page-header .title2 {
-		transform: translateX(30%);
+		transform: translateX(50%);
 	}
 }
 
@@ -45,7 +45,7 @@
 	}
 
 	.contact .page-header .title2 {
-		transform: translateX(0);
+		transform: translateX();
 	}
 
 	.contact .email-form  {
