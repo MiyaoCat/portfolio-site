@@ -205,24 +205,28 @@ var $tip = document.querySelector("input[name='tip']");
 $form.addEventListener('submit', function(event) {
 	event.preventDefault();
 
-	var subTotal = $subTotal.value;
+	var subTotal = parseInt($subTotal.value);
+	var subTotalFormatted = subTotal.toLocaleString('en-US');
 
 	var tip = document.querySelector("input[name='tip']:checked").value;
 
-
 	console.log(tip);
+	
+	var tipTotal = (subTotal * tip).toFixed(2);
+	var tipTotalFormatted = tipTotal.toLocaleString('en-US');
 
-	tipTotal = subTotal * tip;
-	grandTotal = parseFloat(subTotal) + parseFloat(tipTotal);
+	var grandTotal = parseFloat(subTotal) + parseFloat(tipTotal);
+	var grandTotalFormatted = grandTotal.toLocaleString('en-US');
+
 
 	console.log(tipTotal + " " + subTotal);
 	let $output = document.createElement("output");
 	document.body.appendChild($output);
 
 	$output.innerHTML = `
-		<p class="normal-voice">Sub-total: $${subTotal}</p> 
-		 <p class="normal-voice">Tip total: $${tipTotal}</p> 
-		 <p class="normal-voice">Grand total: $${grandTotal}</p> `;
+		<p class="normal-voice">Sub-total: $${subTotalFormatted}</p> 
+		 <p class="normal-voice">Tip total: $${tipTotalFormatted}</p> 
+		 <p class="normal-voice">Grand total: $${grandTotalFormatted}</p> `;
 
 });
 
