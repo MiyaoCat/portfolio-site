@@ -232,32 +232,55 @@
 
 
 // - - - - PIZZA PARTY - - - - - - - - - - - - - - 
-var $form = document.querySelector('form');
+// var $form = document.querySelector('form');
 
-var $people = document.querySelector("[name='people']");
-var $pizza = document.querySelector("[name='pizza']");
+// var $people = document.querySelector("[name='people']");
+// var $pizza = document.querySelector("[name='pizza']");
+
+// $form.addEventListener('submit', function(event) {
+// 	event.preventDefault() 
+
+// 	let people = $people.value;
+// 	let pizza = $pizza.value;
+// 	let slices = pizza * 8;
+
+// 	let slicesPerPerson = Math.floor(slices / people);
+// 	let remainder = (slices % people);
+
+// 	console.log("people: " + people + " pizzas: " + pizza + " slices: " + slices + " slicesPP: " + slicesPerPerson + " remainder: " + remainder);
+
+// 	let $output = document.createElement('output');
+// 	document.body.appendChild($output);
+// 	$output.innerHTML = `
+// 		<p class="normal-voice">With ${people} people attending, there will be ${slicesPerPerson} slices per person with ${remainder} slices left over.</p>`
+
+// });
+
+// - - - - DRIVING AGE - - - - - - - - - - - - - - 
+$form = document.querySelector('form');
+$age = document.querySelector("[name='age']");
 
 $form.addEventListener('submit', function(event) {
-	event.preventDefault() 
+	event.preventDefault();
 
-	let people = $people.value;
-	let pizza = $pizza.value;
-	let slices = pizza * 8;
-
-	let slicesPerPerson = Math.floor(slices / people);
-	let remainder = (slices % people);
-
-	console.log("people: " + people + " pizzas: " + pizza + " slices: " + slices + " slicesPP: " + slicesPerPerson + " remainder: " + remainder);
+	age = $age.value;
 
 	let $output = document.createElement('output');
 	document.body.appendChild($output);
-	$output.innerHTML = `
-		<p class="normal-voice">With ${people} people attending, there will be ${slicesPerPerson} slices per person with ${remainder} slices left over.</p>`
 
-});
-
-
-
+	if (!age) {
+		$output.innerHTML = `
+			<p class="normal-voice">You are unborn. So no. You can't drive.</p>`
+	}
+	if (age < 21) {
+		$output.innerHTML = `
+			<p class="normal-voice">Sorry, you're too young!</p>`
+	} else {
+		$output.innerHTML = `
+			<p class="normal-voice">Get your driver's license.</p>`
+	}
+	console.log(age);
+})
 
 
 
