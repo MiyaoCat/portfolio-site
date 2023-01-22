@@ -198,37 +198,67 @@
 // });
 
 // - - - - TIP CALCULATOR - - - - - - - - - - - - - - 
+// var $form = document.querySelector('form');
+// var $subTotal = document.querySelector("[name='subtotal']");
+// var $tip = document.querySelector("input[name='tip']");
+
+// $form.addEventListener('submit', function(event) {
+// 	event.preventDefault();
+
+// 	var subTotal = parseInt($subTotal.value);
+// 	var subTotalFormatted = subTotal.toLocaleString('en-US');
+
+// 	var tip = document.querySelector("input[name='tip']:checked").value;
+
+// 	console.log(tip);
+	
+// 	var tipTotal = (subTotal * tip).toFixed(2);
+// 	var tipTotalFormatted = tipTotal.toLocaleString('en-US');
+
+// 	var grandTotal = parseFloat(subTotal) + parseFloat(tipTotal);
+// 	var grandTotalFormatted = grandTotal.toLocaleString('en-US');
+
+
+// 	console.log(tipTotal + " " + subTotal);
+// 	let $output = document.createElement("output");
+// 	document.body.appendChild($output);
+
+// 	$output.innerHTML = `
+// 		<p class="normal-voice">Sub-total: $${subTotalFormatted}</p> 
+// 		 <p class="normal-voice">Tip total: $${tipTotalFormatted}</p> 
+// 		 <p class="normal-voice">Grand total: $${grandTotalFormatted}</p> `;
+
+// });
+
+
+// - - - - PIZZA PARTY - - - - - - - - - - - - - - 
 var $form = document.querySelector('form');
-var $subTotal = document.querySelector("[name='subtotal']");
-var $tip = document.querySelector("input[name='tip']");
+
+var $people = document.querySelector("[name='people']");
+var $pizza = document.querySelector("[name='pizza']");
 
 $form.addEventListener('submit', function(event) {
-	event.preventDefault();
+	event.preventDefault() 
 
-	var subTotal = parseInt($subTotal.value);
-	var subTotalFormatted = subTotal.toLocaleString('en-US');
+	let people = $people.value;
+	let pizza = $pizza.value;
+	let slices = pizza * 8;
 
-	var tip = document.querySelector("input[name='tip']:checked").value;
+	let slicesPerPerson = Math.floor(slices / people);
+	let remainder = (slices % people);
 
-	console.log(tip);
-	
-	var tipTotal = (subTotal * tip).toFixed(2);
-	var tipTotalFormatted = tipTotal.toLocaleString('en-US');
+	console.log("people: " + people + " pizzas: " + pizza + " slices: " + slices + " slicesPP: " + slicesPerPerson + " remainder: " + remainder);
 
-	var grandTotal = parseFloat(subTotal) + parseFloat(tipTotal);
-	var grandTotalFormatted = grandTotal.toLocaleString('en-US');
-
-
-	console.log(tipTotal + " " + subTotal);
-	let $output = document.createElement("output");
+	let $output = document.createElement('output');
 	document.body.appendChild($output);
-
 	$output.innerHTML = `
-		<p class="normal-voice">Sub-total: $${subTotalFormatted}</p> 
-		 <p class="normal-voice">Tip total: $${tipTotalFormatted}</p> 
-		 <p class="normal-voice">Grand total: $${grandTotalFormatted}</p> `;
+		<p class="normal-voice">With ${people} people attending, there will be ${slicesPerPerson} slices per person with ${remainder} slices left over.</p>`
 
 });
+
+
+
+
 
 
 
