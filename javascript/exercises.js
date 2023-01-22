@@ -268,16 +268,24 @@ $form.addEventListener('submit', function(event) {
 	let $output = document.createElement('output');
 	document.body.appendChild($output);
 
-	if (!age) {
+	if (age == null || age == "" || age == 0) {
 		$output.innerHTML = `
-			<p class="normal-voice">You are unborn. So no. You can't drive.</p>`
-	}
-	if (age < 21) {
+			<p class="normal-voice">You are unborn. So no, You can't drive.</p>`
+	} 
+
+	if (0 < age && age < 21) {
 		$output.innerHTML = `
 			<p class="normal-voice">Sorry, you're too young!</p>`
-	} else {
+	} 
+
+	if ( 21 < age && age < 85) {
 		$output.innerHTML = `
-			<p class="normal-voice">Get your driver's license.</p>`
+			<p class="normal-voice">You may drive</p>`
+	} 
+
+	if (85 < age) {
+		$output.innerHTML = `
+			<p class="normal-voice">We may need to take your driver's license away.</p>`
 	}
 	console.log(age);
 })
