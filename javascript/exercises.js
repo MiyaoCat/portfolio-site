@@ -257,47 +257,82 @@
 // });
 
 // - - - - DRIVING AGE - - - - - - - - - - - - - - 
-$form = document.querySelector('form');
-$age = document.querySelector("[name='age']");
+// $form = document.querySelector('form');
+// $age = document.querySelector("[name='age']");
+
+// $form.addEventListener('submit', function(event) {
+// 	event.preventDefault();
+
+// 	age = $age.value;
+
+// 	let $output = document.createElement('output');
+// 	document.body.appendChild($output);
+
+// 	if (age == null || age == "" || age == 0) {
+// 		$output.innerHTML = 
+// 			`<p class="normal-voice">You are unborn. So no, You can't drive.</p>`
+// 	} 
+
+// 	if (0 < age && age < 21) {
+// 		$output.innerHTML = 
+// 			`<p class="normal-voice">Sorry, you're too young, kiddo!</p>`
+// 	} 
+
+// 	if (21 <= age && age < 85) {
+// 		$output.innerHTML = 
+// 			`<p class="normal-voice">You may drive</p>`
+// 	} 
+
+// 	if (85 <= age && age < 110) {
+// 		$output.innerHTML = 
+// 			`<p class="normal-voice">We may need to take your driver's license away.</p>`
+// 	}
+
+// 	if (110 <= age) {
+// 		$output.innerHTML = 
+// 			`<p class="normal-voice">How are you even alive?!?!</p>`
+// 	}
+
+// 	console.log(age);
+// })
+
+// - - - - TEMPERATURE CONVERTER - - - - - - - - - - - - - - 
+var $form = document.querySelector('form');
+var $temp = document.querySelector("[name='temp']");
+
 
 $form.addEventListener('submit', function(event) {
 	event.preventDefault();
 
-	age = $age.value;
+	var tempType = document.querySelector("[name='temp-type']:checked").value;
+	var temp = $temp.value;
+
+	console.log(tempType + " " + temp);
+
+	function convertToCelsius(temp) {
+		return (temp - 32) * 5 / 9;
+	}
+
+	function convertToFahrenheit(temp) {
+		return (temp * 9 / 5) + 32;
+	}
 
 	let $output = document.createElement('output');
 	document.body.appendChild($output);
 
-	if (age == null || age == "" || age == 0) {
-		$output.innerHTML = 
-			`<p class="normal-voice">You are unborn. So no, You can't drive.</p>`
-	} 
 
-	if (0 < age && age < 21) {
-		$output.innerHTML = 
-			`<p class="normal-voice">Sorry, you're too young, kiddo!</p>`
-	} 
+	if (tempType == 'celsius') {
+		let celsius = convertToCelsius(temp).toFixed(2);
 
-	if (21 <= age && age < 85) {
-		$output.innerHTML = 
-			`<p class="normal-voice">You may drive</p>`
-	} 
+		$output.innerHTML = `<p class="normal-voice">That will be ${celsius} degrees Celsius.</p>`;
+	} else {
+		let fahrenheit = convertToFahrenheit(temp).toFixed(2);
 
-	if (85 <= age && age < 110) {
-		$output.innerHTML = 
-			`<p class="normal-voice">We may need to take your driver's license away.</p>`
-	}
+		$output.innerHTML = `<p class="normal-voice">That will be ${fahrenheit} degrees Fahrenheit.</p>`;
+	};
 
-	if (110 <= age) {
-		$output.innerHTML = 
-			`<p class="normal-voice">How are you even alive?!?!</p>`
-	}
 
-	console.log(age);
 })
-
-
-
 
 
 
