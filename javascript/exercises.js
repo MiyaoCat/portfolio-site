@@ -331,7 +331,6 @@ $form.addEventListener('submit', function(event) {
 		$output.innerHTML = `<p class="normal-voice">That will be ${fahrenheit} degrees Fahrenheit.</p>`;
 	};
 
-
 })
 
 
