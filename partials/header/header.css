@@ -70,7 +70,7 @@ nav a.active {
 @media (min-width: 700px) {
 	.site-header {
 		grid-column: 2 / 14;
-		display: grid;
+/*		display: grid;*/
 		grid-template-columns: auto repeat(12, minmax(0, 120px)) auto;
 		background-color: transparent;
 	}
