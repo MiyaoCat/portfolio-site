@@ -26,7 +26,6 @@
 	<header class="site-header">
 		<inner-column>
 			<mast-head>
-				test
 				<?php 
 					if ($page == "template-1") {
 						include("modules/site-header.php"); 
