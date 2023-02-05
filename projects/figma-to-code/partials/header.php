@@ -28,15 +28,15 @@
 			<mast-head>
 				<?php 
 					if ($page == "template-1") {
-						include("modules/site-header.php"); 
+						include("./modules/site-header.php"); 
 					}
 
 					if ($page == "template-2") {
-						include("modules/site-header2.php"); 
+						include("./modules/site-header2.php"); 
 					}
 					
 					if ($page == "template-3") {
-						include("modules/site-header3.php"); 
+						include("./modules/site-header3.php"); 
 					}
 				?>
 					
