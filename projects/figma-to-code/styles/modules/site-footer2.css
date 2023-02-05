@@ -1,0 +1,152 @@
+.template-2 .site-footer {
+	background-color: var(--ink);
+	padding-bottom: 50px;
+}
+
+.template-2 .site-map {
+	display: grid;
+	grid-template-columns: repeat(3, 33.33%);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.template-2 .site-map h4{
+	color: var(--ink);
+}
+
+.template-2 .site-map p {
+	color: hsla(0,0%,100%, .7);
+}
+
+.template-2 .product, .information, .company {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	text-align: left;
+	margin-bottom: 40px;
+
+
+}
+
+.template-2 .footer-top li p, .template-2 .footer-top h4 {
+	color: var(--ink-dark);
+}
+
+.template-2 .footer-top {
+	padding: 50px 0 60px 0;
+	border-bottom: 2px solid var(--ink-dark);
+}
+
+.template-2 .site-map li p {
+	text-align: left;
+}
+
+.template-2 .product {
+	grid-column: 1;
+}
+
+.template-2 .information {
+	grid-column: 2;
+}
+
+.template-2 .company {
+	grid-column: 3;
+}
+
+.template-2 .footer-bottom {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 20px;
+	margin-top: 35px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.template-2 .footer-bottom li p {
+	color: var(--ink-dark);
+}
+.template-2 .footer-bottom .logo {
+	margin-top: 40px;
+}
+
+.template-2 .footer-bottom .legal {
+	margin: 15px 0;
+}
+
+.template-2 .footer-bottom .legal li {
+	color: var(--ink);
+}
+
+.template-2 .footer-bottom .socials li + li {
+	margin-left: 25px;
+}
+
+@media(min-width: 725px) {
+	.template-2 .footer-bottom {
+		flex-direction: row;
+		justify-content: space-between;
+		align-content: center;
+	}
+
+	.template-2 .footer-bottom .logo {
+		margin: 0;
+		padding: 0;
+	}
+
+	.template-2 .footer-bottom .legal {
+		display: flex;
+		gap: 15px;
+	}
+
+	.template-2 .footer-bottom .socials li + li {
+		margin-left: 15px;
+	}
+
+}
+
+@media(min-width: 850px) {
+	.template-2 .site-footer {
+		padding: 60px 14px;
+	}
+
+	.template-2 .site-map {
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	.template-2 .subscribe {
+		grid-row: 1;
+		grid-column: 4;
+	}
+
+	.template-2 .footer-bottom {
+		margin-top: 60px;
+	}
+
+	.template-2 .footer-bottom .legal {
+		gap: 30px;
+	}
+}
+
+@media(min-width: 950px) {
+	.template-2 .site-footer {
+		padding: 80px 50px;
+	}
+}
+
+@media(min-width: 1200px) {
+	.template-2 .site-footer {
+		padding: 120px 120px;
+	}
+}
+
+
+
+
+
+
+
+
+
+

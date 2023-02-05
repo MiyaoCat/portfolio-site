@@ -1,0 +1,125 @@
+[
+	{
+		"type": "site-map",
+		"heading": "product",
+		"items": 
+		[
+			{
+				"text": "Diam orci",
+				"link": "#"
+			},
+			{
+				"text": "Mi feugiat",
+				"link": "#"
+			},
+			{
+				"text": "Netus fermentum",
+				"link": "#"
+			},
+			{
+				"text": "Suspendisse viverra",
+				"link": "#"
+			},
+			{
+				"text": "Id dolor",
+				"link": "#"
+			},
+			{
+				"text": "Erat mattis",
+				"link": "#"
+			}
+		]
+	},
+	{
+		"type": "site-map",
+		"heading": "information",
+		"items": 
+		[
+			{
+				"text": "Nibh",
+				"link": "#"
+			},
+			{
+				"text": "Egestas",
+				"link": "#"
+			},
+			{
+				"text": "Dictum",
+				"link": "#"
+			}
+		]
+	},
+	{
+		"type": "site-map",
+		"heading": "company",
+		"items": 
+		[
+			{
+				"text": "Id maecenas",
+				"link": "#"
+			},
+			{
+				"text": "Id orci",
+				"link": "#"
+			},
+			{
+				"text": "Magna ultricies",
+				"link": "#"
+			},
+			{
+				"text": "Quis risus",
+				"link": "#"
+			}
+		]
+	},
+	{
+		"type": "subscribe-box",
+		"heading": "Subscribe",
+		"placeholder-text": "email address",
+		"text": "Gravida sed justo, justo, id est et. Amet tristique convallis sed porttitor nullam eu ut. Duis et odio aliquam bibendum. Metus et lectus id viverra fringilla magna morbi. "
+	},
+	{
+		"type": "logo",
+		"source": "./assets/logo-blue.svg",
+		"link": "?page=template-1"
+	},
+	{
+		"type": "legal",
+		"heading": "",
+		"items": [
+			{
+				"text": "Terms",
+				"link": "#"
+			},
+			{
+				"text": "Privacy",
+				"link": "#"
+			},
+			{
+				"text": "Cookies",
+				"link": "#"
+			}
+		]
+	},
+	{
+		"type": "socials",
+		"heading": "",
+		"items": [
+			{
+				"item": "linkedIn",
+				"source": "./assets/icons/linkedin-dark.svg",
+				"link": "#"
+			},
+			{
+				"item": "facebook",
+				"source": "./assets/icons/facebook-dark.svg",
+				"link": "#"
+			},
+			{
+				"item": "dribble",
+				"source": "./assets/icons/dribble-dark.svg",
+				"link": "#"
+			}
+		]
+	}
+]

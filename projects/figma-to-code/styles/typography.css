@@ -1,0 +1,163 @@
+
+html {
+	--marker: Permanent Marker, Noto Serif;
+	--company-font: Inter, Encode Sans, Helvetica;
+	--serif: Noto Serif Display, Old Standard TT, Times New Roman;
+	font-family: var(--company-font);
+	font-size: 16px;
+}
+
+a {
+
+}
+a:active {
+	font-weight: 700;
+}
+
+/* Main header or banner text or similar */
+.screaming-voice {
+	font-size: clamp(40px, 8vw, 64px);
+	font-weight: 700;
+	line-height: 40px;
+	color: var(--ink-dark);
+}
+
+@media(min-width: 700px) {
+	.screaming-voice {
+		line-height: 77.45px;
+	}
+}
+
+/* Header text or similar */
+.loud-voice {
+	font-size: 56px;
+	font-weight: 600;
+	color: var(--ink-dark);
+}
+
+/* Sub-header text or similar */
+.attention-voice {
+	font-size: clamp(30px, 6vw, 48px);
+	font-weight: 600;
+	color: var(--ink-dark);
+}
+
+.raised-voice {
+	font-size: clamp(16px, 5vw, 22px);
+	font-weight: 600;
+	line-height: 27px;
+	letter-spacing: 0.2px;
+	color: var(--ink-dark);
+}
+
+.alert-voice {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: 0.2px;
+	color: var(--ink-medium);
+}
+
+@media(min-width: 700px) {
+	.alert-voice {
+		font-size: 20px;
+		line-height: 24px;
+	}
+}
+
+/* Paragraph text or similar */
+.normal-voice {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: 0.2px;
+	color: var(--ink-medium);
+}
+@media(min-width: 700px) {
+	.normal-voice {
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
+
+/* Caption text or similar */
+.calm-voice {
+	font-size: clamp(12px, 2vw, 16px);
+	font-weight: 500;
+	line-height: 17px;
+	letter-spacing: 0.2px;
+}
+
+.calm-voice-bold {
+	font-size: clamp(12px, 3vw, 16px);
+	font-weight: 700;
+	line-height: 28px;
+}
+
+/* Fine print text or similar */
+.quiet-voice {
+	font-size: clamp(12px, 2vw, 16px);
+	font-weight: 400;
+	line-height: 19px;
+}
+
+.whisper-voice {
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+mast-head a {
+	font-size: 14px;
+	font-weight: 500;
+   line-height: 16.94px;
+   letter-spacing: .2px;
+   color: var(--ink-medium);
+}
+
+mast-head .active {
+	font-weight: 5700;
+	color: var(--highlight);
+}
+
+.login span {
+		font-size: 16px;
+		font-weight: 700;
+/*		line-height: 19.36px;*/
+		letter-spacing: 0.2px;
+		color: var(--ink-light);
+}
+
+/* SPECIFIC ELEMENT FONT */
+.faqs .teaser {
+	color: var(--ink-lightest);
+}
+.faq-card summary {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 26px;
+	letter-spacing: 0.2px;
+	color: var(--ink-darkest);
+}
+
+.faq-card .answer {
+	color: var(--ink-lightest);
+}
+
+@media (min-width: 700px) {
+	.faq-card summary .question {
+		font-size: 20px;
+		line-height: 28px;
+	}
+}
+
+/* these would be scoped to section or to an article element */
+/* this is just a loose setting for now */
+/* or smaller group of article-like styles such as a <text-content> custom element */
+p + p {
+	margin-top: ;
+}
+
+h2 + p {
+	margin-top: ;
+}

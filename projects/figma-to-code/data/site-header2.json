@@ -1,0 +1,52 @@
+[
+	{
+		"type": "logo",
+		"source": "./assets/logo-white.svg",
+		"link": "?page=template-1"
+	},
+	{
+		"type": "navigation",
+		"listItems": 
+		[
+			{
+				"slug": "template-1",
+				"page": "Home",
+				"link": "?page=template-1"
+			},
+			{
+				"slug": "template-2",
+				"page": "Updates",
+				"link": "?page=template-2"
+			},
+			{
+				"slug": "template-2",
+				"page": "Services",
+				"link": "?page=template-3"
+			},
+			{
+				"slug": "features",
+				"page": "Features",
+				"link": "#"
+			},
+			{
+				"slug": "about-us",
+				"page": "About Us",
+				"link": "#"
+			}
+		]
+	},
+	{
+		"type": "icon",
+		"source": "assets/icons/globe.svg",
+		"text": "EN"
+	},
+	{
+		"type": "button",
+		"style": "contained",
+		"size": "large",
+		"corners": "rounded",
+		"text": "LogIn",
+		"arrow": "",
+		"arrow-direction": ""
+	}
+]

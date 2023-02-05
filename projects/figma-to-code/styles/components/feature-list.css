@@ -1,0 +1,37 @@
+.template-1 li.feature-item + li.feature-item {
+	margin-top: 10px;
+}
+
+.template-1 feature-card {
+	display: flex;
+	gap: 10px;
+}
+
+.template-1 feature-card .numbers.icon {
+	margin-right: 5px;
+}
+
+.template-1 feature-card .numbers.icon svg {
+	min-width: 35px;
+}
+
+.template-1 feature-card .content-wrap {
+	text-align: left;
+}
+
+@media (min-width: 900px) {
+	.template-1 li.feature-item {
+		margin: 0;
+	}
+
+	.template-1 .feature-list {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+	}
+
+	.template-1 feature-card .content-wrap p {
+		margin-top: 16px;
+	}
+}

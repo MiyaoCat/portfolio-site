@@ -1,0 +1,30 @@
+@import 'site-header.css';
+@import 'site-header2.css';
+@import 'site-header3.css';
+
+@import 'hero.css';
+@import 'hero2.css';
+@import 'hero3.css';
+
+@import 'center-content.css';
+@import 'center-content2.css';
+@import 'center-content3.css';
+
+@import 'feature.css';
+@import 'feature2.css';
+@import 'feature3.css';
+
+@import 'clients.css';
+@import 'clients2.css';
+@import 'clients3.css';
+
+@import 'call-to-action.css';
+@import 'call-to-action2.css';
+@import 'call-to-action3.css';
+
+@import 'faqs.css';
+@import 'faqs2.css';
+@import 'faqs3.css';
+
+@import 'site-footer.css';
+@import 'site-footer2.css';

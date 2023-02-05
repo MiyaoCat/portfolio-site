@@ -1,0 +1,46 @@
+.template-2 .subscribe-box {
+	background-color: var(--secondary);
+	padding: 30px 20px 35px 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.template-2 .subscribe-box h4 {
+	color: var(--ink);
+}
+
+.template-2 .email-input {
+	display: flex;
+	height: 50px;
+	margin: 18px 0;
+}
+
+.template-2 .email-input input {
+	border-radius: 5px 0 0 5px;
+	border: none;
+	padding: 16px 15px;
+	max-width: 200px;
+}
+
+.template-2 .email-input input[placeholder] {
+	color: var(--ink-medium);
+}
+.template-2 .site-map .blurb {
+	color: var(--ink-light);
+	text-align: left;
+}
+
+.template-2 .email-input button {
+	background-color: var(--primary);
+	border: none;
+	min-width: 50px;
+	border-radius: 0 5px 5px 0;
+}
+
+@media (min-width: 400px) {
+	.subscribe-box {
+		min-height: 256px;
+		min-width: 338px;
+		padding: 30px 42px 35px 42px;
+	}
+}

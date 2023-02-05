@@ -1,0 +1,125 @@
+.template-3 .email-signup {
+	display: flex;
+	align-items: center;
+}
+.template-3 .hero email-signup {
+	display: flex;
+	align-items: center;
+}
+
+.template-3 .hero .svg {
+	padding: 5px 2px 6px 18px;
+	background-color: var(--primary-dark);
+	border-radius: 5px 0 0 5px;
+}
+
+.template-3 .hero email-signup input {
+	padding: 10px;
+	border: none;
+	border-radius: 0 5px 5px 0;
+	background-color: var(--primary-dark);
+	color: var(--border);
+}
+
+.template-3 .hero email-signup input:focus {
+	outline: none;
+}
+
+.template-3 .hero email-signup input::placeholder {
+	color: var(--border);
+}
+
+.template-3 .hero button.contained.large.rounded {
+	background-color: var(--ink);
+	color: var(--primary);
+	border-radius: 5px;
+	padding: 10px 10px;
+	border: none;
+	padding-bottom: 12px;
+	line-height: 15px;
+	margin-left: 10px;
+}
+
+@media(min-width: 700px) {
+	.template-3 .hero email-signup .svg {
+		padding-right: 8px;
+	}
+
+	.template-3 .hero email-signup input {
+		padding: 10px 100px 10px 0;
+		min-width: 80px;
+	}
+}
+
+/* - - - CALL TO ACTION - - - - - - - - - */
+.template-3 .call-to-action .buttons {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.template-3 .call-to-action email-signup {
+	display: flex;
+	align-items: center;
+}
+.template-3 .call-to-action .svg {
+	padding: 5px 2px 5px 10px;
+	background-color: var(--ink);
+	border-radius: 5px 0 0 5px;
+	border-top: 1px solid var(--ink-darkest);
+	border-bottom: 1px solid var(--ink-darkest);
+	border-left: 1px solid var(--ink-darkest);
+	min-height: 40px;
+}
+
+.template-3 .call-to-action email-signup input {
+	padding: 10px;
+	border: none;
+	border-radius: 0 5px 5px 0;
+	background-color: var(--ink);
+	border-top: 1px solid var(--ink-darkest);
+	border-bottom: 1px solid var(--ink-darkest);
+	border-right: 1px solid var(--ink-darkest);
+	min-height: 40px;
+}
+
+.template-3 .call-to-action email-signup input:focus {
+	outline: none;
+}
+
+.template-3 .call-to-action email-signup input::placeholder {
+	color: var(--border);
+}
+
+.template-3 .call-to-action button.contained.large.rounded {
+	background-color: var(--primary);
+	color: var(--ink);
+	border-radius: 5px;
+	padding: 10px 15px;
+	border: none;
+	padding-bottom: 12px;
+	min-height: 40px;
+}
+
+@media(min-width: 700px) {
+	.template-3 .call-to-action email-signup .svg {
+		padding-right: 8px;
+	}
+
+	.template-3 .call-to-action email-signup input {
+		padding: 10px 100px 10px 0;
+		min-width: 80px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

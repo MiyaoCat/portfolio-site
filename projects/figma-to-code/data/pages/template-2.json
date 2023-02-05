@@ -1,0 +1,222 @@
+
+{	
+	"page": "template-two",
+	"slug": "template-two",
+	"site-header": "data/site-header2.json",
+	"modules": [
+		{
+			"type": "hero",
+			"header": "Arcu suscipit massa aliquam proin amet",
+			"sub-header": "Luctus felis sit lectus tristique diam ornare bibendum. Arcu auctor suspendisse luctus amet bibendum pellentesque lorem. Malesuada lobortis tristique tortor,",
+			"background": "./assets/background/waves.png",
+			"components": [
+				{
+					"type": "button",
+					"style": "contained",
+					"size": "large",
+					"corners": "square",
+					"text": "Get Started",
+					"arrow": "",
+					"arrow-direction": ""
+				}
+			]
+		},
+		{
+			"type": "center-content",
+			"header": "Etiam nulla lectus amet nunc molestie at vulputate.",
+			"sub-header": "Neque, pulvinar vestibulum non aliquam.",
+			"sub-header2": "Rhoncus, accumsan dictum",
+			"components": [
+				{
+					"type": "button",
+					"style": "text",
+					"size": "large",
+					"corners": "",
+					"text": "Learn More",
+					"arrow": "./assets/icons/arrow-right-tail.svg",
+					"arrow-direction": "right"
+				},
+				{
+					"type": "icon", 
+					"name": "cloud",
+					"source": "./assets/icons/cloud.svg"
+				}
+			]
+		},
+		{
+			"type": "feature",
+			"header": "Etiam nulla lectus amet nunc molestie at vulputate.",
+			"sub-header": "Neque, pulvinar vestibulum non aliquam.",
+			"components": [
+				{
+					"type": "feature-list",
+					"list": [
+						{
+							"number": 1,
+							"title": "Et, odio elementum",
+							"detail": "Aliquam vehicula pellentesque id mi quam ipsum. Arcu nisl faucibus mattis etiam.",
+							"source": "./assets/icons/cloud.svg"
+						},
+						{
+							"number": 2,
+							"title": "Et, odio elementum",
+							"detail": "Aliquam vehicula pellentesque id mi quam ipsum. Arcu nisl faucibus mattis etiam.",
+							"source": "./assets/icons/cloud.svg"
+						},
+						{
+							"number": 3,
+							"title": "Et, odio elementum",
+							"detail": "Aliquam vehicula pellentesque id mi quam ipsum. Arcu nisl faucibus mattis etiam.",
+							"source": "./assets/icons/cloud.svg"
+						},
+						{
+							"number": 4,
+							"title": "Et, odio elementum",
+							"detail": "Aliquam vehicula pellentesque id mi quam ipsum. Arcu nisl faucibus mattis etiam.",
+							"source": "./assets/icons/cloud.svg"
+						},
+						{
+							"number": 5,
+							"title": "Et, odio elementum",
+							"detail": "Aliquam vehicula pellentesque id mi quam ipsum. Arcu nisl faucibus mattis etiam.",
+							"source": "./assets/icons/cloud.svg"
+						},
+						{
+							"number": 6,
+							"title": "Et, odio elementum",
+							"detail": "Aliquam vehicula pellentesque id mi quam ipsum. Arcu nisl faucibus mattis etiam.",
+							"source": "./assets/icons/cloud.svg"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "clients",
+			"header": "What Our Clients Say",
+			"sub-header": "Neque, pulvinar vestibulum non aliquam.",
+			"components": [
+				{
+					"type": "client-review-card",
+					"rating": "",
+					"review": "“Pellentesque maecenas vitae vehicula eget. Ultricies ac id massa maecenas nulla arcu lacus. Turpis porttitor.”",
+					"avatar": "./assets/icons/avatar-blank.png",
+					"name": "Courtney Henry",
+					"role": "Marketing Coordinator"
+				},
+				{
+					"type": "icon",
+					"name": "arrow-left",
+					"source": "./assets/icons/arrow-left.svg"
+				},
+				{
+					"type": "icon",
+					"name": "arrow-right",
+					"source": "./assets/icons/arrow-right-circle.svg"
+				}
+			]
+		},
+		{
+			"type": "call-to-action",
+			"header": "Etiam nulla lectus amet nunc molestie at vulputate.",
+			"sub-header": "Rhoncus, accumsan dictum",
+			"components": [
+				{
+					"type": "button",
+					"style": "contained",
+					"size": "large",
+					"corners": "square",
+					"text": "Get free quotes",
+					"arrow": "./assets/icons/arrow-right-white.svg",
+					"arrow-direction": "right"
+				},
+				{
+					"type": "button",
+					"style": "outline",
+					"size": "large",
+					"corners": "square",
+					"text": "Free SignUp",
+					"arrow": "./assets/icons/arrow-right-blue.svg",
+					"arrow-direction": "right"
+				}
+			]
+		},
+		{
+			"type": "faqs",
+			"header": "Frequent Ask Questions",
+			"sub-header": "Pellentesque Cras Adipiscing Tempus Libero Vel Nullam Mauris Tellus. Aliquam Ultrices Tellus Consequat Amet, Lectus Aliquam Est In Neque.",
+			"components": [
+				{
+					"type": "accordion",
+					"listItems": [
+						{
+							"question": "How soon will my order ship?",
+							"answer": "Elementum ullamcorper felis nulla scelerisque. Nunc enim nunc mattis leo massa. ",
+							"state": false,
+							"arrow": "./assets/icons/plus.svg"
+						},
+						{
+							"question": "Is there any warranty exclusions?",
+							"answer": "Venenatis, fames a a, in. Morbi pellentesque lacus, purus in tristique justo, pretium egestas. Commodo leo nisl consectetur nisi, tortor, erat sit at aliquet. Ultrices in aliquam maecenas cursus. Sed enim cursus augue quis risus. Ac donec quisque vitae feugiat dignissim diam. ",
+							"state": true,
+							"arrow": "./assets/icons/plus.svg"
+						},
+						{
+							"question": "How soon will my order ship?",
+							"answer": "Elementum ullamcorper felis nulla scelerisque. Nunc enim nunc mattis leo massa. ",
+							"state": false,
+							"arrow": "./assets/icons/plus.svg"
+						},
+						{
+							"question": "Will I be charged for a replacement item?",
+							"answer": "Elementum ullamcorper felis nulla scelerisque. Nunc enim nunc mattis leo massa. ",
+							"state": false,
+							"arrow": "./assets/icons/plus.svg"
+						},
+						{
+							"question": "How can I track my orders & payment?",
+							"answer": "Elementum ullamcorper felis nulla scelerisque. Nunc enim nunc mattis leo massa. ",
+							"state": false,
+							"arrow": "./assets/icons/plus.svg"
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

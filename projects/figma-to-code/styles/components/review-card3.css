@@ -1,0 +1,107 @@
+.template-3 review-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0 10px;
+	gap: 20px;
+
+	max-width: 800px;
+/*	max-height: 323px;*/
+	text-align: center;
+	margin-top: 20px;
+}
+
+.template-3 .image-review-wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 25px;
+}
+
+.template-3 .image {
+	max-width: 350px;
+}
+
+.template-3 .review {
+	font-size: clamp(22px, 2.4vw, 32px);
+	font-weight: 500;
+	line-height: 32px;
+	letter-spacing: 0.2px;
+	max-width: 800px;
+}
+
+.template-3 client-details {
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+}
+
+.template-3 .client-flex {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.template-3 client-details .contact {
+	color: var(--ink-medium);
+}
+
+@media (min-width: 600px) {
+	.template-3 .review {
+		line-height: 36px;
+	}
+
+	.template-3 review-card {
+		gap: 27px;
+	}
+
+	.template-3 .image {
+		max-width: 450px;
+	}
+
+	.template-3 client-details img {
+		margin-top: 15px;
+	}
+}
+@media (min-width: 700px) {
+	.template-3 review-card {
+		gap: 27px;
+	}
+}
+
+@media (min-width: 800px) {
+	.template-3 .image {
+		max-width: 100%;
+	}
+
+	.template-3 .client-flex {
+		display: flex;
+		flex-direction: column;
+		align-items: left;
+	}
+
+	.template-3 .review {
+		text-align: left;
+/*		line-height: 48px;*/
+	}
+
+	.template-3  .image-review-wrap {
+		flex-direction: row;
+	}
+
+	.template-3 client-details {
+		justify-content: flex-start;
+	}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+.center-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+/*	padding-top: 60px;*/
+/*	padding-bottom: 50px;*/
+}
+
+.center-content .sub-header {
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+.center-content .video {
+	margin-top: 20px;
+	max-width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+@media (min-width: 700px) {
+	.center-content {
+/*		padding: 120px 0;*/
+	}
+
+	.center-content .sub-header {
+		margin-top: 24px;
+		margin-bottom: 32px;
+	}
+}

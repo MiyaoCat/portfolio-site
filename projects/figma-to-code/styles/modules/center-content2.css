@@ -1,0 +1,43 @@
+.template-2 .center-content inner-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding-top: clamp(60px, 10vh, 120px);
+	padding-bottom: clamp(50px, 10vh, 120px);
+}
+
+.template-2 .center-content .icon svg {
+	width: clamp(50px, 8vw, 100px);
+}
+
+.template-2 .center-content p {
+	color: var(--ink-lightest);
+}
+.template-2 .center-content .sub-header {
+	margin-top: 10px;
+	margin-bottom: 15px;
+	font-size: clamp(30px, 7vw, 56px);
+}
+
+.template-2 .center-content button {
+	margin-top: 20px;
+}
+@media (min-width: 700px) {
+	.template-2 .center-content .icon {
+		margin-bottom: clamp(8px, 3vh, 24px);
+	}
+
+	.template-2 .center-content .sub-header {
+		margin-top: 24px;
+		margin-bottom: 32px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.template-2 .center-content inner-column {
+		max-width: 950px;
+	}
+}

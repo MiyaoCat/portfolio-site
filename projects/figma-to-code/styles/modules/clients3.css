@@ -1,0 +1,33 @@
+.template-3 .clients inner-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.template-3 .clients .teaser {
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+.template-3 left-arrow, .template-3 right-arrow {
+	display: none;
+}
+
+@media (min-width: 850px) {
+	.template-3 .clients .review-card-wrap {
+		display: flex;
+		gap: 55px;
+	}
+
+	.template-3 left-arrow, .template-3 right-arrow {
+		display: block;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+
+	.template-3 .review-card-wrap svg {
+		min-width: 16px;
+	}
+}

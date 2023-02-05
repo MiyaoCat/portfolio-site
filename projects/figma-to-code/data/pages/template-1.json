@@ -1,0 +1,182 @@
+
+{	
+	"page": "template-one",
+	"slug": "home",
+	"site-header": "data/site-header.json",
+	"modules": [
+		{
+			"type": "hero",
+			"header": "Arcu suscipit massa aliquam proin amet",
+			"sub-header": "Luctus felis sit lectus tristique diam ornare bibendum. Arcu auctor suspendisse luctus amet bibendum pellentesque lorem. Malesuada lobortis tristique tortor,",
+			"background": ".assets/background/wave.png",
+			"components": [
+				{
+					"type": "button",
+					"style": "contained",
+					"size": "large",
+					"corners": "square",
+					"text": "Get Started",
+					"arrow": "",
+					"arrow-direction": ""
+				},
+				{
+					"type": "button",
+					"style": "outline",
+					"size": "large",
+					"corners": "square",				
+						
+					"text": "Start Free Trial",
+					"arrow": "",
+					"arrow-direction": ""
+				}
+			]
+		},
+		{
+			"type": "center-content",
+			"header": "Etiam nulla lfulputate.",
+			"sub-header": "Neque, pulvinar vestibulum non aliquam.",
+			"sub-header2": "Rhoncus, accumsan dictum",
+			"components": [
+				{
+					"type": "video-placeholder",
+					"source": "./assets/images/video-placeholder.jpg"
+				}
+			]
+		},
+		{
+			"type": "feature",
+			"header": "Etiam nulla lectus molestie at vulputate",
+			"sub-header": "Neque, pulvinar vestibulum non aliquam",
+			"components": [
+				{
+					"type": "image-placeholder",
+					"source": "./assets/images/image-placeholder.jpg"
+				},
+				{
+					"type": "feature-list",
+					"list": [
+						{
+							"number": 1,
+							"title": "Sit quam gravida",
+							"detail": "Et hendrerit turpis habitant cursus semper ultrices in nunc. Erat eget etiam senectus vestibulum risus.",
+							"source": "./assets/icons/circle-1.svg"
+						},
+						{
+							"number": 2,
+							"title": "Elementum enim tempus",
+							"detail": "At tristique elementum metus blandit id sed vel eu a. Diam sed feugiat diam nisi est. Dictumst elit.",
+							"source": "./assets/icons/circle-2.svg"
+						},
+						{
+							"number": 3,
+							"title": "Tempor egestas augue",
+							"detail": "Eu metus, at orci dui sapien. Semper fames est ut gravida. Neque pellentesque risus ut odio.",
+							"source": "./assets/icons/circle-3.svg"
+						},
+						{
+							"number": 4,
+							"title": "Nulla ac lacinia",
+							"detail": "Molestie faucibus amet sed ut gravida iaculis sed venenatis. Pulvinar id lacus condimentum ut. Non.",
+							"source": "./assets/icons/circle-4.svg"
+						},
+						{
+							"number": 5,
+							"title": "Velit nibh a",
+							"detail": "Ac morbi integer orci justo lobortis elementum, massa pulvinar quisque. Porttitor sit convallis quis.",
+							"source": "./assets/icons/circle-5.svg"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "clients",
+			"header": "What Our Clients Say",
+			"sub-header": "Neque, pulvinar vestibulum non aliquam.",
+			"components": [
+				{
+					"type": "client-review-card",
+					"rating": "./assets/icons/star.svg",
+					"review": "“Tincidunt risus, blandit proin semper. Tellus ac pellentesque convallis vitae. Lorem enim cursus et consequat viverra id justo ullamcorper. Vel.”",
+					"avatar": "./assets/images/avatar.jpg",
+					"name": "Courtney Henry"
+				},
+				{
+					"type": "client-review-card",
+					"rating": "./assets/icons/star.svg",
+					"review": "“Tincidunt risus, blandit proin semper. Tellus ac pellentesque convallis vitae. Lorem enim cursus et consequat viverra id justo ullamcorper. Vel.”",
+					"avatar": "./assets/images/avatar.jpg",
+					"name": "Courtney Henry"
+				},
+				{
+					"type": "icon",
+					"name": "arrow-left",
+					"source": "./assets/icons/arrow-left.svg"
+				},
+				{
+					"type": "icon",
+					"name": "arrow-right",
+					"source": "./assets/icons/arrow-right.svg"
+				}
+			]
+		},
+		{
+			"type": "call-to-action",
+			"header": "Etiam nulla lectus amet nunc molestie at vulputate.",
+			"sub-header": "Etiam nulla lectus amet nunc molestie at vulputate.",
+			"components": [
+				{
+					"type": "button",
+					"style": "contained",
+					"size": "large",
+					"corners": "square",
+					"text": "Get free quotes",
+					"arrow": "./assets/icons/arrow-right-small.svg",
+					"arrow-direction": "right"
+				}
+			]
+		},
+		{
+			"type": "faqs",
+			"header": "Frequent Ask Questions",
+			"sub-header": "Pellentesque Cras Adipiscing Tempus Libero Vel Nullam Mauris Tellus. Aliquam Ultrices Tellus Consequat Amet, Lectus Aliquam Est In Neque.",
+			"components": [
+				{
+					"type": "accordion",
+					"listItems": [
+						{
+							"question": "How soon will my order ship?",
+							"answer": "Elementum ullamcorper felis nulla scelerisque. Nunc enim nunc mattis leo massa. ",
+							"state": false,
+							"arrow": "./assets/icons/arrow-right-faq.svg"
+						},
+						{
+							"question": "Is there any warranty exclusions?",
+							"answer": "Elementum ullamcorper felis nulla scelerisque. Nunc enim nunc mattis leo massa. ",
+							"state": true,
+							"arrow": "./assets/icons/arrow-right-faq.svg"
+						},
+						{
+							"question": "How soon will my order ship?",
+							"answer": "Elementum ullamcorper felis nulla scelerisque. Nunc enim nunc mattis leo massa. ",
+							"state": false,
+							"arrow": "./assets/icons/arrow-right-faq.svg"
+						},
+						{
+							"question": "Will I be charged for a replacement item?",
+							"answer": "Elementum ullamcorper felis nulla scelerisque. Nunc enim nunc mattis leo massa. ",
+							"state": false,
+							"arrow": "./assets/icons/arrow-right-faq.svg"
+						},
+						{
+							"question": "How can I track my orders & payment?",
+							"answer": "Elementum ullamcorper felis nulla scelerisque. Nunc enim nunc mattis leo massa. ",
+							"state": false,
+							"arrow": "./assets/icons/arrow-right-faq.svg"
+						}
+					]
+				}
+			]
+		}
+	]
+}

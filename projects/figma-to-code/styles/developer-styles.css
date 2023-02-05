@@ -1,0 +1,25 @@
+
+body * {
+/*	border: 1px solid lightgray;*/
+/*	padding: 2px;*/
+}
+
+picture img {
+	opacity: 0;
+}
+
+picture {
+	background-color: var(--shadow);
+}
+
+section {
+/*	border: 1px solid red;*/
+}
+
+section + section {
+	margin-top: 2px;
+}
+
+review-card {
+/*	border: 1px solid blue;*/
+}

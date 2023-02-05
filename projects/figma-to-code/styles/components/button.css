@@ -1,0 +1,204 @@
+button {
+	cursor: pointer;
+}
+
+button.outline.large.rounded {
+	align-items: center;
+	border-radius: 5px;
+	padding: 8px 22px;
+	height: 35px;
+	border: 1px solid var(--primary);
+	background-color: var(--ink);
+	
+	font-weight: 500;
+	font-size: var(--font-med);
+	line-height: 19px;
+	text-align: center;
+	letter-spacing: 0.46px;
+	height: 35px;
+	color: var(--primary);
+}
+/* - - CONTAINED LARGE SQUARE ROUNDED - - - */
+button.contained.large.rounded {
+	align-items: center;
+	max-width: 89px;
+	border-radius: 5px;
+	padding: 8px 22px;
+	height: 35px;
+	background-color: var(--primary);
+	border: none;
+	
+	font-weight: 500;
+	font-size: var(--font-med);
+	line-height: 19px;
+	text-align: center;
+	letter-spacing: 0.46px;
+	height: 35px;
+	color: var(--ink);
+}
+/* - - CONTAINED LARGE SQUARE ROUNDED - - - */
+@media (min-width: 700px) {
+	button.contained.large.rounded {
+		align-items: center;
+		max-width: 89px;
+		border-radius: 5px;
+		padding: 8px 22px;
+		height: 35px;
+		background-color: var(--primary);
+		border: none;
+		
+		font-weight: 500;
+		font-size: var(--font-med);
+		line-height: 19px;
+		text-align: center;
+		letter-spacing: 0.46px;
+		height: 35px;
+		color: var(--ink);
+	}
+/* - - OUTLINE LARGE ROUNDED - - - */
+	button.outline.large.rounded {
+		align-items: center;
+		border-radius: 5px;
+		padding: 8px 22px;
+		height: 35px;
+		border: 1px solid var(--primary);
+		background-color: var(--ink);
+		
+		font-weight: 500;
+		font-size: var(--font-med);
+		line-height: 19px;
+		text-align: center;
+		letter-spacing: 0.46px;
+		height: 35px;
+		color: var(--primary);
+	}
+}
+
+
+/* - - CONTAINED LARGE SQUARE - - - */
+button.contained.large.square {
+	max-height: 40px;
+	min-width: 180px;
+	border-radius: 0px;
+	padding: 10px 38px;
+	border: none;
+	background-color: var(--primary);
+
+	font-weight: 500;
+	line-height: 22px;
+	text-align: center;
+	letter-spacing: 0.46px;
+	color: var(--ink);
+}
+
+@media (min-width: 700px) {
+	button.contained.large.square {
+		max-height: 52px;
+		min-width: 205px;
+		padding: 15px 50px;
+		
+		font-size: var(--font-large);
+	}
+}
+
+
+/* - - OUTLINE LARGE SQUARE - - - */
+button.outline.large.square {
+	max-height: 40px;
+	min-width: 180px;
+	border-radius: 0px;
+	padding: 10px 38px;
+	border: 1px solid var(--primary);
+	background-color: var(--ink);
+
+	font-weight: 500;
+	line-height: 22px;
+	text-align: center;
+	letter-spacing: 0.46px;
+	color: var(--primary);
+}
+
+@media (min-width: 700px) {
+	button.outline.large.square {
+		max-height: 52px;
+		min-width: 227px;
+		padding: 15px 50px;
+		
+		font-size: var(--font-large);
+	}
+}
+
+
+/* - - CONTAINED LARGE SQUARE RIGHT ARROW - - - */
+button.contained.large.square.right {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+	padding: 10px 25px;
+}
+
+
+/* - - RIGHT ARROW WITH TAIL - - -*/
+button.contained.large.square.right .arrow {
+	margin-left: 20px;
+}
+
+
+/* - - OUTLINE LARGE SQUARE RIGHT- - - */
+button.outline.large.square.right {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	padding: 10px 25px;
+}
+
+
+button.outline.large.square.right .arrow {
+	margin-left: 20px;
+}
+
+
+/* - - CONTAINED LARGE SQUARE TEXT - - - */
+button.text.large {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	max-height: 40px;
+	max-width: 191px;
+	padding: 8px 22px;
+	background-color: hsla(37, 32%, 92%, 0);
+	border: none;
+
+	font-weight: 500;
+	line-height: 22px;
+	text-align: center;
+	letter-spacing: 0.46px;
+	color: var(--primary);
+}
+button.text.large svg {
+	margin-left: 6px;
+}
+
+button.text.large svg path {
+	stroke: var(--primary);
+}
+@media (min-width: 700px) {
+	button.text.large {
+		max-height: 52px;
+		min-width: 233px;
+		padding: 15px 50px;
+		
+		font-size: var(--font-large);
+	}
+
+	button.text.large .button-text {
+		padding-right: 5px;
+	}
+	button.text.large svg {
+		margin-left: 0;		
+	}
+}
+

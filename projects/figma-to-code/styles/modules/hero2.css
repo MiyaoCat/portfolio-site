@@ -1,0 +1,63 @@
+.template-2 .hero inner-column {
+	max-width: 100%;
+}
+.template-2 .hero inner-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	
+	padding-top: 60px;
+	padding-bottom: 70px;
+}
+
+.template-2 .hero inner-column > * {
+	max-width: 90vw;
+}
+.template-2 .hero {
+	background-image: url("../../assets/background/wave.png");
+	margin-left: auto;
+	margin-right: auto;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.template-2 .hero .header {
+/*	max-width: 974px;*/
+}
+
+.template-2 .hero .teaser  {
+	max-width: clamp(300px, 60vw, 733px);
+	color: var(--ink-medium);
+	margin-top: 20px;
+	margin-bottom: 35px;
+}
+.template-2 .hero .buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+@media (min-width: 700px) {
+	.template-2 .hero {
+		padding-top: 120px;
+		padding-bottom: 265px;
+	}
+	.template-2 .hero .header {
+		max-width: 974px;
+	}
+	.template-2 .hero .teaser  {
+		margin-top: 25px;
+		margin-bottom: 45px;
+	}
+
+	.template-2 .hero .buttons {
+		flex-direction: row;
+		align-items: center;
+		margin-left: auto;
+		margin-right: auto;
+		gap: 30px;
+	}
+}

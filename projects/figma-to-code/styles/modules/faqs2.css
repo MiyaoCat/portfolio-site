@@ -1,0 +1,35 @@
+.template-2 .faqs {
+	margin-top: 100px;
+	margin-bottom: 80px;
+}
+
+.template-2 .faqs .heading .header {
+	margin-bottom: 16px;
+}
+
+.template-2 .faqs .heading + .template-2 .faqs-accordion {
+	margin-top: 25px;
+}
+
+@media (min-width: 700px) {
+	.template-2 .faqs {
+		padding: 40px 60px;
+	}
+
+	.template-2 .faqs > * {
+		max-width: 843px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.template-2 .faqs .heading + .template-2 .faqs-accordion {
+		margin-top: 40px;
+	}
+}
+
+@media (min-width: 900px) {
+	.template-2 .faqs {
+		padding: 80px 120px;
+	}
+
+}

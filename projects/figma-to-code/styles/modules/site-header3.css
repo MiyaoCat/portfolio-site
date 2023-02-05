@@ -1,0 +1,107 @@
+.site-header {
+	position: sticky;
+	top: 0;
+	z-index: 9;
+	background-color: var(--paper);
+}
+
+mast-head {
+	display: flex;
+	align-items:  center;
+	padding: 10px 5px;
+}
+
+mast-head nav {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 15px;
+	height: 25px;
+}
+
+nav ul {
+	display: none;
+}
+
+.login {
+	display: none;
+	align-items: center;
+}
+
+.template-3 .site-header button {
+	display: none;
+}
+@media (min-width: 700px) {
+
+	.template-3 .site-header mast-head button {
+		display: block;
+/*		margin-left: 15px;*/
+	}
+
+	.template-3 .site-header mast-head button.contained.large.rounded {
+		margin-left: 15px;
+	}
+}
+@media (min-width: 725px) {
+	mast-head {
+		padding: 15px 50px;
+	}
+
+	.logo svg {
+		max-width: 90px;
+	}
+
+	nav ul {
+		display: flex;
+		gap: 10px;
+	}
+
+	.menu {
+		display: none;
+	}
+
+	.login {
+		display: flex;
+	}
+
+	.login span {
+		margin-left: 8px;
+		margin-right: 15px;
+	}
+
+	.login svg {
+		max-width: 18px;
+	}
+
+	.login span {
+		font-size: 15px;
+	}
+}
+
+@media (min-width: 850px) {
+	mast-head {
+/*		padding: 20px 80px;*/
+	}
+
+	.logo svg {
+		max-width: 100%;
+	}
+
+	nav ul {
+		gap: 25px;
+	}
+}
+
+@media (min-width: 900px) {
+	nav ul {
+		gap: 30px;
+	}
+}
+
+@media (min-width: 1100px) {
+	mast-head {
+		padding: 20px 120px;
+	}
+}
+

@@ -1,0 +1,68 @@
+.template-2 .faq-card {
+	max-width: 843px;
+	padding: 10px 7.5px;
+	box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.15);
+}
+
+.template-2 .faq-card + .template-2 .faq-card {
+	margin-top: 15px;
+}
+
+.template-2 .faq-card summary {
+	display: flex;
+	align-items: center;
+	list-style: none;
+	cursor: pointer;
+}
+.template-2 .faq-card summary:before {
+	content: "+ ";
+	color: var(--primary);
+	font-size: 20px;
+	margin-right: 7px;
+}
+
+.template-2 faq-card :is(.question, .answer) {
+	max-width: 90%;
+}
+.template-2 .faq-card details .answer {
+	border-left: 2px solid var(--primary);
+	padding-left: 7px;
+	margin-left: 28px;
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+.template-2 .faq-card .arrow {
+	width: 24px;
+	height: 24px;
+}
+.template-2 .faq-card .arrow svg {
+	max-width: 12px;
+	max-height: 24px;
+}
+
+.template-2 .faq-card details[open] summary:before {
+	display: inline;
+	content: "-";
+	color: var(--primary);
+	font-size: 20px;
+	margin-right: 7px;
+}
+
+@media (min-width:700px) {
+	.template-2 faq-card {
+		padding: 20px 15px;
+	}
+	.template-2 .faq-card :is(.question, .answer) {
+		max-width: 100%;
+	}
+
+	.template-2 .faq-card .answer {
+		margin: ;
+	}
+}
+
+
+.template-2 .faqs .arrow {
+	display: none;
+}
