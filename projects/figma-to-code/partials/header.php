@@ -9,7 +9,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 	
 	<meta property="og:image" content="[IMAGE URL]">
-	<meta name="description" content="[SHORT PAGE DESCRIPTION]">
+	<meta name="description" content="Figma-to-Code">
 	<title>Figma to Code</title>
 
 	<link rel="stylesheet" href="styles/site.css">
