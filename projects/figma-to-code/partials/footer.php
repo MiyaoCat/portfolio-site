@@ -1,6 +1,6 @@
 
 <?php  
-	$page = "home";
+	$page = "template-1";
 		if ( isset($_GET["page"]) ) {
 			$page = $_GET["page"];
 		}
