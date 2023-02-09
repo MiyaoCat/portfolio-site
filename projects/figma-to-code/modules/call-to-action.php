@@ -3,6 +3,10 @@
 	<div class="content-wrap">
 		<p class="teaser alert-voice"><?=$subHeader?></p>
 		<h2 class="header attention-voice"><?=ucwords($header)?></h2>
+
+		<?php if( isset($module["sub-header2"]) ) { ?>
+			<p class="teaser alert-voice"><?=$module["sub-header2"]?></p>
+		<?php } ?>
 		
 		<div class="buttons">
 			<?php  
@@ -18,6 +22,8 @@
 		
 			?>
 		</div>
+
+
 	</div>
 
 		<?php  

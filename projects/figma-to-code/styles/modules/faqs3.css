@@ -26,16 +26,17 @@
 @media (min-width: 900px) {
 	.template-3 .faqs inner-column {
 		display: flex;	
-		gap: 20px;
+		gap: 40px;
 	}
 
 	.template-3 .faqs .heading {
 		max-width: 50%;
 		margin-top: auto;
 		margin-bottom: auto;
+		padding-right: 50px;
 	}
 	.template-3 .faqs {
-/*		padding: 80px 120px;*/
+		padding: 80px 120px;
 	}
 
 }

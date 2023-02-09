@@ -177,7 +177,8 @@
 		{
 			"type": "call-to-action",
 			"header": "Etiam nulla lectus amet nunc",
-			"sub-header": "Etiam nulla lectus amet nunc ",
+			"sub-header": "",
+			"sub-header2": "Etiam nulla lectus amet nunc",
 			"components": [
 				{
 					"type": "email-signup",
