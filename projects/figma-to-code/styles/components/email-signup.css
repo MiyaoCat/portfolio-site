@@ -11,6 +11,7 @@
 	padding: 5px 2px 6px 18px;
 	background-color: var(--primary-dark);
 	border-radius: 5px 0 0 5px;
+	min-height: 35px;
 }
 
 .template-3 .hero email-signup input {
@@ -19,6 +20,7 @@
 	border-radius: 0 5px 5px 0;
 	background-color: var(--primary-dark);
 	color: var(--border);
+	min-height: 35px;
 }
 
 .template-3 .hero email-signup input:focus {
