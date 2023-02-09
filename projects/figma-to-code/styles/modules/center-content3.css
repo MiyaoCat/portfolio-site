@@ -23,7 +23,7 @@
 
 .template-3 .center-content feature-card {
 	display: block;	
-	max-width: 300px;
+	max-width: 400px;
 }
 
 .template-3 .center-content feature-card .content-wrap h3 {
@@ -40,6 +40,7 @@
 		margin-bottom: 55px;
 	}
 }
+
 @media (min-width: 700px) {
 	.template-3 .center-content .sub-header {
 		margin-top: 24px;
