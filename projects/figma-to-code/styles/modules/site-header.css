@@ -36,6 +36,10 @@ nav ul {
 	align-items: center;
 }
 
+.template-3 mast-head button.outline.large.rounded, .template-3 mast-head button.contained.large.rounded {
+	display: none;
+}
+
 @media (min-width: 725px) {
 	mast-head {
 		padding: 15px 50px;
@@ -68,11 +72,11 @@ nav ul {
 		max-width: 18px;
 	}
 
-	.login button.contained.medium.rounded {
-/*		max-width: 80px;*/
-/*		padding: 4px 18px;*/
+	.template-3 mast-head button.outline.large.rounded, .template-3 mast-head button.contained.large.rounded {
+		display: block;
 	}
 }
+
 
 @media (min-width: 850px) {
 	mast-head {
