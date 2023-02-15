@@ -1,8 +1,18 @@
 import { menuItems } from "./menu-items.js";
 
+
+
 menuItems.forEach( function(item) {
-	console.log(item.title) ;
-});
+		return `
+			<ul>
+				<li>${item.title}</li>
+				<li>${item.description}</li>
+				<li>${item.price}</li>
+				<li>${item.image}</li>
+			</ul>
+		`;
+	});
+
 
 var $outlet = document.querySelector("[data-outlet='main']");
 
@@ -22,7 +32,10 @@ pages.home = `
 
 pages.menu = `
 	<h1>Menu Page</h1>
-
+	<div>${menuItems[0].title}</div>
+	<div>${menuItems[0].description}</div>
+	<div>${menuItems[0].price}</div>
+	<div>${menuItems[0].image}</div>
 `
 
 export { setScreen, $outlet };
