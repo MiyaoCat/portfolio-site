@@ -17,3 +17,16 @@ outlet.innerHTML = `Triple: ${double(2)} & Double: ${triple(2)}`;
 render( document.querySelector('p'), 'hello' );
 
 addElement('p', 'new text');
+
+
+//NOTES
+//<button id="goTONextPage">Change</button>
+
+wondow.addEventListener("click", function(event) {
+	console.log(event.target.id); //tells you what element you're clicking on the window
+
+	if ( event.target.mathces("#goTONextPage")) {
+		//delegate events...
+		console.log("you clicked the button");
+	}
+});
