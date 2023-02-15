@@ -18,3 +18,11 @@ footer {
 	border: 5px solid black;
 }
 
+/* ITEM CARD */
+.item-card {
+	background-color: lightgray;
+	box-shadow: 2px 2px black;
+	border-radius: 5px;
+	padding: 5px;
+	margin-bottom: 5px;
+}

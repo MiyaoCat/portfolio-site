@@ -3,11 +3,11 @@ var menuItems = [
 		title: "Ramen",
 		description: "Yummy in your tummy",
 		price: 10,
-		image: ".images/ramen.jpeg",
+		image: "./images/ramen.jpeg",
 	},
 	{
 		title: "Salmon",
-		description: "Yummy in your tummy",
+		description: "Delicious fish",
 		price: 8,
 		image: "./images/salmon.jpeg",
 	},

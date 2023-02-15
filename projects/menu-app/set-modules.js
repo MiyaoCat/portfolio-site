@@ -1,19 +1,5 @@
 import { menuItems } from "./menu-items.js";
 
-
-
-menuItems.forEach( function(item) {
-		return `
-			<ul>
-				<li>${item.title}</li>
-				<li>${item.description}</li>
-				<li>${item.price}</li>
-				<li>${item.image}</li>
-			</ul>
-		`;
-	});
-
-
 var $outlet = document.querySelector("[data-outlet='main']");
 
 function setScreen(name) {
@@ -26,16 +12,35 @@ var pages = {};
 
 pages.home = `
 	<h1>Home Page</h1>
-
-	<button>Login</button>
 `;
+
+pages.other = `
+	<h1>Other Page</h1>
+`;
+
+function renderMenu(menuItems) {
+	var template = "";
+
+	menuItems.forEach( function(item) {
+		template += `
+			<div class="item-card">
+				<h2>${item.title}</h2>
+				<p>${item.description}</p>
+				<button data-action='add-item' data-color="blue">
+					Add to Cart
+				</button>
+			</div>
+		`;
+	})
+
+	return template;
+}
 
 pages.menu = `
 	<h1>Menu Page</h1>
-	<div>${menuItems[0].title}</div>
-	<div>${menuItems[0].description}</div>
-	<div>${menuItems[0].price}</div>
-	<div>${menuItems[0].image}</div>
-`
+	${renderMenu(menuItems)}
+`;
 
 export { setScreen, $outlet };
+
+
