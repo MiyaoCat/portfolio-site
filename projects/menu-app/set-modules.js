@@ -1,3 +1,9 @@
+import { menuItems } from "./menu-items.js";
+
+menuItems.forEach( function(item) {
+	console.log(item.title) ;
+});
+
 var $outlet = document.querySelector("[data-outlet='main']");
 
 function setScreen(name) {
@@ -7,6 +13,7 @@ function setScreen(name) {
 }
 
 var pages = {};
+
 pages.home = `
 	<h1>Home Page</h1>
 
@@ -15,6 +22,7 @@ pages.home = `
 
 pages.menu = `
 	<h1>Menu Page</h1>
+
 `
 
 export { setScreen, $outlet };

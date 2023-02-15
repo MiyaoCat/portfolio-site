@@ -11,7 +11,7 @@ header {
 
 main {
 	border: 5px dashed red;
-	max-height: 500px;
+/*	max-height: 500px;*/
 }
 
 footer {

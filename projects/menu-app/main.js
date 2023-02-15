@@ -1,4 +1,5 @@
 import { setScreen, $outlet } from "./set-modules.js";
+import { menuItems } from "./menu-items.js";
 
 const $body = document.querySelector('header');
 
@@ -9,6 +10,5 @@ $body.addEventListener("click", function (event) {
 
 		document.querySelector("main").style.backgroundColor = event.target.dataset.color;
 	};
-
-	console.log(event.index);
 })
+
