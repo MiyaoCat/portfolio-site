@@ -16,6 +16,12 @@ var menuItems = [
 		description: "14-16 pieces",
 		price: 10,
 		image: ".images/saba.jpeg",
+	},
+	{
+		title: "Udon",
+		description: "Thicc noods",
+		price: 10,
+		image: ".images/saba.jpeg",
 	}
 ]
 
