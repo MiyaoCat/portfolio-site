@@ -16,7 +16,7 @@ var menuItems = [
 	{
 		slug: "chicken-karaage",
 		title: "Chicken Karaage",
-		description: "14-16 pieces",
+		description: "Cheeky chickies",
 		price: 10,
 		image: "./images/saba.jpeg",
 	},

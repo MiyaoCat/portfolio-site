@@ -25,20 +25,13 @@ function renderMenu(menuItems) {
 	return template;
 }
 
+
 var itemKey = "salmon";
 var found = menuItems.find( function(item) {
-	if (item.slug == itemKey) {
-		return item.slug; 
-	}	
-
+	return item.slug == itemKey; 
 });
 
-function itemDetails(menuItems) {
-	var template = "";
-
-}
-
-
+// - - - PAGE SETUP - - - - - - - - -   
 var pages = {};
 
 pages.menu = `
@@ -66,6 +59,7 @@ pages.other = `
 `;
 
 
+// - - - EXPORT - - - - - - - - -   
 export { setScreen, $outlet, renderMenu };
 
 
