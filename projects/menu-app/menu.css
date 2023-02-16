@@ -20,9 +20,13 @@ footer {
 
 /* ITEM CARD */
 .item-card {
-	background-color: lightgray;
+	background-color: salmon;
 	box-shadow: 2px 2px black;
 	border-radius: 5px;
 	padding: 5px;
 	margin-bottom: 5px;
+}
+
+* {
+	border: 1px solid lightblue;
 }

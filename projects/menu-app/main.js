@@ -1,4 +1,4 @@
-import { setScreen, $outlet } from "./set-modules.js";
+import { setScreen, $outlet, renderMenu } from "./set-modules.js";
 
 
 // const $body = document.querySelector('header');
@@ -17,8 +17,9 @@ window.addEventListener("click", function (event) {
 		event.target.closest(".item-card").style.backgroundColor = event.target.dataset.color;
 	};
 
-	if (event.target.matches(".item-card") ) {
-		// console.log("card");
+	if (event.target.matches(".item-card" && "[data-item]") ) {
+			
 	};
+
 })
 
