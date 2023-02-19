@@ -21,12 +21,15 @@ window.addEventListener("click", function (event) {
 
 	if (clicked.matches(".item-card[data-item]") ) {
 		console.log('Menu item:', data.item);
-		
-		if (state.currentItem = getItemBySlug(data.item)) {
-			setScreen("itemDetails", state);
+		// var found = menuItems.find( function(item) {
+			// return item.slug == searchedSlug; 
+		// });
+		if (state.currentItem == getItemBySlug(data.item)) {
+
+			return `<h1>${data.item}</h1>`
 		};
 		
-		console.log('Current item:', state.currentItem.title);
+		console.log('Current item:', state.currentItem);
 	};
 
 

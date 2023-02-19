@@ -2,7 +2,7 @@ import { menuItems } from "./menu-items.js";
 
 var state = 
 	{
-		currentItem: {}
+		currentItem: null
 	};
 
 function getItemBySlug(searchedSlug) {
