@@ -16,7 +16,9 @@ window.addEventListener("click", function (event) {
 	if ( clicked.matches("[data-action='add-item']") ) {
 		// console.log(clicked);
 
-		clicked.closest(".item-card").style.backgroundColor = data.color;
+		// clicked.closest(".item-card").style.backgroundColor = data.color;
+		let $itemCard = document.querySelector('.item-card');
+		return $itemCard.style.backgroundColor = 'orange';
 	};
 
 	if (clicked.matches(".item-card[data-item]") ) {
