@@ -1,3 +1,7 @@
+import { pages } from "./pages2.js";
+import { menuItems } from './menu-items.js';
+import { renderMenu } from "./render2.js";
+
 window.addEventListener('click', function(event) {
 	if ( event.target.matches('[data-screen]') ) {
 		document.querySelector('main').style.backgroundColor = event.target.dataset.color;
@@ -6,9 +10,6 @@ window.addEventListener('click', function(event) {
 	}
 
 	if (event.target.matches('[data-screen="menu"]') ) {
-		var $main = document.querySelector('main');
-		var mainText = $main.innerHTML;
-		 mainText = 'menu!!';
-
+		renderMenu();
 	}
 })

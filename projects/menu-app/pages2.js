@@ -1,5 +1,10 @@
+import { menuItems } from './menu-items.js';
+import { renderMenu } from './render2.js';
+
 const pages = {};
 
-mages.menu = `
-	<h1>Menu</h1>
+pages.menu = `
+	${renderMenu(menuItems)};
 `
+
+export { pages }
