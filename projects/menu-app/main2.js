@@ -4,4 +4,11 @@ window.addEventListener('click', function(event) {
 
 		console.log(event.target);
 	}
+
+	if (event.target.matches('[data-screen="menu"]') ) {
+		var $main = document.querySelector('main');
+		var mainText = $main.innerHTML;
+		 mainText = 'menu!!';
+
+	}
 })
