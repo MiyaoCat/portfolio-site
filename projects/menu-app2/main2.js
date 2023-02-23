@@ -96,8 +96,9 @@ function initializeApp() {
 
 initializeApp();
 
-var pages = {};
 
+//PAGES 
+var pages = {};
 var $outlet = document.querySelector('main');
 
 function screenChange(name) {
@@ -106,8 +107,28 @@ function screenChange(name) {
 	$outlet.innerHTML = pages[name];
 }
 
+//MENU 
+
+function renderMenuItems(menuItem) {
+	return `
+		<li class="menu-card">${menuItem.name}</li>
+	`
+}
+
+function renderMenu(menuItems) {
+	var template = '<ul class="menu-list">';
+	menuItems.forEach( function(menuItem) {
+		template += renderMenuItems(menuItem);
+	});
+
+	template += '</ul>';
+
+	return template;
+}
+
 pages.menu = `
 	<h1>Menu List</h1>
+	${renderMenu(menuItems)}
 `;
 
 window.addEventListener('click', function(event) {
