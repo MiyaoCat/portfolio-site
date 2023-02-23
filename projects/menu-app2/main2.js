@@ -27,7 +27,7 @@ function setupAppInterface() {
 	var template = `
 	<header>
 		<h1 class='loud-voice'>${menuName} App</h1>
-		<button data-action='menu'>${menuName}</button>
+		<button data-page='menu'>${menuName}</button>
 		<button>Sign In</button>
 	</header>
 
@@ -111,12 +111,13 @@ function screenChange(name) {
 //MENU 
 
 function renderMenuItems(menuItem) {
+	let clickArea = 'data-page="itemDetails"';
 	return `
-		<li class="menu-card ${menuItem.id}">
-			<h2 class='loud-voice'>${menuItem.name}</h2>
-			<p class="price normal-voice">Price: $${menuItem.price}</p>
-			<p class="normal-voice">${menuItem.description}</p>
-			<picture><img src="${menuItem.image}" alt=""></picture></picture>
+		<li class="menu-card ${menuItem.id}" ${clickArea}>
+			<h2 class='loud-voice' ${clickArea}>${menuItem.name}</h2>
+			<p class="price normal-voice" ${clickArea}>Price: $${menuItem.price}</p>
+			<p class="normal-voice" ${clickArea}>${menuItem.description}</p>
+			<picture><img src="${menuItem.image}" ${clickArea} alt=""></picture>
 		</li>
 	`
 }
@@ -137,10 +138,19 @@ pages.menu = `
 	${renderMenu(menuItems)}
 `;
 
+pages.itemDetails = `
+	<h1 class='loud-voice'>Item Details</h1>
+`
+
 window.addEventListener('click', function(event) {
-	if (event.target.matches('[data-action="menu"]')) {
-		screenChange(event.target.dataset.action);
-		console.log(event.target.dataset.action);
+	if (event.target.matches('[data-page="menu"]')) {
+		screenChange(event.target.dataset.page);
+		console.log(event.target.dataset.page);
+	} 
+
+	if (event.target.matches('[data-page="itemDetails"]')) {
+		screenChange(event.target.dataset.page);
+		console.log(event.target.dataset.page);
 	} 
 });
 
