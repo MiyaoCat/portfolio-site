@@ -26,7 +26,7 @@ function setupAppInterface() {
 
 	var template = `
 	<header>
-		<h1>${menuName} App</h1>
+		<h1 class='loud-voice'>${menuName} App</h1>
 		<button data-action='menu'>${menuName}</button>
 		<button>Sign In</button>
 	</header>
@@ -113,9 +113,9 @@ function screenChange(name) {
 function renderMenuItems(menuItem) {
 	return `
 		<li class="menu-card ${menuItem.id}">
-			<h2>${menuItem.name}</h2>
-			<p className="price">Price: ${menuItem.price}</p>
-			<p className="normal-voice">${menuItem.description}</p>
+			<h2 class='loud-voice'>${menuItem.name}</h2>
+			<p class="price normal-voice">Price: $${menuItem.price}</p>
+			<p class="normal-voice">${menuItem.description}</p>
 			<picture><img src="${menuItem.image}" alt=""></picture></picture>
 		</li>
 	`
@@ -130,11 +130,10 @@ function renderMenu(menuItems) {
 
 	template += '</ul>';
 	return template;
-
 }
 
 pages.menu = `
-	<h1>Menu List</h1>
+	<h1 class='loud-voice'>Menu List</h1>
 	${renderMenu(menuItems)}
 `;
 
@@ -142,8 +141,7 @@ window.addEventListener('click', function(event) {
 	if (event.target.matches('[data-action="menu"]')) {
 		screenChange(event.target.dataset.action);
 		console.log(event.target.dataset.action);
-	}
-
+	} 
 });
 
 // MENU SCREEN

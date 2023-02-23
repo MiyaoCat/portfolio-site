@@ -1,0 +1,53 @@
+
+html {
+	--darkest: #111111;
+	--lightest: #FFF;
+
+	--shadow: rgba(221, 53%, 24%, 1);
+
+	--corners: 10px; /* or whatevers */
+
+	--standard: 1140px;
+	--tight: 800px;
+	--wide: 98vw;
+
+	--paper: hsla(0, 0%, 100%, 1.00);
+	--background: hsla(50, 100%, 86%, 1);
+
+	--ink: black;
+	--highlight: lawngreen; 
+	--contrast: hsla(38, 10%, 15%, 1);
+	--alternate: hsla(0, 0%, 35%, 1);
+	--trim: hsla(38, 10%, 15%, 1);
+	--standout: hsla(360, 100%, 39%, 1);
+
+	--link: red;
+
+	--tilt-small: -3deg;
+	--tilt: -4deg;
+	--tilt-large: -6deg;
+
+	--border-thin: 1px;
+	--border-med: 3px;
+	--border-thick: 5px;
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		--paper: hsla(0, 0%, 4%, 1);
+		--ink: hsla(50, 70%, 80%, 1);
+		--highlight: #6200ee;
+		--background: hsla(189, 20%, 12%, 1);
+		/*--contrast:  black;*/
+		--trim: hsla(60, 7%, 40%, 1);
+		--lightest: #FFF;
+		--standout: hsla(170, 56%, 49%, 1);
+	}
+
+	@media (min-width: 700px) {
+		html {
+			--ink: hsla(50, 100%, 86%, 1);
+		}
+	}
+}
+
