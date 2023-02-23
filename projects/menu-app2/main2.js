@@ -1,7 +1,4 @@
 // DATA
-// * USER: username, CART, POST-ORDERS
-// * ITEM: title, price, description, image, (possible options)
-// * GENERAL STATE OF THINGS? is there a user logged in? or not... are there things in the cart?
 import { menuItems } from './menu-items.js';
 
 function getData(key) {
@@ -29,7 +26,7 @@ function setupAppInterface() {
 	var template = `
 	<header>
 		<h1>${menuName} App</h1>
-		<button>${menuName}</button>
+		<button data-action='menu'>${menuName}</button>
 		<button>Sign In</button>
 	</header>
 
@@ -61,7 +58,8 @@ function loginScreen() {
 	<form class="login" data-action='login'>
 		<form-field>
 			<label>Username</label>
-			<input type="text">
+			<input type="text" value="">
+			<error-message></error-message>
 		</form-field>
 
 		<button type='submit'>Submit</button>
@@ -71,11 +69,13 @@ function loginScreen() {
 	document.querySelector('main').innerHTML = template;
 }
 
+
 function login(username) {
-	if (username.length >= 3) {
+	if (username.length >= 4) {
 		setData('user', username);
-	}
+	} 
 }
+
 
 window.addEventListener('submit', function(submitEvent) {
 	submitEvent.preventDefault;
@@ -95,6 +95,28 @@ function initializeApp() {
 }
 
 initializeApp();
+
+var pages = {};
+
+var $outlet = document.querySelector('main');
+
+function screenChange(name) {
+	console.log("screen:", name);
+
+	$outlet.innerHTML = pages[name];
+}
+
+pages.menu = `
+	<h1>Menu List</h1>
+`;
+
+window.addEventListener('click', function(event) {
+	if (event.target.matches('[data-action="menu"]')) {
+		screenChange(event.target.dataset.action);
+		console.log(event.target.dataset.action);
+	}
+
+});
 
 // MENU SCREEN
 // show menu of items MENU COMPONENT (get the data and iterate over it to create a list of menu items)
