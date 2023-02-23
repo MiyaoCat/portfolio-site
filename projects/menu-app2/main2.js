@@ -16,6 +16,7 @@ function initializeMenu() {
 		console.log('menu items stubbed');
 	}
 }
+
 // GLOBAL APP INTERFACE
 // * header with logo, login button, cart
 // * main / outlet for "pages" / each page screen
@@ -111,19 +112,25 @@ function screenChange(name) {
 
 function renderMenuItems(menuItem) {
 	return `
-		<li class="menu-card">${menuItem.name}</li>
+		<li class="menu-card ${menuItem.id}">
+			<h2>${menuItem.name}</h2>
+			<p className="price">Price: ${menuItem.price}</p>
+			<p className="normal-voice">${menuItem.description}</p>
+			<picture><img src="${menuItem.image}" alt=""></picture></picture>
+		</li>
 	`
 }
 
 function renderMenu(menuItems) {
 	var template = '<ul class="menu-list">';
+	
 	menuItems.forEach( function(menuItem) {
 		template += renderMenuItems(menuItem);
 	});
 
 	template += '</ul>';
-
 	return template;
+
 }
 
 pages.menu = `
