@@ -39,6 +39,7 @@ function setupAppInterface() {
 			<h1 class='loud-voice'>${menuName} App</h1>
 			<button data-page='menu'>${menuName}</button>
 			<button data-action='logout'>Sign Out</button>
+			<button data-action='clearStorage'>Clear</button>
 		</header>
 
 		<main>
@@ -64,7 +65,11 @@ function handleLogin() {
 	if ($usernameInput.value.length >= 3) {
 		login($usernameInput.value);
 		$usernameInput = "";
+		
+		getData(`${appPrefix}_menu`);
+		setData('menu', menuItems);
 		setScreen('menu');
+		
 	}  else {
 		document.querySelector('error-message').innerHTML = 'Minimumm of 3 characters required';
 	}
@@ -80,8 +85,12 @@ window.addEventListener('submit', function(submitEvent) {
 });
 
 //LOGOUT BUTTON
-function logout(username) {
+function logout() {
 	removeData('user');
+}
+
+function clearData() {
+	localStorage.clear()
 }
 
 window.addEventListener('click', function(clickEvent) {
@@ -110,6 +119,11 @@ window.addEventListener('click', function(clickEvent) {
 
 			setScreen('detail', foundItem);
 		}
+	}
+
+	if (clickEvent.target.matches('[data-action="clearStorage"]')) {
+		clearData();
+		setScreen('login');
 	}
 });
 
