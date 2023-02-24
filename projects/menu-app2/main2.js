@@ -30,8 +30,9 @@ function initializeData() {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 //SETUP - Setup app structure at first load (header - main - footer)
+var menuName = 'Menu';
 function setupAppInterface() {
-	var menuName = 'Menu';
+	
 
 	var template = `
 		<header>
@@ -85,11 +86,30 @@ function logout(username) {
 
 window.addEventListener('click', function(clickEvent) {
 
+	if (clickEvent.target.matches('[data-page="menu"]')) {
+		setScreen('menu');
+
+		console.log('return to menu', clickEvent.target.matches)
+	}
+
 	if (clickEvent.target.matches('[data-action="logout"]')) {
 		logout();
 		setScreen('login');
 
 		console.log(clickEvent.target.textContent)
+	}
+
+	if (clickEvent.target.matches('[data-view]')) {
+
+		if (clickEvent.target.dataset.view == 'itemDetail') {
+			console.log(clickEvent.target.dataset.view);
+
+			var foundItem = getData('menu').find( function(item) {
+				return item.slug = clickEvent.target.dataset.view;
+			});
+
+			setScreen('detail', foundItem);
+		}
 	}
 });
 
@@ -119,7 +139,8 @@ function renderMenu() {
 				<item-card>
 					<h3 class="attention-voice">${item.name}</h3>
 					<p class="price normal-voice">Price: ${item.price}</p>
-					<picture><img src="${item.image}" alt=""></picture></picture>
+					<button class='link' data-view='itemDetail'>View Details</button>
+					<picture class='thumbnail'><img src="${item.image}" alt=""></picture>
 				</item-card>
 			</li>
 		`;
@@ -131,15 +152,6 @@ function renderMenu() {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 //PAGE SETUPS
 var pages = {};
-
-pages.menu = function() {
-	var template = `
-		<h2 class="loud-voice">Menu</h2>
-		${renderMenu()};
-	`;
-
-	return template;
-}
 
 pages.login = function() {
 	var template = `
@@ -159,13 +171,27 @@ pages.login = function() {
 	return template;
 }
 
-window.addEventListener('click', function(event) {
-	if (event.target.matches('[data-page="menu"]')) {
+pages.menu = function() {
+	var template = `
+		<h2 class="loud-voice">Menu</h2>
+		${renderMenu()}
+	`;
 
-		console.log(event.target.dataset.page);
-	} 
-});
+	return template;
+}
 
+pages.detail = function (item) {
+	var template = `
+		<h2 class="loud-voice">${item.name}</h2>
+		<h3 class="attention-voice">${item.price}</h3>
+		<p class="normal-voice">${item.description}</p>
+		<picture><img src="${item.image}" alt=""></picture>
+		<button data-action='addToCart'>Add to Cart</button>
+		<button data-page='menu'>Back</button>
+	`;
+
+	return template;
+}
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 //START UP APP

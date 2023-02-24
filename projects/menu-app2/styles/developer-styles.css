@@ -1,7 +1,7 @@
 
 body * {
 	border: 1px solid lightgray;
-	padding: 4px;
+/*	padding: 4px;*/
 }
 
 section:nth-of-type(odd) {

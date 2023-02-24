@@ -1,6 +1,6 @@
 item-card {
 	background-color: var(--standout);
-	box-shadow: 2px 2px black;
+/*	box-shadow: 2px 2px black;*/
 	border-radius: 5px;
 	padding: 5px;
 	margin-bottom: 5px;
@@ -9,9 +9,31 @@ item-card {
 	max-width: 400px;
 	display: grid;
 	grid-template-columns: auto 1fr;
+	gap: 15px;
+/*	overflow: scroll;*/
+	position: relative;
 }
 
-picture {
+.link {
+	grid-column: 2;
+	grid-row: 4;
+}
+
+.link:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: hsla(100, 100, 50%, .2);
+}
+
+item-card:focus-within {
+	border: 5px solid purple;
+}
+.thumbnail {
 	max-width: 200px;
 	grid-row: 1 / span 4;
+	border-radius: 8px;
 }

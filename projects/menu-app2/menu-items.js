@@ -18,14 +18,14 @@ var menuItems = [
 		name: "Chicken Karaage",
 		description: "Cheeky chickies",
 		price: 10,
-		image: "https://source.unsplash.com/random/?food,salmon"
+		image: "https://source.unsplash.com/random/?fried&chicken"
 	},
 	{
 		slug: "udon",
 		name: "Udon",
 		description: "Thicc noods",
 		price: 10,
-		image: "https://source.unsplash.com/random/?fried-chicken,food"
+		image: "https://source.unsplash.com/random/?noodles,udon"
 	}
 ]
 
