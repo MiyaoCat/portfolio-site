@@ -1,4 +1,4 @@
-.menu-card {
+item-card {
 	background-color: var(--standout);
 	box-shadow: 2px 2px black;
 	border-radius: 5px;
@@ -6,6 +6,12 @@
 	margin-bottom: 5px;
 	color: black;
 	cursor: pointer;
-	
+	max-width: 400px;
+	display: grid;
+	grid-template-columns: auto 1fr;
 }
 
+picture {
+	max-width: 200px;
+	grid-row: 1 / span 4;
+}
