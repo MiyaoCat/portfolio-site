@@ -1,26 +1,26 @@
 // DATA
 import { menuItems } from './menu-items.js';
 
+var appPrefix = "my_app"
+
 function getData(key) {
-	return JSON.parse( localStorage.getItem(key))
+	return JSON.parse( localStorage.getItem(`${appPrefix}${key}`))
 }
 
 function setData(key, value) {
-	return localStorage.setItem(key, JSON.stringify(value));
+	return localStorage.setItem(`${appPrefix}_${key}`, JSON.stringify(value));
 }
+// DATA - setting up menu in storage. If it exists, cool. Otherwise, set menu data into local storage. 
 function initializeMenu() {
-	if (localStorage.getItem('Johns Menu')) {
-		console.log('menu retreived');
+	if (localStorage.getItem(`${appPrefix}_menu`)) {
+		console.log('Menu exists and was retreived');
 	} else {
-		setData('Johns Menu', menuItems);
+		setData('menu', menuItems);
 		console.log('menu items stubbed');
 	}
 }
 
-// GLOBAL APP INTERFACE
-// * header with logo, login button, cart
-// * main / outlet for "pages" / each page screen
-// * footer with checkout button or something... (might change)
+//SETUP - Setup app structure at first load
 function setupAppInterface() {
 	var menuName = 'Menu';
 
@@ -74,7 +74,9 @@ function loginScreen() {
 function login(username) {
 	if (username.length >= 4) {
 		setData('user', username);
-	} 
+	} else {
+		document.querySelector('error-message').innerHTML = 'more stuff';
+	}
 }
 
 
@@ -113,11 +115,12 @@ function screenChange(name) {
 function renderMenuItems(menuItem) {
 	let clickArea = 'data-page="itemDetails"';
 	return `
-		<li class="menu-card ${menuItem.id}" ${clickArea}>
-			<h2 class='loud-voice' ${clickArea}>${menuItem.name}</h2>
-			<p class="price normal-voice" ${clickArea}>Price: $${menuItem.price}</p>
-			<p class="normal-voice" ${clickArea}>${menuItem.description}</p>
-			<picture><img src="${menuItem.image}" ${clickArea} alt=""></picture>
+		<li class="menu-card ${menuItem.slug}">
+			<h2 class='loud-voice' >${menuItem.name}</h2>
+			<p class="price normal-voice">Price: $${menuItem.price}</p>
+			<p class="normal-voice">${menuItem.description}</p>
+			<picture><img src="${menuItem.image}" alt=""></picture>
+			<button data-slug='${menuItem.slug}' ${clickArea}>See Details</button>
 		</li>
 	`
 }
@@ -133,8 +136,14 @@ function renderMenu(menuItems) {
 	return template;
 }
 
+function renderItemDetails(item) {
+	`<h1>${item.name}</h1>`
+}
+
 pages.menu = `
-	<h1 class='loud-voice'>Menu List</h1>
+	<menu-item>
+		<h1 class='loud-voice'>Menu List</h1>
+	</menu-item>
 	${renderMenu(menuItems)}
 `;
 
@@ -150,7 +159,14 @@ window.addEventListener('click', function(event) {
 
 	if (event.target.matches('[data-page="itemDetails"]')) {
 		screenChange(event.target.dataset.page);
-		console.log(event.target.dataset.page);
+		var searchedSlug = event.target.dataset.slug;
+
+		var found = menuItems.find(function (item) {
+			return item.slug == searchedSlug;
+			renderItemDetails(searchedSlug);
+		})
+		console.log(searchedSlug);
+		
 	} 
 });
 

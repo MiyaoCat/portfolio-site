@@ -1,27 +1,27 @@
 var menuItems = [
 	{
-		id: "a1",
+		slug: "ramen",
 		name: "Ramen",
 		description: "Yummy in your tummy",
 		price: 10,
 		image: "./images/ramen.jpeg",
 	},
 	{
-		id: "a2",
+		slug: "salmon",
 		name: "Salmon",
 		description: "Delicious fish",
 		price: 8,
 		image: "./images/salmon.jpeg",
 	},
 	{
-		id: "a3",
+		slug: "chicken-karaage",
 		name: "Chicken Karaage",
 		description: "Cheeky chickies",
 		price: 10,
 		image: "./images/saba.jpeg",
 	},
 	{
-		id: "a4",
+		slug: "udon",
 		name: "Udon",
 		description: "Thicc noods",
 		price: 10,
