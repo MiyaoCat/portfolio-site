@@ -52,6 +52,7 @@ a:hover {
 /* Caption text or similar */
 .calm-voice {
 	font-family: var(--sans-serif);
+	font-size: 14px;
 }
 
 /* Fine print text or similar */

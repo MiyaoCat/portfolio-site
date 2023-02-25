@@ -29,6 +29,7 @@ function initializeData() {
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
 //INITIAL STRUCTURE SETUP - Setup app structure at first load (header - main - footer)
 var menuName = 'Menu';
 function setupAppInterface() {
@@ -37,9 +38,10 @@ function setupAppInterface() {
 	var template = `
 		<header>
 			<h1 class='loud-voice'>${menuName} App</h1>
-			<button data-page='menu'>${menuName}</button>
+			<button data-view='menu'>${menuName}</button>
 			<button data-action='logout'>Sign Out</button>
 			<button data-action='clearStorage'>Clear</button>
+			<button data-view='cart'>Cart</button>
 		</header>
 
 		<main>
@@ -54,6 +56,7 @@ function setupAppInterface() {
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
 //LOGIN & LOGOUT SETUP
 function login(username) {
 	setData('user', username);
@@ -128,10 +131,44 @@ window.addEventListener('click', function(clickEvent) {
 				return item.slug == itemSlug;
 			});
 
-			setScreen('detail', foundItem);
+			return setScreen('detail', foundItem);
 		}
 
 		return setScreen(view);
+	}
+
+	if (clickEvent.target.matches('[data-action="add-to-cart"]')) {
+		var itemSlugToAdd = clickEvent.target.dataset.slug;
+		console.log(itemSlugToAdd);
+
+		// var itemToAdd = getData('menu').find(function (item) {
+		// 	item.slug == itemSlugToAdd;
+		// }); 
+
+		var itemToAdd = getData('menu').find( (item)=> item.slug == itemSlugToAdd);
+
+		var username = getData('user');
+		console.log(username);
+
+		var cartName = `cart_${username}`;
+
+		//Check to see if there's a cart in memory
+		if (getData(cartName)) { 
+			//If so, get cart data
+			var cart = getData(cartName)
+			//Add new item to cart
+			// cart.push(itemToAdd);
+			//Save the cart in memory again
+			// setData(cartName, cart);
+		} else {
+			//If no cart exists, create empty cart array
+			var cart = [];
+			//Add new item(s) to cart
+			// cart.push(itemToAdd);
+			// setData(cartName, cart);
+		}
+		cart.push(itemToAdd);
+		setData(cartName, cart);
 	}
 });
 
@@ -185,7 +222,6 @@ function renderOptions(theOptions) {
 			`;
 		});
 		template += `</ul>`;
-		template += `<button>Add to Cart</button>`;
 		template += `</form>`;
 		}
 	return template;
@@ -197,9 +233,9 @@ function renderChoices(theChoices, name) {
 		
 		theChoices.forEach(function(choice) {
 		template += `
-			<li>
+			<li class='choices'>
 				<input type='radio' name='${name}' id='${choice.name}' value='${choice.name}' />
-				<label for='${choice.name}'>${choice.name}</label>
+				<label for='${choice.name}'><p class='normal-voice'>${choice.name}</p> <p className="price"></p></label>
 			</li>			
 		`;	
 	});
@@ -207,7 +243,28 @@ function renderChoices(theChoices, name) {
 	return template;
 	// }
 }
+
+function renderCart(item) {
+	if (!getData('user')) return;
+
+	var username = getData('user');
+	var cartName = `my_app_cart_${getData('user')}`;
+
+	var template = '<ul class="item-list">';
+	var cartItems = getData(cartName);
+
+	if (cartItems) {
+		cartItems.forEach(function (item, index) {
+			template += `
+			<p>${item.name}</p>`;
+		})
+		
+	}
+	return template;
+}
+
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
 //PAGE SETUPS
 var pages = {};
 
@@ -241,15 +298,27 @@ pages.menu = function() {
 pages.detail = function (item) {
 	var template = `
 		<picture><img src="${item.image}" alt=""></picture>
+		
 		<h2 class="loud-voice">${item.name}</h2>
 		<h3 class="attention-voice">$${item.price}</h3>
 		<p class="normal-voice">${item.description}</p>
 		${renderOptions(item.options)}
+		
+		<button data-action='add-to-cart' data-slug=${item.slug}>Add to Cart</button>
 		<button data-page='menu'>Back</button>
 	`;
 	return template;
 }
 
+pages.cart = function () {
+	var template = `
+		<div class='item-detail'>
+			<h1 class="loud-voice">Cart</h1>
+
+			${renderCart()}
+		</div>
+	`
+}
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 //START UP APP
 function initializeApp() {

@@ -19,7 +19,7 @@
 /* Sections and more 
 stuff */
 @import 'components/components.css';
-/*@import 'modules.css';*/
+@import 'pages/pages.css';
 
 @import 'footer.css';
 @import 'header.css';
