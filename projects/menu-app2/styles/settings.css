@@ -5,7 +5,9 @@ html {
 
 	--shadow: rgba(221, 53%, 24%, 1);
 
-	--corners: 10px; /* or whatevers */
+
+	--corners-standard: 5px;
+	--corners-xround: 10px;
 
 	--standard: 1140px;
 	--tight: 800px;
@@ -15,10 +17,10 @@ html {
 	--background: hsla(50, 100%, 86%, 1);
 
 	--ink: black;
-	--highlight: lawngreen; 
-	--contrast: hsla(38, 10%, 15%, 1);
+	--highlight: hsla(306, 92%, 61%, 1.00); 
+	--contrast: hsla(178, 100%, 54%, 1.00);
 	--alternate: hsla(0, 0%, 35%, 1);
-	--trim: hsla(0, 0%, 35%, 1.00);
+	--trim: hsla(0, 0%, 76%, 1.00);
 	--standout: hsla(0, 0%, 96%, 1.00);
 
 	--link: red;

@@ -1,13 +1,59 @@
 item-detail {
-	display: block;
+	display: grid;
+	gap: 20px;
+	grid-template-areas:
+		'image image'
+		'name price'
+		'description description'
+		'options options'
+		'addToCart addToCart'
+		'back back';
 }
 
 item-detail .thumbnail {
 	aspect-ratio: 16 / 9 ;
+	border-radius: var(--corners-xround);
+	grid-area: image;
 }
 
 item-detail img {
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
+}
+
+item-detail .name {
+	grid-area: name;
+}
+
+item-detail .price {
+	grid-area: price;
+	text-align: right;
+}
+
+item-detail .description {
+	grid-area: description;
+}
+
+item-detail .options {
+	grid-area: options;
+}
+
+item-detail [data-action='add-to-cart'] {
+	grid-area: addToCart;
+	min-width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: var(--highlight);
+	color: black;
+	border: none;
+	padding: 8px 25px;
+	box-shadow: 2px 5px 5px hsla(0, 0%, 76%, 1.00);
+}
+
+item-detail [data-view='menu'] {
+	grid-area: back;
+	min-width: 200px;
+	margin-left: auto;
+	margin-right: auto;
 }

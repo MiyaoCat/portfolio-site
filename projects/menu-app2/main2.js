@@ -336,10 +336,10 @@ pages.detail = function (item) {
 		<item-detail>
 			<picture class='thumbnail'><img src="${item.image}" alt=""></picture>
 			
-			<h2 class="loud-voice">${item.name}</h2>
-			<h3 class="attention-voice"><span>Price<span>: $${item.price}</h3>
-			<p class="normal-voice">${item.description}</p>
-			${renderOptions(item.options)}
+			<h2 class="name loud-voice">${item.name}</h2>
+			<h3 class="price attention-voice"><span>$${item.price}</h3>
+			<p class="description normal-voice">${item.description}</p>
+			<div class="options">${renderOptions(item.options)}</div>
 			
 			<button data-action='add-to-cart' data-slug=${item.slug}>Add to Cart</button>
 			<button data-view='menu'>Back</button>

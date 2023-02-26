@@ -1,7 +1,9 @@
 button {
-	border-radius: 5px;
-	background-color: white;
-	border: 2px solid black;
+	border-radius: var(--corners-standard);
+	background-color: var(--standout);
+	box-shadow: 2px 5px 5px 2px var(--trim);
 	min-width: 70px;
 	cursor: pointer;
+	padding: 8px 15px;
+	border: none;
 }
