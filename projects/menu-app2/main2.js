@@ -152,7 +152,7 @@ window.addEventListener('click', function(clickEvent) {
 		var itemToAdd = getData('menu').find( (item)=> item.slug == itemSlugToAdd);
 
 		var username = getData('user');
-		console.log(username, itemToAdd.name);
+		console.log('Item to add: ', itemToAdd.name);
 
 		var cartName = `cart_${username}`;
 
@@ -173,6 +173,19 @@ window.addEventListener('click', function(clickEvent) {
 		}
 		cart.push(itemToAdd);
 		setData(cartName, cart);
+	}
+
+	if (clickEvent.target.matches('[data-action="remove"]')) {
+		var itemSlugToRemove = clickEvent.target.dataset.slug;
+		console.log("Item to remove: ", itemSlugToRemove);
+
+		var username = getData('user');
+		var cartName = `cart_${username}`;
+		var indexToRemove = clickEvent.target.closest('[data-index]').dataset.index;
+		var cart = getData(cartName);
+		cart.splice(indexToRemove, 1);
+		setData(cartName, cart);
+		setScreen('cart');
 	}
 });
 
@@ -260,8 +273,14 @@ function renderCart() {
 	if (cartItems) {
 		cartItems.forEach(function (item, index) {
 			template += `
-			<p>${item.name}</p>
-			<p>${cartName}</p>
+				<li class="cart-item">
+					<item-card data-index=${index}>
+						<p class="normal-voice">${item.name}</p>
+						<p>price ${item.price}</p>
+						<button data-action='remove' data-slug=${item.slug}>Remove
+						</button>
+					</item-card>
+				</li>
 		`;
 		})
 		template += `</ul>`;	
