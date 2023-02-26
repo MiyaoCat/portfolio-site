@@ -2,9 +2,9 @@ var menuItems = [
 	{
 		slug: "ramen",
 		name: "Ramen",
-		description: "Yummy in your tummy",
+		description: "Yummy in your tummy. Comes with soft boiled egg, nori, bamboo shoots and corn. Togarashi flakes are included separately.",
 		price: 10,
-		image: "https://source.unsplash.com/random/?ramen,food",
+		image: "./images/ramen2.jpg",
 		options: [
 			{
 				title: "size",
@@ -25,9 +25,9 @@ var menuItems = [
 	{
 		slug: "salmon",
 		name: "Salmon",
-		description: "Delicious fish",
+		description: "Delicious fish grilled King Salmon caught from the fisherman you see on Discovery Channel. Itadakimasu!",
 		price: 8,
-		image: "https://source.unsplash.com/random/?food,vegan,sandwich,bread",
+		image: "./images/salmon-wide.jpeg",
 		options: [
 			{
 				title: "size",
@@ -48,16 +48,16 @@ var menuItems = [
 	{
 		slug: "chicken-karaage",
 		name: "Chicken Karaage",
-		description: "Cheeky chickies",
+		description: "Crispy and tender. Better than KFC! Better than Popeyes! Crunchy on the outside, soft and moist on the inside.",
 		price: 10,
-		image: "https://source.unsplash.com/random/?fried&chicken"
+		image: "./images/chicken-karaage.jpeg"
 	},
 	{
 		slug: "udon",
 		name: "Udon",
-		description: "Thicc noods",
+		description: "Thicc noods. Comes with kamaboko (fish cakes), nori, and one peice of shrimp tempurahhhh.",
 		price: 10,
-		image: "https://source.unsplash.com/random/?noodles,udon",
+		image: "./images/udon.jpeg",
 		options: [
 			{
 				title: "size",

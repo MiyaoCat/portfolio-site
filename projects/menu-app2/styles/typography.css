@@ -41,12 +41,14 @@ a:hover {
 .attention-voice {
 	font-family: var(--sans-serif);
 	font-weight: 700;
+	font-size: 26px;
 }
 
 /* Paragraph text or similar */
 .normal-voice {
 	font-family: var(--sans-serif);
 	font-size: 16px;
+	line-height: 1.3em;
 }
 
 /* Caption text or similar */

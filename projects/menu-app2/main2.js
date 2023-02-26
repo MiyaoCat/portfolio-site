@@ -37,19 +37,19 @@ function setupAppInterface() {
 
 	var template = `
 		<header>
-			<h1 class='loud-voice'>${menuName} App</h1>
-			<button data-view='menu'>${menuName}</button>
-			<button data-action='logout'>Sign Out</button>
-			<button data-action='clearStorage'>Clear</button>
-			<button data-view='cart'>Cart</button>
+			<inner-column>
+				<h1 class='loud-voice'>${menuName} App</h1>
+				<button data-view='menu'>${menuName}</button>
+				<button data-action='logout'>Sign Out</button>
+				<button data-action='clearStorage'>Clear</button>
+				<button data-view='cart'>Cart</button>
+			</inner-column>
 		</header>
 
-		<main>
-			Main Content
-		</main>
+		<main></main>
 
 		<footer>
-			Footer
+			<inner-column>Footer</inner-column>
 		</footer>
 	`;
 	document.querySelector('body').innerHTML = template;
@@ -203,7 +203,8 @@ function setScreen(screen, options) {
 			setScreen('menu');
 			return console.warn('User is logged in. Redirected to menu page')
 		}
-		document.querySelector('main').innerHTML = pages[screen](options);	
+		document.querySelector('main').innerHTML = `<inner-column>${pages[screen](options)}</inner-column>`;	
+
 	} else {
 		setScreen('error');
 		// console.error( new Error('No page!!') );
@@ -219,8 +220,9 @@ function renderMenu() {
 		template += `
 			<li class="menu-item">
 				<item-card data-slug='${item.slug}'>
-					<h3 class="attention-voice">${item.name}</h3>
-					<p class="price normal-voice">Price: $${item.price}</p>
+					<h3 class="name attention-voice">${item.name}</h3>
+					<p class="price attention-voice">$${item.price}</p>
+					<p class="description normal-voice">${item.description}</p>
 					<button class='link' data-view='itemDetail'>View Details</button>
 					<picture class='thumbnail'><img src="${item.image}" alt=""></picture>
 				</item-card>
@@ -331,15 +333,17 @@ pages.menu = function() {
 
 pages.detail = function (item) {
 	var template = `
-		<picture><img src="${item.image}" alt=""></picture>
-		
-		<h2 class="loud-voice">${item.name}</h2>
-		<h3 class="attention-voice">$${item.price}</h3>
-		<p class="normal-voice">${item.description}</p>
-		${renderOptions(item.options)}
-		
-		<button data-action='add-to-cart' data-slug=${item.slug}>Add to Cart</button>
-		<button data-view='menu'>Back</button>
+		<item-detail>
+			<picture class='thumbnail'><img src="${item.image}" alt=""></picture>
+			
+			<h2 class="loud-voice">${item.name}</h2>
+			<h3 class="attention-voice"><span>Price<span>: $${item.price}</h3>
+			<p class="normal-voice">${item.description}</p>
+			${renderOptions(item.options)}
+			
+			<button data-action='add-to-cart' data-slug=${item.slug}>Add to Cart</button>
+			<button data-view='menu'>Back</button>
+		</item-detail>
 	`;
 	return template;
 }

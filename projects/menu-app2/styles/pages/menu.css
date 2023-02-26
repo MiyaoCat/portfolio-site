@@ -1,0 +1,12 @@
+.menu-list {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (min-width: 820px) {
+	.menu-list {
+		display: grid;
+		gap: 20px;
+		grid-template-columns: 1fr 1fr;
+	}
+}

@@ -17,7 +17,7 @@ body {
 
 inner-column {
 	display: block;
-	max-width: var(--wide); /* could be a variable in settings */
+	max-width: var(--tight); /* could be a variable in settings */
 	margin-right: auto;
 	margin-left: auto;
 	padding: 0 5px;

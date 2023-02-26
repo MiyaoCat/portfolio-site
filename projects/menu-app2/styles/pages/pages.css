@@ -1,1 +1,4 @@
-@import ' menu-details.css'
+@import 'menu.css';
+@import 'menu-details.css';
+@import 'item-detail.css';
+

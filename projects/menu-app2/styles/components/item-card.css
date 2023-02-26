@@ -2,16 +2,22 @@ item-card {
 	background-color: var(--standout);
 /*	box-shadow: 2px 2px black;*/
 	border-radius: 5px;
-	padding: 5px;
+	padding: 10px;
 	margin-bottom: 5px;
 	color: black;
 	cursor: pointer;
-	max-width: 400px;
+	max-width: 500px;
+	max-height: 300px;
 	display: grid;
-	grid-template-columns: auto 1fr;
-	gap: 15px;
-/*	overflow: scroll;*/
+	gap: 10px 30px;
 	position: relative;
+	display: grid;
+	grid-template-areas:
+		"name price"
+		"image description"
+		"image button"
+		"image ."
+	;
 }
 
 .link {
@@ -19,6 +25,21 @@ item-card {
 	grid-row: 4;
 }
 
+item-card .name {
+	grid-area: name;
+	width: max-content;
+}
+
+item-card .price {
+	grid-area: price;
+	text-align: right;
+/*	width: max-content;*/
+}
+
+item-card .description {
+	grid-area: description;
+		text-align: right;
+}
 .link:before {
 	content: '';
 	position: absolute;
@@ -33,15 +54,21 @@ item-card:focus-within {
 	border: 5px solid purple;
 }
 .thumbnail {
-	max-width: 200px;
+	max-width: 180px;
 	grid-row: 1 / span 4;
 	border-radius: 8px;
 	aspect-ratio: 1 / 1;
 	overflow: hidden;
+	grid-area: image;
 }
 
 .thumbnail img {
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
+}
+
+item-card button {
+	grid-area: button;
+/*	opacity: 0;*/
 }
