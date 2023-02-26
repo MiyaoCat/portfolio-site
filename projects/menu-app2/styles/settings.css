@@ -18,8 +18,8 @@ html {
 	--highlight: lawngreen; 
 	--contrast: hsla(38, 10%, 15%, 1);
 	--alternate: hsla(0, 0%, 35%, 1);
-	--trim: hsla(38, 10%, 15%, 1);
-	--standout: hsla(160, 100%, 90%, .8);
+	--trim: hsla(0, 0%, 35%, 1.00);
+	--standout: hsla(0, 0%, 96%, 1.00);
 
 	--link: red;
 
