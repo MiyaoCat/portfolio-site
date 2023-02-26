@@ -48,7 +48,7 @@ var menuItems = [
 	{
 		slug: "chicken-karaage",
 		name: "Chicken Karaage",
-		description: "Crispy and tender. Better than KFC! Better than Popeyes! Crunchy on the outside, soft and moist on the inside.",
+		description: "Crispy and tender. Crunchy on the outside, soft and moist on the inside.",
 		price: 10,
 		image: "./images/chicken-karaage.jpeg"
 	},
