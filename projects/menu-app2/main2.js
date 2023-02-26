@@ -109,6 +109,10 @@ window.addEventListener('click', function(clickEvent) {
 		console.log('return to menu', clickEvent.target.matches('[data-page="menu"]'))
 	}
 
+	if (clickEvent.target.matches('[data-view="cart"]')) {
+		setScreen('cart');
+	}
+
 	if (clickEvent.target.matches('[data-action="logout"]')) {
 		logout();
 		setScreen('login');
@@ -139,7 +143,7 @@ window.addEventListener('click', function(clickEvent) {
 
 	if (clickEvent.target.matches('[data-action="add-to-cart"]')) {
 		var itemSlugToAdd = clickEvent.target.dataset.slug;
-		console.log(itemSlugToAdd);
+		console.log("slug to add:", itemSlugToAdd);
 
 		// var itemToAdd = getData('menu').find(function (item) {
 		// 	item.slug == itemSlugToAdd;
@@ -148,7 +152,7 @@ window.addEventListener('click', function(clickEvent) {
 		var itemToAdd = getData('menu').find( (item)=> item.slug == itemSlugToAdd);
 
 		var username = getData('user');
-		console.log(username);
+		console.log(username, itemToAdd.name);
 
 		var cartName = `cart_${username}`;
 
@@ -244,11 +248,11 @@ function renderChoices(theChoices, name) {
 	// }
 }
 
-function renderCart(item) {
+function renderCart() {
 	if (!getData('user')) return;
 
 	var username = getData('user');
-	var cartName = `my_app_cart_${getData('user')}`;
+	var cartName = `cart_${getData('user')}`;
 
 	var template = '<ul class="item-list">';
 	var cartItems = getData(cartName);
@@ -256,9 +260,11 @@ function renderCart(item) {
 	if (cartItems) {
 		cartItems.forEach(function (item, index) {
 			template += `
-			<p>${item.name}</p>`;
+			<p>${item.name}</p>
+			<p>${cartName}</p>
+		`;
 		})
-		
+		template += `</ul>`;	
 	}
 	return template;
 }
@@ -317,7 +323,8 @@ pages.cart = function () {
 
 			${renderCart()}
 		</div>
-	`
+	`;
+	return template;
 }
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 //START UP APP
