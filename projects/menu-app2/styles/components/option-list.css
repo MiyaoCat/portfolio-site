@@ -1,0 +1,13 @@
+.option-list, .choice-list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.option-list {
+	gap: 20px;
+}
+
+.option-list .title {
+	margin-bottom: 5px;
+}

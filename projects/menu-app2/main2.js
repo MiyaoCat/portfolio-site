@@ -31,7 +31,7 @@ function initializeData() {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 //INITIAL STRUCTURE SETUP - Setup app structure at first load (header - main - footer)
-var menuName = 'Menu';
+var menuName = `John's Menu`;
 function setupAppInterface() {
 	
 
@@ -98,6 +98,13 @@ function resetData() {
 	initializeData();
 }
 
+
+//UPPERCASE FIRST LETTER 
+function uppercase(string) {
+	return string.split(" ").map(function (word) {
+		return word.charAt(0).toUpperCase() + word.slice(1);
+	}).join(" ");
+}
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 //EVENT LISTENERS
@@ -241,7 +248,7 @@ function renderOptions(theOptions) {
 		theOptions.forEach(function (option) {
 			template += `
 				<li>
-					<h3 class="attention-voice">${option.title}</h3>
+					<h3 class="title attention-voice">${uppercase(option.title)}</h3>
 					${renderChoices(option.choices, option.title)}
 				</li>			
 			`;
@@ -260,7 +267,12 @@ function renderChoices(theChoices, name) {
 		template += `
 			<li class='choices'>
 				<input type='radio' name='${name}' id='${choice.name}' value='${choice.name}' />
-				<label for='${choice.name}'><p class='normal-voice'>${choice.name}</p> <p className="price"></p></label>
+				<label for='${choice.name}'>
+					<p class='normal-voice'>
+						${uppercase(choice.name)}
+					</p> 
+					<p className="price"></p>
+				</label>
 			</li>			
 		`;	
 	});
@@ -341,8 +353,12 @@ pages.detail = function (item) {
 			<p class="description normal-voice">${item.description}</p>
 			<div class="options">${renderOptions(item.options)}</div>
 			
-			<button data-action='add-to-cart' data-slug=${item.slug}>Add to Cart</button>
-			<button data-view='menu'>Back</button>
+			<button data-action='add-to-cart' data-slug=${item.slug}>
+				<p class="normal-voice">Add to Cart</p>
+			</button>
+			<button data-view='menu'>
+				<p class="normal-voice">Back</p>
+			</button>
 		</item-detail>
 	`;
 	return template;

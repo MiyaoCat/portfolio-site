@@ -24,6 +24,7 @@ item-detail img {
 
 item-detail .name {
 	grid-area: name;
+	font-weight: 700;
 }
 
 item-detail .price {
