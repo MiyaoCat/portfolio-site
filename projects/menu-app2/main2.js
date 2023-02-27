@@ -31,14 +31,14 @@ function initializeData() {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 //INITIAL STRUCTURE SETUP - Setup app structure at first load (header - main - footer)
-var menuName = `John's Menu`;
+var menuName = `Menu`;
 function setupAppInterface() {
 	
 
 	var template = `
 		<header>
 			<inner-column>
-				<h1 class='loud-voice'>${menuName} App</h1>
+				<h1 class='loud-voice'>John's ${menuName} App</h1>
 				<button data-view='menu'>${menuName}</button>
 				<button data-action='logout'>Sign Out</button>
 				<button data-action='clearStorage'>Clear</button>
@@ -226,7 +226,7 @@ function renderMenu() {
 	getData('menu').forEach( function(item) {
 		template += `
 			<li class="menu-item">
-				<item-card data-slug='${item.slug}'>
+				<item-card class='menu' data-slug='${item.slug}'>
 					<h3 class="name attention-voice">${item.name}</h3>
 					<p class="price attention-voice">$${item.price}</p>
 					<p class="description normal-voice">${item.description}</p>
@@ -294,10 +294,14 @@ function renderCart() {
 		cartItems.forEach(function (item, index) {
 			template += `
 				<li class="cart-item">
-					<item-card data-index=${index}>
-						<p class="normal-voice">${item.name}</p>
+					<item-card class='cart' data-index=${index}>
+						<p class="name normal-voice">${item.name}</p>
 						<p>price ${item.price}</p>
-						<button data-action='remove' data-slug=${item.slug}>Remove
+						<button 
+						class='remove' 
+						data-action='remove' 
+						data-slug=${item.slug}>
+							Remove
 						</button>
 					</item-card>
 				</li>
@@ -305,7 +309,7 @@ function renderCart() {
 		})
 		template += `</ul>`;	
 		template += `<button data-view='complete'>
-							Done
+							Complete Order
 						</button>`;
 	}
 	return template;
@@ -336,7 +340,7 @@ pages.login = function() {
 
 pages.menu = function() {
 	var template = `
-		<h2 class="loud-voice">Menu</h2>
+		<h2 class="menu loud-voice">Menu</h2>
 		${renderMenu()}
 	`;
 
@@ -367,7 +371,7 @@ pages.detail = function (item) {
 pages.cart = function () {
 	var template = `
 		<div class='item-detail'>
-			<h1 class="loud-voice">Cart</h1>
+			<h2 class="loud-voice">Cart</h1>
 
 			${renderCart()}
 		</div>

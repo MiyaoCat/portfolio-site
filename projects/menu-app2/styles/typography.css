@@ -34,7 +34,8 @@ a:hover {
 /* Header text or similar */
 .loud-voice {
 	font-family: var(--sans-serif);
-	font-size: clamp(30px, 6vw, 100px);
+	font-size: 30px;
+	font-weight: 700;
 }
 
 /* Sub-header text or similar */

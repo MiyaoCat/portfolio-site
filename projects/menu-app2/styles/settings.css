@@ -20,7 +20,7 @@ html {
 	--highlight: hsla(306, 92%, 61%, 1.00); 
 	--contrast: hsla(178, 100%, 54%, 1.00);
 	--alternate: hsla(0, 0%, 35%, 1);
-	--trim: hsla(0, 0%, 76%, 1.00);
+	--trim: hsla(0, 0%, 76%, 1.00);--
 	--standout: hsla(0, 0%, 96%, 1.00);
 
 	--link: red;
