@@ -99,6 +99,11 @@ item-card.menu button {
 	}
 }
 
+@media (prefers-color-scheme: dark) {
+	item-card.menu {
+		box-shadow: none;
+	}
+}
 
 
 

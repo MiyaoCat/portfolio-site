@@ -30,6 +30,6 @@ body {
 	color: var(--ink);
 }
 
-main h2 {
-	margin-bottom: 8px;
+main .heading {
+	margin: 10px 0;
 }

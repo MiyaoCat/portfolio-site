@@ -322,13 +322,18 @@ var pages = {};
 
 pages.login = function() {
 	var template = `
-		<h1 class='loud-voice'>Login Page</h1>
+		<h1 class='heading loud-voice'>Login Page</h1>
 
 		<form class="login" data-action='login'>
 			<form-field>
-				<label>Username</label>
+				<label>
+					<p class="normal-voice">Username</p>
+				</label>
+				
 				<input data-input='username' type='text'/>
-				<error-message data-validation='username'></error-message>
+				
+				<error-message data-validation='username'>
+				</error-message>
 			</form-field>
 
 			<button type='submit'>Submit</button>
@@ -340,7 +345,7 @@ pages.login = function() {
 
 pages.menu = function() {
 	var template = `
-		<h2 class="menu loud-voice">Menu</h2>
+		<h2 class="heading loud-voice">Menu</h2>
 		${renderMenu()}
 	`;
 
@@ -371,7 +376,7 @@ pages.detail = function (item) {
 pages.cart = function () {
 	var template = `
 		<div class='item-detail'>
-			<h2 class="loud-voice">Cart</h1>
+			<h2 class="heading loud-voice">Cart</h1>
 
 			${renderCart()}
 		</div>

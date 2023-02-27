@@ -7,3 +7,9 @@ button {
 	padding: 8px 15px;
 	border: none;
 }
+
+@media (prefers-color-scheme: dark) {
+	button {
+		box-shadow: none;
+	}
+}

@@ -47,7 +47,6 @@ item-detail [data-action='add-to-cart'] {
 	color: black;
 	border: none;
 	padding: 8px 25px;
-	box-shadow: 2px 5px 5px hsla(0, 0%, 76%, 1.00);
 	margin: 10px auto;
 
 }
@@ -58,3 +57,4 @@ item-detail [data-view='menu'] {
 	margin-left: auto;
 	margin-right: auto;
 }
+

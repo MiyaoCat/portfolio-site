@@ -1,0 +1,17 @@
+form.login {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+input {
+	padding: 5px;
+	font-size: 16px;
+	border-radius: var(--corners-standard);
+	max-width: 250px;
+}
+
+form button {
+	max-width: 100px;
+	background-color: var(--highlight);
+}
