@@ -230,7 +230,7 @@ function renderMenu() {
 					<h3 class="name attention-voice">${item.name}</h3>
 					<p class="price attention-voice">$${item.price}</p>
 					<p class="description normal-voice">${item.description}</p>
-					<button class='link' data-view='itemDetail'>View Details</button>
+					<button class='link normal-voice' data-view='itemDetail'>View Details</button>
 					<picture class='thumbnail'><img src="${item.image}" alt=""></picture>
 				</item-card>
 			</li>
@@ -296,9 +296,9 @@ function renderCart() {
 				<li class="cart-item">
 					<item-card class='cart' data-index=${index}>
 						<p class="name normal-voice">${item.name}</p>
-						<p>price ${item.price}</p>
+						<p class='price normal-voice'>$${item.price}</p>
 						<button 
-						class='remove' 
+						class='remove normal-voice' 
 						data-action='remove' 
 						data-slug=${item.slug}>
 							Remove
@@ -362,11 +362,15 @@ pages.detail = function (item) {
 			<p class="description normal-voice">${item.description}</p>
 			<div class="options">${renderOptions(item.options)}</div>
 			
-			<button data-action='add-to-cart' data-slug=${item.slug}>
-				<p class="normal-voice">Add to Cart</p>
+			<button 
+			class="normal-voice" 
+			data-action='add-to-cart' 
+			data-slug=${item.slug}>
+				Add to Cart
 			</button>
-			<button data-view='menu'>
-				<p class="normal-voice">Back</p>
+			
+			<button class="normal-voice" data-view='menu'>
+				Back
 			</button>
 		</item-detail>
 	`;
