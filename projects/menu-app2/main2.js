@@ -163,7 +163,7 @@ window.addEventListener('click', function(clickEvent) {
 		var itemToAdd = getData('menu').find( (item)=> item.slug == itemSlugToAdd);
 
 		var username = getData('user');
-		console.log('Item to add: ', itemToAdd.name);
+		console.log('Item to add: ');
 
 		var cartName = `cart_${username}`;
 
@@ -282,35 +282,38 @@ function renderChoices(theChoices, name) {
 }
 
 function renderCart() {
-	if (!getData('user')) return;
+	if (!getData('user')) {
+		return "<p class='normal-voice'>You are not logged in.</p>";
+	} else {
 
-	var username = getData('user');
-	var cartName = `cart_${getData('user')}`;
+		var username = getData('user');
+		var cartName = `cart_${getData('user')}`;
 
-	var template = '<ul class="item-list">';
-	var cartItems = getData(cartName);
+		var template = '<ul class="item-list">';
+		var cartItems = getData(cartName);
 
-	if (cartItems) {
-		cartItems.forEach(function (item, index) {
-			template += `
-				<li class="cart-item">
-					<item-card class='cart' data-index=${index}>
-						<p class="name normal-voice">${item.name}</p>
-						<p class='price normal-voice'>$${item.price}</p>
-						<button 
-						class='remove normal-voice' 
-						data-action='remove' 
-						data-slug=${item.slug}>
-							Remove
-						</button>
-					</item-card>
-				</li>
-		`;
-		})
-		template += `</ul>`;	
-		template += `<button data-view='complete'>
-							Complete Order
-						</button>`;
+		if (cartItems) {
+			cartItems.forEach(function (item, index) {
+				template += `
+					<li class="cart-item">
+						<item-card class='cart' data-index=${index}>
+							<p class="name normal-voice">${item.name}</p>
+							<p class='price normal-voice'>$${item.price}</p>
+							<button 
+							class='remove normal-voice' 
+							data-action='remove' 
+							data-slug=${item.slug}>
+								Remove
+							</button>
+						</item-card>
+					</li>
+			`;
+			})
+			template += `</ul>`;	
+			template += `<button data-view='complete'>
+								Complete Order
+							</button>`;
+		}
 	}
 	return template;
 }
@@ -368,7 +371,7 @@ pages.detail = function (item) {
 			data-slug=${item.slug}>
 				Add to Cart
 			</button>
-			
+
 			<button class="normal-voice" data-view='menu'>
 				Back
 			</button>
