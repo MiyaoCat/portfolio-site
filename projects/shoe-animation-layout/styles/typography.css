@@ -1,0 +1,76 @@
+
+html {
+	--marker: Permanent Marker, Noto Serif;
+	--sans-serif: Encode Sans, Helvetica;
+	--serif: Noto Serif Display, Old Standard TT, Times New Roman;
+
+	
+}
+a {
+	font-family: var(--sans-serif);
+	text-transform: uppercase;
+	font-weight: 200;
+	letter-spacing: .2rem;
+}
+
+
+a:hover {
+	text-decoration: underline;
+	color: var(--highlight);
+}
+
+@media (prefers-color-scheme: dark) {
+	a:hover {
+		color: var(--highlight);
+	}
+}
+
+/* Main header or banner text or similar */
+.screaming-voice {
+	font-family: var(--marker);
+	font-size: clamp(60px, 8vw, 160px);
+}
+
+/* Header text or similar */
+.loud-voice {
+
+}
+
+/* Sub-header text or similar */
+.attention-voice {
+	font-family: var(--sans-serif);
+}
+
+/* Paragraph text or similar */
+.normal-voice {
+
+}
+
+/* Caption text or similar */
+.calm-voice {
+
+}
+
+/* Fine print text or similar */
+.quiet-voice {
+
+}
+
+:is(.calm-voice, p) em {
+	font-style: italic;
+}
+
+:is(.calm-voice, p) strong {
+	font-weight: 700;
+}
+
+/* these would be scoped to section or to an article element */
+/* this is just a loose setting for now */
+/* or smaller group of article-like styles such as a <text-content> custom element */
+p + p {
+	margin-top: ;
+}
+
+h2 + p {
+	margin-top: ;
+}

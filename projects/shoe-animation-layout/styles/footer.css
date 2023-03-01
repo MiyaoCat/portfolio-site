@@ -1,0 +1,34 @@
+/* - - - FOOTER - - - */
+footer {
+	padding-bottom: 90px;
+	min-height: 20vh;
+}
+
+footer .footer-wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+footer p {
+	margin-top: 10px;
+	text-align: center;
+}
+
+.socials {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.socials :is(.twitter, .substack, .linkedin) {
+	max-width: 50px;
+	margin: 0 20px;
+}
+
+.socials :is(.twitter, .substack, .linkedin):hover {
+	transform: scale(1.2);
+	transition: .5s;
+}
