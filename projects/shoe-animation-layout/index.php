@@ -8,43 +8,52 @@
 
 <body>
 	<header>
-		<div class='logo'>Nike</div>
+		<inner-column>
+		<div class='logo'>
+			<?php include('./assets/nike-logo.svg'); ?>
+		</div>
+
 		<nav>
 			<ul>
 				<li>Man</li>
 				<li>Woman</li>
 				<li>Kids</li>
 				<li>Customize</li>
-			</ul>
-
-			<div class='model'>Model: CK5828-400</div>
-			<div class='icon'></div>
+			</ul>		
 		</nav>
-	</header>	
 
-	<main>
+		<div class='model'>Model: CK5828-400</div>
+
+		<div class='icon'>
+			<?php include('./assets/bag-icon.svg'); ?>
+		</div>
+	</inner-column>
+</header>	
+
+<main>
+	<inner-column>
 		<div class='search'>
 			<form>
 				<input type='text'>
 				<button type='submit'></button>
 			</form>
 		</div>
-
+		
 		<div class='savings'>
 			<p class='attention-voice'>50%</p>
 			<p class='calm-voice'>save up to</p>
 		</div>
-
+		
 		<header>
 			<h1 class='loud-voice'>Stylish Sneakers</h1>
 			<button class='explore'>Graphic</button>
 		</header>
-
+		
 		<div class='page-buttons'>
 			<button class='back'><img src='' alt=''>Back</button>
 			<button class='forward'><img src='' alt=''>Forward</button>
 		</div>
-
+		
 		<div class='shoe-grid'>
 			<ul>
 				<li>
@@ -85,7 +94,7 @@
 				</li>
 			</ul>
 		</div>
-
+		
 		<div class='main-image'>
 			<img src='' alt=''>
 			<div class='beacon'>svg</div>
@@ -95,7 +104,7 @@
 			</div>
 			<div class='beacon'>svg</div>
 		</div>
-
+		
 		<div class='color-palette'>
 			<ul>
 				<li>red</li>
@@ -103,7 +112,7 @@
 				<li>white</li>
 			</ul>
 		</div>
-
+		
 		<div class='shoe-detail'>
 			<ol class='size'>
 				<li><p class='alert-voice'>39</p></li>
@@ -115,9 +124,9 @@
 				<li><p class='alert-voice'>42</p></li>
 				<li><p class='alert-voice'>43</p></li>
 			</ol>
-
+		
 			<p class='loud-voice'>Nike Blazer Low</p>
-
+		
 			<div class='review'>
 				<p class='normal-voice'>Review 1k+</p>
 				<div class='rating'>
@@ -131,6 +140,8 @@
 				</div>
 			</div>
 		</div>
+		</inner-column>
+
 	</main>			
 </body>
 
