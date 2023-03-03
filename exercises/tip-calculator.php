@@ -19,28 +19,30 @@ if ($submittedPOST) {
 	if ( isset($_POST["tip"]) ) {
 		$tip = $_POST["tip"];
 
-		if ($tip == "ten") {
+		if ($tip == 0.10) {
 			$tipPercent = 1.1;
 		}
 
-		if ($tip == "fifteen") {
+		if ($tip == 0.15) {
 			$tipPercent = 1.15;
 		}
 
-		if ($tip == "twenty") {
+		if ($tip == .20) {
 			$tipPercent = 1.20;
 		}
 	} 
 
 	if ( !isset($_POST["tip"]) ) {
-		$tipPercent = 1;
+		// $tipPercent = 1;
 		$message = "<p class='calm-voice warning'>No tip? Service was that bad?</p>";
 	}
 
+	$grandTotal = number_format($subTotal * $tipPercent, 2);
+	$tipAmount = number_format($subTotal*$tipPercent - $subTotal, 2);
+
 }	
 
-$grandTotal = number_format($subTotal * $tipPercent, 2);
-$tipAmount = number_format($subTotal * $tipPercent - $subTotal, 2);
+
 
 ?>
 
