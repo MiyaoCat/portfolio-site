@@ -12,7 +12,7 @@
 	<a href="?page=exercises">Exercises</a>
 	</footer>
 
-<script src='javascript/exercises.js'></script>	
+<!-- <script src='javascript/exercises.js'></script>	 -->
 
 </body>
 
