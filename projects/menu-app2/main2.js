@@ -324,12 +324,11 @@ function renderCart() {
 
 // - - - NEW WORK
 function addToCart(clickEvent) {
-	//can also be document.querySelector('form[name="options"]')
-	console.log("addToCart: ",document.forms.options);
+	var size = document.querySelector('[name="size"]:checked');
+	console.log("size: ", size);
 
-	var $options = document.querySelector('form[name="options"]');
-	// var size = $options.querySelector('[name="Size"]').value;
-	// console.log("size: ", size);
+	// var itemSlug = clickEvent.target.closest('.item-details').dataset.slug;
+	// console.log("itemSlug: ", itemSlug);
 }
 
 addToCart();
@@ -372,7 +371,7 @@ pages.menu = function() {
 
 pages.detail = function (item) {
 	var template = `
-		<item-detail>
+		<div class='item-detail' data-slug='${item.slug}'>
 			<picture class='thumbnail'><img src="${item.image}" alt=""></picture>
 			
 			<h2 class="name loud-voice">${item.name}</h2>
@@ -390,7 +389,7 @@ pages.detail = function (item) {
 			<button class="normal-voice" data-view='menu'>
 				Back
 			</button>
-		</item-detail>
+		</div>
 	`;
 	return template;
 }

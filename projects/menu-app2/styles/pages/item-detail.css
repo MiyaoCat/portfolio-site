@@ -1,4 +1,4 @@
-item-detail {
+.item-detail {
 	display: grid;
 	gap: 10px;
 	grid-template-areas:
@@ -10,37 +10,37 @@ item-detail {
 		'back back';
 }
 
-item-detail .thumbnail {
+.item-detail .thumbnail {
 	aspect-ratio: 16 / 9 ;
 	border-radius: var(--corners-xround);
 	grid-area: image;
 }
 
-item-detail img {
+.item-detail img {
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
 }
 
-item-detail .name {
+.item-detail .name {
 	grid-area: name;
 }
 
-item-detail .price {
+.item-detail .price {
 	grid-area: price;
 	text-align: right;
 }
 
-item-detail .description {
+.item-detail .description {
 	grid-area: description;
 	margin: 10px 0;
 }
 
-item-detail .options {
+.item-detail .options {
 	grid-area: options;
 }
 
-item-detail [data-action='add-to-cart'] {
+.item-detail [data-action='add-to-cart'] {
 	grid-area: addToCart;
 	min-width: 200px;
 	background-color: var(--highlight);
@@ -51,7 +51,7 @@ item-detail [data-action='add-to-cart'] {
 
 }
 
-item-detail [data-view='menu'] {
+.item-detail [data-view='menu'] {
 	grid-area: back;
 	min-width: 200px;
 	margin-left: auto;
