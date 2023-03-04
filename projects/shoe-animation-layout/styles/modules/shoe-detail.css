@@ -1,0 +1,17 @@
+.shoe-detail {
+
+}
+
+.shoe-detail ol {
+	display: flex;
+}
+
+.shoe-detail .size li {
+	list-style-type: disc;
+	display: flex;
+	flex-direction: column;
+}
+
+.rating ul {
+	display: flex;
+}
