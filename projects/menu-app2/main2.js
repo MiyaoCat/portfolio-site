@@ -131,6 +131,10 @@ window.addEventListener('click', function(clickEvent) {
 		console.log(clickEvent.target.textContent)
 	}
 
+	if (clickEvent.target.matches('[data-action="add-to-cart"]')) {
+		addToCart(clickEvent);
+	}
+
 	if (clickEvent.target.matches('[data-action="clearStorage"]')) {
 		resetData();
 		setScreen('login');
@@ -244,7 +248,7 @@ function renderOptions(theOptions) {
 	if (!theOptions) {
 		return '';
 	} else {
-		var template = '<form><ul class="option-list">';
+		var template = '<form name="options"><ul class="option-list">';
 		theOptions.forEach(function (option) {
 			template += `
 				<li>
@@ -318,6 +322,17 @@ function renderCart() {
 	return template;
 }
 
+// - - - NEW WORK
+function addToCart(clickEvent) {
+	//can also be document.querySelector('form[name="options"]')
+	console.log("addToCart: ",document.forms.options);
+
+	var $options = document.querySelector('form[name="options"]');
+	// var size = $options.querySelector('[name="Size"]').value;
+	// console.log("size: ", size);
+}
+
+addToCart();
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 //PAGE SETUPS
