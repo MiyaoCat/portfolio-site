@@ -14,6 +14,7 @@
 
 <!-- <script src='javascript/exercises.js'></script>	 -->
 <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+<script src="./v-exercises/v-simple-interest/script.js"></script>
 </body>
 
 </html>

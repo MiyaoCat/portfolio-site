@@ -16,4 +16,4 @@
 	}
 ?>
 
-<?php include("v-exercises/$slug/index.html"); ?>
+<?php include("v-exercises/$slug/$slug.html"); ?>

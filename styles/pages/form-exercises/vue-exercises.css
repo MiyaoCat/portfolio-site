@@ -1,0 +1,100 @@
+.v-exercise main {
+	grid-row: 3;
+	grid-column: 1 / 14;
+	display: grid;
+	flex-direction: column;
+	max-width: 500px;
+	margin: 25px;
+	gap: 8px;
+	font-size: 16px;
+	font-family: Anton, helvetica;
+	border: 3px solid black;
+	border-radius: 10px;
+	padding: 40px 20px 75px 20px;
+	background-color: #ddd5e9;
+	box-shadow: 0 0 30px hotpink;
+	color: black;
+}
+
+
+.v-exercise h1 {
+	font-size: 38px;
+	font-weight: 700;
+	text-shadow: 2px 2px 3px limegreen;
+	font-family: Clash Display;
+	margin-bottom: 7px;
+}
+
+.v-exercise .instructions {
+	line-height: 1.2em;
+}
+
+.v-exercise main li {
+	list-style: bullets;
+	list-style-position: inside;
+}
+
+.v-exercise h2 {
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.v-exercise form {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	border: 3px solid black;
+	border-radius: 6px;
+	padding: 10px; 
+	background-color: hsla(151, 72%, 54%, 0.85);
+	margin-bottom: 15px;
+}
+
+.v-exercise label {
+	margin-top: 10px;
+}
+
+.v-exercise span {
+	font-weight: 700;
+	color: hsla(306, 92%, 61%, 1.00);
+}
+
+.v-exercise input {
+	padding: 5px;
+	border: 3px solid black;
+	border-radius: 5px;
+	max-width: 80px;
+}
+
+.v-exercise button {
+	border: none;
+	background-color: hsla(306, 92%, 61%, 1.00);
+	padding: 7px 5px;
+	border-radius: 6px;
+	font-size: 17px;
+	max-width: 150px;
+}
+
+.v-exercise output {
+	background-color: black;
+	color: limegreen;
+	font-family: Monospace;
+	padding: 15px;
+	border-radius: 6px;
+	margin-top: 15px;
+	line-height: 1.5em;
+}
+
+.v-exercise output:empty {
+	display: none;
+}
+
+.v-exercise .bad {
+	color: red;
+}
+
+@media (min-width: 700px) {
+	.v-exercise main {
+		grid-column: 2 / 10;
+	}
+}
