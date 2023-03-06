@@ -7,7 +7,6 @@
 		"title1": "Layout",
 		"title2": "Garden",
 		"intro": "Not necessarily a project, rather a collection of responsive modules I've built that are common on modern websites.",
-		"url": "https://peprojects.dev/alpha-4/john/layout-challenges/index.php",
 		"image": "images/projects/layouts.png",
 		"featured": true,
 		"languages": [
@@ -27,7 +26,6 @@
 		"title2": "Exercises",
 		"slug": "exercises",
 		"intro": "A variety of forms derived from the book, Exercises for Programmers by Brian Hogan.",
-		"url": "https://peprojects.dev/alpha-4/john/layout-challenges/index.php",
 		"image": "images/projects/forms2.jpg",
 		"featured": false,
 		"languages": [
@@ -37,17 +35,16 @@
 		"sections": [
 			{
 				"module": "generic-text",
-				"content": "We worked through the book, Exercises for Programmers to build out each form. This book is great because it's language agnostic and tests your ability to use functions and logic to create each form. I think it's great practive when learning any new language. <br><br> Now click on a form and test them out!"
+				"content": "I worked through the book, Exercises for Programmers to build out each form. This book is language agnostic and tests your ability to use functions and logic to create each form. I recommend using this book when learning any new programming language. <br><br> Now click on a form and test them out!"
 			}
 		]
 	},
 	{
-		"title1": "Form",
-		"title2": "Exercises with Vue",
-		"slug": "vue-exercises",
+		"title1": "Vue",
+		"title2": "Exercises",
+		"slug": "v-exercises",
 		"intro": "Same book, same exercises, this time all built with the Vue framework.",
-		"url": "https://peprojects.dev/alpha-4/john/layout-challenges/index.php",
-		"image": "images/projects/forms2.jpg",
+		"image": "images/projects/vue.jpeg",
 		"featured": false,
 		"languages": [
 			"HTML", "CSS", "Vue", "Javascript"
@@ -56,7 +53,7 @@
 		"sections": [
 			{
 				"module": "generic-text",
-				"content": "I through the book, Exercises for Programmers to build out each form. This book is language agnostic and tests your ability to use functions and logic to create each form. <br><br> Now click on a form and test them out!"
+				"content": "I worked through the book, Exercises for Programmers to build out each form. This book is language agnostic and tests your ability to use functions and logic to create each form. <br><br> Now click on a form and test them out!"
 			}
 		]
 	},

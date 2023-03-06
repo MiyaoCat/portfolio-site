@@ -1,5 +1,5 @@
 <?php 
-	$json = file_get_contents("data/exercises.json");
+	$json = file_get_contents("data/v-exercises.json");
 	$exercises = json_decode($json, true);
 ?>
 
@@ -17,13 +17,12 @@
 				?>
 					<ol class="exercises">
 						<li>
-							<a href="?page=exercise&slug=<?=$slug?>">
-								<h3 class="normal-voice">
-									<?=$form["title1"]?> <?=$form["title2"]?>
-								</h3>
+							<a href="?page=v-exercise&slug=<?=$slug?>" class="normal-voice">
+								<h3 class="normal-voice"><?=$form["title1"]?> <?=$form["title2"]?></h3>
 							</a>
 						</li>
 					</ol>
+
 				<?php } ?>	
 
 			</form-exercise>

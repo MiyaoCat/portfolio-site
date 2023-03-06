@@ -37,6 +37,15 @@
 		$slug = $exercises["slug"];
 	} 
 
+	elseif ($page == "v-exercises") {
+		$json = file_get_contents("data/page-data/v-exercises.json");
+		$exercises = json_decode($json, true);
+
+		$title1 = $exercises["title1"];
+		$title2 = $exercises["title2"];
+		$slug = $exercises["slug"];
+	} 
+
 	elseif ($page == "exercise") {
 		$json = file_get_contents("data/exercises.json");
 		$formExercises = json_decode($json, true);

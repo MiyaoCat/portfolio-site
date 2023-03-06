@@ -10,7 +10,6 @@
 
 	$title = $caseStudy["title1"];
 	$intro = $caseStudy["intro"];
-	$url = $caseStudy["url"];
 	$slug = $caseStudy["slug"];
 ?>
 

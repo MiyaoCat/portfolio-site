@@ -1,0 +1,9 @@
+{
+	"id": "001",
+	"slug": "v-exercises",
+	"template": "v-exercises",
+
+	"title1": "Vue Form",
+	"title2": "Exercises",
+	"intro": "This my work with the Exercises for Programmers book (E4P)"
+}

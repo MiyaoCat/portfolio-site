@@ -14,11 +14,12 @@
 			
 				<?php
 					//Takes you to individual project page  
-					if ($slug !== "exercises") { ?>
-			
+					if ($slug !== "exercises" && $slug !== "v-exercises") { ?>
+
 						<a href="?page=project&slug=<?=$slug?>">
 							<h2 class="loud-voice"><?=$title1?> <?=$title2?></h2>
 						</a>
+
 				<?php } ?>
 			
 				<?php  
@@ -28,6 +29,17 @@
 						<a href="?page=exercises">
 							<h2 class="loud-voice"><?=$title1?> <?=$title2?></h2>
 						</a>
+
+				<?php } ?>
+
+				<?php  
+					//Takes you to form v-exercises page, which does not have a slug
+					if ($slug == "v-exercises") { ?>
+						
+						<a href="?page=v-exercises">
+							<h2 class="loud-voice"><?=$title1?> <?=$title2?></h2>
+						</a>
+
 				<?php } ?>
 			</div>
 			
@@ -49,7 +61,7 @@
 			<picture class="project-image">
 
 				<?php  
-					if ($slug !== "exercises") { ?>
+					if ($slug !== "exercises" && $slug !== "v-exercises") { ?>
 
 					<a href="?page=project&slug=<?=$slug?>">
 						<img src="<?=$image?>" alt="image for <?=$title1?> <?=$title2?>">
@@ -60,6 +72,14 @@
 					if ($slug == "exercises") { ?>
 
 					<a href="?page=exercises">
+						<img src="<?=$image?>" alt="image for <?=$title1?> <?=$title2?>">
+					</a>
+				<?php } ?>	
+
+				<?php  
+					if ($slug == "v-exercises") { ?>
+
+					<a href="?page=v-exercises">
 						<img src="<?=$image?>" alt="image for <?=$title1?> <?=$title2?>">
 					</a>
 				<?php } ?>	

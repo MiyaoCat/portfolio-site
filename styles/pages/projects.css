@@ -21,12 +21,16 @@
 	grid-row: 5;
 }
 
-.projects project-card.luxury-streetwear {
+.projects project-card.v-exercises {
 	grid-row: 6;
 }
 
-.projects project-card.portfolio-site {
+.projects project-card.luxury-streetwear {
 	grid-row: 7;
+}
+
+.projects project-card.portfolio-site {
+	grid-row: 8;
 }
 
 @media (min-width: 700px) {
