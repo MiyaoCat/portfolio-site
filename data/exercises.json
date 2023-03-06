@@ -10,23 +10,17 @@
 			{
 				"title1": "Simple",
 				"title2": "Interest",
-				"intro": "Use this to find out how much you'll make",
-				"slug": "simple-interest",
-				"conclusion": "Here's what I learned when building this interest calculator page"
+				"slug": "simple-interest"
 			},
 			{
 				"title1": "Self-",
 				"title2": "Checkout",
-				"intro": "Use this to find out how much your items will be with tax",
-				"slug": "self-checkout",
-				"conclusion": "Here's what I learned when building this Pizza page"
+				"slug": "self-checkout"
 			},
 			{
 				"title1": "Tip",
 				"title2": "Calculator",
-				"intro": "Use this to find out how much tip you should pay",
-				"slug": "tip-calculator",
-				"conclusion": "Here's what I learned when building this Pizza page"
+				"slug": "tip-calculator"
 			}
 		]
 	},
@@ -38,29 +32,22 @@
 				"title1": "Simple",
 				"title2": "Math",
 				"intro": "Easy arithmetic",
-				"slug": "simple-math",
-				"conclusion": "Here's what I learned" 
+				"slug": "simple-math"
 			},
 			{
 				"title1": "Count",
 				"title2": "Characters",
-				"intro": "Use this to find out how much you should tip",
-				"slug": "count-characters",
-				"conclusion": "Here's what I learned" 
+				"slug": "count-characters"
 			},
 			{
 				"title1": "Pizza",
 				"title2": "Party",
-				"intro": "Use this to find out how much you should tip",
-				"slug": "pizza-party",
-				"conclusion": "Here's what I learned" 
+				"slug": "pizza-party"
 			},
 			{
 				"title1": "Say",
 				"title2": "Hello",
-				"intro": "Use this to find out how much you should tip",
-				"slug": "hello",
-				"conclusion": "Here's what I learned" 
+				"slug": "hello"
 			}
 		]
 	},
@@ -71,30 +58,22 @@
 			{
 				"title1": "Tax",
 				"title2": "Calculator",
-				"intro": "Use this to find out how much you should tip",
-				"slug": "tax-calculator",
-				"conclusion": "Here's what I learned" 
+				"slug": "tax-calculator"
 			},
 			{
 				"title1": "Driving",
 				"title2": "Age",
-				"intro": "Use this to find out how much you should tip",
-				"slug": "driving-age",
-				"conclusion": "Here's what I learned" 
+				"slug": "driving-age"
 			},
 			{
 				"title1": "Temp",
 				"title2": "Converter",
-				"intro": "Use this to find out how much you should tip",
-				"slug": "temp-converter",
-				"conclusion": "Here's what I learned" 
+				"slug": "temp-converter"
 			},
 			{
 				"title1": "Password",
 				"title2": "Validation",
-				"intro": "Use this to find out how much you should tip",
-				"slug": "password-validation",
-				"conclusion": "Here's what I learned" 
+				"slug": "password-validation"
 			}
 		]
 	}

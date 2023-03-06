@@ -9,7 +9,6 @@
 					
 					$title1 = $form["title1"];
 					$title2 = $form["title2"];
-					$intro = $form["intro"];
 					$slug = $form["slug"];	
 				}	
 			}	
