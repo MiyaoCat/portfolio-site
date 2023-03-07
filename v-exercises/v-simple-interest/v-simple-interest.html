@@ -15,7 +15,7 @@
 			<label for="years">Enter the number of years you'll invest:</label>
 			<input name = "years" type="number" min="0" v-model="years">	
 
-			<button @click=messageHandler()>Cha Ching!</button>
+			<button type='submit' @click=messageHandler($event)>Cha Ching!</button>
 		</form>
 		
 		<output v-if="showMessage" v-html="message"> </output>

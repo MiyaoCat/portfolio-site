@@ -20,7 +20,8 @@ new Vue({
 		interestEarned() {
 			return this.principal*this.interestRate/100*this.years;
 		},
-		message() {
+		message(event) {
+			event.preventDefault();
 			var noPrincipal = (this.principal == "" || this.principal == 0);
 			var noInterestRate = (this.interestRate == "" || this.interestRate == 0);
 			var noYears = (this.years == "" || this.years == 0);
@@ -61,7 +62,8 @@ new Vue({
 	},
 	
 	methods: {
-		messageHandler() {
+		messageHandler(event) {
+			event.preventDefault();
 			this.showMessage = true;
 		}		
 	}
