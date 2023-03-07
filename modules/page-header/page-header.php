@@ -64,6 +64,24 @@
 		}
 	} 
 
+	elseif ($page == "v-exercise") {
+		$json = file_get_contents("data/v-exercises.json");
+		$formExercises = json_decode($json, true);
+
+		foreach ($formExercises as $forms) {
+			if ($forms["type"] !== "generic-text") {
+				foreach ($forms["forms"] as $form) {
+					if ($form["slug"] == $_GET["slug"]) {
+						
+						$title1 = $form["title1"];
+						$title2 = $form["title2"];
+						$slug = $form["slug"];
+					}
+				}
+			}	
+		}
+	} 
+
 	else {
 		$page == "404";
 		$errorPage = file_get_contents("data/page-data/404.json");

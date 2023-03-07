@@ -1,13 +1,8 @@
-<!-- <head>
-	<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&display=swap" rel="stylesheet">
 
-
-	<link rel="stylesheet" href="/style.css">
-</head> -->
 
 <!-- <body> -->
-	<main data-vue='simpleInterest'>
-		<h1>{{title}}</h1>
+	<!-- <main data-vue='simpleInterest'> -->
+		<!-- <h1>{{title}}</h1> -->
 		
 		<p class="instructions" v-html='instructions'></p>
 		<form action="">
@@ -19,10 +14,12 @@
 			
 			<label for="years">Enter the number of years you'll invest:</label>
 			<input name = "years" type="number" min="0" v-model="years">	
+
+			<button @click=messageHandler()>Cha Ching!</button>
 		</form>
-		<button @click=messageHandler()>Cha Ching!</button>
+		
 		<output v-if="showMessage" v-html="message"> </output>
-	</main>
+	<!-- </main> -->
 	
 <footer>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
