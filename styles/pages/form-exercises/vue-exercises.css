@@ -1,7 +1,7 @@
 .v-exercise main {
 	grid-row: 3;
 	grid-column: 1 / 14;
-	display: grid;
+	display: flex;
 	flex-direction: column;
 	max-width: 500px;
 	margin: 25px;
@@ -79,9 +79,10 @@
 	background-color: black;
 	color: limegreen;
 	font-family: Monospace;
-	padding: 15px;
+	padding: 15px 10px;
 	border-radius: 6px;
 	margin-top: 15px;
+	margin-left: 0;
 	line-height: 1.5em;
 }
 
