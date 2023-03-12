@@ -48,6 +48,11 @@
 				"title1": "Say",
 				"title2": "Hello",
 				"slug": "v-hello"
+			},
+			{
+				"title1": "Printing",
+				"title2": "Quotes",
+				"slug": "v-print-quotes"
 			}
 		]
 	},

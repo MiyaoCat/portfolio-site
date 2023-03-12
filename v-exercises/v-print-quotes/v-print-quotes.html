@@ -1,0 +1,12 @@
+<main data-vue='printQuote'>
+	<h1>{{title}}</h1>	
+
+	<label for="author">Enter Author:</label>
+	<input name="author" v-model='author'>
+	
+	<label for="quote">Enter Quote:</label>
+	<input name="quote" v-model='quote'>
+
+	<output v-html="message">
+	</output>
+</main>
