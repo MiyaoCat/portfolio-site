@@ -1,0 +1,25 @@
+<%- include('header.ejs') %>
+
+<h1>Home</h1>
+
+<main>
+	<h2 class="loud-voice">Card List</h2>
+
+	<ul class="card-list">
+		<% players.forEach(function(player) { %>
+			
+			<li class="player-card">
+				<img src="<%=player.image %>" alt="">
+				<h3 class="attention-voice"> <%=player.name %> </h3>
+				<p> Position: <%=player.position %> </p>
+				<p> Number: <%=player.number %> </p>
+				<p> College: <%=player.college %> </p>
+				<p> test: <%=player.image %> </p>
+			</li>			
+
+		<% }); %>
+	</ul>
+	
+</main>
+
+<%- include('footer.ejs') %>
