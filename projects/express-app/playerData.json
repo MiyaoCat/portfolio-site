@@ -1,27 +1,32 @@
-
+[
   { 
-  		"name": "De'Arron Fox", 
-  		"position": "Point Guard",
+      "name": "De'Arron Fox", 
+      "position": "Point Guard",
       "number": 5,
-      "college": "Kentucky"
+      "college": "Kentucky",
+      "image": "fox.jpeg"
   },
   { 
       "name": "Domantas Sabonis", 
       "position": "Power Forward",
       "number": 10,
-      "college": "Gonzaga"
+      "college": "Gonzaga",
+      "image": "sabonis.jpeg"
   },
   { 
       "name": "Damian Lillard", 
       "position": "Point Guard",
       "number": 5,
-      "college": "Weber State"
+      "college": "Weber State",
+      "image": "lillard.jpeg"
   },
   { 
       "name": "Steph Curry", 
       "position": "Point Guard",
       "number": 30,
-      "college": "Davidson"
+      "college": "Davidson",
+      "image": "curry.jpeg"
   }
+]
 
 

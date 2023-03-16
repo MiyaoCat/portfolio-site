@@ -1,41 +1,11 @@
-// import playerData from './playerData.json';
-import { URL } from 'url';
+import playerData from './playerData.json' assert { type: 'json' };
+
+import { URL } from 'node:url';
 const __dirname = new URL ('.', import.meta.url).pathname;
 
 import express from 'express';
 const PORT = 1950;
 
-//PLAYER DATA
-const players = [
-	{ 
-  		"name": "De'Arron Fox", 
-  		"position": "Point Guard",
-      "number": 5,
-      "college": "Kentucky",
-      "image": "/assets/fox.jpeg"
-  },
-  { 
-      "name": "Domantas Sabonis", 
-      "position": "Power Forward",
-      "number": 10,
-      "college": "Gonzaga",
-      "image": "./assets/sabonis.jpeg"
-  },
-  { 
-      "name": "Damian Lillard", 
-      "position": "Point Guard",
-      "number": 5,
-      "college": "Weber State",
-      "image": "./assets/lillard.jpeg"
-  },
-  { 
-      "name": "Steph Curry", 
-      "position": "Point Guard",
-      "number": 30,
-      "college": "Davidson",
-      "image": "./assets/curry.jpeg"
-  }
-];
 
 const app = express();
 
@@ -46,11 +16,11 @@ app.use(express.static('public'));
 
 // PAGE ROUTING
 app.get('/', function(request, response) {
-	response.render('home', { players } );
+	response.render('home', { playerData } );
 });
 
 app.get('/about', function(request, response) {
-	response.sendFile('example.html', { root: __dirname });
+	response.sendFile('.styles/site.css', { root: __dirname });
 });
 
 app.get('/contact', function(request, response) {
