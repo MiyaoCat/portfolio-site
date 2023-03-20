@@ -19,6 +19,7 @@ new Vue({
 	
 	computed: {
 		message() {
+			preventdefault();
 			if (this.name.trim() !== "") {
         		return `Hello ${this.name}. Nice to meetchya!`;
      		}
