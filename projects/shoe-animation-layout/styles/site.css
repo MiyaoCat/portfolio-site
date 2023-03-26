@@ -35,3 +35,11 @@ body {
 	margin: 50px 0;
 }
 
+.left-side {
+	min-width: 60%;
+	background-color: #dce6f0;
+}
+
+.right-side {
+	min-width: 40%;
+}

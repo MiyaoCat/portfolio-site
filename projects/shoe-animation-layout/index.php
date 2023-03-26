@@ -2,7 +2,7 @@
 <head>
 	<meta charset='UTF-8'>
 	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-	<link rel='stylesheet' href='styles/style.css'>
+	<link rel='stylesheet' href='styles/site.css'>
 	<title>Shoe Animation Page</title>
 </head>
 
@@ -33,26 +33,28 @@
 <main>
 	<inner-column>
 		<div class="left-side">
-			<div class='search'>
-				<form>
-					<input type='text'>
-					<button type='submit'></button>
-				</form>
-			</div>
-			
-			<div class='savings'>
-				<p class='attention-voice'>50%</p>
-				<p class='calm-voice'>save up to</p>
-			</div>
-			
-			<header>
-				<h1 class='loud-voice'>Stylish Sneakers</h1>
-				<button class='explore'>Graphic</button>
-			</header>
-			
-			<div class='page-buttons'>
-				<button class='back'><img src='' alt=''>Back</button>
-				<button class='forward'><img src='' alt=''>Forward</button>
+			<div class="grid-wrap">
+				<div class='search'>
+					<form>
+						<input type='text'>
+						<button type='submit'></button>
+					</form>
+				</div>
+				
+				<div class='savings'>
+					<p class='attention-voice'>50%</p>
+					<p class='calm-voice'>save up to</p>
+				</div>
+				
+				<header>
+					<h1 class='screaming-voice'>Stylish Sneakers</h1>
+					<button class='explore'>Graphic</button>
+				</header>
+				
+				<div class='page-buttons'>
+					<button class='back'><img src='' alt=''>Back</button>
+					<button class='forward'><img src='' alt=''>Forward</button>
+				</div>
 			</div>
 			
 			<div class='shoe-grid'>

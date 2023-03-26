@@ -1,3 +1,6 @@
+* {
+	box-sizing: border-box;
+}
 
 body {
 	display: flex;
@@ -17,19 +20,23 @@ inner-column {
 	padding: 0 5px;
 }
 
-
 .site-header {
 	position: sticky;
 	top: 0;
 	z-index: 5;
 }
 
-
 picture {
-	max-width: 150px;
-	max-height: 150px;
+	display: block;
+}
+
+picture img {
+	display: block;
+	width:  100%;
+	height:  auto;
 }
 
 main inner-column {
 	display: flex;
+	min-height: 100%;
 }
