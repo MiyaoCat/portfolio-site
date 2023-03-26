@@ -15,14 +15,14 @@
 
 		<nav>
 			<ul>
-				<li>Man</li>
-				<li>Woman</li>
-				<li>Kids</li>
-				<li>Customize</li>
+				<li class="normal-voice">Man</li>
+				<li class="normal-voice">Woman</li>
+				<li class="normal-voice">Kids</li>
+				<li class="normal-voice">Customize</li>
 			</ul>		
 		</nav>
 
-		<div class='model'>Model: CK5828-400</div>
+		<div class='model normal-voice'>Model: CK5828-400</div>
 
 		<div class='icon'>
 			<?php include('./assets/bag-icon.svg'); ?>

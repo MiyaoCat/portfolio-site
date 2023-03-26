@@ -43,7 +43,7 @@ a:hover {
 
 /* Paragraph text or similar */
 .normal-voice {
-
+	font-family: var(--sans-serif);
 }
 
 /* Caption text or similar */
