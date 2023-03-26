@@ -33,12 +33,14 @@ a:hover {
 
 /* Header text or similar */
 .loud-voice {
-
+	font-family: var(--sans-serif);
+	font-size: 3em;	
 }
 
 /* Sub-header text or similar */
 .attention-voice {
 	font-family: var(--sans-serif);
+	font-size: 1.5em;	
 }
 
 /* Paragraph text or similar */
