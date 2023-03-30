@@ -39,6 +39,8 @@ a:hover {
 /* Sub-header text or similar */
 .attention-voice {
 	font-family: var(--sans-serif);
+	font-size: 24px;
+	font-weight: 700;
 }
 
 /* Paragraph text or similar */
@@ -48,7 +50,8 @@ a:hover {
 
 /* Caption text or similar */
 .calm-voice {
-
+	font-family: var(--sans-serif);
+	font-size: 12px;	
 }
 
 /* Fine print text or similar */

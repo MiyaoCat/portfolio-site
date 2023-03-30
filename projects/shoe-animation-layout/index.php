@@ -8,52 +8,68 @@
 
 <body>
 	<header>
-		<inner-column>
-		<div class='logo'>
-			<?php include('./assets/nike-logo.svg'); ?>
+	<inner-column>
+
+		<div class="left-side">
+			<div class='logo'>
+				<?php include('./assets/nike-logo.svg'); ?>
+			</div>
+			
+			<nav>
+				<ul>
+					<li class="normal-voice">Man</li>
+					<li class="normal-voice">Woman</li>
+					<li class="normal-voice">Kids</li>
+					<li class="normal-voice">Customize</li>
+				</ul>		
+			</nav>
 		</div>
 
-		<nav>
-			<ul>
-				<li class="normal-voice">Man</li>
-				<li class="normal-voice">Woman</li>
-				<li class="normal-voice">Kids</li>
-				<li class="normal-voice">Customize</li>
-			</ul>		
-		</nav>
-
-		<div class='model normal-voice'>Model: CK5828-400</div>
-
-		<div class='icon'>
-			<?php include('./assets/bag-icon.svg'); ?>
+		<div class="right-side">
+			<div class='model normal-voice'>Model: CK5828-400</div>
+			
+			<div class='icon'>
+				<?php include('./assets/bag-icon.svg'); ?>
+			</div>
 		</div>
+
 	</inner-column>
-</header>	
+	</header>	
 
 <main>
 	<inner-column>
 		<div class="left-side">
 			<div class="grid-wrap">
-				<div class='search'>
-					<form>
-						<input type='text'>
-						<button type='submit'></button>
-					</form>
-				</div>
-				
+
+				<form class="search">
+					<input type='text' placeholder='Search here... '>
+
+					<button class='filter' type='submit'>
+						<?php include('./assets/filter-icon.svg'); ?>				
+					</button>
+				</form>
+			
 				<div class='savings'>
-					<p class='attention-voice'>50%</p>
+					<p class='attention-voice'>60%</p>
 					<p class='calm-voice'>save up to</p>
 				</div>
 				
-				<header>
-					<h1 class='screaming-voice'>Stylish Sneakers</h1>
-					<button class='explore'>Graphic</button>
-				</header>
+				<div class='heading'>
+					<h1 class='title1 screaming-voice'>Stylish</h1>
+					<h1 class='title2 screaming-voice'>Sneakers</h1>
+					<button class='explore'>
+						<?php include('./assets/explore-icon.svg'); ?>	
+					</button>
+				</div>
 				
 				<div class='page-buttons'>
-					<button class='back'><img src='' alt=''>Back</button>
-					<button class='forward'><img src='' alt=''>Forward</button>
+					<button class='back'>
+						<?php include('./assets/left-arrow.svg'); ?>	
+					</button>
+
+					<button class='forward'>
+						<?php include('./assets/right-arrow.svg'); ?>	
+					</button>
 				</div>
 			</div>
 			
