@@ -1,3 +1,17 @@
 .shoe-grid ul{
 	display: flex;
 }
+
+.shoe-card {
+	color: black;
+	text-align: center;
+}
+
+.add {
+	max-width: 50px;
+}
+
+.shoe-info {
+	background-color: white;
+	border-radius: 70% 70% 0 0 / 100% 100% 0 0;
+}

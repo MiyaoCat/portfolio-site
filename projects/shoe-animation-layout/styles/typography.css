@@ -43,6 +43,11 @@ a:hover {
 	font-weight: 700;
 }
 
+.alert-voice {
+	font-family: var(--sans-serif);
+	font-size: 20px;	
+}
+
 /* Paragraph text or similar */
 .normal-voice {
 	font-family: var(--sans-serif);
