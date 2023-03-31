@@ -1,10 +1,14 @@
-.shoe-grid ul{
+.shoe-grid ul {
 	display: flex;
+	border: 2px solid blue;
+	min-height: 400px;
 }
 
 .shoe-card {
 	color: black;
 	text-align: center;
+	border: 2px solid red;
+	margin: 10px;
 }
 
 .add {
@@ -14,4 +18,5 @@
 .shoe-info {
 	background-color: white;
 	border-radius: 70% 70% 0 0 / 100% 100% 0 0;
+	border: 2px solid orange;
 }

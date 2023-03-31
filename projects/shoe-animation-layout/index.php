@@ -75,71 +75,67 @@
 			
 			<div class='shoe-grid'>
 				<ul>
-					<li>
-						<div class='shoe-card'>
-							<picture>
-								<img src='' alt=''>
-							</picture>
+					<li class='shoe-card'>
+						<picture>
+							<img src='./assets/airmax-red.png' alt=''>
+						</picture>
+						
+						<div class="shoe-info">
+							<button class='add'>
+								<?php include('./assets/plus-orange.svg'); ?>	
+							</button>
 							
-							<div class="shoe-info">
-								<button class='add'>
-									<?php include('./assets/plus-orange.svg'); ?>	
-								</button>
-								
-								<h3 class='attention-voice'>Nike Air Force</h3>
-								<p class='calm-voice'>3 Colors</p>
-								<p class='alert-voice'>$230</p>
-							</div>
+							<h3 class='attention-voice'>Nike Air Max 1</h3>
+							<p class='calm-voice'>3 Colors</p>
+							<p class='alert-voice'>$230</p>
 						</div>
 					</li>
-					<li>
-						<div class='shoe-card'>
-							<picture>
-								<img src='' alt=''>
-							</picture>
+
+					<li class='shoe-card'>
+						<picture>
+							<img src='./assets/airmax-brown.png' alt=''>
+						</picture>
+						
+						<div class="shoe-info">
+							<button class='add'>
+								<?php include('./assets/plus-pink.svg'); ?>	
+							</button>
 							
-							<div class="shoe-info">
-								<button class='add'>
-									<?php include('./assets/plus-pink.svg'); ?>	
-								</button>
-								
-								<h3 class='attention-voice'>Nike Air Force</h3>
-								<p class='calm-voice'>3 Colors</p>
-								<p class='alert-voice'>$230</p>
-							</div>
+							<h3 class='attention-voice'>Nike Air Max 1</h3>
+							<p class='calm-voice'>3 Colors</p>
+							<p class='alert-voice'>$230</p>
 						</div>
 					</li>
-					<li>
-						<div class='shoe-card'>
-							<picture>
-								<img src='' alt=''>
-							</picture>
+
+					<li class='shoe-card'>
+						<picture>
+							<img src='./assets/airmax-eggplant.png' alt=''>
+						</picture>
+						
+						<div class="shoe-info">
+							<button class='add'>
+								<?php include('./assets/plus-purple.svg'); ?>	
+							</button>
 							
-							<div class="shoe-info">
-								<button class='add'>
-									<?php include('./assets/plus-purple.svg'); ?>	
-								</button>
-								
-								<h3 class='attention-voice'>Nike Air Force</h3>
-								<p class='calm-voice'>3 Colors</p>
-								<p class='alert-voice'>$230</p>
-							</div>
+							<h3 class='attention-voice'>Nike Airmax </h3>
+							<p class='calm-voice'>3 Colors</p>
+							<p class='alert-voice'>$230</p>
 						</div>
 					</li>
-					<li>
-						<div class='shoe-card'>
-							<picture>
-								<img src='' alt=''>
-							</picture>
+
+					<li class='shoe-card'>
+						<picture>
+							<img src='./assets/airmax-yellow.png' alt=''>
+						</picture>
+						
+						<div class="shoe-info">
+							<button class='add'>
+								<?php include('./assets/plus-orange.svg'); ?>	
+							</button>
 							
-							<div class="shoe-info">
-								<button class='add'>
-									<?php include('./assets/plus-orange.svg'); ?>	
-								</button>
-								<h3 class='attention-voice'>Nike Air Force</h3>
-								<p class='calm-voice'>3 Colors</p>
-								<p class='alert-voice'>$230</p>
-							</div>
+							<h3 class='attention-voice'>Nike Air Max 1</h3>
+							<p class='calm-voice'>3 Colors</p>
+							<p class='alert-voice'>$230</p>
 						</div>
 					</li>
 				</ul>
@@ -148,7 +144,7 @@
 		
 		<div class="right-side">
 			<div class='main-image'>
-				<img src='' alt=''>
+				<img src='./assets/airmax-orange.png' alt=''>
 				<div class='beacon'>svg</div>
 				<div class='pop-up'>
 					<p class='alert-voice'>99%</p>
