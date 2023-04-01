@@ -5,15 +5,38 @@
 }
 
 .shoe-card {
-	color: black;
-	text-align: center;
-	border: 2px solid red;
+	display: flex;
+	flex-direction: column;
+	align-self: flex-end;
 	margin: 10px;
 	position: relative;
+
+	color: black;
+	text-align: center;
+
+	border-radius: 160px / 25px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+
+	background-color: red;
+	min-height: 250px;
 }
 
 .shoe-card picture {
-	border: 2px solid black;
+/*	border: 2px solid black;
+	background-color: salmon;
+	border-radius: 160px / 25px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;*/
+/*	max-height: 120px;		*/
+}
+
+.shoe-card img {
+	transform: translateY(-40%);
+	border: 1px solid green;
+	position: absolute;
+	z-index: 9;
+
 }
 
 .add {
@@ -21,23 +44,15 @@
 	border-radius: 30px;
 	z-index: 9;
 	position: absolute;
-	transform: translate(-50%, -64%);
+	transform: translate(-50%, -110%);
 }
 
 .shoe-info {
 	background-color: white;
-/*	border: 2px solid orange;*/
-}
-
-.shoe-info::before {
-	content: "";
-	display: block;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	border-radius: 50%;
-	min-height: 20px;
-/*	border: 1px solid black;*/
-	background-color: white;
-	transform: translate(0%, -55%);
+	border-radius: 160px / 25px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	padding: 30px 10px;
+	align-self: flex-end;
+	margin-top: auto;
 }

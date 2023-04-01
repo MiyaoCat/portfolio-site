@@ -40,3 +40,7 @@ main inner-column {
 	display: flex;
 	min-height: 100%;
 }
+
+button {
+	cursor: pointer;
+}
