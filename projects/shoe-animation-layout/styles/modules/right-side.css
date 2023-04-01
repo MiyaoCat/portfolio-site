@@ -1,8 +1,0 @@
-.right-side {
-	display: flex;
-	flex-direction: column;
-}
-
-.right-side > * {
-	margin: 10px;
-}

@@ -4,7 +4,6 @@
 	grid-template-rows: auto 1fr;
 }
 
-<<<<<<< Updated upstream
 /* - - - QUADRANT 1: SEARCH - - - */
 .search {
 	grid-row: 1;
@@ -33,19 +32,11 @@
 }
 
 /* - - - QUADRANT 2: SAVINGS - - - */
-=======
-.search {
-	grid-row: 1;
-	grid-column: 1;
-}
-
->>>>>>> Stashed changes
 .savings {
 	grid-row: 1;
 	grid-column: 2;
 }
 
-<<<<<<< Updated upstream
 .savings .calm-voice {
 	text-transform: uppercase;
 	border-top: 2px solid black;
@@ -89,16 +80,4 @@ button.explore {
 	width: fit-content;
 	height: fit-content;
 	margin-bottom: 80px;
-=======
-header {
-	grid-row: 2;
-	grid-column: 1;
-}
-
-.page-buttons {
-	grid-row: 2;
-	grid-column: 2;
-	justify-content: right;
-	
->>>>>>> Stashed changes
 }

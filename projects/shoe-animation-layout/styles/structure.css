@@ -27,7 +27,6 @@ inner-column {
 	z-index: 5;
 }
 
-<<<<<<< Updated upstream
 picture {
 	display: block;
 }
@@ -38,24 +37,11 @@ picture img {
 	height:  auto;
 }
 
-=======
->>>>>>> Stashed changes
+
 main inner-column {
 	display: flex;
 	min-height: 100%;
 }
 
-<<<<<<< Updated upstream
 button {
 	cursor: pointer;
-=======
-.left-side {
-	min-width: 60%;
-	border: 2px solid blue;
-}
-
-.right-side {
-	min-width: 40%;
-	border: 2px solid red;
->>>>>>> Stashed changes
-}

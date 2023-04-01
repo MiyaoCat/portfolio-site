@@ -65,13 +65,6 @@ a:hover {
 
 }
 
-:is(.calm-voice, p) em {
-	font-style: italic;
-}
-
-:is(.calm-voice, p) strong {
-	font-weight: 700;
-}
 
 /* these would be scoped to section or to an article element */
 /* this is just a loose setting for now */

@@ -40,7 +40,6 @@
 	<inner-column>
 		<div class="left-side">
 			<div class="grid-wrap">
-<<<<<<< Updated upstream
 
 				<form class="search">
 					<input type='text' placeholder='Search here... '>
@@ -50,21 +49,11 @@
 					</button>
 				</form>
 			
-=======
-				<div class='search'>
-					<form>
-						<input type='text' placeholder="Search here...">
-						<button type='submit'>button</button>
-					</form>
-				</div>
-				
->>>>>>> Stashed changes
 				<div class='savings'>
 					<p class='attention-voice'>60%</p>
 					<p class='calm-voice'>save up to</p>
 				</div>
 				
-<<<<<<< Updated upstream
 				<div class='heading'>
 					<h1 class='title1 screaming-voice'>Stylish</h1>
 					<h1 class='title2 screaming-voice'>Sneakers</h1>
@@ -80,20 +69,6 @@
 
 					<button class='forward'>
 						<?php include('./assets/right-arrow.svg'); ?>	
-=======
-				<header>
-					<h1 class='screaming-voice'>Stylish Sneakers</h1>
-					<button class='explore'>Graphic</button>
-				</header>
-				
-				<div class='page-buttons'>
-					<button class='back'>
-						<img src='' alt=''>Back
-					</button>
-
-					<button class='forward'>
-						<img src='' alt=''>Forward
->>>>>>> Stashed changes
 					</button>
 				</div>
 			</div>
@@ -118,9 +93,9 @@
 
 					<li class='shoe-card'>
 						<picture>
-							
+							<img src='./assets/airmax-yellow-rotated.png' alt=''>
 						</picture>
-						<img src='./assets/airmax-yellow-rotated.png' alt=''>
+						
 						<div class="shoe-info">			
 							<button class='add'>
 								<?php include('./assets/plus-yellow.svg'); ?>	
