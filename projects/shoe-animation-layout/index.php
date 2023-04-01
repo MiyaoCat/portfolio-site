@@ -79,13 +79,13 @@
 						<picture>
 							<img src='./assets/airmax-red.png' alt=''>
 						</picture>
-						
-						<div class="shoe-info">
-							<button class='add'>
-								<?php include('./assets/plus-orange.svg'); ?>	
-							</button>
-							
-							<h3 class='attention-voice'>Nike Air Max 1</h3>
+
+						<button class='add'>
+							<?php include('./assets/plus-orange.svg'); ?>	
+						</button>
+
+						<div class="shoe-info">					
+							<h3 class='attention-voice'>Nike Air Max</h3>
 							<p class='calm-voice'>3 Colors</p>
 							<p class='alert-voice'>$230</p>
 						</div>
@@ -95,13 +95,13 @@
 						<picture>
 							<img src='./assets/airmax-brown.png' alt=''>
 						</picture>
-						
-						<div class="shoe-info">
-							<button class='add'>
-								<?php include('./assets/plus-pink.svg'); ?>	
-							</button>
-							
-							<h3 class='attention-voice'>Nike Air Max 1</h3>
+
+						<button class='add'>
+							<?php include('./assets/plus-pink.svg'); ?>	
+						</button>
+
+						<div class="shoe-info">						
+							<h3 class='attention-voice'>Nike Air Max</h3>
 							<p class='calm-voice'>3 Colors</p>
 							<p class='alert-voice'>$230</p>
 						</div>
@@ -112,12 +112,12 @@
 							<img src='./assets/airmax-eggplant.png' alt=''>
 						</picture>
 						
-						<div class="shoe-info">
-							<button class='add'>
-								<?php include('./assets/plus-purple.svg'); ?>	
-							</button>
-							
-							<h3 class='attention-voice'>Nike Airmax </h3>
+						<button class='add'>
+							<?php include('./assets/plus-circle-purple.svg'); ?>	
+						</button>
+					
+						<div class="shoe-info">						
+							<h3 class='attention-voice'>Nike Air Max </h3>
 							<p class='calm-voice'>3 Colors</p>
 							<p class='alert-voice'>$230</p>
 						</div>
@@ -127,13 +127,15 @@
 						<picture>
 							<img src='./assets/airmax-yellow.png' alt=''>
 						</picture>
-						
+
+						<button class='add'>
+							<?php include('./assets/plus-orange.svg'); ?>	
+						</button>
+
 						<div class="shoe-info">
-							<button class='add'>
-								<?php include('./assets/plus-orange.svg'); ?>	
-							</button>
 							
-							<h3 class='attention-voice'>Nike Air Max 1</h3>
+							
+							<h3 class='attention-voice'>Nike Air Max</h3>
 							<p class='calm-voice'>3 Colors</p>
 							<p class='alert-voice'>$230</p>
 						</div>
@@ -144,31 +146,41 @@
 		
 		<div class="right-side">
 			<div class='main-image'>
-				<img src='./assets/airmax-orange.png' alt=''>
-				<div class='beacon'>svg</div>
+				<img src='./assets/airmax-orange-rotated.png' alt=''>
+
 				<div class='pop-up'>
 					<p class='alert-voice'>99%</p>
-					<p class='calm-voiec'>Comfortable</p>
+					<p class='calm-voice'>Comfortable</p>
 				</div>
-				<div class='beacon'>svg</div>
+
+				<div class='beacon one'>
+					<?php include('./assets/beacon.svg'); ?>	
+				</div>
+
+				<div class='beacon two'>
+					<?php include('./assets/beacon.svg'); ?>	
+				</div>
 			</div>
 			
 			<div class='color-palette'>
 				<ul>
-					<li>red</li>
-					<li>green</li>
-					<li>white</li>
+					<li><?php include('./assets/dot-red.svg'); ?></li>
+					<li><?php include('./assets/dot-grey.svg'); ?></li>
+					<li><?php include('./assets/dot-yellow.svg'); ?></li>
 				</ul>
 			</div>
 			
 			<div class='shoe-detail'>
 				<ol class='size'>
 					<li><p class='alert-voice'>39</p></li>
+
 					<li><p class='alert-voice'>40</p></li>
+
 					<li>
 						<p class='alert-voice'>41</p>
 						<p class='calm-voice'>Size</p>
 					</li>
+
 					<li><p class='alert-voice'>42</p></li>
 					<li><p class='alert-voice'>43</p></li>
 				</ol>
@@ -177,17 +189,20 @@
 			
 				<div class='review'>
 					<p class='normal-voice'>Review 1k+</p>
+
 					<div class='rating'>
 						<ul>
-							<li>star</li>
-							<li>star</li>
-							<li>star</li>
-							<li>star</li>
-							<li>star</li>
+							<li><?php include('./assets/star-yellow.svg'); ?></li>
+							<li><?php include('./assets/star-yellow.svg'); ?></li>
+							<li><?php include('./assets/star-yellow.svg'); ?></li>
+							<li><?php include('./assets/star-yellow.svg'); ?></li>
+							<li><?php include('./assets/star-grey.svg'); ?></li>
 						</ul>
 					</div>
 				</div>
+
 			</div>
+
 		</div>
 		</inner-column>
 

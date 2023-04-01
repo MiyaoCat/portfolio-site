@@ -1,0 +1,47 @@
+.beacon {
+	max-height: fit-content;
+	max-width: fit-content;
+}
+
+.main-image {
+	border: 2px solid green;
+	max-height: fit-content;
+}
+
+.pop-up {
+	max-width: fit-content;
+	background-color: hsla(0, 0%, 0%, 0.30);
+	border-radius: 10px;
+	text-align: center;
+	transform: translateX(110px) translateY(-230px);
+	padding: 15px;
+}
+
+.beacon {
+	max-width: 60px;
+}
+
+.beacon.one{
+  transform: translateX(130px) translateY(-230px);
+}
+
+.beacon.two {
+	transform: translateX(350px) translateY(-410px);
+}
+
+.color-palette {
+	max-width: 200px;
+	align-self: flex-end;
+}
+
+.color-palette ul {
+	display: flex;
+}
+
+.color-palette li {
+	margin-left: 10px;
+	border-radius: 20px;
+	border: 2px solid white;
+	background-color: hsla(0, 100%, 100%, 0.20);
+	padding: 5px;
+}

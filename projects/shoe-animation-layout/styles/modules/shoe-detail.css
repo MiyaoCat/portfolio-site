@@ -1,17 +1,31 @@
 .shoe-detail {
-
+/*	background-color: hsla(0, 0%, 9%, 1.00);*/
 }
-
-.shoe-detail ol {
+.size {
 	display: flex;
+	justify-content: space-around;
+	list-style-type: disc;
 }
 
-.shoe-detail .size li {
-	list-style-type: disc;
+.shoe-detail li {
 	display: flex;
 	flex-direction: column;
 }
 
+.shoe-detail .size li:before {
+	content: "•";
+	text-align: center;
+}
+
+.review {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
 .rating ul {
 	display: flex;
+}
+
+.rating li {
+	max-width: 30px;
 }

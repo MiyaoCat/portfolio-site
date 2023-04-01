@@ -1,9 +1,12 @@
 @import 'header.css';
-@import 'right-side.css';
-@import 'shoe-detail.css';
-@import 'color-palette.css';
+
 
 /*LEFT-SIDE*/
 @import 'left-side.css';
 @import 'quadrant.css';
 @import 'shoe-grid.css';
+
+/*RIGHT-SIDE*/
+@import 'right-side.css';
+@import 'main-image.css';
+@import 'shoe-detail.css';
