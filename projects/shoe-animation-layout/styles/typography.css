@@ -3,9 +3,8 @@ html {
 	--marker: Permanent Marker, Noto Serif;
 	--sans-serif: Encode Sans, Helvetica;
 	--serif: Noto Serif Display, Old Standard TT, Times New Roman;
-
-	
 }
+
 a {
 	font-family: var(--sans-serif);
 	text-transform: uppercase;
