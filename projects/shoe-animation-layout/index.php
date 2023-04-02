@@ -17,8 +17,8 @@
 			
 			<nav>
 				<ul>
-					<li class="normal-voice">Man</li>
-					<li class="normal-voice">Woman</li>
+					<li class="normal-voice">Men</li>
+					<li class="normal-voice">Women</li>
 					<li class="normal-voice">Kids</li>
 					<li class="normal-voice">Customize</li>
 				</ul>		

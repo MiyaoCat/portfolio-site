@@ -8,8 +8,9 @@
 }
 
 .main-image {
-	max-height: fit-content;
+	max-height: 50%;
 	margin-top: auto;
+	border: 1px solid orange;
 }
 .pop-up {
 	max-width: fit-content;
@@ -24,7 +25,7 @@
 	max-width: 60px;
 }
 
-.beacon.one{
+.beacon.one {
   transform: translateX(130px) translateY(-230px);
 }
 
