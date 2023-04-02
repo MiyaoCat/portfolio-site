@@ -5,35 +5,38 @@ header inner-column .left-side {
 	max-height: 300px;
 	display: flex;
 	flex-direction: row;
-/*	justify-content: space-between;*/
+	justify-content: space-between;
 	align-items: center;
 	width: 60%;
+	padding-right: 50px;
 }
 
-svg {
+.logo svg {
 	max-width: 100px;
-}
-
-.logo {
-	max-width: 200px;
-}
-.logo svg path {
-	fill: black;
-}
+	max-height: 60px;
+} 
 
 nav {
 	display: flex;
 	align-items: center;
 }
+
 nav ul {
 	display: flex;
-	gap: 50px;
+	justify-content: center;
+	gap: 10px;
+}
+
+nav li {
+	min-width: 85px;
+	display: flex;
+	align-items: center;
 	justify-content: center;
 }
 
-header .icon {
-	max-width: 100px;
-	max-height: 150px;
+
+nav li:last-of-type {
+	min-width: 90px;
 }
 
 header inner-column .right-side {
@@ -43,6 +46,15 @@ header inner-column .right-side {
 	justify-content: space-between;
 }
 
-header svg {
-	height: 150px;
+.bag-icon {
+	max-width: 60px;
+}
+
+.bag-icon svg path {
+	fill: black;
+}
+
+nav a:hover {
+	font-weight: 700;
+	text-decoration: none;
 }

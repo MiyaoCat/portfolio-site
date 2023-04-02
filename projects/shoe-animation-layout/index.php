@@ -17,10 +17,18 @@
 			
 			<nav>
 				<ul>
-					<li class="normal-voice">Men</li>
-					<li class="normal-voice">Women</li>
-					<li class="normal-voice">Kids</li>
-					<li class="normal-voice">Customize</li>
+					<li class="normal-voice">
+						<a href="#">Men</a>
+					</li>
+					<li class="normal-voice">
+						<a href="#">Women</a>
+					</li>
+					<li class="normal-voice">
+						<a href="#">Kids</a>
+					</li>
+					<li class="normal-voice">
+						<a href="#">Customize</a>
+					</li>
 				</ul>		
 			</nav>
 		</div>
@@ -28,7 +36,7 @@
 		<div class="right-side">
 			<div class='model normal-voice'>Model: CK5828-400</div>
 			
-			<div class='icon'>
+			<div class='bag-icon'>
 				<?php include('./assets/bag-icon.svg'); ?>
 			</div>
 		</div>
