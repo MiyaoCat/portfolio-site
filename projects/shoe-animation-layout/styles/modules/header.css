@@ -44,6 +44,8 @@ header inner-column .right-side {
 	width: 40%;
 	align-items: center;	
 	justify-content: space-between;
+	padding: 0 20px;
+	background-color: white;
 }
 
 .bag-icon {
