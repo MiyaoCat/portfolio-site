@@ -141,7 +141,7 @@
 								<?php include('./assets/plus-chocolate.svg'); ?>	
 							</button>	
 							
-							<h3 class='attention-voice'>Nike Air Max</h3>
+							<h3 class='attention-voice'>Test Nike Air Max</h3>
 							<p class='calm-voice'>3 Colors</p>
 							<p class='alert-voice'>$230</p>
 						</div>
