@@ -1,7 +1,6 @@
 .shoe-grid ul {
 	display: flex;
 	border: 2px solid blue;
-	min-height: 400px;
 }
 
 .shoe-card {

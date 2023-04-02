@@ -8,7 +8,6 @@
 .search {
 	grid-row: 1;
 	grid-column: 1;
-
 	display: flex;
 	position: relative;
 }
@@ -16,19 +15,17 @@
 .search input {
 	padding: 10px 20px;
 	border-radius: 10px 0 0 10px;
-
+	min-width: 250px;
 }
 
 .search input, .search button {
 	max-height: 60px;
-
+	border: none;
 }
 
 .search button {
-/*	position: absolute;*/
-
-/*	transform: translateX(-80px);*/
-
+	padding: 0;
+	border-radius: 0 10px 10px 0;
 }
 
 /* - - - QUADRANT 2: SAVINGS - - - */
@@ -65,19 +62,23 @@
 	width: fit-content;
 }
 
-/* - - - QUADRANT 4: PAGE-BUTTONS - - - */
 button.explore {
 	grid-row: 1;
 	grid-column: 2;
 }
 
+/* - - - QUADRANT 4: PAGE-BUTTONS - - - */
 .page-buttons {
 	display: flex;	
 	grid-row: 2;
 	grid-column: 2;
 	align-self: end;
-	justify-self: end;
-	width: fit-content;
+	justify-self: center;
+	max-width: 150px;
 	height: fit-content;
 	margin-bottom: 80px;
+}
+
+.page-buttons button {
+	background-color: transparent;
 }

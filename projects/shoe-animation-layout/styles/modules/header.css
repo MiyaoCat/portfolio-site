@@ -34,11 +34,6 @@ nav li {
 	justify-content: center;
 }
 
-
-nav li:last-of-type {
-	min-width: 90px;
-}
-
 header inner-column .right-side {
 	display: flex;
 	width: 40%;
