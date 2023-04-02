@@ -7,7 +7,7 @@
 </head>
 
 <body>
-	<header>
+	<header class='site-header'>
 	<inner-column>
 
 		<div class="left-side">

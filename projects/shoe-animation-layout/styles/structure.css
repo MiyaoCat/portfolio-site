@@ -37,7 +37,6 @@ picture img {
 	height:  auto;
 }
 
-
 main inner-column {
 	display: flex;
 	min-height: 100%;
@@ -45,3 +44,12 @@ main inner-column {
 
 button {
 	cursor: pointer;
+}
+
+.left-side {
+	width: 60%;
+}
+
+.right-side {
+	width: 40%;
+}

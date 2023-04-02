@@ -1,0 +1,48 @@
+header inner-column {
+	display: flex;
+}
+header inner-column .left-side {
+	max-height: 300px;
+	display: flex;
+	flex-direction: row;
+/*	justify-content: space-between;*/
+	align-items: center;
+	width: 60%;
+}
+
+svg {
+	max-width: 100px;
+}
+
+.logo {
+	max-width: 200px;
+}
+.logo svg path {
+	fill: black;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+}
+nav ul {
+	display: flex;
+	gap: 50px;
+	justify-content: center;
+}
+
+header .icon {
+	max-width: 100px;
+	max-height: 150px;
+}
+
+header inner-column .right-side {
+	display: flex;
+	width: 40%;
+	align-items: center;	
+	justify-content: space-between;
+}
+
+header svg {
+	height: 150px;
+}

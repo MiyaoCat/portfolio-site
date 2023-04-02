@@ -3,7 +3,7 @@
 
 /*LEFT-SIDE*/
 @import 'left-side.css';
-<<<<<<< Updated upstream
+
 @import 'quadrant.css';
 @import 'shoe-grid.css';
 
@@ -11,8 +11,8 @@
 @import 'right-side.css';
 @import 'main-image.css';
 @import 'shoe-detail.css';
-=======
+
 @import 'shoe-detail.css';
 @import 'color-palette.css';
 @import 'quadrant.css';
->>>>>>> Stashed changes
+
