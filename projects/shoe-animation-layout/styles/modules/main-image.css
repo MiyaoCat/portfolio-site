@@ -27,16 +27,16 @@
 }
 
 .beacon {
-	max-width: 60px;
+	max-width: 55px;
 }
 
 .beacon.one {
-  transform: translate(217%, -320%);
+  transform: translate(243%, -343%);
   position: absolute;
 }
 
 .beacon.two {
-  transform: translate(730%, -600%);
+  transform: translate(760%, -620%);
   position: absolute;
 }
 

@@ -1,7 +1,7 @@
 
 html {
 	--marker: Permanent Marker, Noto Serif;
-	--sans-serif: Encode Sans, Helvetica;
+	--sans-serif: Plus Jakarta Sans, Helvetica;
 	--serif: Noto Serif Display, Old Standard TT, Times New Roman;
 }
 
@@ -13,6 +13,7 @@ a {
 a:hover {
 	text-decoration: none;
 	color: inherit;
+	font-weight: 700;
 }
 
 @media (prefers-color-scheme: dark) {

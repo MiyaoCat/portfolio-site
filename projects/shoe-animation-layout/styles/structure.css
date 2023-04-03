@@ -57,4 +57,10 @@ button {
 .right-side {
 	width: 40%;
 	background-color: hsla(200, 85%, 85%, 1.00);
+
+}
+
+main .right-side {
+	display: flex;
+	flex-direction: column;	
 }

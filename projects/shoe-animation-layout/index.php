@@ -2,6 +2,9 @@
 <head>
 	<meta charset='UTF-8'>
 	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+	<link href="https://api.fontshare.com/v2/css?f[]=plus-jakarta-sans@800,201,401,301,501,400,601,500,600,700,300,200&display=swap" rel="stylesheet">
+
 	<link rel="icon" type="image/x-icon" href="./assets/nike-logo.svg">
 	<link rel='stylesheet' href='styles/site.css'>
 	<title>Shoe Animation Page</title>
@@ -180,10 +183,11 @@
 			
 			<div class='color-palette'>
 				<ul>
-					<li><?php include('./assets/dot-red.svg'); ?></li>
-					<li><?php include('./assets/dot-grey.svg'); ?></li>
-					<li><?php include('./assets/dot-yellow.svg'); ?></li>
+					<li> <?php include('./assets/dot-yellow.svg'); ?> </li>
+					<li> <?php include('./assets/dot-red.svg'); ?> </li>
+					<li> <?php include('./assets/dot-grey.svg'); ?> </li>
 				</ul>
+
 			</div>
 			
 			<div class='shoe-detail'>

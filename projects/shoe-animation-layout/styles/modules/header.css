@@ -48,8 +48,3 @@ header inner-column .right-side {
 .bag-icon svg path {
 	fill: black;
 }
-
-nav a:hover {
-	font-weight: 700;
-	text-decoration: none;
-}
