@@ -23,8 +23,9 @@ a:hover {
 
 /* Main header or banner text or similar */
 .screaming-voice {
-	font-family: var(--marker);
+	font-family: var(--sans-serif);
 	font-size: clamp(60px, 6vw, 120px);
+	font-weight: 700;
 }
 
 /* Header text or similar */

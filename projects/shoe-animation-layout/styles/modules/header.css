@@ -45,6 +45,7 @@ header inner-column .right-side {
 
 .bag-icon {
 	max-width: 60px;
+	margin: 10px 0;
 }
 
 .bag-icon svg path {

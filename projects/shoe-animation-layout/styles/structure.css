@@ -44,10 +44,12 @@ main inner-column {
 
 button {
 	cursor: pointer;
+	border: none;
 }
 
 .left-side {
 	width: 60%;
+	padding-left: 25px;
 }
 
 .right-side {
