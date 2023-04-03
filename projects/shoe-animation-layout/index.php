@@ -2,6 +2,7 @@
 <head>
 	<meta charset='UTF-8'>
 	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<link rel="icon" type="image/x-icon" href="./assets/nike-logo.svg">
 	<link rel='stylesheet' href='styles/site.css'>
 	<title>Shoe Animation Page</title>
 </head>
@@ -59,6 +60,11 @@
 			
 				<div class='savings'>
 					<p class='attention-voice'>60%</p>
+
+					<div class="line">
+						<?php include('./assets/line.svg'); ?>
+					</div>
+
 					<p class='calm-voice'>save up to</p>
 				</div>
 				
@@ -180,17 +186,17 @@
 			
 			<div class='shoe-detail'>
 				<ol class='size'>
-					<li><p class='alert-voice'>39</p></li>
+					<li><p class='alert-voice'>8</p></li>
 
-					<li><p class='alert-voice'>40</p></li>
+					<li><p class='alert-voice'>9</p></li>
 
 					<li>
-						<p class='alert-voice'>41</p>
+						<p class='alert-voice'>10</p>
 						<p class='calm-voice'>Size</p>
 					</li>
 
-					<li><p class='alert-voice'>42</p></li>
-					<li><p class='alert-voice'>43</p></li>
+					<li><p class='alert-voice'>11</p></li>
+					<li><p class='alert-voice'>12</p></li>
 				</ol>
 			
 				<p class='loud-voice'>Nike Blazer Low</p>
