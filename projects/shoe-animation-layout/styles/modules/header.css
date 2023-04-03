@@ -7,7 +7,6 @@ header inner-column .left-side {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	width: 55%;
 	padding-right: 50px;
 }
 
@@ -36,11 +35,9 @@ nav li {
 
 header inner-column .right-side {
 	display: flex;
-	width: 45%;
 	align-items: center;	
 	justify-content: space-between;
 	padding: 0 20px;
-	background-color: white;
 }
 
 .bag-icon {

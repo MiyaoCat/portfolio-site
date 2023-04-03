@@ -5,20 +5,25 @@
 
 .main-image picture {
 	border: 2px solid green;
+	margin: 50px;
 }
 
 .main-image {
 	max-height: 50%;
 	margin-top: auto;
 	border: 1px solid orange;
+	position: relative;
 }
+
 .pop-up {
 	max-width: fit-content;
 	background-color: hsla(0, 0%, 0%, 0.30);
 	border-radius: 10px;
 	text-align: center;
-	transform: translateX(110px) translateY(-230px);
+	transform: translate(120%, -400%);
 	padding: 15px;
+	position: absolute;
+	color: white;
 }
 
 .beacon {
@@ -26,11 +31,13 @@
 }
 
 .beacon.one {
-  transform: translateX(130px) translateY(-230px);
+  transform: translate(217%, -320%);
+  position: absolute;
 }
 
 .beacon.two {
-	transform: translateX(350px) translateY(-410px);
+  transform: translate(730%, -600%);
+  position: absolute;
 }
 
 .color-palette {
