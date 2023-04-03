@@ -99,9 +99,11 @@
 								<?php include('./assets/plus-red.svg'); ?>	
 							</button>	
 
-							<h3 class='attention-voice'>Nike Air Max</h3>
-							<p class='calm-voice'>3 Colors</p>
-							<p class='alert-voice'>$230</p>
+							<div class="shoe-info-wrap">
+								<h3 class='attention-voice'>Nike Air Max</h3>
+								<p class='calm-voice'>3 Colors</p>
+								<p class='alert-voice'>$230</p>
+							</div>
 						</div>						
 					</li>
 
@@ -141,13 +143,13 @@
 						<picture>
 							<img src='./assets/airmax-chocolate-rotated.png' alt=''>
 						</picture>
-
+					
 						<div class="shoe-info">
 							<button class='add'>
 								<?php include('./assets/plus-chocolate.svg'); ?>	
-							</button>	
-							
-							<h3 class='attention-voice'>Test Nike Air Max</h3>
+							</button>
+
+							<h3 class='attention-voice'>Nike Air Max</h3>
 							<p class='calm-voice'>3 Colors</p>
 							<p class='alert-voice'>$230</p>
 						</div>

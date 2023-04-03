@@ -48,10 +48,12 @@ button {
 }
 
 .left-side {
-	width: 60%;
+	width: 55%;
 	padding-left: 25px;
+	overflow: hidden;
+	background-color: hsla(210, 50%, 95%, 1.00);
 }
 
 .right-side {
-	width: 40%;
+	width: 45%;
 }
