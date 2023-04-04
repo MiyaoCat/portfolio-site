@@ -1,12 +1,10 @@
 .shoe-detail {
-/*	background-color: hsla(0, 0%, 9%, 1.00);*/
 	color: white;
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
-/*	margin-top: 20px;*/
 	padding: 25px 15px 10px 15px;
 	flex-grow: 1;
-	background-image: url('../../assets/shoe-detail-bg.svg');
+	background-image: url('../../assets/shoe-detail-bg-short.svg');
 	background-size: cover;
 	background-position: center;
 }
@@ -14,7 +12,7 @@
 .shoe-detail-wrap {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+/*	justify-content: space-between;*/
 	min-height: 100%;
 }
 
@@ -23,18 +21,17 @@
 	flex-direction: column;
 	align-items: center;
 	width: 60px;
-	margin-top: 105px;
 	gap: 5px;
 	color: hsla(0, 0%, 71%, 1.00);
 }
 
 .shoe-detail .size li:nth-of-type(3) {
-	transform: translateY(-244%);
+	transform: translateY(-50px);
 	min-width: 75px;
 	color: white;
 }
 .shoe-detail .size .calm-voice {
-	padding-top: 35px;
+	padding-top: 27px;
 	font-size: 16px;
 }
 
@@ -43,6 +40,7 @@
 	justify-content: space-around;
 	list-style-type: disc;
 	max-height: 120px;
+	margin-top: 45px;
 }
 
 .shoe-detail .size li:before {
@@ -51,16 +49,19 @@
 	font-size: 25px;
 }
 
+.shoe-detail-bottom {
+	margin-top: 15px;
+}
 .shoe-name {
-	margin: 50px 50px 0 50px;
+	margin: 0 40px 50px 40px;
 }
 
 .review {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 0 50px 10px 50px;
-	padding-top: 20px;
+	margin: 30px 40px 10px 40px;
+	padding-top: 30px;
 	border-top: 2px solid grey;
 }
 

@@ -1,0 +1,32 @@
+
+html {
+	--black: #111111;
+	--white: #FFF;
+
+	--color: #5E321F;
+
+
+	--shadow: rgba(0,0,0,.8);
+
+	--corners: 10px; /* or whatevers */
+
+	--standard: 1280px;
+	--tight: 800px;
+	--wide: 1480px;
+
+	--paper: hsl(37, 32%, 92%); /* light brown */
+
+	--ink: black;
+	--highlight: hsl(360, 100%, 39%); /* red */
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		--paper: hsl(28, 17%, 30%); /* dark brown */
+		--ink: white;
+	}
+
+	.logo {
+		fill: white;
+	}
+}

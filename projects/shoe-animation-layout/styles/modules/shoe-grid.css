@@ -10,7 +10,7 @@
 	margin: 10px;
 	position: relative;
 	min-height: 260px;
-	min-width: 200px;
+	min-width: 165px;
 
 	color: black;
 	text-align: center;
@@ -51,8 +51,8 @@
 	padding: 30px 10px;
 	align-self: flex-end;
 	margin-top: auto;
-	min-height: 135px;
-	min-width: 200px;
+	min-height: 155px;
+	min-width: 165px;
 }
 
 .shoe-info h3 {
@@ -60,4 +60,14 @@
 }
 .shoe-info p:nth-of-type(1) {
 	margin: 10px 0;
+}
+
+@media (min-width:1280px) {
+	.shoe-card, .shoe-info {
+		min-width: 200px;	
+	}
+
+	.shoe-info {
+		min-height: 135px;
+	}
 }
