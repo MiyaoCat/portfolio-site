@@ -6,6 +6,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 95vh; /* be at least a full viewport height */
+	margin-top: 2.5vh;
 } 
 
 main {
