@@ -46,6 +46,7 @@ a:hover {
 .alert-voice {
 	font-family: var(--sans-serif);
 	font-size: 20px;	
+	font-weight: 600;
 }
 
 /* Paragraph text or similar */

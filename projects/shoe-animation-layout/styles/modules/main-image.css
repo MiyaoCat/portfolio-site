@@ -4,14 +4,12 @@
 }
 
 .main-image picture {
-	border: 2px solid green;
-	margin: 50px;
+/*	margin: 50px;*/
 }
 
 .main-image {
-	max-height: 50%;
-	margin-top: auto;
-	border: 1px solid orange;
+/*	max-height: 50%;*/
+	margin: 30px 30px 0 30px;
 	position: relative;
 }
 
@@ -43,6 +41,7 @@
 .color-palette {
 	max-width: 200px;
 	align-self: flex-end;
+	margin-right: 30px;
 }
 
 .color-palette ul {
