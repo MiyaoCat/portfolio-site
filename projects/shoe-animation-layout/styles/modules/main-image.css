@@ -18,7 +18,7 @@
 	background-color: hsla(0, 0%, 0%, 0.30);
 	border-radius: 10px;
 	text-align: center;
-	transform: translate(120%, -400%);
+	transform: translate(83%, -280%);
 	padding: 15px;
 	position: absolute;
 	color: white;
@@ -29,12 +29,12 @@
 }
 
 .beacon.one {
-  transform: translate(243%, -343%);
+  transform: translate(195%, -210%);
   position: absolute;
 }
 
 .beacon.two {
-  transform: translate(760%, -620%);
+  transform: translate(490%, -590%);
   position: absolute;
 }
 
