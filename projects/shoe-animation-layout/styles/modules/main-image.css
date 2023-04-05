@@ -42,7 +42,7 @@
 	max-width: 200px;
 /*	max-height: 1px;*/
 /*	transform: translateY(-100%);*/
-	align-self: flex-end;
+	justify-self: flex-end;
 	margin-right: 30px;
 }
 
