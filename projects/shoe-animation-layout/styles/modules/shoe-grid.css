@@ -27,6 +27,15 @@
 	background-color: hsla(51, 100%, 47%, .3);
 }
 
+.shoe-card:nth-of-type(3) {
+	background-color: hsla(20, 69%, 48%, .3);
+}
+
+.shoe-card:nth-of-type(4) {
+	background-color: hsla(8, 17%, 38%, .3);
+}
+
+
 .shoe-card img {
 	transform: translateY(-40%);
 	position: absolute;
