@@ -227,7 +227,9 @@
 		</div>
 		</inner-column>
 
-	</main>			
+	</main>	
+
+<script src='animation.js'></script>			
 </body>
 
 </html>
