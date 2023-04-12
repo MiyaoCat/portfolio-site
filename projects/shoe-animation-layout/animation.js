@@ -1,11 +1,12 @@
 var headerTimeline = gsap.timeline();
 var quadrantTimeline = gsap.timeline();
+// var shoeGridTimeline = gsap.timeline();
 
 headerTimeline 
-		.from('.savings', {
-		x: 200,
-		rotation: -45,
-		duration: 1,
+	.from('.savings', {
+		x: 50,
+		rotation: 50,
+		duration: .5,
 	})
 	.from('.logo', {
 		y: -200,
@@ -28,8 +29,9 @@ headerTimeline
 quadrantTimeline
 	.from(['.search', '.title1', '.title2'], {
 		y: -300,
-		duration: 1,
+		duration: 1.5,
 		opacity: 0,
+		ease: "elastic.out(1, 0.5)",
 	})
 	.fromTo('.explore', {
   	 	y: -300,
@@ -37,31 +39,31 @@ quadrantTimeline
   	}, 
   	{
    	y: 0,
-   	duration: 0.6,
+   	duration: 1,
    	opacity: 1,
-  }, "<50%")
+   	ease: "elastic.out(1, 0.5)",
+  	}, "<50%")
+  	.from('.shoe-grid', {
+		x: 750,
+		duration: 2,
+		ease: "back.out(1.7)",
+	})
   .to('.explore', {
    	rotation: 360,
    	duration: 5,
    	repeat: -1,
    	ease: "linear"
-  });
+  })
+  
 
-	// .from('.explore', {
-	// 	y: -300,
-	// 	duration: .6,
-	// 	opacity: 0,
-	// 	delay: -0.4,
-	// 	onComplete: function() {
-	// 		gsap.to('.explore', {
-	// 			rotation: 360,
-	// 			duration: 5,
-	// 			repeat: -1,
-	// 			ease: "linear"
-	// 		})
-	// 	}
-	// })
 
+// shoeGridTimeline
+// 	.from('.shoe-grid', {
+// 		x: 5,
+// 		duration: 1,
+// 		opacity: 0,
+// 		ease: "elastic.out(1, 0.5)",
+// 	});
 
 
 
@@ -69,4 +71,5 @@ var parentTimeline = gsap.timeline();
 
 parentTimeline.add(headerTimeline);
 parentTimeline.add(quadrantTimeline);
+parentTimeline.add(shoeGridTimeline);
 
