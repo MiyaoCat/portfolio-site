@@ -57,7 +57,7 @@
 					<input type='text' placeholder='Search here... '>
 
 					<button class='filter' type='submit'>
-						<?php include('./assets/filter-icon.svg'); ?>				
+						<a href="#"><?php include('./assets/filter-icon.svg'); ?>		</a>		
 					</button>
 				</form>
 			
