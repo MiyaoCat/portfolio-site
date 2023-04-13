@@ -1,6 +1,6 @@
 var headerTimeline = gsap.timeline();
 var pageTimeline = gsap.timeline();
-var leftToRight = gsap.timeline();
+var paletteTimeline = gsap.timeline();
 
 headerTimeline 
 	.from('.logo', {
@@ -70,9 +70,14 @@ pageTimeline
 		stagger: .2,
 		ease: "elastic.out(.5)",
 		}, "<0%")
-	.from(['.main-image', '.color-palette'], {
+	.from('.main-image', {
 		x: 700,
 		duration: .8,
+	}, "<0%")
+	.from('.color-palette li', {
+		x: 200,
+		duration: .8,
+		stagger: .1,
 	}, "<0%")
 	.from('.page-buttons', {
 		y: -40,
@@ -80,26 +85,19 @@ pageTimeline
 		ease: "elastic.out(1, 0.5)",	
 	}, "<0%")
 	.from('.beacon', {
-		duration: .2,
+		duration: .8,
 		scale: 0,
 		opacity: 0,	 
 		delay: 1,
 		transformOrigin: '50% 50%',
 		ease: 'back.out(1.7)',
 	})
+	.from('.pop-up', {
+		opacity: 0,
+	}, "<0%") 
 	.from('.beacon.one', {
 
 	})
-
-// leftToRight
-// 	.add(pageTimeline) 
-// 	.from('.shoe-card', {
-// 		x: 750,
-// 		duration: 5,
-// 		stagger: .2,
-// 		ease: "elastic.out(.5)",
-// 	})
-
 
 
 
