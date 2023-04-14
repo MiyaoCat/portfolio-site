@@ -50,36 +50,32 @@ beaconsTimelineFirst
 		scale: 0,
 		delay: 2,
 	})
-	.to('.beacon.one', {
+	.fromTo(['.pop-up-two', '.beacon.two'], {
 		opacity: 0,
 		scale: 0,
-		delay: 2.5,		
-	})
-	.to(['.pop-up', '.beacon.one'], {
-		duration: .2,
+	},
+	{
 		opacity: 1,
 		scale: 1,
+		transformOrigin: '50% 50%',
+	})	
+	.to('.pop-up-two', {
+		delay: 2,
+		opacity: 0,
+		scale: 0
 	})
-	.to(['.pop-up', '.beacon.one'], {
-		duration: 3
-	})
-
-// beaconsRepeat
-// 	.to(['.pop-up', '.beacon.one'], {
-// 		duration: 3,
-// 	})
-// 	.to(['.pop-up'], {
-// 		opacity: 0,
-// 		scale: 0,
-// 	})
-// 	.from(['.pop-up', '.beacon.one'], {
-// 		delay: 1,
-// 		opacity: 1,
-// 		scale: 1,
-// 	}) 
-// 	.repeat(-1)
-// 	.repeatDelay(3)
-
+	.fromTo(['.pop-up', '.beacon.one'], {
+		opacity: 0,
+		scale: 0,
+	},
+	{	
+		delay: .5,
+		opacity: 1,
+		scale: 1,
+		ease: 'back.out(1.7)',
+	}, "<80%") 
+	.repeat(-1)
+	.repeatDelay(5)
 
 pageTimeline
 	.add(headerTimeline)
@@ -125,11 +121,14 @@ pageTimeline
 		x: 750,
 		duration: 2,
 		stagger: .2,
-		ease: "elastic.out(.5)",
+		ease: "elastic.out(.2)",
 		}, "<0%")
 	.from('.main-image', {
 		x: 700,
 		duration: .8,
+	}, "<0%")
+	.to('.pop-up-two', {
+		opacity: 0
 	}, "<0%")
 	.from('.color-palette li', {
 		x: 200,
@@ -143,6 +142,6 @@ pageTimeline
 		ease: "elastic.out(1, 0.5)",	
 	}, "<0%")
 	.add(beaconsTimelineFirst)
-	// .add(beaconsRepeat)
+
 
 
