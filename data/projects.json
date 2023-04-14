@@ -17,7 +17,7 @@
 			{
 				"module": "generic-text",
 				"subHeader": "",
-				"content": "My Layout Garden is a collection of responsive modules we've built throughout the course. They're common modules you see on websites that employ either flexbox, grid or both. If you're on a computer, try expanding and contracting your window to see how the modules <b>respond</b> to the window size :)<br><br> <a href='https://peprojects.dev/alpha-4/john/layout-challenges/index.php' target='_blank'>View the modules here</a>"
+				"content": "My Layout Garden is a collection of responsive modules we've built throughout the course. They're common modules you see on websites that employ either flexbox, grid or both. If you're on a computer, try expanding and contracting your window to see how the modules <b>respond</b> to the window size :)<br><br> <a href='https://peprojects.dev/alpha-4/john/projects/layout-challenges/index.php' target='_blank'>View the modules here</a>"
 			}
 		]
 	},
