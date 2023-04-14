@@ -176,6 +176,10 @@
 					<?php include('./assets/beacon.svg'); ?>	
 				</div>
 
+				<div class='pop-up-two'>
+					<p class='calm-voice'>Visible air pocket!</p>
+				</div>
+
 				<div class='beacon two'>
 					<?php include('./assets/beacon.svg'); ?>	
 				</div>

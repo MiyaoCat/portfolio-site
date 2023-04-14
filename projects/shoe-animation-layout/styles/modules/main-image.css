@@ -13,15 +13,22 @@
 	position: relative;
 }
 
-.pop-up {
+.pop-up, .pop-up-two {
 	max-width: fit-content;
 	background-color: hsla(0, 0%, 0%, 0.30);
 	border-radius: 10px;
 	text-align: center;
-	transform: translate(83%, -280%);
 	padding: 15px;
 	position: absolute;
 	color: white;
+}
+
+.pop-up {
+	transform: translate(83%, -280%);
+}
+
+.pop-up-two {
+	transform: translate(188%, -630%);
 }
 
 .beacon {
@@ -34,7 +41,7 @@
 }
 
 .beacon.two {
-  transform: translate(600%, -480%);
+  transform: translate(510%, -400%);
   position: absolute;
 }
 
