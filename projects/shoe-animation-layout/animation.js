@@ -98,16 +98,12 @@ pageTimeline
 		duration: 2,
 		ease: "bounce.inOut",
 	}, "<0%")
-	.fromTo('.explore', {
-  	 	y: -100,
-   	opacity: 0,
-  	}, 
-  	{
-   	y: 0,
-   	duration: 1,
-   	opacity: 1,
-   	ease: "elastic.out(1, 0.5)",
-  	}, "<20%")
+	.from('.explore', {
+		y: -100,
+		duration: 1,
+		opacity: 0,
+		ease: "elastic.out(1, 0.5)",
+	})
   	.from('.shoe-detail', {
 		y: 600,
 	})
@@ -116,7 +112,7 @@ pageTimeline
    	duration: 5,
    	repeat: -1,
    	ease: "linear"
-	})
+	}, "<0%")
 	.from('.shoe-card', {
 		x: 750,
 		duration: 2,

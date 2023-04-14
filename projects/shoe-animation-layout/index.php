@@ -65,7 +65,7 @@
 					<p class='attention-voice'>60%</p>
 
 					<div class="line">
-						<?php include('./assets/line.svg'); ?>
+						<?php include('./assets/line-long.svg'); ?>
 					</div>
 
 					<p class='calm-voice'>save up to</p>

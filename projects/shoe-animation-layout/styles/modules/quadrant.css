@@ -39,7 +39,8 @@
 	justify-content: center;
 	margin-left: auto;
 	margin-top: 30px;
-	max-width: 40%;
+	max-width: 60%;
+
 }
 
 .savings p {
@@ -48,6 +49,9 @@
 	padding: 5px 0;
 }
 
+.savings .attention-voice {
+	font-size: 26px;
+}
 .savings .calm-voice {
 	text-transform: uppercase;
 	color: rgb(130,130,130);
