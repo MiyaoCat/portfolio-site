@@ -1,0 +1,100 @@
+
+/* Setup */
+@import 'setup.css';
+
+/* Ssetings */
+@import 'settings.css';
+
+/* Structure */
+@import 'structure.css';
+
+/* Typography */
+@import 'typography.css';
+
+/* LAYOUT PAGES */
+@import 'layouts/layout1.css';
+@import 'layouts/layout2.css';
+@import 'layouts/layout3.css';
+@import 'layouts/layout4.css';
+@import 'layouts/layout5.css';
+@import 'layouts/layout6-the-north-face.css';
+@import 'layouts/layout7-bleacher-report.css';
+
+/* Sections and more stuff */
+@import 'footer.css';
+@import 'header.css';
+
+@import 'header-card.css';
+
+/* then other contextual styles */
+
+
+/* SETUP CSS */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+} /* https://www.paulirish.com/2012/box-sizing-border-box-ftw */
+
+a {
+	display: block;
+	text-decoration: none;
+	color: var(--standout);
+}
+
+a:hover {
+	text-decoration: none;
+	color: var(--standout);
+}
+
+@media (prefers-color-scheme: dark) {
+	a:hover {
+		color: var(--standout);
+	}
+}
+
+p a {
+	display: inline;
+	color: blue;
+	text-decoration: none;
+}
+
+picture {
+	display: block;
+	overflow: hidden;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.logo a {
+	fill: var(--ink);
+}
+.logo svg:hover {
+	fill: var(--standout);
+}
+
+svg {
+  display: block;
+  width: clamp(40px, 6vw, 60px);
+}
+
+body {
+	background-color: var(--background);
+	color: var(--ink);
+}
+
+.header {
+	color: var(--ink);
+	text-align: center;
+	padding-top: 90px;
+	margin-top: 20px;
+	margin-bottom: 70px;
+	width: 100%;
+	grid-column: 1 / -1;
+}
+

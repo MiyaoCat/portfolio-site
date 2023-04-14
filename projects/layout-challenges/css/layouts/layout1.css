@@ -1,0 +1,92 @@
+.layout1 header {
+	grid-column: 1 / -1;
+}
+
+.layout1 intro {
+	padding: 40px 0;
+}
+
+.layout1 intro p {
+	margin-top: 10px;
+}
+
+.layout1 intro {
+	display: block;
+}
+
+.layout1 picture {
+	display: grid;
+	gap: 10px;
+}
+
+.layout1 picture img {
+	display: block;
+	max-width: 100%;
+	height:  auto;
+	
+}
+
+.layout1 .article-list {
+	border-top: 2px solid var(--ink);
+	padding-top: 10px;
+}
+
+.layout1 article p {
+	margin: 10px 0;
+}
+
+.layout1 article li {
+	border-top: 1px solid var(--ink);
+	margin: 15px 0;
+	padding: 15px 0;
+}
+
+.layout1 .images {
+	/*margin: 10px 0;*/
+	border: 2px solid var(--ink);
+	align-self: start;
+}
+
+.layout1 thumbnail {
+	display: block;
+	padding: 10px 0;
+}
+
+.layout1 thumbnail img {
+		max-width: 50px;
+}
+
+.layout1 image-grid picture img:nth-of-type(4){
+	transform: rotate(90deg);
+}
+
+@media (min-width: 600px) {
+	.layout1  picture, .layout1 article {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 10px;
+		margin: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media (min-width: 900px) {
+
+	.layout1  {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		/*width: var(--wide);*/
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.layout1 intro {
+		grid-column: 1/2;
+	}
+	.layout1 article {
+		grid-column: 1/2;
+		margin-right: 20px;
+	}
+
+}	

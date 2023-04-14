@@ -1,0 +1,35 @@
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh; /* be at least a full viewport height */
+} 
+
+main {
+	flex-grow: 1; /* fill up available space + push the footer down */
+}
+
+
+main section {
+	border-bottom: 5px dashed var(--ink);
+	padding-bottom: 80px;
+}
+
+inner-column {
+	display: block;
+	max-width: var(--extra-wide);  
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+article {
+	display: block;
+}
+
+
+@media (min-width: 1200px) {
+	inner-column {
+		max-width: var(--standard);
+	}
+}

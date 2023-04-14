@@ -1,0 +1,85 @@
+/* FONTS */
+.layout2 .teaser {
+	font-weight: 700;
+	color: var(--accent-color); 
+	margin: 10px 0;
+}
+
+
+/* MODULES */
+
+.layout2 intro {
+	padding: 40px 0;
+}
+
+.layout2 intro p {
+	margin-top: 10px;
+}
+
+.layout2 .article-list p {
+	margin-bottom: 20px;
+}
+
+.layout2 icon {
+	display: block;
+	max-width: 50px;
+}
+.layout2 intro {
+	display: block;
+}
+
+.layout2 svg {
+	width: 50px;
+	margin: 5px 0;
+}
+
+.layout2 excerpt {
+	display: block;
+	padding-top: 15px;
+	color: black;
+}
+
+.layout2 excerpt::before {
+    content: '';
+    display: inline-block;
+    width: 65%;
+    height: 15px;
+    color: black;
+    position: absolute;
+}
+
+@media (min-width: 600px) {
+	.layout2 intro {
+		display: block;
+		width: 70%;
+	}
+	.layout2 .article-card {
+		padding: 10px;
+		border: 2px solid var(--ink);
+	}
+	.layout2 .article-list {
+	    display: grid;
+	    grid-template-columns: repeat(2, 1fr);
+	    grid-template-rows: repeat(2, 1fr);
+	    grid-gap: 15px;
+	}
+
+	.layout2 excerpt {
+		background-color: var(--accent-color);
+		max-width: 55%;
+		padding: 30px 15px;
+		margin-top: 40px;
+		color: var(--black);
+	}
+
+}
+
+@media (min-width: 900px) {
+	.layout2 .article-card {
+		padding: 30px;
+	}
+
+	.layout2 .article-card :is(h3, p) {
+		padding: 8px;
+	}
+}

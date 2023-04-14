@@ -1,0 +1,34 @@
+[
+	{	
+		"type": "header",
+		"category": "Market Analysis",
+		"author": "Emily Brontë",
+		"time": "10:00 AM PST",
+		"date": "December 5, 2022",
+		"heading": "How companies can slash ballooning SaaS costs",
+		"text": "SaaS costs are rising, particularly for enterprise customers with lots of licenses. But there’s ways to combat the climb.",
+		"thumbnail": "https://peprojects.dev/images/landscape.png"
+	},
+
+	{
+		"type": "article",
+		"category": "Startups",
+		"author": "C. S. Lewis",
+		"time": "10:00 AM PST",
+		"date": "December 5, 2022",
+		"heading": "Operative Intelligence helps contact centers figure out what customers really need",
+		"text": "A company may have a good contact center, but ideally they are able to help customers before they need to make a call. Operative Intelligence helps contact centers figure out what customers want mo...",
+		"thumbnail": "https://peprojects.dev/images/landscape.png"
+
+	},
+
+	{	"type": "article",	
+		"category": "Apps",
+		"author": "Shell Silverstein",
+		"time": "10:00 AM PST",
+		"date": "December 5, 2022",
+		"heading": "Google’s new Pixel update brings new features like clear calling and Google One VPN",
+		"text": "A company may have a good contact center, but ideally they are able to help customers before they need to make a call. Operative Intelligence helps contact centers figure out what customers want mo...",
+		"thumbnail": "https://peprojects.dev/images/landscape.png"
+	}
+]	

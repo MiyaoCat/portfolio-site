@@ -1,0 +1,39 @@
+[
+	{	
+		"type": "header",
+		"teaser": "Little teaser",
+		"heading": "Another Article Grid",
+		"text": "This is a second example of an article grid. It also contains the article header, short intro and the publication logo so you know you're reading quality content.",
+		"thumbnail": "https://peprojects.dev/images/circle.png"
+	},
+
+	{
+		"type": "article",
+		"heading": "Heading Level 3 Small",
+		"text": "Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Iusto et iure, commodi distinctio, alias quidem.",
+		"thumbnail": "https://peprojects.dev/images/circle.png"
+
+	},
+
+	{	"type": "article",	
+		"heading": "Heading Level 3 Small",
+		"text": "Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Iusto et iure, commodi distinctio, alias quidem.",
+		"thumbnail": "https://peprojects.dev/images/circle.png"
+	},
+
+	{	"type": "article",
+		"heading": "Heading Level 3 Small",
+		"text": "Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Iusto et iure, commodi distinctio, alias quidem.",
+		"thumbnail": "https://peprojects.dev/images/circle.png"
+	},
+
+	{	"type": "article",
+		"heading": "Heading Level 3 Small",
+		"text": "Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Iusto et iure, commodi distinctio, alias quidem.",
+		"thumbnail": "https://peprojects.dev/images/circle.png"
+	},
+
+	{	"type": "excerpt",
+		"text": "This is an example of a highlighted excerpt. If you act now, you can save 10% off next year's subscription!"
+	}
+]	

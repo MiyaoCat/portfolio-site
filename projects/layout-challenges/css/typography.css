@@ -1,0 +1,67 @@
+
+html {
+	--marker: Permanent Marker, Noto Serif;
+	--sans-serif: Rubik, Helvetica;
+	--serif: Noto Serif Display, Old Standard TT, Times New Roman;
+
+	
+}
+
+a {
+	font-family: var(--sans-serif);
+	font-weight: 500;
+	letter-spacing: .06rem;
+	font-size: 1rem;
+}
+
+
+/* Main header or banner text or similar */
+.screaming-voice {
+	font-family: var(--sans-serif);
+	font-size: clamp(40px, 8vw, 125px);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: -.045em;
+	line-height: .8em;
+}
+
+/* Header text or similar */
+.loud-voice {
+	font-family: var(--sans-serif);
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+/* Sub-header text or similar */
+.attention-voice {
+	font-family: var(--sans-serif);
+	font-weight: 700;
+	font-size: 1.4rem;
+	line-height: 1.2em;
+}
+
+.alert-voice {
+	font-family: var(--sans-serif);
+	font-size: 1.4rem;
+	line-height: 1.2em;
+}
+
+/* Paragraph text or similar */
+.normal-voice {
+	font-family: var(--sans-serif);
+	font-size: 1.2rem;
+	line-height: 1.2em;
+}
+
+/* Caption text or similar */
+.calm-voice {
+	font-family:  var(--sans-serif);
+	line-height: 1.2rem;
+}
+
+/* Fine print text or similar */
+.quiet-voice {
+	font-family:  var(--sans-serif);
+	line-height: 1.4em;
+}
+
+

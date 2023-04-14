@@ -1,0 +1,41 @@
+
+html {
+	--black: #1a1e24;
+	--white: #FFF;
+
+	--shadow: rgba(0,0,0,.8);
+
+	--corners: 10px; /* or whatevers */
+
+	--standard: 1140px;
+	--tight: 800px;
+	--wide: 90vw;
+	--extra-wide: 95vw;
+
+	--paper: white;
+	--background: hsla(50, 100%, 86%, 1);
+	--ink: black;
+
+	--standout: hsl(360, 100%, 39%);
+	--accent-color: #17F0E3;  /* dark purple */
+
+	--thick: 5px;
+	--thin: 2px;
+	--pencil: 1px;
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		--paper: hsla(0, 0%, 4%, 1);
+		--ink: hsla(50, 70%, 80%, 1);
+		--highlight: #6200ee;
+		--background: hsla(189, 20%, 12%, 1);
+		--trim: hsla(60, 7%, 40%, 1);
+		--lightest: #FFF;
+		--standout: hsla(170, 56%, 49%, 1);
+	}
+
+	.logo {
+		fill: white;
+	}
+}

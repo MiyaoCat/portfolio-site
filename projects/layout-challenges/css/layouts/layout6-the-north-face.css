@@ -1,0 +1,50 @@
+.layout6 .module-heading {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 30px;
+}
+
+.layout6 .module-heading h2 {
+	font-size: 2rem;
+	margin-bottom: 30px;
+}
+
+.layout6 feature-products {
+	display: flex;
+	flex-direction: column;
+}
+
+.layout6 feature-products > .apparel {
+	margin-bottom: 50px;
+}
+
+.layout6 picture + button {
+	margin-top: 20px;
+}
+
+.layout6 button {
+	border: 1px solid black;
+	padding: 15px 25px;
+	border-radius: 30px;
+	width: 100%;
+}
+
+@media (min-width: 750px) {
+	.layout6 .module-heading {
+		align-items: center;
+	}
+	.layout6 picture.feature-image {
+		max-width: 382px;
+	}
+	.layout6 feature-products {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		gap: 40px;
+	}
+
+	.layout6 button {
+		max-width: 72%;
+	}
+}

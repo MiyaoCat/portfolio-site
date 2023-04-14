@@ -1,0 +1,82 @@
+
+/* INTRO */
+.layout3 intro {
+	display: block;
+	background-color: black;
+	color: var(--white);
+	padding: 60px 10px 20px 10px;
+}
+
+.layout3 intro p {
+	margin-top: 10px;
+}
+
+.layout3 teaser {
+	color: var(--highlight);
+	font-weight: 700;
+	display: none;
+}
+
+:is(.layout3 intro teaser, .layout3 intro h2, .layout3 intro p) {
+	margin: 0 20px;
+}
+
+/* ARTICLE CARDS */
+.layout3 article {
+	margin-top: 20px;
+	transform: translateY(-25px);
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.layout3 icon {
+	display: block;
+	max-width: 50px;
+	margin-bottom: 10px;
+}
+
+.layout3 .article-card {
+	margin: 20px 0;
+	background: var(--white);
+	padding: 25px 15px;
+	color: black;
+}
+
+.layout3 .article-card :is(h3, p) {
+	max-width: 75%;
+	color: black;
+}
+
+@media (min-width: 600px) {
+	.layout3 intro teaser {
+		display: block;
+		margin: 8px 0;
+	}
+
+	.layout3 intro {
+		padding-bottom: 150px;
+		transition: padding-bottom .4s ease-in-out; 
+		
+	}
+
+	.layout3 .article-card {
+		padding: 30px;
+	}
+
+	.layout3 .article-list {
+		transform: translateY(-110px);
+		transition: transform 1 ease, top 1s ease;
+	}
+}
+
+@media (min-width: 900px) {
+	.layout3 .article-list {
+		display: flex;
+		gap: 15px;
+	}
+
+	.layout3 .article-card :is(h3, p) {
+		max-width: 90%;
+	}
+}

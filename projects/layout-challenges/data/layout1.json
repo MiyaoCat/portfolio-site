@@ -1,0 +1,67 @@
+[
+	{	
+		"type": "header",
+		"teaser": "Little teaser",
+		"heading": "Article Grid",
+		"text": "This is an example of an article grid. You have the article headers, an enticing, cick-baity blurb and sexy, associated image.",
+		"thumbnail": "https://peprojects.dev/images/circle.png"
+	},
+
+	{
+		"type": "article",
+		"heading": "Heading Level 3 Small",
+		"text": "Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Iusto et iure, commodi distinctio, alias quidem.",
+		"thumbnail": "https://peprojects.dev/images/circle.png"
+
+	},
+
+	{	"type": "article",	
+		"heading": "Heading Level 3 Small",
+		"text": "Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Iusto et iure, commodi distinctio, alias quidem.",
+		"thumbnail": "https://peprojects.dev/images/circle.png"
+	},
+
+	{	"type": "article",
+		"heading": "Heading Level 3 Small",
+		"text": "Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Iusto et iure, commodi distinctio, alias quidem.",
+		"thumbnail": "https://peprojects.dev/images/circle.png"
+	},
+
+	{	"type": "article",
+		"heading": "Heading Level 3 Small",
+		"text": "Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Iusto et iure, commodi distinctio, alias quidem.",
+		"thumbnail": "https://peprojects.dev/images/circle.png"
+	},
+
+	{	"type": "article",
+		"heading": "Heading Level 3 Small",
+		"text": "Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Iusto et iure, commodi distinctio, alias quidem.",
+		"thumbnail": "https://peprojects.dev/images/circle.png"
+	},
+
+	{	"type": "article",
+		"heading": "Heading Level 3 Small",
+		"text": "Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Iusto et iure, commodi distinctio, alias quidem.",
+		"thumbnail": "https://peprojects.dev/images/circle.png"
+	},
+
+	{
+		"type": "image",
+		"img": "./images/layout1/dark-blue.png"
+	},
+
+	{
+		"type": "image",
+		"img": "./images/layout1/red.png"
+	},
+
+	{
+		"type": "image",
+		"img": "./images/layout1/light-blue.png"
+	},
+
+	{
+		"type": "image",
+		"img": "./images/layout1/black.png"
+	}
+]

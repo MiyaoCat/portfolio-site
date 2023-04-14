@@ -1,0 +1,59 @@
+.layout7 section-heading {
+	display: block;
+	text-align: center;
+	margin: 2em 0;
+}
+
+.layout7 .heading {
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: .3em;
+}
+
+.layout7 .article-heading {
+	margin: .3em 0 .5em 0;
+	text-transform: uppercase;
+	font-size: 1.8em;
+}
+
+.layout7 article-card {
+	display: flex;
+	flex-direction: column;
+}
+
+.layout7 article-card + article-card {
+	margin-top: 2.5em;
+}
+
+.layout7 picture {
+	border: 2px solid var(--ink);
+}
+@media (min-width: 1000px) {
+	.layout7 article-card {
+		flex-direction: row;
+		gap: 1.5em;
+		align-items: center;
+	}
+
+	.layout7 article-card:nth-of-type(2) {
+		flex-direction: row-reverse;
+	}
+
+	.layout7 .article-heading {
+		font-size: 2rem;
+	}
+
+	.layout7 article-card picture {
+		max-width: 58%;
+	}
+
+	.layout7 article-content {
+		display: flex;
+		flex-direction: column;
+		max-width: 30%;
+	}
+
+	.layout7 article-card:nth-of-type(2) article-content {
+		text-align: right;
+	}
+}
