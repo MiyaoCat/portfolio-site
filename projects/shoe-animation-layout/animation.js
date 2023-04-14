@@ -138,7 +138,7 @@ pageTimeline
 		ease: "elastic.out(1, 0.5)",	
 	}, "<0%")
 	.add(beaconsTimelineFirst)
-	.delay(10)
+	.delay(1)
 
 
 
