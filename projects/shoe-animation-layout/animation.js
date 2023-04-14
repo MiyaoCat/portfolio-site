@@ -7,22 +7,22 @@ headerTimeline
 	.from('.logo', {
 		y: -200,
 		duration: 1,
-		ease: "bounce.out(1.5, 200)",
+		ease: "elastic.out(.7, .5)",
 	})
 	.from('nav', {
 		y: -200,
 		duration: 1,
-		ease: "bounce.out(1.5, 2)",
+		ease: "elastic.out(.7, .5)",
 	}, "<50%")
 	.from('.model', {
 		y: -200,
 		duration: 1,
-		ease: "bounce.out(1.5, 2)",
+		ease: "elastic.out(.7, .5)",
 	}, "<50%")
 	.from('.bag-icon', {
 		y: -200,
 		duration: 1,
-		ease: "bounce.out(1.5, 2)",
+		ease: "elastic.out(.7, .5)",
 	}, "<50%")		
 
 	
