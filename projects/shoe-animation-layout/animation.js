@@ -120,7 +120,7 @@ pageTimeline
 		ease: "elastic.out(.2)",
 		}, "<0%")
 	.from('.main-image', {
-		x: 700,
+		x: 750,
 		duration: .8,
 	}, "<0%")
 	.to('.pop-up-two', {
@@ -139,6 +139,7 @@ pageTimeline
 	}, "<0%")
 	.add(beaconsTimelineFirst)
 	.delay(1)
+
 
 
 
