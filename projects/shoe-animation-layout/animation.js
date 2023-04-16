@@ -122,6 +122,7 @@ pageTimeline
 	.from('.main-image', {
 		x: 750,
 		duration: .8,
+		opacity: 0,
 	}, "<0%")
 	.to('.pop-up-two', {
 		opacity: 0
