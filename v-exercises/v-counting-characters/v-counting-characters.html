@@ -1,12 +1,12 @@
 <main data-vue='countingChar'>
-	<h1>{{title}}</h1>
+
 	
-	<input v-model='string'>
-	<p class='userInput'><span>You entered</span>: {{string}}</p>
+	<input  v-model='string'>
+	<p class='userInput'><span>You entered</span></p>
 	
-	<output v-html='message' v-html='message2'>
-		<p ></p>
-		<p></p>
+	<output v-if='message' >
+		<p v-html='message'></p>
+		<p v-html='message2'></p>
 	</output>
 
 </main>
