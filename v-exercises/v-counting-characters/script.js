@@ -8,26 +8,34 @@ new Vue({
 		};
 	},
 	
+	methods: {
+		countWords(str) {
+  			return str.trim().split(/\s+/).length;
+		},
+	},
+
 	computed: {
 		countWithSpaces() {
 			return this.string.length;
 		},
-		
 		countCharOnly() {
 			var noSpaces = this.string.replace(/ /g, "");
 			return noSpaces.length;
 		},
-		
 		message() {
 			if (this.countCharOnly) {
-				return `Your string is ${this.countCharOnly} characters long WITHOUT spaces. Cool.`;
+				return `Total characters WITHOUT spaces: ${this.countCharOnly}`;
 			}
 		},
 		message2() {
 			if (this.countWithSpaces) {
-				return `Your string is ${this.countWithSpaces} characters long WITH spaces. Cool.`;
+				return `Total characters WITH spaces: ${this.countWithSpaces}`;
 			}
+		},
+		message3() {
+			return `Word count: ${this.countWords(this.string)}`;
 		}
 	}
 	
 });
+
