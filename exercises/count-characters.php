@@ -53,16 +53,16 @@
 	<output>
 		<ul>
 			<li>
-				<p class="normal-voice">You entered "<?=$string?>".</p>
+				<p class="normal-voice">You entered:<br>"<?= $string ?>"</p>
 			</li>
 			<li>
-				<p class="normal-voice"><?=$message?></p>
+				<p class="normal-voice">Characters without spaces: <?=$length?></p>
 			</li>
 			<li>
-				<p class="normal-voice"><?=$messageWithSpaces?></p>
+				<p class="normal-voice">Characters with spaces: <?= $lengthWithSpaces ?></p>
 			</li>
 			<li>
-				<p class="normal-voice"><?=$messageWords?></p>
+				<p class="normal-voice">Word count: <?= $word ?></p>
 			</li>
 		</ul>
 	</output>

@@ -1,18 +1,16 @@
-.exercise heading {
+.exercise heading, .v-exercise heading {
 	display: block;
 	grid-row: 3;
 	grid-column: 2 / 14;
 }
 
-.exercise .instructions {
-/*	grid-row: 3;*/
-/*	grid-column: 1 / 14;*/
+.exercise .instructions, .v-exercise .instructions {
 	max-width: 700px;
-	margin-right: 20px;
+	margin: 10px 20px 10px 0;
 }
 
-.exercise form {
-	display: flex;
+.exercise form, .v-exercise form {
+/*	display: flex;*/
 	flex-direction: column;
 	margin-right: 20px;
 	margin-left: 5px;
@@ -44,33 +42,33 @@ form-wrap .hidden {
 	display: none;
 }
 
-.exercise input {
+.exercise input, .v-exercise input {
 	margin: 5px 0;
 }
 
-.exercise form label {
+.exercise form label, .v-exercise form label {
 	margin-top: 20px;
 }
 
-.exercise .entry {
+.exercise .entry, .v-exercise .entry {
 	margin-top: 10px;
 }
 
-.exercise form:nth-of-type(3) {
+.exercise form:nth-of-type(3), .v-exercise form:nth-of-type(3) {
 	align-items: center;
 }
 
-.exercise .input-one {
+.exercise .input-one, .v-exercise .input-one {
 	display: flex;
 	flex-direction: column;
 }
 
-.exercise input[type="number"] {
+.exercise input[type="number"], .v-exercise input[type="number"] {
 	max-width: 150px;
 	padding: 5px;
 }
 
-.exercise .password-output {
+.exercise .password-output, .v-exercise .password-output {
 	margin: 10px 0;
 	padding: 5px;
 	border: 3px solid var(--ink);
@@ -79,7 +77,7 @@ form-wrap .hidden {
 	flex-direction: column;
 }
 
-.password-output span {
+.password-output span, .v-exercise .password-output span  {
 	color: var(--standout);
 	margin: 5px 0;
 /*	overflow: auto;*/
@@ -91,35 +89,35 @@ password-enter {
 }
 
 /* - - RADIO BUTTON - - - - - - - - - - - - - - - */
-.exercise form input[type="radio"] {
+.exercise form input[type="radio"], .v-exercise .exercise form input[type="radio"] {
    border: 3px solid black;
    cursor: pointer;
 }
-.exercise form input[type="radio"] .percent {
+.exercise form input[type="radio"] .percent, .v-exercise form input[type="radio"] .percent {
 	border: 1px solid black;
 }
 
 /* - - SUBMIT BUTTON - - - - - - - - - - - - - - - */
-.exercise button {
+.exercise button, .v-exercise button {
 	margin-top: 20px;
 	min-width: 150px;
 	max-width: 30%;
 }
 
-.exercise button:hover {
+.exercise button:hover, .v-exercise button:hover {
 	transform: translateX(5px) translateY(5px);
 	box-shadow: 0 0 var(--highlight);
 	cursor: pointer;
 }
 
-.exercise button:active {
+.exercise button:active, .v-exercise button:active {
 	transform: translateX(5px) translateY(5px);
 	box-shadow: 0 0 var(--highlight);
 }
 
 /* - - OUTPUT - - - - - - - - - - - - */
 output {
-	grid-row: 7;
+	grid-row: 4;
 	grid-column: 1 / 4;
 	margin-top: 20px;
 	margin-left: 10px;
@@ -140,25 +138,25 @@ output p {
 }
 
 @media (min-width: 550px) {
-	.exercise heading, .exercise form {
+	.exercise heading, .exercise form, .v-exercise heading, .v-exercise form {
 		grid-column: 1 / 14;
 	}
 
-	.exercise form {
+	.exercise form, .v-exercise form {
 		grid-column: 1 / 8;
 	}
 }
 
 @media (min-width: 700px) {
-	.exercise heading {
+	.exercise heading, .v-exercise heading {
 		grid-column: 4 / 10;
 	}
 
-	.exercise .instructions {
+	.exercise .instructions, .v-exercise .instructions {
 		grid-column: 4 / 10;
 	}
 
-	.exercise form {
+	.exercise form, .v-exercise form {
 		grid-column: 4 / 10;
 	}
 
@@ -169,7 +167,7 @@ output p {
 		grid-row: 3;
 		grid-column: 10 / 13;
 		padding: 5px;
-		margin-top: auto;
+		margin-top: 10px;
 		margin-bottom: auto;
 		margin-left: 20px;
 		margin-right: auto;
