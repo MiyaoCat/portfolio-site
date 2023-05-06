@@ -23,7 +23,7 @@
 	color: var(--standout);
 }
 
-#count-char textarea {
+textarea {
 	resize: vertical;
 }
 /* - - - PASSWORD VALIDATION - - - - - - -*/
@@ -176,7 +176,7 @@ output p {
 	form output {
 		display: block;
 	}
-	
+
 	#countChar {
 		display: block;
 		content: 'hello';

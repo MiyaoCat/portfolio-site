@@ -20,10 +20,6 @@
 			$length = strlen($string) - substr_count($string, ' ');
 			$lengthWithSpaces = strlen($string);
 			$word = str_word_count($string, 0);
-
-			$message = "It is $length characters long without spaces.";
-			$messageWithSpaces = "With spaces its $lengthWithSpaces characters.";
-			$messageWords = "It has $word word(s).";
 		}
 	}
 

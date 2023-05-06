@@ -11,17 +11,13 @@
 		placeholder="Type whatever you want"
 	></textarea>
 
-	<output v-if='message' :class="{ 'hidden': message }">
-		<p class='normal-voice'>{{message}}</p>
-		<p class='normal-voice'>{{message2}}</p>
-		<p class='normal-voice'>{{message3}}</p>
-	</output>
-
 </form>
 
-<div data-vue='outputChar' class='real-output'>
+<output data-vue='outputChar' v-if='computedMessage'>
 	<p>{{ computedMessage }}</p>
-</div>
+	<p>{{ countWithSpaces }}</p>
+	<p>{{ computedWordCount }}</p>
+</output>
 
 <footer>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
