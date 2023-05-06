@@ -1,5 +1,7 @@
-<form data-vue='countingChar'>
-
+<form data-vue='countChar'>
+	<div class='instructions'>
+		<p class='normal-voice'>Type in a string of text and I'll count how many characters you entered.</p>
+	</div>
 	<textarea 
 		v-model='string'
 		type="text" 
@@ -9,16 +11,18 @@
 		placeholder="Type whatever you want"
 	></textarea>
 
-
+	<output v-if='message' :class="{ 'hidden': message }">
+		<p class='normal-voice'>{{message}}</p>
+		<p class='normal-voice'>{{message2}}</p>
+		<p class='normal-voice'>{{message3}}</p>
+	</output>
 
 </form>
 
-	<output data-vue='countingChar' v-if='message' >
-		<p class='normal-voice'>{{message}}</p>
-		<p class='normal-voice'>{{message2}}</p>
-		<p class='normal-voice' v-html='message3'></p>
-	</output>
-	
+<div data-vue='outputChar' class='real-output'>
+	<p>{{ computedMessage }}</p>
+</div>
+
 <footer>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
 	<script src="./v-exercises/v-counting-characters/script.js"></script>

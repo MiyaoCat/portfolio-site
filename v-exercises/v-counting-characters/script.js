@@ -1,10 +1,11 @@
+const bus = new Vue();
+
 new Vue({
-	el: "[data-vue='countingChar']",
+	el: "[data-vue='countChar']",
 	
 	data() {
 		return {
 			string: "",
-			title: "Counting Characters",
 		};
 	},
 	
@@ -33,9 +34,30 @@ new Vue({
 			}
 		},
 		message3() {
-			return `Word count: ${this.countWords(this.string)}`;
+			if (this.countWithSpaces) {
+				return `Word count: ${this.countWords(this.string)}`;
+			}
 		}
-	}
+	},
 	
+	watch: {
+		message(newValue) {
+			bus.$emit('computed-message-changed', newValue);
+		},
+	},
 });
 
+    new Vue({
+      el: '[data-vue="outputChar"]',
+      data() {
+        return {
+          computedMessage: '',
+        };
+      },
+      mounted() {
+        // Listen to the computed message changed event
+        bus.$on('computed-message-changed', (newValue) => {
+          this.computedMessage = newValue;
+        });
+      },
+    });

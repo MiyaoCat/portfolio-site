@@ -173,6 +173,17 @@ output p {
 		margin-right: auto;
 	}
 
+	form output {
+		display: block;
+	}
+	
+	#countChar {
+		display: block;
+		content: 'hello';
+		grid-column: 10 /14;
+		grid-row: 5;
+	}
+
 }
 
 
