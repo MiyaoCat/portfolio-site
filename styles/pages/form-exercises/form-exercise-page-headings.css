@@ -1,8 +1,8 @@
-.exercise .heading .title1 {
+.exercise .heading .title1, .v-exercise .heading .title1 {
 	transition: .2s ease-in-out;
 }
 
-.exercise .heading .title1:hover {
+.exercise .heading .title1:hover, .v-exercise .heading .title1:hover {
 	transition: .2s ease-in-out;
 }
 
@@ -83,59 +83,59 @@
 }
 
 /*- - CHARACTER-COUNT - - - - - - - - - - - - - - - - - - - */
-.count-characters.heading .title1 {
+.count-characters.heading .title1, .v-count-characters.heading .title1 {
 	transform: translateY(-.2em) rotate(var(--tilt));
 }
 
-.count-characters.heading .title1:hover {
+.count-characters.heading .title1:hover, .v-count-characters.heading .title1:hover {
 	transform: translateX(0) translateY(0) rotate(0);
 }
 
-.count-characters.heading .title2 {
+.count-characters.heading .title2, .v-count-characters.heading .title2 {
 	transform: translateX(4.5em);
 }
 
 @media (min-width: 550px) {
-	.count-characters.heading .title1 {
+	.count-characters.heading .title1, .v-count-characters.heading .title1 {
 		transform: translateY(-.5em) rotate(var(--tilt));
 	}
 
-	.count-characters.heading .title2 {
+	.count-characters.heading .title2, .v-count-characters.heading .title2 {
 		transform: translateX(7em);
 	}
 }
 
 @media (min-width: 700px) {
-	.count-characters.heading .title1 {
+	.count-characters.heading .title1, .v-count-characters.heading .title1 {
 		transform: translateX(-67%) translateY(.6em) rotate(var(--tilt));
 	}
 
-	.count-characters.heading .title1:hover {
+	.count-characters.heading .title1:hover, .v-count-characters.heading .title1:hover {
 		transform: translateX(-67%) translateY(.6em) rotate(0);
 		transition: .2s ease-in-out;
 	}
 
-	.count-characters.heading .title2 {
+	.count-characters.heading .title2, .v-count-characters.heading .title2 {
 		transform: translateX(0);
 	}	
 }
 
 @media (min-width: 800px) {
-	.count-characters.heading .title1 {
+	.count-characters.heading .title1, .v-count-characters.heading .title1 {
 		transform: translateX(-71%) translateY(.8em) rotate(var(--tilt));
 	}
 
-	.count-characters.heading .title1:hover {
+	.count-characters.heading .title1:hover, .v-count-characters.heading .title1:hover {
 		transform: translateX(-71%) translateY(.8em) rotate(0);
 	}
 }
 
 @media (min-width: 1000px) {
-	.count-characters.heading .title1 {
+	.count-characters.heading .title1, .v-count-characters.heading .title1 {
 		transform: translateX(-72%) translateY(.9em) rotate(var(--tilt));
 	}
 
-	.count-characters.heading .title1:hover {
+	.count-characters.heading .title1:hover, .v-count-characters.heading .title1:hover {
 		transform: translateX(-72%) translateY(.9em) rotate(0);
 	}	
 }

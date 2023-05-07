@@ -160,9 +160,10 @@ output p {
 		grid-column: 4 / 10;
 	}
 
-	input, .password-output {
+	.password-output {
 		max-width: 250px;
 	}
+
 	output {
 		grid-row: 3;
 		grid-column: 10 / 13;
