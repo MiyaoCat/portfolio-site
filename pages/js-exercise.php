@@ -1,5 +1,5 @@
 <?php 
-	$json = file_get_contents("data/exercises.json");
+	$json = file_get_contents("data/js-exercises.json");
 	$formExercises = json_decode($json, true);
  	
 	foreach ($formExercises as $forms) {
@@ -16,4 +16,4 @@
 	}
 ?>
 
-<?php include("form-exercises/$slug.php"); ?>
+<?php include("form-exercises/javascript/$slug.js"); ?>

@@ -1,5 +1,5 @@
 <?php
-	$languageType = "";
+	$languageType = "php";
 
 	function isChecked($type, $name) {
 		if ($type == $name) {
@@ -9,21 +9,22 @@
 
 	if ( isset($_POST["language"]) ) {
 		$languageType = $_POST["language"];
+	}
+	if ($languageType == 'php') {
+		$json = file_get_contents("data/exercises.json");
+		$exercises = json_decode($json, true);
+	}
 
-		if ($languageType == 'php') {
-			$json = file_get_contents("data/exercises.json");
-			$exercises = json_decode($json, true);
-		}
+	if ($languageType == 'javascript') {
+		$json = file_get_contents("data/js-exercises.json");
+		$exercises = json_decode($json, true);
+	}
 
-		if ($languageType == 'javascript') {
-			echo "hello javascript";
-		}
-
-		if ($languageType == 'vue') {
-			$json = file_get_contents("data/v-exercises.json");
-			$exercises = json_decode($json, true);
-		}
-	};
+	if ($languageType == 'vue') {
+		$json = file_get_contents("data/v-exercises.json");
+		$exercises = json_decode($json, true);
+	}
+	;
 
 
 

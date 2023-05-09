@@ -1,7 +1,7 @@
 [	
 	{
 		"type": "language",
-		"language": "vue",
+		"language": "javascript",
 		"content": "test"
 	},	
 	{
@@ -34,12 +34,6 @@
 		"title": "Input/Output",
 		"forms": [
 			{
-				"title1": "Simple",
-				"title2": "Math",
-				"intro": "Easy arithmetic",
-				"slug": "simple-math"
-			},
-			{
 				"title1": "Count",
 				"title2": "Characters",
 				"slug": "v-count-characters"
@@ -51,24 +45,9 @@
 		"title": "Decision Making",
 		"forms": [
 			{
-				"title1": "Tax",
-				"title2": "Calculator",
-				"slug": "tax-calculator"
-			},
-			{
-				"title1": "Driving",
-				"title2": "Age",
-				"slug": "driving-age"
-			},
-			{
 				"title1": "Temp",
 				"title2": "Converter",
 				"slug": "temp-converter"
-			},
-			{
-				"title1": "Password",
-				"title2": "Validation",
-				"slug": "password-validation"
 			}
 		]
 	}

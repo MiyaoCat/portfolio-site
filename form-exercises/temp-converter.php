@@ -1,18 +1,3 @@
-<!-- <div id="languages">
-	<form method="POST">
-		<label>
-			<input type="radio" name="language" value="php" id="php" checked> PHP
-		</label>
-		<label>
-			<input type="radio" name="language" value="javascript" id="javascript"> JavaScript
-		</label>
-		<label>
-			<input type="radio" name="language" value="vue" id="vue"> Vue
-		</label>
-	</form>
-</div>
- -->
-
 <?php  
 
 // The formulas are
