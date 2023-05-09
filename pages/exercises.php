@@ -9,6 +9,20 @@
 
 	if ( isset($_POST["language"]) ) {
 		$languageType = $_POST["language"];
+
+		if ($languageType == 'php') {
+			$json = file_get_contents("data/exercises.json");
+			$exercises = json_decode($json, true);
+		}
+
+		if ($languageType == 'javascript') {
+			echo "hello javascript";
+		}
+
+		if ($languageType == 'vue') {
+			$json = file_get_contents("data/v-exercises.json");
+			$exercises = json_decode($json, true);
+		}
 	};
 
 
@@ -32,10 +46,6 @@
 </div>
 
 
-<?php 
-	$json = file_get_contents("data/exercises.json");
-	$exercises = json_decode($json, true);
-?>
 <?php 
 	foreach ($exercises as $exercise) { 
 		if ($exercise["type"] !== "generic-text" and $exercise["type"] !== "language") {

@@ -45,6 +45,9 @@
 		"title": "Decision Making",
 		"forms": [
 			{
+				"title1": "Count",
+				"title2": "Characters",
+				"slug": "v-count-characters"
 			}
 		]
 	}
