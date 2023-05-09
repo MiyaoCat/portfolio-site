@@ -3,7 +3,7 @@
 	$formExercises = json_decode($json, true);
  	
 	foreach ($formExercises as $forms) {
-		if ($forms["type"] !== "generic-text") {
+		if ($forms["type"] !== "generic-text" and $forms["type"] !== "language") {
 			foreach ($forms["forms"] as $form) {
 				if ($form["slug"] == $_GET["slug"]) { 
 					

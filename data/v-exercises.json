@@ -1,5 +1,10 @@
 [	
 	{
+		"type": "language",
+		"language": "vue",
+		"content": "test"
+	},	
+	{
 		"type": "generic-text",
 		"content": "<p class='normal-voice'>I worked through the book, Exercises for Programmers to build out each form. This book is language agnostic and tests your ability to use functions and logic to create each form. I recommend using this book when learning any new programming language. <br><br> Now click on a form and test them out!</p>"
 	},
@@ -29,30 +34,9 @@
 		"title": "Input/Output",
 		"forms": [
 			{
-				"title1": "Simple",
-				"title2": "Math",
-				"intro": "Easy arithmetic",
-				"slug": "simple-math"
-			},
-			{
 				"title1": "Count",
 				"title2": "Characters",
 				"slug": "v-count-characters"
-			},
-			{
-				"title1": "Pizza",
-				"title2": "Party",
-				"slug": "pizza-party"
-			},
-			{
-				"title1": "Say",
-				"title2": "Hello",
-				"slug": "v-hello"
-			},
-			{
-				"title1": "Printing",
-				"title2": "Quotes",
-				"slug": "v-print-quotes"
 			}
 		]
 	},
@@ -61,24 +45,6 @@
 		"title": "Decision Making",
 		"forms": [
 			{
-				"title1": "Tax",
-				"title2": "Calculator",
-				"slug": "tax-calculator"
-			},
-			{
-				"title1": "Driving",
-				"title2": "Age",
-				"slug": "driving-age"
-			},
-			{
-				"title1": "Temp",
-				"title2": "Converter",
-				"slug": "temp-converter"
-			},
-			{
-				"title1": "Password",
-				"title2": "Validation",
-				"slug": "password-validation"
 			}
 		]
 	}

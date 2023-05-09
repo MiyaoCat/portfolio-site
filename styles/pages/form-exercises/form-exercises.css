@@ -1,3 +1,6 @@
+#languages {
+	grid-row: 6;
+}
 .exercise heading, .v-exercise heading {
 	display: block;
 	grid-row: 3;

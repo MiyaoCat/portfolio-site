@@ -5,7 +5,7 @@
 
 <?php 
 	foreach ($exercises as $exercise) { 
-		if ($exercise["type"] !== "generic-text") {
+		if ($exercise["type"] !== "generic-text" and $exercise["type"] !== "language") {
 			$type = $exercise["type"];
 			$title = $exercise["title"];
 ?>
@@ -27,7 +27,7 @@
 
 			</form-exercise>
 		<?php } 
-			else {
+			elseif ($exercise["type"] == "generic-text") {
 		?>
 			<section class="generic-text"><?=$exercise["content"]?></section>
 			<?php } ?>

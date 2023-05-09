@@ -35,12 +35,12 @@
 
 <?php
 		} else {
-			include("pages/$pageData[template].php");
-			}
+				include("pages/$pageData[template].php");
+		  }
 			
 		} else {
-			include("pages/404.php");
-		}
+				include("pages/404.php");
+		  }
 		
 ?>
 
