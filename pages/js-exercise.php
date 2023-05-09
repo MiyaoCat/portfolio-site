@@ -16,4 +16,4 @@
 	}
 ?>
 
-<?php include("form-exercises/javascript/$slug.js"); ?>
+<?php include("form-exercises/$slug.js"); ?>

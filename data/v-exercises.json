@@ -2,6 +2,7 @@
 	{
 		"type": "language",
 		"language": "vue",
+		"fileType": ".vue",
 		"content": "test"
 	},	
 	{

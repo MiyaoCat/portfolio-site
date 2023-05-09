@@ -9,24 +9,28 @@
 
 	if ( isset($_POST["language"]) ) {
 		$languageType = $_POST["language"];
-	}
+	};
+	
 	if ($languageType == 'php') {
 		$json = file_get_contents("data/exercises.json");
 		$exercises = json_decode($json, true);
-	}
+
+		$page = "exercise";
+	};
 
 	if ($languageType == 'javascript') {
 		$json = file_get_contents("data/js-exercises.json");
 		$exercises = json_decode($json, true);
-	}
+
+		$page = "js-exercise";
+	};
 
 	if ($languageType == 'vue') {
 		$json = file_get_contents("data/v-exercises.json");
 		$exercises = json_decode($json, true);
-	}
-	;
 
-
+		$page = "v-exercise";
+	};
 
 ?>
 
@@ -61,7 +65,7 @@
 						$slug = $form["slug"];
 					?>
 						<li>
-							<a href="?page=exercise&slug=<?=$slug?>">
+							<a href="?page=<?=$page?>&slug=<?=$slug?>">
 								<h3 class="normal-voice">
 									<?=$form["title1"]?> <?=$form["title2"]?>
 								</h3>

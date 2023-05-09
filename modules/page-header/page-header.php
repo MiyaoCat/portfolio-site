@@ -37,6 +37,15 @@
 		$slug = $exercises["slug"];
 	} 
 
+	elseif ($page == "js-exercises") {
+		$json = file_get_contents("data/page-data/js-exercises.json");
+		$exercises = json_decode($json, true);
+
+		$title1 = $exercises["title1"];
+		$title2 = $exercises["title2"];
+		$slug = $exercises["slug"];
+	} 
+
 	elseif ($page == "v-exercises") {
 		$json = file_get_contents("data/page-data/v-exercises.json");
 		$exercises = json_decode($json, true);
@@ -48,6 +57,24 @@
 
 	elseif ($page == "exercise") {
 		$json = file_get_contents("data/exercises.json");
+		$formExercises = json_decode($json, true);
+
+		foreach ($formExercises as $forms) {
+			if ($forms["type"] !== "generic-text" and $forms["type"] !== "language") {
+				foreach ($forms["forms"] as $form) {
+					if ($form["slug"] == $_GET["slug"]) {
+						
+						$title1 = $form["title1"];
+						$title2 = $form["title2"];
+						$slug = $form["slug"];
+					}
+				}
+			}	
+		}
+	} 
+
+	elseif ($page == "js-exercise") {
+		$json = file_get_contents("data/js-exercises.json");
 		$formExercises = json_decode($json, true);
 
 		foreach ($formExercises as $forms) {

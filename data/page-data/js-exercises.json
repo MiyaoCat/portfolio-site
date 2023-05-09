@@ -1,0 +1,9 @@
+{
+	"id": "001",
+	"slug": "js-exercises",
+	"template": "js-exercises",
+
+	"title1": "Javascript Forms",
+	"title2": "Exercises",
+	"intro": "This my work with the Exercises for Programmers book (E4P)"
+}

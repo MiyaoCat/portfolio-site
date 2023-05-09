@@ -1,7 +1,8 @@
 [	
 	{
 		"type": "language",
-		"language": "javascript",
+		"language": "js",
+		"fileType": ".js",
 		"content": "test"
 	},	
 	{
@@ -13,19 +14,9 @@
 		"title": "Calculations",
 		"forms": [
 			{
-				"title1": "Simple",
+				"title1": "JS",
 				"title2": "Interest",
 				"slug": "v-simple-interest"
-			},
-			{
-				"title1": "Self-",
-				"title2": "Checkout",
-				"slug": "self-checkout"
-			},
-			{
-				"title1": "Tip",
-				"title2": "Calculator",
-				"slug": "tip-calculator"
 			}
 		]
 	},
@@ -34,7 +25,7 @@
 		"title": "Input/Output",
 		"forms": [
 			{
-				"title1": "Count",
+				"title1": "JS",
 				"title2": "Characters",
 				"slug": "v-count-characters"
 			}
@@ -47,7 +38,7 @@
 			{
 				"title1": "Temp",
 				"title2": "Converter",
-				"slug": "temp-converter"
+				"slug": "js-temp-converter"
 			}
 		]
 	}

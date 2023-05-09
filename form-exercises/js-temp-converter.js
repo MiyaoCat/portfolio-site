@@ -1,3 +1,19 @@
+<form method ="POST">
+	<div class="instructions">
+		<p class="normal-voice">First select whether you want to convert to Fahrenheit or Celsius. Then enter the degrees you want to convert. For example, if you want to know what 100 degrees Fahrenheit is in Celsius, select Celsius and enter 100.</p>
+	</div>
+
+	<label for="fahrenheit">Fahrenheit</label>
+	<input type="radio" name="temp-type" value="fahrenheit" <?=isChecked($tempType, "fahrenheit")?> >
+	
+	<label for="celsius">Celsius</label>
+	<input type="radio" name="temp-type" value="celsius" <?=isChecked($tempType, "celsius")?> >
+
+	<input type="number" step="0.1" name="temp" value="<?=$temp?>" placeholder="Enter the temperature">
+
+	<button type="submit" name="submitted">Submit</button>
+</form>
+
 <script>
 	var form = document.querySelector("form");
 	var output = document.querySelector("output");
