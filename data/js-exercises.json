@@ -14,9 +14,9 @@
 		"header": "Calculations",
 		"forms": [
 			{
-				"title1": "JS",
+				"title1": "Simple",
 				"title2": "Interest",
-				"slug": "v-simple-interest"
+				"slug": "simple-interest"
 			}
 		]
 	},
