@@ -1,8 +1,8 @@
-.exercise .heading .title1, .v-exercise .heading .title1 {
+ .heading .title1, .v-exercise .heading .title1 {
 	transition: .2s ease-in-out;
 }
 
-.exercise .heading .title1:hover, .v-exercise .heading .title1:hover {
+ .heading .title1:hover, .v-exercise .heading .title1:hover {
 	transition: .2s ease-in-out;
 }
 
@@ -23,15 +23,11 @@
 	.simple-interest.heading .title1 {
 		transform: translateY(-.5em) rotate(var(--tilt));
 	}
-
-	.simple-interest.heading .title2 {
-		transform: translateX(7em);
-	}
 }
 
 @media (min-width: 700px) {
 	.simple-interest.heading .title1 {
-		transform: translateX(-76%) translateY(.3em) rotate(var(--tilt));
+		transform: translateX(-48%) translateY(.3em) rotate(var(--tilt));
 	}
 
 	.simple-interest.heading .title1:hover {
@@ -40,7 +36,11 @@
 }
 
 @media (min-width: 700px) {
-	.exercise .heading .title2 {
+	.simple-interest.heading .title1 {
+		transform: translateX(-68%) translateY(.3em) rotate(var(--tilt));
+	}
+
+	.simple-interest.heading .title2 {
 		transform: translateX(0);
 	}
 }

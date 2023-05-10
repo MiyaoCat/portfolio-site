@@ -17,6 +17,11 @@
 				"title1": "Simple",
 				"title2": "Interest",
 				"slug": "simple-interest"
+			},
+			{
+				"title1": "Simple",
+				"title2": "Math",
+				"slug": "simple-math"
 			}
 		]
 	},
@@ -38,7 +43,12 @@
 			{
 				"title1": "Temp",
 				"title2": "Converter",
-				"slug": "js-temp-converter"
+				"slug": "temp-converter"
+			},
+			{
+				"title1": "Password",
+				"title2": "Validation",
+				"slug": "password-validation"
 			}
 		]
 	}

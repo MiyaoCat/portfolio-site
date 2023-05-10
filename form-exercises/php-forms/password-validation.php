@@ -65,7 +65,7 @@ function errorMessageNumber() {
 ?>
 
 <form method="POST" class="password">
-
+	<div class="instructions">First you're going to create a password by following the prompts.</div>
 	<div class="password-create">
 		<label for="fruit">What is your favorite fruit?</label>
 		<input type="text" name="fruit" value="<?=$fruit?>">

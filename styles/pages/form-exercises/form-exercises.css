@@ -110,6 +110,7 @@ form-wrap .hidden {
 password-enter {
 	display: flex;
 	flex-direction: column;
+	border: 2px solid var(--ink);
 }
 
 /* - - RADIO BUTTON - - - - - - - - - - - - - - - */
@@ -232,3 +233,6 @@ output p {
 }
 
 
+.js-exercise .password-output, .js-exercise password-enter {
+	display: none;
+}
