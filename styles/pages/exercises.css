@@ -12,11 +12,7 @@
 .exercises.heading .title2 {
 	transform: translateX(4em);
 }
- 
-/* - - - - LANGUAGE OPTIONS - - - - - - - - - - - - */
-.exercises #languages {
-	grid-row: 4;
-}
+
 form-exercise {
 	grid-column: 1 / 14;
 	margin: 15px 20px 0 5px;
