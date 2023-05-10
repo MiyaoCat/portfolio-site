@@ -7,12 +7,16 @@
 	grid-column: 2 / 14;
 }
 
-.exercise .instructions, .v-exercise .instructions {
+.exercise .instructions, 
+.v-exercise .instructions,
+.js-exercise .instructions {
 	max-width: 700px;
 	margin: 10px 20px 10px 0;
 }
 
-.exercise form, .v-exercise form {
+.exercise form, 
+.v-exercise form,
+.js-exercise form {
 /*	display: flex;*/
 	flex-direction: column;
 	margin-right: 20px;
@@ -46,33 +50,47 @@ form-wrap .hidden {
 	display: none;
 }
 
-.exercise input, .v-exercise input {
+.exercise input, 
+.v-exercise input,
+.js-exercise input {
 	margin: 5px 0;
 }
 
-.exercise form label, .v-exercise form label {
+.exercise form label, 
+.v-exercise form label,
+.js-exercise form label {
 	margin-top: 20px;
 }
 
-.exercise .entry, .v-exercise .entry {
+.exercise .entry, 
+.v-exercise .entry,
+.js-exercise .entry  {
 	margin-top: 10px;
 }
 
-.exercise form:nth-of-type(3), .v-exercise form:nth-of-type(3) {
+.exercise form:nth-of-type(3), 
+.v-exercise form:nth-of-type(3),
+.js-exercise form:nth-of-type(3) {
 	align-items: center;
 }
 
-.exercise .input-one, .v-exercise .input-one {
+.exercise .input-one, 
+.v-exercise .input-one,
+.js-exercise .input-one {
 	display: flex;
 	flex-direction: column;
 }
 
-.exercise input[type="number"], .v-exercise input[type="number"] {
+.exercise input[type="number"], 
+.v-exercise input[type="number"],
+.js-exercise input[type="number"] {
 	max-width: 150px;
 	padding: 5px;
 }
 
-.exercise .password-output, .v-exercise .password-output {
+.exercise .password-output, 
+.v-exercise .password-output,
+.js-exercise .password-output {
 	margin: 10px 0;
 	padding: 5px;
 	border: 3px solid var(--ink);
@@ -81,7 +99,9 @@ form-wrap .hidden {
 	flex-direction: column;
 }
 
-.password-output span, .v-exercise .password-output span  {
+.password-output span, 
+.v-exercise .password-output span,
+.js-exercise .password-output span   {
 	color: var(--standout);
 	margin: 5px 0;
 /*	overflow: auto;*/
@@ -93,28 +113,38 @@ password-enter {
 }
 
 /* - - RADIO BUTTON - - - - - - - - - - - - - - - */
-.exercise form input[type="radio"], .v-exercise .exercise form input[type="radio"] {
+.exercise form input[type="radio"], 
+.v-exercise .exercise form input[type="radio"],
+.js-exercise .exercise form input[type="radio"] {
    border: 3px solid black;
    cursor: pointer;
 }
-.exercise form input[type="radio"] .percent, .v-exercise form input[type="radio"] .percent {
+.exercise form input[type="radio"] .percent, 
+.v-exercise form input[type="radio"] .percent,
+.js-exercise form input[type="radio"] .percent {
 	border: 1px solid black;
 }
 
 /* - - SUBMIT BUTTON - - - - - - - - - - - - - - - */
-.exercise button, .v-exercise button {
+.exercise button, 
+.v-exercise button,
+.js-exercise button {
 	margin-top: 20px;
 	min-width: 150px;
 	max-width: 30%;
 }
 
-.exercise button:hover, .v-exercise button:hover {
+.exercise button:hover, 
+.v-exercise button:hover,
+.js-exercise button:hover {
 	transform: translateX(5px) translateY(5px);
 	box-shadow: 0 0 var(--highlight);
 	cursor: pointer;
 }
 
-.exercise button:active, .v-exercise button:active {
+.exercise button:active, 
+.v-exercise button:active,
+.js-exercise button:active {
 	transform: translateX(5px) translateY(5px);
 	box-shadow: 0 0 var(--highlight);
 }
@@ -142,25 +172,35 @@ output p {
 }
 
 @media (min-width: 550px) {
-	.exercise heading, .exercise form, .v-exercise heading, .v-exercise form {
+	.exercise heading, .exercise form, 
+	.v-exercise heading, .v-exercise form,
+	.js-exercise heading, .v-exercise form {
 		grid-column: 1 / 14;
 	}
 
-	.exercise form, .v-exercise form {
+	.exercise form, 
+	.v-exercise form,
+	.js-exercise form {
 		grid-column: 1 / 8;
 	}
 }
 
 @media (min-width: 700px) {
-	.exercise heading, .v-exercise heading {
+	.exercise heading, 
+	.v-exercise heading,
+	.js-exercise heading {
 		grid-column: 4 / 10;
 	}
 
-	.exercise .instructions, .v-exercise .instructions {
+	.exercise .instructions, 
+	.v-exercise .instructions,
+	.js-exercise .instructions {
 		grid-column: 4 / 10;
 	}
 
-	.exercise form, .v-exercise form {
+	.exercise form, 
+	.v-exercise form,
+	.js-exercise form {
 		grid-column: 4 / 10;
 	}
 
