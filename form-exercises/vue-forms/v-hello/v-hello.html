@@ -1,15 +1,14 @@
-<!-- <main data-vue="hello"> -->
-	<!-- <h1>{{title}}</h1> -->
-	
+
 	<form action=''>
-		<p>{{question}}</p>
-		
+	
 		<input v-model="name">
 		
 		<button v-on:click="yell">Enter</button>
+
+		<output v-if='message' v-html='message'></output>
 	</form>
-	<output v-if='message' v-html='message'></output>
-<!-- </main> -->
+	
+
 
 <footer>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>

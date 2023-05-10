@@ -11,6 +11,7 @@ new Vue({
 	
 	methods: {
 		yell() {
+			preventdefault();
 			if (this.name.trim() == "") {
         		alert(`I asked for your name!`);
      		} 
