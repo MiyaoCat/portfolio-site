@@ -1,62 +1,58 @@
-<form method ="POST">
+<form id="temp-converter" method ="POST">
 	<div class="instructions">
 		<p class="normal-voice">First select whether you want to convert to Fahrenheit or Celsius. Then enter the degrees you want to convert. For example, if you want to know what 100 degrees Fahrenheit is in Celsius, select Celsius and enter 100.</p>
-	</div>
+	</div>	
 
 	<label for="fahrenheit">Fahrenheit</label>
-	<input type="radio" name="temp-type" value="fahrenheit" <?=isChecked($tempType, "fahrenheit")?> >
+	<input type="radio" name="temp-type" value="fahrenheit" onclick="isChecked('fahrenheit')"  >
 	
 	<label for="celsius">Celsius</label>
-	<input type="radio" name="temp-type" value="celsius" <?=isChecked($tempType, "celsius")?> >
+	<input type="radio" name="temp-type" value="celsius" onclick="isChecked('celsius')"  >
 
 	<input type="number" step="0.1" name="temp" value="<?=$temp?>" placeholder="Enter the temperature">
 
 	<button type="submit" name="submitted">Submit</button>
 </form>
 
+<output></output>
+<trest></trest>
 <script>
-	var form = document.querySelector("form");
-	var output = document.querySelector("output");
 
-	form.querySelector("button").style.display = "none";
+let $form = document.querySelector('form');
+let $temp = document.querySelector("[name='temp']");
+document.querySelector('output').hidden = true;
 
-	function convertToCelsius(f) {
-		return (f - 32) * 5 / 9;
+$form.addEventListener('submit', function(event) {
+	event.preventDefault();
+
+	let tempType = document.querySelector("[name='temp-type']:checked").value;
+	let temp = $temp.value;
+
+	console.log(tempType + " " + temp);
+
+	function convertToCelsius(temp) {
+		return (temp - 32) * 5 / 9;
 	}
 
-	// F = (C × 9 / 5) + 32
-	function convertToFahrenheit(c) {
-		return (c * 9 / 5) + 32;
+	function convertToFahrenheit(temp) {
+		return (temp * 9 / 5) + 32;
 	}
 
-	function updateInterface() {
-		var tempType = document.querySelector(":checked").value;
+	let $output = document.querySelector('output');
+	$output.hidden = false;
 
-		console.log("tempType", tempType);
 
-		var temp = document.querySelector("[name='temp']").value;
+	if (tempType == 'celsius') {
+		let celsius = convertToCelsius(temp).toFixed(2);
 
-		console.log("temp", temp);
+		$output.innerHTML = `<p class="normal-voice">That will be ${celsius} degrees Celsius.</p>`;
+	} else {
+		let fahrenheit = convertToFahrenheit(temp).toFixed(2);
 
-		if (tempType == "fahrenheit") {
-			var converted = convertToCelsius(temp);
-		} 
+		$output.innerHTML = `<p class="normal-voice">That will be ${fahrenheit} degrees Fahrenheit.</p>`;
+	};
 
-		if (tempType == "celsius") {
-			var converted = convertToFahrenheit(temp);
-		}
+})
 
-		var rounded = converted.toFixed(2);
 
-		//document.querySelector("output") = `This converts to ${rounded} degrees ${tempType}`;	
-		output.textContent = `This converts to ${rounded} degrees ${tempType}`;		
-	}
-	
-	updateInterface();
-
-	form.addEventListener("input", function(event){
-		event.preventDefault();
-
-		updateInterface();
-	})
 </script>
