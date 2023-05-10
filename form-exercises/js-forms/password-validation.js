@@ -28,16 +28,13 @@
 
 <script>
 let $createPasswordForm = document.querySelector('form');
-
 let $fruit = document.querySelector("[name='fruit']");
 let $number = document.querySelector("[name='number']");
-
 let $output = document.querySelector("output");
-$output.hidden = true;
-
 let $passwordOutput = document.querySelector(".password-output");
-
 let $passwordEnter = document.querySelector("password-enter");
+
+$output.hidden = true;
 $passwordEnter.hidden = true;
 
 $createPasswordForm.addEventListener('submit', function(event) {
@@ -49,7 +46,10 @@ $createPasswordForm.addEventListener('submit', function(event) {
 
 	let $warning1 = document.querySelector('.calm-voice.warning:nth-of-type(1)');	
 	let $warning2 = document.querySelector('.calm-voice.warning:nth-of-type(2)');
-	let $warning3 = document.querySelector('.calm-voice.warning:nth-of-type(3)');
+	let $warning3 = document.querySelector('password-enter p.warning');
+
+	
+ 	$warning3.hidden = true;
 
 	if (!fruitInput) {
 		$warning1.innerHTML = 'No fruit entered';
@@ -73,11 +73,15 @@ $createPasswordForm.addEventListener('submit', function(event) {
 	let password = $password.value;
 		console.log(password);
 	
-	if (password === passwordInput) {
+	if (passwordInput != "" && password === passwordInput) {
 		$output.hidden = false;
 		$output.innerHTML = `<p class="normal-voice">${password} is correct! You may enter!`;
-	}	else {
+	}	
+
+	if (password != passwordInput && password != "") {
+		
 		$warning3.innerHTML = 'Errr! Incorrect';
+		$warning3.hidden = false;
 	}
 		
 });
