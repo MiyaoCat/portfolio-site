@@ -1,6 +1,6 @@
 <?php 
-	$json = file_get_contents("data/js-exercises.json");
-	$formExercises = json_decode($json, true);
+	// $json = file_get_contents("data/form-exercises/js-exercises.json");
+	// $formExercises = json_decode($json, true);
  	
 	foreach ($formExercises as $forms) {
 		if ($forms["type"] !== "generic-text" and $forms["type"] !== "language") {
@@ -16,4 +16,4 @@
 	}
 ?>
 
-<?php include("form-exercises/$slug.js"); ?>
+<?php include("form-exercises/js-forms/$slug.js"); ?>

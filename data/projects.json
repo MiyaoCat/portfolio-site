@@ -29,7 +29,7 @@
 		"image": "images/projects/forms2.jpg",
 		"featured": false,
 		"languages": [
-			"HTML", "CSS", "PHP", "Javascript"
+			"HTML", "CSS", "PHP", "Javascript", "Vue"
 		], 
 
 		"sections": [

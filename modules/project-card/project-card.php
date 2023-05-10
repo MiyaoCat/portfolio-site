@@ -14,7 +14,7 @@
 			
 				<?php
 					//Takes you to individual project page  
-					if ($slug !== "exercises" && $slug !== "v-exercises") { ?>
+					if ($slug !== "exercises") { ?>
 
 						<a href="?page=project&slug=<?=$slug?>">
 							<h2 class="loud-voice"><?=$title1?> <?=$title2?></h2>
@@ -32,15 +32,6 @@
 
 				<?php } ?>
 
-				<?php  
-					//Takes you to form v-exercises page, which does not have a slug
-					if ($slug == "v-exercises") { ?>
-						
-						<a href="?page=v-exercises">
-							<h2 class="loud-voice"><?=$title1?> <?=$title2?></h2>
-						</a>
-
-				<?php } ?>
 			</div>
 			
 			<ul class="languages">
