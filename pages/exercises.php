@@ -55,10 +55,10 @@
 	foreach ($exercises as $exercise) { 
 		if ($exercise["type"] !== "generic-text" and $exercise["type"] !== "language") {
 			$type = $exercise["type"];
-			$title = $exercise["title"];
+			$header = $exercise["header"];
 ?>
 			<form-exercise class="<?=$type?>">
-				<h2 class="attention-voice"><?=$title?></h2>
+				<h2 class="attention-voice"><?=$header?></h2>
 				
 				<ol class="exercises">
 					<?php foreach ($exercise["forms"] as $form) {
