@@ -11,7 +11,7 @@
 	},
 	{
 		"type": "calculations",
-		"title": "Calculations",
+		"header": "Calculations",
 		"forms": [
 			{
 				"title1": "Simple",
@@ -32,13 +32,13 @@
 	},
 	{
 		"type": "input-output",
-		"title": "Input/Output",
+		"header": "Input/Output",
 		"forms": [
 			{
-				"title1": "Simple",
-				"title2": "Math",
+				"title1": "Say",
+				"title2": "Hello",
 				"intro": "Easy arithmetic",
-				"slug": "simple-math"
+				"slug": "v-hello"
 			},
 			{
 				"title1": "Count",
@@ -49,7 +49,7 @@
 	},
 	{
 		"type": "decision-making",
-		"title": "Decision Making",
+		"header": "Decision Making",
 		"forms": [
 			{
 				"title1": "Tax",
