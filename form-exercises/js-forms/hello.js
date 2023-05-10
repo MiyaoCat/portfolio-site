@@ -23,22 +23,25 @@
 	</button>
 </form>
 
+<output></output>
+
 <script>
-	var $form = document.querySelector('#hello');
-	var $nameInput = document.querySelector("[name='name']");
+	let $form = document.querySelector('#hello');
+	let $nameInput = document.querySelector("[name='name']");
+	let $output = document.querySelector("output");
 	
+	$output.hidden = true;
+
 	$form.addEventListener('submit', function(myEvent) {
 		myEvent.preventDefault();
 	
 		console.log("You clicked submit");
 	
-		var myText = $nameInput.value;
+		let myText = $nameInput.value;
 		console.log("The input says " + myText);
 		
-	
-		var $output = document.createElement("output");
-		document.body.appendChild($output);
-	
+		$output.hidden = false;
+
 		$output.innerHTML = `<p class="normal-voice"> Hello, ${myText}. Nice to meet ya. </p>`;
 	});
 </script>

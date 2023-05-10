@@ -19,7 +19,7 @@
 </form>
 
 <output></output>
-<trest></trest>
+
 <script>
 
 let $form = document.querySelector('form');
