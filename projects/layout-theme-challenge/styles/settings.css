@@ -1,0 +1,29 @@
+
+html {
+	--black: #111111;
+	--white: #FFF;
+
+	--neutral-stuffs: gray;
+
+	--color: #5E321F;
+	--highlight: #aadee9;
+
+	--shadow: rgba(0,0,0,.8);
+
+	--corners: 10px; /* or whatevers */
+
+	--paper: var(--white);
+	--ink: var(--black);
+
+	--standard: 1140px;
+	--tight: 800px;
+	--wide: 98vw;
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		--paper: #231a1a;
+		--ink: #ffffe2;
+		--dark-paper: #1E1717;
+	}
+}

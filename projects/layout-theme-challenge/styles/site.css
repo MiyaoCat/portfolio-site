@@ -1,0 +1,83 @@
+/* 
+	BTW in case it isn't obvious... the whole PSSST-CSS idea is a joke 
+	like... (it's just CSS)
+*/
+
+/* P reset */
+@import 'preset.css';
+
+/* S etup */
+@import 'setup.css';
+
+/* S setings */
+@import 'settings.css';
+/*@import 'developer-styles.css';*/
+
+/* S tructure */
+@import 'structure.css';
+
+/* T ypography */
+@import 'typography.css';
+
+/* C omponents */
+@import 'components.css';
+
+/* S tuff (modules) */
+@import 'modules.css';
+
+/* S ections and more stuff */
+
+/* then other contextual styles */
+body {
+	background-color: var(--paper);
+	color: var(--ink);
+}
+
+inner-column {
+	padding: 0 5px;
+}
+
+section:is(.sign-up/*, .get-involved) inner-column*/ {
+	max-width: var(--tight);
+	/*max-width: var(--wide);*/
+}
+
+section.get-involved {
+	background-color: var(--white);
+}
+
+section.get-involved .button {
+	background-color: black;
+	color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+	section.sign-up {
+		background-color: var(--paper);
+		color: var(--ink);
+	}
+
+	section.get-involved {
+		background-color: var(--paper);
+		color: var(--ink);
+	}
+
+	section.sign-up .button {
+		background-color: var(--ink);
+		color: var(--black);
+		border: 1px solid black;
+	}
+
+	
+
+	section.get-involved .button {
+	background-color: var(--ink);
+	color: var(--black);
+	border: 1px solid black;
+	}
+
+	text-content .button {
+	background-color: var(--ink);
+	color: var(--black);
+	border: 1px solid black;
+}

@@ -1,0 +1,78 @@
+
+call-to-action {
+	display: block;
+	/*border: 4px solid orange;*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 4vh 0;
+	text-transform: uppercase;
+}
+
+call-to-action .button {
+	margin-top: 20px;
+}
+
+cta-trio {
+	display: block;
+}
+
+/*.symbol {
+	width: clamp(50px, 5vw, 180px);
+}*/
+
+cta-trio picture {
+	position: relative;
+	max-height: 250px;
+}
+
+cta-trio picture:hover {
+	border: 1px solid black;
+}
+
+cta-trio picture img {
+	transition: ease-in-out .2s;
+}
+cta-trio picture img:hover {
+	transform: scale(1.2);
+	transition: ease-in-out .5s;
+}
+/* - - FONT STYLE - - */
+cta-trio .loud-voice {
+	/*text-shadow: 0 0 5px black;*/
+	font-size: clamp(2.4rem, 4vw, 6rem);
+	color: white;
+}
+
+cta-trio .loud-voice {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+/* - - FONT DARK MODE - - */
+@media (prefers-color-scheme: dark) {
+	cta-trio .loud-voice {
+		color: var(--ink);
+	}
+}
+
+/* - - BIG SCREEN - - */
+@media (min-width: 600px) {
+	cta-trio {
+		display: flex;
+		flex-direction: row;
+	}
+
+	cta-trio picture {
+		max-height: 100%;
+	}	
+
+	cta-trio .loud-voice {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}

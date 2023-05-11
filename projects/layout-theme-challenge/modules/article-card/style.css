@@ -1,0 +1,184 @@
+
+.article-card {
+	display: block;	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.article-card text-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.article-card a {
+	margin-top: 20px;
+}
+
+/* - - MY CSS - - */
+.article-card picture  {
+	/*max-height: 450px;*/
+}
+
+picture {
+	border: 1px solid hsla(20, 60%, 60%, 0);
+}
+
+.size-chart {
+	display: flex;
+	flex-direction: row;
+}
+
+/* This is to prevent the page from moving down
+	on hover */
+.size-chart li { 
+	border: 1px solid hsla(20, 60%, 60%, 0);
+}
+.size-chart li:hover {
+	border-bottom: 1px solid black;
+}
+
+/* - - BORDER DARK-MODE - - */
+@media (prefers-color-scheme: dark) {
+	.size-chart li:hover {
+		border-bottom: 1px solid white;
+	}
+}
+
+.article-card  {
+	max-width: 300px;
+}
+
+.title {
+	margin-top: 25px;
+	margin-bottom: 5px;
+}
+
+/* - - BIG SCREEN - - */
+@media (min-width: 600px) {
+	.article-card {
+		align-items: flex-start;
+		max-width: 100%;
+	}
+
+	.article-card picture {
+		/*max-height: 100%;*/
+	}
+
+	.article-card text-content {
+		align-items: flex-start;
+		/*max-width: var(--standard);*/
+	}
+}
+
+/* - - COLOR HOVER ANIMATION- - */
+/*@media (hover: hover) {*/
+	picture {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.article-card picture:hover {
+		border: 1px solid black;
+	}
+
+	picture .color-swatches {
+		position: absolute;
+		top: 0;
+		transform: translate(0, -100%);
+		gap: 0;
+		transition: 1s;
+		/*display: flex;*/
+		/*flex-direction: column;*/
+	}
+
+	picture:hover .color-swatches {
+		transform: translate(0, 0);
+		opacity: 1;
+		transition: .5s;
+	}
+
+	.color:hover {
+		border: 1px solid black;
+	} 
+/*}*/
+
+/* - - COLOR SWATCHES- - */
+li .color {
+		max-width: 20px;
+		height: 37px;
+	}
+
+@media (min-width: 600px) {
+	li .color {
+		max-width: 23px;
+		height: 45px;
+	}
+}
+
+.color.pink {
+	background-color: pink;
+}
+.color.brown {
+	background-color: brown;
+}
+.color.blue {
+	background-color: blue;
+}
+.color.orange {
+	background-color: orange;
+}
+.color.black {
+	background-color: black;
+}
+.color.white {
+	background-color: white;
+}
+.color.red {
+	background-color: red;
+}
+.color.salmon {
+	background-color: salmon;
+}
+.color.wheat {
+	background-color: wheat;
+}
+.color.dodgerblue {
+	background-color: dodgerblue;
+}
+.color.lightblue {
+	background-color: lightblue;
+}
+.color.orangered {
+	background-color: orangered;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

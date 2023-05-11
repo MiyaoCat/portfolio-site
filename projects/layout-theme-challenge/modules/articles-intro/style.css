@@ -1,0 +1,31 @@
+
+articles-intro {
+	display: block;
+	padding: 1.5vh 0;
+	margin-top: 5vh;
+}
+
+article-grid {
+	display: block;
+	margin-top: 2vh;
+	margin-bottom: 10vh;
+}
+
+article-grid ul {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	grid-gap: 60px 20px;
+}
+
+articles-intro header {
+	max-width: 298px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* - - BIG SCREENS - - */
+
+@media (min-width: 600px) {
+	articles-intro header {
+		max-width: 100%;
+		}
+}

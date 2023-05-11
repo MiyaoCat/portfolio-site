@@ -1,0 +1,115 @@
+/* Should we pull in @fonts here? */
+html {
+	--sans-serif: Rubik, Helvetica;
+	--serif: Old Standard TT, Times New Roman;
+}
+
+a {
+	font-family: var(--sans-serif);
+	text-transform: uppercase;
+	font-weight: 200;
+	letter-spacing: .2rem;
+}
+
+
+a:hover {
+	text-decoration: underline;
+}
+.loud-voice	{
+	font-family: var(--serif);
+	font-style: italic;
+	text-transform: uppercase;
+	font-size: clamp(2rem, 7vw, 8rem);
+}
+
+.company-voice {
+	font-family: var(--serif);
+	font-style: italic;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+@media (min-width: 600px) {
+	.loud-voice {
+		font-weight: 700; /* or variable font */
+	}
+}
+
+.attention-voice	{
+	font-family: sans-serif;
+	font-size: clamp(1.2rem, 3vw, 1.7rem);
+	text-transform: uppercase;
+}
+
+/* - - ARTICLE CARD - - */
+.title {
+	font-family: var(--serif);
+	text-transform: uppercase;
+	font-size: clamp(1rem, 2vw, 1.4rem);
+	/*font-style: italic;*/
+}
+
+/* - - SITE MENU - - */
+.site-menu a {
+	font-size: .9rem;
+}
+
+.x-menu .strong-voice	{
+	font-family: var(--sans-serif);
+	font-size:  1.2rem;
+	text-transform: uppercase;
+}
+
+.x-menu a {
+	font-size: .9rem;
+}
+.calm-voice, p, li {
+	font-family: var(--sans-serif);
+	font-size: .8rem;
+	font-weight: 300;
+	line-height: 1.4;
+	letter-spacing: .2rem;
+}
+
+.calm-voice, articles-intro p {
+	font-family: var(--sans-serif);
+	font-size: clamp(.8rem 2vw 1.1rem);
+	font-weight: 300;
+	text-transform: uppercase;
+	line-height: 1.4;
+	letter-spacing: .2rem;
+}
+
+article-intro header h2, article-intro header p{
+	text-transform: uppercase;
+}
+@media (min-width: 600px) {
+	.calm-voice, p, li {
+		font-size: 1rem;
+		font-weight: 300;
+	}
+}
+
+:is(.calm-voice, p, li) em {
+	font-style: italic;
+}
+
+:is(.calm-voice, p, li) strong {
+	font-weight: 700;
+}
+
+/* these would be scoped to section or to an article element */
+/* this is just a loose setting for now */
+p + p {
+	margin-top: 1em;
+}
+
+h2 + p {
+	margin-top: 10px;
+}
+
+code {
+	font-family: monospace;
+	font-size: 1.1em;
+	color: green;
+}

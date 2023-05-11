@@ -3,7 +3,7 @@
 		<p class="normal-voice">Are you old enough to drive? Let's find out!</p>
 	</div>
 
-	<p class="normal-voice">Enter your age:</p>
+	<p class="normal-voice">Enter your age in years:</p>
 	
 	<input 
 		type="number"
@@ -11,9 +11,8 @@
 		
 		step="1"
 		placeholder="age"
-
 	>
-
+	<p class="calm-voice warning"></p>
 	<button type="submit" name="submitted">Submit</button>
 </form>
 
@@ -26,15 +25,20 @@
 $form = document.querySelector('form');
 $age = document.querySelector("[name='age']");
 
+let $warning = document.querySelector('.warning');
+let $output = document.querySelector('output');
+$output.hidden = true;
+
 $form.addEventListener('submit', function(event) {
 	event.preventDefault();
 
 	age = $age.value;
+	
+	$output.hidden = false;
+	
+	$warning.innerHTML = !age ? 'Please enter a number' : '';
 
-	let $output = document.createElement('output');
-	document.body.appendChild($output);
-
-	if (age == null || age == "" || age == 0) {
+	if (age == 0) {
 		$output.innerHTML = 
 			`<p class="normal-voice">You are unborn. So no, You can't drive.</p>`
 	} 
