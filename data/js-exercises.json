@@ -19,6 +19,11 @@
 				"slug": "simple-interest"
 			},
 			{
+				"title1": "Self-",
+				"title2": "Checkout",
+				"slug": "self-checkout"
+			},
+			{
 				"title1": "Simple",
 				"title2": "Math",
 				"slug": "simple-math"
