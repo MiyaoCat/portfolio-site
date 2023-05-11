@@ -44,8 +44,8 @@ $createPasswordForm.addEventListener('submit', function(event) {
 	let numberInput = $number.value;
 	let passwordInput = fruitInput + numberInput;	
 
-	let $warning1 = document.querySelector('.calm-voice.warning:nth-of-type(1)');	
-	let $warning2 = document.querySelector('.calm-voice.warning:nth-of-type(2)');
+	let $warning1 = document.querySelector('.warning:nth-of-type(1)');	
+	let $warning2 = document.querySelector('.warning:nth-of-type(2)');
 	let $warning3 = document.querySelector('password-enter p.warning');
 
 	
