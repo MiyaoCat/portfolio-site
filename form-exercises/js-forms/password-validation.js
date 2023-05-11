@@ -51,18 +51,20 @@ $createPasswordForm.addEventListener('submit', function(event) {
 	
  	$warning3.hidden = true;
 
-	if (!fruitInput) {
-		$warning1.innerHTML = 'No fruit entered';
-	} 
-	if (fruitInput) {
-		$warning1.innerHTML = '';
-	} 
-	if (!numberInput) {
-		$warning2.innerHTML = 'Need a number';
-	} 
-	if (numberInput) {
-		$warning2.innerHTML = '';
-	} 
+ 	$warning1.innerHTML = !fruitInput ? 'No fruit entered' : '';
+ 	$warning2.innerHTML = !numberInput ? 'Need a number' : '';
+	// if (!fruitInput) {
+	// 	$warning1.innerHTML = 'No fruit entered';
+	// } 
+	// if (fruitInput) {
+	// 	$warning1.innerHTML = '';
+	// } 
+	// if (!numberInput) {
+	// 	$warning2.innerHTML = 'Need a number';
+	// } 
+	// if (numberInput) {
+	// 	$warning2.innerHTML = '';
+	// } 
 	if (fruitInput && numberInput) {
 		$warning1.innerHTML = '';
 		$warning2.innerHTML = '';

@@ -15,7 +15,7 @@
 					<input 
 						type="number" 
 						name="quantity" 
-						value="<?=$quantity?>"
+						value=""
 						min="0"
 						placeholder="0"
 						label="write your number"
@@ -30,7 +30,7 @@
 					<input 
 						type="number" 
 						name="price" 
-						value="<?=$price?>"
+						value=""
 						step= '0.01'
 						min='0'
 						placeholder="0.00">
@@ -50,7 +50,7 @@
 					<input 
 						type="number" 
 						name="quantity2" 
-						value="<?=$quantity2?>"
+						value=""
 						min="0"
 						placeholder="0"
 						label="write your number">
@@ -64,7 +64,7 @@
 					<input 
 						type="number" 
 						name="price2" 
-						value="<?=$price2?>"
+						value=""
 						step= '0.01'
 						min='0'
 						placeholder="0.00">
@@ -85,7 +85,7 @@
 					<input 
 						type="number" 
 						name="quantity3" 
-						value="<?=$quantity3?>"
+						value=""
 						min="0"
 						placeholder="0"
 						label="write your number">
@@ -99,7 +99,7 @@
 					<input 
 						type="number" 
 						name="price3" 
-						value="<?=$price3?>"
+						value=""
 						step= '0.01'
 						min='0'
 						placeholder="0.00">		
@@ -118,7 +118,7 @@
 					<input 
 						type="number" 
 						name="quantity4" 
-						value="<?=$quantity4?>"
+						value=""
 						min="0"
 						placeholder="0"
 						label="write your number">
@@ -131,7 +131,7 @@
 					<input 
 						type="number" 
 						name="price4" 
-						value="<?=$price4?>"
+						value=""
 						step= '0.01'
 						min='0'
 						placeholder="0.00">				
@@ -143,7 +143,7 @@
 	</div>
 
 	<tax>
-		<p class="normal-voice">The Washington State sales tax rate is %</p>
+		<p class="normal-voice">The Washington State sales tax rate is <span id='taxRate'></span>%.</p>
 	</tax>
 
 	<button type="submit" name="submitted">Submit</button>
@@ -179,6 +179,10 @@ var $price3 = document.querySelector("[name='price3']");
 var $quantity4 = document.querySelector("[name='quantity4']");
 var $price4 = document.querySelector("[name='price4']");
 
+const taxRate = .1025;
+const taxPretty = .1025*100;
+document.getElementById('taxRate').textContent = taxPretty;
+
 $selfCheckout.addEventListener('submit', function(myEvent) {
 	myEvent.preventDefault();
 	console.log("button pushed");
@@ -199,6 +203,7 @@ $selfCheckout.addEventListener('submit', function(myEvent) {
 	const subTotalFormatted = subTotal.toLocaleString('en-US');
 
 	const taxRate = .1025;
+	document.getElementById('taxRate').textContent = taxRate;
 
 	const taxTotal = (subTotal * taxRate).toFixed(2).toLocaleString('en-US');
 	const taxTotalFormatted = taxTotal.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
