@@ -40,14 +40,19 @@
 				"slug": "simple-math"
 			},
 			{
-				"title1": "Say",
-				"title2": "Hello",
-				"slug": "hello"
-			},
-			{
 				"title1": "Count",
 				"title2": "Characters",
 				"slug": "count-characters"
+			},
+			{
+				"title1": "Pizza",
+				"title2": "Party",
+				"slug": "pizza-party"
+			},
+			{
+				"title1": "Say",
+				"title2": "Hello",
+				"slug": "hello"
 			}
 		]
 	},
@@ -55,6 +60,11 @@
 		"type": "decision-making",
 		"header": "Decision Making",
 		"forms": [
+			{
+				"title1": "Driving",
+				"title2": "Age",
+				"slug": "driving-age"
+			},
 			{
 				"title1": "Temp",
 				"title2": "Converter",
