@@ -24,9 +24,9 @@
 				"slug": "self-checkout"
 			},
 			{
-				"title1": "Simple",
-				"title2": "Math",
-				"slug": "simple-math"
+				"title1": "Tip",
+				"title2": "Calculator",
+				"slug": "tip-calculator"
 			}
 		]
 	},
@@ -34,6 +34,11 @@
 		"type": "input-output",
 		"header": "Input/Output",
 		"forms": [
+			{
+				"title1": "Simple",
+				"title2": "Math",
+				"slug": "simple-math"
+			},
 			{
 				"title1": "Say",
 				"title2": "Hello",

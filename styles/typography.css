@@ -15,7 +15,7 @@ a {
 /* Main header or banner text or similar */
 .screaming-voice {
 	font-family: var(--sans-serif);
-	font-size: clamp(40px, 8vw, 125px);
+	font-size: clamp(40px, 8vw, 110px);
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: -.045em;
