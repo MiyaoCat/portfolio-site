@@ -54,8 +54,14 @@ $createPasswordForm.addEventListener('submit', function(event) {
 	if (!fruitInput) {
 		$warning1.innerHTML = 'No fruit entered';
 	} 
+	if (fruitInput) {
+		$warning1.innerHTML = '';
+	} 
 	if (!numberInput) {
 		$warning2.innerHTML = 'Need a number';
+	} 
+	if (numberInput) {
+		$warning2.innerHTML = '';
 	} 
 	if (fruitInput && numberInput) {
 		$warning1.innerHTML = '';
@@ -76,6 +82,7 @@ $createPasswordForm.addEventListener('submit', function(event) {
 	if (passwordInput != "" && password === passwordInput) {
 		$output.hidden = false;
 		$output.innerHTML = `<p class="normal-voice">${password} is correct! You may enter!`;
+		$warning3.innerHTML = '';
 	}	
 
 	if (password != passwordInput && password != "") {
