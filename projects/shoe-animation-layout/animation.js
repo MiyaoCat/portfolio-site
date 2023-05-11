@@ -105,7 +105,8 @@ pageTimeline
 		ease: "elastic.out(1, 0.5)",
 	})
   	.from('.shoe-detail', {
-		y: 600,
+  		opacity: 0,
+		y: 400,
 	})
 	.to('.explore', {
    	rotation: 360,
