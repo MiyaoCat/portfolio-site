@@ -16,26 +16,16 @@
 </form>
 
 <output>
-	<ul>
-		<li>
-			<p class="normal-voice">You entered:<br>"<?= $string ?>"</p>
-		</li>
-		<li>
-			<p class="normal-voice">Characters without spaces: <?=$length?></p>
-		</li>
-		<li>
-			<p class="normal-voice">Characters with spaces: <?= $lengthWithSpaces ?></p>
-		</li>
-		<li>
-			<p class="normal-voice">Word count: <?= $word ?></p>
-		</li>
-	</ul>
+
 </output>
 
 <script>
 var $countChar = document.querySelector('form');
 
 var $string = document.querySelector("[name='string']");
+let $output = document.querySelector('.js-exercise output');
+$output.hidden = true;
+
 
 $countChar.addEventListener('submit', function(event) {
 	event.preventDefault();
@@ -44,15 +34,12 @@ $countChar.addEventListener('submit', function(event) {
 	let stringLength = stringInput.length;
 	let stringNoSpace = stringInput.replace(/ /g, "");
 	let stringNoSpaceLength = stringNoSpace.length;
-
+	$output.hidden = false;
 	function wordCount(string){
 		return string.trim().split(/\s+/).length;
 	}
 
 	let words = wordCount(stringInput);
-
-	let $output = document.createElement("output");
-	document.body.appendChild($output);
 
 	$output.innerHTML = `<p class="normal-voice">You entered: "<span id="words">${stringInput}</span>".</p> 
 

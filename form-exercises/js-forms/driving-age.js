@@ -18,7 +18,6 @@
 
 
 <output>
-	<p class="normal-voice"></p>
 </output>
 
 <script>
@@ -26,7 +25,7 @@ $form = document.querySelector('form');
 $age = document.querySelector("[name='age']");
 
 let $warning = document.querySelector('.warning');
-let $output = document.querySelector('output');
+let $output = document.querySelector('.js-exercise' 'output');
 $output.hidden = true;
 
 $form.addEventListener('submit', function(event) {
