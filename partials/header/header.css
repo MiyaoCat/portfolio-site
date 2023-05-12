@@ -3,7 +3,7 @@
 	grid-column: 1 / 14;
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 	margin-top: 5px;
 	position: sticky;
 	top: 0;
@@ -34,7 +34,7 @@ nav li {
 }
 
 nav li:hover {
-	transform: translateY(40px);
+	transform: translateY(38px);
 	transition: .5s ease-in-out;
 }
 
@@ -76,7 +76,7 @@ nav a.active {
 	}
 
 	.resume .site-header {
-		background-color: var(--background);
+/*		background-color: var(--background);*/
 	}
 	
 	.site-header .logo {
@@ -89,7 +89,7 @@ nav a.active {
 	}
 
 	nav {
-		background-color: var(--paper);
+		background: var(--paper-light);
 		grid-column: 10 / 14;
 		margin-left: -4px;
 		display: flex;

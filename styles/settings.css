@@ -15,6 +15,7 @@ html {
 	--wide: 98vw;
 
 	--paper: hsla(0, 0%, 100%, 1.00);
+	--paper-light: hsla(0, 0%, 100%, .7);
 	--background: hsla(50, 100%, 86%, 1);
 
 	--ink: black;
@@ -38,6 +39,7 @@ html {
 @media (prefers-color-scheme: dark) {
 	html {
 		--paper: hsla(0, 0%, 4%, 1);
+		--paper-light: hsla(0, 0%, 4%, .7);
 		--ink: hsla(50, 70%, 80%, 1);
 		--highlight: #6200ee;
 		--background: hsla(189, 20%, 12%, 1);
