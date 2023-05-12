@@ -6,7 +6,7 @@
 	},
 	{
 		"type": "generic-text",
-		"content": "<p class='normal-voice'>We worked through the book, Exercises for Programmers to build out each form. This book is great because it's language agnostic and tests your ability to use functions and logic to create each form. I think it's great practice when learning any new language. <br><br> Now click on a form and test them out!</p>"
+		"content": "<p class='normal-voice'>This is a collection of forms I built from the book, Exercises for Programmers, by Ben Hogan. This is a great book to practice and learn from as it's language agnostic and it tests your ability to use logic and function with the new language.<br><br> Select a language then select a form.</p>"
 	},
 	{
 		"type": "calculations",
