@@ -5,6 +5,11 @@
 
 .template-1 .faqs .heading .header {
 	margin-bottom: 16px;
+	text-align: center;
+}
+
+.template-1 .faqs .teaser {
+	text-align: center;
 }
 
 .template-1 .faqs .heading + .faqs-accordion {

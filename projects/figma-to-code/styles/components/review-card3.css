@@ -44,7 +44,11 @@
 }
 
 .template-3 client-details .contact {
+	font-size: 16px;
 	color: var(--ink-medium);
+	display: flex;
+	align-items: center;
+	gap: 10px;
 }
 
 @media (min-width: 600px) {
