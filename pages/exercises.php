@@ -35,13 +35,13 @@
 
 <div id="languages">
 	<form method="POST">
-		<label>
+		<label class="alert-voice">
 			<input type="radio" name="language" value="php" id="php" <?=isChecked($languageType, "php")?> > PHP
 		</label>
-		<label>
+		<label class="alert-voice">
 			<input type="radio" name="language" value="javascript" id="javascript" <?=isChecked($languageType, "javascript")?>> JavaScript
 		</label>
-		<label>
+		<label class="alert-voice">
 			<input type="radio" name="language" value="vue" id="vue" <?=isChecked($languageType, "vue")?>> Vue
 		</label>
 
