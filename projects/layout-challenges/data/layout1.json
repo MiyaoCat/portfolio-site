@@ -47,7 +47,7 @@
 
 	{
 		"type": "image",
-		"img": "./images/layout1/dark-blue.png"
+		"img": "./images/layout1/gold.png"
 	},
 
 	{
@@ -62,6 +62,6 @@
 
 	{
 		"type": "image",
-		"img": "./images/layout1/black.png"
+		"img": "./images/layout1/grey.png"
 	}
 ]
