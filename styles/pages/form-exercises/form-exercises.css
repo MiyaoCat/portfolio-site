@@ -1,5 +1,35 @@
 #languages {
 	grid-row: 4;
+	margin-bottom: 15px;
+}
+#languages form {
+ 	display: grid;
+ 	grid-template-areas:
+ 		"php javascript vue"
+ 		"button button button";
+ 	gap: 20px;
+}
+
+#languages label {
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+	justify-content: flex-start;
+}
+#languages label:nth-of-type(2) {
+	justify-content: center;
+}
+#languages label:nth-of-type(3) {
+	justify-content: flex-end;
+}
+
+#languages button {
+	grid-column: 1 / 4;
+	max-width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+/*	border: 3px solid var(--trim);
+	box-shadow: 5px 5px var(--ink);*/
 }
 input[type="radio"] {
   /* Add if not using autoprefixer */
@@ -7,35 +37,33 @@ input[type="radio"] {
   appearance: none;
   /* For iOS < 15 to remove gradient background */
   background-color: ;
-  margin: 0;
+  margin: 5px;
   font: inherit;
   color: var(--trim);
   width: 1.15em;
   height: 1.15em;
-
   display: grid;
   grid-gap: 20px;
   place-content: center;
 }
 
-input[type="radio"]::before {
-  content: "";
+/*input[type="radio"]:before {
+  content: "test";
   width: 0.65em;
   height: 0.65em;
   border-radius: 50%;
   transform: scale(0);
-  transition: 120ms transform ease-in-out;
-  box-shadow: inset 1em 1em var(--form-control-color);
-}
+}*/
 
 input[type="radio"]:checked {
 	content: "";
-	transform: scale(3);
+	background-color: var(--ink);
+	transform: scale(1);
 }
 
 input[type="radio"]:focus {
-  outline: max(2px, 0.15em) solid currentColor;
-  outline-offset: max(2px, 0.15em);
+ /* outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);*/
 }
 
 .exercise heading, .v-exercise heading {
