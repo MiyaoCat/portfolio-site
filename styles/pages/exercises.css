@@ -28,7 +28,7 @@ form-exercise .exercises li {
 	margin-bottom: 15px;
 	text-align: center;
 	line-height: 1.2rem;
-	border: 3px solid var(--trim);
+	border: 3px solid var(--ink);
 	box-shadow: 5px 5px var(--contrast);
 	background: var(--background);
 	max-width: 18rem;
@@ -113,6 +113,6 @@ form-exercise .exercises li:hover {
 
 @media (prefers-color-scheme: dark) {
 	form-exercise .exercises li {
-		box-shadow: 5px 5px var(--ink);
+		box-shadow: 5px 5px var(--trim);
 	}
 }

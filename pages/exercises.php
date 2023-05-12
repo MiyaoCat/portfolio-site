@@ -45,7 +45,7 @@
 			<input type="radio" name="language" value="vue" id="vue" <?=isChecked($languageType, "vue")?>> Vue
 		</label>
 
-		<button type="submit" name="submitted">Submit</button>
+		<button type="submit" name="submitted">Select</button>
 	</form>
 </div>
 
