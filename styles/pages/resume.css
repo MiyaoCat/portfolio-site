@@ -195,13 +195,13 @@ sub-header.skill {
 
 @media (min-width: 700px) {
 	.resume sub-header {
-		grid-column: 2 / 10;
+		grid-column: 3 / 10;
 		margin-left: 0;
 	}
 
 	.resume h2 {
 		grid-row: 3;
-		grid-column: 2 / 10;
+		grid-column: 3 / 10;
 		margin-left: 10px;
 		margin-bottom: 0;
 		padding-bottom: 0;
@@ -209,7 +209,7 @@ sub-header.skill {
 
 	/* - - EXPERIENCE BOXES - - */
 	.job {
-		grid-column: 2 / 10;
+		grid-column: 3 / 10;
 		margin-left: 10px;
 		margin-right: 30px;
 		padding: 10px;
