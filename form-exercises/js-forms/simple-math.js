@@ -36,7 +36,8 @@
 	let $number2 = document.querySelector("[name='number2']");
 
 	//hide output
-	document.querySelector('output').hidden = true;
+	let $output = document.querySelector('.js-exercise output');
+	$output.hidden = true;
 
 	//Listen for the submit button to click
 	$simpleMath.addEventListener('submit', function(myEvent) {

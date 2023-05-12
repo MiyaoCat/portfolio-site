@@ -41,7 +41,7 @@
 </form>	
 	
 <output>
-	<p class="normal-voice"></p>		
+	
 </output>
 
 
@@ -50,6 +50,8 @@ var $form = document.querySelector('form');
 
 var $people = document.querySelector("[name='people']");
 var $pizza = document.querySelector("[name='pizza']");
+let $output = document.querySelector('.js-exercise output');
+$output.hidden = true;
 
 $form.addEventListener('submit', function(event) {
 	event.preventDefault() 
@@ -60,10 +62,9 @@ $form.addEventListener('submit', function(event) {
 
 	let slicesPerPerson = Math.floor(slices / people);
 	let remainder = (slices % people);
-
+	$output.hidden = false;
 	console.log("people: " + people + " pizzas: " + pizza + " slices: " + slices + " slicesPP: " + slicesPerPerson + " remainder: " + remainder);
 
-	let $output = document.createElement('output');
 	document.body.appendChild($output);
 	$output.innerHTML = `
 		<p class="normal-voice">With ${people} people attending, there will be ${slicesPerPerson} slices per person with ${remainder} slices left over.</p>`

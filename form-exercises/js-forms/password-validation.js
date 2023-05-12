@@ -30,7 +30,7 @@
 let $createPasswordForm = document.querySelector('form');
 let $fruit = document.querySelector("[name='fruit']");
 let $number = document.querySelector("[name='number']");
-let $output = document.querySelector("output");
+let $output = document.querySelector(".js-exercise output");
 let $passwordOutput = document.querySelector(".password-output");
 let $passwordEnter = document.querySelector("password-enter");
 

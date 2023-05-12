@@ -28,7 +28,7 @@
 <script>
 	let $form = document.querySelector('#hello');
 	let $nameInput = document.querySelector("[name='name']");
-	let $output = document.querySelector("output");
+	let $output = document.querySelector('.js-exercise output');
 	
 	$output.hidden = true;
 

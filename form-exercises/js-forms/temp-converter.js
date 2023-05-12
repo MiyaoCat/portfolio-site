@@ -24,7 +24,8 @@
 
 let $form = document.querySelector('form');
 let $temp = document.querySelector("[name='temp']");
-document.querySelector('output').hidden = true;
+let $output = document.querySelector('.js-exercise output');
+$output.hidden = true;
 
 $form.addEventListener('submit', function(event) {
 	event.preventDefault();
