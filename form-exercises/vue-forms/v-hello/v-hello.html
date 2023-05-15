@@ -1,19 +1,12 @@
 
-<form action=''>
-
-	<input v-model="name">
-	
-	<button v-on:click="yell">Enter</button>
-
-	<output v-if='message' v-html='message'></output>
+<form data-vue="hello">
+	<div class='instructions'>Type your name in the text field to receive a greeting. </div>
+	<input v-model="name" placeholder="Enter your name">
 </form>
 
-<output>
-	
-</output>
-
+<output data-vue="hello-output" v-if="computedMessage">{{computedMessage}}</output>
 
 <footer>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
-	<script src="script.js"></script>
+	<script src="./../form-exercises/vue-forms/v-hello/script.js"></script>
 </footer>

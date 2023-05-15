@@ -5,7 +5,7 @@ new Vue({
 	
 	data() {
 		return {
-			string: "test",
+			string: "",
 		};
 	},
 	
