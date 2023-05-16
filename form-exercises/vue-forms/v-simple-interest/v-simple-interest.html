@@ -11,10 +11,16 @@
 		<label for="years">Enter the number of years you'll invest:</label>
 		<input name = "years" type="number" min="0" v-model="years">	
 	<!-- </form> -->
-	<button @click=messageHandler()>Cha Ching!</button>
+
 	
 </form>
-<output data-vue="outputSimpleInterest" v-if="computedMessage">{{computedMessage}} </output>
+
+<output data-vue="outputSimpleInterest" v-if="computedMessage">
+	{{computedMessage}} 
+	<p class='normal-voice'>Interest earned: </p>
+	<p class='normal-voice'>Total Return: {{computedYears}}</p>
+</output>
+
 <footer>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
 	<script src="./../form-exercises/vue-forms/v-simple-interest/script.js"></script>
