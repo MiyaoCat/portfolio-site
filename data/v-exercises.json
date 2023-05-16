@@ -54,6 +54,11 @@
 				"title1": "Mad",
 				"title2": "Libs",
 				"slug": "v-mad-libs"
+			},
+			{
+				"title1": "Simple",
+				"title2": "Math",
+				"slug": "v-simple-math"
 			}
 		]
 	},
