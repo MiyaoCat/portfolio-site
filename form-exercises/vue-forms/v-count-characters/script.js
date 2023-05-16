@@ -55,13 +55,15 @@ new Vue({
 
 new Vue({
 	el: '[data-vue="outputChar"]',
-		data() {
-			return {
-				computedMessage: '',
-				countWithSpaces: '',
-				computedWordCount: '',
+	
+	data() {
+		return {
+			computedMessage: '',
+			countWithSpaces: '',
+			computedWordCount: '',
 		};
 	},
+	
 	mounted() {
 		// Listen to the computed message changed event
 		bus.$on('computed-msg-changed', function(newValue) {

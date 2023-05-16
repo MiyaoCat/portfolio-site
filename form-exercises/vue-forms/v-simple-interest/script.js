@@ -1,9 +1,10 @@
+const bus = new Vue();
+
 new Vue({
 	el: "[data-vue='simpleInterest']",
 	
 	data() {
 		return {
-			title: "Simple Interest",
 			instructions: `
 				<p>Let's see how much money you can make by investing with Bernie Madoff. Note, this does not calculate compound interest.</p>`,
 			principal: "",
@@ -20,8 +21,7 @@ new Vue({
 		interestEarned() {
 			return this.principal*this.interestRate/100*this.years;
 		},
-		message(event) {
-			event.preventDefault();
+		message() {
 			var noPrincipal = (this.principal == "" || this.principal == 0);
 			var noInterestRate = (this.interestRate == "" || this.interestRate == 0);
 			var noYears = (this.years == "" || this.years == 0);
@@ -56,8 +56,11 @@ new Vue({
 			var totalFormatted = total.toLocaleString("en-us", {maximumFractionDigits: 2, minimumFractionDigits: 2});
 			
 			if (this.principal > 0 && this.interestRate > 0 && this.years > 0) {
-				return `After <span>${yearsFormatted}</span> year(s) you will have earned <span>$${interestFormatted}</span> in interest for a total return of <span>$${totalFormatted}</span>.`;
+				return `After ${yearsFormatted} year(s) you will have earned ${interestFormatted} in interest for a total return of ${totalFormatted}.`;
 			}		
+		},
+		shouldShowMessage() {
+			return this.showMessage;
 		}
 	},
 	
@@ -65,6 +68,43 @@ new Vue({
 		messageHandler(event) {
 			event.preventDefault();
 			this.showMessage = true;
-		}		
-	}
+			bus.$emit("computedMessageChanged", this.message);		}		
+	},
+
+	watch: {
+		message(newValue) {
+			bus.$emit("computedMessageChanged", newValue);
+		}
+	},
 });
+
+
+new Vue({
+	el: "[data-vue='outputSimpleInterest']",
+	
+	data() {
+		return {
+			computedMessage: "",
+			shouldShowMessage: true,
+		}
+	},
+	computed: {
+    displayMessage() {
+      return this.shouldShowMessage ? this.computedMessage : "";
+    },
+  },
+	mounted() {
+		bus.$on("computedMessageChanged", (newValue) => {
+			this.computedMessage = newValue;
+		});
+	}
+})
+
+
+
+
+
+
+
+
+

@@ -38,10 +38,11 @@ new Vue({
 
 new Vue({
 	el: "[data-vue='hello-output']",
-		data() {
-			return {
-				computedMessage: "",
-			};
+		
+	data() {
+		return {
+			computedMessage: "",
+		};
 	},
 
 	mounted() {
