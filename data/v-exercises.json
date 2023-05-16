@@ -44,6 +44,11 @@
 				"title1": "Count",
 				"title2": "Characters",
 				"slug": "v-count-characters"
+			},
+			{
+				"title1": "Print",
+				"title2": "Quotes",
+				"slug": "v-print-quotes"
 			}
 		]
 	},

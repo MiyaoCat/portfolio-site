@@ -1,4 +1,4 @@
-<main data-vue='printQuote'>
+<form data-vue='printQuote'>
 	<h1>{{title}}</h1>	
 
 	<label for="author">Enter Author:</label>
@@ -7,6 +7,14 @@
 	<label for="quote">Enter Quote:</label>
 	<input name="quote" v-model='quote'>
 
-	<output v-html="message">
-	</output>
-</main>
+	
+</form>
+
+<output data-vue="outputPrintQuote" v-if="computedMessage">
+	{{computedMessage}}
+</output>
+
+<footer>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+	<script src="./../form-exercises/vue-forms/v-print-quotes/script.js"></script>
+</footer>

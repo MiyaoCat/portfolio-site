@@ -57,7 +57,7 @@ new Vue({
 			var totalFormatted = total.toLocaleString("en-us", {maximumFractionDigits: 2, minimumFractionDigits: 2});
 			
 			if (this.principal > 0 && this.interestRate > 0 && this.years > 0) {
-				return `<After ${yearsFormatted} year(s) you will have earned $${interestFormatted} in interest for a total return of $${totalFormatted}.`;
+				return `After ${yearsFormatted} year(s) you will have earned $${interestFormatted} in interest for a total return of $${totalFormatted}.`;
 			}	
 		},	
 		yearsMessage() {

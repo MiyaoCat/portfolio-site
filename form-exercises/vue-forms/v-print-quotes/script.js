@@ -1,3 +1,5 @@
+const bus = new Vue();
+
 new Vue({
 	el: "[data-vue='printQuote']",
 	
@@ -12,8 +14,30 @@ new Vue({
 	computed: {
 		message() {
 			if (this.quote && this.author) {
-				return `<span>${this.author}</span> once said <span>"${this.quote}"</span>.`;
+				return `${this.author} once said "${this.quote}".`;
 			}
+		}
+	},
+
+	watch: {
+		message(newValue) {
+			bus.$emit('computed-message-linked', newValue);
 		}
 	}
 });
+
+new Vue({
+	el: "[data-vue='outputPrintQuote']",
+
+	data() {
+		return {
+			computedMessage: "",
+		}
+	},
+
+	mounted() {
+		bus.$on("computed-message-linked", function(newValue) {
+			this.computedMessage = newValue;
+		}.bind(this));
+	}
+})
