@@ -49,6 +49,11 @@
 				"title1": "Print",
 				"title2": "Quotes",
 				"slug": "v-print-quotes"
+			},
+			{
+				"title1": "Mad",
+				"title2": "Libs",
+				"slug": "v-mad-libs"
 			}
 		]
 	},
