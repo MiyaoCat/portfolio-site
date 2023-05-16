@@ -1,24 +1,20 @@
-	<p class="instructions" v-html='instructions'></p>
+
 <form data-vue='simpleInterest'>
-	<label for="principal">Enter your principal investment:</label>
-	<input name="principal" type="number" min="0" v-model='principal'>
+	<p class="instructions" v-html='instructions'></p>
+	<!-- <form data-vue='simpleInterest'> -->
+		<label for="principal">Enter your principal investment:</label>
+		<input name="principal" type="number" min="0" v-model='principal'>
+		
+		<label for="interestRate">Enter the interest rate of your investment:</label>
+		<input name = "interestRate" type="number" min="0" v-model="interestRate">	
+		
+		<label for="years">Enter the number of years you'll invest:</label>
+		<input name = "years" type="number" min="0" v-model="years">	
+	<!-- </form> -->
+	<button @click=messageHandler()>Cha Ching!</button>
 	
-	<label for="interestRate">Enter the interest rate of your investment:</label>
-	<input name = "interestRate" type="number" min="0" v-model="interestRate">	
-	
-	<label for="years">Enter the number of years you'll invest:</label>
-	<input name = "years" type="number" min="0" v-model="years">	
-
-	<button type="button" @click=messageHandler($event)>Cha Ching!</button>
 </form>
-
-	
-
-<output data-vue='outputSimpleInterest' v-if="shouldShowMessage"> 
-	<p>{{ displayMessage }}</p>
-</output>
-
-
+<output data-vue="outputSimpleInterest" v-if="computedMessage">{{computedMessage}} </output>
 <footer>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
 	<script src="./../form-exercises/vue-forms/v-simple-interest/script.js"></script>
