@@ -40,14 +40,20 @@ new Vue({
 
       if (this.length > 0 && this.width > 0) {
         this.userInputs = `You entered: ${this.length} feet length and ${this.width} feet width.`;
-        this.outputAreaMsg = `Your room is ${areaInFeet} 🟪🦶 or ${areaInMeters} 🟩 meters.`;
-      } else {
-        this.userInputs = "";
-        this.outputAreaMsg = "";
-      }
+        this.outputAreaMsg = `Your room is ${areaInFeet} square feet or ${areaInMeters} square meters.`;
+      } 
+      if (this.length == "" && this.width > 0 ) {
+				this.outputAreaMsg = "no length";
+		} 
+		if (this.width == "" && this.length > 0 ) {
+			this.outputAreaMsg = "no width";
+		} 
+		if (this.width == "" && this.length == "" ) {
+			this.outputAreaMsg = "We need numbers!"
+		} 
     },
 	},
-	
+
 	watch: {
 		outputAreaMsg(newValue) {
 			bus.$emit('computed-message', newValue)

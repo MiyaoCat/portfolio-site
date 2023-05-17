@@ -471,8 +471,10 @@
 	}	
 }
 
-
-
+/*- - AREA OF ROOM - - - - - - - - - - - - - - - - - - - */
+.v-area-of-room.heading .title2 {
+	max-width: 100%;
+}
 
 
 
