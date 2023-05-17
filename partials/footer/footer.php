@@ -12,8 +12,8 @@
 	<a href="?page=exercises">Exercises</a>
 	</footer>
 
-<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
-<!-- <script src="./../form-exercises/vue-forms/v-count-characters/script.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script> -->
+
 </body>
 
 <script>
