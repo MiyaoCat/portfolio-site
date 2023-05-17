@@ -1,0 +1,21 @@
+<p class='alert-voice' style="grid-row:6; grid-column: 2 /10"><a href='"'>Back</a></p>
+<form data-vue='pizzaParty'>
+	<p class="instructions" v-html='instructions'></p>
+	<label for="people">How many people will be attending?</label>
+	<input type="number" min="0" name="people" v-model='people'>
+
+	<label for="pizzas">How many pizzas will there be?</label>
+	<input type="number" min="0" name="pizzas" v-model='pizzas'>
+	
+	<p class="userInput" v-html="userInputs">You entered: </p>
+	
+</form>
+
+<output data-vue='outputPizzaMessage' v-if='outputPizzaMsg'> 
+	<p class='normal-class'>{{outputPizzaMsg}}</p>
+</output>
+
+<footer>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+	<script src="./../form-exercises/vue-forms/v-pizza-party/script.js"></script>
+</footer>

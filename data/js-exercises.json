@@ -27,6 +27,11 @@
 				"title1": "Tip",
 				"title2": "Calculator",
 				"slug": "tip-calculator"
+			},
+			{
+				"title1": "Pizza",
+				"title2": "Party",
+				"slug": "pizza-party"
 			}
 		]
 	},
@@ -43,11 +48,6 @@
 				"title1": "Count",
 				"title2": "Characters",
 				"slug": "count-characters"
-			},
-			{
-				"title1": "Pizza",
-				"title2": "Party",
-				"slug": "pizza-party"
 			},
 			{
 				"title1": "Say",
