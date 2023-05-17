@@ -14,6 +14,11 @@
 		"header": "Calculations",
 		"forms": [
 			{
+				"title1": "Area",
+				"title2": "of Room",
+				"slug": "v-area-of-room"
+			},
+			{
 				"title1": "Simple",
 				"title2": "Interest",
 				"slug": "v-simple-interest"
@@ -21,12 +26,12 @@
 			{
 				"title1": "Self-",
 				"title2": "Checkout",
-				"slug": "self-checkout"
+				"slug": "v-self-checkout"
 			},
 			{
 				"title1": "Tip",
 				"title2": "Calculator",
-				"slug": "tip-calculator"
+				"slug": "v-tip-calculator"
 			}
 		]
 	},
@@ -69,22 +74,22 @@
 			{
 				"title1": "Tax",
 				"title2": "Calculator",
-				"slug": "tax-calculator"
+				"slug": "v-tax-calculator"
 			},
 			{
 				"title1": "Driving",
 				"title2": "Age",
-				"slug": "driving-age"
+				"slug": "v-driving-age"
 			},
 			{
 				"title1": "Temp",
 				"title2": "Converter",
-				"slug": "temp-converter"
+				"slug": "v-temp-converter"
 			},
 			{
 				"title1": "Password",
 				"title2": "Validation",
-				"slug": "password-validation"
+				"slug": "v-password-validation"
 			}
 		]
 	}

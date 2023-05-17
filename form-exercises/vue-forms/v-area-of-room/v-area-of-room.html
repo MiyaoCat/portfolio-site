@@ -1,0 +1,20 @@
+<form data-vue='areaOfRoom'>
+	<h1>{{description}}</h1>
+	<label for="length">What is the length of the room in feet?</label>
+	<input type="number" min="0" name="length" v-model='length'>
+
+	<label for="width">What is the width of the room in feet?</label>
+	<input type="number" min="0" name="width" v-model='width'>
+	
+	<button v-on:click.prevent="outputMessage">Return</button>
+</form>
+
+<output data-vue="outputAreaOfRoom" v-if="outputAreaMsg"> 
+	{{outputAreaMsg}}
+</output>
+
+
+<footer>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+	<script src="./../form-exercises/vue-forms/v-area-of-room/script.js"></script>
+</footer>
