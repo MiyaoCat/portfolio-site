@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="styles/site.css">
 </head>
-
+	
 <body class="<?=$page?> <?=pageTemplateClass($pageData)?>">
 	<div class="background"></div>
 
