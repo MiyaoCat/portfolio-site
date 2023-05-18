@@ -15,5 +15,6 @@
 <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script> -->
 
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14" type="text/javascript"></script>
+	<script src="./../form-exercises/vue-forms/v-count-characters/script.js" type="text/javascript"></script>
 </html>
