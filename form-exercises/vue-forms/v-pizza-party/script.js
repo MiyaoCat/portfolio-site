@@ -13,7 +13,7 @@ new Vue({
 		};
 	},
 	
-	methods: {
+	computed: {
 		outputMessage() {
 			let people = parseFloat(this.people);
 			let pizzas = parseFloat(this.pizzas);
@@ -59,3 +59,10 @@ new Vue({
 		}.bind(this));
 	}
 })
+
+
+
+
+
+
+

@@ -24,19 +24,14 @@
 				"slug": "v-simple-interest"
 			},
 			{
-				"title1": "Self-",
-				"title2": "Checkout",
-				"slug": "v-self-checkout"
-			},
-			{
-				"title1": "Tip",
-				"title2": "Calculator",
-				"slug": "v-tip-calculator"
-			},
-			{
 				"title1": "Pizza",
 				"title2": "Party",
 				"slug": "v-pizza-party"
+			},
+			{
+				"title1": "Paint",
+				"title2": "Calculator",
+				"slug": "v-paint-calculator"
 			}
 		]
 	},
