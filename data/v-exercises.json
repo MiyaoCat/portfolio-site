@@ -42,6 +42,11 @@
 				"title1": "Simple",
 				"title2": "Interest",
 				"slug": "v-simple-interest"
+			},
+			{
+				"title1": "Compound",
+				"title2": "Interest",
+				"slug": "v-compound-interest"
 			}
 		]
 	},
@@ -87,6 +92,11 @@
 				"slug": "v-tax-calculator"
 			},
 			{
+				"title1": "Password",
+				"title2": "Validation",
+				"slug": "v-password-validation"
+			},
+			{
 				"title1": "Driving",
 				"title2": "Age",
 				"slug": "v-driving-age"
@@ -95,11 +105,6 @@
 				"title1": "Temp",
 				"title2": "Converter",
 				"slug": "v-temp-converter"
-			},
-			{
-				"title1": "Password",
-				"title2": "Validation",
-				"slug": "v-password-validation"
 			}
 		]
 	}
