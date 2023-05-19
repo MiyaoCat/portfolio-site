@@ -34,6 +34,11 @@
 				"slug": "v-self-checkout"
 			},
 			{
+				"title1": "Currency",
+				"title2": "Conversion",
+				"slug": "v-currency-conversion"
+			},
+			{
 				"title1": "Simple",
 				"title2": "Interest",
 				"slug": "v-simple-interest"
