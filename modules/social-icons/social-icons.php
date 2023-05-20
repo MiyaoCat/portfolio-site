@@ -1,17 +1,17 @@
 <social-icons class="<?=$page?>">
 	<ul>
 		<li class="logo">
-			<a href="https://github.com/MiyaoCat" target="_blank">
+			<a href="https://github.com/MiyaoCat" target="_github">
 				<?php include("./images/icons/github-circle.svg"); ?>
 			</a>
 		</li>
 		<li class="logo">
-			<a href="https://twitter.com/MiyaoCodes" target="_blank">
+			<a href="https://twitter.com/MiyaoCodes" target="_twitter">
 				<?php include("./images/icons/twitter-large.svg"); ?>
 			</a>
 		</li>
 		<li class="logo">
-			<a href="https://www.linkedin.com/in/johnmiyao/" target="_blank">
+			<a href="https://www.linkedin.com/in/johnmiyao/" target="_linkedin">
 				<?php include("./images/icons/linkedin-letters.svg"); ?>
 			</a>
 		</li>
