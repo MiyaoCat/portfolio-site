@@ -26,6 +26,10 @@
 
 </form>
 
+<div class='return'>
+	<a href='?page=v-exercises' class='alert-voice'>Back</a>
+</div>
+
 <output data-vue="outputBmiCalc" v-if="outputMessage">
 	{{outputMessage}} 
 </output>

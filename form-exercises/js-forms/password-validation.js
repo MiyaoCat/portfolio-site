@@ -26,6 +26,10 @@
 
 <output></output>
 
+<div class='return'>
+	<?php include('components/back-to-exercises.php'); ?>
+</div>
+
 <script>
 let $createPasswordForm = document.querySelector('form');
 let $fruit = document.querySelector("[name='fruit']");

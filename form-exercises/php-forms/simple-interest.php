@@ -127,6 +127,9 @@ $answerFormatted = number_format($answer, 2);
 	</output>
 <?php } ?>
 
+<div class='return'>
+	<?php include('components/back-to-exercises.php'); ?>
+</div>
 
 
 

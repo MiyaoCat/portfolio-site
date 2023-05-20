@@ -14,6 +14,10 @@
 	{{computedMessage}}
 </output>
 
+<div class='return'>
+	<?php include('components/back-to-exercises.php'); ?>
+</div>
+
 <footer>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
 	<script src="form-exercises/vue-forms/v-print-quotes/script.js"></script>

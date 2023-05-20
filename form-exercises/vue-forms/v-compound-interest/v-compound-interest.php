@@ -1,6 +1,6 @@
 <form data-vue='compoundInterest'>
 	
-	<p class="instructions" v-html='instructions'></p>
+	<p class="instructions normal-voice" v-html='instructions'></p>
 		<label for="principal">Enter your principal investment:</label>
 		<input name="principal" type="number" min="0" v-model='principal'>
 		
@@ -17,7 +17,13 @@
 	
 </form>
 
-<output data-vue="outputCompoundInterest" v-if="outputMessage">{{outputMessage}} </output>
+<div class='return'>
+	<?php include('components/back-to-exercises.php'); ?>
+</div>
+
+<output data-vue="outputCompoundInterest" v-if="outputMessage">
+	<p class="normal-class">{{outputMessage}}</p>
+</output>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.8/vue.min.js'></script>
 <script src="form-exercises/vue-forms/v-compound-interest/script.js"></script>

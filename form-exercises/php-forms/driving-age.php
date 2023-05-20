@@ -22,8 +22,6 @@ $submittedPost = isset($_POST["submitted"]);
 	} 
  ?>
 
-
-
 <form method="POST">
 	<div class="instructions">
 		<p class="normal-voice">Are you old enough 	to drive? Let's find out!</p>
@@ -48,3 +46,8 @@ $submittedPost = isset($_POST["submitted"]);
 		<p class="normal-voice"><?=$message?></p>
 	</output>
 <?php } ?>
+
+
+<div class='return'>
+	<?php include('components/back-to-exercises.php'); ?>
+</div>

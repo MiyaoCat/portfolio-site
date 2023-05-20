@@ -46,5 +46,9 @@
 
 <output data-vue="outputSelfCheckout" v-if="outputMessage">{{outputMessage}} </output>
 
+<div class='return'>
+	<?php include('components/back-to-exercises.php'); ?>
+</div>
+
 <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.8/vue.min.js'></script>
 <script src="form-exercises/vue-forms/v-self-checkout/script.js"></script>

@@ -9,6 +9,10 @@
 	<button v-on:click.prevent="outputMessage">Return</button>
 </form>
 
+<div class='return'>
+	<?php include('components/back-to-exercises.php'); ?>
+</div>
+
 <output data-vue="outputAreaOfRoom" v-if="outputAreaMsg"> 
 	<p class='normal-voice'>{{outputAreaMsg}}</p>
 </output>

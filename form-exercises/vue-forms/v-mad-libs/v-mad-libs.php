@@ -20,6 +20,10 @@
 	<p class="normal-voice">{{computedMessage}}</p>
 </output>
 
+<div class='return'>
+	<?php include('components/back-to-exercises.php'); ?>
+</div>
+
 <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.8/vue.min.js'></script>
 <script  src="form-exercises/vue-forms/v-mad-libs/script.js"></script>
 

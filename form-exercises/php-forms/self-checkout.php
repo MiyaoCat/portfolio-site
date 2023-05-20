@@ -366,3 +366,7 @@ if ( isset($_POST['submitted']) ) {
 	</grand-total>
 </output>
 <?php } ?>
+
+<div class='return'>
+	<?php include('components/back-to-exercises.php'); ?>
+</div>

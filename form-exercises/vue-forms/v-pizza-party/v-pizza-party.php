@@ -11,9 +11,17 @@
 	
 </form>
 
+<div class='return'>
+	<a href='?page=v-exercises' class='alert-voice'>Back</a>
+</div>
+
 <output data-vue='outputPizzaMessage' v-if='outputPizzaMsg'> 
 	<p class='normal-class'>{{outputPizzaMsg}}</p>
 </output>
+
+<div class='return'>
+	<?php include('components/back-to-exercises.php'); ?>
+</div>
 
 <footer>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>

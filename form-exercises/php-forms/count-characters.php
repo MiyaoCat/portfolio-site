@@ -45,7 +45,6 @@
 <?php 
 	if ( isset($_POST["string"]) && $string != "") { 
 ?>
-
 	<output>
 		<ul>
 			<li>
@@ -65,5 +64,7 @@
 
 <?php } ?>
 
-
+<div class='return'>
+	<?php include('components/back-to-exercises.php'); ?>
+</div>
 

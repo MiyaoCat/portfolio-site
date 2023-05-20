@@ -25,6 +25,10 @@
 
 <output></output>
 
+<div class='return'>
+	<?php include('components/back-to-exercises.php'); ?>
+</div>
+
 <script>
 	let $form = document.querySelector('#hello');
 	let $nameInput = document.querySelector("[name='name']");

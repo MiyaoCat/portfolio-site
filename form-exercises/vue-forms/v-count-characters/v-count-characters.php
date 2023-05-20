@@ -20,6 +20,10 @@
 	<p>{{ computedWordCount }}</p>
 </output>
 
+<div class='return'>
+	<?php include('components/back-to-exercises.php'); ?>
+</div>
+
 <footer>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14" type="text/javascript"></script>
 	<script src="form-exercises/vue-forms/v-count-characters/script.js" type="text/javascript"></script>

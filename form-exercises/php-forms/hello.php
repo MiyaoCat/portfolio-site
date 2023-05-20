@@ -60,7 +60,6 @@ function emptyMessage($inputName) {
 	</button>
 </form>
 
-
 <?php 
 	if ( !empty($_POST["name"]) && !ctype_space($_POST["name"]) ) {
 	?>
@@ -70,3 +69,8 @@ function emptyMessage($inputName) {
 		</p>
 	</output>
 <?php } ?>
+
+<div class='return'>
+	<?php include('components/back-to-exercises.php'); ?>
+</div>
+

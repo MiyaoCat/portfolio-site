@@ -39,11 +39,7 @@ if ($submittedPOST) {
 
 	$grandTotal = number_format($subTotal * $tipPercent, 2);
 	$tipAmount = number_format($subTotal*$tipPercent - $subTotal, 2);
-
 }	
-
-
-
 ?>
 
 <form method="POST">
@@ -120,3 +116,7 @@ if ($submittedPOST) {
 	</output>
 
 <?php } ?>
+
+<div class='return'>
+	<?php include('components/back-to-exercises.php'); ?>
+</div>

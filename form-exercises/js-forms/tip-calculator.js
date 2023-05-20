@@ -37,34 +37,36 @@
 
 </form>
 
+<output>
+	<table>
+		<tr>
+			<td>
+				<p class="normal-voice">Your subtotal is:</p>
+			</td>
+			<td><p><b></b></p></td>
+		</tr>
 
+		<tr>
+			<td>
+				<p class="normal-voice">Your tip amount is:</p>
+			</td>
+			<td><p><b></b></p></td>
+		</tr>
+		
+		<tr>
+			<td>
+				<p class="normal-voice">Your grand total is:</p>
+			</td>
+			<td>
+				<p><b></b></p>
+			</td>
+		</tr>
+	</table>
+</output>
 
-	<output>
-		<table>
-			<tr>
-				<td>
-					<p class="normal-voice">Your subtotal is:</p>
-				</td>
-				<td><p><b></b></p></td>
-			</tr>
-
-			<tr>
-				<td>
-					<p class="normal-voice">Your tip amount is:</p>
-				</td>
-				<td><p><b></b></p></td>
-			</tr>
-			
-			<tr>
-				<td>
-					<p class="normal-voice">Your grand total is:</p>
-				</td>
-				<td>
-					<p><b></b></p>
-				</td>
-			</tr>
-		</table>
-	</output>
+<div class='return'>
+	<?php include('components/back-to-exercises.php'); ?>
+</div>
 
 <script>
 var $form = document.querySelector('form');

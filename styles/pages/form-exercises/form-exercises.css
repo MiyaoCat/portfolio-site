@@ -107,8 +107,16 @@ input[type="radio"]:checked {
 	margin-right: 20px;
 	margin-left: 5px;
 	grid-row: 3;
-	grid-column: 1 / 14;
+	grid-column: 1 / -1;
 	padding: 0 5px;
+}
+
+
+/* - - - BACK BUTTON - - - - - - -*/
+.return {
+	grid-row: 14;
+	grid-column: 1 / -1;
+	margin: 0 auto;
 }
 
 /* - - - COUNT CHARACTERS - - - - - - -*/

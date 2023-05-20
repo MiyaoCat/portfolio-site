@@ -20,13 +20,19 @@
 
 			<label for="female">Female</label>
 			<input name="gender" id="female" type="radio" value="female" v-model="gender">		
-
 		</div>
-
 	
 	<!-- <button @click=messageHandler()>Am I drunk?</button> -->
 
 </form>
+
+<div class='return'>
+	<?php include('components/back-to-exercises.php'); ?>
+</div>
+
+<div class='return'>
+	<a href='?page=v-exercises' class='alert-voice'>Back</a>
+</div>
 
 <output data-vue="outputBacCalc" v-if="outputMessage">
 	{{outputMessage}} 

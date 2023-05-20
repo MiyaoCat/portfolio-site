@@ -16,9 +16,12 @@
 	<button type="submit" name="submitted">Submit</button>
 </form>
 
-
 <output>
 </output>
+
+<div class='return'>
+	<?php include('components/back-to-exercises.php'); ?>
+</div>
 
 <script>
 $form = document.querySelector('form');

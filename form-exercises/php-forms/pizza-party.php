@@ -77,10 +77,8 @@
 		<error>
 			<p class="error normal-voice"><?=$valueError?></p>
 		</error>
-		<?php } ?>	
-		
+		<?php } ?>	 
 	</div>	
-
 	
 	<button type="submit" name="submitted">Submit</button>
 </form>
@@ -90,6 +88,10 @@
 		<p class="normal-voice"><?=$message?></p>		
 	</output>
 <?php } ?>			
+
+<div class='return'>
+	<?php include('components/back-to-exercises.php'); ?>
+</div>
 
 			
 			

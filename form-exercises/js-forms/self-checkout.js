@@ -164,6 +164,10 @@
 	</grand-total>
 </output>
 
+<div class='return'>
+	<?php include('components/back-to-exercises.php'); ?>
+</div>
+
 <script>
 var $selfCheckout = document.querySelector("form");
 
