@@ -41,7 +41,6 @@
 </form>	
 	
 <output>
-	
 </output>
 
 <div class='return'>

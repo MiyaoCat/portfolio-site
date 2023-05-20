@@ -59,6 +59,8 @@
 
 </form>
 
+<output></output>
+
 <div class='return'>
 	<?php include('components/back-to-exercises.php'); ?>
 </div>
@@ -70,17 +72,19 @@ var $principalInput = document.querySelector("[name='principal']");
 var $interestInput = document.querySelector("[name='interest']");
 var $yearsInput = document.querySelector("[name='years']");
 
+let $output = document.querySelector('.js-exercise output');
+$output.hidden = true;
+
 $form.addEventListener('submit', function(event) {
 	event.preventDefault();
+
+	$output.hidden = false;
 
 	let principal = $principalInput.value;
 	let interest = $interestInput.value;
 	let years = $yearsInput.value;
 
 	let totalEarned = (principal * (1 + (interest * .01 * years))).toFixed(2);
-
-	var $output = document.createElement("output");
-	document.body.appendChild($output);
 
 	$output.innerHTML = `<p class="normal-voice">You'll earn $${totalEarned} after ${years} at a ${interest}% interest rate.`;
 

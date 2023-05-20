@@ -183,12 +183,16 @@ var $price3 = document.querySelector("[name='price3']");
 var $quantity4 = document.querySelector("[name='quantity4']");
 var $price4 = document.querySelector("[name='price4']");
 
+let $output = document.querySelector('.js-exercise output');
+$output.hidden = true;
+
 const taxRate = .1025;
 const taxPretty = .1025*100;
 document.getElementById('taxRate').textContent = taxPretty;
 
 $selfCheckout.addEventListener('submit', function(myEvent) {
 	myEvent.preventDefault();
+	$output.hidden = false;
 	console.log("button pushed");
 
 	let quantity1 = $quantity1.value;
@@ -214,9 +218,6 @@ $selfCheckout.addEventListener('submit', function(myEvent) {
 
 	const grandTotal = parseFloat(subTotal) + parseFloat(taxTotal);
 	const grandTotalFormatted = grandTotal.toLocaleString('en-US');
-
-	const $output = document.createElement("output");
-	document.body.appendChild($output);
 
 	$output.innerHTML = 
 		`<p class="normal-voice">Sub-total: $${subTotalFormatted}</p> 

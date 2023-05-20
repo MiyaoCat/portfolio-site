@@ -25,9 +25,7 @@
 			<input type="radio" name="tip" class="percent" value=.20>
 		</div>
 
-
 		<p class="calm-voice warning"></p>
-
 
 	</div>
 	
@@ -73,8 +71,13 @@ var $form = document.querySelector('form');
 var $subTotal = document.querySelector("[name='subtotal']");
 var $tip = document.querySelector("input[name='tip']");
 
+let $output = document.querySelector('.js-exercise output');
+$output.hidden = true;
+
 $form.addEventListener('submit', function(event) {
 	event.preventDefault();
+
+	$output.hidden = false;
 
 	var subTotal = parseInt($subTotal.value);
 	var subTotalFormatted = subTotal.toLocaleString('en-US');
@@ -91,8 +94,6 @@ $form.addEventListener('submit', function(event) {
 
 
 	console.log(tipTotal + " " + subTotal);
-	let $output = document.createElement("output");
-	document.body.appendChild($output);
 
 	$output.innerHTML = `
 		<p class="normal-voice">Sub-total: $${subTotalFormatted}</p> 
