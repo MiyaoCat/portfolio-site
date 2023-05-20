@@ -10,7 +10,7 @@
 </form>
 
 <output data-vue="outputAreaOfRoom" v-if="outputAreaMsg"> 
-	{{outputAreaMsg}}
+	<p class='normal-voice'>{{outputAreaMsg}}</p>
 </output>
 
 

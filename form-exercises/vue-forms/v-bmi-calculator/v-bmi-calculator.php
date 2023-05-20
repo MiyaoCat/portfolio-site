@@ -1,6 +1,6 @@
 <form data-vue='bmiCalc'>
 	
-	<p class="instructions" v-html='instructions'></p>
+	<p class="instructions normal-voice" v-html='instructions'></p>
 
 	<label for="height">How tall are you?</label>
 	
@@ -8,13 +8,19 @@
 		<label for="feet">Feet</label>
 		<input name ="feet" type="number" step="" v-model="feet">	
 		
-		<label for="inches">inches</label>
+		<label for="inches">Inches</label>
 		<input name ="inches" type="number" max="11" v-model="inches">	
 	</div>
 	
 	<label for="weight">How much do you weigh?</label>
-	<input type="range" min="1" max='400' step='1' tooltip='weight' class='slider' id='weight' value='' v-model='weight'>
-	<p>{{weight}} lbs</p>
+	
+	<div class='weight'>
+		<p class='normal-voice'>1 LB</p>
+		<input type="range" min="1" max='400' step='1' tooltip='weight' class='slider' id='weight' value='' v-model='weight'>
+		<p class='normal-voice'>400 LBs</p>
+	</div>
+
+	<p class="normal-voice">{{weight}} lbs</p>
 	 
 	<!-- <button @click=messageHandler()>Convert</button> -->
 

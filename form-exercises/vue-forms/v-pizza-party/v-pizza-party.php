@@ -1,4 +1,4 @@
-<p class='alert-voice' style="grid-row:6; grid-column: 2 /10"><a href='"'>Back</a></p>
+
 <form data-vue='pizzaParty'>
 	<p class="instructions" v-html='instructions'></p>
 	<label for="people">How many people will be attending?</label>

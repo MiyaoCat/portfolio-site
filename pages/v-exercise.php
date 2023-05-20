@@ -16,4 +16,4 @@
 	}
 ?>
 
-<?php include("form-exercises/vue-forms/$slug/$slug.html"); ?>
+<?php include("form-exercises/vue-forms/$slug/$slug.php"); ?>

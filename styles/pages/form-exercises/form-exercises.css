@@ -48,13 +48,6 @@ input[type="radio"] {
   place-content: center;
 }
 
-/*input[type="radio"]:before {
-  content: "test";
-  width: 0.65em;
-  height: 0.65em;
-  border-radius: 50%;
-  transform: scale(0);
-}*/
 @keyframes grow-shrink {
   0% {
     transform: scale(1);
@@ -74,30 +67,22 @@ input[type="radio"]:checked {
 	animation-duration: .5s;
 }
 
-input[type="radio"]:focus {
-/*  outline: max(2px, 0.15em) solid currentColor;
-  outline-offset: max(2px, 0.15em);*/
-}
-
 /* - - - FORM SLIDER - - - - - - -*/
 .slider {
 	-webkit-appearance: none;
-	width: 100%;
-	height: 5px;
+/*	max-width: 100%;*/
+	height: 3px;
 	background-color: var(--standout);
 	display: flex;
-	margin: 0 20px;
 }
 
-.slider < * {
-	padding: 5px;
-}
 .slider::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	appearance: none;
-	width: 25px;
+	width: 40px;
 	height: 25px;
-	border: 3px solid var(--trim);
+	border: var(--border-med) solid var(--trim);
+	background-color: var(--ink);
 }
 
 /* - - - FORM HEADERS/FORM LAYOUT - - - - - - -*/
