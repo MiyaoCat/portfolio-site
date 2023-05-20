@@ -1,3 +1,4 @@
+/* - - - LANGUAGE INPUT - - - - - - -*/
 #languages {
 	grid-row: 4;
 	margin-bottom: 15px;
@@ -78,6 +79,28 @@ input[type="radio"]:focus {
   outline-offset: max(2px, 0.15em);*/
 }
 
+/* - - - FORM SLIDER - - - - - - -*/
+.slider {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 5px;
+	background-color: var(--standout);
+	display: flex;
+	margin: 0 20px;
+}
+
+.slider < * {
+	padding: 5px;
+}
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	border: 3px solid var(--trim);
+}
+
+/* - - - FORM HEADERS/FORM LAYOUT - - - - - - -*/
 .exercise heading, .v-exercise heading {
 	display: block;
 	grid-row: 3;
@@ -102,6 +125,7 @@ input[type="radio"]:focus {
 	grid-column: 1 / 14;
 	padding: 0 5px;
 }
+
 /* - - - COUNT CHARACTERS - - - - - - -*/
 .exercise #words {
 	color: var(--standout);

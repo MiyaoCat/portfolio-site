@@ -8,7 +8,7 @@ new Vue({
 			instructions: "Enter your height and weight to calculate your Body Mass Index.",
 			feet: "",
 			inches: "", 
-			weight: "150",
+			weight: "200",
 			showMessage: false,
 		};
 	},
