@@ -3,12 +3,11 @@
 	grid-column: 1 / 14;
 	margin: 5px;
 	display: flex;
-	
 }
 
-generic-text {
+/*generic-text {
 	max-width: 700px;
-}
+}*/
 
 @media (min-width: 550px) {
 	.generic-text {
