@@ -157,6 +157,14 @@
 	grid-row: 10;
 }
 
+.portfolio-site:nth-of-type(9) {
+	grid-row: 11;
+}
+
+.portfolio-site:nth-of-type(10) {
+	grid-row: 12;
+}
+
 .project image-caption {
 	display: block;
 	margin-top: 5px;
