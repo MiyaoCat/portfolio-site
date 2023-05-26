@@ -55,13 +55,13 @@
 	
 <?php 
 	foreach($sections as $section) { 
-		if ( $section["type"] == "skills" ) {
+		if ( $section["type"] == "software" ) {
 ?>
-			<sub-header class="skill">
+			<sub-header class="software">
 				<h2 class="loud-voice"><?=$section["heading"]?></h2>
 			</sub-header>
 			
-			<section class="skill">
+			<section class="software">
 				<ol>					
 					<?php foreach ($section["programs"] as $programs) { ?>
 						
@@ -100,15 +100,15 @@
 	
 <?php 
 	foreach($sections as $section) { 
-		if ( $section["type"] == "languages" ) {
+		if ( $section["type"] == "skills" ) {
 ?>	
 			
-			<section class="languages">
+			<section class="skills">
 				<h2 class="loud-voice"><?=$section["heading"]?></h2>
 				<ol>					
-					<?php foreach ($section["languages"] as $language) { ?>
+					<?php foreach ($section["technologies"] as $skill) { ?>
 						
-						<li><?=$language?></li>
+						<li><?=$skill?></li>
 
 					<?php } ?>	
 				</ol>

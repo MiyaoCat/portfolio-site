@@ -72,7 +72,7 @@
 			]
 		},
 		{	
-			"type" : "skills",
+			"type" : "software",
 			"heading": "Programs",
 			"programs": ["Jira", "Salesforce", "Zendesk", "Freshdesk", "Mixpanel", "Tableau", "PowerBI", "Basecamp", "Asana", "Slack", "Excel", 
 				"PowerPoint", "Keynote", "MailChimp", "SurveyMonkey", "Twilio", "Testflight"  
@@ -88,9 +88,9 @@
 			"major2": "Web Development & Web Design"
 		},
 		{	
-			"type" : "languages",
-			"heading": "Languages",
-			"languages": ["HTML/CSS", "PHP", "Javascript"]
+			"type" : "skills",
+			"heading": "Technical Skills",
+			"technologies": ["HTML/CSS", "PHP", "Javascript", "Vue"]
 		}
 	]
 }
