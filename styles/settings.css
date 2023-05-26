@@ -38,7 +38,7 @@ html {
 
 @media (prefers-color-scheme: dark) {
 	html {
-		--paper: hsla(0, 0%, 4%, 1);
+		--paper: hsla(0, 4%, 5%, 1);
 		--paper-light: hsla(0, 0%, 4%, .7);
 		--ink: hsla(50, 70%, 80%, 1);
 		--highlight: #6200ee;

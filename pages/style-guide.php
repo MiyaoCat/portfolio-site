@@ -99,7 +99,7 @@
 		
 			<li>
 				<p class="alert-voice">Paper</p>
-				<p class="normal-voice">hsla(0, 0%, 4%, 1)</p>
+				<p class="normal-voice">hsla(0, 4%, 5%, 1)</p>
 			</li>	
 		</ul>
 	</div>

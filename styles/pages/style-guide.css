@@ -223,7 +223,7 @@ detail-link {
 }
 
 .style-guide .dark-mode li:nth-of-type(4) {
-	background-color: hsla(0, 0%, 4%, 1);
+	background-color: hsla(0, 4%, 5%, 1);
 }
 
 @media (prefers-color-scheme: light) {

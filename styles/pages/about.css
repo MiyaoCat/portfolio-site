@@ -82,6 +82,7 @@
 		grid-column: 10 / span 3;
 		justify-content: center;		
 		margin-left: 20px;
+		min-width: 200px;
 	}
 
 /*	.about .figure:nth-of-type(5)  {

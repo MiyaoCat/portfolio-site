@@ -11,7 +11,7 @@
 			"title1": "Generic",
 			"title2": "Text",
 			"module": "generic-text",
-			"content": "This is my generic text module. If I want to add a block of text, I will insert this module. All modules will then be placed onto my site grid."
+			"content": "This is my generic text module. If I want to add a block of text, I can insert this module. All modules are then be placed onto my site grid."
 		},
 		{
 			"title1": "Social",
