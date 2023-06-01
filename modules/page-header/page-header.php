@@ -10,11 +10,11 @@
 		$json = file_get_contents("data/projects.json");
 		$projects = json_decode($json, true);
 	
-		foreach ($projects as $caseStudies) {
-			if ($caseStudies["slug"] == $_GET["slug"]) {
-				$title1 = $caseStudies["title1"];
-				$title2 = $caseStudies["title2"];
-				$slug = $caseStudies["slug"];
+		foreach ($projects as $caseStudy) {
+			if ($caseStudy["slug"] == $_GET["slug"]) {
+				$title1 = $caseStudy["title1"];
+				$title2 = $caseStudy["title2"];
+				$slug = $caseStudy["slug"];
 			}
 		}
 	}	

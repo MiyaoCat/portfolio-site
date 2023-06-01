@@ -85,7 +85,7 @@
 			{	
 				"module": "generic-text",
 				"subHeader": "The Finished Product",
-				"content": "Now that I had the visual langauge done, it was time to build the site. We were given the base code and it was our job to style it according to our Style Tile. It was interesting to see how different each student's page was despite having the same base code. It was the first time we worked with a large file system so it was a bit of a learning curve to get used to working with a robust website. However, this set the foundation for all future sites, including this one with.<br><br><a href='https://peprojects.dev/alpha-4/john/projects/layout-theme-challenge/index.php'>Visit the Site here!</a>"
+				"content": "Now that I had the visual langauge done, it was time to build the site. We were given the base code and it was our job to style it according to our Style Tile. It was interesting to see how different each student's page was despite having the same base code. It was the first time we worked with a large file system so it was a bit of a learning curve to get used to working with a robust website. However, this set the foundation for all future sites, including this one with.<br><br><a href='https://peprojects.dev/alpha-4/john/projects/layout-theme-challenge/index.php' target='_blank'>Visit the Site here!</a>"
 			}
 		]
 	},
