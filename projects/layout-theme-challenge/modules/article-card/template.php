@@ -16,11 +16,9 @@
 					$colors = $article['colors']; 
 
 					foreach ($colors as $color) {
-
-				 ?>
-
-			 	<li class="color <?=$color?>"></li>
-			 
+				?>
+			 			<li class="color <?=$color?>"></li>		 
+			 			
 				<?php } ?>
 			</ul>
 		</picture>
@@ -32,8 +30,7 @@
 
 			foreach ($sizes as $size) {
 		?>
-
-			<li class="calm-voice"><?=$size?></li>	
+				<li class="calm-voice"><?=$size?></li>	
 		
 		<?php } ?>
 	</ul>

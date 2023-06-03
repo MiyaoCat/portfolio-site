@@ -15,6 +15,9 @@
 	align-items: center;
 }
 
+.article-card text-content p:first-of-type {
+	margin-top: 6px;
+}
 .article-card a {
 	margin-top: 20px;
 }
