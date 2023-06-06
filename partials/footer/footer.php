@@ -10,11 +10,12 @@
 
 	<a href="?page=style-guide">Style Guide</a>
 	<a href="?page=resume">Resume</a>
-	
-	</footer>
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script> -->
+</footer>
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script src='modules/page-header/page-header-animation.js'></script>	
 </body>
 
 </html>
