@@ -33,7 +33,7 @@ body {
 }
 
 body > div, header, section, footer, project-card {
-	padding: 0 5px;
+/*	padding: 0 5px;*/
 }
 .background {
 	grid-column: 1 / -1;
