@@ -7,8 +7,24 @@
 	margin: 5px;
 }
 
+.heading {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: 1fr 1fr;
+}
+
+.title1 {
+	grid-row: 1;
+	grid-column: 1 / -1;
+}
+
+.title2 {
+	grid-row: 2;
+	grid-column-start: 2;
+}
+
 .exercise .page-header {
-	grid-column: 2 / 14;
+/*	grid-column: 2 / 14;*/
 	margin: 0 0 5px 5px;
 	padding: 0 5px;
 }
@@ -29,6 +45,15 @@
 
 	.heading {
 		text-align: right;
+		display: grid;
+	}
+
+	.title1 {
+		grid-column-end: 5;	
+	}
+
+	.title2 {
+		grid-column-end: 7;
 	}
 }
 

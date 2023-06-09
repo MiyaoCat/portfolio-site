@@ -1,5 +1,5 @@
 /* - - PAGE HEADER - - */
-.page-header .title2 {
+/*.page-header .title2 {
 	max-width: 65%;
 }
 .home .page-header .title1 {
@@ -15,18 +15,18 @@
 .home .page-header .title2 {
 	transform: translateX(5em);
 	transform-origin: 50% 50%;
-}
+}*/
 
 @media (min-width: 550px) {
-	.home .page-header .title1 {
+/*	.home .page-header .title1 {
 		transform: translateY(-.8em) rotate(var(--tilt));
 		transition: .2s ease-in-out;
-	}
+	}*/
 }
 
 @media (min-width: 700px) {
 	/* - - PAGE HEADER - - */
-	.home .page-header .title1 {
+/*	.home .page-header .title1 {
 		transform: translateY(.5em) translateX(-70%) rotate(-6deg);
 	}
 
@@ -36,7 +36,7 @@
 
 	.home .page-header .title2 {
 		transform: translateX(0);
-	}	
+	}	*/
 }
 
 /* - - GENERIC TEXT - - */
