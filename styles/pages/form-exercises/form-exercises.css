@@ -1,6 +1,7 @@
 /* - - - LANGUAGE INPUT - - - - - - -*/
 #languages {
 	grid-row: 4;
+	grid-column: 2 / 14;
 	margin-bottom: 15px;
 }
 #languages form {
@@ -107,7 +108,7 @@ input[type="radio"]:checked {
 	margin-right: 20px;
 	margin-left: 5px;
 	grid-row: 3;
-	grid-column: 1 / -1;
+	grid-column: 2 / 14;
 	padding: 0 5px;
 }
 
@@ -115,7 +116,7 @@ input[type="radio"]:checked {
 /* - - - BACK BUTTON - - - - - - -*/
 .return {
 	grid-row: 14;
-	grid-column: 1 / -1;
+	grid-column: 2 / 14;
 	margin: 0 auto;
 }
 
@@ -247,7 +248,7 @@ password-enter {
 /* - - OUTPUT - - - - - - - - - - - - */
 output {
 	grid-row: 4;
-	grid-column: 1 / 4;
+	grid-column: 2 / 14;
 	margin-top: 20px;
 	margin-left: 10px;
 	margin-right: 20px;
@@ -271,7 +272,7 @@ output p {
 	.exercise heading, .exercise form, 
 	.v-exercise heading, .v-exercise form,
 	.js-exercise heading, .v-exercise form {
-		grid-column: 1 / 14;
+		grid-column: 2 / 14;
 	}
 
 	.exercise form, 

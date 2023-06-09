@@ -34,7 +34,7 @@
 
 /* - - EXPERIENCE BOXES - - */
 .job {
-	grid-column: 1 / 14;
+	grid-column: 2 / 14;
 	margin-right: 20px;
 	margin-left: 5px;
 	padding: 15px 10px;
@@ -54,7 +54,7 @@
 .resume sub-header {
 	display: block;
 	grid-row: 3;
-	grid-column: 1 / 14;
+	grid-column: 2 / 14;
 	margin-top: 30px;
 	margin-bottom: -2px;
 }
@@ -121,7 +121,7 @@ sub-header.software {
 }
 
 .software {
-	grid-column: 1 / 14;
+	grid-column: 2 / 14;
 	grid-row: 9;
 	margin: 0 14px 30px 5px;
 }
@@ -149,7 +149,7 @@ sub-header.software {
 /*- - EDUCATION - -*/
 .school {
 	grid-row: 10;
-	grid-column: 1 / 14;
+	grid-column: 2 / 14;
 }
 
 .school ol {
@@ -171,7 +171,7 @@ sub-header.software {
 /*- - LANGUAGES - -*/
 .resume .skills {
 	grid-row: 11;
-	grid-column: 1 / 14;
+	grid-column: 2 / 14;
 	margin-top: 30px;
 	margin-bottom: 50px;
 }

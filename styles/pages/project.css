@@ -14,7 +14,7 @@
 }
 
 .project .figure {
-	grid-column: 1 / 14;
+	grid-column: 2 / 14;
 }
 
 .project .figure picture {
@@ -172,7 +172,7 @@
 
 .project .project-url {
 	grid-row: 8;
-	grid-column: 1 / 14;
+	grid-column: 2 / 14;
 }
 
 @media (min-width: 550px) {

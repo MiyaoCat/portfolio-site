@@ -1,12 +1,12 @@
 var titleOneTimeline = gsap.timeline();
 var titleTwoTimeline = gsap.timeline();
 
-titleOneTimeline
-	.from('.title1', {
-		duration: 2.5,
-		ease: "bounce.out", 
-		y: -200
-	})
+// titleOneTimeline
+// 	.from('.title1', {
+// 		duration: 2.5,
+// 		ease: "bounce.out", 
+// 		y: -200
+// 	})
 
 
 

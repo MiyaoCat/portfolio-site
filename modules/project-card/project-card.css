@@ -6,7 +6,7 @@ project-card {
 	border-top: 3px solid var(--trim);
 	border-bottom: 3px solid var(--trim);
 
-	grid-column: 1 / 14;
+	grid-column: 2 / 14;
 	gap: 10px;
 }
 

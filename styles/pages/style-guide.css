@@ -6,7 +6,7 @@ detail-link {
 }
 
 .style-guide > section {
-	grid-column: 1 / 14;
+	grid-column: 2 / 14;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
@@ -19,7 +19,7 @@ detail-link {
 /* - - - - PAGE HEADER  - - - - - - - - - - - - */
 .style-guide .page-header {
 	grid-row: 2;
-	grid-column: 1 / 14;
+	grid-column: 2 / 14;
 }
 
 .style-guide .page-header .title1 {

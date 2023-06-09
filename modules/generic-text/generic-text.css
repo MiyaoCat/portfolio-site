@@ -1,26 +1,14 @@
 .generic-text {
 	grid-row: 3;
-	grid-column: 1 / 14;
+	grid-column: 2 / 14;
 	margin: 5px;
 	display: flex;
-}
-
-/*generic-text {
-	max-width: 700px;
-}*/
-
-@media (min-width: 550px) {
-	.generic-text {
-/*		grid-column: 2 / 13;*/
-	}
 }
 
 @media (min-width: 700px) {
 	.generic-text {
 		grid-column: 5 / 10;
 		margin-right: 20px;
-		/*text-align: right;*/
-		/*justify-content: flex-end;*/
 	}
 
 	.generic-text:first-of-type {
@@ -28,8 +16,3 @@
 	}
 }
 
-@media (min-width: 1000px) {
-	.generic-text {
-		/*grid-column: 5 / 10;*/
-	}
-}

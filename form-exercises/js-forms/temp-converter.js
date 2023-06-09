@@ -1,7 +1,3 @@
-<div class="back-button">
-	<a href="?page=js-exercises" class="normal-voice">Back</a>
-</div>
-
 <form id="temp-converter" method ="POST">
 	<div class="instructions">
 		<p class="normal-voice">First select whether you want to convert to Fahrenheit or Celsius. Then enter the degrees you want to convert. For example, if you want to know what 100 degrees Fahrenheit is in Celsius, select Celsius and enter 100.</p>

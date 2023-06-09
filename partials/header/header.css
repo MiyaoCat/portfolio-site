@@ -1,6 +1,6 @@
 .site-header {
 	grid-row: 1;
-	grid-column: 1 / 14;
+	grid-column: 2 / 14;
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 20px;
