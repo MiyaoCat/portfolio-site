@@ -86,26 +86,15 @@
 	}
 }
 
-.email-form input[type='text']:nth-of-type(1), .email-form input[type='email'] {
-/*	max-width: 450px;*/
-}
-
 .email-form label  {
-
 	margin-bottom: 5px;
 }
 
-
 /*- - FORM BUTTON - - */
 .email-form .contact-form {
-/*	border: 3px solid var(--trim);
-	text-align: center;*/
 	padding: 5px;
 	margin-top: 10px;
-	/*box-shadow: 5px 5px var(--contrast);
-	background: var(--background);
-	color: var(--ink);*/
-	max-width: 50%;
+	max-width: 200px;
 	align-items: center;
 }
 
