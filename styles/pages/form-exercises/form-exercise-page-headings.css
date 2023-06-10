@@ -1,11 +1,11 @@
- .heading .title1, .v-exercise .heading .title1 {
+/* .heading .title1, .v-exercise .heading .title1 {
 	transition: .2s ease-in-out;
 }
 
  .heading .title1:hover, .v-exercise .heading .title1:hover {
 	transition: .2s ease-in-out;
 }
-
+*/
 /*- - SIMPLE-INTEREST - - - - - - - - - - - - - - - - - - - */
 .simple-interest.heading .title1 {
 	transform: translateY(-.2em) rotate(var(--tilt));
