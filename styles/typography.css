@@ -5,12 +5,17 @@ html {
 
 	
 }
+
 a {
 	font-family: var(--sans-serif);
 	font-weight: 500;
 	letter-spacing: .06rem;
+	color: var(--standout);
 }
 
+b {
+	font-weight: 700;
+}
 
 /* Main header or banner text or similar */
 .screaming-voice {

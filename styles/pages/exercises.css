@@ -1,16 +1,16 @@
 /* - - - - PAGE HEADER - - - - - - - - - - - - */
 .exercises.heading .title1 {
-	transform: translateY(-.5em) rotate(var(--tilt));
-	transition: .2s ease-in-out;
+/*	transform: translateY(-.5em) rotate(var(--tilt));
+	transition: .2s ease-in-out;*/
 }
 
 .exercises.heading .title1:hover {
-	transform: translateX(0) translateY(0) rotate(0);
-	transition: .2s ease-in-out;
+/*	transform: translateX(0) translateY(0) rotate(0);
+	transition: .2s ease-in-out;*/
 }
 
 .exercises.heading .title2 {
-	transform: translateX(4em);
+/*	transform: translateX(4em);*/
 }
 
 form-exercise {
@@ -42,7 +42,7 @@ form-exercise .exercises li {
 form-exercise .exercises li:hover {
 	transform: translateX(5px) translateY(5px);
 	box-shadow: 0 0 var(--highlight);
-	cursor: pointer;
+/*	cursor: pointer;*/
 }
 
 .calculations {
@@ -59,30 +59,27 @@ form-exercise .exercises li:hover {
 
 @media (min-width: 600px) {
 	.exercises.heading .title1 {
-		transform: translateY(-.7em) rotate(var(--tilt));
+/*		transform: translateY(-.7em) rotate(var(--tilt));*/
 	}
 }
 
 @media (min-width: 700px) {
 	/* - - PAGE HEADER - - */
 	.exercises.heading .title1 {
-		transform: translateX(-76%) translateY(1em) rotate(var(--tilt));
+/*		transform: translateX(-76%) translateY(1em) rotate(var(--tilt));*/
 	}
 	.exercises.heading .title1:hover {
-		transform: translateX(-75%) rotate(0);
-		transition: .2s ease-in-out;
+/*		transform: translateX(-75%) rotate(0);
+		transition: .2s ease-in-out;*/
 	}
 	
 	.exercises.heading .title2 {
-		transform: translateX(0);
+/*		transform: translateX(0);*/
 	}
 
-	#languages {
-		grid-column: 4 / 10;
-	}
 
 	.calculations, .input-output, .decision-making {
-		grid-column: 4 / 10 ;
+/*		grid-column: 4 / 10 ;*/
 	}
 }
 

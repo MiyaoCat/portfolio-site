@@ -1,32 +1,9 @@
 /* - - PAGE HEADER - - - - - - - - - - - - - - */
-/*.contact .page-header .title1 {
-	transform: translateX(0) rotate(var(--tilt));
-	transition: .2s ease-in-out;
-}
 
-.contact .page-header .title1:hover {
-	transform: translateX(0) rotate(0);
-	transition: .2s ease-in-out;
-}*/
 
-.contact .page-header .title2 {
-	transform: translateX(1.5em);
-	grid-column-start: 3;
-}
 
-/*@media (min-width: 550px) {
-	.contact .page-header .title1 {
-		transform: translateY(-.5em) rotate(var(--tilt));
-	}
-
-	.contact .page-header .title2 {
-		transform: translateX(50%);
-	}
-}
-*/
 .contact .email-form {
 	grid-row: 4;
-	grid-column: 2 / 14;
 	margin: 5px;
 	max-width: 450px;
 }
@@ -38,20 +15,8 @@
 
 @media (min-width: 700px) {
 	/* - - PAGE HEADER - - - - - - - - - - - - - - */
-	.contact .page-header .title1 {
-		grid-column-end: 6;
-	}
-
-/*	.contact .page-header .title1:hover {
-		transform: translateX(-15%) rotate(0);
-	}*/
-
-	.contact .page-header .title2 {
-		grid-column-end: 7;
-	}
 
 	.contact .email-form  {
-		grid-column: 5 / 10;
 		margin-right: 20px;
 		max-width: none;
 	}
@@ -67,7 +32,6 @@
 		grid-column: 5 / 10;
 	}
 }
-
 
 
 

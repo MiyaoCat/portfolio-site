@@ -1,6 +1,5 @@
 .generic-text {
 	grid-row: 3;
-	grid-column: 2 / 14;
 	margin: 5px;
 	display: flex;
 	max-width: 450px;
@@ -8,7 +7,7 @@
 
 @media (min-width: 700px) {
 	.generic-text {
-		grid-column: 5 / 10;
+/*		grid-column: 5 / 10;*/
 		margin-right: 20px;
 		max-width: none;
 	}
