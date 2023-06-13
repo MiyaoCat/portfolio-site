@@ -1,6 +1,6 @@
 /* - - PAGE HEADER - - - - - - - - - - - - - - */
 .contact .title2 {
-	grid-column: 6;
+	grid-column: 5;
 }
 
 
@@ -17,7 +17,11 @@
 
 @media (min-width: 700px) {
 	/* - - PAGE HEADER - - - - - - - - - - - - - - */
+	.contact .title2 {
+		grid-column: 9;
+	}
 
+	/* - - EMAIL FORM - - - - - - - - */
 	.contact .email-form  {
 		margin-right: 20px;
 		max-width: none;

@@ -11,7 +11,7 @@
 
 .title1 {
 	grid-row: 1;
-	grid-column: 1 / -1;
+	grid-column: 1 / span 12;
 }
 
 .title2 {
