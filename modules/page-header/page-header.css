@@ -43,6 +43,6 @@
 	}
 
 	.title2 {
-		grid-column-end: 13;
+		grid-column: 4 / 13;
 	}
 }

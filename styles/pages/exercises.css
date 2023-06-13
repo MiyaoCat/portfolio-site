@@ -1,16 +1,6 @@
 /* - - - - PAGE HEADER - - - - - - - - - - - - */
-.exercises.heading .title1 {
-/*	transform: translateY(-.5em) rotate(var(--tilt));
-	transition: .2s ease-in-out;*/
-}
-
-.exercises.heading .title1:hover {
-/*	transform: translateX(0) translateY(0) rotate(0);
-	transition: .2s ease-in-out;*/
-}
-
 .exercises.heading .title2 {
-/*	transform: translateX(4em);*/
+	grid-column-start: 2;
 }
 
 form-exercise {
@@ -57,30 +47,13 @@ form-exercise .exercises li:hover {
 	grid-row: 7;
 }
 
-@media (min-width: 600px) {
-	.exercises.heading .title1 {
-/*		transform: translateY(-.7em) rotate(var(--tilt));*/
-	}
-}
 
 @media (min-width: 700px) {
 	/* - - PAGE HEADER - - */
-	.exercises.heading .title1 {
-/*		transform: translateX(-76%) translateY(1em) rotate(var(--tilt));*/
-	}
-	.exercises.heading .title1:hover {
-/*		transform: translateX(-75%) rotate(0);
-		transition: .2s ease-in-out;*/
-	}
-	
 	.exercises.heading .title2 {
 /*		transform: translateX(0);*/
 	}
 
-
-	.calculations, .input-output, .decision-making {
-/*		grid-column: 4 / 10 ;*/
-	}
 }
 
 @media (min-width: 800px) {
@@ -89,7 +62,7 @@ form-exercise .exercises li:hover {
 	}
 
 	.calculations {
-		grid-column: 4 / 7;
+		grid-column: 5 / 7;
 	}
 
 	.decision-making {
@@ -104,7 +77,7 @@ form-exercise .exercises li:hover {
 
 	.decision-making {
 		grid-row: 6;
-		grid-column: 4 / 7;
+		grid-column: 5 / 7;
 	}
 }
 

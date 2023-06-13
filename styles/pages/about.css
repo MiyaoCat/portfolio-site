@@ -1,4 +1,7 @@
 /* - - - - PAGE HEADER- - - - - - - - - - - - */
+.about .title2 {
+	grid-column: 4;
+}
 
 .about .figure {
 	display: none;
@@ -23,9 +26,13 @@
 	grid-row: 5;
 }
 
-/* - - PAGE HEADER - - */
 
-
+@media (min-width: 700px) {
+	/* - - PAGE HEADER - - */
+	.about .title2 {
+		grid-column: 6;
+	}
+	
 	/* - - PAGE INTRO - - - - - - - - */
 	.about .page-intro {
 		grid-row: 4;
@@ -50,7 +57,7 @@
 		margin-left: 20px;
 		min-width: 200px;
 	}
-
+}
 /*	.about .figure:nth-of-type(5)  {
 		display: block;
 		grid-row: 3;

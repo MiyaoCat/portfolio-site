@@ -1,4 +1,7 @@
 /* - - PAGE HEADER - - - - - - - - - - - - */
+.projects .title2 {
+	grid-column-start: 2;
+}
 
 .projects project-card.layout-garden {
 	grid-row: 4;

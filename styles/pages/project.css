@@ -10,63 +10,28 @@
 	border: var(--border-thin) solid var(--ink);
 }
 /*- - LAYOUT GARDEN - - - - - - - - - - - - - - - */
-.layout-garden.heading .title1 {
-/*	transform: translateX(0) translateY(-.4em) rotate(var(--tilt));
-	transition: .2s ease-in-out;*/
-}
-
-.layout-garden.heading .title2 {
-/*	transform: translateX(6em); */
-}
-
-.layout-garden.heading .title1:hover {
-/*	transform: translateX(0) rotate(0);
-	transition: .2s ease-in-out;*/
-}
-
-@media (min-width: 550px) {
-	.layout-garden.heading .title1 {
-/*		transform: translateX(0) translateY(-5px) rotate(var(--tilt));*/
-	}
-}
-
 @media (min-width: 700px) {
-	.layout-garden.heading .title1 {
-/*		transform: translateX(-70%) translateY(10px) rotate(var(--tilt));*/
-	}
-
-	.layout-garden.heading .title1:hover {
-/*		transform: translateX(-70%) rotate(0);
-		transition: .2s ease-in-out;*/
+	.layout-garden.heading .title2 {
+/*	transform: translateX(6em); */
 	}
 }
 
 /*- - LUXURY-STREETWEAR - - - - - - - - - - - - - - - - - */
 /* - - PAGE HEADER - - */
-.page-header .luxury-streetwear .title1 {
-/*	transform: translateX(0) translateY(-5px) rotate(var(--tilt));
-	transition: .2s ease-in-out;*/
-}
-
-.page-header .luxury-streetwear .title1:hover {
-/*	transform: translateX(0) translateY(-5px) rotate(0);
-	transition: .2s ease-in-out;*/
-}
 
 .page-header .luxury-streetwear .title2 {
-/*	transform: translateX(10%);*/
+	grid-column: 2 / 13;
 }
+
 
 
 @media (min-width: 700px) {
-	.page-header .luxury-streetwear .title1 {
-/*		transform: translateX(-55%) translateY(.7em) rotate(var(--tilt));
-		transition: 0 ease-in-out;*/
+	.page-header .luxury-streetwear .title2 {
+		grid-column: 1 / 13;
 	}
 
-	.page-header .luxury-streetwear .title1:hover {
-/*		transform: translateX(-55%) translateY(0em) rotate(0);
-		transition: .2s ease-in-out;*/
+	.luxury-streetwear .screaming-voice {
+		font-size: clamp(40px, 6vw, 100px);
 	}
 }
 
@@ -96,14 +61,10 @@
 
 /*- - PORTFOLIO-SITE - - - - - - - - - - - - - - - - - - - */
 /* - - - - PAGE HEADER - - */
-.page-header .portfolio-site .title1 {
-/*	transform: rotate(var(--tilt));
-	transition: .2s ease-in-out;*/
+.page-header .portfolio-site .title2 {
+	grid-column: 6 / 13;
 }
 
-.page-header .portfolio-site .title2 {
-/*	transform: translateX(11em);*/
-}
 .portfolio-site:nth-of-type(2) {
 	grid-row: 4;
 }
@@ -152,18 +113,13 @@
 
 @media (min-width: 550px) {
 	.project .figure {
-/*		grid-column: 1 / 10;*/
 		margin-right: 20px;
 	}
 }
 
 @media (min-width: 700px) {
-	.page-header .portfolio-site .title1 {
-/*		transform: translateX(-20%) translateY(1em) rotate(var(--tilt));*/
-	}
-	
 	.project .heading .title2 {
-/*		transform: translateX(0);*/
+		grid-column: 8 / 13;
 	}
 
 	.project .page-intro {
