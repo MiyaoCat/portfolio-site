@@ -16,10 +16,10 @@
 
 		$senderBody = 
 			"You've sent an email to dftwjohn@gmail.com through their website with the following message" . "\r\n" .  
-			"Message: " . $message . "\r\n";
-			
+			"Message: " . $message;
+
 		mail($to, $subject, $body);
-		mail($email, $subject, $body);
+		mail($email, $senderBody);
 	}
 ?>
 
@@ -58,7 +58,9 @@
 			if ( isset($message) && $message > "0") {	
 ?>	
 			<p class="alert-voice">Thank you! Your message has been received and I will get back to you ASAP! Usually within 2 business days. </p>
-			<button class="normal-voice contact-form"><a href="?page=contact">Send 	another Message</a>
+
+			<button class="normal-voice contact-form">
+				<a href="?page=contact">Send 	another Message</a>
 			</button>
 
 			<?php } ?>
