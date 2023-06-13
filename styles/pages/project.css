@@ -1,11 +1,4 @@
 /* - - PAGE HEADER - - */
-.project .page-header .title1 {
-	transform: translateX(0);
-}
-
-.project .page-header .title2 {
-	transform: translateX(6em);
-}
 
 /* - - CASE STUDY MODULES - - */
 .project .generic-text  {
@@ -13,80 +6,67 @@
 	margin-top: 20px;
 }
 
-.project .figure {
-	grid-column: 2 / 14;
-}
-
 .project .figure picture {
 	border: var(--border-thin) solid var(--ink);
 }
 /*- - LAYOUT GARDEN - - - - - - - - - - - - - - - */
 .layout-garden.heading .title1 {
-	transform: translateX(0) translateY(-.4em) rotate(var(--tilt));
-	transition: .2s ease-in-out;
+/*	transform: translateX(0) translateY(-.4em) rotate(var(--tilt));
+	transition: .2s ease-in-out;*/
 }
 
 .layout-garden.heading .title2 {
-	transform: translateX(6em); 
+/*	transform: translateX(6em); */
 }
 
 .layout-garden.heading .title1:hover {
-	transform: translateX(0) rotate(0);
-	transition: .2s ease-in-out;
+/*	transform: translateX(0) rotate(0);
+	transition: .2s ease-in-out;*/
 }
 
 @media (min-width: 550px) {
 	.layout-garden.heading .title1 {
-		transform: translateX(0) translateY(-5px) rotate(var(--tilt));
+/*		transform: translateX(0) translateY(-5px) rotate(var(--tilt));*/
 	}
 }
 
 @media (min-width: 700px) {
 	.layout-garden.heading .title1 {
-		transform: translateX(-70%) translateY(10px) rotate(var(--tilt));
+/*		transform: translateX(-70%) translateY(10px) rotate(var(--tilt));*/
 	}
 
 	.layout-garden.heading .title1:hover {
-		transform: translateX(-70%) rotate(0);
-		transition: .2s ease-in-out;
+/*		transform: translateX(-70%) rotate(0);
+		transition: .2s ease-in-out;*/
 	}
 }
 
 /*- - LUXURY-STREETWEAR - - - - - - - - - - - - - - - - - */
 /* - - PAGE HEADER - - */
 .page-header .luxury-streetwear .title1 {
-	transform: translateX(0) translateY(-5px) rotate(var(--tilt));
-	transition: .2s ease-in-out;
+/*	transform: translateX(0) translateY(-5px) rotate(var(--tilt));
+	transition: .2s ease-in-out;*/
 }
 
 .page-header .luxury-streetwear .title1:hover {
-	transform: translateX(0) translateY(-5px) rotate(0);
-	transition: .2s ease-in-out;
+/*	transform: translateX(0) translateY(-5px) rotate(0);
+	transition: .2s ease-in-out;*/
 }
 
 .page-header .luxury-streetwear .title2 {
-	transform: translateX(10%);
+/*	transform: translateX(10%);*/
 }
 
-@media (min-width: 400px) {
-	.page-header .luxury-streetwear .title1 {
-		transform: translateX(0) translateY(-1em) rotate(var(--tilt));
-	}
-
-	.page-header .luxury-streetwear .title2 {
-		transform: translateX(20%) translateY(-5px);
-	}
-}
 
 @media (min-width: 700px) {
 	.page-header .luxury-streetwear .title1 {
-		transform: translateX(-55%) translateY(.7em) rotate(var(--tilt));
-		transition: 0 ease-in-out;
+/*		transform: translateX(-55%) translateY(.7em) rotate(var(--tilt));
+		transition: 0 ease-in-out;*/
 	}
 
 	.page-header .luxury-streetwear .title1:hover {
-		transform: translateX(-55%) translateY(0em) rotate(0);
-		transition: .2s ease-in-out;
+/*		transform: translateX(-55%) translateY(0em) rotate(0);
+		transition: .2s ease-in-out;*/
 	}
 }
 
@@ -117,17 +97,12 @@
 /*- - PORTFOLIO-SITE - - - - - - - - - - - - - - - - - - - */
 /* - - - - PAGE HEADER - - */
 .page-header .portfolio-site .title1 {
-	transform: rotate(var(--tilt));
-	transition: .2s ease-in-out;
-}
-
-.page-header .portfolio-site .title1:hover {
-	transform: translateX(0) translateY(0) rotate(0);
-	transition: .2s ease-in-out;
+/*	transform: rotate(var(--tilt));
+	transition: .2s ease-in-out;*/
 }
 
 .page-header .portfolio-site .title2 {
-	transform: translateX(11em);
+/*	transform: translateX(11em);*/
 }
 .portfolio-site:nth-of-type(2) {
 	grid-row: 4;
@@ -177,22 +152,18 @@
 
 @media (min-width: 550px) {
 	.project .figure {
-		grid-column: 1 / 10;
+/*		grid-column: 1 / 10;*/
 		margin-right: 20px;
 	}
 }
 
 @media (min-width: 700px) {
 	.page-header .portfolio-site .title1 {
-		transform: translateX(-20%) translateY(1em) rotate(var(--tilt));
-	}
-
-	.page-header .portfolio-site .title1:hover {
-		transform: translateX(-21%) translateY(0) rotate(0);
+/*		transform: translateX(-20%) translateY(1em) rotate(var(--tilt));*/
 	}
 	
 	.project .heading .title2 {
-		transform: translateX(0);
+/*		transform: translateX(0);*/
 	}
 
 	.project .page-intro {
@@ -201,7 +172,7 @@
 
 	.project .figure {
 		display: flex;
-		grid-column: 4 / 10;
+/*		grid-column: 4 / 10;*/
 		margin-right: 20px;
 		max-width: 550px;
 	}

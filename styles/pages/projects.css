@@ -1,17 +1,4 @@
 /* - - PAGE HEADER - - - - - - - - - - - - */
-.projects .page-header .title1 {
-	transform: translateY(-35%) rotate(-4deg);
-	transition: .2s ease-in-out;
-}
-
-.projects .page-header .title1:hover {
-	transform: translateX(0) rotate(0);
-	transition: .2s ease-in-out;
-}
-
-.projects .page-header .title2 {
-	transform: translateX(2em);
-}
 
 .projects project-card.layout-garden {
 	grid-row: 4;
@@ -34,28 +21,5 @@
 }
 
 @media (min-width: 700px) {
-	/* - - PAGE HEADER - - - - - - - - - - - - */
-	.projects .page-header .title1 {
-		transform: translateX(-85%) translateY(22%) rotate(var(--tilt));
-		transition: .2s ease-in-out;
-	}
 
-	.projects .page-header .title1:hover {
-		transform: translateX(-85%) translateY(0) rotate(0);
-		transition: .2s ease-in-out;
-	}
-
-	.projects .page-header .title2 {
-		transform: translateX(0);
-	}
-
-	.projects project-card {
-		grid-column: 4 / 10;
-	}
-}
-
-@media (min-width: 1000px) {
-	project-card {
-		/*grid-column: 5 / 10;*/
-	}
 }

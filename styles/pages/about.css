@@ -1,17 +1,4 @@
 /* - - - - PAGE HEADER- - - - - - - - - - - - */
-.about .page-header .title1 {
-	transform: translateX(0) rotate(var(--tilt));
-	transition: .2s ease-in-out;
-}
-
-.about .page-header .title1:hover {
-	transform: translateX(0) rotate(0);
-	transition: .2s ease-in-out;
-}
-
-.about .page-header .title2 {
-	transform: translateX(6.4em);
-}
 
 .about .figure {
 	display: none;
@@ -37,28 +24,7 @@
 }
 
 /* - - PAGE HEADER - - */
-@media (min-width: 500px) {
-	.about .page-header .title1 {
-		transform: translateX(0) translateY(-0.5em) rotate(var(--tilt));
-	}
 
-	.about .page-header .title2 {
-		transform: translateX(22%);
-	}
-}
-
-@media (min-width: 700px) {
-	.about .page-header .title1 {
-		transform: translateX(-3em) translateY(0.5em) rotate(var(--tilt));
-	}
-
-	.about .page-header .title1:hover {
-		transform: translateX(-3em) rotate(0);
-	}
-
-	.about .page-header .title2 {
-		transform: translateX(55%);
-	}
 
 	/* - - PAGE INTRO - - - - - - - - */
 	.about .page-intro {
