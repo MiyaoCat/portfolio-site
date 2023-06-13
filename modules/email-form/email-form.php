@@ -15,7 +15,7 @@
 			"Message: " . $message . "\r\n";
 
 		$senderBody = 
-			"You've sent an email to dftwjohn@gmail.com through their website with the following message" . "\r\n" .  
+			"You've sent an email to dftwjohn@gmail.com through their website. Do not reply to this email." . "\r\n" .  
 			"Message: " . $message;
 
 		mail($to, $subject, $body);
@@ -59,8 +59,10 @@
 ?>	
 			<p class="alert-voice">Thank you! Your message has been received and I will get back to you ASAP! Usually within 2 business days. </p>
 
+			<p class="alert-voice">I also sent a copy of your message to the email address you provided.</p>
+
 			<button class="normal-voice contact-form">
-				<a href="?page=contact">Send 	another Message</a>
+				<a href="?page=contact">Send another Message</a>
 			</button>
 
 			<?php } ?>
