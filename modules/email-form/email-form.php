@@ -11,11 +11,13 @@
 		$body = "";
 
 		$body = "Email: " . $email . "\r\n" . 
-			// "Subject: " . $subject . "\r\n" . 
 			"Name: " . $name . "\r\n" . 
 			"Message: " . $message . "\r\n";
 
-
+		$senderBody = 
+			"You've sent an email to dftwjohn@gmail.com through their website with the following message" . "\r\n" .  
+			"Message: " . $message . "\r\n";
+			
 		mail($to, $subject, $body);
 		mail($email, $subject, $body);
 	}
