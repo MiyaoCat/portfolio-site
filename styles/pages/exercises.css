@@ -21,7 +21,7 @@ form-exercise .exercises li {
 	border: 3px solid var(--ink);
 	box-shadow: 5px 5px var(--contrast);
 	background: var(--background);
-	max-width: 18rem;
+	max-width: 10rem;
 }
 
 .array {
@@ -62,7 +62,7 @@ form-exercise .exercises li:hover {
 	}
 
 	.calculations {
-		grid-column: 5 / 7;
+/*		grid-column: 5 / 7;*/
 	}
 
 	.decision-making {
@@ -77,7 +77,7 @@ form-exercise .exercises li:hover {
 
 	.decision-making {
 		grid-row: 6;
-		grid-column: 5 / 7;
+/*		grid-column: 5 / 7;*/
 	}
 }
 

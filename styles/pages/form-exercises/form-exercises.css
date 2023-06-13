@@ -2,7 +2,7 @@
 #languages {
 	grid-row: 4;
 /*	grid-column: 2 / 14;*/
-	margin-bottom: 15px;
+	margin: 0 5px 15px 5px;
 }
 #languages form {
  	display: grid;
@@ -108,7 +108,7 @@ input[type="radio"]:checked {
 	margin-right: 20px;
 	margin-left: 5px;
 	grid-row: 3;
-	grid-column: 2 / 14;
+	grid-column: 1 / -1;
 	padding: 0 5px;
 }
 
