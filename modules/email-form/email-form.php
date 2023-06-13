@@ -17,7 +17,7 @@
 
 
 		mail($to, $subject, $body);
-
+		mail($email, $subject, $body);
 	}
 ?>
 
