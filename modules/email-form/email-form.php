@@ -19,7 +19,7 @@
 			"Message: " . $message;
 
 		mail($to, $subject, $body);
-		mail($email, $senderBody);
+		mail($email, $subject, $senderBody);
 	}
 ?>
 
