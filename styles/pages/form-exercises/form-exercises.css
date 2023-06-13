@@ -1,7 +1,13 @@
+/* - - - PAGE HEADER - - - - - - -*/
+.exercise .heading .title2,
+.js-exercise .heading .title2,
+.v-exercise .heading .title2 {
+	grid-column: 2;
+}
+
 /* - - - LANGUAGE INPUT - - - - - - -*/
 #languages {
 	grid-row: 4;
-/*	grid-column: 2 / 14;*/
 	margin: 0 5px 15px 5px;
 }
 #languages form {
@@ -96,22 +102,18 @@ input[type="radio"]:checked {
 .exercise .instructions, 
 .v-exercise .instructions,
 .js-exercise .instructions {
-	max-width: 700px;
+	max-width: 450px;
 	margin: 10px 20px 10px 0;
 }
 
 .exercise form, 
 .v-exercise form,
 .js-exercise form {
-/*	display: flex;*/
-	flex-direction: column;
 	margin-right: 20px;
 	margin-left: 5px;
 	grid-row: 3;
-	grid-column: 1 / -1;
 	padding: 0 5px;
 }
-
 
 /* - - - BACK BUTTON - - - - - - -*/
 .return {
@@ -199,7 +201,6 @@ form-wrap .hidden {
 .js-exercise .password-output span   {
 	color: var(--standout);
 	margin: 5px 0;
-/*	overflow: auto;*/
 }
 
 password-enter {
@@ -249,13 +250,11 @@ password-enter {
 output {
 	grid-row: 4;
 	grid-column: 2 / 14;
-	margin-top: 20px;
-	margin-left: 10px;
-	margin-right: 20px;
-/*	margin: auto 20px auto 10px;*/
+	margin: 20px 10px 0 20px;
 	border: 3px solid var(--ink);
 	background: var(--background);
 	padding: 5px;
+	max-width: 450px;
 }
 
 output p {
@@ -269,56 +268,30 @@ output p {
 }
 
 @media (min-width: 550px) {
-	.exercise heading, .exercise form, 
-	.v-exercise heading, .v-exercise form,
-	.js-exercise heading, .v-exercise form {
-		grid-column: 2 / 14;
-	}
-
 	.exercise form, 
 	.v-exercise form,
 	.js-exercise form {
-		grid-column: 1 / 8;
 		display: flex;
 		flex-direction: column;
 	}
 }
 
 @media (min-width: 700px) {
+	
 	#languages button {
 		margin-left: auto;
-	}
-
-	.exercise heading, 
-	.v-exercise heading,
-	.js-exercise heading {
-		grid-column: 4 / 10;
-	}
-
-	.exercise .instructions, 
-	.v-exercise .instructions,
-	.js-exercise .instructions {
-		grid-column: 4 / 10;
-	}
-
-	.exercise form, 
-	.v-exercise form,
-	.js-exercise form {
-		grid-column: 4 / 10;
 	}
 
 	.password-output {
 		max-width: 250px;
 	}
 
-	output {
+	.exercise output, 
+	.js-exercise output,
+	.v-exercise output {
 		grid-row: 3;
 		grid-column: 10 / 13;
 		padding: 5px;
-	/*	margin-top: 10px;
-		margin-bottom: auto;
-		margin-left: 20px;
-		margin-right: auto;*/
 		margin: auto 20px auto 10px;
 	}
 
@@ -332,9 +305,7 @@ output p {
 		grid-column: 10 /14;
 		grid-row: 5;
 	}
-
 }
-
 
 .js-exercise .password-output, .js-exercise password-enter {
 	display: none;

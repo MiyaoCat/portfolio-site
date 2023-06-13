@@ -33,7 +33,7 @@ body {
 }
 
 body > * {
-	grid-column: 2 / 14;
+	grid-column: 1 / -1;
 }
 
 .background {

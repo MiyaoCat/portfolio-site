@@ -29,7 +29,7 @@ form.self-checkout quantity {
 
 @media (min-width: 350px) {
 	form.self-checkout .items-wrap {
-		grid-column: 1 / 10;
+/*		grid-column: 1 / 10;*/
 		display: grid;
 		grid-template-rows: 1fr 1fr auto; 
 		grid-template-columns: 1fr 1fr;
@@ -49,10 +49,9 @@ form.self-checkout quantity {
 
 @media (min-width: 700px) {
 	form.self-checkout {
-		grid-column: 4 / 10;
 		gap: 0;
 	}
-
+	
 	form.self-checkout .item.one {
 		grid-row: 1;
 		grid-column: 1;
@@ -78,7 +77,6 @@ form.self-checkout quantity {
 		grid-column: 1 / -1;
 	}
 	form.self-checkout button {
-		/*grid-row: 3;*/
 		grid-column:  1 / -1;
 	}
 }
