@@ -6,7 +6,7 @@ project-card {
 	border-top: 3px solid var(--trim);
 	border-bottom: 3px solid var(--trim);
 
-	grid-column: 2 / 14;
+	max-width: 450px;
 	gap: 10px;
 }
 
@@ -53,6 +53,7 @@ project-card .project-image  {
 @media (min-width: 700px) {
 	project-card {
 		margin-right: 20px;
+		max-width: none;
 	}
 
 	project-card .project-images {
