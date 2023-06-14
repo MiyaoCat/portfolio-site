@@ -15,7 +15,6 @@
 /* - - GENERIC-TEXT - - - - - - - - */
 .about .generic-text {
 	grid-row: 3;
-
 }
 
 .about .generic-text:nth-of-type(2) {

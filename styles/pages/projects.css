@@ -3,6 +3,12 @@
 	grid-column-start: 2;
 }
 
+@media (min-width: 700px) {
+	.projects project-card {
+		margin-right: 20px;
+	}
+}
+
 .projects project-card.layout-garden {
 	grid-row: 4;
 }
@@ -23,6 +29,3 @@
 	grid-row: 8;
 }
 
-@media (min-width: 700px) {
-
-}

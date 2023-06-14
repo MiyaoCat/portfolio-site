@@ -5,6 +5,7 @@
 	justify-content: space-between;
 	margin-bottom: 11px;
 	margin-top: 5px;
+	margin: 5px 0 11px 0;
 	position: sticky;
 	top: 0;
 	background-color: var(--background);
