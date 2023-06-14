@@ -12,7 +12,7 @@
 	<link rel="icon" type="image/x-icon" href="images/icons/logo.svg">
 	 
 	<meta property="og:image" content="https://peprojects.dev/alpha-4/john/images/meta-image.png">
-	<meta name="description" content="Get to know John Miyao. See his projects. Say 'Hi'">
+	<meta name="description" content="Get to know John Miyao. Program Manager turned Web Developer. See his projects. Say 'Hi'.">
 
 	<title>JM's Portoflio</title>
 
