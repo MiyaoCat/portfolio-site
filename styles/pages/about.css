@@ -12,6 +12,11 @@
 	grid-column: 2 / 14;
 }
 
+@media (min-width: 450px) {
+	.about.heading .title2 {
+		grid-column: 3;
+	}
+}
 /* - - GENERIC-TEXT - - - - - - - - */
 .about .generic-text {
 	grid-row: 3;
