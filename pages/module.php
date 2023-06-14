@@ -8,3 +8,4 @@
 	?>
 </section>
 
+<a class="back-button" href="?page=style-guide">Back</a>

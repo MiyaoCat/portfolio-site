@@ -1,12 +1,17 @@
 .module-template :is(.figure, .generic-text, .social-icons, .email-form, .project-card, .button) {
 	grid-row: 3;
-	grid-column: 2 / 14;
+/*	grid-column: 2 / 14;*/
 }
-
+.module-template .back-button {
+	grid-row: 4;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
 @media (min-width: 700px) {
 	.module-template :is(.figure, .generic-text, .social-icons, .email-form, .project-card, .button) {
 		grid-row: 3;
-		grid-column: 4 / 10;
+/*		grid-column: 4 / 10;*/
 		margin-right: 20px;
 	}
 }
@@ -23,7 +28,7 @@
 @media (min-width: 700px) {
 	.module-template .module.figure {
 		grid-row: 3;
-		grid-column: 5 / 10;
+/*		grid-column: 5 / 10;*/
 	}
 }
 /* - - - - BUTTON  - - - - - - - - - - - - */
@@ -33,7 +38,7 @@
 
 /* - - - - EMAIL FORM  - - - - - - - - - - - - */
 .module-template .email-form {
-	grid-column: 6 / 10;
+/*	grid-column: 6 / 10;*/
 }
 
 /* - - - - PROJECT-CARD - - - - - - - - - - - - */
@@ -43,7 +48,7 @@
 
 @media (min-width: 700px) {
 	.module-template .module.project-card {
-		grid-column: 4 / 10;
+/*		grid-column: 4 / 10;*/
 		margin: 0;
 	}
 }
