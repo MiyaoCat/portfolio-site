@@ -1,5 +1,7 @@
 <?php  
-	if ( isset($_POST["submitted"]) && $_POST["inputMessage"] != "" ) {
+	$submitted = isset($_POST["submitted"]);
+
+	if ( $submitted  && $_POST["inputMessage"] != "" ) {
 
 		$email = $_POST['inputEmail'];
 		$subject = $_POST['inputSubject'];
@@ -42,6 +44,7 @@
 	</div>
 
 	<div class="message">
+		
 		<label for="inputMessage">* Message</label>
 		<textarea rows="6" columns="10" name="inputMessage" placeholder="Hey John, I love your work. Let's collab!" required></textarea>
 	</div>
