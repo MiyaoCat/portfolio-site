@@ -52,6 +52,9 @@
 		border: var(--border-med) solid var(--ink);
 	}
 
+	.about .figure:hover {
+		background: linear-gradient(hsla(237, 100%, 53%, 1), hsla(295, 100%, 50%, 1));
+	}
 	.about .figure:nth-of-type(4)  {
 		display: block;
 		grid-row: 3 / span 2;
