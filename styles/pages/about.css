@@ -34,7 +34,7 @@
 @media (min-width: 700px) {
 	/* - - PAGE HEADER - - */
 	.about.heading .title2 {
-		grid-column: 6;
+		grid-column: 5;
 	}
 	
 	/* - - PAGE INTRO - - - - - - - - */
