@@ -73,6 +73,8 @@ input, textarea {
 @media (min-width: 700px) {
 	body > * {
 		grid-column: 4 / 10;
+		margin-right: 0;
+		margin-left: 0;
 	}
 
 	.background {
