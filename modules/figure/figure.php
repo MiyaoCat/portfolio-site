@@ -21,7 +21,7 @@
 <?php } ?>
 
 <?php 
-	if ($page !== "project") {
+	if ($page !== "project" && $page !== "module") {
 
 		$filePath = $sections["filePath"];
 		$altText = $sections["altText"];
