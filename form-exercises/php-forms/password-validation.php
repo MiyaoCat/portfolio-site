@@ -24,7 +24,6 @@ if($submitted) {
 				}			
 		}
 	} 
-
 } 
 
 function successMessage($fruit, $number, $password) {
@@ -36,7 +35,7 @@ function successMessage($fruit, $number, $password) {
 			if ( $fruit != null  && $number != null ) {
 					if ($fruit . $number == $password) {
 
-						 $successMessage = "You're in!";
+						$successMessage = "You're in!";
 					}				
 			}
 		} 
