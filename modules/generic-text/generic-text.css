@@ -1,6 +1,5 @@
 .generic-text {
 	grid-row: 3;
-	margin: 5px;
 	display: flex;
 	max-width: 450px;
 }

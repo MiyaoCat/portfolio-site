@@ -110,7 +110,6 @@ input[type="radio"]:checked {
 .v-exercise form,
 .js-exercise form {
 	margin-right: 20px;
-	margin-left: 5px;
 	grid-row: 3;
 	padding: 0 5px;
 }
