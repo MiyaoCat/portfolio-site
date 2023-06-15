@@ -3,6 +3,7 @@
 ?>
 
 <section class="<?=$page?> <?=$moduleName?>">
+	<h2 class="loud-voice"><?= ucwords($moduleName) ?> Module</h2>
 	<?php 
 		include("modules/$moduleName/$moduleName.php");
 	?>

@@ -56,3 +56,10 @@
 body.module.module-template:nth-child(5) {
 	justify-items: end;
 }
+
+section.module {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
