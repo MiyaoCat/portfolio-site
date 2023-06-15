@@ -69,7 +69,7 @@ input, textarea {
 	padding: 5px;
 }
 
-input:focus {
+input:focus, textarea:focus {
 	border-color: var(--standout);
 }
 
