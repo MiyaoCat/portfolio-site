@@ -33,16 +33,16 @@
 
 @media (min-width: 550px) {
 	.home .button:nth-of-type(2) {
-		grid-column-start: 3;
+		grid-column-start: 2;
 		margin: 20px auto 15px -10px;
-		transform: translateX(0);
+		transform: translateX(3em);
 	}
 
 	.home .button:nth-of-type(3) {
 		grid-row: 6;
 		grid-column-start: 6;
 		margin: 20px auto 15px 20px;
-		transform: translateX(0);
+		transform: translateX(-2em);
 	}
 }
 
@@ -68,17 +68,17 @@
 	}
 }
 
-@media (min-width: 1150px) {
+@media (min-width: 1300px) {
 	.home .button:nth-of-type(2)  {
 		grid-row: 6;
-		grid-column: 4;
+		grid-column: 5;
 		transform: translateX(3.5em);
 	}
 
 	.home .button:nth-of-type(3) {
 		grid-row: 6;
-		grid-column: 5 / 10;
-		transform: translateX(3.5em);
+		grid-column: 6 / 10;
+/*		transform: translateX(3.5em);*/
 	}
 }
 
