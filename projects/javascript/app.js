@@ -25,7 +25,7 @@ addElement('p', 'new text');
 wondow.addEventListener("click", function(event) {
 	console.log(event.target.id); //tells you what element you're clicking on the window
 
-	if ( event.target.mathces("#goTONextPage")) {
+	if ( event.target.matches("#goTONextPage")) {
 		//delegate events...
 		console.log("you clicked the button");
 	}

@@ -20,7 +20,7 @@ app.get('/', function(request, response) {
 });
 
 app.get('/about', function(request, response) {
-	response.sendFile('.styles/site.css', { root: __dirname });
+	response.sendFile('example.html', { root: __dirname });
 });
 
 app.get('/contact', function(request, response) {
