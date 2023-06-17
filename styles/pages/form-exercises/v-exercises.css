@@ -1,3 +1,9 @@
 .v-area-of-room.heading .title2 {
 	grid-column: 2 / 13;
 }
+
+[data-vue='areaOfRoom'] .width, [data-vue='areaOfRoom'] .length {
+	display: flex;
+	flex-direction: column;
+
+}

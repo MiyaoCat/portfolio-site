@@ -1,10 +1,14 @@
 <form data-vue='areaOfRoom'>
-	<h1>{{description}}</h1>
-	<label for="length">What is the length of the room in feet?</label>
-	<input type="number" min="0" name="length" v-model='length'>
+	<p class="normal-voice">{{description}}</p>
+	<div class="length">
+		<label for="length">What is the length of the room in feet?</label>
+		<input type="number" min="0" name="length" v-model='length'>
+	</div>
 
-	<label for="width">What is the width of the room in feet?</label>
-	<input type="number" min="0" name="width" v-model='width'>
+	<div class="width">
+		<label for="width">What is the width of the room in feet?</label>
+		<input type="number" min="0" name="width" v-model='width'>
+	</div>
 	
 	<button v-on:click.prevent="outputMessage">Return</button>
 </form>
