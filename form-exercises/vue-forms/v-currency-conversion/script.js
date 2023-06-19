@@ -5,10 +5,10 @@ new Vue({
 	data() {
 		return {
 			instructions: `
-				<p>We'll be converting Euros to Dollars</p>
+				<p class='normal-voice'>We'll be converting Euros to Dollars</p>
 				<ol>
-					<li>Enter the number of Euros you're converting</li>
-					<li>Enter the current exchange rate</li>
+					<li class='normal-voice'>1. Enter the number of Euros you're converting.</li>
+					<li class='normal-voice'>2. Enter the current exchange rate.</li>
 				</ol>`,
 			euros: "",
 			xRate: "",
@@ -18,10 +18,12 @@ new Vue({
 
 	computed: {
 		conversion() {
-			return this.euros*this.xRate/100;
+			const number = this.euros*this.xRate/100;
+			const numberFormatted = number.toLocaleString('en-us', {style: 'decimal', maximumFractionDigits: 2});
+			return numberFormatted;
 		},
 		message() {
-			return `You will have $${this.conversion.toFixed(2)}🇺🇸💵.`;
+			return `You will have $${this.conversion}🇺🇸💵.`;
 		}
 	},
 	

@@ -1,11 +1,16 @@
 
 <form data-vue='pizzaParty'>
 	<p class="instructions" v-html='instructions'></p>
-	<label for="people">How many people will be attending?</label>
-	<input type="number" min="0" name="people" v-model='people'>
+	
+	<div class="people">
+		<label for="people">How many people will be attending?</label>
+		<input type="number" min="0" name="people" v-model='people'>
+	</div>
 
-	<label for="pizzas">How many pizzas will there be?</label>
-	<input type="number" min="0" name="pizzas" v-model='pizzas'>
+	<div class="pizzas">
+		<label for="pizzas">How many pizzas will there be?</label>
+		<input type="number" min="0" name="pizzas" v-model='pizzas'>
+	</div>
 	
 	<p class="userInput" v-html="userInputs">You entered: </p>
 	

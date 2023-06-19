@@ -23,7 +23,7 @@ new Vue({
 			let remainder = (slices % people);
 			
 			if (this.people > 0 && this.pizzas > 0) {
-				return `There will be <span>${slicesPerPerson}</span> 🍕 per 💁‍♂️  with <span>${remainder}</span> 🍕 to 🤼 for.`;
+				return `There will be ${slicesPerPerson} 🍕 per 💁‍♂️  with ${remainder} 🍕 to 🤼 for.`;
 			} 
 			if (this.people == "" && this.pizzas > 0 ) {
 				return "No 💁‍♂️";

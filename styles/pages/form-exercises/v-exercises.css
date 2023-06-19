@@ -1,3 +1,4 @@
+/* - - - - - - AREA OF ROOM - - - - - - -  */
 .v-area-of-room.heading .title2 {
 	grid-column: 2 / 13;
 }
@@ -5,5 +6,22 @@
 [data-vue='areaOfRoom'] .width, [data-vue='areaOfRoom'] .length {
 	display: flex;
 	flex-direction: column;
+}
 
+/* - - - - - - PIZZA PARTY - - - - - - -  */
+[data-vue='pizzaParty'] .people, [data-vue='pizzaParty'] .pizzas {
+	display: flex;
+	flex-direction: column;
+}
+
+/* - - - - - - PAINT CALCULATOR - - - - - - -  */
+[data-vue='paintCalc'] .width, [data-vue='paintCalc'] .length {
+	display: flex;
+	flex-direction: column;
+}
+
+/* - - - - - - CURRENCY CONVERSION - - - - - - -  */
+[data-vue='currencyConversion'] .euros, [data-vue='currencyConversion'] .exchange {
+	display: flex;
+	flex-direction: column;
 }

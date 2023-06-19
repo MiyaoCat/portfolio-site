@@ -1,11 +1,15 @@
 <form data-vue='currencyConversion'>
 	<p class="instructions" v-html='instructions'></p>
 	
-	<label for="euros">How many Euro's ya got?</label>
-	<input name="euros" type="number" v-model='euros'>
+	<div class="euros">
+		<label for="euros">How many Euro's ya got?</label>
+		<input name="euros" type="number" v-model='euros'>
+	</div>
 	
-	<label for="exchange">What's the current exchange rate?</label>
-	<input name = "exchange" type="number" v-model="xRate">	
+	<div class="exchange">
+		<label for="exchange">What's the current exchange rate?</label>
+		<input name = "exchange" type="number" v-model="xRate">
+	</div>
 	
 	<!-- <button @click.prevent=messageHandler()>Convert 💱</button> -->
 </form>

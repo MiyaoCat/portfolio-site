@@ -44,7 +44,9 @@ new Vue({
 			// }
 	
 			if (this.quantity1 > 0 && this.price1 > 0) {
-				return this.quantity1*this.price1;
+				const number = this.quantity1*this.price1;
+				const numberFormatted = number.toLocaleString('en-us', {style: 'decimal', maximumFractionDigits: 2});
+				return numberFormatted;
 			}
 		},
 		total2() {
@@ -62,7 +64,9 @@ new Vue({
 			// }
 	
 			if (this.quantity2 > 0 && this.price2 > 0) {
-				return this.quantity2*this.price2;
+				const number2 = this.quantity2*this.price2;
+				const numberFormatted2 = number2.toLocaleString('en-us', {style: 'decimal', maximumFractionDigits: 2});
+				return numberFormatted2;
 			}
 		},
 		message() { 
@@ -76,7 +80,7 @@ new Vue({
 			}			
 			//if there's total1 AND total2, then display the combined subtotal
 			if (this.total1 && this.total2) {
-				return `Subtotal: ${this.total1+this.total2}`;
+				return `Subtotal: $${this.total1+this.total2}`;
 			}	
 		}
 	},

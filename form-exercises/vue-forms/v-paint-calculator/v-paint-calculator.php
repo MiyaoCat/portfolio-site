@@ -4,11 +4,15 @@
 
 	<p class="instructions">{{instructions}}</p>
 	
-	<label for="width">How wide is the ceiling in feet?</label>
-	<input type="number" min="0" name="width" v-model='width'>
+	<div class="width">
+		<label for="width">How wide is the ceiling in feet?</label>
+		<input type="number" min="0" name="width" v-model='width'>
+	</div>
 
-	<label for="length">How long is the ceiling in feet?</label>
-	<input type="number" min="0" name="length" v-model='length'>
+	<div class="length">
+		<label for="length">How long is the ceiling in feet?</label>
+		<input type="number" min="0" name="length" v-model='length'>
+	</div>
 
 	<p class="userInput" v-html="userInputs">You entered: </p>
 </form>
