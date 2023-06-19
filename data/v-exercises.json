@@ -107,11 +107,6 @@
 				"slug": "v-blood-alcohol-calculator"
 			},
 			{
-				"title1": "Temp",
-				"title2": "Converter",
-				"slug": "v-temp-converter"
-			},
-			{
 				"title1": "BMI",
 				"title2": "Calculator",
 				"slug": "v-bmi-calculator"
