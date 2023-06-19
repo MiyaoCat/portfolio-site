@@ -3,25 +3,106 @@
 	grid-column: 2 / 13;
 }
 
-[data-vue='areaOfRoom'] .width, [data-vue='areaOfRoom'] .length {
+[data-vue='areaOfRoom'] .width, 
+[data-vue='areaOfRoom'] .length {
 	display: flex;
 	flex-direction: column;
 }
 
 /* - - - - - - PIZZA PARTY - - - - - - -  */
-[data-vue='pizzaParty'] .people, [data-vue='pizzaParty'] .pizzas {
+[data-vue='pizzaParty'] .people, 
+[data-vue='pizzaParty'] .pizzas {
 	display: flex;
 	flex-direction: column;
 }
 
 /* - - - - - - PAINT CALCULATOR - - - - - - -  */
-[data-vue='paintCalc'] .width, [data-vue='paintCalc'] .length {
+[data-vue='paintCalc'] .width, 
+[data-vue='paintCalc'] .length,
+[data-vue='currencyConversion'] .euros, 
+[data-vue='currencyConversion'] .exchange,
+[data-vue='simpleInterest'] .principal, 
+[data-vue='simpleInterest'] .interest,
+[data-vue='simpleInterest'] .years,
+[data-vue='compoundInterest'] .principal, 
+[data-vue='compoundInterest'] .interest,
+[data-vue='compoundInterest'] .years,
+[data-vue='compoundInterest'] .compounds,
+[data-vue='printQuote'] .author,
+[data-vue='printQuote'] .quote,
+[data-vue='madLib'] .noun,
+[data-vue='madLib'] .verb,
+[data-vue='madLib'] .adjective,
+[data-vue='madLib'] .adverb,
+[data-vue='simpleMath'] .number,
+[data-vue='simpleMath'] .number2,
+[data-vue='taxCalc'] .order,
+[data-vue='taxCalc'] .state,
+[data-vue='bacCalc'] .alcohol,
+[data-vue='bacCalc'] .weight,
+[data-vue='bacCalc'] .hours,
+[data-vue='bacCalc'] .male,
+[data-vue='bacCalc'] .female {
 	display: flex;
 	flex-direction: column;
 }
 
-/* - - - - - - CURRENCY CONVERSION - - - - - - -  */
-[data-vue='currencyConversion'] .euros, [data-vue='currencyConversion'] .exchange {
-	display: flex;
-	flex-direction: column;
+/* - - - - - - BLOOD ALCOHOL CALC - - - - - - -  */
+.v-blood-alcohol-calculator.heading .title2 {
+	grid-column: 4;
 }
+
+@media (min-width: 700px) {
+	.v-blood-alcohol-calculator.heading .title2  {
+		grid-column: 1;
+	}
+}
+
+[data-vue='bacCalc'] .gender {
+	display: grid;
+	grid-template-rows: 25px 1fr;
+	grid-template-columns: 1fr 1fr;
+	max-width: 250px;
+	margin-top: 20px;
+}
+
+[data-vue='bacCalc'] .gender p {
+	grid-row: 1;
+	grid-column: 1 / -1;
+}
+
+[data-vue='bacCalc'] .male {
+	grid-row: 2;
+	grid-column: 1;
+	align-self: start;
+}
+[data-vue='bacCalc'] .female {
+	grid-row: 2;
+	grid-column: 2;
+	align-self: start;
+}
+
+/* - - - - - - COMPOUND INTEREST - - - - - - -  */
+@media (min-width: 700px) {
+	.v-compound-interest.heading .title2 {
+		grid-column: 4;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,19 +1,26 @@
 
 <form data-vue='madLib'>
 	<h1>{{title}}</h1>
-	<label for="noun">Enter a Noun:</label>
-	<input name="noun" v-model='noun'>
 
-	<label for="verb">Enter a Verb:</label>
-	<input name="verb" v-model='verb'>
+	<div class="noun">
+		<label for="noun">Enter a Noun:</label>
+		<input name="noun" v-model='noun'>
+	</div>
 
-	<label for="adjective">Enter a Adjective:</label>
-	<input name="adjective" v-model='adjective'>
+	<div class="verb">
+		<label for="verb">Enter a Verb:</label>
+		<input name="verb" v-model='verb'>
+	</div>
 
-	<label for="adverb">Enter a Adverb:</label>
-	<input name="adverb" v-model='adverb'>
+	<div class="adjective">
+		<label for="adjective">Enter an Adjective:</label>
+		<input name="adjective" v-model='adjective'>
+	</div>
 
-
+	<div class="adverb">
+		<label for="adverb">Enter an Adverb:</label>
+		<input name="adverb" v-model='adverb'>
+	</div>
 </form>
 
 <output data-vue="outputMadLibs" v-if="computedMessage">

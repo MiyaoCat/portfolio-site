@@ -1,9 +1,13 @@
 <form data-vue='simpleMath'>
-	<label for="number">Enter a Number:</label>
-	<input type="number" name="number" v-model='number'>
+	<div class="number">
+		<label for="number">Enter a Number:</label>
+		<input type="number" name="number" v-model='number'>
+	</div>
 
-	<label for="number2">Enter a second Number:</label>
-	<input type="number" name="number2" v-model='number2'>
+	<div class="number2">
+		<label for="number2">Enter a second Number:</label>
+		<input type="number" name="number2" v-model='number2'>
+	</div>
 	
 	<!-- <p class='userInput'><span>You entered</span>: {{userInputMessage}}</p> -->
 	

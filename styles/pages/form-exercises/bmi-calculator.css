@@ -1,11 +1,20 @@
-.v-exercise .weight {
-	display: flex;
-	gap: 5px;
-	margin: 5px 0;
-}
-
 [data-vue='bmiCalc'] .height input {
 	max-width: 20%;
+}
+
+[data-vue='bmiCalc'] .weight {
+	display: flex;
+	flex-direction: column;
+	margin: 25px 0;
+}
+
+[data-vue='bmiCalc'] .weight p {
+	margin: 0 auto;
+}
+
+[data-vue='bmiCalc'] .scale {
+	display: flex;
+	gap: 10px;
 }
 
 [data-vue='bmiCalc'] .weight input {

@@ -6,7 +6,7 @@ new Vue({
 	data() {
 		return {
 			instructions: `
-				<p>Time to make some real money. Let's see how much you'll make over time when your money <span style="color:blue">compounds</span>!</p>`,
+				<p>Time to make some real money. Let's see how much you'll make over time when your money <span style="color:var(--standout)">compounds</span>!</p>`,
 			principal: "",
 			interestRate: "",
 			years: "",

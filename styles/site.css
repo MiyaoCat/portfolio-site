@@ -62,6 +62,10 @@ svg {
 	width: clamp(40px, 6vw, 60px);
 }
 
+input {
+	max-width: 300px;
+}
+
 input, textarea {
 	border: var(--border-med) solid var(--trim);
 	font-family: var(--sans-serif);

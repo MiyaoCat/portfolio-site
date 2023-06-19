@@ -6,7 +6,7 @@ new Vue({
 	data() {
 		return {
 			instructions: `
-				<p>Enter your order amount and we'll figure out the total bill, assuming you live in a log cabin in Wiscansin.</p>`,
+				<p>Enter your order amount and we'll figure out the total bill, assuming you live in a mansion, somwhere in Wiscansin (get it?)</p>`,
 			order: "",
 			state: "",
 			showMessage: false,

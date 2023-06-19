@@ -1,13 +1,15 @@
 <form data-vue='printQuote'>
 	<h1>{{title}}</h1>	
 
-	<label for="author">Enter Author:</label>
-	<input name="author" v-model='author'>
+	<div class="author">
+		<label for="author">Enter Author:</label>
+		<input name="author" v-model='author'>
+	</div>
 	
-	<label for="quote">Enter Quote:</label>
-	<input name="quote" v-model='quote'>
-
-	
+	<div class="quote">
+		<label for="quote">Enter Quote:</label>
+		<input name="quote" v-model='quote'>
+	</div>
 </form>
 
 <output data-vue="outputPrintQuote" v-if="computedMessage">

@@ -2,25 +2,31 @@
 	
 	<p class="instructions normal-voice" v-html='instructions'></p>
 
-	<label for="height">How tall are you?</label>
+	
 	
 	<div class="height">
+		<p class="normal-voice">How tall are you?</p>
+
 		<label for="feet">Feet</label>
-		<input name ="feet" type="number" step="" v-model="feet">	
+		<input name ="feet" type="number" step="" min="0" v-model="feet">	
 		
 		<label for="inches">Inches</label>
-		<input name ="inches" type="number" max="11" v-model="inches">	
+		<input name ="inches" type="number" min="0" max="11" v-model="inches">	
 	</div>
-	
-	<label for="weight">How much do you weigh?</label>
 	
 	<div class='weight'>
-		<p class='normal-voice'>1 LB</p>
-		<input type="range" min="1" max='400' step='1' tooltip='weight' class='slider' id='weight' value='' v-model='weight'>
-		<p class='normal-voice'>400 LBs</p>
+		<p class="normal-voice">How much do you weigh?</p>
+
+		<div class="scale">
+			<p class='normal-voice'>1 LB</p>
+			<input type="range" min="1" max='400' step='1' tooltip='weight' class='slider' id='weight' value='' v-model='weight'>
+			<p class='normal-voice'>400 LBs</p>
+		</div>
+
+		<p class="normal-voice">{{weight}} lbs</p>
 	</div>
 
-	<p class="normal-voice">{{weight}} lbs</p>
+	
 	 
 	<!-- <button @click=messageHandler()>Convert</button> -->
 

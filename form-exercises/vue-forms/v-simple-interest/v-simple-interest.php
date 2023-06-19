@@ -2,21 +2,27 @@
 <form data-vue='simpleInterest'>
 	<p class="instructions" v-html='instructions'></p>
 	<!-- <form data-vue='simpleInterest'> -->
-		<label for="principal">Enter your principal investment:</label>
-		<input name="principal" type="number" min="0" v-model='principal'>
+		<div class="principal">
+			<label for="principal">Enter your principal investment:</label>
+			<input name="principal" type="number" min="0" v-model='principal'>
+		</div>
 		
-		<label for="interestRate">Enter the interest rate of your investment:</label>
-		<input name = "interestRate" type="number" min="0" v-model="interestRate">	
+		<div class="interest">
+			<label for="interestRate">Enter the interest rate of your investment:</label>
+			<input name = "interestRate" type="number" min="0" v-model="interestRate">
+		</div>
 		
-		<label for="years">Enter the number of years you'll invest:</label>
-		<input name = "years" type="number" min="0" v-model="years">	
+		<div class="years">
+			<label for="years">Enter the number of years you'll invest:</label>
+			<input name = "years" type="number" min="0" v-model="years">
+		</div>	
 	<!-- </form> -->
 
 	
 </form>
 
 <output data-vue="outputSimpleInterest" v-if="computedMessage">
-	{{computedMessage}} 
+	<p class="normal-voice">{{computedMessage}}</p>
 	<!-- <p class='normal-voice'>Years invested: <span>{{computedYears}}</span></p> -->
 </output>
 

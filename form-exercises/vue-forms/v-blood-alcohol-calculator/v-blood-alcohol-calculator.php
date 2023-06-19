@@ -1,25 +1,34 @@
 
 <form data-vue='bacCalc'>
-	<p class="instructions" v-html='instructions'></p>
+	<p class="instructions normal-voice" v-html='instructions'></p>
 	
+		<div class="alcohol">
+			<label for="alcohol">How much alcohol have you consumed, in ounces?</label>
+			<input name ="alcohol" type="number" v-model="alcohol">
+		</div>
 
-		<label for="alcohol">How much alcohol have you consumed, in ounces?</label>
-		<input name ="alcohol" type="number" v-model="alcohol">	
-
-		<label for="weight">How much do you weigh, in pounds?</label>
-		<input name ="weight" type="number" v-model="weight">	
+		<div class="weight">
+			<label for="weight">How much do you weigh, in pounds?</label>
+			<input name ="weight" type="number" v-model="weight">
+		</div>
 		
-		<label for="hours">How many hours since your last drink?</label>
-		<input name ="hours" type="number" v-model="hours">	
+		<div class="hours">
+			<label for="hours">How many hours since your last drink?</label>
+			<input name ="hours" type="number" v-model="hours">
+		</div>
 		
 		<div class="gender">
-			<label for="gender">Select your biological gender:</label>
+			<p class="instructions">Select your biological gender:</p>
 
-			<label for="male">Male</label>
-			<input name="gender" id="male" type="radio" value="male" v-model="gender">
+			<div class="male">
+				<label for="male">Male</label>
+				<input name="gender" id="male" type="radio" value="male" v-model="gender">
+			</div>
 
-			<label for="female">Female</label>
-			<input name="gender" id="female" type="radio" value="female" v-model="gender">		
+			<div class="female">
+				<label for="female">Female</label>
+				<input name="gender" id="female" type="radio" value="female"v-model="gender">
+			</div>
 		</div>
 	
 	<!-- <button @click=messageHandler()>Am I drunk?</button> -->
@@ -28,10 +37,6 @@
 
 <div class='return'>
 	<?php include('components/back-to-exercises.php'); ?>
-</div>
-
-<div class='return'>
-	<a href='?page=v-exercises' class='alert-voice'>Back</a>
 </div>
 
 <output data-vue="outputBacCalc" v-if="outputMessage">
