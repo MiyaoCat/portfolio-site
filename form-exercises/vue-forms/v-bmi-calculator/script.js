@@ -8,7 +8,7 @@ new Vue({
 			instructions: "Enter your height and weight to calculate your Body Mass Index. Use the slider to select your weight. According to the CDC a healthy BMI is between 18.5 and 25.",
 			feet: "",
 			inches: "", 
-			weight: "1",
+			weight: "100",
 			showMessage: false,
 		};
 	},

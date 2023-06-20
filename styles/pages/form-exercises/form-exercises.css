@@ -182,7 +182,7 @@ form-wrap .hidden {
 .exercise input[type="number"], 
 .v-exercise input[type="number"],
 .js-exercise input[type="number"] {
-	max-width: 150px;
+	max-width: 100px;
 	padding: 5px;
 }
 
@@ -195,6 +195,7 @@ form-wrap .hidden {
 	background-color: var(--background);
 	display: flex;
 	flex-direction: column;
+	max-width: 300px;
 }
 
 .password-output span, 
@@ -207,7 +208,6 @@ form-wrap .hidden {
 password-enter {
 	display: flex;
 	flex-direction: column;
-	border: 2px solid var(--ink);
 }
 
 /* - - RADIO BUTTON - - - - - - - - - - - - - - - */
@@ -255,7 +255,7 @@ output {
 	border: 3px solid var(--ink);
 	background: var(--background);
 	padding: 5px;
-	max-width: 450px;
+	max-width: 300px;
 }
 
 output p {
