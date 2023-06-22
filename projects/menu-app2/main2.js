@@ -4,11 +4,11 @@ console.clear();
 var appPrefix = "my_app"
 
 function getData(key) {
-	return JSON.parse( localStorage.getItem(`${appPrefix}_${key}`))
+	return JSON.parse( localStorage.getItem(`${appPrefix}_${key}`) )
 }
 
 function setData(key, value) {
-	return localStorage.setItem(`${appPrefix}_${key}`, JSON.stringify(value));
+	return localStorage.setItem(`${appPrefix}_${key}`, JSON.stringify(value) );
 }
 
 function removeData(key) {
