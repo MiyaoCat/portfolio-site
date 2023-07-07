@@ -40,9 +40,9 @@
 		"header": "Input/Output",
 		"forms": [
 			{
-				"title1": "Simple",
-				"title2": "Math",
-				"slug": "simple-math"
+				"title1": "Say",
+				"title2": "Hello",
+				"slug": "hello"
 			},
 			{
 				"title1": "Count",
@@ -50,9 +50,14 @@
 				"slug": "count-characters"
 			},
 			{
-				"title1": "Say",
-				"title2": "Hello",
-				"slug": "hello"
+				"title1": "Print",
+				"title2": "Quotes",
+				"slug": "print-quotes"
+			},
+			{
+				"title1": "Simple",
+				"title2": "Math",
+				"slug": "simple-math"
 			}
 		]
 	},

@@ -2,8 +2,6 @@
 html {
 	--sans-serif: Rubik, Helvetica;
 	--serif: Noto Serif Display, Old Standard TT, Times New Roman;
-
-	
 }
 
 a {
@@ -64,7 +62,6 @@ b {
 	font-size: .6rem;
 }
 
-
 .title {
 	font-family: var(--sans-serif);
 	text-transform: uppercase;
@@ -72,6 +69,11 @@ b {
 	font-size: clamp(1.5rem, 5vw, 2rem);
 }
 
+.special {
+	font-family: var(--sans-serif);
+	font-weight: 700;
+	color: var(--standout);
+}
 /* - - SITE MENU - - */
 /*.site-menu a {
 	font-size: .9rem;

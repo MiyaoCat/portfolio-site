@@ -23,34 +23,34 @@
 </div>
 
 <script>
-var $countChar = document.querySelector('form');
+	var $countChar = document.querySelector('form');
 
-var $string = document.querySelector("[name='string']");
-let $output = document.querySelector('.js-exercise output');
-$output.hidden = true;
+	var $string = document.querySelector("[name='string']");
+	let $output = document.querySelector('.js-exercise output');
+	$output.hidden = true;
 
 
-$countChar.addEventListener('submit', function(event) {
-	event.preventDefault();
+	$countChar.addEventListener('submit', function(event) {
+		event.preventDefault();
 
-	let stringInput = $string.value;
-	let stringLength = stringInput.length;
-	let stringNoSpace = stringInput.replace(/ /g, "");
-	let stringNoSpaceLength = stringNoSpace.length;
-	$output.hidden = false;
-	function wordCount(string){
-		return string.trim().split(/\s+/).length;
-	}
+		let stringInput = $string.value;
+		let stringLength = stringInput.length;
+		let stringNoSpace = stringInput.replace(/ /g, "");
+		let stringNoSpaceLength = stringNoSpace.length;
+		$output.hidden = false;
+		function wordCount(string){
+			return string.trim().split(/\s+/).length;
+		}
 
-	let words = wordCount(stringInput);
+		let words = wordCount(stringInput);
 
-	$output.innerHTML = `<p class="normal-voice">You entered: "<span id="words">${stringInput}</span>".</p> 
+		$output.innerHTML = `<p class="normal-voice">You entered: "<span id="words">${stringInput}</span>".</p> 
 
-		<p class="normal-voice">Total characters: ${stringLength}</p>
+			<p class="normal-voice">Total characters: ${stringLength}</p>
 
-		<p class="normal-voice">Total characters without spaces: ${stringNoSpaceLength}</p>
+			<p class="normal-voice">Total characters without spaces: ${stringNoSpaceLength}</p>
 
-		<p class="normal-voice">Total words: ${words}</p>`
+			<p class="normal-voice">Total words: ${words}</p>`
 
-});	
+	});	
 </script>

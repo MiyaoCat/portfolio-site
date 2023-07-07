@@ -1,0 +1,4 @@
+#print-quotes .author, #print-quotes .quote {
+	display: flex;
+	flex-direction: column;
+}

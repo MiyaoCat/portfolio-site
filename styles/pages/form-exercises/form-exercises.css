@@ -113,7 +113,6 @@ input[type="radio"]:checked {
 .js-exercise form {
 	margin-right: 20px;
 	grid-row: 3;
-	padding: 0 5px;
 }
 
 /* - - - BACK BUTTON - - - - - - -*/
@@ -148,11 +147,11 @@ form-wrap .hidden {
 	display: none;
 }
 
-.exercise input, 
+/*.exercise input,
 .v-exercise input,
-.js-exercise input {
+.js-exercise:is(input, textarea) {
 	margin: 5px 0;
-}
+}*/
 
 .exercise form label, 
 .v-exercise form label,
