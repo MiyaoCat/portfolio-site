@@ -2,3 +2,8 @@
 	display: flex;
 	flex-direction: column;
 }
+
+#mad-lib:is(.noun, .verb, .adjective, .adverb) {
+  display: flex;
+  flex-direction: column;
+}

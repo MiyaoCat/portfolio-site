@@ -55,6 +55,11 @@
 				"slug": "print-quotes"
 			},
 			{
+				"title1": "Mad",
+				"title2": "Lib",
+				"slug": "mad-lib"
+			},
+			{
 				"title1": "Simple",
 				"title2": "Math",
 				"slug": "simple-math"
