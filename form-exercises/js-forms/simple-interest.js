@@ -6,54 +6,41 @@
 
 	<div class="entry principal">
 		<p class="normal-voice">Enter the principal amount you'll invest.</p>
-		<input type="number" 
+		<input 
+			type="number" 
 			name='principal' 
-			value="<?=$principal?>" 
-			placeholder ="0" 
-			min = "1">
-		
-		<return-message style="display: block">	
-			<?php if ( isset($_POST['principal']) ) { ?>	
-			<p class='returnMessage normal-voice'><?=$priMessage?></p>
-			<?php } ?>	
-		</return-message>
+			value="" 
+			placeholder ="1000" 
+			min = "1"
+		>
 	</div>
 		
 
 	<div class="entry interest">
 		<p class="normal-voice">Now enter the interest rate. Standard interest is 7% APY.</p>
 		
-		<input type="number" 
+		<input 
+			type="number" 
 			name='interest' 
-			value="<?=$interest?>" 
+			value="" 
 			placeholder ="7%" 
 			min = "1"
-			step = "0.01">	
-			
-		
-		<return-message style="display: block">	
-			<?php if ( isset($_POST['interest']) ) { ?>
-			<p class='returnMessage normal-voice'><?=$intMessage?></p>
-			<?php } ?>	
-		</return-message>
+			step = "0.01"
+		>	
+
 	</div>
 
 	<div class="entry years">
 		<p class="normal-voice">Enter the number of years you wish to invest.</p>
 		
-		<input type="number" 
+		<input 
+			type="number" 
 			name='years' 
-			value="<?=$years?>" 
-			placeholder ="0" 
-			min = "1">	
-		
-		<return-message style="display: block">	
-			<?php if ( isset($_POST['years']) ) { ?>
-			<p class='returnMessage normal-voice'><?=$yrMessage?></p>
-			<?php } ?>	
-		</return-message>
+			value="" 
+			placeholder ="10" 
+			min = "1"
+		>	
 	</div>
-
 	
 	<button type="submit" name="submitted">Submit</button>
 
@@ -66,28 +53,42 @@
 </div>
 
 <script>
-var $form = document.querySelector("#simple-interest");
+	var $form = document.querySelector("#simple-interest");
 
-var $principalInput = document.querySelector("[name='principal']");
-var $interestInput = document.querySelector("[name='interest']");
-var $yearsInput = document.querySelector("[name='years']");
+	var $principalInput = document.querySelector("[name='principal']");
+	var $interestInput = document.querySelector("[name='interest']");
+	var $yearsInput = document.querySelector("[name='years']");
 
-let $output = document.querySelector('.js-exercise output');
-$output.hidden = true;
+	let $output = document.querySelector('.js-exercise output');
+	$output.hidden = true;
 
-$form.addEventListener('submit', function(event) {
-	event.preventDefault();
+	$form.addEventListener('submit', function(event) {
+		event.preventDefault();
 
-	$output.hidden = false;
+		$output.hidden = false;
 
-	let principal = $principalInput.value;
-	let interest = $interestInput.value;
-	let years = $yearsInput.value;
+		let principal = $principalInput.value;
+		let interest = $interestInput.value;
+		let years = $yearsInput.value;
 
-	let totalEarned = (principal * (1 + (interest * .01 * years))).toFixed(2);
+		let totalEarned = parseFloat( (principal * (1 + (interest * .01 * years))).toFixed(2) );
+		var totalEarnedFormatted = totalEarned.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
 
-	$output.innerHTML = `<p class="normal-voice">You'll earn $${totalEarned} after ${years} at a ${interest}% interest rate.`;
+		$output.innerHTML = `<p class="normal-voice">You'll earn <span class="special">${totalEarnedFormatted}</span> after <span class="special">${years}</span> years at a <span class="special">${interest}%</span> interest rate.</p>`;
 
-	console.log(totalEarned);
-});
+		console.log(totalEarnedFormatted);
+	});
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+

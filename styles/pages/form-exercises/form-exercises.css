@@ -147,12 +147,6 @@ form-wrap .hidden {
 	display: none;
 }
 
-/*.exercise input,
-.v-exercise input,
-.js-exercise:is(input, textarea) {
-	margin: 5px 0;
-}*/
-
 .exercise form label, 
 .v-exercise form label,
 .js-exercise form label {
