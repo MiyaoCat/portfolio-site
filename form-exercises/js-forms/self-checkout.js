@@ -187,7 +187,7 @@ let $output = document.querySelector('.js-exercise output');
 $output.hidden = true;
 
 const taxRate = .1025;
-const taxPretty = .1025*100;
+const taxPretty = taxRate*100;
 document.getElementById('taxRate').textContent = taxPretty;
 
 $selfCheckout.addEventListener('submit', function(myEvent) {

@@ -3,7 +3,7 @@
 	flex-direction: column;
 }
 
-:is(.noun, .verb, .adjective, .adverb) {
+:is(.noun, .verb, .adjective, .adverb, .age, .retire-age) {
   display: flex;
   flex-direction: column;
 }
