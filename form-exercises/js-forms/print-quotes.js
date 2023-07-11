@@ -15,8 +15,6 @@
 		<p class="calm-voice warning"></p>
 	</div>
 
-	
-
 	<button type="submit" name="enter">Submit</button>
 </form>
 
