@@ -40,19 +40,18 @@
 	let $form = document.querySelector("#mad-lib");
 
 	let $nounInput = document.querySelector('[name="noun"]');
-	let $verbInput = document.querySelector('[name="verb"]');
-	let $adjectiveInput = document.querySelector('[name="adjective"]');
-	let $adverbInput = document.querySelector('[name="adverb"]');
-
 	let $nounDiv = document.querySelector(".noun");
 	let nounWarn = $nounDiv.querySelector("p.warning");
 
+	let $verbInput = document.querySelector('[name="verb"]');
 	let $verbDiv = document.querySelector(".verb");
 	let verbWarn = $verbDiv.querySelector("p.warning");
 
+	let $adjectiveInput = document.querySelector('[name="adjective"]');
 	let $adjectiveDiv = document.querySelector(".adjective");
 	let adjectiveWarn = $adjectiveDiv.querySelector("p.warning");
 
+	let $adverbInput = document.querySelector('[name="adverb"]');
 	let $adverbDiv = document.querySelector(".adverb");
 	let adverbWarn = $adverbDiv.querySelector("p.warning");
 
@@ -69,33 +68,75 @@
 		let adjective = $adjectiveInput.value;
 		let adverb = $adverbInput.value;
 
-		if (noun.trim() === "") {
-			nounWarn.innerHTML = 'Please enter a noun';
-			$output.hidden = true;
-		} else {
-			nounWarn.innerHTML = '';
+		const fields = [
+			{ 
+		  		input: $nounInput, 
+		  		warning: nounWarn, 
+		  		message: 'Please enter a noun' 
+			},
+		 	{ 
+		 		input: $verbInput, 
+		 		warning: verbWarn, 
+		 		message: 'Please enter a verb' 
+		 	},
+		 	{ 
+		 		input: $adjectiveInput, 
+		 		warning: adjectiveWarn, 
+		 		message: 'Please enter an adjective' 
+		 	},
+		 	{ 
+		 		input: $adverbInput, 
+		 		warning: adverbWarn, 
+		 		message: 'Please enter an adverb' 
+		 	}
+		];
+
+		let isValid = true;
+
+		fields.forEach(function(field) {
+			// This is object destructuring. Instead of writing, field.input, field.warning etc, we can access the property directly. 
+			const { input, warning, message } = field;
+
+			if (input.value.trim() === '') {
+		   	warning.innerHTML = message;
+		   	$output.hidden = true;
+		   	isValid = false;
+		  	} else {
+		   	warning.innerHTML = '';
+		  	}
+		});
+
+		if (!isValid) {
+		  return;
 		}
 
-		if (verb.trim() === "") {
-			verbWarn.innerHTML = 'Please enter a verb';
-			$output.hidden = true;
-		} else {
-			verbWarn.innerHTML = '';
-		}
+		// if (noun.trim() === "") {
+		// 	nounWarn.innerHTML = 'Please enter a noun';
+		// 	$output.hidden = true;
+		// } else {
+		// 	nounWarn.innerHTML = '';
+		// }
 
-		if (adjective.trim() === "") {
-			adjectiveWarn.innerHTML = 'Please enter an adjective';
-			$output.hidden = true;
-		} else {
-			adjectiveWarn.innerHTML = '';
-		}
+		// if (verb.trim() === "") {
+		// 	verbWarn.innerHTML = 'Please enter a verb';
+		// 	$output.hidden = true;
+		// } else {
+		// 	verbWarn.innerHTML = '';
+		// }
 
-		if (adverb.trim() === "") {
-			adverbWarn.innerHTML = 'Please enter an adverb';
-			$output.hidden = true;
-		} else {
-			adverbWarn.innerHTML = '';
-		}
+		// if (adjective.trim() === "") {
+		// 	adjectiveWarn.innerHTML = 'Please enter an adjective';
+		// 	$output.hidden = true;
+		// } else {
+		// 	adjectiveWarn.innerHTML = '';
+		// }
+
+		// if (adverb.trim() === "") {
+		// 	adverbWarn.innerHTML = 'Please enter an adverb';
+		// 	$output.hidden = true;
+		// } else {
+		// 	adverbWarn.innerHTML = '';
+		// }
 		$output.innerHTML = `<p class="normal-voice">Do you  <span class="special">${verb}</span> your <span class="special">${adjective} ${noun} ${adverb}</span>? That's silly.</p>`;
 
 		console.log(noun)
