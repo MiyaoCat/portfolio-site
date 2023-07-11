@@ -56,13 +56,18 @@
 			},
 			{
 				"title1": "Mad",
-				"title2": "Lib",
+				"title2": "Libs",
 				"slug": "mad-lib"
 			},
 			{
 				"title1": "Simple",
 				"title2": "Math",
 				"slug": "simple-math"
+			},
+			{
+				"title1": "Retirement",
+				"title2": "Calculator",
+				"slug": "retirement-calculator"
 			}
 		]
 	},
