@@ -40,20 +40,16 @@
 	let $form = document.querySelector("#mad-lib");
 
 	let $nounInput = document.querySelector('[name="noun"]');
-	let $nounDiv = document.querySelector(".noun");
-	let nounWarn = $nounDiv.querySelector("p.warning");
+	let nounWarn = document.querySelector(".noun p.warning");
 
 	let $verbInput = document.querySelector('[name="verb"]');
-	let $verbDiv = document.querySelector(".verb");
-	let verbWarn = $verbDiv.querySelector("p.warning");
+	let verbWarn = document.querySelector(".verb .warning");
 
 	let $adjectiveInput = document.querySelector('[name="adjective"]');
-	let $adjectiveDiv = document.querySelector(".adjective");
-	let adjectiveWarn = $adjectiveDiv.querySelector("p.warning");
+	let adjectiveWarn = document.querySelector(".adjective p.warning");
 
 	let $adverbInput = document.querySelector('[name="adverb"]');
-	let $adverbDiv = document.querySelector(".adverb");
-	let adverbWarn = $adverbDiv.querySelector("p.warning");
+	let adverbWarn = document.querySelector(".adverb p.warning");
 
 	let $output = document.querySelector(".js-exercise output");
 	$output.hidden = true;
@@ -70,45 +66,45 @@
 
 		const fields = [
 			{ 
-		  		input: $nounInput, 
+		  		input: noun, 
 		  		warning: nounWarn, 
 		  		message: 'Please enter a noun' 
 			},
 		 	{ 
-		 		input: $verbInput, 
+		 		input: verb, 
 		 		warning: verbWarn, 
 		 		message: 'Please enter a verb' 
 		 	},
 		 	{ 
-		 		input: $adjectiveInput, 
+		 		input: adjective, 
 		 		warning: adjectiveWarn, 
 		 		message: 'Please enter an adjective' 
 		 	},
 		 	{ 
-		 		input: $adverbInput, 
+		 		input: adverb, 
 		 		warning: adverbWarn, 
 		 		message: 'Please enter an adverb' 
 		 	}
 		];
 
-		let isValid = true;
+		// let isValid = true;
 
 		fields.forEach(function(field) {
-			// This is object destructuring. Instead of writing, field.input, field.warning etc, we can access the property directly. 
+			// This is object destructuring. Instead of writing, field.input etc, we can access the property directly. 
 			const { input, warning, message } = field;
 
-			if (input.value.trim() === '') {
+			if (input.trim() === '') {
 		   	warning.innerHTML = message;
 		   	$output.hidden = true;
-		   	isValid = false;
+		   	// isValid = false;
 		  	} else {
 		   	warning.innerHTML = '';
 		  	}
 		});
 
-		if (!isValid) {
-		  return;
-		}
+		// if (!isValid) {
+		//   return;
+		// }
 
 		// if (noun.trim() === "") {
 		// 	nounWarn.innerHTML = 'Please enter a noun';
