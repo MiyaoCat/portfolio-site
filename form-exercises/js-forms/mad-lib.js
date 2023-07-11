@@ -5,25 +5,25 @@
 
 	<div class="noun">
 		<label for="noun">Enter a Noun:</label>
-		<input type="text" name="noun" value="">
+		<input type="text" id="noun">
 		<p class="calm-voice warning"></p>
 	</div>
 
 	<div class="verb">
 		<label for="verb">Enter a Verb:</label>
-		<input name="verb" >
+		<input id="verb" >
 		<p class="calm-voice warning"></p>
 	</div>
 
 	<div class="adjective">
 		<label for="adjective">Enter an Adjective:</label>
-		<input name="adjective">
+		<input id="adjective">
 		<p class="calm-voice warning"></p>
 	</div>
 
 	<div class="adverb">
 		<label for="adverb">Enter an Adverb:</label>
-		<input name="adverb">
+		<input id="adverb">
 		<p class="calm-voice warning"></p>
 	</div>
 
@@ -37,18 +37,18 @@
 </div>
 
 <script>
-	let $form = document.querySelector("#mad-lib");
+	let $form = document.getElementById("mad-lib");
 
-	let $nounInput = document.querySelector('[name="noun"]');
+	let $nounInput = document.getElementById("noun");
 	let nounWarn = document.querySelector(".noun p.warning");
 
-	let $verbInput = document.querySelector('[name="verb"]');
+	let $verbInput = document.getElementById("verb");
 	let verbWarn = document.querySelector(".verb .warning");
 
-	let $adjectiveInput = document.querySelector('[name="adjective"]');
+	let $adjectiveInput = document.getElementById("adjective");
 	let adjectiveWarn = document.querySelector(".adjective p.warning");
 
-	let $adverbInput = document.querySelector('[name="adverb"]');
+	let $adverbInput = document.getElementById("adverb");
 	let adverbWarn = document.querySelector(".adverb p.warning");
 
 	let $output = document.querySelector(".js-exercise output");
@@ -68,22 +68,22 @@
 			{ 
 		  		input: noun, 
 		  		warning: nounWarn, 
-		  		message: 'Please enter a noun' 
+		  		message: "Please enter a noun" 
 			},
 		 	{ 
 		 		input: verb, 
 		 		warning: verbWarn, 
-		 		message: 'Please enter a verb' 
+		 		message: "Please enter a verb" 
 		 	},
 		 	{ 
 		 		input: adjective, 
 		 		warning: adjectiveWarn, 
-		 		message: 'Please enter an adjective' 
+		 		message: "Please enter an adjective" 
 		 	},
 		 	{ 
 		 		input: adverb, 
 		 		warning: adverbWarn, 
-		 		message: 'Please enter an adverb' 
+		 		message: "Please enter an adverb" 
 		 	}
 		];
 
@@ -93,12 +93,12 @@
 			// This is object destructuring. Instead of writing, field.input etc, we can access the property directly. 
 			const { input, warning, message } = field;
 
-			if (input.trim() === '') {
+			if (input.trim() === "") {
 		   	warning.innerHTML = message;
 		   	$output.hidden = true;
 		   	// isValid = false;
 		  	} else {
-		   	warning.innerHTML = '';
+		   	warning.innerHTML = "";
 		  	}
 		});
 
