@@ -85,11 +85,11 @@ $form.addEventListener('submit', function(event) {
 		$orderWarn.innerHTML = "";
 	}
 
-	let tipElement = document.querySelector("input[name='tip']:checked");
+	let tipOptions = document.querySelector("input[name='tip']:checked");
 	var tip;
 
-	if (tipElement !== null ) {
-		tip = tipElement.value;
+	if (tipOptions !== null ) {
+		tip = tipOptions.value;
 		$tipWarn.innerHTML = "";
 	} else {
 		$tipWarn.innerHTML = "You're not gonna tip?";
