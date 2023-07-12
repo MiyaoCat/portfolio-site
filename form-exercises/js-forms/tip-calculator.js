@@ -75,14 +75,7 @@ $output.hidden = true;
 
 $form.addEventListener('submit', function(event) {
 	event.preventDefault();
-
 	$output.hidden = false;
-
-	let subTotal = parseInt($subTotal.value);
-	let subTotalFormatted = subTotal.toLocaleString("en-US");
-
-	let tipElement = document.querySelector("input[name='tip']:checked");
-	var tip;
 
 	if ($subTotal.value === "") {
 		$orderWarn.innerHTML = "Did you order anything?";
@@ -91,6 +84,9 @@ $form.addEventListener('submit', function(event) {
 	} else {
 		$orderWarn.innerHTML = "";
 	}
+
+	let tipElement = document.querySelector("input[name='tip']:checked");
+	var tip;
 
 	if (tipElement !== null ) {
 		tip = tipElement.value;
@@ -101,23 +97,23 @@ $form.addEventListener('submit', function(event) {
 		tip = ""
 	}
 
-	console.log("tip ", tip);
+	// console.log("tip ", tip);
 	
-	let tipTotal = (subTotal * tip).toFixed(2);
-	let tipTotalFormatted = tipTotal.toLocaleString('en-US');
+	let subTotal = parseInt($subTotal.value);
+	let subTotalFormatted = subTotal.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+
+	let tipTotal = (subTotal * tip);
+	let tipTotalFormatted = tipTotal.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
 
 	let grandTotal = parseFloat(subTotal) + parseFloat(tipTotal);
-	let grandTotalFormatted = grandTotal.toLocaleString('en-US');
+	let grandTotalFormatted = grandTotal.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
 
-	console.log(tipTotal + " " + subTotal);
-
-	
+	// console.log(tipTotalFormatted + " " + subTotal);
 
 	$output.innerHTML = `
-		<p class="normal-voice">Sub-total: $${subTotalFormatted}</p> 
-		 <p class="normal-voice">Tip total: $${tipTotalFormatted}</p> 
-		 <p class="normal-voice">Grand total: $${grandTotalFormatted}</p> `;
-
+		<p class="normal-voice">Sub-total: ${subTotalFormatted}</p> 
+		 <p class="normal-voice">Tip total: ${tipTotalFormatted}</p> 
+		 <p class="normal-voice">Grand total: ${grandTotalFormatted}</p> `;
 });
 
 </script>
