@@ -4,12 +4,28 @@
 	</div>	
 
 	<label for="fahrenheit">Fahrenheit</label>
-	<input type="radio" name="temp-type" value="fahrenheit" onclick="isChecked('fahrenheit')"  >
+	<input 
+		type="radio" 
+		name="temp-type" 
+		value="fahrenheit" 
+		onclick="isChecked('fahrenheit')"  
+	>
 	
 	<label for="celsius">Celsius</label>
-	<input type="radio" name="temp-type" value="celsius" onclick="isChecked('celsius')"  >
+	<input 
+		type="radio" 
+		name="temp-type" 
+		value="celsius" 
+		onclick="isChecked('celsius')"  
+	>
 
-	<input type="number" step="0.1" name="temp" value="<?=$temp?>" placeholder="Enter the temperature">
+	<input 
+		type="number" 
+		step="0.1" 
+		name="temp" 
+		value="<?=$temp?>" 
+		placeholder="Enter the temperature"
+	>
 
 	<button type="submit" name="submitted">Submit</button>
 </form>

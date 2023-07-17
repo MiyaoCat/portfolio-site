@@ -10,12 +10,44 @@
 		"content": "<p class='normal-voice'>This is a collection of forms I built from the book, Exercises for Programmers, by Ben Hogan. This is a great book to practice and learn from as it's language agnostic and it tests forces you to use logic and function with the new language.<br><br> Select a language then select a form.</p>"
 	},
 	{
+		"type": "input-output",
+		"header": "Input/Output",
+		"forms": [
+			{
+				"title1": "Say",
+				"title2": "Hello",
+				"intro": "Easy arithmetic",
+				"slug": "v-hello"
+			},
+			{
+				"title1": "Count",
+				"title2": "Characters",
+				"slug": "v-count-characters"
+			},
+			{
+				"title1": "Print",
+				"title2": "Quotes",
+				"slug": "v-print-quotes"
+			},
+			{
+				"title1": "Mad",
+				"title2": "Libs",
+				"slug": "v-mad-libs"
+			},
+			{
+				"title1": "Simple",
+				"title2": "Math",
+				"slug": "v-simple-math"
+			}
+		]
+	},
+	{
 		"type": "calculations",
 		"header": "Calculations",
 		"forms": [
 			{
 				"title1": "Area",
-				"title2": "of Room",
+				"title2": "of a Room",
 				"slug": "v-area-of-room"
 			},
 			{
@@ -47,38 +79,6 @@
 				"title1": "Compound",
 				"title2": "Interest",
 				"slug": "v-compound-interest"
-			}
-		]
-	},
-	{
-		"type": "input-output",
-		"header": "Input/Output",
-		"forms": [
-			{
-				"title1": "Say",
-				"title2": "Hello",
-				"intro": "Easy arithmetic",
-				"slug": "v-hello"
-			},
-			{
-				"title1": "Count",
-				"title2": "Characters",
-				"slug": "v-count-characters"
-			},
-			{
-				"title1": "Print",
-				"title2": "Quotes",
-				"slug": "v-print-quotes"
-			},
-			{
-				"title1": "Mad",
-				"title2": "Libs",
-				"slug": "v-mad-libs"
-			},
-			{
-				"title1": "Simple",
-				"title2": "Math",
-				"slug": "v-simple-math"
 			}
 		]
 	},

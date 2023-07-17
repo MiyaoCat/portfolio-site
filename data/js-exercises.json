@@ -10,32 +10,6 @@
 		"content": "<p class='normal-voice'>This is a collection of forms I built from the book, Exercises for Programmers, by Ben Hogan. This is a great book to practice and learn from as it's language agnostic and it tests your ability to use logic and function with the new language.<br><br> Select a language then select a form.</p>"
 	},
 	{
-		"type": "calculations",
-		"header": "Calculations",
-		"forms": [
-			{
-				"title1": "Simple",
-				"title2": "Interest",
-				"slug": "simple-interest"
-			},
-			{
-				"title1": "Self-",
-				"title2": "Checkout",
-				"slug": "self-checkout"
-			},
-			{
-				"title1": "Tip",
-				"title2": "Calculator",
-				"slug": "tip-calculator"
-			},
-			{
-				"title1": "Pizza",
-				"title2": "Party",
-				"slug": "pizza-party"
-			}
-		]
-	},
-	{
 		"type": "input-output",
 		"header": "Input/Output",
 		"forms": [
@@ -68,6 +42,37 @@
 				"title1": "Retirement",
 				"title2": "Calculator",
 				"slug": "retirement-calculator"
+			}
+		]
+	},	
+	{
+		"type": "calculations",
+		"header": "Calculations",
+		"forms": [
+			{
+				"title1": "Area of a",
+				"title2": "Rectangle",
+				"slug": "area-of-rectangle"
+			},
+			{
+				"title1": "Pizza",
+				"title2": "Party",
+				"slug": "pizza-party"
+			},
+			{
+				"title1": "Simple",
+				"title2": "Interest",
+				"slug": "simple-interest"
+			},
+			{
+				"title1": "Self-",
+				"title2": "Checkout",
+				"slug": "self-checkout"
+			},
+			{
+				"title1": "Tip",
+				"title2": "Calculator",
+				"slug": "tip-calculator"
 			}
 		]
 	},

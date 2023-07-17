@@ -8,6 +8,10 @@
   flex-direction: column;
 }
 
+.js-exercise form > div {
+	display: flex;
+	flex-direction: column;	
+}
 /* - - - - - TIP-CALCULATOR - - - - - */
 .tip-select {
 	margin: 15px 0;

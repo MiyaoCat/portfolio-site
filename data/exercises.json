@@ -9,6 +9,28 @@
 		"content": "<p class='normal-voice'>This is a collection of forms I built from the book, Exercises for Programmers, by Ben Hogan. This is a great book to practice and learn from as it's language agnostic and it tests your ability to use logic and function with the new language.<br><br> Select a language then select a form.</p>"
 	},
 	{
+		"type": "input-output",
+		"header": "Input/Output",
+		"forms": [
+			{
+				"title1": "Simple",
+				"title2": "Math",
+				"intro": "Easy arithmetic",
+				"slug": "simple-math"
+			},
+			{
+				"title1": "Count",
+				"title2": "Characters",
+				"slug": "count-characters"
+			},
+			{
+				"title1": "Say",
+				"title2": "Hello",
+				"slug": "hello"
+			}
+		]
+	},
+	{
 		"type": "calculations",
 		"header": "Calculations",
 		"forms": [
@@ -31,28 +53,6 @@
 				"title1": "Pizza",
 				"title2": "Party",
 				"slug": "pizza-party"
-			}
-		]
-	},
-	{
-		"type": "input-output",
-		"header": "Input/Output",
-		"forms": [
-			{
-				"title1": "Simple",
-				"title2": "Math",
-				"intro": "Easy arithmetic",
-				"slug": "simple-math"
-			},
-			{
-				"title1": "Count",
-				"title2": "Characters",
-				"slug": "count-characters"
-			},
-			{
-				"title1": "Say",
-				"title2": "Hello",
-				"slug": "hello"
 			}
 		]
 	},

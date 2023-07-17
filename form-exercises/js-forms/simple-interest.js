@@ -8,7 +8,7 @@
 		<label for="principal" class="normal-voice">Enter the principal amount you'll invest.</p>
 		<input 
 			type="number" 
-			id='principal' 
+			id="principal" 
 			value="" 
 			placeholder ="1000" 
 			min = "1"
@@ -22,7 +22,7 @@
 		
 		<input 
 			type="number" 
-			id='interest' 
+			id="interest" 
 			value="" 
 			placeholder ="7%" 
 			min = "1"
@@ -36,7 +36,7 @@
 		
 		<input 
 			type="number" 
-			id='years' 
+			id="years" 
 			value="" 
 			placeholder ="10" 
 			min = "1"
@@ -50,14 +50,14 @@
 
 <output></output>
 
-<div class='return'>
-	<?php include('components/back-to-exercises.php'); ?>
+<div class="return">
+	<?php include("components/back-to-exercises.php"); ?>
 </div>
 
 <script>
 	let $form = document.querySelector("#simple-interest");
 	
-	let $output = document.querySelector('.js-exercise output');
+	let $output = document.querySelector(".js-exercise output");
 	$output.hidden = true;
 
 	let $principalInput = document.getElementById("principal");
@@ -68,7 +68,7 @@
 	let $interestWarn = document.querySelector(".interest .warning");
 	let $yearsWarn = document.querySelector(".years .warning");
 
-	$form.addEventListener('submit', function(event) {
+	$form.addEventListener("submit", function(event) {
 		event.preventDefault();
 
 		$output.hidden = false;
@@ -78,7 +78,7 @@
 		let years = $yearsInput.value;
 
 		let totalEarned = parseFloat( (principal * (1 + (interest * .01 * years))).toFixed(2) );
-		let totalEarnedFormatted = totalEarned.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+		let totalEarnedFormatted = totalEarned.toLocaleString("en-US", { style: "currency", currency: "USD" });
 
 		// const warningConditions = [
 		// 	{ 

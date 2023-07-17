@@ -37,13 +37,31 @@
 <div id="languages">
 	<form method="POST">
 		<label>
-			<input type="radio" name="language" value="php" id="php" <?=isChecked($languageType, "php")?> > PHP
+			<input 
+				type="radio" 
+				name="language" 
+				value="php" 
+				id="php" 
+				<?=isChecked($languageType, "php")?> 
+			> PHP
 		</label>
 		<label>
-			<input type="radio" name="language" value="javascript" id="javascript" <?=isChecked($languageType, "javascript")?>> JavaScript
+			<input 
+				type="radio" 
+				name="language" 
+				value="javascript" 
+				id="javascript" 
+				<?=isChecked($languageType, "javascript")?>
+			> JavaScript
 		</label>
 		<label>
-			<input type="radio" name="language" value="vue" id="vue" <?=isChecked($languageType, "vue")?>> Vue
+			<input 
+				type="radio" 
+				name="language" 
+				value="vue" 
+				id="vue" 
+				<?=isChecked($languageType, "vue")?>
+			> Vue
 		</label>
 
 		<button type="submit" name="submitted">Submit</button>
