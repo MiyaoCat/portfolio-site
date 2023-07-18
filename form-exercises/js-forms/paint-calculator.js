@@ -1,4 +1,4 @@
-<form id="paint" type="submit">
+<form id="paint" method="POST">
 	<div class="instructions">
 		<p class="normal-voice">Let us know the length and width of the wall in feet. We'll calculate the number of gallons of paint needed to cover the wall.</p>
 		<p class="normal-voice">Assumption: 1 gallon of paint covers 360ft<sup>2</sup> or 33.45m<sup>2</sup></p>
