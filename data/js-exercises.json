@@ -60,6 +60,11 @@
 				"slug": "pizza-party"
 			},
 			{
+				"title1": "Paint",
+				"title2": "Calculator",
+				"slug": "paint-calculator"
+			},
+			{
 				"title1": "Simple",
 				"title2": "Interest",
 				"slug": "simple-interest"
