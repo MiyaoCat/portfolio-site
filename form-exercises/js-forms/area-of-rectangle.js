@@ -84,14 +84,14 @@
 		areaFormatted = area.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 		if ($length.value === "") {
-			lengthWarn.innerHTML = "no length";
+			lengthWarn.innerHTML = "Any number will do.";
 			$output.hidden = true;
 		} else {
 			lengthWarn.innerHTML = "";
 		}
 
 		if ($width.value === "") {
-			widthWarn.innerHTML = "no width";
+			widthWarn.innerHTML = "Do you want to know the area or not?";
 			$output.hidden = true;
 		} else {
 			widthWarn.innerHTML = "";
