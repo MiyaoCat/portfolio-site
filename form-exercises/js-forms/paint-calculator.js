@@ -4,14 +4,37 @@
 		<p class="normal-voice">Assumption: 1 gallon of paint covers 360ft<sup>2</sup> or 33.45m<sup>2</sup></p>
 	</div>
 
+	<div class="type">
+		<label for="feet">Feet
+			<input 
+				id="feet"
+				type="radio"
+				name="measure-type"
+				value="feet"
+				checked
+				onclick="isChecked('feet')"
+			>
+		</label>
+
+		<label for="meters">Meters
+			<input 
+				id="meters"
+				type="radio"
+				name="measure-type"
+				value="meters"
+				onclick="isChecked('meters')"
+			>
+		</label>
+	</div>
+
 	<div class="length">
 		<label for="length">
 			<p class="normal-voice">Enter the length</p>
 			<input 
 				type="number"
 				id="length"
-				min=1
-				step=.1
+				min=.1
+				step=.01
 				placeholder=1
 			>
 		</label>
@@ -24,8 +47,8 @@
 			<input 
 				type="number"
 				id="width"
-				min=1
-				step=.1
+				min=.1
+				step=.01
 				placeholder=1
 			>
 		</label>
@@ -52,19 +75,29 @@
 
 	$output.hidden = true;
 
+	function isChecked(value) {
+  		return value;
+	}
+
  	$form.addEventListener("submit", function(event) {
  		event.preventDefault();
-
  		$output.hidden = false;
 
+ 		let measureType = document.querySelector("[name='measure-type']:checked").value;
  		let length = parseFloat($length.value);
  		let width = parseFloat($width.value);
 
- 		let area = length * width;
+ 		let area = (length * width).toFixed(2);
  		let areaFormatted = area.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
  		let gallon = 360;
  		let gallonsNeeded = Math.ceil(area/gallon);
  		let gallonsFormatted = gallonsNeeded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+ 		let areaMeters = (area * 0.09290304).toFixed(2);
+ 		let areaMetersFormatted = areaMeters.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+ 		let gallonMeters = 33.4451;
+ 		let gallonsNeededMeters = Math.ceil(area/gallonMeters);
+ 		let gallonsMetersFormatted = gallonsNeededMeters.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
  		if ($length.value == "") {
  			$lengthWarn.innerHTML = "How long?"
@@ -82,10 +115,24 @@
 		if ($length.value !== "" && $width.value !== "") {
 			$output.hidden = false;
 
-			$output.innerHTML = `
-			<p class="normal-voice">Total ft<sup>2</sup>: <span class="special"> ${areaFormatted}</span></p>
-			<p class="normal-voice">Total gallons needed:<span class="special"> ${gallonsFormatted}</span></p>
-			`
+			if (measureType === "feet") {
+				$output.innerHTML = `
+				<p class="normal-voice">Total ft<sup>2</sup>: <span class="special"> ${areaFormatted}</span></p>
+				<p class="normal-voice">Total m<sup>2</sup>: <span class="special"> ${areaMetersFormatted}</span></p>
+				<p class="normal-voice">Total gallons needed:<span class="special"> ${gallonsFormatted}</span></p>
+				`
+			}
+
+			if (measureType === "meters") {
+				let convert = (area * 10.764).toFixed(2);
+				let convertFormatted = convert.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+				$output.innerHTML = `
+				<p class="normal-voice">Total ft<sup>2</sup>: <span class="special"> ${convertFormatted}</span></p>
+				<p class="normal-voice">Total m<sup>2</sup>: <span class="special"> ${areaFormatted}</span></p>
+				<p class="normal-voice">Total gallons needed:<span class="special"> ${gallonsMetersFormatted}</span></p>
+				`
+			}
+
 		}
  		console.log($widthWarn)
  	})

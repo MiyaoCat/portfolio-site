@@ -1,18 +1,22 @@
 .js-exercise form > div {
 	display: flex;
 	flex-direction: column;	
-	margin-top: 15px;
+/*	margin-torp: 15px;*/
 }
 
 /* - - - - - AREA OF RECTANGLE- - - - - */
-#rectangle .type {
+#rectangle .type, #paint .type {
 	flex-direction: row;
 	gap: 50px;
 	align-self: ;
 }
 
-#rectangle label {
+#rectangle label, #paint label {
 	margin: 5px 0;
+}
+
+#rectangle div, #paint div {
+	margin-top: 15px;
 }
 /* - - - - - TIP-CALCULATOR - - - - - */
 .tip-select {
