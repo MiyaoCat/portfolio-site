@@ -1,30 +1,33 @@
 <form id="rectangle" method="POST">
 	<div class="instructions">
-		<p class="normal-voice">Enter the length and width of the room in feet and we'll calculate the area of the room.</p>
+		<p class="normal-voice">First select if you want to measure the area in Feet or Meters. Then input the length wand width of the rectangle.</p>
 	</div>
 
 	<div class="type">
-		<label for="feet">Feet</label>
-		<input 
-			id="feet"
-			type="radio"
-			name="measure-type"
-			value="feet"
-			checked
-			onclick="isChecked('feet')"
-		>
-		<label for="meters">Meters</label>
-		<input 
-			id="meters"
-			type="radio"
-			name="measure-type"
-			value="meters"
-			onclick="isChecked('meters')"
-		>
+		<label for="feet">Feet
+			<input 
+				id="feet"
+				type="radio"
+				name="measure-type"
+				value="feet"
+				checked
+				onclick="isChecked('feet')"
+			>
+		</label>
+
+		<label for="meters">Meters
+			<input 
+				id="meters"
+				type="radio"
+				name="measure-type"
+				value="meters"
+				onclick="isChecked('meters')"
+			>
+		</label>
 	</div>
 
 	<div class="length">
-		<label for="length">What is the length of the room?</label>
+		<label for="length">What is the length of the rectangle?</label>
 		<input 
 			id="length" 
 			type="number"
@@ -36,7 +39,7 @@
 	</div>
 
 	<div class="width">
-		<label for="width">What is the width of the room?</label>
+		<label for="width">What is the width of the rectangle?</label>
 		<input 
 			id="width" 
 			type="number"
@@ -57,11 +60,12 @@
 </div>
 
 <script>
-	$form = document.getElementById("rectangle");
-	$length = document.getElementById("length");
-	$width = document.getElementById("width");
-	
-	$output = document.querySelector("output");
+	let $form = document.getElementById("rectangle");
+	let $length = document.getElementById("length");
+	let lengthWarn = document.querySelector(".length .warning");
+	let $width = document.getElementById("width");
+	let widthWarn = document.querySelector(".width .warning");
+	let $output = document.querySelector("output");
 
 	$output.hidden = true;
 
@@ -79,27 +83,41 @@
 		area = (width * length).toFixed(3);
 		areaFormatted = area.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
-		if (measureType === "feet") {
-			$output.hidden = false;
-
-			let convert = (area / 10.764).toFixed(3);
-			let convertFormatted = convert.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-			$output.innerHTML = `
-				<p class="normal-voice"> Area in feet: <span class="special">${areaFormatted}</span></p> 
-				<p class="normal-voice"> Area in meters: <span class="special">${convertFormatted}</span></p> 
-			`
+		if ($length.value === "") {
+			lengthWarn.innerHTML = "no length";
+			$output.hidden = true;
+		} else {
+			lengthWarn.innerHTML = "";
 		}
 
-		if (measureType === "meters") {
-			$output.hidden = false;
-
-			let convert = (area * 10.764).toFixed(3);
-			let convertFormatted = convert.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-			$output.innerHTML = `
-				<p class="normal-voice"> Area in feet: <span class="special">${convertFormatted}</span></p> 
-				<p class="normal-voice"> Area in meters: <span class="special">${areaFormatted}</span></p> 
-			`
+		if ($width.value === "") {
+			widthWarn.innerHTML = "no width";
+			$output.hidden = true;
+		} else {
+			widthWarn.innerHTML = "";
 		}
+
+		if ($length.value !== "" && $width.value !== "") {
+			$output.hidden = false;
+			if (measureType === "feet") {
+				let convert = (area / 10.764).toFixed(3);
+				let convertFormatted = convert.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+				$output.innerHTML = `
+					<p class="normal-voice"> Area in feet: <span class="special">${areaFormatted}</span></p> 
+					<p class="normal-voice"> Area in meters: <span class="special">${convertFormatted}</span></p> 
+				`
+			}
+
+			if (measureType === "meters") {
+				let convert = (area * 10.764).toFixed(3);
+				let convertFormatted = convert.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+				$output.innerHTML = `
+					<p class="normal-voice"> Area in feet: <span class="special">${convertFormatted}</span></p> 
+					<p class="normal-voice"> Area in meters: <span class="special">${areaFormatted}</span></p> 
+				`
+			}
+		}
+
 
 	})
 </script>

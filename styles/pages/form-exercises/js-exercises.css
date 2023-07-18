@@ -1,16 +1,17 @@
-#print-quotes .author, #print-quotes .quote {
-	display: flex;
-	flex-direction: column;
-}
-
-:is(.noun, .verb, .adjective, .adverb, .age, .retire-age) {
-  display: flex;
-  flex-direction: column;
-}
-
 .js-exercise form > div {
 	display: flex;
 	flex-direction: column;	
+}
+
+/* - - - - - AREA OF RECTANGLE- - - - - */
+#rectangle .type {
+	flex-direction: row;
+	gap: 50px;
+	align-self: ;
+}
+
+#rectangle label {
+	margin: 5px 0;
 }
 /* - - - - - TIP-CALCULATOR - - - - - */
 .tip-select {
