@@ -1,6 +1,7 @@
 .js-exercise form > div {
 	display: flex;
 	flex-direction: column;	
+	margin-top: 15px;
 }
 
 /* - - - - - AREA OF RECTANGLE- - - - - */

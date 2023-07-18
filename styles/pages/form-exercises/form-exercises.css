@@ -258,7 +258,7 @@ output p {
 
 .warning, error {
 	color: red;
-	margin-top: 5px;
+	margin-top: 2px;
 	display: block;
 }
 
