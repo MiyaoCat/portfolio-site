@@ -20,7 +20,8 @@ form.self-checkout .item {
 }
 
 form.self-checkout quantity, form.self-checkout price {
-	display: block;
+	display: flex;
+	flex-direction: column;
 }
 
 form.self-checkout quantity {
