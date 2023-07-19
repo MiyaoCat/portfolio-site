@@ -7,9 +7,9 @@
 
 	<div class="items-wrap">
 		<div class="item one">
-			<h3 class="attention-voice">Item 1</h3>
-		 	
 		 	<div class="item-wrap">
+		 		<h3 class="attention-voice">Item 1</h3>
+
 		 		<quantity>	
 				 	<label for="quantity">Quantity</label>
 					<input 
@@ -39,9 +39,9 @@
 		</div>
 		
 		<div class="item two">
-			<h3 class="attention-voice">Item 2</h3>
-		
 		 	<div class="item-wrap">
+		 		<h3 class="attention-voice">Item 2</h3>
+
 		 		<quantity>	
 				 	<label for="price">Quantity</label>
 					<input 
@@ -50,9 +50,7 @@
 						value=""
 						min="0"
 						placeholder="0"
-					>
-					<p class="calm-voice warning"></p>
-						
+					>						
 				</quantity>		
 		
 				<price>
@@ -64,17 +62,15 @@
 						step= '0.01'
 						min='0'
 						placeholder="0.00"
-					>	
-					<p class="calm-voice warning"></p>					
+					>				
 				</price>
 		 	</div>
-		
 		</div>
 		
-		<div class="item three">
-			<h3 class="attention-voice">Item 3</h3>
-		
+		<div class="item three">		
 		 	<div class="item-wrap">
+		 		<h3 class="attention-voice">Item 3</h3>
+
 		 		<quantity>	
 				 	<label for="quantity3">Quantity</label>
 					<input 
@@ -85,8 +81,6 @@
 						placeholder="0"
 						label="write your number"
 					>
-					<p class="calm-voice warning"></p>
-						
 				</quantity>		
 		
 				<price>
@@ -98,16 +92,15 @@
 						step= '0.01'
 						min='0'
 						placeholder="0.00"
-					>		
-					<p class="calm-voice warning"></p>						
+					>								
 				</price>
 		 	</div>
 		</div>
 		
-		<div class="item four">
-			<h3 class="attention-voice">Item 4</h3>
-			
+		<div class="item four">						
 			<div class="item-wrap">	
+				<h3 class="attention-voice">Item 4</h3>
+				
 				<quantity>	
 				 	<label for="quantity4">Quantity</label>
 					<input 
@@ -117,8 +110,7 @@
 						min="0"
 						placeholder="0"
 						label="write your number"
-					>									
-					<p class="calm-voice warning"></p>						
+					>															
 				</quantity>		
 				
 				<price>
@@ -130,11 +122,12 @@
 						step= '0.01'
 						min='0'
 						placeholder="0.00"
-					>									
-					<p class="calm-voice warning"></p>					
+					>														
 				</price>
 			</div>
 		</div>
+
+		<button type="reset" class="clearAll">Clear All</button>
 	</div>
 
 	<tax>
@@ -145,26 +138,14 @@
 
 </form>
 
-<output>
-	<sub-total>
-		<p class="normal-voice">Your Sub-total is: <b>$</b></p>		
-	</sub-total>
-
-	<tax-total>
-		<p class="normal-voice">You total tax amount is: <b></b></p>
-	</tax-total>
-
-	<grand-total>
-		<p class="normal-voice">Your grand total is: <b></b></p>	
-	</grand-total>
-</output>
+<output></output>
 
 <div class='return'>
 	<?php include('components/back-to-exercises.php'); ?>
 </div>
 
 <script>
-	const $selfCheckout = document.querySelector("form");
+	const $selfCheckout = document.querySelector("[class='self-checkout']");
 
 	const $quantity1 = document.querySelector("[id='quantity']");
 	const $price1 = document.querySelector("[id='price']");
@@ -188,7 +169,6 @@
 	$selfCheckout.addEventListener('submit', function(myEvent) {
 		myEvent.preventDefault();
 		$output.hidden = false;
-		console.log("button pushed");
 
 		let quantity1 = $quantity1.value;
 		let price1 = $price1.value;
@@ -205,9 +185,6 @@
 		let subTotal = (quantity1 * price1) + (quantity2 * price2) + (quantity3 * price3) + (quantity4 * price4);
 		const subTotalFormatted = subTotal.toLocaleString('en-US');
 
-		const taxRate = .1025;
-		document.getElementById('taxRate').textContent = taxRate;
-
 		const taxTotal = (subTotal * taxRate).toFixed(2).toLocaleString('en-US');
 		const taxTotalFormatted = taxTotal.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
@@ -215,9 +192,9 @@
 		const grandTotalFormatted = grandTotal.toLocaleString('en-US');
 
 		$output.innerHTML = 
-			`<p class="normal-voice">Sub-total: $${subTotalFormatted}</p> 
-			 <p class="normal-voice">Tax total: $${taxTotalFormatted}</p> 
-			 <p class="normal-voice">Grand total: $${grandTotalFormatted}</p> 
+			`<p class="normal-voice">Sub-total: <span class="special">$${subTotalFormatted}</span></p> 
+			 <p class="normal-voice">Tax total: <span class="special">$${taxTotalFormatted}</span></p> 
+			 <p class="normal-voice">Grand total: <span class="special">$${grandTotalFormatted}</span></p> 
 			`;
 
 		if((quantity1 == "" || quantity1 == 0) || (price1 == "" || price1 == 0)) {
@@ -229,5 +206,29 @@
 				}
 			}			
 		}
+
+		// let allBlankOrZero = true;
+		// const sets = [
+		//   { quantity: quantity1, price: price1 },
+		//   { quantity: quantity2, price: price2 },
+		//   { quantity: quantity3, price: price3 },
+		//   { quantity: quantity4, price: price4 }
+		// ];
+
+		// for (const set of sets) {
+		//   if (set.quantity !== "" || set.quantity != 0) {
+		//     allBlankOrZero = false;
+		//     break;
+		//   }
+		//   if (set.price !== "" || set.price != 0) {
+		//     allBlankOrZero = false;
+		//     break;
+		//   }
+		// }
+
+		// if (allBlankOrZero) {
+		//   $output.innerHTML = `<p class="normal-voice">Nothing of nothing is...well...nothing.</p>`;
+		// }
+	
 	});
 </script>
