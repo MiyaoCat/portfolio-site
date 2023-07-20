@@ -4,6 +4,11 @@
 /*	margin-torp: 15px;*/
 }
 
+.js-exercise ol {
+	line-height: 1.5rem;
+	list-style-type: decimal;
+	margin-left: 1rem;
+}
 /* - - - - - AREA OF RECTANGLE- - - - - */
 #rectangle .type, #paint .type {
 	flex-direction: row;

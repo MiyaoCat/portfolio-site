@@ -16,37 +16,6 @@
 	flex-direction: column;
 }
 
-/* - - - - - - PAINT CALCULATOR - - - - - - -  */
-[data-vue='paintCalc'] .width, 
-[data-vue='paintCalc'] .length,
-[data-vue='currencyConversion'] .euros, 
-[data-vue='currencyConversion'] .exchange,
-[data-vue='simpleInterest'] .principal, 
-[data-vue='simpleInterest'] .interest,
-[data-vue='simpleInterest'] .years,
-[data-vue='compoundInterest'] .principal, 
-[data-vue='compoundInterest'] .interest,
-[data-vue='compoundInterest'] .years,
-[data-vue='compoundInterest'] .compounds,
-[data-vue='printQuote'] .author,
-[data-vue='printQuote'] .quote,
-[data-vue='madLib'] .noun,
-[data-vue='madLib'] .verb,
-[data-vue='madLib'] .adjective,
-[data-vue='madLib'] .adverb,
-[data-vue='simpleMath'] .number,
-[data-vue='simpleMath'] .number2,
-[data-vue='taxCalc'] .order,
-[data-vue='taxCalc'] .state,
-[data-vue='bacCalc'] .alcohol,
-[data-vue='bacCalc'] .weight,
-[data-vue='bacCalc'] .hours,
-[data-vue='bacCalc'] .male,
-[data-vue='bacCalc'] .female {
-	display: flex;
-	flex-direction: column;
-}
-
 /* - - - - - - BLOOD ALCOHOL CALC - - - - - - -  */
 .v-blood-alcohol-calculator.heading .title2 {
 	grid-column: 4;
