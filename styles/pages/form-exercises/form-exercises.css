@@ -155,8 +155,7 @@ form-wrap .hidden {
 }
 
 .exercise .entry, 
-.v-exercise .entry,
-.js-exercise .entry  {
+.v-exercise .entry  {
 	margin-top: 10px;
 }
 

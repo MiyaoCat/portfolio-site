@@ -77,7 +77,7 @@
 		}
 
 		$output.innerHTML = `
-			<p className="normal-voice">Your <span class="special">${eurosFormatted}</span> Euros will get you <span class="special">$${usdFormatted}</span> at an exchange rate of <span class="special">${exchangeRateFormatted}</span>.</p>
+			<p class="normal-voice">Your <span class="special">${eurosFormatted}</span> Euros will get you <span class="special">$${usdFormatted}</span> at an exchange rate of <span class="special">${exchangeRateFormatted}</span>.</p>
 			`
 		
 		console.log(usdFormatted)
