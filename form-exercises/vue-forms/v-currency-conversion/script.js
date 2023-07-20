@@ -18,7 +18,7 @@ new Vue({
 
 	computed: {
 		conversion() {
-			const number = this.euros*this.xRate/100;
+			const number = this.euros*this.xRate;
 			const numberFormatted = number.toLocaleString('en-us', {style: 'decimal', maximumFractionDigits: 2});
 			return numberFormatted;
 		},
