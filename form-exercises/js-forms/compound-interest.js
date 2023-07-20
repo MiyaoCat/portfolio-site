@@ -1,6 +1,6 @@
 <form id="compound" type="POST">
 	<div class="instructions">
-		<p class="normal-voice">Let's see how much your money can grow when it COMPOUNDS!</p>
+		<p class="normal-voice">Let's see how much your money can grow when it <span class="special">COMPOUNDS</span>!</p>
 	</div>
 
 	<div class="principal">
@@ -72,6 +72,7 @@
 	const $years = document.getElementById("years");
 	const $yearsWarn = document.querySelector(".years .warning");
 
+
 	const $compounding = document.getElementById("compounding");
 	const $compoundingWarn = document.querySelector(".compounding .warning");
 
@@ -82,14 +83,55 @@
 		event.preventDefault();
 
 		let principal = $principal.value;
-		let rate = $rate.value;
+		let rate = $rate.value/100;
 		let years = $years.value;
 		let compounding = $compounding.value;
 
-		if (principal == "" || principal == 0) {
-			console.log("none")
-			$principalWarn.innerHTML = "none"
-		}
+		let principalFormatted = principal.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+		let totalEarned = parseFloat( principal*( 1 + (rate/compounding) )**(compounding*years) ).toFixed(2)
+		let totalEarnedFormatted = totalEarned.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+		
+		$output.innerHTML = `
+			<p class="normal-voice">That's great! Your principal investment of <span class="special">$${principalFormatted}</span> will turn into <span class="special">$${totalEarnedFormatted}</span> after <span class="special">${years}</span> years.</p>
+		`
+
+		const fields = [
+			{
+				input: principal,
+				warning: $principalWarn,
+				message: "You're broke?"	
+			},
+			{
+				input: rate,
+				warning: $rateWarn,
+				message: "Technically you'll lose money with inflation"	
+			},
+			{
+				input: years,
+				warning: $yearsWarn,
+				message: "That's not investing"	
+			},
+			{
+				input: compounding,
+				warning: $compoundingWarn,
+				message: "That's not investing"	
+			}
+		]
+
+		fields.forEach(function (field) {
+			const { input, warning, message } = field;
+
+			if (input == "") {
+				warning.innerHTML = message;
+				$output.hidden = true;
+			} else {
+				warning.innerHTML = "";
+
+
+				$output.hidden = false;
+
+			}
+		});
 	})
 </script>
 
