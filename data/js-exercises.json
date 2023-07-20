@@ -70,6 +70,11 @@
 				"slug": "self-checkout"
 			},
 			{
+				"title1": "Currency",
+				"title2": "Conversion",
+				"slug": "currency-conversion"
+			},
+			{
 				"title1": "Simple",
 				"title2": "Interest",
 				"slug": "simple-interest"
