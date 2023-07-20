@@ -78,7 +78,12 @@
 				"title1": "Simple",
 				"title2": "Interest",
 				"slug": "simple-interest"
-			},			
+			},		
+			{
+				"title1": "Compound",
+				"title2": "Interest",
+				"slug": "compound-interest"
+			},	
 			{
 				"title1": "Tip",
 				"title2": "Calculator",
