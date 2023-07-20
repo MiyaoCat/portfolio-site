@@ -4,7 +4,7 @@
 	</div>
 
 	<div class="principal">
-		<label for="principal" class="normal-voice">What is the principal amount?</label>
+		<label for="principal" class="normal-voice">Enter the principal investment:</label>
 		<input 
 			type="number"
 			id="principal"
@@ -16,7 +16,7 @@
 	</div>
 
 	<div class="rate">
-		<label for="rate" class="normal-voice">What is the annual interest rate?</label>
+		<label for="rate" class="normal-voice">Enter the interest rate of your investment as a percent:</label>
 		<input 
 			type="number"
 			id="rate"
@@ -28,7 +28,7 @@
 	</div>
 
 	<div class="years">
-		<label for="years class="normal-voice"">What is the number of years you'll invest?</label>
+		<label for="years class="normal-voice"">Enter the number of years you'll invest:</label>
 		<input 
 			type="number"
 			id="years"
@@ -40,7 +40,7 @@
 	</div>
 
 	<div class="compounding">
-		<label for="compounding" class="normal-voice">What is the number of times the interest is compounded per year?</label>
+		<label for="compounding" class="normal-voice">Enter the number of times the interest compounds per year:</label>
 		<input 
 			type="number"
 			id="compounding"
@@ -63,10 +63,54 @@
 <script>
 	const $form = document.getElementById("compound");
 
+	const $principal = document.getElementById("principal");
+	const $principalWarn = document.querySelector(".principal .warning");
+
+	const $rate = document.getElementById("rate");
+	const $rateWarn = document.querySelector(".rate .warning");
+
+	const $years = document.getElementById("years");
+	const $yearsWarn = document.querySelector(".years .warning");
+
+	const $compounding = document.getElementById("compounding");
+	const $compoundingWarn = document.querySelector(".compounding .warning");
 
 	const $output = document.querySelector("output");
 	$output.hidden = true;
+
+	$form.addEventListener("submit", function(event) {
+		event.preventDefault();
+
+		let principal = $principal.value;
+		let rate = $rate.value;
+		let years = $years.value;
+		let compounding = $compounding.value;
+
+		if (principal == "" || principal == 0) {
+			console.log("none")
+			$principalWarn.innerHTML = "none"
+		}
+	})
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

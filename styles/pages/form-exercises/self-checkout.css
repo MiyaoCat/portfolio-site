@@ -1,12 +1,4 @@
 /* - - - - FORM - - - - - - - - - - - - */
-form.self-checkout {
-	display: flex;
-	flex-direction: column;
-}
-
-form.self-checkout input {
-	margin: 0;
-}
 
 form.self-checkout tax {
 	margin-top: 20px;
@@ -20,7 +12,6 @@ form.self-checkout .item {
 form.self-checkout quantity, form.self-checkout price {
 	display: flex;
 	flex-direction: column;
-	margin-top: -7px;
 }
 
 .js-exercise form.self-checkout .clearAll {
