@@ -24,47 +24,51 @@
 </div>
 
 <script>
-$form = document.querySelector('form');
-$age = document.querySelector("[name='age']");
+	$form = document.querySelector('form');
+	$age = document.querySelector("[name='age']");
 
-let $warning = document.querySelector('.warning');
-let $output = document.querySelector('.js-exercise output');
-$output.hidden = true;
+	let $warning = document.querySelector('.warning');
+	let $output = document.querySelector('.js-exercise output');
+	$output.hidden = true;
 
-$form.addEventListener('submit', function(event) {
-	event.preventDefault();
+	$form.addEventListener('submit', function(event) {
+		event.preventDefault();
 
-	age = $age.value;
-	
-	$output.hidden = false;
-	
-	$warning.innerHTML = !age ? 'Please enter a number' : '';
+		age = $age.value;
+		
+		$output.hidden = false;
+		
+		$warning.innerHTML = !age ? 'Please enter a number' : '';
 
-	if (age == 0) {
-		$output.innerHTML = 
-			`<p class="normal-voice">You are unborn. So no, You can't drive.</p>`
-	} 
+		if (age == '') {
+			$output.hidden = true;
+		}
 
-	if (0 < age && age < 21) {
-		$output.innerHTML = 
-			`<p class="normal-voice">Sorry, you're too young, kiddo!</p>`
-	} 
+		if (age == 0) {
+			$output.innerHTML = 
+				`<p class="normal-voice">You are unborn. So no, You can't drive.</p>`
+		} 
 
-	if (21 <= age && age < 85) {
-		$output.innerHTML = 
-			`<p class="normal-voice">You may drive</p>`
-	} 
+		if (0 < age && age < 21) {
+			$output.innerHTML = 
+				`<p class="normal-voice">Sorry, you're too young, kiddo!</p>`
+		} 
 
-	if (85 <= age && age < 110) {
-		$output.innerHTML = 
-			`<p class="normal-voice">We may need to take your driver's license away.</p>`
-	}
+		if (21 <= age && age < 85) {
+			$output.innerHTML = 
+				`<p class="normal-voice">You may drive</p>`
+		} 
 
-	if (110 <= age) {
-		$output.innerHTML = 
-			`<p class="normal-voice">How are you even alive?!?!</p>`
-	}
+		if (85 <= age && age < 110) {
+			$output.innerHTML = 
+				`<p class="normal-voice">We may need to take your driver's license away.</p>`
+		}
 
-	console.log(age);
-})
+		if (110 <= age) {
+			$output.innerHTML = 
+				`<p class="normal-voice">How are you even alive?!?!</p>`
+		}
+
+		console.log(age);
+	})
 </script>

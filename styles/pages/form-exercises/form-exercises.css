@@ -271,7 +271,6 @@ output p, output .special {
 
 .receipt > * {
 	align-self: center;
-
 }
 
 .receipt > :nth-child(2),
@@ -279,6 +278,7 @@ output p, output .special {
 .receipt > :nth-child(6) {
 		text-align: right;
 }
+
 .receipt > :nth-child(5), .receipt > :nth-child(6) {
 	border-top: 1px solid var(--ink);
 }
