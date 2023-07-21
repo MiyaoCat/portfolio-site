@@ -96,6 +96,16 @@
 		"header": "Decision Making",
 		"forms": [
 			{
+				"title1": "Tax",
+				"title2": "Calculator",
+				"slug": "tax-calculator"
+			},
+			{
+				"title1": "Password",
+				"title2": "Validation",
+				"slug": "password-validation"
+			},
+			{
 				"title1": "Driving",
 				"title2": "Age",
 				"slug": "driving-age"
@@ -104,11 +114,6 @@
 				"title1": "Temp",
 				"title2": "Converter",
 				"slug": "temp-converter"
-			},
-			{
-				"title1": "Password",
-				"title2": "Validation",
-				"slug": "password-validation"
 			}
 		]
 	}

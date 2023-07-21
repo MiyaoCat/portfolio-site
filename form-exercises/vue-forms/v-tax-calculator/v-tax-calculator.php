@@ -7,7 +7,7 @@
 	</div>
 	
 	<div class="state">
-		<label for="state">What is the State? <p class='whisper-voice'>(Hint: It's Wisconsin)</p></label>
+		<label for="state">What is the State? <p class='calm-voice'>(Hint: It's Wisconsin)</p></label>
 		<input name ="state" type="text" min="0" v-model="state">
 	</div>
 
