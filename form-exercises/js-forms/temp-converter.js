@@ -3,21 +3,23 @@
 		<p class="normal-voice">First select whether you want to convert to Fahrenheit or Celsius. Then enter the degrees you want to convert. For example, if you want to know what 100 degrees Fahrenheit is in Celsius, select Celsius and enter 100.</p>
 	</div>	
 
-	<label for="fahrenheit">Fahrenheit</label>
-	<input 
-		type="radio" 
-		name="temp-type" 
-		value="fahrenheit" 
-		onclick="isChecked('fahrenheit')"  
-	>
-	
-	<label for="celsius">Celsius</label>
-	<input 
-		type="radio" 
-		name="temp-type" 
-		value="celsius" 
-		onclick="isChecked('celsius')"  
-	>
+	<div class="temp-type">
+		<label for="fahrenheit">Fahrenheit</label>
+		<input 
+			type="radio" 
+			name="temp-type" 
+			value="fahrenheit" 
+			onclick="isChecked('fahrenheit')"  
+		>
+		
+		<label for="celsius">Celsius</label>
+		<input 
+			type="radio" 
+			name="temp-type" 
+			value="celsius" 
+			onclick="isChecked('celsius')"  
+		>
+	</div>
 
 	<input 
 		type="number" 
@@ -26,7 +28,8 @@
 		value="<?=$temp?>" 
 		placeholder="Enter the temperature"
 	>
-
+	<p class="calm-voice warning"></p>
+	
 	<button type="submit" name="submitted">Submit</button>
 </form>
 

@@ -5,46 +5,18 @@
 	grid-column: 2;
 }
 
-/* - - - LANGUAGE INPUT - - - - - - -*/
-#languages {
-	grid-row: 4;
-	margin: 0 5px 15px 5px;
-}
-#languages form {
- 	display: grid;
- 	grid-template-areas:
- 		"php javascript vue"
- 		"button button button";
- 	gap: 20px;
-}
-
-#languages label {
-	display: flex;
-	flex-direction: column-reverse;
-	align-items: center;
-	justify-content: flex-start;
-}
-#languages label:nth-of-type(2) {
-	justify-content: center;
-}
-#languages label:nth-of-type(3) {
-	justify-content: flex-end;
-}
-
-#languages button {
-	grid-column: 1 / 4;
-	max-width: 200px;
-	margin-right: auto;
-/*	border: 3px solid var(--trim);
-	box-shadow: 5px 5px var(--ink);*/
-}
-
 /* - - - FORM DIVS - - - - - - -*/
 .exercise form > div, 
 .v-exercise form > div,
 .js-exercise form > div {
 	display: flex;
 	flex-direction: column;
+}
+
+.exercise form div + .exercise form div,
+.v-exercise form div + .v-exercise form div,
+.js-exercise form div + .js-exercise form div {
+	margin-top: 10px;
 }
 
 /* - - - FORM SLIDER - - - - - - -*/
@@ -121,8 +93,7 @@ form-wrap .hidden {
 }
 
 .exercise form label, 
-.v-exercise form label,
-.js-exercise form label {
+.v-exercise form label {
 	margin-top: 20px;
 }
 
@@ -169,6 +140,13 @@ password-enter {
 }
 
 /* - - RADIO BUTTON - - - - - - - - - - - - - - - */
+.radio-buttons {
+	display: flex;
+	flex-direction: row;
+	gap: 50px;
+	margin-top: 8px;
+}
+
 input[type="radio"] {
   /* Add if not using autoprefixer */
   -webkit-appearance: none;
@@ -281,15 +259,6 @@ output p, output .special {
 
 .receipt > :nth-child(5), .receipt > :nth-child(6) {
 	border-top: 1px solid var(--ink);
-}
-
-@media (min-width: 550px) {
-	.exercise form, 
-	.v-exercise form,
-	.js-exercise form {
-		display: flex;
-		flex-direction: column;
-	}
 }
 
 @media (min-width: 700px) {

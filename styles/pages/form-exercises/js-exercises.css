@@ -1,8 +1,3 @@
-.js-exercise form > div {
-	display: flex;
-	flex-direction: column;	
-/*	margin-torp: 15px;*/
-}
 
 .js-exercise ol {
 	line-height: 1.5rem;
@@ -10,17 +5,11 @@
 	margin-left: 1rem;
 }
 /* - - - - - AREA OF RECTANGLE- - - - - */
-#rectangle .type, #paint .type {
-	flex-direction: row;
-	gap: 50px;
-	align-self: ;
-}
-
-#rectangle label, #paint label {
+/*#rectangle label, #paint label {
 	margin: 5px 0;
-}
+}*/
 
-#rectangle div, #paint div {
+#paint div {
 	margin-top: 15px;
 }
 
@@ -58,12 +47,6 @@ td:nth-of-type(2) p {
 	grid-column: 1;
 }
 
-.js-exercise #blood-alcohol .gender  {
-	display: flex;
-	flex-direction: row;
-	gap: 50px;
-	margin-top: 10px;
-}
 
 
 

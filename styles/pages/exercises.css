@@ -3,6 +3,40 @@
 	grid-column-start: 2;
 }
 
+/* - - - LANGUAGE INPUT - - - - - - -*/
+#languages {
+	grid-row: 4;
+	margin: 0 5px 15px 5px;
+}
+#languages form {
+ 	display: grid;
+ 	grid-template-areas:
+ 		"php javascript vue"
+ 		"button button button";
+ 	gap: 20px;
+}
+
+#languages label {
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+	justify-content: flex-start;
+}
+#languages label:nth-of-type(2) {
+	justify-content: center;
+}
+#languages label:nth-of-type(3) {
+	justify-content: flex-end;
+}
+
+#languages button {
+	grid-column: 1 / 4;
+	max-width: 200px;
+	margin-right: auto;
+/*	border: 3px solid var(--trim);
+	box-shadow: 5px 5px var(--ink);*/
+}
+
 form-exercise {
 	grid-column: 2 / 14;
 	margin: 15px 20px 0 5px;

@@ -4,26 +4,29 @@
 	</div>
 
 	<div class="type">
-		<label for="feet">Feet
-			<input 
-				id="feet"
-				type="radio"
-				name="measure-type"
-				value="feet"
-				checked
-				onclick="isChecked('feet')"
-			>
-		</label>
-
-		<label for="meters">Meters
-			<input 
-				id="meters"
-				type="radio"
-				name="measure-type"
-				value="meters"
-				onclick="isChecked('meters')"
-			>
-		</label>
+		<p class="normal-voice">Select your unit of measurement</p>
+		<div class="radio-buttons">
+			<label for="feet">Feet
+				<input 
+					id="feet"
+					type="radio"
+					name="measure-type"
+					value="feet"
+					checked
+					onclick="isChecked('feet')"
+				>
+			</label>
+			
+			<label for="meters">Meters
+				<input 
+					id="meters"
+					type="radio"
+					name="measure-type"
+					value="meters"
+					onclick="isChecked('meters')"
+				>
+			</label>
+		</div>
 	</div>
 
 	<div class="length">

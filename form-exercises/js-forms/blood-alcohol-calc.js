@@ -3,29 +3,30 @@
 		<p class="normal-voice">Fill in the prompts to see if you're sober enough to drive or if you need to call an uber. The legal BAC limit is 0.08.</p>
 	</div>
 
-	<p class="normal-voice">Select your biological gender:</p>
-
 	<div class="gender">	
-		<div class="male">
-			<label for="male">Male</label>
-			<input 
-				type="radio"
-				id="male"
-				name="gender"
-				value="male"
-				onclick="isChecked('male')"
-			>
-		</div>
-
-		<div class="female">
-			<label for="female">Female</label>
-			<input 
-				type="radio"
-				id="female"
-				name="gender"
-				value="female"
-				onclick="isChecked('female')"
-			>
+		<p class="normal-voice">Select your biological gender:</p>
+		<div class="radio-buttons">
+			<div class="male">
+				<label for="male">Male</label>
+				<input 
+					type="radio"
+					id="male"
+					name="gender"
+					value="male"
+					onclick="isChecked('male')"
+				>
+			</div>
+			
+			<div class="female">
+				<label for="female">Female</label>
+				<input 
+					type="radio"
+					id="female"
+					name="gender"
+					value="female"
+					onclick="isChecked('female')"
+				>
+			</div>
 		</div>
 
 		<p class="calm-voice warning"></p>
@@ -108,6 +109,10 @@
 		let weight = parseFloat($weight.value);
 		let time = parseFloat($time.value);
 
+		if (gender.value == "") {
+			$output.hidden = true;
+			$genderWarn.innerHTML = "Please select one."
+		}
 		if (gender === "male") {
 			var ratio = .73;
 		}
