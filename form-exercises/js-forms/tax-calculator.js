@@ -33,22 +33,13 @@
 	<button type="submit">Take my Money!</button>
 </form>
 
-<output class="receipt"></output>
+<output><div class="receipt"></div></output>
 
 <div class='return'>
 	<?php include('components/back-to-exercises.php'); ?>
 </div>
 
 <script>
-	// 	Iniitial order amount
-	// initialize state
-	// Initialize tax amount of 5.5%
-	// prompt for order
-	// prompt for state
-	// if state == WI
-	// 	multiply order amount by tax amount
-	// else return an error message
-
 	const $form = document.getElementById("tax");
 	const $order = document.getElementById("order");
 	const $orderWarn = document.querySelector(".order .warning");
@@ -57,6 +48,8 @@
 	const $stateWarn = document.querySelector(".state .warning");
 
 	const $output = document.querySelector("output");
+	const $receipt = document.querySelector(".receipt");
+
 	$output.hidden = true;
 	$form.addEventListener("submit", function(event) {
 		event.preventDefault();
@@ -83,10 +76,13 @@
 				let totalFormatted = total.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
 				$output.hidden = false;
-				$output.innerHTML = `
-					<p class="normal-voice">Subtotal: <span class="special">$${orderFormatted}</span></p>
-					<p class="normal-voice">Tax Total: <span class="special">$${taxFormatted}</span></p>
-					<p class="normal-voice">Grand Total: <span class="special">$${totalFormatted}</span></p>
+				$receipt.innerHTML = `
+					<p class="normal-voice">Subtotal:</p>
+					<span class="special">$${orderFormatted}</span>
+					<p class="normal-voice">Tax Total: </p>
+					<span class="special">$${taxFormatted}</span>
+					<p class="normal-voice">Grand Total: </p>
+					<span class="special">$${totalFormatted}</span>
 				`;
 			}
 		} else {

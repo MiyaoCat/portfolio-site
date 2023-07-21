@@ -137,13 +137,6 @@ form-wrap .hidden {
 	align-items: center;
 }
 
-.exercise .input-one, 
-.v-exercise .input-one,
-.js-exercise .input-one {
-	display: flex;
-	flex-direction: column;
-}
-
 .exercise input[type="number"], 
 .v-exercise input[type="number"],
 .js-exercise input[type="number"] {
@@ -248,6 +241,13 @@ input[type="radio"]:checked {
 	box-shadow: 0 0 var(--highlight);
 }
 
+/* - - WARNING - - - - - - - - - - - - */
+.warning, error {
+	color: red;
+	margin-top: 2px;
+	display: block;
+}
+
 /* - - OUTPUT - - - - - - - - - - - - */
 output {
 	grid-row: 4;
@@ -259,14 +259,28 @@ output {
 	max-width: 300px;
 }
 
-output p {
+output p, output .special {
 	padding: 5px;
 }
 
-.warning, error {
-	color: red;
-	margin-top: 2px;
-	display: block;
+.receipt {
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr auto;
+}
+
+.receipt > * {
+	align-self: center;
+
+}
+
+.receipt > :nth-child(2),
+.receipt > :nth-child(4),
+.receipt > :nth-child(6) {
+		text-align: right;
+}
+.receipt > :nth-child(5), .receipt > :nth-child(6) {
+	border-top: 1px solid var(--ink);
 }
 
 @media (min-width: 550px) {
