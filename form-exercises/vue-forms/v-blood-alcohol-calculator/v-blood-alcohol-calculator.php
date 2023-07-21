@@ -1,6 +1,20 @@
 
 <form data-vue='bacCalc'>
 	<p class="instructions normal-voice" v-html='instructions'></p>
+		
+		<div class="gender">
+			<p class="normal-voice">Select your biological gender:</p>
+
+			<div class="male">
+				<label for="male">Male</label>
+				<input name="gender" id="male" type="radio" value="male" v-model="gender">
+			</div>
+
+			<div class="female">
+				<label for="female">Female</label>
+				<input name="gender" id="female" type="radio" value="female"v-model="gender">
+			</div>
+		</div>
 	
 		<div class="alcohol">
 			<label for="alcohol">How much alcohol have you consumed, in ounces?</label>
@@ -17,20 +31,6 @@
 			<input name ="hours" type="number" v-model="hours">
 		</div>
 		
-		<div class="gender">
-			<p class="instructions">Select your biological gender:</p>
-
-			<div class="male">
-				<label for="male">Male</label>
-				<input name="gender" id="male" type="radio" value="male" v-model="gender">
-			</div>
-
-			<div class="female">
-				<label for="female">Female</label>
-				<input name="gender" id="female" type="radio" value="female"v-model="gender">
-			</div>
-		</div>
-	
 	<!-- <button @click=messageHandler()>Am I drunk?</button> -->
 
 </form>
