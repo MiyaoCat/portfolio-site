@@ -3,8 +3,9 @@
 		<p class="normal-voice">Fill in the prompts to see if you're sober enough to drive or if you need to call an uber. The legal BAC limit is 0.08.</p>
 	</div>
 
-	<div class="gender">
-		<p class="normal-voice">Select your biological gender:</p>
+	<p class="normal-voice">Select your biological gender:</p>
+
+	<div class="gender">	
 		<div class="male">
 			<label for="male">Male</label>
 			<input 
