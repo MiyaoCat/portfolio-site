@@ -26,11 +26,11 @@ new Vue({
 			}
 		},
 		calculation() {
-			var maleBAC = (this.alcohol*5.14/this.weight*.73)-.015*this.hours;
+			var maleBAC = ( (this.alcohol*5.14) / (this.weight*.73) ) - (.015*this.hours);
 			if (this.gender == 'male') {
 				return maleBAC;
 			} else { 
-				return (this.alcohol*5.14/this.weight*.66)-.015*this.hours;
+				return ( (this.alcohol*5.14) / (this.weight*.66) ) - (.015*this.hours);
 			}
 		},
 		message() {

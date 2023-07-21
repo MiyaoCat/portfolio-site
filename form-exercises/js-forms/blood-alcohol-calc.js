@@ -1,6 +1,6 @@
-<form id="bac" type="POST">
+<form id="blood-alcohol" type="POST">
 	<div class="instructions">
-		<p class="normal-voice">Fill in the prompts to see if you're sober enough to drive or if you need to call an uber.</p>
+		<p class="normal-voice">Fill in the prompts to see if you're sober enough to drive or if you need to call an uber. The legal BAC limit is 0.08.</p>
 	</div>
 
 	<div class="gender">
@@ -30,11 +30,11 @@
 		<p class="calm-voice warning"></p>
 	</div>
 
-	<div class="alcohol">
-		<label for="alcohol">How many drinks have you had?</label>
+	<div class="drinks">
+		<label for="drinks">How much alcohol have you consumed (in ounces)?</label>
 		<input 
 			type="number"
-			id="alcohol"
+			id="drinks"
 			min=0
 			step=1
 			placeholder=1
@@ -62,7 +62,7 @@
 			type="number"
 			id="time"
 			min=0
-			step=1
+			step=.5
 			placeholder=1
 		>
 
@@ -79,10 +79,7 @@
 <output></output>
 
 <script>
-	const $form = document.getElementById("bac");
-
-	const $male = document.getElementById("male");
-	const $female = document.getElementById("female");
+	const $form = document.getElementById("blood-alcohol");
 	const $genderWarn = document.querySelector(".gender .warning");
 
 	const $drinks = document.getElementById("drinks");
@@ -95,27 +92,43 @@
 	const $timeWarn = document.querySelector(".time .warning");
 
 	const $output = document.querySelector("output");
+	$output.hidden = true;
 
 	function isChecked(value) {
   		return value;
 	}
-	
+
 	$form.addEventListener("submit", function(event) {
 		event.preventDefault();
+		$output.hidden = false;
+		const gender = document.querySelector("[name='gender']:checked").value;
 
-		male = $male.value;
-		female = $female.value;
+		let drinks = parseFloat($drinks.value);
+		let weight = parseFloat($weight.value);
+		let time = parseFloat($time.value);
 
-		if (male) {
-			let bac = 1.1;
-			console.log(bac)
+		if (gender === "male") {
+			var ratio = .73;
 		}
 
-		if (female) {
-			let bac = 2.2;
-			console.log(bac)
+		if (gender == "female") {
+			var ratio = .66;
+		}
+
+		let bac = ( ( (drinks * 5.14) / (weight * ratio) ) - .015 * time);
+		let bacFormatted = bac.toFixed(2);
+
+		if (bac >= 0.08) {
+			$output.innerHTML = `
+				Your BAC is ${bacFormatted}. You'll have to call a car.
+			`
+		}else {
+			$output.innerHTML = `
+				Your BAC is ${bacFormatted}. You pass.
+			`
 		}
 	})
+
 </script>
 
 
