@@ -119,6 +119,11 @@
 				"title1": "Temp",
 				"title2": "Converter",
 				"slug": "temp-converter"
+			},
+			{
+				"title1": "BMI",
+				"title2": "Calculator",
+				"slug": "bmi-calculator"
 			}
 		]
 	}

@@ -112,11 +112,6 @@
 		let weight = parseFloat($weight.value);
 		let time = parseFloat($time.value);
 
-		var genderCheck = document.querySelector("input[name='gender']");
-
-		console.log(genderCheck)
-		console.log(gender)
-
 		if (gender == null) {
 			$output.hidden = true;
 			$genderWarn.innerHTML = "The equation requires you to choose one.";
