@@ -82,6 +82,9 @@
 
 <script>
 	const $form = document.getElementById("blood-alcohol");
+
+	const $male = document.getElementById("male");
+	const $female = document.getElementById("female");
 	const $genderWarn = document.querySelector(".gender .warning");
 
 	const $drinks = document.getElementById("drinks");
@@ -96,42 +99,71 @@
 	const $output = document.querySelector("output");
 	$output.hidden = true;
 
-	function isChecked(value) {
-  		return value;
+	function isChecked(gender) {
+  		return gender;
 	}
 
 	$form.addEventListener("submit", function(event) {
 		event.preventDefault();
 		$output.hidden = false;
-		const gender = document.querySelector("[name='gender']:checked").value;
+		const gender = document.querySelector("[name='gender']:checked");
 
 		let drinks = parseFloat($drinks.value);
 		let weight = parseFloat($weight.value);
 		let time = parseFloat($time.value);
 
-		if (gender.value == "") {
+		var genderCheck = document.querySelector("input[name='gender']");
+
+		console.log(genderCheck)
+		console.log(gender)
+
+		if (gender == null) {
 			$output.hidden = true;
-			$genderWarn.innerHTML = "Please select one."
-		}
-		if (gender === "male") {
-			var ratio = .73;
+			$genderWarn.innerHTML = "The equation requires you to choose one.";
+		} else {
+			if (gender.value === "male") {
+				var ratio = .73;
+			}
+
+			if (gender.value == "female") {
+				var ratio = .66;
+			}
+
+			let bac = ( ( (drinks * 5.14) / (weight * ratio) ) - .015 * time );
+			bac = Math.max(0, bac);
+			let bacFormatted = bac.toFixed(2);
+
+			if (bac >= 0.08) {
+				$output.innerHTML = `
+					<p class="normal-voice">Your BAC is <span class="special">${bacFormatted}</span>. You'll have to call a car.</p>
+				`
+			} else {
+				$output.innerHTML = `
+					<p class="normal-voice">Your BAC is <span class="special">${bacFormatted}</span>. Drive safely!</p>
+				`
+			}
+			$genderWarn.innerHTML = "";
 		}
 
-		if (gender == "female") {
-			var ratio = .66;
+		if ($drinks.value == "") {
+			$output.hidden = true;
+			$drinksWarn.innerHTML = "If no drinks, you're sober."
+		} else {
+			$drinksWarn.innerHTML = "";
 		}
 
-		let bac = ( ( (drinks * 5.14) / (weight * ratio) ) - .015 * time);
-		let bacFormatted = bac.toFixed(2);
+		if ($weight.value == "") {
+			$output.hidden = true;
+			$weightWarn.innerHTML = "If no weight, you're sober."
+		} else {
+			$weightWarn.innerHTML = "";
+		}
 
-		if (bac >= 0.08) {
-			$output.innerHTML = `
-				Your BAC is ${bacFormatted}. You'll have to call a car.
-			`
-		}else {
-			$output.innerHTML = `
-				Your BAC is ${bacFormatted}. You pass.
-			`
+		if ($time.value == "") {
+			$output.hidden = true;
+			$timeWarn.innerHTML = "If no time, you're sober."
+		} else {
+			$timeWarn.innerHTML = "";
 		}
 	})
 
