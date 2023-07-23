@@ -7,7 +7,7 @@
 		<p class="normal-voice">Would you like to use the imperial system or metric system?</p>
 		
 		<div class="radio-buttons">
-			<div class="imperial">
+			<div class="imperialType">
 				<label for="imperial">Imperial</label>
 				<input 
 					type="radio"
@@ -18,7 +18,7 @@
 				>
 			</div>
 
-			<div class="metric">
+			<div class="metricType">
 				<label for="metric">Metric</label>
 				<input 
 					type="radio"
@@ -30,7 +30,7 @@
 			</div>
 		</div>
 
-		<div class="height imperial">
+		<div class="imperial">
 			<div class="feet">
 				<label for="feet">Feet</label>
 				<input 
@@ -53,14 +53,36 @@
 					placeholder=1
 				>
 			</div>
+
+			<div class="weight">
+				<label for="pounds">How much do you weigh?</label>
+				<input 
+					type="number"
+					id="pounds"
+					min=1
+					step=1
+					placeholder=1
+				>
+			</div>
 		</div>
 
-		<div class="height metric">
-			<div class="centimeters">
+		<div class="metric">
+			<div class="height">
 				<label for="feet">Centimeters</label>
 				<input 
 					type="number"
 					id="centimeters"
+					min=0
+					step=.1
+					placeholder=1
+				>
+			</div>
+
+			<div class="weight">
+				<label for="kilo">Kilograms</label>
+				<input 
+					type="number"
+					id="kilo"
 					min=0
 					step=.1
 					placeholder=1
@@ -74,10 +96,10 @@
 <output></output>
 
 <script>
-	const $imperial = document.querySelector(".height.imperial");
+	const $imperial = document.querySelector(".imperial");
 	$imperial.hidden = true;
 
-	const $metric = document.querySelector(".height.metric");
+	const $metric = document.querySelector(".metric");
 	$metric.hidden = true;
 
 	function isChecked(value) {
