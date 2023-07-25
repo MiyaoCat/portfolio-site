@@ -40,6 +40,7 @@
 					step=1
 					placeholder=1
 				>
+			<p class="calm-voice warning"></p>	
 			</div>
 			
 			<div class="inches">
@@ -52,6 +53,7 @@
 					max=11
 					placeholder=1
 				>
+			<p class="calm-voice warning"></p>	
 			</div>
 
 			<div class="weight">
@@ -63,12 +65,13 @@
 					step=1
 					placeholder=1
 				>
+			<p class="calm-voice warning"></p>	
 			</div>
 		</div>
 
 		<div class="metric">
 			<div class="height">
-				<label for="feet">Centimeters</label>
+				<label for="centimeters">Centimeters</label>
 				<input 
 					type="number"
 					id="centimeters"
@@ -76,31 +79,56 @@
 					step=.1
 					placeholder=1
 				>
+			<p class="calm-voice warning"></p>	
 			</div>
 
 			<div class="weight">
-				<label for="kilo">Kilograms</label>
+				<label for="kilos">Kilograms</label>
 				<input 
 					type="number"
-					id="kilo"
+					id="kilos"
 					min=0
 					step=.1
 					placeholder=1
 				>
+			<p class="calm-voice warning"></p>	
 			</div>
 		</div>
 
 	</div>
+
+	<button type="submit">Am I Healthy?</button>
 </form>
 
 <output></output>
 
+<div class='return'>
+	<?php include('components/back-to-exercises.php'); ?>
+</div>
+
 <script>
+	const $form = document.getElementById("bmi-calc");
+
 	const $imperial = document.querySelector(".imperial");
 	$imperial.hidden = true;
 
 	const $metric = document.querySelector(".metric");
 	$metric.hidden = true;
+
+	const $feet = document.getElementById("feet");
+	const $feetWarn = document.querySelector(".feet .warning");
+
+	const $inches = document.getElementById("inches");
+	const $inchesWarn = document.querySelector(".inches .warning");
+
+	const $pounds = document.getElementById("pounds");
+	const $poundsWarn = document.querySelector(".pounds .warning");
+
+	const $centimeters = document.getElementById("centimeters");
+	const $centimetersWarn = document.querySelector(".centimeters .warning");
+
+	const $kilos = document.getElementById("kilos");
+	const $kilosWarn = document.querySelector(".kilos .warning");
 
 	function isChecked(value) {
 		console.log(value)
@@ -113,7 +141,24 @@
 		}
 	}
 
-	// isChecked()
+
+	$form.addEventListener("submit", function(event) {
+		event.preventDefault();
+
+		let feet = parseFloat($feet.value);
+		let inches = parseFloat($inches.value);
+		let totalInches = (feet * 12) + inches;
+		let pounds = parseFloat($pounds.value);
+
+		let centimeters = parseFloat($centimeters.value);
+		let kilos = parseFloat($kilos.value);
+
+
+
+
+		console.log(totalInches);
+	})
+
 </script>
 
 
