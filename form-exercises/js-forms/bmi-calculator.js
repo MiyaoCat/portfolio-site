@@ -28,6 +28,8 @@
 					onclick="isChecked('metric')"
 				>
 			</div>
+
+			<p class="calm-voice warning"></p>	
 		</div>
 
 		<div class="imperial">
@@ -130,17 +132,27 @@
 	const $kilos = document.getElementById("kilos");
 	const $kilosWarn = document.querySelector(".kilos .warning");
 
+	const $button = document.querySelector("button");
+	$button.hidden = true;
+
+	const $output = document.querySelector("output");
+	$output.hidden = true;
+
 	function isChecked(value) {
 		console.log(value)
 		if (value == "imperial") {
 			$imperial.hidden = false;
 			$metric.hidden = true;
-		} else {
+			$button.hidden = false;
+			
+		} 
+		if (value == "metric") {
 			$imperial.hidden = true;
 			$metric.hidden = false;
+			$button.hidden = false;
+			
 		}
 	}
-
 
 	$form.addEventListener("submit", function(event) {
 		event.preventDefault();
@@ -153,10 +165,29 @@
 		let centimeters = parseFloat($centimeters.value);
 		let kilos = parseFloat($kilos.value);
 
+		let centsToInches = centimeters * 0.393701;
+		let kilosToPounds = kilos * 2.2;
 
+		let bmi = ( pounds / (totalInches * totalInches) )*703;
+		let bmiMetric = ( kilosToPounds / (centsToInches * centsToInches) )*703;
+		let bmiMetricFormatted = bmiMetric.toFixed(2);
 
+		function checkValue(value) {
+  			return document.querySelector(`[value="${value}"]`).checked;
+  		}
 
-		console.log(totalInches);
+		if (checkValue("imperial")) {
+			$output.hidden = false;
+			$output.innerHTML = `
+				Your imperial BMI is ${bmi}
+			`
+		} else if (checkValue("metric")) {
+			$output.hidden = false;
+			$output.innerHTML = `
+				Your metric BMI is ${bmiMetricFormatted}
+			`
+		}
+
 	})
 
 </script>
