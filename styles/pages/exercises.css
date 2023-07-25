@@ -104,11 +104,11 @@ form-exercise .exercises li:hover {
 		grid-row: 5;
 	}
 
-	.input-output{
+/*	.input-output{
 		grid-row: 5;
 		grid-column: 4/ 7;
 		margin-right: 20px;
-	}
+	}*/
 
 	.decision-making {
 		grid-row: 6;
