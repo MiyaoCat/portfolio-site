@@ -1,6 +1,6 @@
 <form id="bmi-calc" type="POST">
 	<div class="instructions">
-		<p class="normal-voice">Enter your height and weight and this outdated method will tell you if you're overweight or not.</p>
+		<p class="normal-voice">Enter your height and weight and this outdated formula will either make you feel good about yourself or tell you you're unhealthy.</p>
 	</div>
 
 	<div class="height">
@@ -33,33 +33,37 @@
 		</div>
 
 		<div class="imperial">
-			<div class="feet">
-				<label for="feet">Feet</label>
-				<input 
-					type="number"
-					id="feet"
-					min=0
-					step=1
-					placeholder=1
-				>
-			<p class="calm-voice warning"></p>	
-			</div>
-			
-			<div class="inches">
-				<label for="inches">Inches</label>
-				<input 
-					type="number"
-					id="inches"
-					min=0
-					step=1
-					max=11
-					placeholder=1
-				>
-			<p class="calm-voice warning"></p>	
+			<div class="height">
+				<p class="normal-voice">How tall are you?</p>
+				<div class="feet">
+					<label for="feet">Ft</label>
+					<input 
+						type="number"
+						id="feet"
+						min=0
+						step=1
+						placeholder=1
+					>
+				<p class="calm-voice warning"></p>	
+				</div>
+				
+				<div class="inches">
+					<label for="inches">In</label>
+					<input 
+						type="number"
+						id="inches"
+						min=0
+						step=1
+						max=11
+						placeholder=1
+					>
+					<p class="calm-voice warning"></p>	
+				</div>
 			</div>
 
 			<div class="weight">
-				<label for="pounds">How much do you weigh?</label>
+				<p class="normal-voice">How much do you weigh?</p>
+				<label for="pounds">LBs</label>
 				<input 
 					type="number"
 					id="pounds"
@@ -73,7 +77,8 @@
 
 		<div class="metric">
 			<div class="height">
-				<label for="centimeters">Centimeters</label>
+				<p class="normal-voice">How tall are you?</p>
+				<label for="centimeters">CM</label>
 				<input 
 					type="number"
 					id="centimeters"
@@ -85,7 +90,8 @@
 			</div>
 
 			<div class="weight">
-				<label for="kilos">Kilograms</label>
+				<p class="normal-voice">How much do you weigh?</p>
+				<label for="kilos">K</label>
 				<input 
 					type="number"
 					id="kilos"
@@ -143,14 +149,12 @@
 		if (value == "imperial") {
 			$imperial.hidden = false;
 			$metric.hidden = true;
-			$button.hidden = false;
-			
+			$button.hidden = false;			
 		} 
 		if (value == "metric") {
 			$imperial.hidden = true;
 			$metric.hidden = false;
-			$button.hidden = false;
-			
+			$button.hidden = false;			
 		}
 	}
 
@@ -169,6 +173,7 @@
 		let kilosToPounds = kilos * 2.2;
 
 		let bmi = ( pounds / (totalInches * totalInches) )*703;
+		let bmiFormatted = bmi.toFixed(2)
 		let bmiMetric = ( kilosToPounds / (centsToInches * centsToInches) )*703;
 		let bmiMetricFormatted = bmiMetric.toFixed(2);
 
@@ -176,16 +181,35 @@
   			return document.querySelector(`[value="${value}"]`).checked;
   		}
 
+  		function message(bmi) {
+  			if (checkValue("imperial")) {
+  				if (bmi < 18.5) {
+	  				return `${bmiFormatted} Like grandma always says, "You're too skinny. You need to eat more!"`
+	  			}
+	  			if (bmi > 25) {
+	  				return `${bmiFormatted} You're too fat.`
+	  			} else {
+	  				return `${bmiFormatted} You're healthy`
+	  			}
+  			} else {
+  				if (bmi < 18.5) {
+	  				return `Metric ${bmiMetricFormatted} Like grandma always says, "You're too skinny. You need to eat more!"`
+	  			}
+	  			if (bmi > 25) {
+	  				return `Metric ${bmiMetricFormatted} You're too fat.`
+	  			} else {
+	  				return `Metric ${bmiMetricFormatted} You're healthy`
+	  			}
+  			}
+  		}
+
 		if (checkValue("imperial")) {
 			$output.hidden = false;
-			$output.innerHTML = `
-				Your imperial BMI is ${bmi}
-			`
-		} else if (checkValue("metric")) {
+			$output.innerHTML = `${message(bmi)}`
+		}  
+		if (checkValue("metric")) {
 			$output.hidden = false;
-			$output.innerHTML = `
-				Your metric BMI is ${bmiMetricFormatted}
-			`
+			$output.innerHTML = `${message(bmiMetric)}`
 		}
 
 	})
