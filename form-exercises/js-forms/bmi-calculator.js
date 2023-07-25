@@ -63,43 +63,51 @@
 
 			<div class="weight">
 				<p class="normal-voice">How much do you weigh?</p>
-				<label for="pounds">LBs</label>
-				<input 
-					type="number"
-					id="pounds"
-					min=1
-					step=1
-					placeholder=1
-				>
-			<p class="calm-voice warning"></p>	
+				<div class="pounds">
+					<label for="pounds">LBs</label>
+					<input 
+						type="number"
+						id="pounds"
+						min=1
+						step=1
+						placeholder=1
+					>
+					<p class="calm-voice warning"></p>	
+				</div>
 			</div>
 		</div>
 
 		<div class="metric">
+
 			<div class="height">
 				<p class="normal-voice">How tall are you?</p>
-				<label for="centimeters">CM</label>
-				<input 
-					type="number"
-					id="centimeters"
-					min=0
-					step=.1
-					placeholder=1
-				>
-			<p class="calm-voice warning"></p>	
+				<div class="centimeters">
+					<label for="centimeters">CM</label>
+					<input 
+						type="number"
+						id="centimeters"
+						min=0
+						step=.1
+						placeholder=1
+					>
+					<p class="calm-voice warning"></p>	
+				</div>
 			</div>
 
 			<div class="weight">
 				<p class="normal-voice">How much do you weigh?</p>
-				<label for="kilos">K</label>
-				<input 
-					type="number"
-					id="kilos"
-					min=0
-					step=.1
-					placeholder=1
-				>
-			<p class="calm-voice warning"></p>	
+
+				<div class="kilos">
+					<label for="kilos">K</label>
+					<input 
+						type="number"
+						id="kilos"
+						min=0
+						step=.1
+						placeholder=1
+					>
+					<p class="calm-voice warning"></p>	
+				</div>
 			</div>
 		</div>
 
@@ -160,6 +168,7 @@
 
 	$form.addEventListener("submit", function(event) {
 		event.preventDefault();
+		$output.hidden = false;
 
 		let feet = parseFloat($feet.value);
 		let inches = parseFloat($inches.value);
@@ -177,6 +186,7 @@
 		let bmiMetric = ( kilosToPounds / (centsToInches * centsToInches) )*703;
 		let bmiMetricFormatted = bmiMetric.toFixed(2);
 
+		//OUTPUT MESSAGES
 		function checkValue(value) {
   			return document.querySelector(`[value="${value}"]`).checked;
   		}
@@ -184,34 +194,83 @@
   		function message(bmi) {
   			if (checkValue("imperial")) {
   				if (bmi < 18.5) {
-	  				return `${bmiFormatted} Like grandma always says, "You're too skinny. You need to eat more!"`
+	  				return `
+	  					<p class="normal-voice">Your BMI is <span class="special">${bmiFormatted}</span>. Like grandma always says, "You're too skinny. You need to eat more!"</p>
+	  				`
 	  			}
 	  			if (bmi > 25) {
-	  				return `${bmiFormatted} You're too fat.`
+	  				return `
+	  					<p class="normal-voice">Your BMI is <span class="special">${bmiFormatted}</span>. Your asian mom says you look fat. Don't be ashamed.</p>
+	  				`
 	  			} else {
-	  				return `${bmiFormatted} You're healthy`
+	  				return `
+	  					<p class="normal-voice">Your BMI is <span class="special">${bmiFormatted}</span>. You're in the healthy range!</p>
+	  				`
 	  			}
   			} else {
   				if (bmi < 18.5) {
-	  				return `Metric ${bmiMetricFormatted} Like grandma always says, "You're too skinny. You need to eat more!"`
+	  				return `
+	  					<p class="normal-voice">Your BMI is <span class="special">${bmiMetricFormatted}</span>. Like grandma always says, "You're too skinny. You need to eat more!"</p>
+	  				`
 	  			}
 	  			if (bmi > 25) {
-	  				return `Metric ${bmiMetricFormatted} You're too fat.`
+	  				return `
+	  					<p class="normal-voice">Your BMI is <span class="special">${bmiMetricFormatted}</span>. Your asian mom says you look fat. Don't be ashamed.</p>
+	  				`
 	  			} else {
-	  				return `Metric ${bmiMetricFormatted} You're healthy`
+	  				return `
+	  					<p class="normal-voice">Your BMI is <span class="special">${bmiMetricFormatted}</span>. You're in the healthy range!</p>
+	  				`
 	  			}
   			}
   		}
 
-		if (checkValue("imperial")) {
-			$output.hidden = false;
-			$output.innerHTML = `${message(bmi)}`
+		if ( checkValue("imperial") ) {
+			if ($feet.value == "") {
+				$output.hidden = true;
+				$feetWarn.innerHTML = "No feet?"
+			} else {
+				$output.innerHTML = `${message(bmi)}`
+				$feetWarn.innerHTML = "";
+			}
+
+			if ($inches.value == "") {
+				$output.hidden = true;
+				$inchesWarn.innerHTML = "You have to have a height."
+			} else {
+				$output.innerHTML = `${message(bmi)}`
+				$inchesWarn.innerHTML = "";
+			}
+
+			if ($pounds.value == "") {
+				$output.hidden = true;
+				$poundsWarn.innerHTML = "Don't kid yourself."			
+			} else {
+				$output.innerHTML = `${message(bmi)}`
+				$poundsWarn.innerHTML = "";
+			}			
 		}  
-		if (checkValue("metric")) {
-			$output.hidden = false;
-			$output.innerHTML = `${message(bmiMetric)}`
+
+		if ( checkValue("metric") ) {
+			if ($centimeters.value == "") {
+				$output.hidden = true;
+				$centimetersWarn.innerHTML = "You're not invisible."	
+			} else {
+				$output.innerHTML = `${message(bmiMetric)}`;
+				$centimetersWarn.innerHTML = "";
+			}
+
+			if ($kilos.value == "") {
+				$output.hidden = true;
+				$kilosWarn.innerHTML = "You're water (mostly), not air my friend."	
+			} else {
+				$output.innerHTML = `${message(bmiMetric)}`;
+				$kilosWarn.innerHTML = "";
+			}
 		}
 
+		// WARNING MESSAGES
+		
 	})
 
 </script>
