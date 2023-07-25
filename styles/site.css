@@ -62,17 +62,12 @@ svg {
 	width: clamp(40px, 6vw, 60px);
 }
 
-input {
-	max-width: 300px;
-}
-
 input, textarea {
 	border: var(--border-med) solid var(--trim);
 	font-family: var(--sans-serif);
 	font-size: 1rem;
 	padding: 5px;
 	margin: 5px 0;
-	max-width: 300px;
 }
 
 input:focus, textarea:focus {
