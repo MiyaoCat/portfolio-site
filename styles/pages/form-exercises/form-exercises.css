@@ -146,34 +146,6 @@ password-enter {
 	margin-top: 5px;
 }
 
-input[type="radio"] {
-  /* Add if not using autoprefixer */
-  -webkit-appearance: none;
-  appearance: none;
-  /* For iOS < 15 to remove gradient background */
-  background-color: ;
-  margin: 5px;
-  font: inherit;
-  color: var(--link);
-  width: 1.15em;
-  height: 1.15em;
-  display: grid;
-  grid-gap: 20px;
-  place-content: center;
-}
-
-@keyframes grow-shrink {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 input[type="radio"]:checked {
 	content: "";
 	background-color: var(--standout);
