@@ -1,117 +1,118 @@
 <form id="bmi-calc" type="POST">
 	<div class="instructions">
-		<p class="normal-voice">Enter your height and weight and this outdated formula will either make you feel good about yourself or tell you you're unhealthy.</p>
+		<p class="normal-voice">Enter your height and weight and this outdated formula will either make you feel good about yourself or tell you you're unhealthy. The formula states a healthy BMI is between <span class="special">18.5</span> and <span class="special">25</span>.</p>
 	</div>
 
-	<div class="height">
-		<p class="normal-voice">Would you like to use the imperial system or metric system?</p>
-		
-		<div class="radio-buttons">
-			<div class="imperialType">
-				<label for="imperial">Imperial</label>
-				<input 
-					type="radio"
-					id="imperial"
-					name="measureType"
-					value="imperial"
-					onclick="isChecked('imperial')"
-				>
-			</div>
-
-			<div class="metricType">
-				<label for="metric">Metric</label>
-				<input 
-					type="radio"
-					id="metric"
-					name="measureType"
-					value="metric"
-					onclick="isChecked('metric')"
-				>
-			</div>
-
-			<p class="calm-voice warning"></p>	
-		</div>
-
-		<div class="imperial">
-			<div class="height">
-				<p class="normal-voice">How tall are you?</p>
-				<div class="feet">
-					<label for="feet">Ft</label>
-					<input 
-						type="number"
-						id="feet"
-						min=0
-						step=1
-						placeholder=1
-					>
-				<p class="calm-voice warning"></p>	
-				</div>
+	
+		<div class="wrapper">
+			<div class="measure-type">
+				<p class="normal-voice">Would you like to use the imperial system or metric system?</p>
 				
-				<div class="inches">
-					<label for="inches">In</label>
-					<input 
-						type="number"
-						id="inches"
-						min=0
-						step=1
-						max=11
-						placeholder=1
-					>
+				<div class="radio-buttons">
+					<div class="imperialType">
+						<label for="imperial">Imperial</label>
+						<input 
+							type="radio"
+							id="imperial"
+							name="measureType"
+							value="imperial"
+							onclick="isChecked('imperial')"
+						>
+					</div>
+				
+					<div class="metricType">
+						<label for="metric">Metric</label>
+						<input 
+							type="radio"
+							id="metric"
+							name="measureType"
+							value="metric"
+							onclick="isChecked('metric')"
+						>
+					</div>
+				</div>	
+				<p class="calm-voice warning"></p>	
+			</div>
+			
+			<div class="imperial">
+				<div class="height">
+					<p class="normal-voice">Enter your height:</p>
+					<div class="feet">
+						<label class="calm-voice" for="feet">Feet</label>
+						<input 
+							type="number"
+							id="feet"
+							min=0
+							step=1
+							placeholder=1
+						>
 					<p class="calm-voice warning"></p>	
+					</div>
+					
+					<div class="inches">
+						<label class="calm-voice" for="inches">Inches</label>
+						<input 
+							type="number"
+							id="inches"
+							min=0
+							step=1
+							max=11
+							placeholder=1
+						>
+						<p class="calm-voice warning"></p>	
+					</div>
+				</div>
+			
+				<div class="weight">
+					<p class="normal-voice">Enter your weight:</p>
+					<div class="pounds">
+						<label class="calm-voice" for="pounds">Pounds</label>
+						<input 
+							type="number"
+							id="pounds"
+							min=1
+							step=1
+							placeholder=1
+						>
+						<p class="calm-voice warning"></p>	
+					</div>
 				</div>
 			</div>
-
-			<div class="weight">
-				<p class="normal-voice">How much do you weigh?</p>
-				<div class="pounds">
-					<label for="pounds">LBs</label>
-					<input 
-						type="number"
-						id="pounds"
-						min=1
-						step=1
-						placeholder=1
-					>
-					<p class="calm-voice warning"></p>	
+			
+			<div class="metric">
+			
+				<div class="height">
+					<p class="normal-voice">Enter your height:</p>
+					<div class="centimeters">
+						<label class="calm-voice" for="centimeters">CM</label>
+						<input 
+							type="number"
+							id="centimeters"
+							min=0
+							step=1
+							placeholder=1
+						>
+						<p class="calm-voice warning"></p>	
+					</div>
+				</div>
+			
+				<div class="weight">
+					<p class="normal-voice">Enter your weight:</p>
+			
+					<div class="kilos">
+						<label class="calm-voice" for="kilos">K</label>
+						<input 
+							type="number"
+							id="kilos"
+							min=0
+							step=.5
+							placeholder=1
+						>
+						<p class="calm-voice warning"></p>	
+					</div>
 				</div>
 			</div>
 		</div>
-
-		<div class="metric">
-
-			<div class="height">
-				<p class="normal-voice">How tall are you?</p>
-				<div class="centimeters">
-					<label for="centimeters">CM</label>
-					<input 
-						type="number"
-						id="centimeters"
-						min=0
-						step=.1
-						placeholder=1
-					>
-					<p class="calm-voice warning"></p>	
-				</div>
-			</div>
-
-			<div class="weight">
-				<p class="normal-voice">How much do you weigh?</p>
-
-				<div class="kilos">
-					<label for="kilos">K</label>
-					<input 
-						type="number"
-						id="kilos"
-						min=0
-						step=.1
-						placeholder=1
-					>
-					<p class="calm-voice warning"></p>	
-				</div>
-			</div>
-		</div>
-
-	</div>
 
 	<button type="submit">Am I Healthy?</button>
 </form>
@@ -126,10 +127,10 @@
 	const $form = document.getElementById("bmi-calc");
 
 	const $imperial = document.querySelector(".imperial");
-	$imperial.hidden = true;
+	$imperial.style.display = "none";
 
 	const $metric = document.querySelector(".metric");
-	$metric.hidden = true;
+	$metric.style.display = "none";
 
 	const $feet = document.getElementById("feet");
 	const $feetWarn = document.querySelector(".feet .warning");
@@ -155,13 +156,13 @@
 	function isChecked(value) {
 		console.log(value)
 		if (value == "imperial") {
-			$imperial.hidden = false;
-			$metric.hidden = true;
+			$imperial.style.display = "flex";
+			$metric.style.display = "none";
 			$button.hidden = false;			
 		} 
 		if (value == "metric") {
-			$imperial.hidden = true;
-			$metric.hidden = false;
+			$metric.style.display = "flex";
+			$imperial.style.display = "none";
 			$button.hidden = false;			
 		}
 	}

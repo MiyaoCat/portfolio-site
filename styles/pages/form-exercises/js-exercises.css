@@ -5,10 +5,6 @@
 	margin-left: 1rem;
 }
 /* - - - - - AREA OF RECTANGLE- - - - - */
-/*#rectangle label, #paint label {
-	margin: 5px 0;
-}*/
-
 #paint div {
 	margin-top: 15px;
 }
@@ -47,10 +43,32 @@ td:nth-of-type(2) p {
 	grid-column: 1;
 }
 
+/* - - - - - BMI-CALCULATOR - - - - - */
+.imperial > div > div, .metric > div > div {
+	display: flex;
+	flex-direction: column;
+}
 
+.imperial, .metric {
+	flex-direction: column;
+	gap: 10px;
+	margin-top: 20px;
+}
 
+.imperial .height, .imperial .weight {
+	display: grid;
+	column-gap: 20px;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto auto;
+}
 
+.imperial p {
+	grid-row: 1;
+	grid-column: 1 / -1;
+}
 
-
-
+.imperial .feet {
+	grid-row: 2;
+	grid-column: 1;
+}
 
