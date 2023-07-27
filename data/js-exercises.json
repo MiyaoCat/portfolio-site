@@ -124,6 +124,11 @@
 				"title1": "BMI",
 				"title2": "Calculator",
 				"slug": "bmi-calculator"
+			},
+			{
+				"title1": "Multistate",
+				"title2": "Sales Tax",
+				"slug": "multi-state-tax"
 			}
 		]
 	}

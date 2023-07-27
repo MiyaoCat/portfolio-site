@@ -1,0 +1,14 @@
+[
+	{
+		"code": "al",
+		"name": "alabama",
+		"tax": 0.5,
+		"counties": [
+			{
+				"id": "al-1"
+				"county": "whatcom",
+				"tax": 0.2
+			}
+		]
+	}
+]
