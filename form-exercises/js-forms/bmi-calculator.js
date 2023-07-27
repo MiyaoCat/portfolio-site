@@ -124,8 +124,12 @@
 </div>
 
 <script>
-	const $form = document.getElementById("bmi-calc");
-
+	const $form = document.getElementById("bmi-calc");	
+	console.log($form.innerHTML)
+	console.log("- - - - - - - - - - - - - ");
+	console.log($form.innerText)
+	console.log("- - - - - - - - - - - - - ");
+	console.log($form.textContent)
 	const $imperial = document.querySelector(".imperial");
 	$imperial.style.display = "none";
 
@@ -269,8 +273,6 @@
 				$kilosWarn.innerHTML = "";
 			}
 		}
-
-		// WARNING MESSAGES
 		
 	})
 
