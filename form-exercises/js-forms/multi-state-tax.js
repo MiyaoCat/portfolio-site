@@ -31,7 +31,7 @@
 	const $output = document.querySelector("output");
 	$output.hidden = true;
 
-	const stateDropdown = document.getElementById('stateDropdown');
+	
 
 	// Sample data containing US states
 	const statesData = [
@@ -70,6 +70,8 @@
 			]
 		}
 	]
+	const stateDropdown = document.getElementById('stateDropdown');
+	const countyDropdown = document.getElementById('countyDropDown');
 
 	function populateDropdown(states) {
 		states.forEach(function(state) {
@@ -79,6 +81,7 @@
 			stateDropdown.appendChild(option);
 		});
 	}
+
 	stateDropdown.addEventListener('change', function() {
 		const option = document.querySelector("option");
 		const selectedState = stateDropdown.value;
@@ -93,8 +96,39 @@
 		})
 	});
 
+	
 	populateDropdown(statesData);
 
+	function populateCounties(counties) {
+		// Clear the existing options in the county dropdown
+		countyDropdown.innerHTML = '';
+
+		// Add the default option
+		const defaultOption = document.createElement('option');
+		defaultOption.value = '';
+		defaultOption.textContent = '- - Select - -';
+		countyDropdown.appendChild(defaultOption);
+
+		// Add the counties as options in the county dropdown
+		counties.forEach(function (county) {
+			const option = document.createElement('option');
+			option.value = county.id;
+			option.textContent = county.county;
+			countyDropdown.appendChild(option);
+		});
+	}
+
+	stateDropdown.addEventListener('change', function () {
+		const selectedState = stateDropdown.value;
+		const state = statesData.find((state) => state.code === selectedState);
+
+		if (state) {
+			populateCounties(state.counties);
+		} else {
+			// If no state is selected, clear the county dropdown options
+			populateCounties([]);
+		}
+	});
 
 	$form.addEventListener("submit", function(event) {
 		event.preventDefault();
