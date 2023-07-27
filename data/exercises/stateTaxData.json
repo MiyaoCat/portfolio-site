@@ -1,14 +1,80 @@
 [
-	{
-		"code": "al",
-		"name": "alabama",
-		"tax": 0.5,
-		"counties": [
-			{
-				"id": "al-1"
-				"county": "whatcom",
-				"tax": 0.2
-			}
-		]
-	}
-]
+		{
+			"id": "ca",
+			"name": "California",
+			"tax": 0.5,
+			"selected": false,
+			"counties": [
+				{
+					"id": "ca-1",
+					"name": "Alameda",
+					"tax": 0.1075,
+					"selected": false
+				},
+				{
+					"id": "ca-2",
+					"name": "Los Angeles",
+					"tax": 0.105,
+					"selected": false
+				},
+				{
+					"id": "ca-3",
+					"name": "Sacramento",
+					"tax": 0.925,
+					"selected": false
+				}
+			]
+		},
+		{
+			"id": "or",
+			"name": "Oregon",
+			"tax": 0,
+			"selected": false,
+			"counties": [
+				{
+					"id": "or-1",
+					"name": "Multnomah",
+					"tax": 0,
+					"selected": false
+				},
+				{
+					"id": "or-2",
+					"name": "Columbia",
+					"tax": 0,
+					"selected": false
+				},
+				{
+					"id": "or-3",
+					"name": "Tillamook",
+					"tax": 0,
+					"selected": false
+				}
+			]
+		},
+		{
+			"id": "wa",
+			"name": "Washington",
+			"tax": 0.065,
+			"selected": false,
+			"counties": [
+				{
+					"id": "wa-1",
+					"name": "King",
+					"tax": 0.105,
+					"selected": false
+				},
+				{
+					"id": "wa-2",
+					"name": "Pierce",
+					"tax": 0.103,
+					"selected": false
+				},
+				{
+					"id": "wa-3",
+					"name": "Skamania",
+					"tax": 0.077,
+					"selected": false
+				}
+			]
+		}
+	]

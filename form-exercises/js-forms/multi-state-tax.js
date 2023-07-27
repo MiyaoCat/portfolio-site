@@ -4,8 +4,8 @@
 	</div>
 
 	<div class="state">
-		<label class="normal-voice" for="stateDropdown">Select a state</label>
-		<select id="stateDropdown">
+		<label class="normal-voice" for="stateDropDown">Select a state</label>
+		<select id="stateDropDown">
 			<option id="state" value="">- - Select - -</option>
 		</select>
 		
@@ -20,123 +20,83 @@
 	<button type="submit">TAX ME</button>
 </form>
 
-<output></output>
+<output>test</output>
 
 <div class='return'>
 	<?php include('components/back-to-exercises.php'); ?>
 </div>
 
 <script>
+
 	const $form = document.getElementById("multi-state-tax");
 	const $output = document.querySelector("output");
 	$output.hidden = true;
 
+	// // Sample data containing US states
 	
+	const stateDropDown = document.getElementById('stateDropDown');
+	const countyDropDown = document.getElementById('countyDropDown');
+	const $county = document.querySelector(".county");
+	$county.style.display = "none";
 
-	// Sample data containing US states
-	const statesData = [
-		{
-			"code": "al",
-			"name": "Alabama",
-			"tax": 0.5,
-			"selected": false,
-			"counties": [
-				{
-					"id": "al-1",
-					"county": "Whatcom",
-					"tax": 0.2,
-					"selected": false
-				}
-			]
-		},
-		{
-			"code": "ca",
-			"name": "california",
-			"tax": 0.5,
-			"selected": false,
-			"counties": [
-				{
-					"id": "ca-1",
-					"county": "Alameda",
-					"tax": 0.6,
-					"selected": false
-				},
-				{
-					"id": "ca-2",
-					"county": "Sacramento",
-					"tax": 0.3,
-					"selected": false
-				}
-			]
-		}
-	]
-	const stateDropdown = document.getElementById('stateDropdown');
-	const countyDropdown = document.getElementById('countyDropDown');
-
-	function populateDropdown(states) {
-		states.forEach(function(state) {
-			const option = document.createElement('option');
-			option.value = state.code;
-			option.textContent = state.name;
-			stateDropdown.appendChild(option);
-		});
-	}
-
-	stateDropdown.addEventListener('change', function() {
-		const option = document.querySelector("option");
-		const selectedState = stateDropdown.value;
-		const options = stateDropdown.querySelectorAll('option');
-
-		options.forEach(function(option) {
-			if (option.value === selectedState) {
-				option.setAttribute('selected', 'selected');
-			} else {
-				option.removeAttribute('selected');
-			}
+	fetch("../data/exercises/stateTaxData.json")
+		.then(function(response) {
+			return response.json();
 		})
-	});
+		.then(function(taxData) {
+			
+			console.log(taxData);
+				// //populate sate dropdown list
+			function populateStates(states) {
+				states.forEach(state => {
+					const option = document.createElement("option");
+					option.value = state.code;
+					option.innerHTML = state.name;
+					stateDropDown.appendChild(option);
+				})
+			}
 
-	
-	populateDropdown(statesData);
+			populateStates(taxData);
 
-	function populateCounties(counties) {
-		// Clear the existing options in the county dropdown
-		countyDropdown.innerHTML = '';
+			function populateCounties(counties) {
+				countyDropDown.innerHTML = "";
+				//this resets the county to default 
+				const defaultOption = document.createElement("option");
+				defaultOption.value = "";
+				defaultOption.textContent = "- - Select - -";
+				countyDropDown.appendChild(defaultOption);
 
-		// Add the default option
-		const defaultOption = document.createElement('option');
-		defaultOption.value = '';
-		defaultOption.textContent = '- - Select - -';
-		countyDropdown.appendChild(defaultOption);
+				//loop through counties and append
+				counties.forEach(county => {
+					const option = document.createElement("option");
+					option.value = county.id;
+					option.textContent = county.name;
+					countyDropDown.appendChild(option);
+				})
+			}
 
-		// Add the counties as options in the county dropdown
-		counties.forEach(function (county) {
-			const option = document.createElement('option');
-			option.value = county.id;
-			option.textContent = county.county;
-			countyDropdown.appendChild(option);
+			//Check to see when state option is changed.
+			stateDropDown.addEventListener("change", function() {
+				const selectedState = stateDropDown.value;
+				const state = taxData.find(state => {
+					return state.code = selectedState;
+				});
+
+				if (state) {
+					$county.style.display = "flex";
+					populateCounties(state.counties);
+				} else {
+					populateCounties([]);
+				}
+			})
+		})
+		.catch(function(error) {
+			console.error('Error fetching JSON data:', error);
 		});
-	}
 
-	stateDropdown.addEventListener('change', function () {
-		const selectedState = stateDropdown.value;
-		const state = statesData.find((state) => state.code === selectedState);
-
-		if (state) {
-			populateCounties(state.counties);
-		} else {
-			// If no state is selected, clear the county dropdown options
-			populateCounties([]);
-		}
-	});
-
-	$form.addEventListener("submit", function(event) {
+	$form.addEventListener("submit", event => {
 		event.preventDefault();
 		$output.hidden = false;
-	})
-
-	$form.addEventListener("keydown", function(event) {
-		console.log(event.key)
 	})
 </script>
 
