@@ -18,7 +18,7 @@
 	</div>
 
 	<div class="state">
-		<label class="normal-voice" for="stateDropDown">Select a state</label>
+		<label class="normal-voice" for="stateDropDown">Select a state:</label>
 
 		<select id="stateDropDown">
 			<option value="">- - Select - -</option>
@@ -28,7 +28,7 @@
 	</div>
 
 	<div class="county">
-		<p class="normal-voice">Select a county</p>
+		<p class="normal-voice">Select a county:</p>
 
 		<select name="" id="countyDropDown"></select>
 
