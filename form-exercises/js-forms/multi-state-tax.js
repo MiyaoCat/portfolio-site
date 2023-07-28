@@ -62,7 +62,7 @@
 	const $output = document.querySelector("output");
 	$output.hidden = true;
 
-	fetch("../data/exercises/stateTaxData.json")
+	fetch("../../data/exercises/stateTaxData.json")
 		.then(function(response) {
 			return response.json();
 		})
@@ -168,7 +168,7 @@
 			})
 		})
 		.catch(function(error) {
-			console.error('Error fetching JSON data:', error);
+			console.error('Error fetching tax data:', error);
 		});
 
 		//ERROR MESSAGING
