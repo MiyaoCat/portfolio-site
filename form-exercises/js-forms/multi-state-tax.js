@@ -36,7 +36,8 @@
 	const countyDropDown = document.getElementById('countyDropDown');
 	const $county = document.querySelector(".county");
 	$county.style.display = "none";
-
+	console.log("stateDropDown: ", stateDropDown)
+	
 	fetch("../data/exercises/stateTaxData.json")
 		.then(function(response) {
 			return response.json();
@@ -74,16 +75,6 @@
 			stateDropDown.addEventListener("change", function() {
 				const selectedState = stateDropDown.value;
 
-				const options = stateDropDown.querySelectorAll('option');
-
-				options.forEach(option => {
-					if (option.value === selectedState) {
-						option.setAttribute("selected", "selected");
-					} else {
-						option.removeAttribute("selected");
-					}
-				})
-
 				const state = taxData.find(state => {
 					return state.id == selectedState;
 				});
@@ -91,20 +82,6 @@
 				if (state) {
 					$county.style.display = "flex";
 					populateCounties(state.counties);	
-
-					//Check to see when county option is changed.
-					countyDropDown.addEventListener("change", function() {
-						const options = countyDropDown.querySelectorAll('option');
-						const selectedCounty = countyDropDown.value;
-
-						options.forEach(option => {
-							if (option.value === selectedCounty) {
-								option.setAttribute("selected", "selected");
-							} else {
-								option.removeAttribute("selected");
-							}
-						})
-					})	
 				} else {
 					populateCounties([]);
 				}			
@@ -122,12 +99,12 @@
 				const selectedCountyId = countyDropDown.value;
 				const selectedStateCode = stateDropDown.value;
 
-				// Find the selected county object within the selected state object
-				const selectedCounty = state.counties.find(county => county.id === selectedCountyId);
-				// let countyTax = selectedCounty.tax;
-				// Now you have the selected county object, and you can use it as needed
+				const selectedCounty = state.counties.find(county => {
+					return county.id === selectedCountyId;
+				});
+
 				console.log(selectedCounty);
-				console.log(selectedCounty.tax);
+				// console.log(selectedCounty.tax);
 				let name = state.name;
 				let stateTax = state.tax;
 				
