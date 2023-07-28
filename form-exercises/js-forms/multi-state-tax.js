@@ -1,20 +1,33 @@
 <form id="multi-state-tax" type="submit">
 	<div class="instructions">
-		<p class="normal-voice">Select the state and county you live in.</p>
+		<p class="normal-voice">Enter your order amount. Then select the state and county you live in.</p>
 	</div>
 
+	<div class="order">
+		<label for="order">Order Amount:</label>
+		<input 
+			type="number"
+			id="order"
+			min=.01
+			step=.01
+		>
+
+		<p class="calm-voice warning"></p>
+	</div>
 	<div class="state">
 		<label class="normal-voice" for="stateDropDown">Select a state</label>
 		<select id="stateDropDown">
 			<option value="">- - Select - -</option>
 		</select>
-		
+
+		<p class="calm-voice warning"></p>
 	</div>
 
 	<div class="county">
 		<p class="normal-voice">Select a county</p>
-		<select name="" id="countyDropDown">
-		</select>
+		<select name="" id="countyDropDown"></select>
+
+		<p class="calm-voice warning"></p>
 	</div>
 
 	<button type="submit">TAX ME</button>
@@ -27,16 +40,22 @@
 </div>
 
 <script>
-
 	const $form = document.getElementById("multi-state-tax");
-	const $output = document.querySelector("output");
-	$output.hidden = true;
 	
+	const $order = document.getElementById('order');
+	const $orderWarn = document.querySelector(".order warning");
+
 	const stateDropDown = document.getElementById('stateDropDown');
+	const $stateWarn = document.querySelector(".state warning");
+
 	const countyDropDown = document.getElementById('countyDropDown');
+	const $countyWarn = document.querySelector(".county warning");
+
 	const $county = document.querySelector(".county");
 	$county.style.display = "none";
-	console.log("stateDropDown: ", stateDropDown)
+
+	const $output = document.querySelector("output");
+	$output.hidden = true;
 	
 	fetch("../data/exercises/stateTaxData.json")
 		.then(function(response) {
@@ -109,7 +128,13 @@
 				let stateTax = state.tax;
 				
 				let countyTax = selectedCounty.tax;
-				$output.innerHTML = `${name} state tax: ${stateTax}. County tax: ${countyTax}`;
+				$output.innerHTML = `
+					<p class="normal-voice">Subtotal:</p><span class="special">$${order}</span>
+					<p class="normal-voice">State Tax:</p><span class="special">$${order}</span>
+					<p class="normal-voice">County Tax:</p><span class="special">$${order}</span>
+					<p class="normal-voice">Tax Total:</p><span class="special">$${order}</span>
+					<p class="normal-voice">Grand Total:</p><span class="special">$${order}</span>
+				`;
 			})
 		})
 		.catch(function(error) {

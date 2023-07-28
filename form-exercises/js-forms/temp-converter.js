@@ -95,10 +95,5 @@
 				$output.innerHTML = `<p class="normal-voice">That will be <span class="special">${fahrenheit}</span> degrees Fahrenheit.</p>`;
 			};
 		}
-
-		
-
 	})
-
-
 </script>
