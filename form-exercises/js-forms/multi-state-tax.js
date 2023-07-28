@@ -8,6 +8,7 @@
 		<input 
 			type="number"
 			id="order"
+			value=""
 			min=.01
 			step=.01
 		>
@@ -33,7 +34,7 @@
 	<button type="submit">TAX ME</button>
 </form>
 
-<output>test</output>
+<output></output>
 
 <div class='return'>
 	<?php include('components/back-to-exercises.php'); ?>
@@ -56,7 +57,7 @@
 
 	const $output = document.querySelector("output");
 	$output.hidden = true;
-	
+
 	fetch("../data/exercises/stateTaxData.json")
 		.then(function(response) {
 			return response.json();
@@ -122,18 +123,32 @@
 					return county.id === selectedCountyId;
 				});
 
-				console.log(selectedCounty);
-				// console.log(selectedCounty.tax);
-				let name = state.name;
+				let abbr = state.id.toUpperCase();
+				let county = selectedCounty.name;
+
+				let order = parseFloat($order.value);
+				let orderFormatted = order.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+				
 				let stateTax = state.tax;
+				let stateTaxAmount = order * stateTax;
+				let stateTaxFormatted = stateTaxAmount.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
 				
 				let countyTax = selectedCounty.tax;
+				let coTaxAmount = order * countyTax;
+				let countyTaxFormatted = coTaxAmount.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+
+				let taxTotal = stateTaxAmount + coTaxAmount;
+				let taxTotalFormatted = taxTotal.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+				let grandTotal = order + taxTotal;
+				let grandTotalFormatted = grandTotal.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
 				$output.innerHTML = `
-					<p class="normal-voice">Subtotal:</p><span class="special">$${order}</span>
-					<p class="normal-voice">State Tax:</p><span class="special">$${order}</span>
-					<p class="normal-voice">County Tax:</p><span class="special">$${order}</span>
-					<p class="normal-voice">Tax Total:</p><span class="special">$${order}</span>
-					<p class="normal-voice">Grand Total:</p><span class="special">$${order}</span>
+					<div class="receipt">
+					<p class="normal-voice">Subtotal:</p><span class="special">${orderFormatted}</span>
+					<p class="normal-voice">${abbr} Tax:</p><span class="special">${stateTaxFormatted}</span>
+					<p class="normal-voice">${county} County Tax:</p><span class="special">${countyTaxFormatted}</span>
+					<p class="normal-voice">Tax Total:</p><span class="special">${taxTotalFormatted}</span>
+					<p class="normal-voice">Grand Total:</p><span class="special">${grandTotalFormatted}</span>
+					</div>
 				`;
 			})
 		})

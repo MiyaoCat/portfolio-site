@@ -2,7 +2,7 @@
 		{
 			"id": "ca",
 			"name": "California",
-			"tax": 0.5,
+			"tax": 0.0725,
 			"counties": [
 				{
 					"id": "ca-1",
