@@ -3,7 +3,7 @@
 			"id": "ca",
 			"name": "California",
 			"tax": 0.5,
-			"selected": false,
+			
 			"counties": [
 				{
 					"id": "ca-1",
@@ -29,7 +29,7 @@
 			"id": "or",
 			"name": "Oregon",
 			"tax": 0,
-			"selected": false,
+			
 			"counties": [
 				{
 					"id": "or-1",
@@ -55,7 +55,7 @@
 			"id": "wa",
 			"name": "Washington",
 			"tax": 0.065,
-			"selected": false,
+			
 			"counties": [
 				{
 					"id": "wa-1",
