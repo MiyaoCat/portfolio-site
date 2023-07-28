@@ -139,20 +139,6 @@ password-enter {
 }
 
 /* - - RADIO BUTTON - - - - - - - - - - - - - - - */
-.radio-buttons {
-	display: flex;
-	flex-direction: row;
-	gap: 50px;
-	margin-top: 5px;
-}
-
-input[type="radio"]:checked {
-	content: "";
-	background-color: var(--standout);
-	animation-name: grow-shrink;
-	animation-duration: .5s;
-	border: var(--border-med) solid var(--trim);
-}
 
 .exercise form input[type="radio"], 
 .v-exercise .exercise form input[type="radio"],
@@ -222,16 +208,23 @@ output p, output .special {
 	align-self: center;
 }
 
-.receipt > :nth-child(2),
-.receipt > :nth-child(4),
-.receipt > :nth-child(6) {
+.receipt > :nth-child(even) {
 		text-align: right;
 }
 
-.receipt > :nth-child(5), .receipt > :nth-child(6) {
+.receipt > :nth-last-child(-n+2) {
 	border-top: 1px solid var(--ink);
 }
 
+/*test*/
+.receipt2 > * {
+	display: flex;
+	justify-content: space-between;
+}
+
+.receipt2 .grandtotal {
+	border-top: 1px solid var(--ink);
+}
 @media (min-width: 700px) {
 	
 	#languages button {
@@ -246,9 +239,9 @@ output p, output .special {
 	.js-exercise output,
 	.v-exercise output {
 		grid-row: 3;
-		grid-column: 10 / 13;
+		grid-column: 10 / 14;
 		padding: 5px;
-		margin: auto 20px auto 10px;
+		margin: auto 0px auto 10px;
 	}
 
 	form output {

@@ -5,6 +5,7 @@
 
 	<div class="order">
 		<label for="order">Order Amount:</label>
+
 		<input 
 			type="number"
 			id="order"
@@ -15,8 +16,10 @@
 
 		<p class="calm-voice warning"></p>
 	</div>
+
 	<div class="state">
 		<label class="normal-voice" for="stateDropDown">Select a state</label>
+
 		<select id="stateDropDown">
 			<option value="">- - Select - -</option>
 		</select>
@@ -26,6 +29,7 @@
 
 	<div class="county">
 		<p class="normal-voice">Select a county</p>
+
 		<select name="" id="countyDropDown"></select>
 
 		<p class="calm-voice warning"></p>
@@ -44,13 +48,13 @@
 	const $form = document.getElementById("multi-state-tax");
 	
 	const $order = document.getElementById('order');
-	const $orderWarn = document.querySelector(".order warning");
+	const $orderWarn = document.querySelector(".order .warning");
 
 	const stateDropDown = document.getElementById('stateDropDown');
-	const $stateWarn = document.querySelector(".state warning");
+	const $stateWarn = document.querySelector(".state .warning");
 
 	const countyDropDown = document.getElementById('countyDropDown');
-	const $countyWarn = document.querySelector(".county warning");
+	const $countyWarn = document.querySelector(".county .warning");
 
 	const $county = document.querySelector(".county");
 	$county.style.display = "none";
@@ -64,7 +68,7 @@
 		})
 		.then(function(taxData) {			
 			console.log(taxData);
-
+			console.log("order warn: ", $orderWarn)
 			function populateStates(states) {
 				states.forEach(state => {
 					const option = document.createElement("option");
@@ -109,7 +113,6 @@
 
 			$form.addEventListener("submit", event => {
 				event.preventDefault();
-				$output.hidden = false;
 
 				const selectedState = stateDropDown.value;
 				const state = taxData.find(state => {
@@ -142,21 +145,56 @@
 				let grandTotal = order + taxTotal;
 				let grandTotalFormatted = grandTotal.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
 				$output.innerHTML = `
-					<div class="receipt">
-					<p class="normal-voice">Subtotal:</p><span class="special">${orderFormatted}</span>
-					<p class="normal-voice">${abbr} Tax:</p><span class="special">${stateTaxFormatted}</span>
-					<p class="normal-voice">${county} County Tax:</p><span class="special">${countyTaxFormatted}</span>
-					<p class="normal-voice">Tax Total:</p><span class="special">${taxTotalFormatted}</span>
-					<p class="normal-voice">Grand Total:</p><span class="special">${grandTotalFormatted}</span>
+					<div class="receipt2">
+					<div class="subtotal">
+						<p class="normal-voice">Subtotal:</p><span class="special">${orderFormatted}</span>
+					</div>
+					<div class="state-output">
+						<p class="normal-voice">${abbr} Tax:</p><span class="special">${stateTaxFormatted}</span>
+					</div>
+					<div class="county-output">
+						<p class="normal-voice">${county} County Tax:</p><span class="special">${countyTaxFormatted}</span>
+					</div>
+					<div class="taxtotal">
+						<p class="normal-voice">Tax Total:</p><span class="special">${taxTotalFormatted}</span>
+					</div>
+					<div class="grandtotal">
+						<p class="normal-voice">Grand Total:</p><span class="special">${grandTotalFormatted}</span>
+					</div>
 					</div>
 				`;
+
+				
 			})
 		})
 		.catch(function(error) {
 			console.error('Error fetching JSON data:', error);
 		});
 
+		//ERROR MESSAGING
+		$form.addEventListener("submit", event => { 
+			$output.hidden = false;
+			if ($order.value == "") {
+				$output.hidden = true;
+				$orderWarn.innerHTML = "Order something!"
+			} else {
+				$orderWarn.innerHTML = "";
+			}
 
+			if (stateDropDown.value == "") {
+				$output.hidden = true;
+				$stateWarn.innerHTML = "Pick a state, any state"
+			} else {
+				$stateWarn.innerHTML = "";
+			}	
+
+			if (stateDropDown.value && countyDropDown.value == "") {
+				$output.hidden = true;
+				$countyWarn.innerHTML = "Must select a county"
+			} else {
+				$countyWarn.innerHTML = "";
+			}
+		})
 </script>
 
 
