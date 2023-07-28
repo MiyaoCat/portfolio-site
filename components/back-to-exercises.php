@@ -3,13 +3,13 @@
 
 	if($page == "exercise") {
 ?>
-	<a href='?page=exercises' class='alert-voice'>Back</a>
+	<a href='?page=exercises'>Back</a>
 <?php } 
 	if($page == "js-exercise") {
 ?>
-	<a href='?page=js-exercises' class='alert-voice'>Back</a>
+	<a href='?page=js-exercises'>Back</a>
 <?php } 
 	if($page == "v-exercise") {
 ?>
-	<a href='?page=v-exercises' class='alert-voice'>Back</a>
+	<a href='?page=v-exercises'>Back</a>
 <?php } ?>

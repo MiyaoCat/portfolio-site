@@ -13,7 +13,6 @@
 	flex-direction: column;
 }
 
-
 form > div + div {
 	margin-top: 15px;
 }
@@ -220,6 +219,7 @@ output p, output .special {
 .receipt2 > * {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .receipt2 .grandtotal {

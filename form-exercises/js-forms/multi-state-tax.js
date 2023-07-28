@@ -131,12 +131,14 @@
 
 				let order = parseFloat($order.value);
 				let orderFormatted = order.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
-				
+
 				let stateTax = state.tax;
+				let stateTaxDisplay = (stateTax*100).toFixed(2);
 				let stateTaxAmount = order * stateTax;
 				let stateTaxFormatted = stateTaxAmount.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
 				
 				let countyTax = selectedCounty.tax;
+				let countyTaxDisplay = (selectedCounty.tax*100).toFixed(2);
 				let coTaxAmount = order * countyTax;
 				let countyTaxFormatted = coTaxAmount.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
 
@@ -150,10 +152,10 @@
 						<p class="normal-voice">Subtotal:</p><span class="special">${orderFormatted}</span>
 					</div>
 					<div class="state-output">
-						<p class="normal-voice">${abbr} Tax:</p><span class="special">${stateTaxFormatted}</span>
+						<p class="normal-voice">State Tax (${stateTaxDisplay}%):</p><span class="special">${stateTaxFormatted}</span>
 					</div>
 					<div class="county-output">
-						<p class="normal-voice">${county} County Tax:</p><span class="special">${countyTaxFormatted}</span>
+						<p class="normal-voice">County Tax (${countyTaxDisplay}%):</p><span class="special">${countyTaxFormatted}</span>
 					</div>
 					<div class="taxtotal">
 						<p class="normal-voice">Tax Total:</p><span class="special">${taxTotalFormatted}</span>
