@@ -190,7 +190,7 @@
 
 			if (stateDropDown.value && countyDropDown.value == "") {
 				$output.hidden = true;
-				$countyWarn.innerHTML = "Must select a county"
+				$countyWarn.innerHTML = "There's no countyless part of the state"
 			} else {
 				$countyWarn.innerHTML = "";
 			}
