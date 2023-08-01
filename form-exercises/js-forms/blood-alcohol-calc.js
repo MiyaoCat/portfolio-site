@@ -1,4 +1,4 @@
-<form id="blood-alcohol" type="POST">
+<form id="blood-alcohol" method="POST">
 	<div class="instructions">
 		<p class="normal-voice">Fill in the prompts to see if you're sober enough to drive or if you need to call an uber. The legal BAC limit is 0.08.</p>
 	</div>

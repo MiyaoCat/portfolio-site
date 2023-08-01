@@ -1,4 +1,4 @@
-<form id="compound" type="POST">
+<form id="compound" method="POST">
 	<div class="instructions">
 		<p class="normal-voice">Let's see how much your money can grow when it <span class="special">COMPOUNDS</span>!</p>
 	</div>

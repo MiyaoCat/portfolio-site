@@ -1,4 +1,4 @@
-<form id="temp-converter" method ="POST">
+<form id="temp-converter" method="POST">
 	<div class="instructions">
 		<p class="normal-voice">First select whether you want to convert to Fahrenheit or Celsius. Then enter the degrees you want to convert.</p>
 	</div>	

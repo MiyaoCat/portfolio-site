@@ -1,4 +1,4 @@
-<form id="multi-state-tax" type="submit">
+<form id="multi-state-tax" method="POST">
 	<div class="instructions">
 		<p class="normal-voice">Enter your order amount. Then select the state and county you live in.</p>
 	</div>

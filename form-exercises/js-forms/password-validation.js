@@ -1,4 +1,4 @@
-<form method="POST" class="password">
+<form class="password" method="POST">
 	<div class="instructions">First you're going to create a password.</div>
 
 	<div class="password-create">

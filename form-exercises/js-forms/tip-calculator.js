@@ -1,4 +1,4 @@
-<form method="POST" id="tip-calc">
+<form id="tip-calc" method="POST">
 	<div class="instructions">
 		<p class="normal-voice">Let us know the amount of your order and the tip percentage you'd like to leave. We'll provide the grand total.</p>
 	</div>

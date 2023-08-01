@@ -1,4 +1,4 @@
-<form id="bmi-calc" type="POST">
+<form id="bmi-calc" method="POST">
 	<div class="instructions">
 		<p class="normal-voice">Enter your height and weight and this outdated formula will either make you feel good about yourself or tell you you're unhealthy. The formula states a healthy BMI is between <span class="special">18.5</span> and <span class="special">25</span>.</p>
 	</div>

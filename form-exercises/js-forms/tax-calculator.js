@@ -1,4 +1,4 @@
-<form id="tax" type="POST">
+<form id="tax" method="POST">
 	<div class="instructions">
 		<p class="normal-voice">Enter your order amount and we'll tell you how much you'll have to pay to the business and to Uncle Sam.</p>
 		<p class="normal-voice">Uncle Sam's take: 5.5% of order total</p>

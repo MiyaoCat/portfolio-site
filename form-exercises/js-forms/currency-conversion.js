@@ -1,4 +1,4 @@
-<form id="currency" type="submit">
+<form id="currency" method="POST">
 	<div class="instructions">
 		<p class="normal-voice"><a href="https://www.youtube.com/watch?v=DmWWqogr_r8" target="_new">How much money you got (a lot)</a>? We'll be converting your Euros to US dollars.</p>
 		<ol>
