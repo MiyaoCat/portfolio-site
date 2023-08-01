@@ -129,6 +129,11 @@
 				"title1": "Multistate",
 				"title2": "Sales Tax",
 				"slug": "multi-state-tax"
+			},
+			{
+				"title1": "Numbers",
+				"title2": "to Names",
+				"slug": "numbers-to-names"
 			}
 		]
 	}
