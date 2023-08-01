@@ -27,5 +27,10 @@
 	const $output = document.querySelector("output");
 	$form.addEventListener("submit", event => {
 		event.preventDefault();
+
+		//set value of numbers to names
+		//get input values
+		//create switch statement for each number value
+		
 	})
 </script>
