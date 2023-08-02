@@ -83,7 +83,7 @@
 		width = parseFloat($width.value);
 		length = parseFloat($length.value);
 		
-		area = (width * length).toFixed(3);
+		area = (width * length).toFixed(2);
 		areaFormatted = area.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 		if ($length.value === "") {
@@ -103,7 +103,7 @@
 		if ($length.value !== "" && $width.value !== "") {
 			$output.hidden = false;
 			if (measureType === "feet") {
-				let convert = (area / 10.764).toFixed(3);
+				let convert = (area / 10.764).toFixed(2);
 				let convertFormatted = convert.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 				$output.innerHTML = `
 					<p class="normal-voice"> Area in feet: <span class="special">${areaFormatted}</span></p> 
@@ -112,7 +112,7 @@
 			}
 
 			if (measureType === "meters") {
-				let convert = (area * 10.764).toFixed(3);
+				let convert = (area * 10.764).toFixed(2);
 				let convertFormatted = convert.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 				$output.innerHTML = `
 					<p class="normal-voice"> Area in feet: <span class="special">${convertFormatted}</span></p> 
