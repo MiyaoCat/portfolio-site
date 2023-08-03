@@ -134,6 +134,11 @@
 				"title1": "Numbers",
 				"title2": "to Names",
 				"slug": "numbers-to-names"
+			},
+			{
+				"title1": "Comparing",
+				"title2": "Numbers",
+				"slug": "comparing-numbers"
 			}
 		]
 	}

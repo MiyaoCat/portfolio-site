@@ -111,6 +111,19 @@
 				}			
 			})
 
+			const textContainer = document.getElementsByClassName("special");
+			
+			function adjustFontSize() {
+				const maxCharCount = 12;
+				const text = textContainer.innerText;
+				const charCount = text.length;
+				if (charCount > maxCharCount) {
+					textContainer.style.fontSize = "10px";
+				}
+			}
+
+			
+
 			$form.addEventListener("submit", event => {
 				event.preventDefault();
 
@@ -148,25 +161,26 @@
 				let grandTotalFormatted = grandTotal.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
 				$output.innerHTML = `
 					<div class="receipt2">
-					<div class="subtotal">
-						<p class="normal-voice">Subtotal:</p><span class="special">${orderFormatted}</span>
-					</div>
-					<div class="state-output">
-						<p class="normal-voice">State Tax (${stateTaxDisplay}%):</p><span class="special">${stateTaxFormatted}</span>
-					</div>
-					<div class="county-output">
-						<p class="normal-voice">County Tax (${countyTaxDisplay}%):</p><span class="special">${countyTaxFormatted}</span>
-					</div>
-					<div class="taxtotal">
-						<p class="normal-voice">Tax Total:</p><span class="special">${taxTotalFormatted}</span>
-					</div>
-					<div class="grandtotal">
-						<p class="normal-voice">Grand Total:</p><span class="special">${grandTotalFormatted}</span>
-					</div>
+						<div class="subtotal">
+							<p class="normal-voice">Subtotal:</p><span class="special">${orderFormatted}</span>
+						</div>
+						<div class="state-output">
+							<p class="normal-voice">State Tax (${stateTaxDisplay}%):</p><span class="special">${stateTaxFormatted}</span>
+						</div>
+						<div class="county-output">
+							<p class="normal-voice">County Tax (${countyTaxDisplay}%):</p><span class="special">${countyTaxFormatted}</span>
+						</div>
+						<div class="taxtotal">
+							<p class="normal-voice">Tax Total:</p><span class="special">${taxTotalFormatted}</span>
+						</div>
+						<div class="grandtotal">
+							<p class="normal-voice">Grand Total:</p><span class="special">${grandTotalFormatted}</span>
+						</div>
 					</div>
 				`;
 
-				
+				adjustFontSize();
+				console.log(textContainer)
 			})
 		})
 		.catch(function(error) {
