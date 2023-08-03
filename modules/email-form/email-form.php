@@ -10,12 +10,8 @@
 
 	if ( $submitted && $_POST["inputMessage"] != "" ) {
 
-		
-
 		$to = "dftwjohn@gmail.com";
-
 		$body = "";
-
 		$body = "Email: " . $email . "\r\n" . 
 			"Name: " . $name . "\r\n" . 
 			"Message: " . $message . "\r\n";
@@ -65,7 +61,6 @@
 			echo "Surely you have something to tell me.";
 		}
 	}
-
 ?>
 
 

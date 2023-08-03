@@ -43,7 +43,7 @@
 	const $number3Warn = document.querySelector(".number3 .warning");
 
 	const $output = document.querySelector("output");
-	// $output.hidden = true;
+	$output.hidden = true;
 
 	$form.addEventListener("submit", event => {
 		event.preventDefault();
@@ -51,35 +51,56 @@
 		let number2 = $number2.value;
 		let number3 = $number3.value;
 
-		//get number1 value
-		//compare number 1 to number 2
-		//if number1 is equal to number2 then ask for a different number2
-		// if (number1 === number2 || number1 === number3 || number2 === number3) {
-		// 	$number1Warn.innerHTML = "Not unique";
-		// 	$number2Warn.innerHTML = "Not unique";
-		// 	$number3Warn.innerHTML = "Not unique";
-		// } 
+		let numbers = [number1, number2, number3];
 
+		let count = 0;
+
+		if (number1 !== "") count++;
+		if (number2 !== "") count++;
+		if (number3 !== "") count++;
+
+		if (count >= 2) {
+			$output.hidden = false;
+			$output.innerHTML = `<p class="normal-voice">The greatest number is: <span class="special">${Math.max(...numbers)}</span></p>`;
+		} else {
+			$output.hidden = false;
+			$output.innerHTML = `<p class="normal-voice">Please enter at least two numbers. That's the only way to compare, duh.</p>`;
+		}
 		
+		if (number1 === number2 || number1 == number3 || number2 == number3) {
+			$output.hidden = false;
+			$output.innerHTML = `<p class="normal-voice">Please enter <span class="special">3 UNIQUE</span> numbers.</p>`;
+		}
 	})
 
 	let $input = document.querySelectorAll("input");
 
 	$input.forEach(inputElement => {
-  inputElement.addEventListener("change", function(event) {
+	inputElement.addEventListener("change", function(event) {
     // Get the updated values from the input elements
-    let number1 = parseFloat($number1.value);
-    let number2 = parseFloat($number2.value);
-    let number3 = parseFloat($number3.value);
+		let number1 = parseFloat($number1.value);
+		let number2 = parseFloat($number2.value);
+		let number3 = parseFloat($number3.value);
 
+
+		
     // Compare the numbers to find the largest
-    if (number1 > number2 && number1 > number3) {
-      $output.innerHTML = `First number of ${number1} is greatest`;
-    } else if (number2 > number1 && number2 > number3) {
-      $output.innerHTML = `Second number of ${number2} is greatest`;
-    } else {
-      $output.innerHTML = `Third number of ${number3} is greatest`;
-    }
+		// if (number1 > number2 && number1 > number3) {
+      // 	$output.innerHTML = `First number of ${number1} is greatest`;
+		// } else if (number2 > number1 && number2 > number3) {
+      // 	$output.innerHTML = `Second number of ${number2} is greatest`;
+		// } else {
+      // 	$output.innerHTML = `Third number of ${number3} is greatest`;
+		// }
+
+  	// let greatest = numbers[0];
+
+	// for (let i = 1; i < numbers.length; i++) {
+	// 	if (numbers[i] > greatest) {
+	// 		greatest = numbers[i];
+	// 	}
+	// }
+
   });
 });
 </script>
