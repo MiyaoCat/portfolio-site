@@ -139,6 +139,11 @@
 				"title1": "Comparing",
 				"title2": "Numbers",
 				"slug": "comparing-numbers"
+			},
+			{
+				"title1": "Car",
+				"title2": "Issues",
+				"slug": "car-issues"
 			}
 		]
 	}
