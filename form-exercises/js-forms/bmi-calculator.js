@@ -175,13 +175,13 @@
 		event.preventDefault();
 		$output.hidden = false;
 
-		let feet = parseFloat($feet.value);
-		let inches = parseFloat($inches.value);
+		let feet = Number($feet.value);
+		let inches = Number($inches.value);
 		let totalInches = (feet * 12) + inches;
-		let pounds = parseFloat($pounds.value);
+		let pounds = Number($pounds.value);
 
-		let centimeters = parseFloat($centimeters.value);
-		let kilos = parseFloat($kilos.value);
+		let centimeters = Number($centimeters.value);
+		let kilos = Number($kilos.value);
 
 		let centsToInches = centimeters * 0.393701;
 		let kilosToPounds = kilos * 2.2;

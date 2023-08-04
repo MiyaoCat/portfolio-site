@@ -80,8 +80,8 @@
 		event.preventDefault();
 		
 		let measureType = document.querySelector("[name='measure-type']:checked").value;
-		width = parseFloat($width.value);
-		length = parseFloat($length.value);
+		width = Number($width.value);
+		length = Number($length.value);
 		
 		area = (width * length).toFixed(2);
 		areaFormatted = area.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");

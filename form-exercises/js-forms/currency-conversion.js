@@ -54,9 +54,9 @@
 
 	$form.addEventListener("submit", function(event) {
 		event.preventDefault();
-		let euros = parseFloat($euros.value);
+		let euros = Number($euros.value);
 		let eurosFormatted = euros.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-		let exchangeRate = parseFloat($exchangeRate.value);
+		let exchangeRate = Number($exchangeRate.value);
 		let exchangeRateFormatted = exchangeRate.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 		usd = (euros * exchangeRate).toFixed(2);
 		usdFormatted = usd.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");

@@ -108,9 +108,9 @@
 		$output.hidden = false;
 		const gender = document.querySelector("[name='gender']:checked");
 
-		let drinks = parseFloat($drinks.value);
-		let weight = parseFloat($weight.value);
-		let time = parseFloat($time.value);
+		let drinks = Number($drinks.value);
+		let weight = Number($weight.value);
+		let time = Number($time.value);
 
 		if (gender == null) {
 			$output.hidden = true;
