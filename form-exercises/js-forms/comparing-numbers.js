@@ -47,43 +47,57 @@
 
 	$form.addEventListener("submit", event => {
 		event.preventDefault();
-		let number1 = $number1.value;
-		let number2 = $number2.value;
-		let number3 = $number3.value;
+		// let number1 = $number1.value;
+		// let number2 = $number2.value;
+		// let number3 = $number3.value;
 
-		let numbers = [number1, number2, number3];
+		// let numbers = [number1, number2, number3];
 
-		let count = 0;
+		// let count = 0;
 
-		if (number1 !== "") count++;
-		if (number2 !== "") count++;
-		if (number3 !== "") count++;
+		// if (number1 !== "") count++;
+		// if (number2 !== "") count++;
+		// if (number3 !== "") count++;
 
-		if (count >= 2) {
-			$output.hidden = false;
-			$output.innerHTML = `<p class="normal-voice">The greatest number is: <span class="special">${Math.max(...numbers)}</span></p>`;
-		} else {
-			$output.hidden = false;
-			$output.innerHTML = `<p class="normal-voice">Please enter at least two numbers. That's the only way to compare, duh.</p>`;
-		}
+		// if (count >= 2) {
+		// 	$output.hidden = false;
+		// 	$output.innerHTML = `<p class="normal-voice">The greatest number is: <span class="special">${Math.max(...numbers)}</span></p>`;
+		// } else {
+		// 	$output.hidden = false;
+		// 	$output.innerHTML = `<p class="normal-voice">Please enter at least <span class="special">2 numbers.</span> That's the only way to compare, duh.</p>`;
+		// }
 		
-		if (number1 === number2 || number1 == number3 || number2 == number3) {
-			$output.hidden = false;
-			$output.innerHTML = `<p class="normal-voice">Please enter <span class="special">3 UNIQUE</span> numbers.</p>`;
+		// if (number1 !== "" || number2 !== "" ||number3 !== "") {
+		// 	if (number1 === number2 || number1 == number3 || number2 == number3) {
+		// 		$output.hidden = false;
+		// 		$output.innerHTML = `<p class="normal-voice">Instructions said to enter <span class="special">3 UNIQUE</span> numbers.</p>`;
+		// 	}
+		// }
+
+		//map method converts array into numbers;
+		const numbers = [$number1.value, $number2.value, $number3.value].map(Number);
+		//Set method keeps only unique values
+		const uniqueNumbers = new Set(numbers);
+		//Since we have only unique values, we can get the size of the array
+		const count = uniqueNumbers.size;
+
+		if (count < 2) {
+			$output.innerHTML = `<p class="normal-voice">Please enter at least <span class="special">2 numbers.</span> That's the only way to compare, duh.</p>`;
+		} else if (count < 3) {
+			$output.innerHTML = `<p class="normal-voice">Instructions said to enter <span class="special">3 UNIQUE</span> numbers.</p>`;
+		} else {
+			const greatestNumber = Math.max(...numbers);
+			$output.innerHTML = `<p class="normal-voice">The greatest number is: <span class="special">${greatestNumber}</span></p>`;
 		}
+
+		$output.hidden = false;
 	})
 
 	let $input = document.querySelectorAll("input");
 
 	$input.forEach(inputElement => {
 	inputElement.addEventListener("change", function(event) {
-    // Get the updated values from the input elements
-		let number1 = parseFloat($number1.value);
-		let number2 = parseFloat($number2.value);
-		let number3 = parseFloat($number3.value);
 
-
-		
     // Compare the numbers to find the largest
 		// if (number1 > number2 && number1 > number3) {
       // 	$output.innerHTML = `First number of ${number1} is greatest`;
@@ -92,14 +106,6 @@
 		// } else {
       // 	$output.innerHTML = `Third number of ${number3} is greatest`;
 		// }
-
-  	// let greatest = numbers[0];
-
-	// for (let i = 1; i < numbers.length; i++) {
-	// 	if (numbers[i] > greatest) {
-	// 		greatest = numbers[i];
-	// 	}
-	// }
 
   });
 });
