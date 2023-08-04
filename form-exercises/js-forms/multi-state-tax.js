@@ -111,19 +111,17 @@
 				}			
 			})
 
-			const textContainer = document.getElementsByClassName("special");
-			
-			function adjustFontSize() {
-				const maxCharCount = 12;
-				const text = textContainer.innerText;
-				const charCount = text.length;
-				if (charCount > maxCharCount) {
-					textContainer.style.fontSize = "10px";
-				}
-			}
+			// const textContainer = document.querySelectorAll("special");
 
-			
+			// function adjustFontSize() {
+			// 	textContainer.forEach(element => {
+			// 		const characterCount = element.innerHTML.length;
+			// 		console.log(characterCount);
+			// 	})
+				
+			// }
 
+			adjustFontSize();
 			$form.addEventListener("submit", event => {
 				event.preventDefault();
 
