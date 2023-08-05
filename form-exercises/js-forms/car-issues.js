@@ -13,7 +13,7 @@
 					id="yes"
 					name="key"
 					value="yes"
-				
+
 				>
 			</div>
 			
@@ -24,7 +24,7 @@
 					id="no"
 					name="key"
 					value="no"
-					
+
 				>
 			</div>
 		</div>
@@ -32,37 +32,10 @@
 		<p class="calm-voice warning"></p>
 	</div>
 
-	<div class="battery question">
-		<p class="normal-voice">2. Are the battery terminals corroded?</p>
-		<div class="radio-buttons">
-			<div class="yes">
-				<label for="yes">Yes</label>
-				<input 
-					type="radio"
-					id="yes"
-					name="battery"
-					value="yes"
-					onclick="isChecked('yes')"
-				>
-			</div>
-			
-			<div class="no">
-				<label for="no">No</label>
-				<input 
-					type="radio"
-					id="no"
-					name="battery"
-					value="no"
-					onclick="isChecked('no')"
-				>
-			</div>
-		</div>
 
-		<p class="calm-voice warning"></p>
-	</div>
 
-	<div class="clicking question"></div>
-	<button type="submit">Diagnose my Car!</button>
+
+	<button class="answer" type="submit">Diagnose my Car!</button>
 </form>
 
 <output></output>
@@ -73,76 +46,113 @@
 
 <script>
 	const $form = document.getElementById("car-issues");
-	const $radioButton = document.querySelector("input[type='radio']");
+	const $radioButton = document.querySelectorAll("input[type='radio']");
 
-	const $button = document.querySelector("[type='submit']");
+	const $button = document.querySelector(".answer");
 	$button.hidden = true;
 
 	const $output = document.querySelector("output");
 	$output.hidden = true;
 	
 	const $key = document.querySelector(".key");
-	const $battery = document.querySelector(".battery");
-	$battery.style.display = "none";
 
-	function isChecked(boolean) {
-  		return boolean;
-	}
 
-	//DELETE below
-	// let questions = $form.querySelectorAll(".question");
- 	// console.log(questions.length);
- 	// let secondQ = questions[1];
- 	// console.log("1", questions[0])
- 	// console.log(secondQ);
- 	// console.log("3", questions[2])
-	let questions = $form.querySelectorAll(".question");
-	let questionsCount = questions.length;
-	console.log("questions count: ", questionsCount);
-	
-	function previousQuestion() {
-		let questions = $form.querySelectorAll(".question");
-		let questionsCount = questions.length;
-		console.log(questionsCount);
+	// function isChecked(value) {
+  	// 	console.log(value);
+	// };
 
-		let backButton = document.createElement("button");
-
-		backButton.textContent = "Previous Question";
-
-		backButton.addEventListener("submit", event => {
-			event.preventDefault();
-		})
-		currentDiv.appendChild(backButton);
-	}
-
-	function buttonAndMessage(message) {
-		$button.hidden = false;
-		$form.addEventListener("submit", event => {
-			event.preventDefault();
-			$output.hidden = false;
-			$output.innerHTML = message;	
-		})
-	}
-
-	document.querySelectorAll("input[type='radio']").forEach( function(radioButton) {
-		radioButton.addEventListener("change", event => {
+	$radioButton.forEach((radioButton) => {
+		const lastDiv = $form.lastElementChild;
+		const newDiv = document.createElement("div");
+		radioButton.addEventListener("click", () => {
 			const key = document.querySelector("[name='key']:checked");
-			const battery = document.querySelector("[name='battery']:checked");
-
+			console.log(key.value)
 			if (key.value == "yes") {
 				$key.style.display = "none";
-				$battery.style.display = "flex";
+				newDiv.classList.add("battery");
+				newDiv.innerHTML = `
+					<p class="normal-voice">2. Are the battery terminals corroded?</p>
+					<div class="radio-buttons">
+						<div class="yes">
+							<label for="yes">Yes</label>
+							<input 
+								type="radio"
+								id="yes"
+								name="key"
+								value="yes"
+							>
+						</div>
+						
+						<div class="no">
+							<label for="no">No</label>
+							<input 
+								type="radio"
+								id="no"
+								name="key"
+								value="no"
+							>
+						</div>
+					</div>
 
-				if (battery.value == "yes") {
-					buttonAndMessage("Clean terminals and try starting again.");
-					
-				} else {
-					buttonAndMessage("Replace cables and try again.")					
-				}
-			}
+					<p class="calm-voice warning"></p>
+				`
+				$form.insertBefore(newDiv, lastDiv.nextSibling);
+				let $battery = document.querySelector(".battery");
+				let $batteryRadioButtons = $battery.querySelectorAll("input[type='radio']");
+				$batteryRadioButtons.forEach((batteryRadioButton) => {
+					batteryRadioButton.addEventListener("click", () => {
+						if (battery.value == "yes") {
+							$button.hidden = false;
+							$output.hidden = false;
+							$output.innerHTML = "Clean terminals and try starting again"
+						}
+					})
+				})		
+			} else {
+				const newDiv = document.createElement("div");
+				$key.style.display = "none";
+				newDiv.classList.add("clicking");
+				newDiv.innerHTML = `
+					<p class="normal-voice">2. Does the car make a clicking noise?</p>
+					<div class="radio-buttons">
+						<div class="yes">
+							<label for="yes">Yes</label>
+							<input 
+								type="radio"
+								id="yes"
+								name="key"
+								value="yes"
+								onclick="isChecked('yes')"
+							>
+						</div>
+						
+						<div class="no">
+							<label for="no">No</label>
+							<input 
+								type="radio"
+								id="no"
+								name="key"
+								value="no"
+								onclick="isChecked('no')"
+							>
+						</div>
+					</div>
+
+					<p class="calm-voice warning"></p>
+				`
+			$form.insertBefore(newDiv, lastDiv.nextSibling);
+		}
+
+
 		})
 	})
+	
 
+
+		// const battery = document.querySelector("[name='battery']:checked");
+		// const clicking = document.querySelector("[name='clicking']:checked");
+
+	
 
 
 </script>
@@ -153,9 +163,9 @@
 
 
 
+<script>
 
-
-
+</script>
 
 
 
