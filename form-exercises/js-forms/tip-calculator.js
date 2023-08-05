@@ -87,7 +87,7 @@ $form.addEventListener('submit', function(event) {
 
 	let tipOptions = document.querySelector("input[name='tip']:checked");
 	var tip;
-
+	// console.log(tipOptions.value)
 	if (tipOptions !== null ) {
 		tip = tipOptions.value;
 		$tipWarn.innerHTML = "";
