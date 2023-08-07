@@ -3,8 +3,8 @@
 		<p class="normal-voice">This form will walk you through a series of questions to troubleshoot your car issues. Answer each question as they come up.</p>
 	</div>
 
-	<div class="key question">
-		<p class="normal-voice">1. Is the car silent when you turn the key?</p>
+	<div class="key">
+		<p class="normal-voice">1 Key. Is the car silent when you turn the key?</p>
 		<div class="radio-buttons">
 			<div class="yes">
 				<label for="yes">Yes</label>
@@ -30,8 +30,8 @@
 		<p class="calm-voice warning"></p>
 	</div>
 
-	<div class="battery question">
-		<p class="normal-voice">2. Are the battery terminals corroded?</p>
+	<div class="battery">
+		<p class="normal-voice">2 Battery. Are the battery terminals corroded?</p>
 		<div class="radio-buttons">
 			<div class="yes">
 				<label for="yes">Yes</label>
@@ -57,8 +57,8 @@
 		<p class="calm-voice warning"></p>
 	</div>
 
-	<div class="clicking question">
-		<p class="normal-voice">3. Does the car make a clicking noise?</p>
+	<div class="clicking">
+		<p class="normal-voice">2 Clicking. Does the car make a clicking noise?</p>
 		<div class="radio-buttons">
 			<div class="yes">
 				<label for="yes">Yes</label>
@@ -84,8 +84,8 @@
 		<p class="calm-voice warning"></p>
 	</div>
 
-	<div class="crank question">
-		<p class="normal-voice">3. Does the car crank up but fail to start?</p>
+	<div class="crank">
+		<p class="normal-voice">3 Crank. Does the car crank up but fail to start?</p>
 		<div class="radio-buttons">
 			<div class="yes">
 				<label for="yes">Yes</label>
@@ -103,6 +103,60 @@
 					type="radio"
 					id="no"
 					name="crank"
+					value="no"
+				>
+			</div>
+		</div>
+
+		<p class="calm-voice warning"></p>
+	</div>
+
+	<div class="engine">
+		<p class="normal-voice">4 Engine. Does the engine start and then die?</p>
+		<div class="radio-buttons">
+			<div class="yes">
+				<label for="yes">Yes</label>
+				<input 
+					type="radio"
+					id="yes"
+					name="engine"
+					value="yes"
+				>
+			</div>
+			
+			<div class="no">
+				<label for="no">No</label>
+				<input 
+					type="radio"
+					id="no"
+					name="engine"
+					value="no"
+				>
+			</div>
+		</div>
+
+		<p class="calm-voice warning"></p>
+	</div>
+
+	<div class="injection">
+		<p class="normal-voice">5 Fuel Injection. Does your car have fuel injection?</p>
+		<div class="radio-buttons">
+			<div class="yes">
+				<label for="yes">Yes</label>
+				<input 
+					type="radio"
+					id="yes"
+					name="injection"
+					value="yes"
+				>
+			</div>
+			
+			<div class="no">
+				<label for="no">No</label>
+				<input 
+					type="radio"
+					id="no"
+					name="injection"
 					value="no"
 				>
 			</div>
@@ -151,6 +205,12 @@
 	const crank = document.querySelector(".crank");
 	crank.style.display = "none";
 
+	const engine = document.querySelector(".engine");
+	engine.style.display = "none";
+
+	const injection = document.querySelector(".injection");
+	injection.style.display = "none";
+
 	$form.addEventListener("click", event => {
 		let keyChecked = document.querySelector("input[name='key']:checked");
 		let keyValue = keyChecked.value;
@@ -166,7 +226,12 @@
 
 				if (batteryValue === "yes") {
 					$output.hidden = false;
-					$output.innerHTML = "Replace batts";						
+					$output.innerHTML = "Clean terminals and try starting again";						
+				}
+
+				if (batteryValue == "no") {
+					$output.hidden = false;
+					$output.innerHTML = "Replace cables and try again.";	
 				}
 			}	
 		} 
@@ -174,6 +239,70 @@
 			hideDiv(keyValue, key, "no");
 			
 			displayDiv(clicking);
+
+			if (clicking) {
+				let clickingChecked = document.querySelector("input[name='clicking']:checked");
+				let clickingValue = clickingChecked.value;
+
+				if (clickingValue === "yes") {
+					$output.hidden = false;
+					$output.innerHTML = "Replace the battery.";	
+				}
+
+				if (clickingValue === "no") {
+					hideDiv(clickingValue, clicking, "no");
+
+					displayDiv(crank);
+
+					if (crank) {
+						let crankChecked = document.querySelector("input[name='crank']:checked");
+						let crankValue = crankChecked.value;
+
+						if (crankValue === "yes") {
+							$output.hidden = false;
+							$output.innerHTML = "Check spark plug connections.";	
+						} 
+
+						if (crankValue === "no") {
+							hideDiv(crankValue, crank, "no");
+
+							displayDiv(engine);
+
+							if (engine) {
+								let engineChecked = document.querySelector("input[name='engine']:checked");
+								let engineValue = engineChecked.value;
+
+								if (engineValue === "yes") {
+									hideDiv(engineValue, engine, "yes");
+
+									displayDiv(injection);
+
+									if (injection) {
+										let injectionChecked = document.querySelector("input[name='injection']:checked");
+										let injectionValue = injectionChecked.value;
+
+										if (injectionValue === "yes") {
+											$output.hidden = false;
+											$output.innerHTML = "Get it in for service.";	
+										} else {
+											$output.hidden = false;
+											$output.innerHTML = "Check to ensure the choke is opening and closing.";
+										}
+									}
+								}
+
+								if (engineValue === "no") {
+									$output.hidden = false;
+									$output.innerHTML = "I don't know what you should do. The exercise didn't provide an answer. Call a mechanic?";	
+								}
+
+							}
+						}
+
+
+					}
+				}
+			}
 		}
 		
 	})
