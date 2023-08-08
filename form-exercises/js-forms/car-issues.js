@@ -3,7 +3,7 @@
 		<p class="normal-voice">This form will walk you through a series of questions to troubleshoot your car issues. Answer each question as they come up.</p>
 	</div>
 
-	<div class="key">
+	<div class="key question">
 		<p class="normal-voice">1 Key. Is the car silent when you turn the key?</p>
 		<div class="radio-buttons">
 			<div class="yes">
@@ -28,7 +28,7 @@
 		</div>
 	</div>
 
-	<div class="battery">
+	<div class="battery question">
 		<p class="normal-voice">2 Battery. Are the battery terminals corroded?</p>
 		<div class="radio-buttons">
 			<div class="yes">
@@ -53,7 +53,7 @@
 		</div>
 	</div>
 
-	<div class="clicking">
+	<div class="clicking question">
 		<p class="normal-voice">2 Clicking. Does the car make a clicking noise?</p>
 		<div class="radio-buttons">
 			<div class="yes">
@@ -78,7 +78,7 @@
 		</div>
 	</div>
 
-	<div class="crank">
+	<div class="crank question">
 		<p class="normal-voice">3 Crank. Does the car crank up but fail to start?</p>
 		<div class="radio-buttons">
 			<div class="yes">
@@ -103,7 +103,7 @@
 		</div>
 	</div>
 
-	<div class="engine">
+	<div class="engine question">
 		<p class="normal-voice">4 Engine. Does the engine start and then die?</p>
 		<div class="radio-buttons">
 			<div class="yes">
@@ -128,7 +128,7 @@
 		</div>
 	</div>
 
-	<div class="injection">
+	<div class="injection question">
 		<p class="normal-voice">5 Fuel Injection. Does your car have fuel injection?</p>
 		<div class="radio-buttons">
 			<div class="yes">
@@ -206,7 +206,7 @@
 		questionName.style.display = "none";
 	}
 
-	function backButton(currentQuestion, previousQuestion) {
+	function goBack(currentQuestion, previousQuestion) {
 		$button.hidden = false;	
 
 		$button.addEventListener("click", event => {
@@ -244,7 +244,6 @@
 		if (keyValue === "no") {
 			hideDiv(keyValue, key, "no");
 			displayDiv(clicking);
-
 			if (clicking) {
 				let clickingChecked = document.querySelector("input[name='clicking']:checked");
 				let clickingValue = clickingChecked.value;
@@ -256,9 +255,11 @@
 				}
 
 				if (clickingValue === "no") {
+					$output.hidden = true;
 					hideDiv(clickingValue, clicking, "no");
 					displayDiv(crank);
 					if (crank) {
+						
 						let crankChecked = document.querySelector("input[name='crank']:checked");
 						let crankValue = crankChecked.value;
 						
@@ -269,6 +270,7 @@
 						} 
 
 						if (crankValue === "no") {
+							$output.hidden = true;
 							hideDiv(crankValue, crank, "no");
 							displayDiv(engine);
 
@@ -298,11 +300,8 @@
 									$output.hidden = false;
 									$output.innerHTML = "I don't know what you should do. The exercise didn't provide an answer. Call a mechanic?";	
 								}
-
 							}
 						}
-
-
 					}
 				}
 			}

@@ -115,22 +115,6 @@ input:focus, textarea:focus {
 	border-color: var(--standout);
 }
 
-@keyframes pop-out {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(.5);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-#car-issues > div, #car-issues button {
-	animation-name: pop-out;
-	animation-duration: .2s;
-}
 /* - - - DROPDOWN MENU - - - */
 select {
 	border: var(--border-med) solid var(--trim);

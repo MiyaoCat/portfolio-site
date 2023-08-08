@@ -81,15 +81,6 @@ form-exercise .exercises li:hover {
 	grid-row: 7;
 }
 
-
-@media (min-width: 700px) {
-	/* - - PAGE HEADER - - */
-	.exercises.heading .title2 {
-/*		transform: translateX(0);*/
-	}
-
-}
-
 @media (min-width: 800px) {
 	.calculations, .input-output {
 		margin-top: 20px;

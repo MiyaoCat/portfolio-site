@@ -36,6 +36,28 @@ titleTwoTimeline
   }, "<50%");
 
 
+//Start long title2 titles at 2nd column
+
+function updateTitle2() {
+	let title = document.querySelector(".title2 h1");
+	let titleContent = title.textContent;
+	let titleCharCount = titleContent.length;
+	let title2 = document.querySelector(".title2");
+	console.log(titleCharCount)
+
+	if (window.innerWidth >= 700) {
+		if (titleCharCount > 9) {
+			title2.style.gridColumn = "2";
+		} 
+		if (titleCharCount >= 10) {
+			title2.style.gridColumn = "1";
+		}
+	} 
+}
+
+updateTitle2();
+window.addEventListener("resize", updateTitle2);
+
 //Listen for mousover on title1 to untilt it and make horizontal again
 // document.querySelector('.title1').addEventListener('mouseover', function() {
 //   gsap.to(this, {
