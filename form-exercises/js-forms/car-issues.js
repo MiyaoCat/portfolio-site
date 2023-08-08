@@ -26,8 +26,6 @@
 				>
 			</div>
 		</div>
-
-		<p class="calm-voice warning"></p>
 	</div>
 
 	<div class="battery">
@@ -53,8 +51,6 @@
 				>
 			</div>
 		</div>
-
-		<p class="calm-voice warning"></p>
 	</div>
 
 	<div class="clicking">
@@ -80,8 +76,6 @@
 				>
 			</div>
 		</div>
-
-		<p class="calm-voice warning"></p>
 	</div>
 
 	<div class="crank">
@@ -107,8 +101,6 @@
 				>
 			</div>
 		</div>
-
-		<p class="calm-voice warning"></p>
 	</div>
 
 	<div class="engine">
@@ -134,8 +126,6 @@
 				>
 			</div>
 		</div>
-
-		<p class="calm-voice warning"></p>
 	</div>
 
 	<div class="injection">
@@ -161,11 +151,9 @@
 				>
 			</div>
 		</div>
-
-		<p class="calm-voice warning"></p>
 	</div>
 
-	<button class="answer" type="submit">Diagnose my Car!</button>
+	<button class="go-back">Previous Question</button>
 </form>
 
 <output></output>
@@ -177,24 +165,11 @@
 <script>
 	const $form = document.getElementById("car-issues");
 	const $button = document.querySelector("button");
+	$button.hidden = true;
 	const $output = document.querySelector("output");
 	$output.hidden = true;
 	
 	const key = document.querySelector(".key");
-
-	function hideDiv(question, divName, answer) {
-		if (question === answer) {
-			setTimeout(function() {
-				divName.style.display = "none";
-			}, 400);
-		}
-	}
-
-	function displayDiv(divName) {
-		setTimeout(function() {
-			divName.style.display = "flex";
-		}, 400)
-	}
 
 	const battery = document.querySelector(".battery");
 	battery.style.display = "none";
@@ -211,6 +186,36 @@
 	const injection = document.querySelector(".injection");
 	injection.style.display = "none";
 
+
+	function hideDiv(question, divName, answer) {
+		if (question === answer) {
+			setTimeout(function() {
+				divName.style.display = "none";
+			}, 400);
+		}
+	}
+
+	function displayDiv(divName) {
+		setTimeout(function() {
+			divName.style.display = "flex";
+			// $button.hidden = false;
+		}, 400);
+	}
+
+	function hideCurrentQuestion(questionName) {
+		questionName.style.display = "none";
+	}
+
+	function backButton(currentQuestion, previousQuestion) {
+		$button.hidden = false;	
+
+		$button.addEventListener("click", event => {
+			event.preventDefault();
+			hideCurrentQuestion(currentQuestion);
+			displayDiv(previousQuestion);
+		})
+	}
+
 	$form.addEventListener("click", event => {
 		let keyChecked = document.querySelector("input[name='key']:checked");
 		let keyValue = keyChecked.value;
@@ -219,7 +224,7 @@
 
 		if (keyValue === "yes") {
 			displayDiv(battery);
-
+			
 			if (battery) {
 				let batteryChecked = document.querySelector("input[name='battery']:checked");
 				let batteryValue = batteryChecked.value;
@@ -235,14 +240,15 @@
 				}
 			}	
 		} 
+
 		if (keyValue === "no") {
 			hideDiv(keyValue, key, "no");
-			
 			displayDiv(clicking);
 
 			if (clicking) {
 				let clickingChecked = document.querySelector("input[name='clicking']:checked");
 				let clickingValue = clickingChecked.value;
+				
 
 				if (clickingValue === "yes") {
 					$output.hidden = false;
@@ -251,12 +257,11 @@
 
 				if (clickingValue === "no") {
 					hideDiv(clickingValue, clicking, "no");
-
 					displayDiv(crank);
-
 					if (crank) {
 						let crankChecked = document.querySelector("input[name='crank']:checked");
 						let crankValue = crankChecked.value;
+						
 
 						if (crankValue === "yes") {
 							$output.hidden = false;
@@ -265,7 +270,6 @@
 
 						if (crankValue === "no") {
 							hideDiv(crankValue, crank, "no");
-
 							displayDiv(engine);
 
 							if (engine) {
@@ -274,7 +278,6 @@
 
 								if (engineValue === "yes") {
 									hideDiv(engineValue, engine, "yes");
-
 									displayDiv(injection);
 
 									if (injection) {
