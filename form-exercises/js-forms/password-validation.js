@@ -1,15 +1,19 @@
 <form class="password" method="POST">
 	<div class="instructions">First you're going to create a password.</div>
 
-	<div class="password-create">
-		<label for="fruit">What is your favorite fruit?</label>
-		<input type="text" name="fruit">
-		<p class="calm-voice warning"></p>
+	<!-- <div class="password-create"> -->
+		<div class="fruit">
+			<label for="fruit">What is your favorite fruit?</label>
+			<input type="text" name="fruit">
+			<p class="calm-voice warning"></p>
+		</div>
 
-		<label for="number">What is your favorite number?</label>
-		<input type="number" name="number">
-		<p class="calm-voice warning"></p>
-	</div>
+		<div class="number">
+			<label for="number">What is your favorite number?</label>
+			<input type="number" name="number">
+			<p class="calm-voice warning"></p>
+		</div>
+	<!-- </div> -->
 
 	<div class="password-output"></div>	
 
@@ -48,30 +52,30 @@
 		let numberInput = $number.value;
 		let passwordInput = fruitInput + numberInput;	
 
-		let $warning1 = document.querySelector('.warning:nth-of-type(1)');	
-		let $warning2 = document.querySelector('.warning:nth-of-type(2)');
-		let $warning3 = document.querySelector('password-enter p.warning');
+		let $fruitWarn = document.querySelector('.fruit .warning');	
+		let $numberWarn = document.querySelector('.number .warning');
+		let $passwordWarn = document.querySelector('password-enter .warning');
 
 		
-	 	$warning3.hidden = true;
+	 	$passwordWarn.hidden = true;
 
-	 	$warning1.innerHTML = !fruitInput ? 'No fruit entered' : '';
-	 	$warning2.innerHTML = !numberInput ? 'Need a number' : '';
+	 	$fruitWarn.innerHTML = !fruitInput ? 'No fruit entered' : '';
+	 	$numberWarn.innerHTML = !numberInput ? 'Need a number' : '';
 		// if (!fruitInput) {
-		// 	$warning1.innerHTML = 'No fruit entered';
+		// 	$fruitWarn.innerHTML = 'No fruit entered';
 		// } 
 		// if (fruitInput) {
-		// 	$warning1.innerHTML = '';
+		// 	$fruitWarn.innerHTML = '';
 		// } 
 		// if (!numberInput) {
-		// 	$warning2.innerHTML = 'Need a number';
+		// 	$numberWarn.innerHTML = 'Need a number';
 		// } 
 		// if (numberInput) {
-		// 	$warning2.innerHTML = '';
+		// 	$numberWarn.innerHTML = '';
 		// } 
 		if (fruitInput && numberInput) {
-			$warning1.innerHTML = '';
-			$warning2.innerHTML = '';
+			$fruitWarn.innerHTML = '';
+			$numberWarn.innerHTML = '';
 
 			$passwordOutput.style.display = 'block';
 			$passwordOutput.style.display = 'block';
@@ -88,13 +92,13 @@
 			if (passwordInput != "" && password === passwordInput) {
 				$output.hidden = false;
 				$output.innerHTML = `<p class="normal-voice"><span class="special">${password}</span> is correct! You may enter!`;
-				$warning3.innerHTML = '';
+				$passwordWarn.innerHTML = '';
 			}	
 
 			if (password != passwordInput && password != "") {
 				
-				$warning3.innerHTML = 'Errr! Incorrect';
-				$warning3.hidden = false;
+				$passwordWarn.innerHTML = 'Errr! Incorrect';
+				$passwordWarn.hidden = false;
 		}		
 	});
 </script>

@@ -101,6 +101,14 @@ form-wrap .hidden {
 	align-items: center;
 }
 
+.exercise input[type="text"], 
+.v-exercise input[type="text"],
+.js-exercise input[type="text"] {
+	max-width: 300px;
+	padding: 5px;
+}
+
+
 .exercise input[type="number"], 
 .v-exercise input[type="number"],
 .js-exercise input[type="number"] {
@@ -112,7 +120,7 @@ form-wrap .hidden {
 .v-exercise .password-output,
 .js-exercise .password-output {
 	margin: 10px 0;
-	padding: 5px;
+	padding: 10px;
 	border: 3px solid var(--ink);
 	background-color: var(--background);
 	display: flex;
@@ -132,6 +140,23 @@ password-enter {
 	flex-direction: column;
 }
 
+/* - - CAR ISSUES - - - - - - - - - - - - - - - */
+@keyframes pop-out {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#car-issues > div, #car-issues button {
+	animation-name: pop-out;
+	animation-duration: .2s;
+}
 /* - - RADIO BUTTON - - - - - - - - - - - - - - - */
 
 .exercise form input[type="radio"], 
