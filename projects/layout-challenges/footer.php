@@ -4,6 +4,6 @@
 	</a>
 </div>
 
-<a href="?page=style-guide">Style Guide</a>
-<a href="?page=resume">Resume</a>
-<a href="?page=exercises">Exercises</a>
+<a href="https://peprojects.dev/alpha-4/john/?page=style-guide">Style Guide</a>
+<a href="https://peprojects.dev/alpha-4/john/?page=resume">Resume</a>
+
