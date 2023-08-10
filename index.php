@@ -30,10 +30,8 @@
 <?php
 	if ($pageData) {
 		if ( !isset($pageData["template"]) )  {
-			 include("pages/default.php");
-?>
+			include("pages/default.php");
 
-<?php
 		} else {
 				include("pages/$pageData[template].php");
 		  }
