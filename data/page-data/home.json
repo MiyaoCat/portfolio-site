@@ -8,7 +8,7 @@
 	"sections": [
 		{	
 			"module": "generic-text",
-			"content": "TEST GIT. Welcome to my internet home. I'm thrilled to have you explore my digital playground, where I showcase my ever-growing portfolio of projects. As a seasoned Program Manager turned Frontend Web Developer, I'm on an exciting journey of career transformation.<br><br><p class='calm-voice'>P.S.<br>Please leave your shoes at the door :)</p>"
+			"content": "Welcome to my internet home. I'm thrilled to have you explore my digital playground, where I showcase my ever-growing portfolio of projects. As a seasoned Program Manager turned Frontend Web Developer, I'm on an exciting journey of career transformation.<br><br><p class='calm-voice'>P.S.<br>Please leave your shoes at the door :)</p>"
 		},
 		{	
 			"module": "button",
