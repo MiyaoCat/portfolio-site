@@ -1,6 +1,6 @@
 <form id="car-issues" method="POST">
 	<div class="instructions">
-		<p class="normal-voice">Removed clone. Testing git push. This form will walk you through a series of questions to troubleshoot your car issues. Answer each question as they come up.</p>
+		<p class="normal-voice">Tower test. This form will walk you through a series of questions to troubleshoot your car issues. Answer each question as they come up.</p>
 	</div>
 
 	<div class="key question">
