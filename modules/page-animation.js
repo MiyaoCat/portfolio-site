@@ -7,27 +7,25 @@ var elementsToAnimate = childElements.slice(3, -3);
 
 var footer = gsap.timeline();
 
-
-
 pageHeader
 	.from('.title1', {
 		opacity: 0,
 		x: -1000,
-		duration: 2,
-		ease: "back.out(1.7)",
+		duration: 1.5,
+		ease: "back.out(1.5)",
    }, .2)
 	.from('.title2', {
 		opacity: 0,
 		x: 1000,
-		duration: 2,
-		ease: "back.out(1.7)"
+		duration: 1.5,
+		ease: "back.out(1.5)"
   }, .4);
 
 gsap.from(elementsToAnimate, {
 	opacity: 0,
 	x: 1500,
 	duration: 2,
-	ease: "back.out(1.7)",
+	ease: "back.out(1.5)",
 	stagger: 0.2
 }, .2)
 
@@ -41,12 +39,15 @@ if (window.innerWidth <= 700) {
 	.from('.title1', {
 		x: -1000,
 		duration: 1.5,
-		ease: "elastic.out(1, .5)",
+		ease: "back.out(1.5)",
+		onComplete: function() {
+			gsap.set('.title1', { x: 1 });
+		}
    })
 	.from('.title2', {
 		x: 1000,
 		duration: 1.5,
-		ease: "elastic.out(1, .5)"
+		ease: "back.out(1.5)"
   }, .2);
 
 	pageHeader.delay(.5)
@@ -58,8 +59,6 @@ if (window.innerWidth <= 700) {
 		ease: "power2.out"
 	})
 }
-	
-
 
 footer 
 	.from("footer", {
@@ -69,3 +68,5 @@ footer
 	})
 
 footer.delay(.5)
+
+
