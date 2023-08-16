@@ -8,7 +8,7 @@ titleOneTimeline
 	//Animate .title1 to move into position from screen left.
 	.from('.title1', {
 		x: 400,
-		duration: 1.5,
+		duration: 2,
 		ease: "elastic.out(1.5, .5)",
 		onComplete: function() {
 			//Listen for screen width. If > 700, y value changes.
@@ -31,7 +31,7 @@ titleOneTimeline
 titleTwoTimeline
   .from('.title2', {
 		x: -600,
-		duration: 1.5,
+		duration: 2,
 		ease: "elastic.out(1.5, .5)"
   }, "<50%");
 
