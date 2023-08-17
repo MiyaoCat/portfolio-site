@@ -11,20 +11,20 @@ pageHeader
 		opacity: 0,
 		x: -1000,
 		duration: 1,
-		ease: "back.out(1.5)",
+		ease: "back.out(.75)",
    }, .2)
 	.from('.title2', {
 		opacity: 0,
 		x: 1000,
 		duration: 1,
-		ease: "back.out(1.5)"
+		ease: "back.out(.75)"
   }, .4);
 
 gsap.from(elementsToAnimate, {
 	opacity: 0,
 	x: 1500,
 	duration: 2,
-	ease: "back.out(1.5)",
+	ease: "back.out(.75)",
 	stagger: 0.2
 }, .2)
 
@@ -38,12 +38,12 @@ if (window.innerWidth <= 700) {
 	.from('.title1', {
 		x: -1000,
 		duration: 1,
-		ease: "back.out(1.5)"
+		ease: "back.out(.75)"
    }, .1)
 	.from('.title2', {
 		x: 1000,
 		duration: 1,
-		ease: "back.out(1.5)"
+		ease: "back.out(.75)"
   }, .2)
 
 } else {
@@ -64,5 +64,3 @@ footer
 	})
 
 footer.delay(.5)
-
-
