@@ -3,14 +3,12 @@
 	grid-column: 2 / 14;
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 11px;
-	margin-top: 5px;
 	margin: 5px 0 11px 0;
+	padding: 0 8px 0 8px;	
 	position: sticky;
 	top: 0;
 	background-color: var(--background);
 	z-index: 1;
-	padding-right: 5px;
 }
 
 nav ul {

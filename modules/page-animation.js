@@ -10,13 +10,13 @@ pageHeader
 	.from('.title1', {
 		opacity: 0,
 		x: -1000,
-		duration: 1.5,
+		duration: 1,
 		ease: "back.out(1.5)",
    }, .2)
 	.from('.title2', {
 		opacity: 0,
 		x: 1000,
-		duration: 1.5,
+		duration: 1,
 		ease: "back.out(1.5)"
   }, .4);
 
@@ -37,12 +37,12 @@ if (window.innerWidth <= 700) {
 	pageHeader
 	.from('.title1', {
 		x: -1000,
-		duration: 1.5,
+		duration: 1,
 		ease: "back.out(1.5)"
    }, .1)
 	.from('.title2', {
 		x: 1000,
-		duration: 1.5,
+		duration: 1,
 		ease: "back.out(1.5)"
   }, .2)
 
@@ -50,16 +50,16 @@ if (window.innerWidth <= 700) {
 	background
 	.from('.background', {
 		x: -1000,
-		duration: 1.5,
+		duration: .75,
 		ease: "power2.out"
 	})
-	pageHeader.delay(2)
+	pageHeader.delay(.5)
 }
 
 footer 
 	.from("footer", {
 		y: 500,
-		duration: 1.5,
+		duration: 1,
 		ease: "back.out(1.7)"
 	})
 

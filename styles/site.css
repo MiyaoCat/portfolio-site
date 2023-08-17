@@ -23,7 +23,8 @@ body {
 	background-color: var(--paper);
 	color: var(--ink);
 	display: grid;
-	gap: 5px;
+	row-gap: 10px;
+	column-gap: 5px;
 	grid-template-columns:  auto repeat(12, minmax(0, 120px)) auto;
 	min-height: 100vh;
 	grid-template-rows: 180px repeat(10, auto);
@@ -36,6 +37,7 @@ body > * {
 	grid-column: 2 / 14;
 	margin-left: 5px;
 	margin-right: 5px;
+	padding: 0 8px 0 8px;
 }
 
 section + section {
