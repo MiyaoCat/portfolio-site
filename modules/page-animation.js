@@ -4,7 +4,6 @@ var pageHeader = gsap.timeline();
 var bodyElement = document.body;
 var childElements = Array.from(bodyElement.children);
 var elementsToAnimate = childElements.slice(3, -3);
-var modules = gsap.timeline();
 var footer = gsap.timeline();
 
 pageHeader
@@ -21,7 +20,7 @@ pageHeader
 		ease: "back.out(1.5)"
   }, .4);
 
-modules(elementsToAnimate, {
+gsap.from(elementsToAnimate, {
 	opacity: 0,
 	x: 1500,
 	duration: 2,
