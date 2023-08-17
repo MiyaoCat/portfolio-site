@@ -4,7 +4,7 @@ var pageHeader = gsap.timeline();
 var bodyElement = document.body;
 var childElements = Array.from(bodyElement.children);
 var elementsToAnimate = childElements.slice(3, -3);
-
+var modules = gsap.timeline();
 var footer = gsap.timeline();
 
 pageHeader
@@ -21,7 +21,7 @@ pageHeader
 		ease: "back.out(1.5)"
   }, .4);
 
-gsap.from(elementsToAnimate, {
+modules(elementsToAnimate, {
 	opacity: 0,
 	x: 1500,
 	duration: 2,
@@ -39,18 +39,14 @@ if (window.innerWidth <= 700) {
 	.from('.title1', {
 		x: -1000,
 		duration: 1.5,
-		ease: "back.out(1.5)",
-		onComplete: function() {
-			gsap.set('.title1', { x: 1 });
-		}
-   })
+		ease: "back.out(1.5)"
+   }, .1)
 	.from('.title2', {
 		x: 1000,
 		duration: 1.5,
 		ease: "back.out(1.5)"
-  }, .2);
+  }, .2)
 
-	pageHeader.delay(.5)
 } else {
 	background
 	.from('.background', {
@@ -58,6 +54,7 @@ if (window.innerWidth <= 700) {
 		duration: 1.5,
 		ease: "power2.out"
 	})
+	pageHeader.delay(2)
 }
 
 footer 
