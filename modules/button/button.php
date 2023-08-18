@@ -3,14 +3,28 @@
 		if ($sections["module"] == "button") {
 			$buttonText = $sections["content"];
 			$class = $sections["class"];
-		}
 ?>
-	<a href="?page=<?=$class?>">
-		<button class="<?=$class?>">
-			<?=$buttonText?>	
-		</button>
-	</a>
+			<a href="?page=<?=$class?>">
+				<button class="<?=$class?>">
+					<?=$buttonText?>	
+				</button>
+			</a>
+		<?php } ?>	
+	
+<?php 
+		if ($CaseStudyModule["module"] == "button") {
+			$buttonText = $CaseStudyModule["content"];
+			$link = $CaseStudyModule["link"];
+		?>
+			<a href="<?=$link?>" target="_blank">
+				<button class="<?=$class?>">
+					<?=$buttonText?>	
+				</button>
+			</a>
+	<?php } ?>
 <?php } ?>
+
+
 
 
 <?php 
@@ -22,8 +36,6 @@
 		foreach ($styleGuideData["sections"] as $modules) {
 			if ($modules["module"] == "button") {
 				$buttonText = $modules["content"];
-				$class = $modules["class"];
-				$intro = $modules["intro"];
 			}
 		}	
 ?>
