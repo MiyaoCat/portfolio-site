@@ -19,7 +19,6 @@
 	
 	foreach ($caseStudyModules as $CaseStudyModule) {
 		$module = $CaseStudyModule["module"];
-		// $content = $CaseStudymodule["content"];
 ?>
 		<section class="<?=$slug?> <?=$module?>">
 			<?php include("modules/$module/$module.php"); ?>

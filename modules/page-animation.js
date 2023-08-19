@@ -28,6 +28,11 @@ gsap.from(elementsToAnimate, {
 	stagger: 0.2
 }, .2)
 
+gsap.to(elementsToAnimate) {
+	onComplete: function() {
+		gsap.set(elementsToAnimate, { clearProps: "all" });
+	}
+}
 if (window.innerWidth <= 700) {
 	background
 	.from('.background', {

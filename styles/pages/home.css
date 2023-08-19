@@ -34,8 +34,8 @@
 @media (min-width: 550px) {
 	.home .button:nth-of-type(2) {
 		grid-column-start: 2;
-		margin: 20px auto 15px -10px;
-		transform: translateX(3em);
+		margin: 20px auto 15px 5px;
+/*		transform: translateX(3em);*/
 	}
 
 	.home .button:nth-of-type(3) {
