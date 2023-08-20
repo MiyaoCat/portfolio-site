@@ -1,7 +1,7 @@
 .generic-text {
 	grid-row: 3;
 	display: flex;
-	max-width: 450px;
+	max-width: 500px;
 }
 
 @media (min-width: 700px) {
