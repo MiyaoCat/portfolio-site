@@ -175,6 +175,49 @@
 .gsap:nth-of-type(8) {
 	grid-row: 10;
 }
+
+
+.gsap.button:nth-of-type(7) {
+	max-width: fit-content;
+	grid-row: 10;
+	grid-column: 2 / 14;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.gsap.button:nth-of-type(8) {
+	max-width: fit-content;
+	grid-row: 11;
+	grid-column: 2 / 14;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+@media (min-width: 700px) {
+	.gsap.button:nth-of-type(7) {
+		grid-column: 4 / 10;
+	}
+
+	.gsap.button:nth-of-type(8) {
+		grid-column: 4 / 10;
+	}
+}
+
+@media (min-width: 1300px) {
+	.gsap.button:nth-of-type(7) {
+		grid-column: 3 / 10;
+		transform: translateX(-4px);
+		margin: 20px auto;
+	}
+
+	.gsap.button:nth-of-type(8) {
+		grid-row: 10;
+		grid-column: 6 / 10;
+		transform: translateX(-4px);
+		margin: 20px auto;
+	}		
+}
 /*- - PORTFOLIO-SITE - - - - - - - - - - - - - - - - - - - */
 /* - - - - PAGE HEADER - - */
 .page-header .portfolio-site .title2 {
