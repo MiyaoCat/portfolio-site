@@ -74,7 +74,7 @@ beaconsTimelineFirst
 		scale: 1,
 		ease: 'back.out(1.7)',
 	}, "<80%") 
-	.repeat(-1)
+	.repeat(3)
 	.repeatDelay(5)
 
 pageTimeline
@@ -141,7 +141,6 @@ pageTimeline
 	}, "<0%")
 	.add(beaconsTimelineFirst)
 	.delay(1)
-
 
 
 

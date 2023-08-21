@@ -1,5 +1,66 @@
 [
 	{
+		"slug": "gsap",
+		"template": "projects",
+		"title1": "GSAP",
+		"title2": "Layout",
+		"intro": "Practicing GreenSock web animation",
+		"image": "images/projects/layouts2.png",
+		"featured": true,
+		"languages": [
+			"JS", "HTML", "CSS", "PHP"
+		], 
+
+		"sections": [
+			{
+				"module": "generic-text",
+				"subHeader": "Why Learn Greensock?",
+				"content": "As I've been learning Web Development, I've started to gravitate toward the Frontend side of programming. I like finding fun and interesting sites that have a lot of neat interactions that inspire me. Most of these sites include some sort of web animation, whether its a scroll-trigger, an element moving across the screen or a background that moves like a living organism. To step my game up, I tried taking a stab with the GreenSock Animation Platform (GSAP). GSAP has taken all of the complicated math and packaged them into \"easey-to-use\" methods that allow you to animate elements on your page in various ways and through different triggers. Fun, right?"
+			},
+			{
+				"module": "figure",
+				"filePath": "images/projects/shoe-animation/dribbble-layout.gif",
+				"altText":	"The Dribbble layout with the page animations as a gif",
+				"figureHeading": "Animated Page",
+				"caption": "The Dribble layout we chose to copy."
+			},
+			{
+				"module": "generic-text",
+				"subHeader": "The Process",
+				"content": "Instead of starting from scratch and creating my own webpage, I worked with my mentor, Derek Wood who helped me find a layout on <a href='https://dribbble.com/shots/15359806-Nike-Shoe-Web-Header' target='_blank'>Dribbble</a> that I could recreate. At first glance, it seemed daunting. Not impossible, but definitely challenging. However, once Derek broke down the site into peices, it became much more doable. First, I just needed to get the layout down. Something that I feel very comfortable doing. Then once the elements are in place, I can work with GSAP and add in the animations."
+			},
+			{
+				"module": "figure",
+				"filePath": "images/projects/shoe-animation/page-breakdown.png",
+				"altText":	"The layout with outlines of each element to better breakdown the page.",
+				"figureHeading": "Page Breakdown",
+				"caption": "Breaking down the page into it's elements."
+			},
+			{
+				"module": "generic-text",
+				"subHeader": "Challenges",
+				"content": "There were a few challenges I came across as I worked on this layout. One minor one was thinking about the mobile view. I felt that this would require too much design thinking, I completely scrapped it as it would take away from my main purpose and goal of learning and using GSAP. I just left it with a fixed height and width.<br><br> Another challenge I faced was actually with the buildout of the site. I struggled with the bottom right corner, where it displays the shoe sizes, specifically that little knob in the middle. I tried using CSS to create the knob, but adjusting the background of the \"10\". I ended up creating an SVG for the entire black background and setting it as the background image. <br><br> Now comes the real challenge of learning and using GSAP. Derek had done a couple examples for me in codepen and GSAP has some good documentation and example animations on their site. It wasn't too difficult getting the first few animations up and running. It became a bit of a challenge to time the animations and have them appear in order. The spinning Explore wheel and the little pop-up icons took awhile for me to get in place as they required additional animation features. Fortunately, GSAP gives you tools to set the timing and order. It took some  trial and error, but I eventually got it. "
+			},
+			{
+				"module": "figure",
+				"filePath": "images/projects/shoe-animation/completed-layout.gif",
+				"altText":	"The webpage as a gif with the GSAP animations.",
+				"figureHeading": "Animated Page",
+				"caption": "The final product."
+			},
+			{
+				"module": "button",
+				"content": "Live Site",
+				"link": "https://peprojects.dev/alpha-4/john/projects/shoe-animation-layout/"
+			},
+			{
+				"module": "button",
+				"content": "GitHub",
+				"link": "https://github.com/MiyaoCat/portfolio-site/tree/main/projects/shoe-animation-layout"
+			}
+		]
+	},	
+	{
 		"slug": "layout-garden",
 		"template": "projects",
 		"title1": "Layout",

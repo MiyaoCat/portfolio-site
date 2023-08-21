@@ -11,7 +11,7 @@
 }
 /*- - LAYOUT GARDEN - - - - - - - - - - - - - - - */
 /* - - BUTTONS - - */
-.layout-garden:nth-of-type(2) {
+.layout-garden.button:nth-of-type(2) {
 	max-width: fit-content;
 	grid-row: 4;
 	grid-column: 2 / 14;
@@ -19,7 +19,7 @@
 	margin-right: auto;
 }
 
-.layout-garden:nth-of-type(3) {
+.layout-garden.button:nth-of-type(3) {
 	max-width: fit-content;
 	grid-row: 5;
 	grid-column: 2 / 14;
@@ -28,12 +28,12 @@
 }
 
 @media (min-width: 520px) {
-	.layout-garden:nth-of-type(2) {
+	.layout-garden.button:nth-of-type(2) {
 		grid-column-start: 2;
 		margin: 20px auto 15px 5px;
 	}
 
-	.layout-garden:nth-of-type(3) {
+	.layout-garden.button:nth-of-type(3) {
 		grid-row: 4;
 		grid-column-start: 6;
 		margin: 20px auto 15px 20px;
@@ -41,19 +41,30 @@
 }
 
 @media (min-width: 700px) {
-	.layout-garden:nth-of-type(2) {
+	.layout-garden.button:nth-of-type(2) {
 		grid-column: 5 / 10;
 		margin: 20px auto;
 	}
 
-	.layout-garden:nth-of-type(3) {
+	.layout-garden.button:nth-of-type(3) {
 		grid-row: 5;
 		grid-column: 5 / 10;
 		margin: 0 auto;
 	}
 }
 
+@media (min-width: 1000px) {
+	.layout-garden.button:nth-of-type(2) {
+		grid-column: 5;
+		margin: 20px auto;
+	}
 
+	.layout-garden.button:nth-of-type(3) {
+		grid-row: 4;
+		grid-column: 7;
+		margin: 20px auto;
+	}
+}
 /*- - LUXURY-STREETWEAR - - - - - - - - - - - - - - - - - */
 /* - - PAGE HEADER - - */
 
@@ -130,6 +141,39 @@
 		transform: translateX(-4px);
 		margin: 20px auto;
 	}		
+}
+
+/*- - GSAP-PRACTICE - - - - - - - - - - - - - - - - - - - */
+.gsap:nth-of-type(1) {
+	grid-row: 3;
+}
+
+.gsap:nth-of-type(2) {
+	grid-row: 4;
+}
+
+.gsap:nth-of-type(3) {
+	grid-row: 5;
+}
+
+.gsap:nth-of-type(4) {
+	grid-row: 6;
+}
+
+.gsap:nth-of-type(5) {
+	grid-row: 7;
+}
+
+.gsap:nth-of-type(6) {
+	grid-row: 8;
+}
+
+.gsap:nth-of-type(7) {
+	grid-row: 9;
+}
+
+.gsap:nth-of-type(8) {
+	grid-row: 10;
 }
 /*- - PORTFOLIO-SITE - - - - - - - - - - - - - - - - - - - */
 /* - - - - PAGE HEADER - - */

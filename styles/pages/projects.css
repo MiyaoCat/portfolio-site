@@ -9,7 +9,7 @@
 	}
 }
 
-.projects project-card.layout-garden {
+.projects project-card.gsap {
 	grid-row: 4;
 }
 
@@ -17,7 +17,7 @@
 	grid-row: 5;
 }
 
-.projects project-card.v-exercises {
+.projects project-card.layout-garden {
 	grid-row: 6;
 }
 
