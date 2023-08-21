@@ -4,8 +4,8 @@
 		"template": "projects",
 		"title1": "GSAP",
 		"title2": "Layout",
-		"intro": "Practicing GreenSock web animation",
-		"image": "images/projects/layouts2.png",
+		"intro": "Practice with the GreenSock Animation Platform to build a shoe website.",
+		"image": "images/projects/gsap.jpeg",
 		"featured": true,
 		"languages": [
 			"JS", "HTML", "CSS", "PHP"
