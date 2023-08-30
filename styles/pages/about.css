@@ -50,6 +50,7 @@
 		margin-bottom: auto;
 		background-color: var(--background);
 		border: var(--border-med) solid var(--ink);
+		padding: 0;
 	}
 
 	.about .figure:hover {
