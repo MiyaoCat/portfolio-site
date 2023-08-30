@@ -45,7 +45,7 @@
 				
 				<li>
 					<a href="?page=projects"
-						class="<?php if ($page == 'projects') { echo 'active'; } ?>">Projects
+						class="<?php if ($page == 'projects' || $page == 'project' || $page == 'exercises' || $page == 'exercise') { echo 'active'; } ?>">Projects
 					</a>
 				</li>
 			</ul>

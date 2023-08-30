@@ -53,11 +53,17 @@ nav a.active {
 	transform: translateY(0);
 }
 
-.projects nav li:nth-of-type(3) {
+.projects nav li:nth-of-type(3),
+.project nav li:nth-of-type(3),
+.exercises nav li:nth-of-type(3),
+.exercise nav li:nth-of-type(3) {
 	transform: translateY(0);
 }
 
-.projects nav li:hover:nth-of-type(3) {
+.projects nav li:hover:nth-of-type(3),
+.project nav li:hover:nth-of-type(3),
+.exercises nav li:hover:nth-of-type(3),
+.exercise nav li:hover:nth-of-type(3) {
 	transform: translateY(0);
 }
 
