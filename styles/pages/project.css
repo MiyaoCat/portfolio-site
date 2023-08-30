@@ -116,7 +116,7 @@
 
 @media (min-width: 700px) {
 	.luxury-streetwear .screaming-voice {
-		font-size: clamp(40px, 6vw, 80px);
+		font-size: clamp(40px, 5.5vw, 80px);
 	}
 
 	.luxury-streetwear.button:nth-of-type(7) {
