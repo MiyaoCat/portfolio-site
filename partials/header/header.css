@@ -56,14 +56,22 @@ nav a.active {
 .projects nav li:nth-of-type(3),
 .project nav li:nth-of-type(3),
 .exercises nav li:nth-of-type(3),
-.exercise nav li:nth-of-type(3) {
+.exercise nav li:nth-of-type(3),
+.js-exercises nav li:nth-of-type(3),
+.js-exercise nav li:nth-of-type(3),
+.v-exercises nav li:nth-of-type(3),
+.v-exercise nav li:nth-of-type(3) {
 	transform: translateY(0);
 }
 
 .projects nav li:hover:nth-of-type(3),
 .project nav li:hover:nth-of-type(3),
 .exercises nav li:hover:nth-of-type(3),
-.exercise nav li:hover:nth-of-type(3) {
+.exercise nav li:hover:nth-of-type(3),
+.js-exercises nav li:hover:nth-of-type(3),
+.js-exercise nav li:hover:nth-of-type(3),
+.v-exercises nav li:hover:nth-of-type(3),
+.v-exercise nav li:hover:nth-of-type(3) {
 	transform: translateY(0);
 }
 

@@ -46,12 +46,12 @@
 				<li>
 					<a href="?page=projects"
 						class=
-						"<?php
-							$validPages = ['projects', 'project', 'exercises', 'exercise']; 
-							if (in_array($page, $validPages)) {
-   							echo 'active';
-							}
-						?>">
+							"<?php
+								$validPages = ['projects', 'project', 'exercises', 'exercise', 'js-exercises', 'js-exercise', 'v-exercises', 'v-exercise']; 
+								if (in_array($page, $validPages)) {
+	   							echo 'active';
+								}
+							?>">
 							Projects
 					</a>
 				</li>
