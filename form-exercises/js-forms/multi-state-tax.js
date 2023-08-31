@@ -67,7 +67,7 @@
 			return response.json();
 		})
 		.then(function(taxData) {			
-			console.log(taxData);
+			console.log("tax data", taxData);
 			console.log("order warn: ", $orderWarn)
 			function populateStates(states) {
 				states.forEach(state => {
@@ -177,7 +177,6 @@
 					</div>
 				`;
 
-				adjustFontSize();
 				console.log(textContainer)
 			})
 		})
