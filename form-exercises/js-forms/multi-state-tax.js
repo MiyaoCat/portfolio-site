@@ -111,15 +111,14 @@
 				}			
 			})
 
-			// const textContainer = document.querySelectorAll("special");
+			const textContainer = document.querySelectorAll(".special");
 
-			// function adjustFontSize() {
-			// 	textContainer.forEach(element => {
-			// 		const characterCount = element.innerHTML.length;
-			// 		console.log(characterCount);
-			// 	})
-				
-			// }
+			function adjustFontSize() {
+				textContainer.forEach(element => {
+					const characterCount = element.innerHTML.length;
+					console.log("character count: ", characterCount);
+				})			
+			}
 
 			
 			$form.addEventListener("submit", event => {
@@ -178,6 +177,7 @@
 				`;
 
 				console.log(textContainer)
+				adjustFontSize();
 			})
 		})
 		.catch(function(error) {
