@@ -13,7 +13,7 @@
 .projects project-card.gsap {
 	grid-row: 4;
 }
-/*EXERCISES*/
+
 .projects project-card.exercises {
 	grid-row: 5;
 }
