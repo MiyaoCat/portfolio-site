@@ -6,22 +6,22 @@ var beaconsRepeat = gsap.timeline();
 headerTimeline 
 	.from('.logo', {
 		y: -200,
-		duration: 1,
+		duration: .75,
 		ease: "elastic.out(.7, .5)",
 	})
 	.from('nav', {
 		y: -200,
-		duration: 1,
+		duration: .75,
 		ease: "elastic.out(.7, .5)",
 	}, "<50%")
 	.from('.model', {
 		y: -200,
-		duration: 1,
+		duration: .75,
 		ease: "elastic.out(.7, .5)",
 	}, "<50%")
 	.from('.bag-icon', {
 		y: -200,
-		duration: 1,
+		duration: .75,
 		ease: "elastic.out(.7, .5)",
 	}, "<50%")		
 
@@ -31,7 +31,7 @@ beaconsTimelineFirst
 		duration: .8,
 		scale: 0,
 		opacity: 0,	 
-		delay: 1,
+		delay: .5,
 		transformOrigin: '50% 50%',
 		ease: 'back.out(1.7)',
 	})
@@ -60,7 +60,7 @@ beaconsTimelineFirst
 		transformOrigin: '50% 50%',
 	})	
 	.to('.pop-up-two', {
-		delay: 2,
+		delay: 1,
 		opacity: 0,
 		scale: 0
 	})
@@ -100,7 +100,7 @@ pageTimeline
 	}, "<0%")
 	.from('.explore', {
 		y: -100,
-		duration: 1,
+		duration: .75,
 		opacity: 0,
 		ease: "elastic.out(1, 0.5)",
 	})
@@ -116,7 +116,7 @@ pageTimeline
 	}, "<0%")
 	.from('.shoe-card', {
 		x: 750,
-		duration: 2,
+		duration: 1,
 		stagger: .2,
 		ease: "elastic.out(.2)",
 		}, "<0%")
