@@ -15,7 +15,8 @@
 			"content": "send me a message!"
 		},
 		{
-			"module": "social-icons"
+			"module": "social-icons",
+			"content": ""
 		}
 	]
 }

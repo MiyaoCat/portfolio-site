@@ -18,7 +18,6 @@
 	if ( isset($pageData["intro"]) ) {
 		$intro = $pageData["intro"];
 	} 
-
 ?>
 
 <?php include("partials/header/header.php"); ?>
