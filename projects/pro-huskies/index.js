@@ -30,7 +30,7 @@ app.get('/about', function(request, response) {
 })
 
 app.get('/athletes', function(request, response) {
-	response.render('atheletes');
+	response.render('athletes');
 })
 
 app.get('/details', function(request, response) {

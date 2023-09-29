@@ -6,8 +6,9 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "Watch": "nodemon"
+    "start:express": "npx nodemon",
+    "watch:sass": "sass --watch styles/site.scss styles/site-minified.css",
+    "start": "npm-run-all --parallel start:express watch:sass"
   },
   "author": "miyaomix",
   "license": "ISC",
@@ -17,5 +18,9 @@
     "contentful": "^10.6.0",
     "ejs": "^3.1.9",
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.68.0"
   }
 }

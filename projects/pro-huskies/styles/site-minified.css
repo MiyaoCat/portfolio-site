@@ -1,0 +1,257 @@
+/* P reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Setup */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+} /* https://www.paulirish.com/2012/box-sizing-border-box-ftw */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+p a {
+  display: inline;
+  /*	color: blue;*/
+  text-decoration: underline;
+}
+
+picture {
+  display: block;
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+svg {
+  display: block;
+  width: 100%;
+}
+
+/* Ssetings */
+html {
+  --black: #111111;
+  --white: #FFF;
+  --color: #5E321F;
+  --highlight: #aadee9;
+  --shadow: rgba(0,0,0,.8);
+  --corners: 10px; /* or whatevers */
+  --standard: 1140px;
+  --tight: 800px;
+  --wide: 98vw;
+  --paper: hsl(37, 32%, 92%); /* light brown */
+  --ink: black;
+  --highlight: hsl(360, 100%, 39%); /* red */
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    --paper: hsl(28, 17%, 30%); /* dark brown */
+    --ink: white;
+    --highlight: yellow;
+  }
+  .logo {
+    fill: white;
+  }
+}
+body * {
+  border: 1px solid lightgray;
+  padding: 4px;
+}
+
+section:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+picture img {
+  opacity: 0;
+}
+
+picture {
+  background-color: var(--shadow);
+}
+
+/* Structure */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* be at least a full viewport height */
+}
+
+main {
+  flex-grow: 1; /* fill up available space + push the footer down */
+}
+
+inner-column {
+  display: block;
+  max-width: var(--wide); /* could be a variable in settings */
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 5px;
+}
+
+@media (min-width: 600px) {
+  inner-column {
+    width: var(--tight);
+  }
+}
+/* Typography */
+html {
+  --marker: Permanent Marker, Noto Serif;
+  --sans-serif: Encode Sans, Helvetica;
+  --serif: Noto Serif Display, Old Standard TT, Times New Roman;
+}
+
+a {
+  font-family: var(--sans-serif);
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 0.2rem;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--highlight);
+}
+
+@media (prefers-color-scheme: dark) {
+  a:hover {
+    color: var(--highlight);
+  }
+}
+/* Main header or banner text or similar */
+.screaming-voice {
+  font-family: var(--marker);
+  font-size: clamp(40px, 7vw, 80px);
+}
+
+/* Header text or similar */
+.loud-voice {
+  font-family: var(--sans-serif);
+  font-size: 30px;
+}
+
+/* Sub-header text or similar */
+.attention-voice {
+  font-family: var(--sans-serif);
+  font-size: 26px;
+}
+
+.alert-voice {
+  font-family: var(--sans-serif);
+  font-size: 26px;
+}
+
+/* Paragraph text or similar */
+.normal-voice {
+  font-family: var(--sans-serif);
+  font-size: 16px;
+}
+
+/* Caption text or similar */
+.calm-voice {
+  font-family: var(--sans-serif);
+  font-size: 12px;
+}
+
+/* Fine print text or similar */
+.quiet-voice {
+  font-family: var(--sans-serif);
+  font-size: 10px;
+}
+
+.whisper-voice {
+  font-family: var(--sans-serif);
+  font-size: 8px;
+}
+
+:is(p) em {
+  font-style: italic;
+}
+
+:is(p) strong {
+  font-weight: 700;
+}
+
+/* Sections and more 
+stuff */
+/* - - - FOOTER - - - */
+footer {
+  padding-bottom: 90px;
+  min-height: 20vh;
+}
+
+/* - - - HEADER - - - */
+.site-header {
+  display: flex;
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* then other contextual styles */
+
+/*# sourceMappingURL=site-minified.css.map */
