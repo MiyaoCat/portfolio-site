@@ -25,3 +25,22 @@ stuff */
 @import 'header';
 
 /* then other contextual styles */
+body {
+	background-color: var(--paper);
+	color: var(--ink);
+}
+
+.heading {
+	color: var(--highlight);
+	margin: 50px 0;
+}
+
+picture {
+	max-width: 500px;
+}
+
+@media (min-width:400px) {
+	picture {
+		max-width: 250px;
+	}
+}
