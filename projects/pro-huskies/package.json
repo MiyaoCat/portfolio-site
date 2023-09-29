@@ -1,0 +1,21 @@
+{
+  "name": "pro-huskies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "Watch": "nodemon"
+  },
+  "author": "miyaomix",
+  "license": "ISC",
+  "dependencies": {
+    "@contentful/rich-text-html-renderer": "^16.1.2",
+    "@contentful/rich-text-types": "^16.3.0",
+    "contentful": "^10.6.0",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  }
+}

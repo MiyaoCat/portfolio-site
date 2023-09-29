@@ -1,0 +1,74 @@
+
+html {
+	--marker: Permanent Marker, Noto Serif;
+	--sans-serif: Encode Sans, Helvetica;
+	--serif: Noto Serif Display, Old Standard TT, Times New Roman;
+
+}
+a {
+	font-family: var(--sans-serif);
+	text-transform: uppercase;
+	font-weight: 200;
+	letter-spacing: .2rem;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: var(--highlight);
+}
+
+@media (prefers-color-scheme: dark) {
+	a:hover {
+		color: var(--highlight);
+	}
+}
+
+/* Main header or banner text or similar */
+.screaming-voice {
+	font-family: var(--marker);
+	font-size: clamp(40px, 7vw, 80px);
+}
+
+/* Header text or similar */
+.loud-voice {
+	font-size: 30px;
+}
+
+/* Sub-header text or similar */
+.attention-voice {
+	font-family: var(--sans-serif);
+	font-size: 26px;
+}
+
+.alert-voice {
+	font-family: var(--sans-serif);
+	font-size: 26px;
+}
+
+/* Paragraph text or similar */
+.normal-voice {
+	font-size: 16px;
+}
+
+/* Caption text or similar */
+.calm-voice {
+	font-size: 12px;
+}
+
+/* Fine print text or similar */
+.quiet-voice {
+	font-size: 10px;
+}
+
+.whisper-voice {
+	font-size: 8px;
+}
+
+:is(p) em {
+	font-style: italic;
+}
+
+:is(p) strong {
+	font-weight: 700;
+}
+
