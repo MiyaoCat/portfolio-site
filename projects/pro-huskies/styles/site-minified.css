@@ -124,10 +124,6 @@ section:nth-of-type(odd) {
   background-color: rgba(0, 0, 0, 0.03);
 }
 
-picture img {
-  opacity: 0;
-}
-
 picture {
   background-color: var(--shadow);
 }
@@ -149,6 +145,10 @@ inner-column {
   margin-right: auto;
   margin-left: auto;
   padding: 0 5px;
+}
+
+athlete-card {
+  display: block;
 }
 
 @media (min-width: 600px) {

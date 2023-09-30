@@ -1,3 +1,15 @@
 <%- include('header.ejs') %>
 <h1 class="screaming-voice">Athletes</h1>
+
+<% athletes.forEach( function(athlete) { %>
+<athlete-card>
+
+	<picture>
+		<img src="<%=athlete.headshot%>" alt="">
+	</picture>
+	<h3 class="loud-voice"><%=athlete.name%></h3>
+	<p class="normal-voice">Height: <%=athlete.height%></p>
+	<p class="normal-voice">Weight: <%=athlete.weight%></p>
+</athlete-card>
+<%});%>
 <%- include('footer.ejs') %>
