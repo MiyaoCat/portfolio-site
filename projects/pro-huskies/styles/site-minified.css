@@ -96,13 +96,16 @@ html {
   --color: #5E321F;
   --highlight: #aadee9;
   --shadow: rgba(0,0,0,.8);
-  --corners: 10px; /* or whatevers */
+  --corners: 10px;
   --standard: 1140px;
   --tight: 800px;
   --wide: 98vw;
-  --paper: hsl(37, 32%, 92%); /* light brown */
-  --ink: black;
-  --highlight: hsl(360, 100%, 39%); /* red */
+  --paper-primary: hsl(259, 80%, 11%); /* dark purple */
+  --paper-dark: hsl(43, 35%, 3%); /* midnight */
+  --paper-alt: hsl(43%, 27%, 41); /* gold */
+  --ink: hsl(43, 27%, 41%); /* gold */
+  --ink-light: hsl(259, 100%, 70%); /* light purple */
+  --ink-dark: hsl(259, 80%, 11%); /* dark purple */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -184,6 +187,7 @@ a:hover {
 .screaming-voice {
   font-family: var(--marker);
   font-size: clamp(40px, 7vw, 80px);
+  color: var(--ink);
 }
 
 /* Header text or similar */
@@ -236,6 +240,11 @@ a:hover {
 
 /* Sections and more 
 stuff */
+athlete-card {
+  background-color: var(--paper-dark);
+  color: var(--ink-light);
+}
+
 /* - - - FOOTER - - - */
 footer {
   padding-bottom: 90px;
@@ -254,7 +263,7 @@ footer {
 
 /* then other contextual styles */
 body {
-  background-color: var(--paper);
+  background-color: var(--paper-primary);
   color: var(--ink);
 }
 

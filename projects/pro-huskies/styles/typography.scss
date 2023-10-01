@@ -3,8 +3,8 @@ html {
 	--marker: Permanent Marker, Noto Serif;
 	--sans-serif: Encode Sans, Helvetica;
 	--serif: Noto Serif Display, Old Standard TT, Times New Roman;
-
 }
+
 a {
 	font-family: var(--sans-serif);
 	text-transform: uppercase;
@@ -27,6 +27,7 @@ a:hover {
 .screaming-voice {
 	font-family: var(--marker);
 	font-size: clamp(40px, 7vw, 80px);
+	color: var(--ink);
 }
 
 /* Header text or similar */
