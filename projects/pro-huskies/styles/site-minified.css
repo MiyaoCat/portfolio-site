@@ -245,6 +245,10 @@ athlete-card {
   color: var(--ink-light);
 }
 
+.site-header ul {
+  display: flex;
+}
+
 /* - - - FOOTER - - - */
 footer {
   padding-bottom: 90px;
