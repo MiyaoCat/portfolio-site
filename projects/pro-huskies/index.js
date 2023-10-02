@@ -31,18 +31,15 @@ app.use( express.static('styles') );
 const options = {
 	renderMark: {
    	[MARKS.BOLD]: function(text) {
-   		return `<strong>${text}</strong>`;// - - - - PAGE ROUTES - - - - - - - - - - - -  
-
+   		return `<strong>${text}</strong>`;
    	}
 	},
-
 	renderNode: {
   		[BLOCKS.PARAGRAPH]: function(node, nodeContent) { 
   			return `<p class='normal-voice'>${nodeContent(node.content)}</p>`;
   		}
   }
 }
-
 
 //PAGE ROUTING
 app.get('/', function(request, response) {
@@ -59,12 +56,22 @@ app.get('/athletes', function(request, response) {
 	})
 	.then( function(data) {
 		const athleteData = data.items.map( function(item) {
+			//Get actionShot array. If actionShot is empty or does not have an array, use default value of empty array
+			const actionShots = item.fields.actionShots || [];
+			const imageUrls = actionShots.map(function(asset) {
+				return asset.fields.file.url;
+			})
+
 			return {
 				name: item.fields.name,
 				headshot: item.fields.headshot.fields.file.url,
 				height: item.fields.height,
 				weight: item.fields.weight,
 				sport: item.fields.sport,
+				position: item.fields.position,
+				actionShots: imageUrls[1],
+				yearStarted: item.fields.yearStarted,
+				yearEnded: item.fields.yearEnded
 			}
 		})
 		console.log("ATHLETE athleteData: ", athleteData);

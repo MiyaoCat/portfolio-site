@@ -5,11 +5,11 @@
 <athlete-card>
 
 	<picture>
-		<img src="<%=athlete.headshot%>" alt="">
+		<img src="<%=athlete.actionShots%>" alt="">
 	</picture>
 	<h3 class="loud-voice"><%=athlete.name%></h3>
-	<p class="normal-voice">Height: <%=athlete.height%></p>
-	<p class="normal-voice">Weight: <%=athlete.weight%></p>
+	<p class="normal-voice">Position: <%=athlete.position%></p>
+	<p class="normal-voice">Years: <%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>
 </athlete-card>
 <%});%>
 <%- include('footer.ejs') %>

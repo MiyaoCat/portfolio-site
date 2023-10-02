@@ -100,17 +100,17 @@ html {
   --standard: 1140px;
   --tight: 800px;
   --wide: 98vw;
-  --paper-primary: hsl(259, 80%, 11%); /* dark purple */
-  --paper-dark: hsl(43, 35%, 3%); /* midnight */
-  --paper-alt: hsl(43%, 27%, 41); /* gold */
-  --ink: hsl(43, 27%, 41%); /* gold */
-  --ink-light: hsl(259, 100%, 70%); /* light purple */
-  --ink-dark: hsl(259, 80%, 11%); /* dark purple */
+  --paper-primary: hsla(268, 100%, 22%, 1.00); /* dark purple */
+  --paper-dark: hsla(43, 35%, 3%, 1); /* midnight */
+  --paper-alt: hsla(43%, 27%, 41%, 1); /* gold */
+  --ink: hsla(43, 27%, 41%); /* gold */
+  --ink-light: hsla(259, 100%, 70%, 1); /* light purple */
+  --ink-dark: hsla(259, 80%, 11%, 1); /* dark purple */
 }
 
 @media (prefers-color-scheme: dark) {
   html {
-    --paper: hsl(28, 17%, 30%); /* dark brown */
+    --paper: hsla(28, 17%, 30%, 1); /* dark brown */
     --ink: white;
     --highlight: yellow;
   }
@@ -243,6 +243,7 @@ stuff */
 athlete-card {
   background-color: var(--paper-dark);
   color: var(--ink-light);
+  border-radius: var(--corners);
 }
 
 .site-header ul {
