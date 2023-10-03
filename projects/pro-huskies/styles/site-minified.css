@@ -118,17 +118,8 @@ html {
     fill: white;
   }
 }
-body * {
-  border: 1px solid lightgray;
-  padding: 4px;
-}
-
 section:nth-of-type(odd) {
   background-color: rgba(0, 0, 0, 0.03);
-}
-
-picture {
-  background-color: var(--shadow);
 }
 
 /* Structure */
@@ -244,8 +235,26 @@ athlete-card {
   background-color: var(--paper-dark);
   color: var(--ink-light);
   border-radius: var(--corners);
+  max-width: 320px;
 }
-
+@media (min-width: 700px) {
+  athlete-card {
+    min-width: 320px;
+    min-height: 445px;
+    border-radius: 0;
+    padding: 5px;
+    display: grid;
+    grid-template-rows: picture;
+    grid-template-rows-margin-left: auto;
+    grid-template-rows-margin-right: auto;
+    grid-template-rows-clip-path: polygon(0 0, 100% 0, 100% 65%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0 65%);
+    grid-template-rows-background-color: white;
+  }
+  athlete-card img {
+    clip-path: polygon(2.5% 2.5%, 97.5% 2.5%, 97.5% 67.5%, 87.5% 87.5%, 87.5% 97.5%, 17.5% 97.5%, 17.5% 87.5%, 0 67.5%);
+    min-height: 100%;
+  }
+}
 .site-header ul {
   display: flex;
 }

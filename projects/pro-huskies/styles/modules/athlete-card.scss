@@ -1,5 +1,30 @@
+
+
 athlete-card {
 	background-color: var(--paper-dark);
 	color: var(--ink-light);
 	border-radius: var(--corners);
+	max-width: 320px;
+
+	@media (min-width: 700px) {
+		min-width: 320px;
+		min-height: 445px;
+		border-radius: 0;
+		padding: 5px;	
+		display: grid;
+		grid-template-rows: auto;
+
+		& picture {
+			margin-left: auto;
+			margin-right: auto;
+			clip-path: polygon(0 0, 100% 0, 100% 65%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0 65%);
+			background-color: white;
+		}
+
+		& img {
+			clip-path: polygon(2.5% 2.5%, 97.5% 2.5%, 97.5% 63.5%, 82.5% 82.5%, 82.5% 97.5%, 17.5% 97.5%, 17.5% 82.5%, 2.5% 62.5%);
+			// position: absolute;
+			min-height: 100%;
+		}
+	}
 }
