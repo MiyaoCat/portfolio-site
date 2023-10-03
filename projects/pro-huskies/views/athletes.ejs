@@ -1,15 +1,122 @@
 <%- include('header.ejs') %>
 <h1 class="screaming-voice">Athletes</h1>
 
-<% athletes.forEach( function(athlete) { %>
-<athlete-card>
+<div class="card-grid">
+	<% athletes.forEach( function(athlete) { %>
+	<athlete-card>
+	
+		<picture>
+			<img src="<%=athlete.actionShots%>" alt="">
+		</picture>
+		<h3 class="loud-voice"><%=athlete.name%></h3>
+		<p class="normal-voice">Position: <%=athlete.position%></p>
+		<p class="normal-voice">Years: <%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>
+	</athlete-card>
+	<athlete-card>
+	
+		<picture>
+			<img src="<%=athlete.actionShots%>" alt="">
+		</picture>
+		<h3 class="loud-voice"><%=athlete.name%></h3>
+		<p class="normal-voice">Position: <%=athlete.position%></p>
+		<p class="normal-voice">Years: <%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>
+	</athlete-card>
 
-	<picture>
-		<img src="<%=athlete.actionShots%>" alt="">
-	</picture>
-	<h3 class="loud-voice"><%=athlete.name%></h3>
-	<p class="normal-voice">Position: <%=athlete.position%></p>
-	<p class="normal-voice">Years: <%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>
-</athlete-card>
-<%});%>
+		<athlete-card>
+	
+		<picture>
+			<img src="<%=athlete.actionShots%>" alt="">
+		</picture>
+		<h3 class="loud-voice"><%=athlete.name%></h3>
+		<p class="normal-voice">Position: <%=athlete.position%></p>
+		<p class="normal-voice">Years: <%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>
+	</athlete-card>
+	<athlete-card>
+	
+		<picture>
+			<img src="<%=athlete.actionShots%>" alt="">
+		</picture>
+		<h3 class="loud-voice"><%=athlete.name%></h3>
+		<p class="normal-voice">Position: <%=athlete.position%></p>
+		<p class="normal-voice">Years: <%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>
+	</athlete-card>
+
+		<athlete-card>
+	
+		<picture>
+			<img src="<%=athlete.actionShots%>" alt="">
+		</picture>
+		<h3 class="loud-voice"><%=athlete.name%></h3>
+		<p class="normal-voice">Position: <%=athlete.position%></p>
+		<p class="normal-voice">Years: <%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>
+	</athlete-card>
+	<athlete-card>
+	
+		<picture>
+			<img src="<%=athlete.actionShots%>" alt="">
+		</picture>
+		<h3 class="loud-voice"><%=athlete.name%></h3>
+		<p class="normal-voice">Position: <%=athlete.position%></p>
+		<p class="normal-voice">Years: <%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>
+	</athlete-card>
+
+		<athlete-card>
+	
+		<picture>
+			<img src="<%=athlete.actionShots%>" alt="">
+		</picture>
+		<h3 class="loud-voice"><%=athlete.name%></h3>
+		<p class="normal-voice">Position: <%=athlete.position%></p>
+		<p class="normal-voice">Years: <%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>
+	</athlete-card>
+	<athlete-card>
+	
+		<picture>
+			<img src="<%=athlete.actionShots%>" alt="">
+		</picture>
+		<h3 class="loud-voice"><%=athlete.name%></h3>
+		<p class="normal-voice">Position: <%=athlete.position%></p>
+		<p class="normal-voice">Years: <%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>
+	</athlete-card>
+
+		<athlete-card>
+	
+		<picture>
+			<img src="<%=athlete.actionShots%>" alt="">
+		</picture>
+		<h3 class="loud-voice"><%=athlete.name%></h3>
+		<p class="normal-voice">Position: <%=athlete.position%></p>
+		<p class="normal-voice">Years: <%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>
+	</athlete-card>
+	<athlete-card>
+	
+		<picture>
+			<img src="<%=athlete.actionShots%>" alt="">
+		</picture>
+		<h3 class="loud-voice"><%=athlete.name%></h3>
+		<p class="normal-voice">Position: <%=athlete.position%></p>
+		<p class="normal-voice">Years: <%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>
+	</athlete-card>
+
+		<athlete-card>
+	
+		<picture>
+			<img src="<%=athlete.actionShots%>" alt="">
+		</picture>
+		<h3 class="loud-voice"><%=athlete.name%></h3>
+		<p class="normal-voice">Position: <%=athlete.position%></p>
+		<p class="normal-voice">Years: <%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>
+	</athlete-card>
+	<athlete-card>
+	
+		<picture>
+			<img src="<%=athlete.actionShots%>" alt="">
+		</picture>
+		<h3 class="loud-voice"><%=athlete.name%></h3>
+		<p class="normal-voice">Position: <%=athlete.position%></p>
+		<p class="normal-voice">Years: <%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>
+	</athlete-card>
+	
+	<%});%>
+</div>
 <%- include('footer.ejs') %>

@@ -236,25 +236,36 @@ athlete-card {
   color: var(--ink-light);
   border-radius: var(--corners);
   max-width: 320px;
+  display: grid;
+  grid-template-columns: 1fr repeat(3 1fr);
 }
 @media (min-width: 700px) {
   athlete-card {
-    min-width: 320px;
-    min-height: 445px;
+    min-width: 280px;
+    min-height: 400px;
     border-radius: 0;
-    padding: 5px;
-    display: grid;
-    grid-template-rows: picture;
-    grid-template-rows-margin-left: auto;
-    grid-template-rows-margin-right: auto;
-    grid-template-rows-clip-path: polygon(0 0, 100% 0, 100% 65%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0 65%);
-    grid-template-rows-background-color: white;
+    padding: 10px;
+  }
+  athlete-card picture {
+    margin-left: auto;
+    margin-right: auto;
+    clip-path: polygon(0 0, 100% 0, 100% 65%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0 65%);
+    background-color: white;
+    min-width: 100%;
   }
   athlete-card img {
-    clip-path: polygon(2.5% 2.5%, 97.5% 2.5%, 97.5% 67.5%, 87.5% 87.5%, 87.5% 97.5%, 17.5% 97.5%, 17.5% 87.5%, 0 67.5%);
+    clip-path: polygon(2.5% 2.5%, 97.5% 2.5%, 97.5% 63.5%, 82.5% 82.5%, 82.5% 97.5%, 17.5% 97.5%, 17.5% 82.5%, 2.5% 62.5%);
     min-height: 100%;
   }
 }
+
+.card-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 .site-header ul {
   display: flex;
 }
