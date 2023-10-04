@@ -5,15 +5,17 @@
 	<% athletes.forEach( function(athlete) { %>
 	<athlete-card>
 		<div class="card">
-			
+
 			<div class="front">
-				<picture>
-					<img src="<%=athlete.actionShots%>" alt="">
-				</picture>
-				<h3 class="name attention-voice"><%=athlete.name%></h3>
-				<p class="position normal-voice">Quarterback</p>
-				<p class="years normal-voice"><%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>
-				<p class="social normal-voice"><a href="#">@isaiahthomas</a></p>
+				<div class="athlete-info">
+					<picture>
+						<img src="<%=athlete.actionShots%>" alt="">
+					</picture>
+					<h3 class="name attention-voice"><%=athlete.name%></h3>
+					<p class="position normal-voice">Quarterback</p>
+					<p class="years normal-voice"><%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>
+					<p class="social normal-voice"><a href="#">@isaiahthomas</a></p>
+				</div>
 			</div>
 			
 			<div class="back">
