@@ -1,0 +1,53 @@
+<%- include('header.ejs') %>
+<h1 class="screaming-voice">API Data</h1>
+	<ol>
+		<% players.forEach(function(player) { %>
+
+		<li class="normal-voice"><%=player.fname%> <%=player.lname%></li>
+		<%});%>
+	</ol>
+	
+<%- include('footer.ejs') %>
+
+<script>
+		  //RAPID API
+  // const optionsAPI = {
+  //   method: 'GET',
+  //   hostname: 'api-nba-v2.p.rapidapi.com',
+  //   port: null,
+  //   path: '/players?page=22&per_page=100',
+  //   headers: {
+  //     'X-RapidAPI-Key': 'f80c7fbedcmsh437fdc5890bce8dp15b57bjsne6ed63a690ca',
+  //     'X-RapidAPI-Host': 'free-nba.p.rapidapi.com'
+  //   }
+  // };
+  
+  // const apiRequest = http.request(optionsAPI, function (apiResponse) {
+  //   const chunks = [];
+  
+  //   apiResponse.on('data', function (chunk) {
+  //     chunks.push(chunk);
+  //   });
+  
+  //   apiResponse.on('end', function () {
+  //     const body = Buffer.concat(chunks);
+  //     const nbaStats = JSON.parse(body.toString()); // Parse the API response
+      
+  //     // Check if the API response contains a 'data' property with an array
+     
+  //       const nbaPlayerData = nbaStats.data.map(function(player) {
+  //         return {
+  //           id: player.id,
+  //           name: player.first_name + ' ' + player.last_name,
+  //           position: player.position,
+  //         	team: player.team // You can customize this based on your needs
+  //         };
+  //       });
+        
+  //       console.log(nbaPlayerData);
+  //       response.render('api', { nbaPlayerData }); // Render 'home' with nbaPlayerData
+      
+  //   });
+  // });
+  // apiRequest.end();
+</script>

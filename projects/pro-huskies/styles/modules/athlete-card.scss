@@ -48,7 +48,7 @@ athlete-card .front {
 			margin-right: auto;
 			// clip-path: polygon(0 0, 100% 0, 100% 65%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0 65%);
 			clip-path: polygon(0 0, 100% 0, 100% 75%, 90% 80%, 90% 100%, 10% 100%, 10% 80%, 0 75%);
-			background-color: white;
+			background: linear-gradient(hsla(259, 100%, 70%, 1), white);
 			min-width: 100%;
 		}
 
