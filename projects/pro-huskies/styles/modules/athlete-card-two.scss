@@ -48,6 +48,7 @@
 		}
 
 		img {
+			display: flex;
 			clip-path: polygon(2% 1.5%, 98% 1.5%, 98% 74.5%, 88% 79.5%, 88% 98.5%, 12% 98.5%, 12% 79.5%, 2% 74.5%);
 			// position: absolute;
 			min-height: 100%;
@@ -77,22 +78,18 @@
 			margin-bottom: auto;
 			min-height:100px;		
 		}
-	}
 
-	.card img {
-		display: flex;
-	}
-
-	.front {
-		display: grid;
-		grid-template-rows: 90% 8% 2%;
-		text-align: center;
-		height: 100%;
-		width: 100%;
+		.front {
+			display: grid;
+			grid-template-rows: 90% 8% 2%;
+			text-align: center;
+			height: 100%;
+			width: 100%;
+		}
 	}
 
 	athlete-card {
-		perspective: 1000px;
+		perspective: 1500px;
 	}
 
 	athlete-card:hover > .card {
@@ -105,10 +102,10 @@
 	}
 
 
-	.card .front {
+	.front{
 		width: 100%;
 		height: 100%;
-		// position: absolute;
+		position: absolute;
 		backface-visibility: hidden;
 	}
 
@@ -118,8 +115,7 @@
 		position: absolute;
 		display: flex;
 		background-color: white;
-		transform: translateY(100%) rotateY(180deg);
+		transform: rotateY(180deg);
 		backface-visibility: hidden;
-		z-index: 100;
 	}	
 }

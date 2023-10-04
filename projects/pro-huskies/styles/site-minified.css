@@ -229,86 +229,71 @@ a:hover {
 
 /* Sections and more 
 stuff */
-.card {
+.card .front {
   background-color: var(--paper-dark);
   color: var(--ink-light);
   border-radius: var(--corners);
   max-width: 320px;
+  display: grid;
+  grid-template-rows: 90% 8% 2%;
   text-align: center;
+  position: relative;
   font-style: italic;
-  padding: 10px 0;
 }
-.card p, .card h3 {
+.card .front p, .card .front h3 {
   align-self: center;
-  padding: 5px;
 }
-.card img {
-  display: none;
+.card .front .position {
+  position: absolute;
+  writing-mode: vertical-lr;
+  top: 70%;
+  left: 4%;
+  margin-top: auto;
+  margin-bottom: auto;
+  min-height: 100px;
 }
-.card .back {
-  display: none;
+.card .front .position p {
+  font-size: 15px;
+}
+.card .front .years {
+  position: absolute;
+  writing-mode: vertical-lr;
+  top: 70%;
+  right: 4%;
+  margin-top: auto;
+  margin-bottom: auto;
+  min-height: 100px;
 }
 
 @media (min-width: 500px) {
-  athlete-card {
-    display: block;
-    height: 550px;
+  .card .front {
     width: 400px;
-    text-align: center;
-  }
-  .card {
-    height: 100%;
-    width: 100%;
+    height: 550px;
     border-radius: 0;
-    position: relative;
     padding: 10px;
-    transition: transform 1s ease;
-    transform-style: preserve-3d;
+    transform: rotateY(0deg);
   }
-  .card picture {
+  .card .front picture {
     margin-left: auto;
     margin-right: auto;
     clip-path: polygon(0 0, 100% 0, 100% 75%, 90% 80%, 90% 100%, 10% 100%, 10% 80%, 0 75%);
     background: linear-gradient(hsl(259, 100%, 70%), white);
     min-width: 100%;
   }
-  .card img {
+  .card .front img {
     clip-path: polygon(2% 1.5%, 98% 1.5%, 98% 74.5%, 88% 79.5%, 88% 98.5%, 12% 98.5%, 12% 79.5%, 2% 74.5%);
     min-height: 100%;
   }
-  .card .position {
-    position: absolute;
-    writing-mode: vertical-lr;
-    top: 70%;
-    left: 4%;
-    margin-top: auto;
-    margin-bottom: auto;
-    min-height: 100px;
-  }
-  .card .position p {
-    font-size: 15px;
-  }
-  .card .years {
-    position: absolute;
-    writing-mode: vertical-lr;
-    top: 70%;
-    right: 4%;
-    margin-top: auto;
-    margin-bottom: auto;
-    min-height: 100px;
-  }
-  .card img {
-    display: flex;
-  }
-  .front {
-    display: grid;
-    grid-template-rows: 90% 8% 2%;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-  }
   athlete-card {
     perspective: 1000px;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+  }
+  .card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
   }
   athlete-card:hover > .card {
     cursor: pointer;
@@ -317,22 +302,24 @@ stuff */
   athlete-card:hover .back:hover {
     transform: rotateY(0deg);
   }
-  .card .front {
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-  }
-  .card .back {
+  .front, .back {
     width: 100%;
     height: 100%;
     position: absolute;
-    display: flex;
-    background-color: white;
-    transform: translateY(100%) rotateY(180deg);
     backface-visibility: hidden;
-    z-index: 100;
+  }
+  .back {
+    background-color: grey;
+    transform: translateY(-100%) rotateY(180deg);
   }
 }
+.card-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 .site-header ul {
   display: flex;
 }
