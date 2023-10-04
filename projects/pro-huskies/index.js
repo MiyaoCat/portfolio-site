@@ -1,12 +1,15 @@
 import express from 'express';
 import { URL } from 'url';
 import path from 'path';
+import http from 'https';
 
 import contentful from 'contentful';
 import {documentToHtmlString} from '@contentful/rich-text-html-renderer';
 import richTextTypes from '@contentful/rich-text-types';
 
 const __dirname = new URL('.', import.meta.url).pathname;
+
+
 
 const client = contentful.createClient({
   space: 'ckkj5gusaa5k',
@@ -43,12 +46,53 @@ const options = {
 
 //PAGE ROUTING
 app.get('/', function(request, response) {
-	response.render('home');
-})
+  //RAPID API
+  const optionsAPI = {
+    method: 'GET',
+    hostname: 'free-nba.p.rapidapi.com',
+    port: null,
+    path: '/players?page=0&per_page=25',
+    headers: {
+      'X-RapidAPI-Key': 'f80c7fbedcmsh437fdc5890bce8dp15b57bjsne6ed63a690ca',
+      'X-RapidAPI-Host': 'free-nba.p.rapidapi.com'
+    }
+  };
+  
+  const apiRequest = http.request(optionsAPI, function (apiResponse) {
+    const chunks = [];
+  
+    apiResponse.on('data', function (chunk) {
+      chunks.push(chunk);
+    });
+  
+    apiResponse.on('end', function () {
+      const body = Buffer.concat(chunks);
+      const nbaStatsResponse = JSON.parse(body.toString()); // Parse the API response
+      
+      // Check if the API response contains a 'data' property with an array
+      if (nbaStatsResponse && Array.isArray(nbaStatsResponse.data)) {
+        const nbaPlayerData = nbaStatsResponse.data.map(function(player) {
+          return {
+            id: player.id,
+            name: player.first_name + ' ' + player.last_name,
+            position: player.position,
+            team: player.team // You can customize this based on your needs
+          };
+        });
+        
+        console.log(nbaPlayerData);
+        response.render('home', { nbaPlayerData }); // Render 'home' with nbaPlayerData
+      } else {
+        console.error('API response does not have the expected format.');
+        // Handle the error or provide a default response
+        response.status(500).send('Internal Server Error');
+      }
+    });
+  });
+  
+  apiRequest.end();
+});
 
-app.get('/about', function(request, response) {
-	response.render('about');
-})
 
 app.get('/athletes', function(request, response) {
 	client.getEntries({

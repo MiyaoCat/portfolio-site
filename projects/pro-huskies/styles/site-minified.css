@@ -231,30 +231,57 @@ a:hover {
 
 /* Sections and more 
 stuff */
-athlete-card {
+athlete-card .front {
   background-color: var(--paper-dark);
   color: var(--ink-light);
   border-radius: var(--corners);
   max-width: 320px;
   display: grid;
-  grid-template-columns: 1fr repeat(3 1fr);
+  grid-template-rows: 90% 8% 2%;
+  text-align: center;
+  position: relative;
+  font-style: italic;
+}
+athlete-card .front p, athlete-card .front h3 {
+  align-self: center;
+}
+athlete-card .front .position {
+  position: absolute;
+  writing-mode: vertical-lr;
+  top: 70%;
+  left: 4%;
+  margin-top: auto;
+  margin-bottom: auto;
+  min-height: 100px;
+}
+athlete-card .front .position p {
+  font-size: 15px;
+}
+athlete-card .front .years {
+  position: absolute;
+  writing-mode: vertical-lr;
+  top: 70%;
+  right: 4%;
+  margin-top: auto;
+  margin-bottom: auto;
+  min-height: 100px;
 }
 @media (min-width: 700px) {
-  athlete-card {
-    min-width: 280px;
-    min-height: 400px;
+  athlete-card .front {
+    width: 400px;
+    height: 550px;
     border-radius: 0;
     padding: 10px;
   }
-  athlete-card picture {
+  athlete-card .front picture {
     margin-left: auto;
     margin-right: auto;
-    clip-path: polygon(0 0, 100% 0, 100% 65%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0 65%);
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 90% 80%, 90% 100%, 10% 100%, 10% 80%, 0 75%);
     background-color: white;
     min-width: 100%;
   }
-  athlete-card img {
-    clip-path: polygon(2.5% 2.5%, 97.5% 2.5%, 97.5% 63.5%, 82.5% 82.5%, 82.5% 97.5%, 17.5% 97.5%, 17.5% 82.5%, 2.5% 62.5%);
+  athlete-card .front img {
+    clip-path: polygon(2% 1.5%, 98% 1.5%, 98% 74.5%, 88% 79.5%, 88% 98.5%, 12% 98.5%, 12% 79.5%, 2% 74.5%);
     min-height: 100%;
   }
 }
