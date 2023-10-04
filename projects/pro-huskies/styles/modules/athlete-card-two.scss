@@ -1,0 +1,125 @@
+.card {
+	background-color: var(--paper-dark);
+	color: var(--ink-light);
+	border-radius: var(--corners);
+	max-width: 320px;
+	text-align: center;
+	font-style: italic;
+	padding: 10px 0;
+	
+	p, h3 {
+		align-self: center;
+		padding: 5px;
+	}
+
+	img {
+		display: none;
+	}
+
+	.back {
+		display: none;
+	}
+}
+
+@media (min-width: 500px) {
+	athlete-card {
+		display: block;
+		height: 550px;
+		width: 400px;
+		text-align: center;
+	}
+
+	.card {
+		height: 100%;
+		width: 100%;
+		border-radius: 0;
+		position: relative;
+		padding: 10px;
+		transition: transform 1s ease;
+		transform-style: preserve-3d;
+		
+		picture {
+			margin-left: auto;
+			margin-right: auto;
+			// clip-path: polygon(0 0, 100% 0, 100% 65%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0 65%);
+			clip-path: polygon(0 0, 100% 0, 100% 75%, 90% 80%, 90% 100%, 10% 100%, 10% 80%, 0 75%);
+			background: linear-gradient(hsla(259, 100%, 70%, 1), white);
+			min-width: 100%;
+		}
+
+		img {
+			clip-path: polygon(2% 1.5%, 98% 1.5%, 98% 74.5%, 88% 79.5%, 88% 98.5%, 12% 98.5%, 12% 79.5%, 2% 74.5%);
+			// position: absolute;
+			min-height: 100%;
+		}
+
+		.position {
+			position: absolute;
+			writing-mode: vertical-lr;
+			top: 70%;
+			left: 4%;
+			// border: 1px solid red;
+			margin-top: auto;
+			margin-bottom: auto;
+			min-height:100px;
+
+			p {
+				font-size: 15px;
+			}
+		}
+
+		.years {
+			position: absolute;
+			writing-mode: vertical-lr;
+			top: 70%;
+			right: 4%;
+			margin-top: auto;
+			margin-bottom: auto;
+			min-height:100px;		
+		}
+	}
+
+	.card img {
+		display: flex;
+	}
+
+	.front {
+		display: grid;
+		grid-template-rows: 90% 8% 2%;
+		text-align: center;
+		height: 100%;
+		width: 100%;
+	}
+
+	athlete-card {
+		perspective: 1000px;
+	}
+
+	athlete-card:hover > .card {
+		cursor: pointer;
+		transform: rotateY(180deg);
+	}
+
+	athlete-card:hover .back:hover {
+		transform: rotateY(0deg);
+	}
+
+
+	.card .front {
+		width: 100%;
+		height: 100%;
+		// position: absolute;
+		backface-visibility: hidden;
+	}
+
+	.card .back {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		display: flex;
+		background-color: white;
+		transform: translateY(100%) rotateY(180deg);
+		backface-visibility: hidden;
+		z-index: 100;
+	}	
+}

@@ -4,49 +4,23 @@
 <div class="card-grid">
 	<% athletes.forEach( function(athlete) { %>
 	<athlete-card>
-		<div class="front">
-			<picture>
-				<img src="<%=athlete.actionShots%>" alt="">
-			</picture>
-			<h3 class="name attention-voice"><%=athlete.name%></h3>
-			<p class="position normal-voice">Quarterback</p>
-			<p class="years normal-voice"><%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>
-			<p class="social normal-voice"><a href="#">@isaiahthomas</a></p>
-		</div>
-
-		<div class="back">
+		<div class="card">
 			
+			<div class="front">
+				<picture>
+					<img src="<%=athlete.actionShots%>" alt="">
+				</picture>
+				<h3 class="name attention-voice"><%=athlete.name%></h3>
+				<p class="position normal-voice">Quarterback</p>
+				<p class="years normal-voice"><%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>
+				<p class="social normal-voice"><a href="#">@isaiahthomas</a></p>
+			</div>
+			
+			<div class="back">
+				<p class="attention-voice">Back</p>
+			</div>
+
 		</div>
-	</athlete-card>
-
-	<athlete-card>
-		<picture>
-			<img src="<%=athlete.actionShots%>" alt="">
-		</picture>
-		<h3 class="name attention-voice"><%=athlete.name%></h3>
-		<p class="position normal-voice">Shooting Guard</p>
-		<p class="years normal-voice"><%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>
-		<p class="social normal-voice">@isaiahthomas</p>
-	</athlete-card>
-
-	<athlete-card>
-		<picture>
-			<img src="<%=athlete.actionShots%>" alt="">
-		</picture>
-		<h3 class="name attention-voice"><%=athlete.name%></h3>
-		<p class="position normal-voice">Center</p>
-		<p class="years normal-voice"><%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>
-		<p class="social normal-voice">@isaiahthomas</p>
-	</athlete-card>
-
-	<athlete-card>
-		<picture>
-			<img src="<%=athlete.actionShots%>" alt="">
-		</picture>
-		<h3 class="name attention-voice"><%=athlete.name%></h3>
-		<p class="position normal-voice">Quarterback</p>
-		<p class="years normal-voice"><%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>
-		<p class="social normal-voice">@isaiahthomas</p>
 	</athlete-card>
 
 	<%});%>

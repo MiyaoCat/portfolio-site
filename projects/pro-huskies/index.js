@@ -88,6 +88,7 @@ app.get('/details', function(request, response) {
 	response.render('details');
 })
 
+
 app.get('/api', function(request, response) {
   axios.get(apiUrl)
   	.then( function(res) {

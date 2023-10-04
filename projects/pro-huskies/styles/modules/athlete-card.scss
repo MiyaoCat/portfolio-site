@@ -1,4 +1,4 @@
-athlete-card .front {
+.card .front {
 	background-color: var(--paper-dark);
 	color: var(--ink-light);
 	border-radius: var(--corners);
@@ -6,7 +6,7 @@ athlete-card .front {
 	display: grid;
 	grid-template-rows: 90% 8% 2%;
 	text-align: center;
-	position: relative;
+	// position: relative;
 	font-style: italic;
 	p, h3 {
 		align-self: center;
@@ -36,14 +36,17 @@ athlete-card .front {
 		margin-bottom: auto;
 		min-height:100px;		
 	}
+}
 
-	@media (min-width: 700px) {
+@media (min-width: 500px) {
+	.card .front {
 		width: 400px;
 		height: 550px;
 		border-radius: 0;
 		padding: 10px;	
+		transform: rotateY(0deg);
 
-		& picture {
+		picture {
 			margin-left: auto;
 			margin-right: auto;
 			// clip-path: polygon(0 0, 100% 0, 100% 65%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0 65%);
@@ -52,14 +55,49 @@ athlete-card .front {
 			min-width: 100%;
 		}
 
-		& img {
+		img {
 			clip-path: polygon(2% 1.5%, 98% 1.5%, 98% 74.5%, 88% 79.5%, 88% 98.5%, 12% 98.5%, 12% 79.5%, 2% 74.5%);
 			// position: absolute;
 			min-height: 100%;
 		}
 	}
-}
+	
+	athlete-card {
+		// position: absolute;
+		perspective: 1000px;
+		box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+	}
+	
+	.card {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		transition: transform .5s ease;
+		// transform-style: preserve-3d;
+	}
 
+	athlete-card:hover > .card {
+		cursor: pointer;
+		transform: rotateY(180deg);
+	}
+
+	athlete-card:hover .back:hover {
+		transform: rotateY(0deg);
+	}
+
+
+	.front, .back {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		// backface-visibility: hidden;
+	}
+
+	.back {
+		background-color: grey;
+		transform: rotateY(180deg);
+	}
+}
 .card-grid {
 	display: flex;
 	flex-direction: row;
