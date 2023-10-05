@@ -1,57 +1,62 @@
 <%- include('header.ejs') %>
-<h1 class="screaming-voice">Athletes</h1>
-
-<div class="card-grid">
-	<% athletes.forEach( function(athlete) { %>
-	<athlete-card>
-		<div class="card">
-
-			<div class="front">
-				<div class="athlete-info">
+<inner-column>
+	<h1 class="screaming-voice">Athletes</h1>
+	
+	<div class="card-grid">
+		<% athletes.forEach( function(athlete) { %>
+		<athlete-card>
+			<div class="card">
+	
+				<div class="front">
+					<div class="athlete-info">
+						<picture class="headshot">
+							<img src="<%=athlete.headshot%>" alt="">
+						</picture>
+						<picture class="action-shot">
+							<img src="<%=athlete.actionShots%>" alt="">
+	
+						</picture>
+						<picture class="logo">
+							<img src="assets/uw-logo.png" alt="">
+						</picture>
+						<h3 class="name attention-voice"><%=athlete.name%></h3>
+						<p class="position calm-voice"><%=athlete.position%></p>
+						<p class="years calm-voice"><%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>
+						
+					</div>
+				</div>
+				
+				<div class="back">				
 					<picture class="headshot">
 						<img src="<%=athlete.headshot%>" alt="">
-					</picture>
-					<picture class="action-shot">
-						<img src="<%=athlete.actionShots%>" alt="">
-
 					</picture>
 					<picture class="logo">
 						<img src="assets/uw-logo.png" alt="">
 					</picture>
 					<h3 class="name attention-voice"><%=athlete.name%></h3>
-					<p class="position calm-voice"><%=athlete.position%></p>
-					<p class="years calm-voice"><%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>
-					
+					<div class="personal-info">
+						<p class="quiet-voice"><strong>Born:</strong> <%=athlete.birthDate%> in <%=athlete.birthPlace%></p>
+						<p class="quiet-voice"><strong>High School:</strong> <%=athlete.highSchool%></p>
+						<p class="quiet-voice"><strong>Height:</strong> <%=athlete.height%></p>
+						<p class="quiet-voice"><strong>Weight:</strong> <%=athlete.weight%> lbs</p>
+						<p class="quiet-voice"><strong>Drafted:</strong> Round <%=athlete.draftRound%> - Pick <%=athlete.draftPick%></p>
+						<p class="quiet-voice"><%=athlete.draftTeam%></p>
+					</div>
+	
+					<div class="college">
+						<p class="normal-voice"><strong>College Stats</strong></p>
+						<%-athlete.collegeStats%>
+						<%-athlete.summary%>
+
+						<p class="quiet-voice"><%-athlete.collegeAccolades%></p>
+					</div>
 				</div>
 			</div>
-			
-			<div class="back">				
-				<picture class="headshot">
-					<img src="<%=athlete.headshot%>" alt="">
-				</picture>
-				<picture class="logo">
-					<img src="assets/uw-logo.png" alt="">
-				</picture>
-				<h3 class="name attention-voice"><%=athlete.name%></h3>
-				<div class="personal-info">
-					<p class="quiet-voice"><strong>Born:</strong> <%=athlete.birthDate%> in <%=athlete.birthPlace%></p>
-					<p class="quiet-voice"><strong>High School:</strong> <%=athlete.highSchool%></p>
-					<p class="quiet-voice"><strong>Height:</strong> <%=athlete.height%></p>
-					<p class="quiet-voice"><strong>Weight:</strong> <%=athlete.weight%> lbs</p>
-					<p class="quiet-voice"><strong>Drafted:</strong> Round <%=athlete.draftRound%> - Pick <%=athlete.draftPick%></p>
-					<p class="quiet-voice"><%=athlete.draftTeam%></p>
-				</div>
-
-				<div class="college">
-					<%-athlete.collegeStats%>
-					<%-athlete.summary%>
-				</div>
-			</div>
-		</div>
-
-		<a href="">More Info</a>
-	</athlete-card>
-
-	<%});%>
-</div>
+	
+			<a href="">More Info</a>
+		</athlete-card>
+	
+		<%});%>
+	</div>
+</inner-column>
 <%- include('footer.ejs') %>

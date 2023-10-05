@@ -48,7 +48,7 @@ const options = {
   		},
   		[BLOCKS.TABLE]: function(node, nodeContent) {
 			  const customTableStyles = `
-			    <table class='custom-table'>
+			    <table class='stats-table'>
 			      ${nodeContent(node.content)}
 			    </table>
 			  `;
@@ -115,6 +115,7 @@ app.get('/athletes', function(request, response) {
 					draftTeam: item.fields.draftTeam,
 					actionShots: imageUrls[1],
 					collegeStats: collegeRichText,
+					collegeAccolades: item.fields.collegeAccolades,
 					proStats: proRichText,
 					activePlayer: item.fields.activePlayer,
 					instagram: item.fields.instagram,

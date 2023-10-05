@@ -26,11 +26,11 @@ stuff */
 
 /* then other contextual styles */
 body {
-	background-color: var(--paper-primary);
+	background-color: $paper-primary;
 }
 
 .heading {
-	color: var(--highlight);
+	color: $highlight;
 	margin: 50px 0;
 }
 

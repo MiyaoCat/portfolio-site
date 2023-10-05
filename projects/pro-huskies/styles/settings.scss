@@ -1,27 +1,27 @@
 
-html {
-	--black: #111111;
-	--white: #FFF;
+$black: #111111;
+$white: #FFF;
 
-	--color: #5E321F;
-	--highlight: #aadee9;
+$color: #5E321F;
+$highlight: #aadee9;
 
-	--shadow: rgba(0,0,0,.8);
+$shadow: rgba(0,0,0,.8);
 
-	--corners: 10px; 
+$corners: 10px; 
 
-	--standard: 1140px;
-	--tight: 800px;
-	--wide: 98vw;
+$standard: 1140px;
+$tight: 800px;
+$wide: 98vw;
 
-	--paper-primary: hsla(268, 100%, 22%, 1.00); /* dark purple */
-	--paper-dark: hsla(43, 35%, 3%, 1); /* midnight */
-	--paper-alt: hsla(43%, 27%, 41%, 1); /* gold */
+$paper-primary: hsla(268, 100%, 22%, 1.00); /* dark purple */
+$paper-dark: hsla(43, 35%, 3%, 1); /* midnight */
+$paper-alt: hsla(43%, 27%, 41%, 1); /* gold */
 
-	--ink: hsla(43, 27%, 41%); /* gold */
-	--ink-light: hsla(259, 100%, 70%, 1); /* light purple */
-	--ink-dark: hsla(259, 80%, 11%, 1); /* dark purple */
-}
+$ink: hsla(43, 27%, 41%); /* gold */
+$ink-light: hsla(259, 100%, 70%, 1); /* light purple */
+$ink-dark: hsla(259, 80%, 11%, 1); /* dark purple */
+
+
 
 @media (prefers-color-scheme: dark) {
 	html {
@@ -30,7 +30,4 @@ html {
 		--highlight: yellow;
 	}
 
-	.logo {
-		fill: white;
-	}
 }

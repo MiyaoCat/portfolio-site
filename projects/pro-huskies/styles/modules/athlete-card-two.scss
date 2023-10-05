@@ -155,14 +155,21 @@ athlete-card {
 			max-width: 100%;
 		}
 
-		.custom-table {
+		.stats-table {
+			border: 2px solid $ink-dark;
+
 			td, th {
-				padding: 1px;
+				padding: 1.5px;
+				text-align: center;
 			}
 			td p, th p {
 				font-size: 12px;
 			}
 			
+			th {
+				border-bottom: 1px solid $ink-dark;
+				padding-top: 2px;
+			}
 		}
 	}
 	
