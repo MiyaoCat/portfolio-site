@@ -13,10 +13,14 @@
 					</picture>
 					<picture class="action-shot">
 						<img src="<%=athlete.actionShots%>" alt="">
+
+					</picture>
+					<picture class="logo">
+						<img src="assets/uw-logo.png" alt="">
 					</picture>
 					<h3 class="name attention-voice"><%=athlete.name%></h3>
-					<p class="position normal-voice"><%=athlete.position%></p>
-					<p class="years normal-voice"><%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>
+					<p class="position calm-voice"><%=athlete.position%></p>
+					<p class="years calm-voice"><%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>
 					
 				</div>
 			</div>
@@ -25,12 +29,17 @@
 				<picture class="headshot">
 					<img src="<%=athlete.headshot%>" alt="">
 				</picture>
+				<picture class="logo">
+					<img src="assets/uw-logo.png" alt="">
+				</picture>
 				<h3 class="name attention-voice"><%=athlete.name%></h3>
 				<div class="personal-info">
-					<p class="calm-voice"><strong>Born:</strong> <%=athlete.birthDate%></p>
-					<p class="calm-voice"><strong>Height:</strong> <%=athlete.height%></p>
-					<p class="calm-voice"><strong>Weight:</strong> <%=athlete.weight%></p>
-					<p class="calm-voice"><strong>Drafted:</strong> Round <%=athlete.draftRound%> - Pick <%=athlete.draftPick%> (<%=athlete.overrall%> Overrall)</p>
+					<p class="quiet-voice"><strong>Born:</strong> <%=athlete.birthDate%> in <%=athlete.birthPlace%></p>
+					<p class="quiet-voice"><strong>High School:</strong> <%=athlete.highSchool%></p>
+					<p class="quiet-voice"><strong>Height:</strong> <%=athlete.height%></p>
+					<p class="quiet-voice"><strong>Weight:</strong> <%=athlete.weight%> lbs</p>
+					<p class="quiet-voice"><strong>Drafted:</strong> Round <%=athlete.draftRound%> - Pick <%=athlete.draftPick%></p>
+					<p class="quiet-voice"><%=athlete.draftTeam%></p>
 				</div>
 
 				<div class="college">

@@ -45,7 +45,15 @@ const options = {
 	renderNode: {
   		[BLOCKS.PARAGRAPH]: function(node, nodeContent) { 
   			return `<p class='normal-voice'>${nodeContent(node.content)}</p>`;
-  		}
+  		},
+  		[BLOCKS.TABLE]: function(node, nodeContent) {
+			  const customTableStyles = `
+			    <table class='custom-table'>
+			      ${nodeContent(node.content)}
+			    </table>
+			  `;
+			  return customTableStyles;
+			}
   }
 }
 
