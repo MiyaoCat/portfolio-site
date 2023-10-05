@@ -15,13 +15,19 @@ athlete-card {
 		align-self: center;
 	}
 
-	picture {
-		display: none;
+	picture.headshot {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 150px;
 	}
 
-	* {
-		padding: 5px;
+	picture.action-shot {
+		display: none;
 	}
+}
+
+.back {
+	display: none;
 }
 
 @media (min-width: 700px) {
@@ -29,7 +35,6 @@ athlete-card {
 		max-width: 320px;
 		height: 500px;
 		margin-left: 2em;
-		border: 2px solid blue;
 		padding: 5px;
 	}
 
@@ -43,25 +48,28 @@ athlete-card {
 
 	athlete-card:hover > .card {
 		curser: pointer;
-		transform: rotateY(180deg);
+		// transform: rotateY(180deg);
 	}
 
 	.athlete-info {
 		height: 100%;
 		display: grid;
-		grid-template-rows: 90% 8% 2%;
+		grid-template-rows: 92% 8%;
 		padding: 10px;
 		border-radius: 0;
 		position: relative;
-		border: 1px solid yellow;
 
-		picture {
+		picture.headshot {
+			display: none;
+		}
+		picture.action-shot {
 			display: block;
 			margin-left: auto;
 			margin-right: auto;
 			clip-path: polygon(0 0, 100% 0, 100% 75%, 90% 80%, 90% 100%, 10% 100%, 10% 80%, 0 75%);
 			background: linear-gradient(hsla(259, 100%, 70%, 1), white);
 			min-width: 100%;
+			padding: .5px; //makes border looks more uniform
 		}
 
 		img {
@@ -98,17 +106,27 @@ athlete-card {
 	.front, .back {
 		width: 100%;
 		height: 100%;
-		position: absolute;
-		backface-visibility: hidden;
+		// position: absolute;
+		// backface-visibility: hidden;
 	}
 
 	.back {
+		display: flex;
+		flex-direction: column;
 		padding: 10px;
 		// max-width: 320px;
-		color: red;
-		background-color: white;
-		border: 2px solid red;
-		transform: rotateY(180deg);
+		background-color: grey;
+		// transform: rotateY(180deg);
+
+		.headshot {
+			max-width: 150px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.college {
+			max-width: 100%;
+		}
 	}
 	
 }
