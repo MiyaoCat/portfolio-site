@@ -118,7 +118,7 @@ app.get('/athletes', function(request, response) {
 					overrall: item.fields.overrall,
 					draftYear: item.fields.draftYear,
 					draftTeam: item.fields.draftTeam,
-					actionShots: imageUrls[1],
+					actionShots: imageUrls[0],
 					collegeStats: collegeRichText,
 					collegeAccolades: item.fields.collegeAccolades,
 					proStats: proRichText,
