@@ -1,4 +1,5 @@
 athlete-card {
+	display: block;
 	width: 300px;
 }
 
@@ -11,7 +12,7 @@ athlete-card {
 	flex-direction: column;
 	text-align: center;
 	font-style: italic;
-	box-shadow: 2px 2px 5px black;
+	box-shadow: 0 0 20px -10px white;
 
 	p, h3 {
 		align-self: center;
@@ -36,7 +37,6 @@ athlete-card {
 	athlete-card {
 		width: 350px;
 		height: 500px;
-		margin-left: 2em;
 		padding: 5px;
 		perspective: 1000px;
 	}
@@ -54,11 +54,15 @@ athlete-card {
 		transform: rotateY(180deg);
 	}
 
+	athlete-card.hovered > .card {
+		transform: rotateY(180deg);
+	}
+	
 	.athlete-info {
 		height: 100%;
 		display: grid;
 		grid-template-rows: 92% 8%;
-		row-gap: 3px;
+		row-gap: 5px;
 		padding: 10px;
 		border-radius: 0;
 		position: relative;

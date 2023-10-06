@@ -127,6 +127,7 @@ inner-column {
 .card-grid {
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 @media (min-width: 600px) {
@@ -210,6 +211,7 @@ a:hover {
 /* Sections and more 
 stuff */
 athlete-card {
+  display: block;
   width: 300px;
 }
 
@@ -222,7 +224,7 @@ athlete-card {
   flex-direction: column;
   text-align: center;
   font-style: italic;
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 0 0 20px -10px white;
 }
 .athlete-info p, .athlete-info h3 {
   align-self: center;
@@ -244,7 +246,6 @@ athlete-card {
   athlete-card {
     width: 350px;
     height: 500px;
-    margin-left: 2em;
     padding: 5px;
     perspective: 1000px;
   }
@@ -259,11 +260,14 @@ athlete-card {
     curser: pointer;
     transform: rotateY(180deg);
   }
+  athlete-card.hovered > .card {
+    transform: rotateY(180deg);
+  }
   .athlete-info {
     height: 100%;
     display: grid;
     grid-template-rows: 92% 8%;
-    row-gap: 3px;
+    row-gap: 5px;
     padding: 10px;
     border-radius: 0;
     position: relative;

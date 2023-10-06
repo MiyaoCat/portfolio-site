@@ -2,108 +2,44 @@
 <inner-column>
 	<h1 class="screaming-voice">Athletes</h1>
 	
-	<div class="card-grid">
+	<ul class="card-grid">
 		<% athletes.forEach( function(athlete) { %>
-		<athlete-card data-sport=<%=athlete.sport%>>
-			<div class="card">
-	
-				<div class="front">
-					<div class="athlete-info">
-						<picture class="headshot">
-							<img src="<%=athlete.headshot%>" alt="">
-						</picture>
 
-						<picture class="action-shot">
-							<img src="<%=athlete.actionShots%>" alt="">
-						</picture>
+			<li data-sport=<%=athlete.sport%>>
+				<%- include('athlete-card.ejs', {athlete}) %>
 
-						<picture class="logo">
-							<img src="assets/logos/uw-logo.png" alt="">
-						</picture>
+				<a href="">More Info</a>
+				<button id='flipper'>Keep Flipped</button>
+			</li>
 
-						<h3 class="name attention-voice"><%=athlete.firstName%> <%=athlete.lastName%></h3>
-						<p class="position calm-voice"><%=athlete.position%></p>
-						<p class="years calm-voice"><%=athlete.yearStarted%> - <%=athlete.yearEnded%></p>						
-					</div>
-				</div>
-				
-				<div class="back">				
-					<picture class="headshot">
-						<img src="<%=athlete.headshot%>" alt="">
-					</picture>
-
-					<picture class="logo-back">
-						<img src="assets/logos/uw-logo.png" alt="">
-					</picture>
-					
-					<h3 class="name attention-voice"><%=athlete.firstName%> <%=athlete.lastName%></h3>
-					
-					<div class="personal-info">
-						<p class="quiet-voice">
-							<strong>Born:</strong> <%=athlete.birthDate%>
-						</p> 
-						
-						<p class="quiet-voice"><%=athlete.birthPlace%></p>
-						
-						<p class="quiet-voice">
-							<strong>High School:</strong> <%=athlete.highSchool%>
-						</p>
-						
-						<p class="quiet-voice">
-							<strong>Ht:</strong> <%=athlete.height%> 
-							<strong>Wt:</strong> <%=athlete.weight%> lbs
-						</p>
-
-						<p class="quiet-voice">
-							<strong>Drafted:</strong> Round <%=athlete.draftRound%> - Pick <%=athlete.draftPick%>
-						</p>
-
-						<p class="quiet-voice"><%=athlete.draftTeam%></p>
-					</div>
-					
-					<div class="accolades">
-						<p class="quiet-voice"><strong>Awards</strong></p>
-
-						<% athlete.collegeAccolades.forEach(function(accolade) { %>
-							<p class="quiet-voice"><%-accolade %></p>			    
-						<% }); %>
-					</div>
-					
-					<div class="socials">
-						<div class="instagram">
-							<img class="social-icon" src="assets/logos/instagram-logo.svg" alt="">
-
-							<a class="quiet-voice" href="https://instagram.com/<%=athlete.instagram%>" target="_instagram">
-								@<%=athlete.instagram%>
-							</a>
-						</div>
-
-						<div class="twitter">
-							<img class="social-icon" src="assets/logos/twitter-logo.svg" alt="">
-
-							<a class="quiet-voice" href="https://twitter.com/<%=athlete.twitter%>" target="_twitter">
-								@<%=athlete.twitter%>
-							</a>
-						</div>
-					</div>
-
-					<div class="college">
-						<p class="normal-voice"><strong>College Stats</strong></p>
-						<%-athlete.collegeStats%>
-					</div>
-					
-					<div class="summary">
-						<%-athlete.summary%>
-					</div>
-				
-				</div>
-
-			</div>			
-			
-			<a href="">More Info</a>
-		</athlete-card>
-	
 		<%});%>
-	</div>
+	</ul>
 </inner-column>
 <%- include('footer.ejs') %>
+
+<script>
+	const $athleteCard = document.querySelectorAll('athlete-card');
+	const $button = document.querySelectorAll('button');
+
+	$button.forEach( function($button, index) {
+		let isFlipped = false;	
+		
+		$button.addEventListener('click', function(event) {
+			$athleteCard[index].classList.toggle('hovered');
+			this.innerText = 'flip back';
+
+			if (isFlipped) {
+				this.innerText = 'Keep Flipped';
+			} else {
+				this.innerText = 'Flip Back';
+			}
+
+			isFlipped = !isFlipped;
+		});
+	});
+
+
+	
+  
+
+</script>
