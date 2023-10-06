@@ -98,6 +98,10 @@ app.get('/athletes', function(request, response) {
 				const proRichText = renderRichText('proStats', options);
 				const summaryRichText = renderRichText('summary', options);
 
+				const awards = item.fields.awards2 || [];
+				const awardsList = awards.map(function(rings) {
+					return rings.fie
+				})
 				return {
 					name: item.fields.name,
 					headshot: item.fields.headshot.fields.file.url,
@@ -123,7 +127,8 @@ app.get('/athletes', function(request, response) {
 					twitter: item.fields.twitter,
 					yearStarted: item.fields.yearStarted,
 					yearEnded: item.fields.yearEnded,
-					summary: summaryRichText
+					summary: summaryRichText,
+					awards2: item.fields.awards2,
 				};
 			});
 			console.log("ATHLETE: ", athleteData);
