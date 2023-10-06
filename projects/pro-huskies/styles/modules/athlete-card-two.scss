@@ -73,7 +73,7 @@ athlete-card {
 			clip-path: polygon(0 0, 100% 0, 100% 75%, 90% 80%, 90% 100%, 10% 100%, 10% 80%, 0 75%);
 			background: linear-gradient(hsla(259, 100%, 70%, 1), white);
 			min-width: 100%;
-			// padding: .7px; //makes border looks more uniform
+			padding: .7px; //makes border looks more uniform
 
 			img {
 				clip-path: polygon(2% 1.3%, 98% 1.3%, 98% 68%, 88% 72.5%, 88% 90.5%, 12% 90.5%, 12% 72.5%, 2% 68%);
@@ -81,7 +81,7 @@ athlete-card {
 			}
 		}
 
-		.front .logo {
+		.logo {
 			display: block;
 			position: absolute;
 			right: 43%;
@@ -125,7 +125,6 @@ athlete-card {
 		background-color: grey;
 		transform: rotateY(180deg);
 		
-		
 		.headshot {
 			max-width: 150px;
 			margin-left: auto;
@@ -136,7 +135,7 @@ athlete-card {
 			self-align: center;
 		}
 
-		.logo {
+		.logo-back {
 			position: absolute;
 			right: 27%;
 			bottom: 70.5%;
