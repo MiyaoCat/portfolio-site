@@ -93,14 +93,11 @@ svg {
 /* dark purple */
 /* midnight */
 /* gold */
-/* gold */
 /* light purple */
 /* dark purple */
 @media (prefers-color-scheme: dark) {
   html {
-    --paper: hsla(28, 17%, 30%, 1); /* dark brown */
-    --ink: white;
-    --highlight: yellow;
+    /* dark brown */
   }
 }
 section:nth-of-type(odd) {
@@ -136,73 +133,67 @@ athlete-card {
   }
 }
 /* Typography */
-html {
-  --marker: Permanent Marker, Noto Serif;
-  --sans-serif: Encode Sans, Helvetica;
-  --serif: Noto Serif Display, Old Standard TT, Times New Roman;
-}
-
 a {
-  font-family: var(--sans-serif);
+  font-family: Encode Sans, Helvetica;
   font-weight: 200;
 }
 
 a:hover {
   text-decoration: underline;
-  color: var(--highlight);
+  color: #aadee9;
 }
 
 @media (prefers-color-scheme: dark) {
   a:hover {
-    color: var(--highlight);
+    color: #aadee9;
   }
 }
 /* Main header or banner text or similar */
 .screaming-voice {
-  font-family: var(--marker);
+  font-family: Permanent Marker, Noto Serif;
   font-size: clamp(40px, 7vw, 80px);
   color: var(--ink);
 }
 
 /* Header text or similar */
 .loud-voice {
-  font-family: var(--sans-serif);
+  font-family: Encode Sans, Helvetica;
   font-size: 30px;
 }
 
 /* Sub-header text or similar */
 .attention-voice {
-  font-family: var(--sans-serif);
+  font-family: Encode Sans, Helvetica;
   font-size: 26px;
   font-weight: 600;
   font-style: italic;
 }
 
 .alert-voice {
-  font-family: var(--sans-serif);
+  font-family: Encode Sans, Helvetica;
   font-size: 26px;
 }
 
 /* Paragraph text or similar */
 .normal-voice {
-  font-family: var(--sans-serif);
+  font-family: Encode Sans, Helvetica;
   font-size: 16px;
 }
 
 /* Caption text or similar */
 .calm-voice {
-  font-family: var(--sans-serif);
+  font-family: Encode Sans, Helvetica;
   font-size: 14px;
 }
 
 /* Fine print text or similar */
 .quiet-voice {
-  font-family: var(--sans-serif);
-  font-size: 12px;
+  font-family: Encode Sans, Helvetica;
+  font-size: 0.75em;
 }
 
 .whisper-voice {
-  font-family: var(--sans-serif);
+  font-family: Encode Sans, Helvetica;
   font-size: 8px;
 }
 
@@ -262,6 +253,7 @@ athlete-card {
   }
   athlete-card:hover > .card {
     curser: pointer;
+    transform: rotateY(180deg);
   }
   .athlete-info {
     height: 100%;
@@ -315,6 +307,7 @@ athlete-card {
     width: 100%;
     height: 100%;
     position: absolute;
+    backface-visibility: hidden;
   }
   .back {
     display: grid;
@@ -322,6 +315,7 @@ athlete-card {
     grid-template-rows: auto auto auto auto 1fr auto;
     padding: 10px;
     background-color: grey;
+    transform: rotateY(180deg);
   }
   .back .headshot {
     max-width: 150px;
@@ -376,6 +370,7 @@ athlete-card {
   }
   .back .summary p {
     font-size: 0.8em;
+    line-height: 1.2em;
   }
   .back .socials {
     display: flex;
