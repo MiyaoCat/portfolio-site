@@ -57,7 +57,7 @@ athlete-card {
 	athlete-card.hovered > .card {
 		transform: rotateY(180deg);
 	}
-	
+
 	.athlete-info {
 		height: 100%;
 		display: grid;
@@ -75,7 +75,7 @@ athlete-card {
 			margin-left: auto;
 			margin-right: auto;
 			clip-path: polygon(0 0, 100% 0, 100% 75%, 90% 80%, 90% 100%, 10% 100%, 10% 80%, 0 75%);
-			background: linear-gradient(hsla(259, 100%, 70%, 1), white);
+			background: linear-gradient($primary-light 70%, white);
 			min-width: 100%;
 			padding: .7px; //makes border looks more uniform
 
@@ -231,6 +231,15 @@ athlete-card {
 				border-bottom: 1px solid $ink-dark;
 				padding-top: 2px;
 			}
+		}
+
+		.college[data-position='Pitcher'] {
+			.stats-table {
+				td p, th p {
+					font-size: 10px;
+				}
+			}
+
 		}
 	}
 	
