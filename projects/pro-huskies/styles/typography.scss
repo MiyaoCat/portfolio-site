@@ -1,12 +1,13 @@
 
 
 $marker: Permanent Marker, Noto Serif;
-$sans-serif: Encode Sans, Helvetica;
+$header: Encode Sans, Helvetica;
+$body-text: Open Sans, Helvetica;
 $serif: Noto Serif Display, Old Standard TT, Times New Roman;
 
 
 a {
-	font-family: $sans-serif;
+	font-family: $body-text;
 	// text-transform: uppercase;
 	font-weight: 200;
 	// letter-spacing: .2rem;
@@ -25,50 +26,54 @@ a:hover {
 
 /* Main header or banner text or similar */
 .screaming-voice {
-	font-family: $marker;
+	font-family: $header;
+	font-weight: 900;
 	font-size: clamp(40px, 7vw, 80px);
 	color: var(--ink);
+	text-transform: uppercase;
 }
 
 /* Header text or similar */
 .loud-voice {
-	font-family: $sans-serif;
+	font-family: $body-text;
 	font-size: 30px;
 }
 
 /* Sub-header text or similar */
 .attention-voice {
-	font-family: $sans-serif;
-	font-size: 26px;
-	font-weight: 600;
+	font-family: $header;
+	font-size: 1.5em;
+	font-weight: 700;
 	font-style: italic;
+	text-transform: uppercase;
 }
 
 .alert-voice {
-	font-family: $sans-serif;
-	font-size: 26px;
+	font-family: $body-text;
+	font-size: 1.5em;
 }
 
 /* Paragraph text or similar */
 .normal-voice {
-	font-family: $sans-serif;
-	font-size: 16px;
+	font-family: $body-text;
+	font-size: 1em;
+
 }
 
 /* Caption text or similar */
 .calm-voice {
-	font-family: $sans-serif;
+	font-family: $body-text;
 	font-size: 14px;
 }
 
 /* Fine print text or similar */
 .quiet-voice {
-	font-family: $sans-serif;
+	font-family: $body-text;
 	font-size: .75em;
 }
 
 .whisper-voice {
-	font-family: $sans-serif;
+	font-family: $body-text;
 	font-size: 8px;
 }
 

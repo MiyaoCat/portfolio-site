@@ -137,7 +137,7 @@ inner-column {
 }
 /* Typography */
 a {
-  font-family: Encode Sans, Helvetica;
+  font-family: Open Sans, Helvetica;
   font-weight: 200;
 }
 
@@ -153,50 +153,53 @@ a:hover {
 }
 /* Main header or banner text or similar */
 .screaming-voice {
-  font-family: Permanent Marker, Noto Serif;
+  font-family: Encode Sans, Helvetica;
+  font-weight: 900;
   font-size: clamp(40px, 7vw, 80px);
   color: var(--ink);
+  text-transform: uppercase;
 }
 
 /* Header text or similar */
 .loud-voice {
-  font-family: Encode Sans, Helvetica;
+  font-family: Open Sans, Helvetica;
   font-size: 30px;
 }
 
 /* Sub-header text or similar */
 .attention-voice {
   font-family: Encode Sans, Helvetica;
-  font-size: 26px;
-  font-weight: 600;
+  font-size: 1.5em;
+  font-weight: 700;
   font-style: italic;
+  text-transform: uppercase;
 }
 
 .alert-voice {
-  font-family: Encode Sans, Helvetica;
-  font-size: 26px;
+  font-family: Open Sans, Helvetica;
+  font-size: 1.5em;
 }
 
 /* Paragraph text or similar */
 .normal-voice {
-  font-family: Encode Sans, Helvetica;
-  font-size: 16px;
+  font-family: Open Sans, Helvetica;
+  font-size: 1em;
 }
 
 /* Caption text or similar */
 .calm-voice {
-  font-family: Encode Sans, Helvetica;
+  font-family: Open Sans, Helvetica;
   font-size: 14px;
 }
 
 /* Fine print text or similar */
 .quiet-voice {
-  font-family: Encode Sans, Helvetica;
+  font-family: Open Sans, Helvetica;
   font-size: 0.75em;
 }
 
 .whisper-voice {
-  font-family: Encode Sans, Helvetica;
+  font-family: Open Sans, Helvetica;
   font-size: 8px;
 }
 
