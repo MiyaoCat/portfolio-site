@@ -1,6 +1,4 @@
 
-
-$marker: Permanent Marker, Noto Serif;
 $header: Encode Sans, Helvetica;
 $body-text: Open Sans, Helvetica;
 $serif: Noto Serif Display, Old Standard TT, Times New Roman;
@@ -49,7 +47,7 @@ a:hover {
 }
 
 .alert-voice {
-	font-family: $body-text;
+	font-family: $header;
 	font-size: 1.2em;
 	font-weight: 700;
 	font-style: italic;

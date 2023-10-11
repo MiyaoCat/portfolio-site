@@ -98,10 +98,10 @@ app.get('/athletes', function(request, response) {
 				const proRichText = renderRichText('proStats', options);
 				const summaryRichText = renderRichText('summary', options);
 
-				const awards = item.fields.awards2 || [];
-				const awardsList = awards.map(function(rings) {
-					return rings.fie
-				})
+				// const awards = item.fields.awards2 || [];
+				// const awardsList = awards.map(function(rings) {
+				// 	return rings.fie
+				// })
 				return {
 					firstName: item.fields.firstName,
 					lastName: item.fields.lastName,
@@ -129,7 +129,7 @@ app.get('/athletes', function(request, response) {
 					yearStarted: item.fields.yearStarted,
 					yearEnded: item.fields.yearEnded,
 					summary: summaryRichText,
-					awards2: item.fields.awards2,
+					slug: item.fields.slug,
 				};
 			});
 			console.log("ATHLETE: ", athleteData);
@@ -138,8 +138,77 @@ app.get('/athletes', function(request, response) {
 		.catch(console.error)
 });
 
-app.get('/details', function(request, response) {
-	response.render('details');
+app.get('/athlete/:slug', function(request, response) {
+	// Get athlete data from Contentful
+	console.log("PARAMS: ", request.params)
+
+	client.getEntries({
+		content_type: 'proHuskies'
+	})
+		.then( function(data) {
+			const foundAthlete = data.items.find( function(athlete) {
+				return athlete.fields.slug === request.params.slug;
+			})
+
+			const birthdate = foundAthlete.fields.birthdate;
+			const date = new Date(birthdate);
+
+			const birthdateFormatted = date.toLocaleDateString('en-US', {
+				year: 'numeric',
+				month: '2-digit',
+				day: '2-digit'
+			});
+
+      function renderRichText(fieldName, options) {
+      	const richTextContent = foundAthlete.fields[fieldName];
+      	if (richTextContent) {
+      		return documentToHtmlString(richTextContent, options);
+      	}
+      	return '';
+      }
+
+			const actionShots = foundAthlete.fields.actionShots || [];
+			const imageUrls = actionShots.map(function(asset) {
+				return asset.fields.file.url;
+			})
+
+			const collegeRichText = renderRichText('collegeStats', options);
+			const proRichText = renderRichText('proStats', options);
+			const summaryRichText = renderRichText('summary', options);
+
+			const athleteData = {
+				firstName: foundAthlete.fields.firstName,
+				lastName: foundAthlete.fields.lastName,
+				headshot: foundAthlete.fields.headshot.fields.file.url,
+				height: foundAthlete.fields.height,
+				weight: foundAthlete.fields.weight,
+				birthDate: birthdateFormatted,
+				birthPlace: foundAthlete.fields.birthPlace,
+				highSchool: foundAthlete.fields.highSchool,
+				sport: foundAthlete.fields.sport,
+				position: foundAthlete.fields.position,
+				draftRound: foundAthlete.fields.draftRound,
+				draftPick: foundAthlete.fields.draftPick,
+				overrall: foundAthlete.fields.overrall,
+				draftYear: foundAthlete.fields.draftYear,
+				draftTeam: foundAthlete.fields.draftTeam,
+				actionShots: imageUrls[0],
+				collegeStats: collegeRichText,
+				collegeAccolades: foundAthlete.fields.collegeAccolades,
+				proStats: proRichText,
+				activePlayer: foundAthlete.fields.activePlayer,
+				instagram: foundAthlete.fields.instagram,
+				tikTok: foundAthlete.fields.tikTok,
+				twitter: foundAthlete.fields.twitter,
+				yearStarted: foundAthlete.fields.yearStarted,
+				yearEnded: foundAthlete.fields.yearEnded,
+				summary: summaryRichText,
+				slug: foundAthlete.fields.slug
+			}
+			console.log("FOUND SLUG: ", athleteData.slug)
+			response.render('details', {athlete: athleteData});
+		})
+		.catch(console.error);
 })
 
 app.get('/about', function(request, response) {

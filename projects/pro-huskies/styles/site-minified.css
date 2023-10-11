@@ -175,7 +175,7 @@ a:hover {
 }
 
 .alert-voice {
-  font-family: Open Sans, Helvetica;
+  font-family: Encode Sans, Helvetica;
   font-size: 1.2em;
   font-weight: 700;
   font-style: italic;
@@ -253,7 +253,7 @@ athlete-card {
   display: none;
 }
 .athlete-info .name {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 #flipper {

@@ -8,7 +8,7 @@
 			<li data-sport=<%=athlete.sport%>>
 				<%- include('athlete-card.ejs', {athlete}) %>
 
-				<a href="">More Info</a>
+				<a href="athlete/<%=athlete.slug%>">More Info</a>
 				<button id='flipper'>Flip Card</button>
 			</li>
 
