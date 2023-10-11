@@ -65,6 +65,7 @@
 		}
 
 		.position, .years {
+			display: block;
 			position: absolute;
 			writing-mode: vertical-lr;
 			rotate: 180deg;

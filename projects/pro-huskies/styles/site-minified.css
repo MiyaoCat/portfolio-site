@@ -236,7 +236,7 @@ athlete-card {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding: 5px;
+  padding: 8px 5px;
   text-align: center;
   font-style: italic;
   box-shadow: 0 0 20px -10px white;
@@ -254,6 +254,9 @@ athlete-card {
 }
 .athlete-info .name {
   font-size: 1.1em;
+}
+.athlete-info .position, .athlete-info .years {
+  display: none;
 }
 
 #flipper {
@@ -322,6 +325,7 @@ athlete-card {
     font-size: 1.4em;
   }
   .front .athlete-info .position, .front .athlete-info .years {
+    display: block;
     position: absolute;
     writing-mode: vertical-lr;
     rotate: 180deg;

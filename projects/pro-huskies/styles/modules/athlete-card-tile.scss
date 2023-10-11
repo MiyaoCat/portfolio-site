@@ -13,7 +13,7 @@ athlete-card {
 	display: flex;
 	flex-direction: column;
 	gap: $gap;
-	padding: $spacing-st;
+	padding: $spacing-wide $spacing-st;
 	text-align: center;
 	font-style: italic;
 	box-shadow: 0 0 20px -10px white;
@@ -34,6 +34,10 @@ athlete-card {
 
 	.name {
 		font-size: 1.1em;
+	}
+
+	.position, .years {
+		display: none;
 	}
 }
 
