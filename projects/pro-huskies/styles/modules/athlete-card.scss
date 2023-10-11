@@ -1,92 +1,88 @@
-
-.card .front {
-	background-color: var(--paper-dark);
-	color: var(--ink-light);
-	border-radius: var(--corners);
-	max-width: 320px;
-	display: grid;
-	grid-template-rows: 90% 8% 2%;
-	text-align: center;
-	position: relative;
-	font-style: italic;
-	p, h3 {
-		align-self: center;
-	}
-
-	.position {
-		position: absolute;
-		writing-mode: vertical-lr;
-		top: 70%;
-		left: 4%;
-		// border: 1px solid red;
-		margin-top: auto;
-		margin-bottom: auto;
-		min-height:100px;
-
-		p {
-			font-size: 15px;
-		}
-	}
-
-	.years {
-		position: absolute;
-		writing-mode: vertical-lr;
-		top: 70%;
-		right: 4%;
-		margin-top: auto;
-		margin-bottom: auto;
-		min-height:100px;		
-	}
-}
-
-@media (min-width: 500px) {
-	.card .front {
-		width: 400px;
-		height: 550px;
-		border-radius: 0;
-		padding: 10px;	
-		transform: rotateY(0deg);
-
-		picture {
-			margin-left: auto;
-			margin-right: auto;
-			// clip-path: polygon(0 0, 100% 0, 100% 65%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0 65%);
-			clip-path: polygon(0 0, 100% 0, 100% 75%, 90% 80%, 90% 100%, 10% 100%, 10% 80%, 0 75%);
-			background: linear-gradient(hsla(259, 100%, 70%, 1), white);
-			min-width: 100%;
-		}
-
-		img {
-			clip-path: polygon(2% 1.5%, 98% 1.5%, 98% 74.5%, 88% 79.5%, 88% 98.5%, 12% 98.5%, 12% 79.5%, 2% 74.5%);
-			// position: absolute;
-			min-height: 100%;
-		}
-	}
-	
-	athlete-card {
-		// position: absolute;
+@media (min-width: 700px) {
+	li athlete-card {
+		width: 350px;
+		height: 500px;
+		padding: 5px;
 		perspective: 1000px;
-		box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
-
 	}
-	
+
 	.card {
 		width: 100%;
 		height: 100%;
 		position: relative;
-		transition: transform .5s ease;
+		transition: transform 1s;
 		transform-style: preserve-3d;
 	}
 
 	athlete-card:hover > .card {
-		cursor: pointer;
+		curser: pointer;
 		transform: rotateY(180deg);
 	}
 
-	athlete-card:hover .back:hover {
-		transform: rotateY(0deg);
+	athlete-card.hovered > .card {
+		transform: rotateY(180deg);
 	}
 
+	.front .athlete-info {
+		height: 100%;
+		display: grid;
+		grid-template-rows: 92% 8%;
+		row-gap: 5px;
+		padding: 10px;
+		border-radius: 0;
+		position: relative;
+
+		picture.headshot {
+			display: none;
+		}
+
+		picture.action-shot {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			clip-path: polygon(0 0, 100% 0, 100% 75%, 90% 80%, 90% 100%, 10% 100%, 10% 80%, 0 75%);
+			background: linear-gradient($primary-light 70%, white);
+			min-width: 100%;
+			padding: .7px; //makes border looks more uniform
+
+			img {
+				clip-path: polygon(2% 1.3%, 98% 1.3%, 98% 68%, 88% 72.5%, 88% 90.5%, 12% 90.5%, 12% 72.5%, 2% 68%);
+				min-height: 100%;
+			}
+		}
+
+		.logo {
+			display: block;
+			position: absolute;
+			right: 43%;
+			bottom: 10%;
+			max-width: 50px;
+			z-index: 11;
+		}
+
+		.name {
+			font-size: 1.4em;
+		}
+
+		.position, .years {
+			position: absolute;
+			writing-mode: vertical-lr;
+			rotate: 180deg;
+			top: 71%;
+			left: 4%;
+			margin-top: auto;
+			margin-bottom: auto;
+			min-height:100px;
+
+			p {
+				font-size: 15px;
+			}
+		}
+
+		.years {
+			right: 4%;
+		}
+	}
 
 	.front, .back {
 		width: 100%;
@@ -96,14 +92,131 @@
 	}
 
 	.back {
-		background-color: white;
-		transform: translateY(-100%) rotateY(180deg);
-		backface-visibility: hidden;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 100px auto auto auto 1fr auto;
+		padding: 10px;
+		background-color: grey;
+		transform: rotateY(180deg);
+		
+		.headshot {
+			max-width: 130px;
+			margin-left: auto;
+			margin-right: auto;
+			z-index: 12;
+			grid-row: 1;
+			grid-column: 1 / span 2;
+			self-align: center;
+		}
+
+		.logo-back {
+			position: absolute;
+			right: 30%;
+			bottom: 74%;
+			max-width: 140px;
+			opacity: .3;
+		}
+
+		.name {
+			margin-left: auto;
+			margin-right: auto;
+			z-index: 10;
+			align-self: end;
+			grid-row: 2;
+			grid-column: 1 / span 2;
+		}
+
+		.personal-info {
+			margin: 5px 0;
+			grid-row: 3;
+			grid-column: 1;
+
+			* {
+				margin: 2px 0;
+			}
+		}
+
+		.accolades {
+			margin: 5px;
+			grid-row: 3;
+			grid-column: 2;
+
+			* {
+				margin: 2px 0;
+			}
+		}
+
+		.college {	
+			max-width: 100%;
+			grid-row: 4;
+			grid-column: 1 / span 2;
+		}
+
+		.summary {
+			margin-top: 5px;
+			grid-row: 5;
+			grid-column: 1 / span 2;
+
+			p {
+				font-size: .8em;
+				line-height: 1.2em;
+			}
+		}
+
+		.socials {
+			display: flex;
+			gap: 25px; 
+			margin: auto;
+			grid-row: 6;
+			grid-column: 1 / span 2;
+			margin-left: auto;
+			margin-right: auto;
+
+			.social-icon {
+				max-width: .8em;
+			}
+
+			.instagram, .twitter {
+				display: flex;
+				gap: 2px;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+
+		.stats-table {
+			margin-top: 2px;
+			border: 2px solid $ink-dark;
+			min-width: 100%;
+
+			td, th {
+				padding: 1.5px;
+				text-align: center;
+			}
+			td p, th p {
+				font-size: 12px;
+			}
+			
+			th {
+				border-bottom: 1px solid $ink-dark;
+				padding-top: 2px;
+			}
+		}
+
+		.college[data-position='Pitcher'] {
+			.stats-table {
+				td p, th p {
+					font-size: 10px;
+				}
+			}
+		}
+
+		.college p {
+			font-size: .8em;
+		}
 	}
-}
-.card-grid {
-	display: flex;
-	flex-direction: row;
-	gap: 10px;
-	flex-wrap: wrap;
+
+	#flipper {
+		display: block;
+	}
 }

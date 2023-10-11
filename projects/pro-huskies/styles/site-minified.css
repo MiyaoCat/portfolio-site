@@ -90,7 +90,6 @@ svg {
 }
 
 /* Ssetings */
-/* dark purple */
 /* midnight */
 /* gold */
 /* gold */
@@ -163,13 +162,13 @@ a:hover {
 /* Header text or similar */
 .loud-voice {
   font-family: Open Sans, Helvetica;
-  font-size: 30px;
+  font-size: 1.6em;
 }
 
 /* Sub-header text or similar */
 .attention-voice {
   font-family: Encode Sans, Helvetica;
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-weight: 700;
   font-style: italic;
   text-transform: uppercase;
@@ -177,7 +176,10 @@ a:hover {
 
 .alert-voice {
   font-family: Open Sans, Helvetica;
-  font-size: 1.5em;
+  font-size: 1.2em;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
 }
 
 /* Paragraph text or similar */
@@ -213,9 +215,17 @@ a:hover {
 
 /* Sections and more 
 stuff */
+button {
+  font-family: Open Sans, Helvetica;
+  border: 1px solid black;
+  background-color: hsl(43, 35%, 3%);
+  color: hsl(259, 100%, 70%);
+}
+
 athlete-card {
   display: block;
-  width: 300px;
+  min-width: 250px;
+  margin-bottom: 5px;
 }
 
 .athlete-info {
@@ -225,6 +235,8 @@ athlete-card {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  gap: 5px;
+  padding: 5px;
   text-align: center;
   font-style: italic;
   box-shadow: 0 0 20px -10px white;
@@ -240,13 +252,20 @@ athlete-card {
 .athlete-info picture.action-shot, .athlete-info .logo {
   display: none;
 }
+.athlete-info .name {
+  font-size: 1.2em;
+}
+
+#flipper {
+  display: none;
+}
 
 .back {
   display: none;
 }
 
 @media (min-width: 700px) {
-  athlete-card {
+  li athlete-card {
     width: 350px;
     height: 500px;
     padding: 5px;
@@ -266,7 +285,7 @@ athlete-card {
   athlete-card.hovered > .card {
     transform: rotateY(180deg);
   }
-  .athlete-info {
+  .front .athlete-info {
     height: 100%;
     display: grid;
     grid-template-rows: 92% 8%;
@@ -275,10 +294,10 @@ athlete-card {
     border-radius: 0;
     position: relative;
   }
-  .athlete-info picture.headshot {
+  .front .athlete-info picture.headshot {
     display: none;
   }
-  .athlete-info picture.action-shot {
+  .front .athlete-info picture.action-shot {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -287,11 +306,11 @@ athlete-card {
     min-width: 100%;
     padding: 0.7px;
   }
-  .athlete-info picture.action-shot img {
+  .front .athlete-info picture.action-shot img {
     clip-path: polygon(2% 1.3%, 98% 1.3%, 98% 68%, 88% 72.5%, 88% 90.5%, 12% 90.5%, 12% 72.5%, 2% 68%);
     min-height: 100%;
   }
-  .athlete-info .logo {
+  .front .athlete-info .logo {
     display: block;
     position: absolute;
     right: 43%;
@@ -299,7 +318,10 @@ athlete-card {
     max-width: 50px;
     z-index: 11;
   }
-  .athlete-info .position, .athlete-info .years {
+  .front .athlete-info .name {
+    font-size: 1.4em;
+  }
+  .front .athlete-info .position, .front .athlete-info .years {
     position: absolute;
     writing-mode: vertical-lr;
     rotate: 180deg;
@@ -309,10 +331,10 @@ athlete-card {
     margin-bottom: auto;
     min-height: 100px;
   }
-  .athlete-info .position p, .athlete-info .years p {
+  .front .athlete-info .position p, .front .athlete-info .years p {
     font-size: 15px;
   }
-  .athlete-info .years {
+  .front .athlete-info .years {
     right: 4%;
   }
   .front, .back {
@@ -324,13 +346,13 @@ athlete-card {
   .back {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: auto auto auto auto 1fr auto;
+    grid-template-rows: 100px auto auto auto 1fr auto;
     padding: 10px;
     background-color: grey;
     transform: rotateY(180deg);
   }
   .back .headshot {
-    max-width: 150px;
+    max-width: 130px;
     margin-left: auto;
     margin-right: auto;
     z-index: 12;
@@ -340,15 +362,14 @@ athlete-card {
   }
   .back .logo-back {
     position: absolute;
-    right: 27%;
-    bottom: 70.5%;
-    max-width: 160px;
+    right: 30%;
+    bottom: 74%;
+    max-width: 140px;
     opacity: 0.3;
   }
   .back .name {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
     z-index: 10;
     align-self: end;
     grid-row: 2;
@@ -405,6 +426,7 @@ athlete-card {
   .back .stats-table {
     margin-top: 2px;
     border: 2px solid hsl(259, 80%, 11%);
+    min-width: 100%;
   }
   .back .stats-table td, .back .stats-table th {
     padding: 1.5px;
@@ -419,6 +441,12 @@ athlete-card {
   }
   .back .college[data-position=Pitcher] .stats-table td p, .back .college[data-position=Pitcher] .stats-table th p {
     font-size: 10px;
+  }
+  .back .college p {
+    font-size: 0.8em;
+  }
+  #flipper {
+    display: block;
   }
 }
 .site-header ul {

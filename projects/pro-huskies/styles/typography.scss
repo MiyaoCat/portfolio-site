@@ -36,13 +36,13 @@ a:hover {
 /* Header text or similar */
 .loud-voice {
 	font-family: $body-text;
-	font-size: 30px;
+	font-size: 1.6em;
 }
 
 /* Sub-header text or similar */
 .attention-voice {
 	font-family: $header;
-	font-size: 1.5em;
+	font-size: 1.4em;
 	font-weight: 700;
 	font-style: italic;
 	text-transform: uppercase;
@@ -50,7 +50,10 @@ a:hover {
 
 .alert-voice {
 	font-family: $body-text;
-	font-size: 1.5em;
+	font-size: 1.2em;
+	font-weight: 700;
+	font-style: italic;
+	text-transform: uppercase;
 }
 
 /* Paragraph text or similar */

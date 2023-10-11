@@ -1,0 +1,46 @@
+athlete-card {
+	display: block;
+	min-width: 250px;
+	// max-width: 300px;
+	margin-bottom: $spacing-st;
+}
+
+.athlete-info {
+	width: 100%;
+	background-color: $paper-dark;
+	color: $ink-light;
+	border-radius: $corners;
+	display: flex;
+	flex-direction: column;
+	gap: $gap;
+	padding: $spacing-st;
+	text-align: center;
+	font-style: italic;
+	box-shadow: 0 0 20px -10px white;
+
+	p, h3 {
+		align-self: center;
+	}
+
+	picture.headshot {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 120px;
+	}
+
+	picture.action-shot, .logo {
+		display: none;
+	}
+
+	.name {
+		font-size: 1.2em;
+	}
+}
+
+#flipper {
+	display: none;
+}
+
+.back {
+	display: none;
+}

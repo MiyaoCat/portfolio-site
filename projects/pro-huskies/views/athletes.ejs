@@ -9,7 +9,7 @@
 				<%- include('athlete-card.ejs', {athlete}) %>
 
 				<a href="">More Info</a>
-				<button id='flipper'>Keep Flipped</button>
+				<button id='flipper'>Flip Card</button>
 			</li>
 
 		<%});%>
@@ -29,7 +29,7 @@
 			this.innerText = 'flip back';
 
 			if (isFlipped) {
-				this.innerText = 'Keep Flipped';
+				this.innerText = 'Flip Card';
 			} else {
 				this.innerText = 'Flip Back';
 			}
@@ -37,9 +37,5 @@
 			isFlipped = !isFlipped;
 		});
 	});
-
-
-	
-  
 
 </script>
