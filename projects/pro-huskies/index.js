@@ -244,27 +244,40 @@ app.get('/about', function(request, response) {
     });	
 })
 
-app.get('/api', function(request, response) {
-  axios.get(apiUrl)
-  	.then( function(res) {
-  		const nbaStats = res.data;
+const perPage = 25;
+const totalPages = 2;
 
-  		const playerData = nbaStats.data.map(function(player) {
-  			return {
-  				id: player.id,
-  				fname: player.first_name,
-  				lname: player.last_name,
-  				team: player.team
-  			}
-  		})
-  		response.render('api', { players: playerData });
-  		console.log(nbaStats);
-  	})
-  	.catch( function(error) {
-  		console.error('Error:', error.message);
-  		response.status(500).send('Internal Server Error');
-  	})
-})
+app.get('/api', async (req, res) => {
+  try { //Using try instead of axios.get allows us to handle errors during the HTTP request 
+    const allPlayers = [];
+
+    for (let page = 1; page <= totalPages; page++) {
+      const response = await axios.get(apiUrl, {
+        params: {
+          page,
+          per_page: perPage,
+        },
+      });
+
+      const nbaStats = response.data;
+      const playerData = nbaStats.data.map((player) => {
+        return {
+          id: player.id,
+          fname: player.first_name,
+          lname: player.last_name,
+          team: player.team,
+        };
+      });
+
+      allPlayers.push(...playerData);
+    }
+    // console.log(playerData)
+    res.render('api', { players: allPlayers });
+  } catch (error) {
+    console.error('Error:', error.message);
+    res.status(500).send('Internal Server Error');
+  }
+});
 
 app.use( function(request, response) {
 	response.status(404).render('404', { query: request.url });
