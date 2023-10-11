@@ -30,8 +30,9 @@ $gap-wide: 8px;
 
 $spacing-sm: 2px;
 $spacing-st: 5px;
-$spacing-wide: 8px;
-
+$spacing-wide: 10px;
+$spacing-xwide: 12px;
+$spacing-xxwide: 15px;
 @media (prefers-color-scheme: dark) {
 	html {
 		$paper: hsla(28, 17%, 30%, 1); /* dark brown */

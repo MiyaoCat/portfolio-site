@@ -2,14 +2,25 @@
 <inner-column>
 	<h1 class="screaming-voice">Athletes</h1>
 	
+	<div class="filter">
+		<label for="filterType" class="normal-voice">Filter Athletes:</label>
+		<select name="" id="filterDropDown">
+			<option value="">- - Select - -</option>
+			<option value="sport">Sport</option>
+			<option value="active">Active</option>
+			<option value="retired">Retired</option>
+		</select>
+	</div>
 	<ul class="card-grid">
 		<% athletes.forEach( function(athlete) { %>
 
 			<li data-sport=<%=athlete.sport%>>
 				<%- include('athlete-card.ejs', {athlete}) %>
 
-				<a href="athlete/<%=athlete.slug%>">More Info</a>
-				<button id='flipper'>Flip Card</button>
+				<div class="card-details">
+					<a href="athlete/<%=athlete.slug%>">Athlete Bio</a>
+					<button id='flipper'>Flip Card</button>
+				</div>
 			</li>
 
 		<%});%>

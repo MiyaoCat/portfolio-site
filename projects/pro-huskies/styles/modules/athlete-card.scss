@@ -2,7 +2,7 @@
 	li athlete-card {
 		width: 350px;
 		height: 500px;
-		padding: 5px;
+		margin: $spacing-st 0;
 		perspective: 1000px;
 	}
 
@@ -27,8 +27,8 @@
 		height: 100%;
 		display: grid;
 		grid-template-rows: 92% 8%;
-		row-gap: 5px;
-		padding: 10px;
+		row-gap: $spacing-st;
+		padding: $spacing-xxwide; //affects action-shot border
 		border-radius: 0;
 		position: relative;
 

@@ -1,0 +1,11 @@
+
+.card-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: $spacing-xwide;
+}
+
+.card-details {
+	display: flex;
+	justify-content: space-between;
+}

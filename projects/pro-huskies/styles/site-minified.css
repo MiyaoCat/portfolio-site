@@ -123,12 +123,6 @@ inner-column {
   padding: 0 5px;
 }
 
-.card-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
 @media (min-width: 600px) {
   inner-column {
     width: var(--tight);
@@ -215,6 +209,17 @@ a:hover {
 
 /* Sections and more 
 stuff */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+}
+
 button {
   font-family: Open Sans, Helvetica;
   border: 1px solid black;
@@ -236,7 +241,7 @@ athlete-card {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding: 8px 5px;
+  padding: 10px 5px;
   text-align: center;
   font-style: italic;
   box-shadow: 0 0 20px -10px white;
@@ -271,7 +276,7 @@ athlete-card {
   li athlete-card {
     width: 350px;
     height: 500px;
-    padding: 5px;
+    margin: 5px 0;
     perspective: 1000px;
   }
   .card {
@@ -293,7 +298,7 @@ athlete-card {
     display: grid;
     grid-template-rows: 92% 8%;
     row-gap: 5px;
-    padding: 10px;
+    padding: 15px;
     border-radius: 0;
     position: relative;
   }
@@ -455,6 +460,10 @@ athlete-card {
 }
 .site-header ul {
   display: flex;
+}
+
+nav ul li {
+  padding: 10px;
 }
 
 /* - - - FOOTER - - - */
