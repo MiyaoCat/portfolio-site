@@ -1,15 +1,14 @@
 import express from 'express';
 import { URL } from 'node:url';
 import path from 'path';
-// import http from 'https';
+import http from 'https';
 
 import contentful from 'contentful';
 import {documentToHtmlString} from '@contentful/rich-text-html-renderer';
 import richTextTypes from '@contentful/rich-text-types';
 
-// import axios from 'axios';
-// const apiUrl = 'https://www.balldontlie.io/api/v1/players/';
-
+import axios from 'axios';
+const apiUrl = 'https://www.balldontlie.io/api/v1/players/';
 
 //CONTENTFUL CLIENT
 const client = contentful.createClient({
@@ -212,29 +211,59 @@ app.get('/athlete/:slug', function(request, response) {
 })
 
 app.get('/about', function(request, response) {
-	response.render('about');
+	// Define the API endpoint URL
+	const nbaApiUrl = 'https://free-nba.p.rapidapi.com/players?page=0&per_page=100';
+
+	// Set the headers for the API request
+	const headers = {
+	  'X-RapidAPI-Key': 'f80c7fbedcmsh437fdc5890bce8dp15b57bjsne6ed63a690ca',
+	  'X-RapidAPI-Host': 'free-nba.p.rapidapi.com',
+	};
+
+  // Make the API request
+  axios.get(nbaApiUrl, { headers: headers })
+    .then( function(apiResponse) {
+      // Extract the data from the API response
+      const apiData = apiResponse.data;
+
+      const apiPlayerData = apiData.data.map(function(player) {
+      	return {
+      		fName: player.first_name,
+      		lName: player.last_name,
+      		id: player.id,
+      	}
+      })
+      // Render your 'api' template and pass the data as a parameter
+      response.render('about', { apiData: apiPlayerData });
+    })
+    
+    .catch((error) => {
+      // Handle any errors here
+      console.error('API request failed:', error);
+      response.status(500).send('API request failed');
+    });	
 })
 
 app.get('/api', function(request, response) {
-  // axios.get(apiUrl)
-  // 	.then( function(res) {
-  // 		const nbaStats = res.data;
+  axios.get(apiUrl)
+  	.then( function(res) {
+  		const nbaStats = res.data;
 
-  // 		const playerData = nbaStats.data.map(function(player) {
-  // 			return {
-  // 				id: player.id,
-  // 				fname: player.first_name,
-  // 				lname: player.last_name,
-  // 				team: player.team
-  // 			}
-  // 		})
-  // 		response.render('api', { players: playerData });
-  // 		console.log(nbaStats);
-  // 	})
-  // 	.catch( function(error) {
-  // 		console.error('Error:', error.message);
-  // 		response.status(500).send('Internal Server Error');
-  // 	})
+  		const playerData = nbaStats.data.map(function(player) {
+  			return {
+  				id: player.id,
+  				fname: player.first_name,
+  				lname: player.last_name,
+  				team: player.team
+  			}
+  		})
+  		response.render('api', { players: playerData });
+  		console.log(nbaStats);
+  	})
+  	.catch( function(error) {
+  		console.error('Error:', error.message);
+  		response.status(500).send('Internal Server Error');
+  	})
 })
 
 app.use( function(request, response) {

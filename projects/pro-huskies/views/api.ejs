@@ -3,7 +3,13 @@
 	<ol>
 		<% players.forEach(function(player) { %>
 
-		<li class="normal-voice"><%=player.fname%> <%=player.lname%></li>
+		<li class="normal-voice">
+			<athlete-card>
+				<div class="athlete-info">
+					<%=player.fname%> <%=player.lname%>				
+					</div>				
+			</athlete-card>				
+		</li>
 		<%});%>
 	</ol>
 	

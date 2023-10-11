@@ -1,3 +1,18 @@
 <%- include('header.ejs') %>
 <h1 class="screaming-voice">About</h1>
+
+<ol>
+	<% apiData.forEach(function(player) { %>
+
+	<li class="normal-voice">
+		<athlete-card>
+			<div class="athlete-info">
+				<%=player.fName%> <%=player.lName%>			
+				<%=player.id%>		
+				</div>				
+		</athlete-card>				
+	</li>
+	<%});%>
+</ol>
+
 <%- include('footer.ejs') %>
