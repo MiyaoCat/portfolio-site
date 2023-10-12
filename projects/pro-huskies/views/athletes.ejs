@@ -4,11 +4,24 @@
 	
 	<div class="filter">
 		<label for="filterType" class="normal-voice">Filter Athletes:</label>
-		<select name="" id="filterDropDown">
+		<select id="filterDropDown">
 			<option value="">- - Select - -</option>
-			<option value="sport">Sport</option>
-			<option value="active">Active</option>
-			<option value="retired">Retired</option>
+			<% 			
+				const sports = athletes.map( function(athlete) {
+					return athlete.sport;
+				})
+				const sportsFlat = sports.flat();
+				const uniqueSport = sportsFlat.filter(function(item, i, sportsFlat) {
+					return i == sportsFlat.indexOf(item);
+				})
+				const sortedSports = uniqueSport.sort();
+				function capFirstLetter(string) {
+			    return string.charAt(0).toUpperCase() + string.slice(1);
+			}
+				sortedSports.forEach( function(sport) {
+			%>	
+				<option value="<%=sport%>"><%=capFirstLetter(sport)%></option>
+			<% });%>
 		</select>
 	</div>
 	<ul class="card-grid">
@@ -26,10 +39,14 @@
 		<%});%>
 	</ul>
 </inner-column>
+
 <%- include('footer.ejs') %>
 
 <script>
-	
+
+	const filter = document.getElementById('filterDropDown');
+
+	console.log(filter);
 	const $athleteCard = document.querySelectorAll('athlete-card');
 	const $button = document.querySelectorAll('button');
 

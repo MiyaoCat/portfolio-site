@@ -68,6 +68,7 @@ app.get('/athletes', function(request, response) {
 		content_type: 'proHuskies'
 	})
 		.then( function(data) {
+			
 			const athleteData = data.items.map( function(item) {
 
 				const birthdate = item.fields.birthdate;
@@ -132,6 +133,7 @@ app.get('/athletes', function(request, response) {
 				};
 			});
 			console.log("ATHLETE: ", athleteData);
+			
 			response.render('athletes', { athletes: athleteData })
 		})
 		.catch(console.error)
@@ -245,7 +247,7 @@ app.get('/about', function(request, response) {
 })
 
 const perPage = 25;
-const totalPages = 2;
+const totalPages = 1; //206 total pages
 
 app.get('/api', async (req, res) => {
   try { //Using try instead of axios.get allows us to handle errors during the HTTP request 
