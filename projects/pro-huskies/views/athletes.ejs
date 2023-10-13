@@ -1,11 +1,11 @@
 <%- include('header.ejs') %>
 <%
+	// Input option value and text from node/contentful
 	const sports = athletes.map( function(athlete) {
 		return athlete.sport;
-	})
+	});
 
 	const sportsFlat = sports.flat();
-
 	const uniqueSport = sportsFlat.filter(function(item, i, sportsFlat) {
 		return i == sportsFlat.indexOf(item);
 	})
@@ -14,12 +14,18 @@
 	function capFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 	}
+
+	const name = athletes.map( function(athlete) {
+		return athlete.lastName;
+	})
 %>
 <inner-column>
 	<h1 class="screaming-voice">Athletes</h1>
 	
 	<div class="filter">
-		<label for="filterSport" class="normal-voice">Filter by Sport:</label>
+		<label for="filterSport" class="normal-voice">
+			Filter by Sport:
+		</label>
 
 		<select id="filterSport">
 			<option value="all">- - All - -</option>
@@ -29,10 +35,23 @@
 					<%=capFirstLetter(sport)%>
 				</option>
 			<% });%>
-
 		</select>
 	</div>
+	
+	<div class="sort">
+		<label for="sortBy" class="normal-voice">
+			Sort By:
+		</label>
 
+		<select id="sortBy">
+			<option value="all">- - Select - -</option>
+
+			<option value="lastName">Last Name</option>
+			
+			<option value="firstName">First Name</option>
+		</select>			
+	</div>
+	
 	<ul class="card-grid">
 		<% athletes.forEach( function(athlete) { %>
 
@@ -52,7 +71,7 @@
 <%- include('footer.ejs') %>
 
 <script>
-
+	// - - - - FILTER BY SPORT - - - - - - - - 
 	const select = document.getElementById('filterSport')
 	let selectedSport = '';
 	const $li = document.querySelectorAll('li[class="sports"]');
@@ -65,7 +84,6 @@
 			const dataSport = item.getAttribute('data-sport');
 
 			if (selectedSport === dataSport || selectedSport === 'all') {
-				console.log('selectedSport: ', selectedSport, ' | ', 'data sport: ', dataSport)
 				item.style.display = 'block';
 			} else {
 				item.style.display = 'none';
@@ -73,9 +91,64 @@
 		})
 	})
 
-	const dataSport = document.getAttribute('data-sport');
-	console.log(dataSport);
+	// - - - - SORT BY NAME - - - - - - - -
+	const $sort = document.getElementById('sortBy');
+	let selectedSort = '';
 
+	const $names = document.querySelectorAll('.name');
+
+	const fNamesArray = [];
+	const lNamesArray = [];
+
+	$names.forEach(function(nameElement) {
+		const fullName = nameElement.innerText;
+		const nameSplit = fullName.split(' ');
+		const fName = nameSplit[0];
+		const lName = nameSplit[1];	
+
+		fNamesArray.push(fName);
+		lNamesArray.push(lName);
+	})
+
+	$sort.addEventListener('change', function() {
+		selectedSort = $sort.value;
+
+		if (selectedSort == 'lastName') {
+			const sortedNames = lNamesArray.slice().sort();
+			console.log('SORTED BY LAST NAME: ', sortedNames);
+
+			reorderList(sortedNames);
+		}
+
+		if (selectedSort == 'firstName') {
+			const sortedNames = fNamesArray.slice().sort();
+			console.log('SORTED BY FIRST NAME: ', sortedNames)
+
+			reorderList(sortedNames);
+		}
+	})
+
+	function reorderList(sortedList) {
+		const ul = document.querySelector('.card-grid');
+		const lis = document.querySelectorAll('li[class="sports"]');
+
+		const newList = [];
+
+		sortedList.forEach( function(name) {
+			const li = [...lis].find( function(li) {
+				return li.querySelector('.name').innerText.includes(name);
+			});
+
+			newList.push(li);
+		})
+
+		ul.innerHTML = '';
+
+		newList.forEach(function(li) {
+			ul.appendChild(li);
+		});
+	}
+	// - - - - FLIP BUTTON - - - - - - - - - - - -
 	const $athleteCard = document.querySelectorAll('athlete-card');
 	const $button = document.querySelectorAll('button');
 

@@ -312,7 +312,7 @@ athlete-card {
     clip-path: polygon(0 0, 100% 0, 100% 75%, 90% 80%, 90% 100%, 10% 100%, 10% 80%, 0 75%);
     background: linear-gradient(hsl(259, 100%, 70%) 70%, white);
     min-width: 100%;
-    padding: 0.7px;
+    padding: 0.5px;
   }
   .front .athlete-info picture.action-shot img {
     clip-path: polygon(2% 1.3%, 98% 1.3%, 98% 68%, 88% 72.5%, 88% 90.5%, 12% 90.5%, 12% 72.5%, 2% 68%);
@@ -376,7 +376,7 @@ athlete-card {
     max-width: 140px;
     opacity: 0.3;
   }
-  .back .name {
+  .back .name-back {
     margin-left: auto;
     margin-right: auto;
     z-index: 10;
