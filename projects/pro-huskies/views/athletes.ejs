@@ -1,27 +1,35 @@
 <%- include('header.ejs') %>
+<%
+	const sports = athletes.map( function(athlete) {
+		return athlete.sport;
+	})
+
+	const sportsFlat = sports.flat();
+
+	const uniqueSport = sportsFlat.filter(function(item, i, sportsFlat) {
+		return i == sportsFlat.indexOf(item);
+	})
+	const sortedSports = uniqueSport.sort();
+
+	function capFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+	}
+%>
 <inner-column>
 	<h1 class="screaming-voice">Athletes</h1>
 	
 	<div class="filter">
-		<label for="filterType" class="normal-voice">Filter Athletes:</label>
-		<select id="filterDropDown">
-			<option value="">- - Select - -</option>
-			<% 			
-				const sports = athletes.map( function(athlete) {
-					return athlete.sport;
-				})
-				const sportsFlat = sports.flat();
-				const uniqueSport = sportsFlat.filter(function(item, i, sportsFlat) {
-					return i == sportsFlat.indexOf(item);
-				})
-				const sortedSports = uniqueSport.sort();
-				function capFirstLetter(string) {
-			    return string.charAt(0).toUpperCase() + string.slice(1);
-			}
-				sortedSports.forEach( function(sport) {
-			%>	
-				<option value="<%=sport%>"><%=capFirstLetter(sport)%></option>
+		<label for="filterSport" class="normal-voice">Filter by Sport:</label>
+
+		<select id="filterSport">
+			<option value="all">- - All - -</option>
+
+			<% sortedSports.forEach( function(sport) { %>	
+				<option value="<%=sport%>">
+					<%=capFirstLetter(sport)%>
+				</option>
 			<% });%>
+
 		</select>
 	</div>
 	<ul class="card-grid">
@@ -45,8 +53,29 @@
 <script>
 
 	const filter = document.getElementById('filterDropDown');
+	const select = document.getElementById('filterSport')
+	let selectedSport;
+	const $li = document.querySelectorAll('li');
 
-	console.log(filter);
+	select.addEventListener('change', function() {
+		selectedSport = select.value;
+		console.log(selectedSport);
+
+		$li.forEach( function(item) {
+			const dataSport = item.getAttribute('data-sport');
+
+			if (selectedSport === dataSport || selectedSport === 'all') {
+				item.style.display = 'block';
+			} else {
+				item.style.display = 'none';
+			}
+		})
+	})
+
+	const dataSport = document.getAttribute('data-sport');
+	console.log(dataSport);
+
+
 	const $athleteCard = document.querySelectorAll('athlete-card');
 	const $button = document.querySelectorAll('button');
 
