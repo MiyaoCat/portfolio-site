@@ -68,7 +68,7 @@ app.get('/athletes', function(request, response) {
 		content_type: 'proHuskies'
 	})
 		.then( function(data) {
-			
+
 			const athleteData = data.items.map( function(item) {
 
 				const birthdate = item.fields.birthdate;
@@ -133,7 +133,7 @@ app.get('/athletes', function(request, response) {
 				};
 			});
 			console.log("ATHLETE: ", athleteData);
-			
+
 			response.render('athletes', { athletes: athleteData })
 		})
 		.catch(console.error)
@@ -181,7 +181,9 @@ app.get('/athlete/:slug', function(request, response) {
 				firstName: foundAthlete.fields.firstName,
 				lastName: foundAthlete.fields.lastName,
 				headshot: foundAthlete.fields.headshot.fields.file.url,
-				height: foundAthlete.fields.height,
+				heightInFt: foundAthlete.fields.heightInFeet,
+				heightInIn: foundAthlete.fields.heightInInches,
+				// height: foundAthlete.fields.height,
 				weight: foundAthlete.fields.weight,
 				birthDate: birthdateFormatted,
 				birthPlace: foundAthlete.fields.birthPlace,
