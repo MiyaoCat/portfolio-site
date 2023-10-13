@@ -79,7 +79,11 @@
 	select.addEventListener('change', function() {
 		selectedSport = select.value;
 		console.log(selectedSport);
+		filterBySport(selectedSport);
+		console.log($li);
+	})
 
+	function filterBySport(sport) {
 		$li.forEach( function(item) {
 			const dataSport = item.getAttribute('data-sport');
 
@@ -88,13 +92,10 @@
 			} else {
 				item.style.display = 'none';
 			}
-		})
-	})
-
+		});
+	}
 	// - - - - SORT BY NAME - - - - - - - -
 	const $sort = document.getElementById('sortBy');
-	let selectedSort = '';
-
 	const $names = document.querySelectorAll('.name');
 
 	const fNamesArray = [];
@@ -112,7 +113,7 @@
 
 	$sort.addEventListener('change', function() {
 		selectedSort = $sort.value;
-
+		console.log('change');
 		if (selectedSort == 'lastName') {
 			const sortedNames = lNamesArray.slice().sort();
 			console.log('SORTED BY LAST NAME: ', sortedNames);
@@ -130,19 +131,20 @@
 
 	function reorderList(sortedList) {
 		const ul = document.querySelector('.card-grid');
-		const lis = document.querySelectorAll('li[class="sports"]');
-
+		const $li = document.querySelectorAll('li[class="sports"]');
 		const newList = [];
 
 		sortedList.forEach( function(name) {
-			const li = [...lis].find( function(li) {
+			const li = [...$li].find( function(li) {
 				return li.querySelector('.name').innerText.includes(name);
 			});
 
-			newList.push(li);
+			if (li instanceof Element) {
+				newList.push(li);
+			}
 		})
 
-		ul.innerHTML = '';
+		// ul.innerHTML = '';
 
 		newList.forEach(function(li) {
 			ul.appendChild(li);
