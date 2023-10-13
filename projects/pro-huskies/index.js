@@ -25,7 +25,7 @@ const app = express();
 //Set EJS
 app.set('view engine', 'ejs');
 
-const PORT = 2009;
+const PORT = 2020;
 app.listen(PORT, function() {
 	console.log(`server started at http://localhost:${PORT}`);
 });
@@ -106,7 +106,9 @@ app.get('/athletes', function(request, response) {
 					firstName: item.fields.firstName,
 					lastName: item.fields.lastName,
 					headshot: item.fields.headshot.fields.file.url,
-					height: item.fields.height,
+					heightInFt: item.fields.heightInFeet,
+					heightInIn: item.fields.heightInInches,
+					// height: item.fields.height,
 					weight: item.fields.weight,
 					birthDate: birthdateFormatted,
 					birthPlace: item.fields.birthPlace,

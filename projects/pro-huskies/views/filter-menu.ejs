@@ -1,0 +1,52 @@
+<%
+	// Input option value and text from node/contentful
+	const sports = athletes.map( function(athlete) {
+		return athlete.sport;
+	});
+
+	const sportsFlat = sports.flat();
+	const uniqueSport = sportsFlat.filter(function(item, i, sportsFlat) {
+		return i == sportsFlat.indexOf(item);
+	})
+	const sortedSports = uniqueSport.sort();
+
+	function capFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+	}
+
+	const name = athletes.map( function(athlete) {
+		return athlete.lastName;
+	})
+%>
+
+<section class="filter">
+
+	<label for="filterSport" class="normal-voice">
+		Filter by Sport:
+	</label>
+
+	<select id="filterSport">
+		<option value="all">- - All - -</option>
+
+		<% sortedSports.forEach( function(sport) { %>	
+			<option value="<%=sport%>">
+				<%=capFirstLetter(sport)%>
+			</option>
+		<% });%>
+	</select>
+
+
+	<div class="sort">
+		<label for="sortBy" class="normal-voice">
+			Sort By:
+		</label>
+
+		<select id="sortBy">
+			<option value="all">- - Select - -</option>
+
+			<option value="lastName">Last Name</option>
+			
+			<option value="firstName">First Name</option>
+		</select>			
+	</div>
+</section>
