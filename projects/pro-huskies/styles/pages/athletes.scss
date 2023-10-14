@@ -1,9 +1,30 @@
+@media(min-width: 700px) {
+	.athletes {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		grid-template-rows: auto 1fr;
 
-.card-grid {
-	display: flex;
-	flex-wrap: wrap;
-	gap: $spacing-xwide;
+		h1 {
+			grid-column: 1 / span 2;
+			grid-row: 1;
+		}
+
+		.filter-menu {
+			grid-column: 1;
+			grid-row: 2;
+		}
+
+		.card-grid {
+			grid-column: 2;
+			grid-row: 2;
+			display: flex;
+			flex-wrap: wrap;
+			gap: $spacing-xwide;
+		}
+	}	
 }
+
+
 
 .card-details {
 	display: flex;

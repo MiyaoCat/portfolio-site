@@ -1,4 +1,5 @@
 <%- include('header.ejs') %>
+<!-- REMOVE BELOW -->
 <%
 	// Input option value and text from node/contentful
 	const sports = athletes.map( function(athlete) {
@@ -18,26 +19,35 @@
 	const name = athletes.map( function(athlete) {
 		return athlete.lastName;
 	})
+
+	// athletes.forEach( function(athlete) {
+		// console.log('NAME: ', athlete.firstName, athlete.lastName);
+		// console.log('Year started: ', athlete.yearStarted);
+		
+		// for (let year = athlete.yearStarted + 1; year < athlete.yearEnded; year++)
+		// console.log('Years in bewtween: ', year);
+
+		// console.log('Year ended: ', athlete.yearEnded);
+	// });	
 %>
-<inner-column>
-	<h1 class="screaming-voice">Athletes</h1>
-	
-	<div class="filter">
-		<label for="filterSport" class="normal-voice">
-			Filter by Sport:
-		</label>
 
-		<select id="filterSport">
-			<option value="all">- - All - -</option>
+<section class="filter-menu">
+	<h3 class="attention-voice">Filter</h3>
+	<label for="filterSport" class="normal-voice">
+		Filter by Sport:
+	</label>
 
-			<% sortedSports.forEach( function(sport) { %>	
-				<option value="<%=sport%>">
-					<%=capFirstLetter(sport)%>
-				</option>
-			<% });%>
-		</select>
-	</div>
-	
+	<select id="filterSport">
+		<option value="all">- - All - -</option>
+
+		<% sortedSports.forEach( function(sport) { %>	
+			<option value="<%=sport%>">
+				<%=capFirstLetter(sport)%>
+			</option>
+		<% });%>
+	</select>
+
+
 	<div class="sort">
 		<label for="sortBy" class="normal-voice">
 			Sort By:
@@ -51,6 +61,13 @@
 			<option value="firstName">First Name</option>
 		</select>			
 	</div>
+</section>
+
+<!-- REMOVE ABOVE -->
+<inner-column class="athletes">
+	<h1 class="screaming-voice">Athletes</h1>
+	
+	<%- include('filter-menu.ejs') %>
 	
 	<ul class="card-grid">
 		<% athletes.forEach( function(athlete) { %>
@@ -71,29 +88,73 @@
 <%- include('footer.ejs') %>
 
 <script>
-	// - - - - FILTER BY SPORT - - - - - - - - 
-	const select = document.getElementById('filterSport')
-	let selectedSport = '';
-	const $li = document.querySelectorAll('li[class="sports"]');
+		// - - - - FILTER BY SPORT CHECKBOX - - - - - - - - 
+	// const $sportsFilter = document.getElementById('sportsFilter');
+	// const $sportsOptions = document.querySelector('.sportsOptions');
+ 	
+ 	// $sportsFilter.addEventListener('change', function() {
+ 	// 	if ($sportsFilter.checked) {
+ 	// 		$sportsOptions.classList.remove('hidden');
+ 	// 	} else {
+ 	// 		$sportsOptions.classList.add('hidden');
+ 	// 	}
+ 	// })
 
-	select.addEventListener('change', function() {
-		selectedSport = select.value;
-		console.log(selectedSport);
-		filterBySport(selectedSport);
-		console.log($li);
-	})
+ 	const sportsCheckboxes = document.querySelectorAll('.sportsOptions input[type="checkbox"]');
+ 	const $li = document.querySelectorAll('li[class="sports"]');
 
-	function filterBySport(sport) {
-		$li.forEach( function(item) {
-			const dataSport = item.getAttribute('data-sport');
+ 	sportsCheckboxes.forEach( function(checkbox) {
+ 		checkbox.addEventListener('change', function() {
+ 			const selectedSports = getSelectedSport();
 
-			if (selectedSport === dataSport || selectedSport === 'all') {
-				item.style.display = 'block';
-			} else {
-				item.style.display = 'none';
-			}
-		});
-	}
+ 			$li.forEach( function(item) {
+ 				item.style.display = 'none';
+ 			});
+
+ 			selectedSports.forEach( function(selectedSport) {
+ 				$li.forEach( function(item) {
+ 					if (item.getAttribute('data-sport') == selectedSport || selectedSport === 'all') {
+ 							item.style.display = 'block';
+ 					}
+ 				})
+ 			})
+ 		})
+ 	})
+
+ 	function getSelectedSport() {
+ 		const selectedSports = [];
+
+ 		sportsCheckboxes.forEach( function(checkbox) {
+ 			if (checkbox.checked) {
+ 				selectedSports.push(checkbox.getAttribute('data-filter'));
+ 			}
+ 		})
+
+ 		return selectedSports;
+ 	}
+	// // // - - - - FILTER BY SPORT - - - - - - - - 
+	// const select = document.getElementById('filterSport')
+	// let selectedSport = '';
+	// const $li = document.querySelectorAll('li[class="sports"]');
+
+	// select.addEventListener('change', function() {
+	// 	selectedSport = select.value;
+	// 	console.log(selectedSport);
+	// 	filterBySport(selectedSport);
+	// 	console.log($li);
+	// })
+
+	// function filterBySport(sport) {
+	// 	$li.forEach( function(item) {
+	// 		const dataSport = item.getAttribute('data-sport');
+
+	// 		if (selectedSport === dataSport || selectedSport === 'all') {
+	// 			item.style.display = 'block';
+	// 		} else {
+	// 			item.style.display = 'none';
+	// 		}
+	// 	});
+	// }
 	// - - - - SORT BY NAME - - - - - - - -
 	const $sort = document.getElementById('sortBy');
 	const $names = document.querySelectorAll('.name');

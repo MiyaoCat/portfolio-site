@@ -1,0 +1,15 @@
+.filter-menu {
+	background-color: grey;
+
+	.hidden {
+		display: none;
+	}
+
+	.sportsOptions label > * {
+		margin: $spacing-st;
+	}
+
+	.sportsOptions label {
+		border: 1px solid black;
+	}
+}

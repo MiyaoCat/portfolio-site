@@ -100,10 +100,6 @@ svg {
     /* dark brown */
   }
 }
-section:nth-of-type(odd) {
-  background-color: rgba(0, 0, 0, 0.03);
-}
-
 /* Structure */
 body {
   display: flex;
@@ -209,12 +205,28 @@ a:hover {
 
 /* Sections and more 
 stuff */
-.card-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+@media (min-width: 700px) {
+  .athletes {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+  }
+  .athletes h1 {
+    grid-column: 1/span 2;
+    grid-row: 1;
+  }
+  .athletes .filter-menu {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .athletes .card-grid {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
 }
-
 .card-details {
   display: flex;
   justify-content: space-between;
@@ -227,9 +239,23 @@ button {
   color: hsl(259, 100%, 70%);
 }
 
+.filter-menu {
+  background-color: grey;
+}
+.filter-menu .hidden {
+  display: none;
+}
+.filter-menu .sportsOptions label > * {
+  margin: 5px;
+}
+.filter-menu .sportsOptions label {
+  border: 1px solid black;
+}
+
 athlete-card {
   display: block;
   min-width: 250px;
+  max-width: 300px;
   margin-bottom: 5px;
 }
 
@@ -273,10 +299,10 @@ athlete-card {
 }
 
 @media (min-width: 700px) {
-  li athlete-card {
+  athlete-card {
+    max-width: 350px;
     width: 350px;
     height: 500px;
-    margin: 5px 0;
     perspective: 1000px;
   }
   .card {
@@ -322,7 +348,7 @@ athlete-card {
     display: block;
     position: absolute;
     right: 43%;
-    bottom: 10%;
+    bottom: 11%;
     max-width: 50px;
     z-index: 11;
   }
@@ -372,7 +398,7 @@ athlete-card {
   .back .logo-back {
     position: absolute;
     right: 30%;
-    bottom: 74%;
+    bottom: 74.4%;
     max-width: 140px;
     opacity: 0.3;
   }
@@ -448,8 +474,10 @@ athlete-card {
     border-bottom: 1px solid hsl(259, 80%, 11%);
     padding-top: 2px;
   }
-  .back .college[data-position=Pitcher] .stats-table td p, .back .college[data-position=Pitcher] .stats-table th p {
-    font-size: 10px;
+  .back .college[data-position=Pitcher] .stats-table td p, .back .college[data-position=Pitcher] .stats-table th p,
+  .back .college[data-position=Quarterback] .stats-table td p,
+  .back .college[data-position=Quarterback] .stats-table th p {
+    font-size: 0.61em;
   }
   .back .college p {
     font-size: 0.8em;

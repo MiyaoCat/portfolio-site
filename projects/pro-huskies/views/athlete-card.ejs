@@ -56,7 +56,12 @@
 				</p>
 
 				<p class="quiet-voice">
+					<%	if(athlete.draftRound === 0) { %>
+						<strong>Drafted:</strong> Undrafted
+					<% } else { %>
+
 					<strong>Drafted:</strong> Round <%=athlete.draftRound%> - Pick <%=athlete.draftPick%>
+					<% } %>
 				</p>
 
 				<p class="quiet-voice"><%=athlete.draftTeam%></p>

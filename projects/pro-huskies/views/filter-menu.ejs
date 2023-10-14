@@ -1,4 +1,13 @@
 <%
+	athletes.forEach( function(athlete) {
+		console.log('NAME: ', athlete.firstName, athlete.lastName);
+		// console.log('Year started: ', athlete.yearStarted);
+		
+		// for (let year = athlete.yearStarted + 1; year < athlete.yearEnded; year++)
+		// console.log('Years in bewtween: ', year);
+
+		// console.log('Year ended: ', athlete.yearEnded);
+	});	
 	// Input option value and text from node/contentful
 	const sports = athletes.map( function(athlete) {
 		return athlete.sport;
@@ -19,34 +28,128 @@
 	})
 %>
 
-<section class="filter">
+<section class="filter-menu">
+	<!-- <h3 class="attention-voice">Filter</h3> -->
 
-	<label for="filterSport" class="normal-voice">
-		Filter by Sport:
-	</label>
+	<div class="filters">
+		<div class="filterSports">
+			<label for="sportsFilter">Sport</label>
+			<input type="checkbox" id="sportsFilter">
 
-	<select id="filterSport">
-		<option value="all">- - All - -</option>
+			<div class="sportsOptions hidden">
+				<% sortedSports.forEach( function(sport) { %>	
+					<label for="<%=sport%>">
+						<input 
+							type="checkbox" 
+							id="<%=sport%>"
+							data-filter="<%=sport%>"
+						/>
+							<p class="normal-voice">
+								<%=capFirstLetter(sport)%>
+							</p>
+						<% });%>
+				</label>
+			</div>
+		</div>
 
-		<% sortedSports.forEach( function(sport) { %>	
-			<option value="<%=sport%>">
-				<%=capFirstLetter(sport)%>
-			</option>
-		<% });%>
-	</select>
-
-
-	<div class="sort">
-		<label for="sortBy" class="normal-voice">
-			Sort By:
-		</label>
-
-		<select id="sortBy">
-			<option value="all">- - Select - -</option>
-
-			<option value="lastName">Last Name</option>
-			
-			<option value="firstName">First Name</option>
-		</select>			
+		<div class="filterYears">
+			<label >Years</label>
+			<input type="checkbox" class="checkbox">
+		</div>
 	</div>
 </section>
+
+<script>
+	// - - - - FILTER BY SPORT CHECKBOX - - - - - - - - 
+	const $sportsFilter = document.getElementById('sportsFilter');
+	const $sportsOptions = document.querySelector('.sportsOptions');
+ 	
+ 	$sportsFilter.addEventListener('change', function() {
+ 		if ($sportsFilter.checked) {
+ 			$sportsOptions.classList.remove('hidden');
+ 		} else {
+ 			$sportsOptions.classList.add('hidden');
+ 		}
+ 	})
+
+	// - - - - FILTER BY SPORT - - - - - - - - 
+	// const select = document.getElementById('filterSport')
+	// let selectedSport = '';
+	// const $li = document.querySelectorAll('li[class="sports"]');
+
+	// select.addEventListener('change', function() {
+	// 	selectedSport = select.value;
+	// 	console.log(selectedSport);
+	// 	filterBySport(selectedSport);
+	// 	console.log($li);
+	// })
+
+	// function filterBySport(sport) {
+	// 	$li.forEach( function(item) {
+	// 		const dataSport = item.getAttribute('data-sport');
+
+	// 		if (selectedSport === dataSport || selectedSport === 'all') {
+	// 			item.style.display = 'block';
+	// 		} else {
+	// 			item.style.display = 'none';
+	// 		}
+	// 	});
+	// }
+	// // - - - - SORT BY NAME - - - - - - - -
+	// const $sort = document.getElementById('sortBy');
+	// const $names = document.querySelectorAll('.name');
+
+	// const fNamesArray = [];
+	// const lNamesArray = [];
+
+	// $names.forEach(function(nameElement) {
+	// 	const fullName = nameElement.innerText;
+	// 	const nameSplit = fullName.split(' ');
+	// 	const fName = nameSplit[0];
+	// 	const lName = nameSplit[1];	
+
+	// 	fNamesArray.push(fName);
+	// 	lNamesArray.push(lName);
+	// })
+
+	// $sort.addEventListener('change', function() {
+	// 	selectedSort = $sort.value;
+	// 	console.log('change');
+	// 	if (selectedSort == 'lastName') {
+	// 		const sortedNames = lNamesArray.slice().sort();
+	// 		console.log('SORTED BY LAST NAME: ', sortedNames);
+
+	// 		reorderList(sortedNames);
+	// 	}
+
+	// 	if (selectedSort == 'firstName') {
+	// 		const sortedNames = fNamesArray.slice().sort();
+	// 		console.log('SORTED BY FIRST NAME: ', sortedNames)
+
+	// 		reorderList(sortedNames);
+	// 	}
+	// })
+
+	// function reorderList(sortedList) {
+	// 	const ul = document.querySelector('.card-grid');
+	// 	const $li = document.querySelectorAll('li[class="sports"]');
+	// 	const newList = [];
+
+	// 	sortedList.forEach( function(name) {
+	// 		const li = [...$li].find( function(li) {
+	// 			return li.querySelector('.name').innerText.includes(name);
+	// 		});
+
+	// 		if (li instanceof Element) {
+	// 			newList.push(li);
+	// 		}
+	// 	})
+
+	// 	// ul.innerHTML = '';
+
+	// 	newList.forEach(function(li) {
+	// 		ul.appendChild(li);
+	// 	});
+	// }
+
+</script>

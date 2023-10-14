@@ -1,8 +1,8 @@
 @media (min-width: 700px) {
-	li athlete-card {
+	athlete-card {
+		max-width: 350px;
 		width: 350px;
 		height: 500px;
-		margin: $spacing-st 0;
 		perspective: 1000px;
 	}
 
@@ -55,7 +55,7 @@
 			display: block;
 			position: absolute;
 			right: 43%;
-			bottom: 10%;
+			bottom: 11%;
 			max-width: 50px;
 			z-index: 11;
 		}
@@ -113,7 +113,7 @@
 		.logo-back {
 			position: absolute;
 			right: 30%;
-			bottom: 74%;
+			bottom: 74.4%;
 			max-width: 140px;
 			opacity: .3;
 		}
@@ -204,10 +204,11 @@
 			}
 		}
 
-		.college[data-position='Pitcher'] {
+		.college[data-position='Pitcher'], 
+		.college[data-position='Quarterback'] {
 			.stats-table {
 				td p, th p {
-					font-size: 10px;
+					font-size: .61em;
 				}
 			}
 		}

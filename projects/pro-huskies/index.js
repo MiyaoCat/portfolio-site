@@ -134,8 +134,7 @@ app.get('/athletes', function(request, response) {
 					slug: item.fields.slug,
 				};
 			});
-			console.log("ATHLETE: ", athleteData);
-
+			// console.log("ATHLETE: ", athleteData);
 			response.render('athletes', { athletes: athleteData })
 		})
 		.catch(console.error)
