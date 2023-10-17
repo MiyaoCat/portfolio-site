@@ -1,15 +1,21 @@
 .filter-menu {
 	background-color: grey;
+	padding: 0 $spacing-wide;
+	margin: 0 $spacing-sm;
+
+	.sportsOptions {
+		display: flex;
+		flex-direction: column;
+	}
 
 	.hidden {
 		display: none;
 	}
 
-	.sportsOptions label > * {
-		margin: $spacing-st;
-	}
-
 	.sportsOptions label {
+		display: flex;
+		margin: $spacing-st;
+		padding: $spacing-wide 0;
 		border: 1px solid black;
 	}
 }

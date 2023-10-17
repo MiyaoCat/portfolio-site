@@ -12,7 +12,7 @@
 	const sports = athletes.map( function(athlete) {
 		return athlete.sport;
 	});
-
+	//Flatten sports array
 	const sportsFlat = sports.flat();
 	const uniqueSport = sportsFlat.filter(function(item, i, sportsFlat) {
 		return i == sportsFlat.indexOf(item);
@@ -29,7 +29,7 @@
 %>
 
 <section class="filter-menu">
-	<!-- <h3 class="attention-voice">Filter</h3> -->
+	<h3 class="attention-voice">Filter</h3>
 
 	<div class="filters">
 		<div class="filterSports">
@@ -37,9 +37,14 @@
 			<input type="checkbox" id="sportsFilter">
 
 			<div class="sportsOptions hidden">
+				<label for="allSports" class="selectAll">
+					<p class="normal-voice">Deselect All</p>
+				</label>
+				<input checked type="checkbox" id="allSports">
 				<% sortedSports.forEach( function(sport) { %>	
 					<label for="<%=sport%>">
 						<input 
+							checked
 							type="checkbox" 
 							id="<%=sport%>"
 							data-filter="<%=sport%>"
@@ -47,19 +52,43 @@
 							<p class="normal-voice">
 								<%=capFirstLetter(sport)%>
 							</p>
-						<% });%>
-				</label>
+						
+					</label>
+				<% });%>	
 			</div>
 		</div>
 
 		<div class="filterYears">
 			<label >Years</label>
-			<input type="checkbox" class="checkbox">
+			<input type="checkbox" class="yearsFilter">
+
+			<div class="yearsOptions hidden">
+
+			</div>
 		</div>
 	</div>
 </section>
 
 <script>
+	// - - - - SELECT/DESELECT ALL SPORTS - - - - - - - - 
+	const $allSports = document.getElementById('allSports');
+	const selectAll = document.querySelector('.selectAll');
+	$allSports.addEventListener('change', function() {
+		if ($allSports.checked == false) {
+			sportsCheckboxes.forEach( function(checkbox) {
+				checkbox.checked = false;
+				selectAll.innerText = 'Select All';
+			})
+			console.log('checked')
+		} else {
+			sportsCheckboxes.forEach( function(checkbox) {
+				checkbox.checked = true;
+				selectAll.innerText = 'Deselect All';
+			})
+		}
+	})
+
+
 	// - - - - FILTER BY SPORT CHECKBOX - - - - - - - - 
 	const $sportsFilter = document.getElementById('sportsFilter');
 	const $sportsOptions = document.querySelector('.sportsOptions');

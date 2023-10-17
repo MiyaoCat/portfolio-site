@@ -241,14 +241,20 @@ button {
 
 .filter-menu {
   background-color: grey;
+  padding: 0 10px;
+  margin: 0 2px;
+}
+.filter-menu .sportsOptions {
+  display: flex;
+  flex-direction: column;
 }
 .filter-menu .hidden {
   display: none;
 }
-.filter-menu .sportsOptions label > * {
-  margin: 5px;
-}
 .filter-menu .sportsOptions label {
+  display: flex;
+  margin: 5px;
+  padding: 10px 0;
   border: 1px solid black;
 }
 
