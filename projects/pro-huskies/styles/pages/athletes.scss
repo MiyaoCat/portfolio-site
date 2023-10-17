@@ -2,24 +2,32 @@
 	.athletes {
 		display: grid;
 		grid-template-columns: auto 1fr;
-		grid-template-rows: auto 1fr;
+		grid-template-rows: auto auto 1fr;
+
+		.filter-menu {
+			grid-column: 1;
+			grid-row: 2 / span 2;
+		}
 
 		h1 {
 			grid-column: 1 / span 2;
 			grid-row: 1;
 		}
 
-		.filter-menu {
-			grid-column: 1;
-			grid-row: 2;
+		.sort {
+			grid-column: 2;
+			grid-row: 2
 		}
-
 		.card-grid {
 			grid-column: 2;
-			grid-row: 2;
+			grid-row: 3;
 			display: flex;
 			flex-wrap: wrap;
 			gap: $spacing-xwide;
+
+			li {
+				display: block;
+			}
 		}
 	}	
 }

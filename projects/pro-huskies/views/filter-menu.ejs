@@ -1,6 +1,7 @@
 <%
 	athletes.forEach( function(athlete) {
 		console.log('NAME: ', athlete.firstName, athlete.lastName);
+		console.log('SPORT: ', athlete.sport)
 		// console.log('Year started: ', athlete.yearStarted);
 		
 		// for (let year = athlete.yearStarted + 1; year < athlete.yearEnded; year++)
@@ -14,11 +15,24 @@
 	});
 	//Flatten sports array
 	const sportsFlat = sports.flat();
-	const uniqueSport = sportsFlat.filter(function(item, i, sportsFlat) {
+	console.log('sports flat: ', sportsFlat)
+
+	const uniqueSport = sportsFlat.filter( function(item, i, sportsFlat) {
 		return i == sportsFlat.indexOf(item);
 	})
 	const sortedSports = uniqueSport.sort();
 
+
+	//Count of players in each sport
+	const sportsCount = {};
+	const countEachSport = sportsFlat.forEach(function (sport) {
+	  if (sportsCount[sport]) {
+	    sportsCount[sport] += 1;
+	  } else {
+	    sportsCount[sport] = 1;
+	  }
+	});
+	
 	function capFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 	}
@@ -38,9 +52,10 @@
 
 			<div class="sportsOptions hidden">
 				<label for="allSports" class="selectAll">
+					<input checked type="checkbox" id="allSports">
 					<p class="normal-voice">Deselect All</p>
 				</label>
-				<input checked type="checkbox" id="allSports">
+
 				<% sortedSports.forEach( function(sport) { %>	
 					<label for="<%=sport%>">
 						<input 
@@ -50,7 +65,7 @@
 							data-filter="<%=sport%>"
 						/>
 							<p class="normal-voice">
-								<%=capFirstLetter(sport)%>
+								<%=capFirstLetter(sport)%> (<%=sportsCount[sport]%>)
 							</p>
 						
 					</label>
@@ -70,36 +85,34 @@
 </section>
 
 <script>
-	// - - - - SELECT/DESELECT ALL SPORTS - - - - - - - - 
-	const $allSports = document.getElementById('allSports');
-	const selectAll = document.querySelector('.selectAll');
-	$allSports.addEventListener('change', function() {
-		if ($allSports.checked == false) {
-			sportsCheckboxes.forEach( function(checkbox) {
-				checkbox.checked = false;
-				selectAll.innerText = 'Select All';
-			})
-			console.log('checked')
-		} else {
-			sportsCheckboxes.forEach( function(checkbox) {
-				checkbox.checked = true;
-				selectAll.innerText = 'Deselect All';
-			})
-		}
-	})
+	// // - - - - SELECT/DESELECT ALL SPORTS - - - - - - - - 
+	// const $allSports = document.getElementById('allSports');
+	// const selectAll = document.querySelector('.selectAll');
+	// $allSports.addEventListener('change', function() {
+	// 	if ($allSports.checked == false) {
+	// 		sportsCheckboxes.forEach( function(checkbox) {
+	// 			checkbox.checked = false;
+	// 			selectAll.innerText = 'Select All';
+	// 		})
+	// 	} else {
+	// 		sportsCheckboxes.forEach( function(checkbox) {
+	// 			checkbox.checked = true;
+	// 			selectAll.innerText = 'Deselect All';
+	// 		})
+	// 	}
+	// })
 
-
-	// - - - - FILTER BY SPORT CHECKBOX - - - - - - - - 
-	const $sportsFilter = document.getElementById('sportsFilter');
-	const $sportsOptions = document.querySelector('.sportsOptions');
+	// // - - - - FILTER BY SPORT CHECKBOX - - - - - - - - 
+	// const $sportsFilter = document.getElementById('sportsFilter');
+	// const $sportsOptions = document.querySelector('.sportsOptions');
  	
- 	$sportsFilter.addEventListener('change', function() {
- 		if ($sportsFilter.checked) {
- 			$sportsOptions.classList.remove('hidden');
- 		} else {
- 			$sportsOptions.classList.add('hidden');
- 		}
- 	})
+ 	// $sportsFilter.addEventListener('change', function() {
+ 	// 	if ($sportsFilter.checked) {
+ 	// 		$sportsOptions.classList.remove('hidden');
+ 	// 	} else {
+ 	// 		$sportsOptions.classList.add('hidden');
+ 	// 	}
+ 	// })
 
 	// - - - - FILTER BY SPORT - - - - - - - - 
 	// const select = document.getElementById('filterSport')

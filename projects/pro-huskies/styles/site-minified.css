@@ -209,22 +209,29 @@ stuff */
   .athletes {
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto auto 1fr;
+  }
+  .athletes .filter-menu {
+    grid-column: 1;
+    grid-row: 2/span 2;
   }
   .athletes h1 {
     grid-column: 1/span 2;
     grid-row: 1;
   }
-  .athletes .filter-menu {
-    grid-column: 1;
+  .athletes .sort {
+    grid-column: 2;
     grid-row: 2;
   }
   .athletes .card-grid {
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 3;
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
+  }
+  .athletes .card-grid li {
+    display: block;
   }
 }
 .card-details {

@@ -20,35 +20,15 @@
 		return athlete.lastName;
 	})
 
-	// athletes.forEach( function(athlete) {
-		// console.log('NAME: ', athlete.firstName, athlete.lastName);
-		// console.log('Year started: ', athlete.yearStarted);
-		
-		// for (let year = athlete.yearStarted + 1; year < athlete.yearEnded; year++)
-		// console.log('Years in bewtween: ', year);
-
-		// console.log('Year ended: ', athlete.yearEnded);
-	// });	
 %>
 
-<section class="filter-menu">
-	<h3 class="attention-voice">Filter</h3>
-	<label for="filterSport" class="normal-voice">
-		Filter by Sport:
-	</label>
-
-	<select id="filterSport">
-		<option value="all">- - All - -</option>
-
-		<% sortedSports.forEach( function(sport) { %>	
-			<option value="<%=sport%>">
-				<%=capFirstLetter(sport)%>
-			</option>
-		<% });%>
-	</select>
 
 
-	<div class="sort">
+<!-- REMOVE ABOVE -->
+<inner-column class="athletes">
+	<h1 class="screaming-voice">Athletes</h1>
+	
+	<section class="sort">
 		<label for="sortBy" class="normal-voice">
 			Sort By:
 		</label>
@@ -60,13 +40,8 @@
 			
 			<option value="firstName">First Name</option>
 		</select>			
-	</div>
-</section>
+	</section>
 
-<!-- REMOVE ABOVE -->
-<inner-column class="athletes">
-	<h1 class="screaming-voice">Athletes</h1>
-	
 	<%- include('filter-menu.ejs') %>
 	
 	<ul class="card-grid">
@@ -88,8 +63,36 @@
 <%- include('footer.ejs') %>
 
 <script>
-		// - - - - FILTER BY SPORT CHECKBOX - - - - - - - - 
+	// - - - - TOGGLE SPORT ON/OFF - - - - - - - - 
+	const $sportsFilter = document.getElementById('sportsFilter');
+	const $sportsOptions = document.querySelector('.sportsOptions');
+ 	
+ 	$sportsFilter.addEventListener('change', function() {
+ 		if ($sportsFilter.checked) {
+ 			$sportsOptions.classList.remove('hidden');
+ 		} else {
+ 			$sportsOptions.classList.add('hidden');
+ 		}
+ 	})	
 
+	// - - - - SELECT/DESELECT ALL SPORTS - - - - - - - - 
+	const $allSports = document.getElementById('allSports');
+	const selectAll = document.querySelector('.selectAll p');
+	$allSports.addEventListener('change', function() {
+		if ($allSports.checked == false) {
+			sportsCheckboxes.forEach( function(checkbox) {
+				checkbox.checked = false;
+				selectAll.innerText = 'Select All';
+			})
+		} else {
+			sportsCheckboxes.forEach( function(checkbox) {
+				checkbox.checked = true;
+				selectAll.innerText = 'Deselect All';
+			})
+		}
+	})
+
+	// - - - - FILTER BY SPORT CHECKBOX - - - - - - - - 
  	const sportsCheckboxes = document.querySelectorAll('.sportsOptions input[type="checkbox"]');
  	const $li = document.querySelectorAll('li[class="sports"]');
 
@@ -104,10 +107,12 @@
  			selectedSports.forEach( function(selectedSport) {
  				$li.forEach( function(item) {
  					if (item.getAttribute('data-sport') == selectedSport || selectedSport === 'all') {
- 							item.style.display = 'block';
+ 							item.style.display = 'block';							
  					}
  				})
  			})
+
+ 			countVisibleLi();
  		})
  	})
 
@@ -119,32 +124,20 @@
  				selectedSports.push(checkbox.getAttribute('data-filter'));
  			}
  		})
-
  		return selectedSports;
  	}
-	// // // - - - - FILTER BY SPORT - - - - - - - - 
-	// const select = document.getElementById('filterSport')
-	// let selectedSport = '';
-	// const $li = document.querySelectorAll('li[class="sports"]');
+	// - - - - COUNT ATHLETES - - - - - - - -  	
 
-	// select.addEventListener('change', function() {
-	// 	selectedSport = select.value;
-	// 	console.log(selectedSport);
-	// 	filterBySport(selectedSport);
-	// 	console.log($li);
-	// })
+	function countVisibleLi() {
+	  const visibleLiCount = document.querySelectorAll('li[class="sports"][style="display: block;"]').length;
+	  console.log(`Number of visible <li> elements: ${visibleLiCount}`);
+	}
+	window.addEventListener('load', countVisibleLi);
+ 	const hidden = document.querySelectorAll('li[class="sports"][style="display: none;"]').length;
 
-	// function filterBySport(sport) {
-	// 	$li.forEach( function(item) {
-	// 		const dataSport = item.getAttribute('data-sport');
+ 	console.log('hidden: ', hidden);
+	console.log('li count: ', $li.length)
 
-	// 		if (selectedSport === dataSport || selectedSport === 'all') {
-	// 			item.style.display = 'block';
-	// 		} else {
-	// 			item.style.display = 'none';
-	// 		}
-	// 	});
-	// }
 	// - - - - SORT BY NAME - - - - - - - -
 	const $sort = document.getElementById('sortBy');
 	const $names = document.querySelectorAll('.name');
@@ -201,6 +194,7 @@
 			ul.appendChild(li);
 		});
 	}
+
 	// - - - - FLIP BUTTON - - - - - - - - - - - -
 	const $athleteCard = document.querySelectorAll('athlete-card');
 	const $button = document.querySelectorAll('button');
@@ -222,4 +216,27 @@
 		});
 	});
 
+	// // // - - - - FILTER BY SPORT - - - - - - - - 
+	// const select = document.getElementById('filterSport')
+	// let selectedSport = '';
+	// const $li = document.querySelectorAll('li[class="sports"]');
+
+	// select.addEventListener('change', function() {
+	// 	selectedSport = select.value;
+	// 	console.log(selectedSport);
+	// 	filterBySport(selectedSport);
+	// 	console.log($li);
+	// })
+
+	// function filterBySport(sport) {
+	// 	$li.forEach( function(item) {
+	// 		const dataSport = item.getAttribute('data-sport');
+
+	// 		if (selectedSport === dataSport || selectedSport === 'all') {
+	// 			item.style.display = 'block';
+	// 		} else {
+	// 			item.style.display = 'none';
+	// 		}
+	// 	});
+	// }
 </script>
