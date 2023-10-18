@@ -100,7 +100,7 @@ app.get('/athletes', function(request, response) {
 
 				// const awards = item.fields.awards2 || [];
 				// const awardsList = awards.map(function(rings) {
-				// 	return rings.fie
+				// 	return rings.file
 				// })
 				return {
 					firstName: item.fields.firstName,
@@ -108,7 +108,6 @@ app.get('/athletes', function(request, response) {
 					headshot: item.fields.headshot.fields.file.url,
 					heightInFt: item.fields.heightInFeet,
 					heightInIn: item.fields.heightInInches,
-					// height: item.fields.height,
 					weight: item.fields.weight,
 					birthDate: birthdateFormatted,
 					birthPlace: item.fields.birthPlace,
@@ -128,8 +127,8 @@ app.get('/athletes', function(request, response) {
 					instagram: item.fields.instagram,
 					tikTok: item.fields.tikTok,
 					twitter: item.fields.twitter,
-					yearStarted: item.fields.yearStarted,
-					yearEnded: item.fields.yearEnded,
+					yearStarted: item.fields.firstSeason,
+					yearEnded: item.fields.lastSeason,
 					summary: summaryRichText,
 					slug: item.fields.slug,
 				};

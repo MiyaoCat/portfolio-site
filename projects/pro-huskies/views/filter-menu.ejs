@@ -1,30 +1,38 @@
 <%
-	athletes.forEach( function(athlete) {
-		console.log('NAME: ', athlete.firstName, athlete.lastName);
-		console.log('SPORT: ', athlete.sport)
-		// console.log('Year started: ', athlete.yearStarted);
-		
-		// for (let year = athlete.yearStarted + 1; year < athlete.yearEnded; year++)
-		// console.log('Years in bewtween: ', year);
-
-		// console.log('Year ended: ', athlete.yearEnded);
+	const yearsAtUw = athletes.map( function(athlete) {
+		const years = [];
+		for (let year = athlete.yearStarted + 1; year < athlete.yearEnded; year++) {
+			years.push(year)
+		}
+		return [athlete.yearStarted, years, athlete.yearEnded];
 	});	
+
+	const yearsFlat = yearsAtUw.flat(Infinity);
+	console.log('years flat: ', yearsFlat)
+
+	const uniqueYears = yearsFlat.filter( function(item, i, yearsFlat) {
+		return i == yearsFlat.indexOf(item);
+	});
+
+	const yearsSorted = uniqueYears.sort();
+	console.log('YEARS SORTED: ', yearsSorted)
+
 	// Input option value and text from node/contentful
 	const sports = athletes.map( function(athlete) {
 		return athlete.sport;
 	});
+
 	//Flatten sports array
 	const sportsFlat = sports.flat();
-	console.log('sports flat: ', sportsFlat)
 
 	const uniqueSport = sportsFlat.filter( function(item, i, sportsFlat) {
 		return i == sportsFlat.indexOf(item);
 	})
-	const sortedSports = uniqueSport.sort();
+	const sportsSorted = uniqueSport.sort();
 
-
-	//Count of players in each sport
+	//COUNT PLAYERS IN EACH SPORT
 	const sportsCount = {};
+	const totalAthletes = 0;
 	const countEachSport = sportsFlat.forEach(function (sport) {
 	  if (sportsCount[sport]) {
 	    sportsCount[sport] += 1;
@@ -32,14 +40,15 @@
 	    sportsCount[sport] = 1;
 	  }
 	});
-	
+
+	const sportsCountFlat = sports.flat();
+	const athleteTotal = sportsCountFlat.length;
+	console.log('athleteTotal: ', athleteTotal);
+
+	//Capitalize first letter of sport
 	function capFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 	}
-
-	const name = athletes.map( function(athlete) {
-		return athlete.lastName;
-	})
 %>
 
 <section class="filter-menu">
@@ -47,16 +56,17 @@
 
 	<div class="filters">
 		<div class="filterSports">
-			<label for="sportsFilter">Sport</label>
+			<label class="alert-voice" for="sportsFilter">Sport</label>
 			<input type="checkbox" id="sportsFilter">
 
 			<div class="sportsOptions hidden">
 				<label for="allSports" class="selectAll">
 					<input checked type="checkbox" id="allSports">
-					<p class="normal-voice">Deselect All</p>
+					<p class="normal-voice">Deselect All </p>
+					<p class="normal-voice">(<%=athleteTotal%>)</p>
 				</label>
 
-				<% sortedSports.forEach( function(sport) { %>	
+				<% sportsSorted.forEach( function(sport) { %>	
 					<label for="<%=sport%>">
 						<input 
 							checked
@@ -74,11 +84,26 @@
 		</div>
 
 		<div class="filterYears">
-			<label >Years</label>
+			<label class="alert-voice" for="yearsFilter">Years</label>
 			<input type="checkbox" class="yearsFilter">
 
-			<div class="yearsOptions hidden">
+			<div class="yearsOptions ">
+	<!-- 			<label for="allYears" class="selectAll">
+					<input checked type="checkbox" id="allYears">
+					<p class="normal-voice">Deselect All</p>
+				</label> -->
 
+				<% yearsSorted.forEach( function(year) { %>
+				<label for="<%=year%>">
+					<input 
+						checked
+						type="checkbox"
+						id="<%=year%>"
+						data-filter="<%=year%>"
+					>
+					<p class="normal-voice"><%=year%></p>
+				</label>
+				<% }); %>
 			</div>
 		</div>
 	</div>
