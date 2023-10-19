@@ -1,7 +1,7 @@
 <%- include('header.ejs') %>
 <%
 	athletes.forEach( function(athlete) {
-		console.log('seasons: ', athlete.seasons);
+		console.log('seasons: ',athlete.seasons);
 	})
 	// Input option value and text from node/contentful
 	const sports = athletes.map( function(athlete) {
@@ -48,7 +48,7 @@
 			<li 
 				class="sports" 
 				data-sport="<%=athlete.sport%>" 
-				data-year="<%=athlete.seasons%>";
+				data-year="";
 			>
 				<%- include('athlete-card.ejs', {athlete}) %>
 
