@@ -122,6 +122,7 @@ app.get('/athletes', function(request, response) {
 					actionShots: imageUrls[0],
 					collegeStats: collegeRichText,
 					collegeAccolades: item.fields.collegeAccolades,
+					seasons: item.fields.seasonsAtUw,
 					proStats: proRichText,
 					activePlayer: item.fields.activePlayer,
 					instagram: item.fields.instagram,

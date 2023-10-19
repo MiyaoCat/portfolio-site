@@ -1,5 +1,8 @@
 <%- include('header.ejs') %>
 <%
+	athletes.forEach( function(athlete) {
+		console.log('seasons: ', athlete.seasons);
+	})
 	// Input option value and text from node/contentful
 	const sports = athletes.map( function(athlete) {
 		return athlete.sport;
@@ -42,7 +45,11 @@
 	<ul class="card-grid">
 		<% athletes.forEach( function(athlete) { %>
 
-			<li class="sports" data-sport=<%=athlete.sport%>>
+			<li 
+				class="sports" 
+				data-sport="<%=athlete.sport%>" 
+				data-year="<%=athlete.seasons%>";
+			>
 				<%- include('athlete-card.ejs', {athlete}) %>
 
 				<div class="card-details">
@@ -58,34 +65,7 @@
 <%- include('footer.ejs') %>
 
 <script>
-	// - - - - TOGGLE SPORT ON/OFF - - - - - - - - 
-	const $sportsFilter = document.getElementById('sportsFilter');
-	const $sportsOptions = document.querySelector('.sportsOptions');
- 	
- 	$sportsFilter.addEventListener('change', function() {
- 		if ($sportsFilter.checked) {
- 			$sportsOptions.classList.remove('hidden');
- 		} else {
- 			$sportsOptions.classList.add('hidden');
- 		}
- 	})	
 
-	// - - - - SELECT/DESELECT ALL SPORTS - - - - - - - - 
-	const $allSports = document.getElementById('allSports');
-	const selectAll = document.querySelector('.selectAll p');
-	$allSports.addEventListener('change', function() {
-		if ($allSports.checked == false) {
-			sportsCheckboxes.forEach( function(checkbox) {
-				checkbox.checked = false;
-				selectAll.innerText = 'Select All';
-			})
-		} else {
-			sportsCheckboxes.forEach( function(checkbox) {
-				checkbox.checked = true;
-				selectAll.innerText = 'Deselect All';
-			})
-		}
-	})
 
 	// - - - - FILTER BY SPORT CHECKBOX - - - - - - - - 
  	const sportsCheckboxes = document.querySelectorAll('.sportsOptions input[type="checkbox"]');

@@ -12,10 +12,10 @@
 		display: none;
 	}
 
-	.sportsOptions label {
+	.sportsOptions label, .yearsOptions label {
 		display: flex;
 		margin: $spacing-st;
-		padding: $spacing-wide 0;
+		padding: $spacing-st 0;
 		border: 1px solid black;
 	}
 }

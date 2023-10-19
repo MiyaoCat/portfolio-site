@@ -8,14 +8,14 @@
 	});	
 
 	const yearsFlat = yearsAtUw.flat(Infinity);
-	console.log('years flat: ', yearsFlat)
+	// console.log('years flat: ', yearsFlat)
 
 	const uniqueYears = yearsFlat.filter( function(item, i, yearsFlat) {
 		return i == yearsFlat.indexOf(item);
 	});
 
 	const yearsSorted = uniqueYears.sort();
-	console.log('YEARS SORTED: ', yearsSorted)
+	// console.log('YEARS SORTED: ', yearsSorted)
 
 	// Input option value and text from node/contentful
 	const sports = athletes.map( function(athlete) {
@@ -88,10 +88,10 @@
 			<input type="checkbox" class="yearsFilter">
 
 			<div class="yearsOptions ">
-	<!-- 			<label for="allYears" class="selectAll">
+				<label for="allYears" class="selectAll">
 					<input checked type="checkbox" id="allYears">
 					<p class="normal-voice">Deselect All</p>
-				</label> -->
+				</label>
 
 				<% yearsSorted.forEach( function(year) { %>
 				<label for="<%=year%>">
@@ -110,23 +110,52 @@
 </section>
 
 <script>
-	// // - - - - SELECT/DESELECT ALL SPORTS - - - - - - - - 
-	// const $allSports = document.getElementById('allSports');
-	// const selectAll = document.querySelector('.selectAll');
-	// $allSports.addEventListener('change', function() {
-	// 	if ($allSports.checked == false) {
-	// 		sportsCheckboxes.forEach( function(checkbox) {
-	// 			checkbox.checked = false;
-	// 			selectAll.innerText = 'Select All';
-	// 		})
-	// 	} else {
-	// 		sportsCheckboxes.forEach( function(checkbox) {
-	// 			checkbox.checked = true;
-	// 			selectAll.innerText = 'Deselect All';
-	// 		})
-	// 	}
-	// })
+// - - - - TOGGLE SPORT ON/OFF - - - - - - - - 
+	const $sportsFilter = document.getElementById('sportsFilter');
+	const $sportsOptions = document.querySelector('.sportsOptions');
+ 	
+ 	$sportsFilter.addEventListener('change', function() {
+ 		if ($sportsFilter.checked) {
+ 			$sportsOptions.classList.remove('hidden');
+ 		} else {
+ 			$sportsOptions.classList.add('hidden');
+ 		}
+ 	})	
 
+// - - - - SELECT/DESELECT ALL SPORTS - - - - - - - - 
+	const $allSports = document.getElementById('allSports');
+	const selectAll = document.querySelector('.selectAll p');
+	$allSports.addEventListener('change', function() {
+		if ($allSports.checked == false) {
+			sportsCheckboxes.forEach( function(checkbox) {
+				checkbox.checked = false;
+				selectAll.innerText = 'Select All';
+			})
+		} else {
+			sportsCheckboxes.forEach( function(checkbox) {
+				checkbox.checked = true;
+				selectAll.innerText = 'Deselect All';
+			})
+		}
+	})
+
+// - - - - SELECT/DESELECT ALL YEARS - - - - - - - - 
+	const yearsCheckboxes = document.querySelectorAll('.yearsOptions input[type="checkbox"]');
+	const $allYears = document.getElementById('allYears');
+	// const selectAll = document.querySelector('.selectAll p');
+	$allYears.addEventListener('change', function() {
+		if ($allYears.checked == false) {
+			yearsCheckboxes.forEach( function(checkbox) {
+				checkbox.checked = false;
+				selectAll.innerText = 'Select All';
+			})
+		} else {
+			yearsCheckboxes.forEach( function(checkbox) {
+				checkbox.checked = true;
+				selectAll.innerText = 'Deselect All';
+			})
+		}
+	})
 	// // - - - - FILTER BY SPORT CHECKBOX - - - - - - - - 
 	// const $sportsFilter = document.getElementById('sportsFilter');
 	// const $sportsOptions = document.querySelector('.sportsOptions');
