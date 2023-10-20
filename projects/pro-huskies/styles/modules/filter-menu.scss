@@ -2,6 +2,7 @@
 	background-color: grey;
 	padding: 0 $spacing-wide;
 	margin: 0 $spacing-sm;
+	min-width: 180px; 
 
 	.sportsOptions {
 		display: flex;
@@ -9,7 +10,7 @@
 	}
 
 	.hidden {
-		display: none;
+		// display: none;
 	}
 
 	.sportsOptions label, .yearsOptions label {
@@ -17,6 +18,17 @@
 		margin: $spacing-st;
 		padding: $spacing-st 0;
 		border: 1px solid black;
+		max-width: fit-content;
+	}
+
+	.yearsSelect {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 180px;
+
+		label {
+			max-width: fit-content;
+		}
 	}
 }
 

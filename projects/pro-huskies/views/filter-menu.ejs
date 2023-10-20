@@ -8,7 +8,7 @@
   	return i == colSeasonsFlat.indexOf(item);
   })
   const colSeasonsSorted = uniqueColSeasons.sort();
-
+	
 	// FILTER BY SPORT
 	const sports = athletes.map( function(athlete) {
 		return athlete.sport;
@@ -80,101 +80,20 @@
 					<p class="normal-voice">Deselect All</p>
 				</label>
 
-				<% colSeasonsSorted.forEach( function(year) { %>
-				<label for="<%=year%>">
-					<input 
-						checked
-						type="checkbox"
-						id="<%=year%>"
-						data-filter="<%=year%>"
-					>
-					<p class="normal-voice"><%=year%></p>
-				</label>
-				<% }); %>
+				<div class="yearsSelect">
+					<% colSeasonsSorted.forEach( function(year) { %>
+					<label for="<%=year%>">
+						<input 
+							checked
+							type="checkbox"
+							id="<%=year%>"
+							data-filter="<%=year%>"
+						>
+						<p class="normal-voice"><%=year%></p>
+					</label>
+					<% }); %>
+				</div>
 			</div>
 		</div>
 	</div>
 </section>
-
-<script>
-// - - - - TOGGLE FILTERS ON/OFF - - - - - - - - 
-	const $sportsFilter = document.getElementById('sportsFilter');
-	const $sportsOptions = document.querySelector('.sportsOptions');
-	const $yearsFilter = document.getElementById('yearsFilter');
-	const $yearsOptions = document.querySelector('.yearsOptions');
-
-	function toggleFilters(filterType, element) {
-		if (filterType.checked) {
-			element.classList.remove('hidden');
-		} else {
-			element.classList.add('hidden');
-		}
-	}
-
-	$sportsFilter.addEventListener('change', function() {
-		toggleFilters($sportsFilter, $sportsOptions);
-	})
-
-	$yearsFilter.addEventListener('change', function() {
-		toggleFilters($yearsFilter, $yearsOptions);
-	})
-
-
-// - - - - SELECT/DESELECT ALL SPORTS - - - - - - - - 
-	const $allSports = document.getElementById('allSports');
-	const selectAll = document.querySelector('.selectAll p');
-	$allSports.addEventListener('change', function() {
-		if ($allSports.checked == false) {
-			sportsCheckboxes.forEach( function(checkbox) {
-				checkbox.checked = false;
-				selectAll.innerText = 'Select All';
-			})
-		} else {
-			sportsCheckboxes.forEach( function(checkbox) {
-				checkbox.checked = true;
-				selectAll.innerText = 'Deselect All';
-			})
-		}
-	})
-// - - - - SELECT/DESELECT ALL YEARS - - - - - - - - 
-	const $allYears = document.getElementById('allYears');
-	$allYears.addEventListener('change', function() {
-		if ($allYears.checked == false) {
-			yearsCheckboxes.forEach( function(checkbox) {
-				checkbox.checked = false;
-				selectAll.innerText = 'Select All';
-			})
-		} else {
-			yearsCheckboxes.forEach( function(checkbox) {
-				checkbox.checked = true;
-				selectAll.innerText = 'Deselect All';
-			})
-		}
-	})
-
-	// - - - - FILTER BY SPORT - - - - - - - - 
-	// const select = document.getElementById('filterSport')
-	// let selectedSport = '';
-	// const $li = document.querySelectorAll('li[class="sports"]');
-
-	// select.addEventListener('change', function() {
-	// 	selectedSport = select.value;
-	// 	console.log(selectedSport);
-	// 	filterBySport(selectedSport);
-	// 	console.log($li);
-	// })
-
-	// function filterBySport(sport) {
-	// 	$li.forEach( function(item) {
-	// 		const dataSport = item.getAttribute('data-sport');
-
-	// 		if (selectedSport === dataSport || selectedSport === 'all') {
-	// 			item.style.display = 'block';
-	// 		} else {
-	// 			item.style.display = 'none';
-	// 		}
-	// 	});
-	// }
-
-
-</script>
