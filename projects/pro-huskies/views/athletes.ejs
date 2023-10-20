@@ -80,19 +80,11 @@
  		})
  	})
  	// - - - - FILTER BY YEAR CHECKBOX - - - - - - - - 
-	const yearsCheckboxes = document.querySelectorAll('.yearsSelect input[type="checkbox"]');
+	const yearsCheckboxes = document.querySelectorAll('.yearsOptions input[type="checkbox"]');
 
-	function splitYears() {
-		const athleteList = document.querySelectorAll('.athlete');
-
-		athleteList.forEach( function(athlete) {
-			const athleteSeasons = athlete.getAttribute('data-year').split(',');
-		});
-	}
 	yearsCheckboxes.forEach( function(checkbox) {
 		checkbox.addEventListener('change', function() {
 			const selectedYears = getSelectedAthletes(yearsCheckboxes);
-			console.log('SELECTED YEARS: ', selectedYears)
 			$li.forEach( function(item) {
  				item.style.display = 'none';
  			});
@@ -105,8 +97,10 @@
  					}
  				})
  			})
+
 		})
 	})
+
 	// - - - - COUNT ATHLETES - - - - - - - -  	
 	function countVisibleLi() {
 	  const visibleLiCount = document.querySelectorAll('li[class="athlete"][style="display: block;"]').length;
