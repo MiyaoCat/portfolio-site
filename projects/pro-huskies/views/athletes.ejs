@@ -1,26 +1,6 @@
 <%- include('header.ejs') %>
 <%
-	athletes.forEach( function(athlete) {
-		console.log('seasons: ',athlete.seasons);
-	})
-	// Input option value and text from node/contentful
-	const sports = athletes.map( function(athlete) {
-		return athlete.sport;
-	});
 
-	const sportsFlat = sports.flat();
-	const uniqueSport = sportsFlat.filter(function(item, i, sportsFlat) {
-		return i == sportsFlat.indexOf(item);
-	})
-	const sortedSports = uniqueSport.sort();
-
-	function capFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-	}
-
-	const name = athletes.map( function(athlete) {
-		return athlete.lastName;
-	})
 %>
 
 <inner-column class="athletes">
@@ -46,9 +26,9 @@
 		<% athletes.forEach( function(athlete) { %>
 
 			<li 
-				class="sports" 
+				class="athlete" 
 				data-sport="<%=athlete.sport%>" 
-				data-year="";
+				data-year="<%=athlete.collegeSeasons%>";
 			>
 				<%- include('athlete-card.ejs', {athlete}) %>
 
@@ -65,11 +45,10 @@
 <%- include('footer.ejs') %>
 
 <script>
-
-
+	const yearCheckboxes = document.querySelectorAll('.yearOptions input[type="checkbox"]');
 	// - - - - FILTER BY SPORT CHECKBOX - - - - - - - - 
  	const sportsCheckboxes = document.querySelectorAll('.sportsOptions input[type="checkbox"]');
- 	const $li = document.querySelectorAll('li[class="sports"]');
+ 	const $li = document.querySelectorAll('li[class="athlete"]');
 
  	sportsCheckboxes.forEach( function(checkbox) {
  		checkbox.addEventListener('change', function() {
@@ -104,11 +83,11 @@
 	// - - - - COUNT ATHLETES - - - - - - - -  	
 
 	function countVisibleLi() {
-	  const visibleLiCount = document.querySelectorAll('li[class="sports"][style="display: block;"]').length;
+	  const visibleLiCount = document.querySelectorAll('li[class="athlete"][style="display: block;"]').length;
 	  console.log(`Number of visible <li> elements: ${visibleLiCount}`);
 	}
 	window.addEventListener('load', countVisibleLi);
- 	const hidden = document.querySelectorAll('li[class="sports"][style="display: none;"]').length;
+ 	const hidden = document.querySelectorAll('li[class="athlete"][style="display: none;"]').length;
 
  	console.log('hidden: ', hidden);
 	console.log('li count: ', $li.length)
@@ -150,7 +129,7 @@
 
 	function reorderList(sortedList) {
 		const ul = document.querySelector('.card-grid');
-		const $li = document.querySelectorAll('li[class="sports"]');
+		const $li = document.querySelectorAll('li[class="athlete"]');
 		const newList = [];
 
 		sortedList.forEach( function(name) {
@@ -194,7 +173,7 @@
 	// // // - - - - FILTER BY SPORT - - - - - - - - 
 	// const select = document.getElementById('filterSport')
 	// let selectedSport = '';
-	// const $li = document.querySelectorAll('li[class="sports"]');
+	// const $li = document.querySelectorAll('li[class="athlete"]');
 
 	// select.addEventListener('change', function() {
 	// 	selectedSport = select.value;

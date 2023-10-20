@@ -265,6 +265,10 @@ button {
   border: 1px solid black;
 }
 
+.sort {
+  margin-bottom: 10px;
+}
+
 athlete-card {
   display: block;
   min-width: 250px;

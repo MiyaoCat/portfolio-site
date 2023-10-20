@@ -1,30 +1,19 @@
 <%
-	const yearsAtUw = athletes.map( function(athlete) {
-		const years = [];
-		for (let year = athlete.yearStarted + 1; year < athlete.yearEnded; year++) {
-			years.push(year)
-		}
-		return [athlete.yearStarted, years, athlete.yearEnded];
-	});	
+	// FILTER BY SEASONS PLAYED (BY YEAR)
+	const collegeSeasons = athletes.map(function(athlete) {
+		return athlete.collegeSeasons;
+	})
+	const colSeasonsFlat = collegeSeasons.flat();
+  const uniqueColSeasons = colSeasonsFlat.filter( function(item, i, colSeasonsFlat) {
+  	return i == colSeasonsFlat.indexOf(item);
+  })
+  const colSeasonsSorted = uniqueColSeasons.sort();
 
-	const yearsFlat = yearsAtUw.flat(Infinity);
-	// console.log('years flat: ', yearsFlat)
-
-	const uniqueYears = yearsFlat.filter( function(item, i, yearsFlat) {
-		return i == yearsFlat.indexOf(item);
-	});
-
-	const yearsSorted = uniqueYears.sort();
-	// console.log('YEARS SORTED: ', yearsSorted)
-
-	// Input option value and text from node/contentful
+	// FILTER BY SPORT
 	const sports = athletes.map( function(athlete) {
 		return athlete.sport;
 	});
-
-	//Flatten sports array
 	const sportsFlat = sports.flat();
-
 	const uniqueSport = sportsFlat.filter( function(item, i, sportsFlat) {
 		return i == sportsFlat.indexOf(item);
 	})
@@ -32,7 +21,6 @@
 
 	//COUNT PLAYERS IN EACH SPORT
 	const sportsCount = {};
-	const totalAthletes = 0;
 	const countEachSport = sportsFlat.forEach(function (sport) {
 	  if (sportsCount[sport]) {
 	    sportsCount[sport] += 1;
@@ -43,9 +31,8 @@
 
 	const sportsCountFlat = sports.flat();
 	const athleteTotal = sportsCountFlat.length;
-	console.log('athleteTotal: ', athleteTotal);
 
-	//Capitalize first letter of sport
+	//CAPITALIZE FIRST LETTER OF EACH SPORT
 	function capFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 	}
@@ -85,15 +72,15 @@
 
 		<div class="filterYears">
 			<label class="alert-voice" for="yearsFilter">Years</label>
-			<input type="checkbox" class="yearsFilter">
+			<input type="checkbox" id="yearsFilter">
 
-			<div class="yearsOptions ">
+			<div class="yearsOptions hidden">
 				<label for="allYears" class="selectAll">
 					<input checked type="checkbox" id="allYears">
 					<p class="normal-voice">Deselect All</p>
 				</label>
 
-				<% yearsSorted.forEach( function(year) { %>
+				<% colSeasonsSorted.forEach( function(year) { %>
 				<label for="<%=year%>">
 					<input 
 						checked
@@ -110,17 +97,28 @@
 </section>
 
 <script>
-// - - - - TOGGLE SPORT ON/OFF - - - - - - - - 
+// - - - - TOGGLE FILTERS ON/OFF - - - - - - - - 
 	const $sportsFilter = document.getElementById('sportsFilter');
 	const $sportsOptions = document.querySelector('.sportsOptions');
- 	
- 	$sportsFilter.addEventListener('change', function() {
- 		if ($sportsFilter.checked) {
- 			$sportsOptions.classList.remove('hidden');
- 		} else {
- 			$sportsOptions.classList.add('hidden');
- 		}
- 	})	
+	const $yearsFilter = document.getElementById('yearsFilter');
+	const $yearsOptions = document.querySelector('.yearsOptions');
+
+	function toggleFilters(filterType, element) {
+		if (filterType.checked) {
+			element.classList.remove('hidden');
+		} else {
+			element.classList.add('hidden');
+		}
+	}
+
+	$sportsFilter.addEventListener('change', function() {
+		toggleFilters($sportsFilter, $sportsOptions);
+	})
+
+	$yearsFilter.addEventListener('change', function() {
+		toggleFilters($yearsFilter, $yearsOptions);
+	})
+
 
 // - - - - SELECT/DESELECT ALL SPORTS - - - - - - - - 
 	const $allSports = document.getElementById('allSports');
@@ -138,11 +136,8 @@
 			})
 		}
 	})
-
 // - - - - SELECT/DESELECT ALL YEARS - - - - - - - - 
-	
 	const $allYears = document.getElementById('allYears');
-	// const selectAll = document.querySelector('.selectAll p');
 	$allYears.addEventListener('change', function() {
 		if ($allYears.checked == false) {
 			yearsCheckboxes.forEach( function(checkbox) {
@@ -156,17 +151,6 @@
 			})
 		}
 	})
-	// // - - - - FILTER BY SPORT CHECKBOX - - - - - - - - 
-	// const $sportsFilter = document.getElementById('sportsFilter');
-	// const $sportsOptions = document.querySelector('.sportsOptions');
- 	
- 	// $sportsFilter.addEventListener('change', function() {
- 	// 	if ($sportsFilter.checked) {
- 	// 		$sportsOptions.classList.remove('hidden');
- 	// 	} else {
- 	// 		$sportsOptions.classList.add('hidden');
- 	// 	}
- 	// })
 
 	// - - - - FILTER BY SPORT - - - - - - - - 
 	// const select = document.getElementById('filterSport')
@@ -191,61 +175,6 @@
 	// 		}
 	// 	});
 	// }
-	// // - - - - SORT BY NAME - - - - - - - -
-	// const $sort = document.getElementById('sortBy');
-	// const $names = document.querySelectorAll('.name');
 
-	// const fNamesArray = [];
-	// const lNamesArray = [];
-
-	// $names.forEach(function(nameElement) {
-	// 	const fullName = nameElement.innerText;
-	// 	const nameSplit = fullName.split(' ');
-	// 	const fName = nameSplit[0];
-	// 	const lName = nameSplit[1];	
-
-	// 	fNamesArray.push(fName);
-	// 	lNamesArray.push(lName);
-	// })
-
-	// $sort.addEventListener('change', function() {
-	// 	selectedSort = $sort.value;
-	// 	console.log('change');
-	// 	if (selectedSort == 'lastName') {
-	// 		const sortedNames = lNamesArray.slice().sort();
-	// 		console.log('SORTED BY LAST NAME: ', sortedNames);
-
-	// 		reorderList(sortedNames);
-	// 	}
-
-	// 	if (selectedSort == 'firstName') {
-	// 		const sortedNames = fNamesArray.slice().sort();
-	// 		console.log('SORTED BY FIRST NAME: ', sortedNames)
-
-	// 		reorderList(sortedNames);
-	// 	}
-	// })
-
-	// function reorderList(sortedList) {
-	// 	const ul = document.querySelector('.card-grid');
-	// 	const $li = document.querySelectorAll('li[class="sports"]');
-	// 	const newList = [];
-
-	// 	sortedList.forEach( function(name) {
-	// 		const li = [...$li].find( function(li) {
-	// 			return li.querySelector('.name').innerText.includes(name);
-	// 		});
-
-	// 		if (li instanceof Element) {
-	// 			newList.push(li);
-	// 		}
-	// 	})
-
-	// 	// ul.innerHTML = '';
-
-	// 	newList.forEach(function(li) {
-	// 		ul.appendChild(li);
-	// 	});
-	// }
 
 </script>

@@ -3,11 +3,11 @@
 		<div class="front">
 			<div class="athlete-info">
 				<picture class="headshot">
-					<img src="<%=athlete.headshot%>" alt="">
+					<img src="<%=athlete.headshot%>" alt="headshot of <%=athlete.firstName%> <%=athlete.lastName%>">
 				</picture>
 
 				<picture class="action-shot">
-					<img src="<%=athlete.actionShots%>" alt="">
+					<img src="<%=athlete.actionShots%>" alt="action shot of <%=athlete.firstName%> <%=athlete.lastName%> at UW">
 				</picture>
 
 				<picture class="logo">
@@ -47,7 +47,7 @@
 				<p class="quiet-voice"><%=athlete.birthPlace%></p>
 				
 				<p class="quiet-voice">
-					<strong>High School:</strong> <%=athlete.highSchool%>
+					<strong>High School:</strong> <%=athlete.highSchool%> (<%=athlete.hsCity%>, <%=athlete.hsState%>)
 				</p>
 				
 				<p class="quiet-voice">
