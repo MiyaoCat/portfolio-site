@@ -59,58 +59,97 @@
 	//match available years with year inputs
 	//if there's no match - hide those years
 	//If an available year is checked-unchecked, only display the athletes from the selected sport
- 	const sportsCheckboxes = document.querySelectorAll('.sportsOptions input[type="checkbox"]');
- 	const $li = document.querySelectorAll('li[class="athlete"]');
- 
- 	const yearsCheckboxes = document.querySelectorAll('.yearsOptions input[type="checkbox"]');
- 	
- 	console.log('SPORTS CHECKBOXES: ', sportsCheckboxes);
- 	console.log('LIST ITEMS: ', $li)
- 	
+	const $li = document.querySelectorAll('li[class="athlete"]');
+	const sportsCheckboxes = document.querySelectorAll('.sportsOptions input[type="checkbox"]');
+	const yearsCheckboxes = document.querySelectorAll('.yearsOptions input[type="checkbox"]');
+	const yearsLabel = document.querySelectorAll('.yearsSelect label')
+
  	function getSelectedAthletes(checkboxType) {
- 		const selectedItems = [];
+		const selectedItems = [];
 
- 		checkboxType.forEach( function(checkbox) {
- 			if (checkbox.checked) {
- 				selectedItems.push(checkbox.getAttribute('data-filter'));
- 			}
- 		})
- 		return selectedItems;
- 	}
+		checkboxType.forEach( function(checkbox) {
+			if (checkbox.checked) {
+				selectedItems.push(checkbox.getAttribute('data-filter'));
+			}
+		})
+		return selectedItems;
+	}
 
- 	sportsCheckboxes.forEach( function(checkbox) {
- 		checkbox.addEventListener('change', function() {
- 			const selectedSports = getSelectedAthletes(sportsCheckboxes);
+	const allYears = [];
 
- 			$li.forEach( function(item) {
- 				item.style.display = 'none';
- 			});
+	sportsCheckboxes.forEach( function(checkbox) {
+		checkbox.addEventListener('change', function() {
+			const selectedSports = getSelectedAthletes(sportsCheckboxes);
+			const allYears = [];
 
- 			selectedSports.forEach( function(selectedSport) {
- 				$li.forEach( function(item) {
- 					if (item.getAttribute('data-sport') == selectedSport) {
- 							item.style.display = 'block';
- 							const dataYears = item.getAttribute('data-year').split(',');
- 							console.log('DATA YEARS: ', dataYears)
+			$li.forEach( function(item) {
+				item.style.display = 'none';
+			});
 
- 						yearsCheckboxes.forEach( function(checkbox) {
- 							if (dataYears.includes(checkbox.getAttribute('data-filter'))) {
- 								checkbox.style.display = 'block';
- 							} else {
- 								checkbox.style.display = 'none';
- 							}
- 						});
- 					} else {
- 						item.style.display = 'none';
- 					}
- 				})
- 			})
- 			console.log('SELECTED SPORT: ', selectedSports);
- 		})
- 	})
+			selectedSports.forEach( function(selectedSport) {
+				$li.forEach( function(item) {
+					if (item.getAttribute('data-sport') == selectedSport) {
+						item.style.display = 'block';		
+
+						const dataYears = item.getAttribute('data-year').split(',');
+						allYears.push(...dataYears);
+
+						yearsLabel.forEach( function(checkbox) {
+							const year = checkbox.getAttribute('data-filter');
+							console.log('checkbox: ', checkbox)
+							const label = checkbox.getAttribute('for');
+
+							if (allYears.includes(label)) {
+								checkbox.style.display = 'block';
+								console.log('year: ', year)
+							} else {
+								checkbox.style.display = 'none';
+							}
+						})
+
+					} 
+				})
+			})
+		})
+	})
+
+ 	// const sportsCheckboxes = document.querySelectorAll('.sportsOptions input[type="checkbox"]');
+ 	// const $li = document.querySelectorAll('li[class="athlete"]');
+ 	
+ 	// console.log('SPORTS CHECKBOXES: ', sportsCheckboxes);
+ 	// console.log('LIST ITEMS: ', $li)
+ 	
+ 	// function getSelectedAthletes(checkboxType) {
+ 	// 	const selectedItems = [];
+
+ 	// 	checkboxType.forEach( function(checkbox) {
+ 	// 		if (checkbox.checked) {
+ 	// 			selectedItems.push(checkbox.getAttribute('data-filter'));
+ 	// 		}
+ 	// 	})
+ 	// 	return selectedItems;
+ 	// }
+
+ 	// sportsCheckboxes.forEach( function(checkbox) {
+ 	// 	checkbox.addEventListener('change', function() {
+ 	// 		const selectedSports = getSelectedAthletes(sportsCheckboxes);
+
+ 	// 		$li.forEach( function(item) {
+ 	// 			item.style.display = 'none';
+ 	// 		});
+
+ 	// 		selectedSports.forEach( function(selectedSport) {
+ 	// 			$li.forEach( function(item) {
+ 	// 				if (item.getAttribute('data-sport') == selectedSport) {
+ 	// 						item.style.display = 'block';							
+ 	// 				}
+ 	// 			})
+ 	// 		})
+ 	// 	})
+ 	// })
  	// - - - - FILTER BY YEAR CHECKBOX - - - - - - - - 
 	// const yearsCheckboxes = document.querySelectorAll('.yearsOptions input[type="checkbox"]');
-	console.log('YEARS CHECKBOXES: ', yearsCheckboxes);
+
 	yearsCheckboxes.forEach( function(checkbox) {
 		checkbox.addEventListener('change', function() {
 			const selectedYears = getSelectedAthletes(yearsCheckboxes);
@@ -121,7 +160,7 @@
  			selectedYears.forEach( function(selectedYear) {
  				$li.forEach( function(item) {
  					const dataYears = item.getAttribute('data-year').split(',');
- 					if (dataYears.includes(selectedYear)) {
+ 					if ( dataYears.includes(selectedYear) ) {
  							item.style.display = 'block';							
  					}
  				})
