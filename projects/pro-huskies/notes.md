@@ -10,3 +10,7 @@
 
 # CSS - Flip card.
 - rotating over Y axis. Pretend Y axis is in the middle. Rotating an element over its y-axis will move it from the left side to the right side or vice versa.
+
+
+# get Attribute
+- can get 'for', 'data-'
