@@ -46,122 +46,7 @@
 <%- include('scripts/filter-menu-script.ejs') %>
 <script>
 	// - - - - FILTER BY SPORT CHECKBOX - - - - - - - - 
-	const $li = document.querySelectorAll('li[class="athlete"]');
-	const sportsCheckboxes = document.querySelectorAll('.sportsOptions input[type="checkbox"]');
-	const yearsCheckboxes = document.querySelectorAll('.yearsOptions input[type="checkbox"]');
-	const yearsLabel = document.querySelectorAll('.yearsSelect label')
 
- 	function getSelectedAthletes(checkboxType) {
-		const selectedItems = [];
-
-		checkboxType.forEach( function(checkbox) {
-			if (checkbox.checked) {
-				selectedItems.push(checkbox.getAttribute('data-filter'));
-			}
-		})
-		return selectedItems;
-	}
-
-	const allYears = [];
-
-	sportsCheckboxes.forEach( function(checkbox) {
-		checkbox.addEventListener('change', function() {
-			const selectedSports = getSelectedAthletes(sportsCheckboxes);
-			const allYears = [];
-
-			$li.forEach( function(item) {
-				item.style.display = 'none';
-			});
-
-			selectedSports.forEach( function(selectedSport) {
-				$li.forEach( function(item) {
-					if (item.getAttribute('data-sport') == selectedSport) {
-						item.style.display = 'block';		
-
-						const dataYears = item.getAttribute('data-year').split(',');
-						allYears.push(...dataYears);
-
-						yearsLabel.forEach( function(label) {
-							const labelYear = label.getAttribute('for');
-							const input = document.querySelectorAll('.yearsSelect input');
-							if (allYears.includes(labelYear)) {
-								label.style.display = 'block';
-								console.log('label: ', label)
-								yearsCheckboxes.forEach( function(checkbox) {
-									checkbox.checked = true;
-								})
-							} else {
-								label.style.display = 'none';
-								yearsCheckboxes.checked = false;
-							}
-						})
-
-					} else {
-						// label.style.display = 'none';
-					}
-				})
-			})
-		})
-	})
-
- 	// - - - - FILTER BY YEAR CHECKBOX - - - - - - - - 
-	//If the year is checkmarked
-	//then get the li's years
-  //Match the li years with the checkmarked year
-  function getSelectedYears() {
-	  const selectedYears = [];
-
-	  for (const checkbox of yearsCheckboxes) {
-	    if (checkbox.checked) {
-	      selectedYears.push(checkbox.id);
-	    }
-	  }
-	  return selectedYears;
-	  console.log('selectedYears: ', selectedYears);
-	};
-
-	
-	function filterByYear() {
-		const selectedYears = getSelectedYears();
-		const athleteList = document.querySelectorAll('.athlete');
-
-		athleteList.forEach( function(athlete) {
-			const athleteSeasons = athlete.getAttribute('data-year').split(',');
-
-			const isVisible = athleteSeasons.some( function(year) {
-				return selectedYears.includes(year);
-			});
-			athlete.style.display = isVisible ? 'block' : 'none';
-		})
-	}
-
-	yearsCheckboxes.forEach( function(checkbox) {
-		checkbox.addEventListener('change', function() {
-			filterByYear();
-		})
-	})
-	// yearsCheckboxes.forEach( function(checkbox) {
-	// 	checkbox.addEventListener('change', function() {
-	// 		const selectedYears = getSelectedAthletes(yearsCheckboxes);
-	// 		$li.forEach( function(item) {
- 	// 			item.style.display = 'none';
- 	// 		});
-
- 	// 		selectedYears.forEach( function(selectedYear) {
- 	// 			$li.forEach( function(item) {
- 	// 				const dataYears = item.getAttribute('data-year').split(',');
- 	// 				if ( dataYears.includes(selectedYear) ) {
- 	// 						item.style.display = 'block';						
- 	// 						console.log('dataYears display item: ', item)	
- 	// 				} else {
- 	// 					item.style.display = 'none';	
- 	// 					console.log('dataYears hide item: ', item)	
- 	// 				}
- 	// 			})
- 	// 		})
-
-	// 	})
-	// })
 
 
 	// - - - - SORT BY NAME - - - - - - - -
@@ -201,11 +86,11 @@
 
 	function reorderList(sortedList) {
 		const ul = document.querySelector('.card-grid');
-		const $li = document.querySelectorAll('li[class="athlete"]');
+		const cards = document.querySelectorAll('li[class="athlete"]');
 		const newList = [];
 
 		sortedList.forEach( function(name) {
-			const li = [...$li].find( function(li) {
+			const li = [...cards].find( function(li) {
 				return li.querySelector('.name').innerText.includes(name);
 			});
 
@@ -241,39 +126,4 @@
 			isFlipped = !isFlipped;
 		});
 	});
-
-	// - - - - COUNT ATHLETES - - - - - - - -  	
-	// function countVisibleLi() {
-	//   const visibleLiCount = document.querySelectorAll('li[class="athlete"][style="display: block;"]').length;
-	//   console.log(`Number of visible <li> elements: ${visibleLiCount}`);
-	// }
-	// window.addEventListener('load', countVisibleLi);
- 	// const hidden = document.querySelectorAll('li[class="athlete"][style="display: none;"]').length;
-
- 	// console.log('hidden: ', hidden);
-	// console.log('li count: ', $li.length)
-
-	// // // - - - - FILTER BY SPORT - - - - - - - - 
-	// const select = document.getElementById('filterSport')
-	// let selectedSport = '';
-	// const $li = document.querySelectorAll('li[class="athlete"]');
-
-	// select.addEventListener('change', function() {
-	// 	selectedSport = select.value;
-	// 	console.log(selectedSport);
-	// 	filterBySport(selectedSport);
-	// 	console.log($li);
-	// })
-
-	// function filterBySport(sport) {
-	// 	$li.forEach( function(item) {
-	// 		const dataSport = item.getAttribute('data-sport');
-
-	// 		if (selectedSport === dataSport || selectedSport === 'all') {
-	// 			item.style.display = 'block';
-	// 		} else {
-	// 			item.style.display = 'none';
-	// 		}
-	// 	});
-	// }
 </script>

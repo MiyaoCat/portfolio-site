@@ -37,6 +37,7 @@
 		}
 	})
 
+
 // - - - - SELECT/DESELECT ALL YEARS - - - - - - - - 
 	const $allYears = document.getElementById('allYears');
 	const selectAllYears = document.querySelector('label[for="allYears"] p');
@@ -45,6 +46,10 @@
 		if ($allYears.checked == false) {
 			yearsCheckboxes.forEach( function(checkbox) {
 				checkbox.checked = false;
+
+				cards.forEach( function(card) {
+					card.style.display = 'none';
+				});
 				selectAllYears.innerText = 'Select All';
 			})
 		} else {
