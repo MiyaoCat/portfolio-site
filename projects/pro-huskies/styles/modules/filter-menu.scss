@@ -1,37 +1,42 @@
 .filter-menu {
-	background-color: grey;
-	padding: 0 $spacing-wide;
-	margin: 0 $spacing-sm;
-	min-width: 180px; 
+	display: none;
+}
+@media(min-width:700px) {
+	.filter-menu {
+		display: block;
+		background-color: grey;
+		padding: 0 $spacing-wide;
+		margin: 0 $spacing-sm;
+		min-width: 180px; 
 
-	.sportsOptions {
-		display: flex;
-		flex-direction: column;
-	}
+		.sportsOptions {
+			display: flex;
+			flex-direction: column;
+		}
 
-	.hidden {
-		// display: none;
-	}
+		.hidden {
+			// display: none;
+		}
 
-	.sportsOptions label, .yearsOptions label {
-		display: flex;
-		margin: $spacing-st;
-		padding: $spacing-st 0;
-		border: 1px solid black;
-		max-width: fit-content;
-	}
-
-	.yearsSelect {
-		display: flex;
-		flex-wrap: wrap;
-		max-width: 180px;
-
-		label {
+		.sportsOptions label, .yearsOptions label {
+			display: flex;
+			margin: $spacing-st;
+			padding: $spacing-st 0;
+			border: 1px solid black;
 			max-width: fit-content;
+		}
+
+		.yearsSelect {
+			display: flex;
+			flex-wrap: wrap;
+			max-width: 180px;
+
+			label {
+				max-width: fit-content;
+			}
 		}
 	}
 }
-
 .sort {
 	margin-bottom: $spacing-wide;
 }

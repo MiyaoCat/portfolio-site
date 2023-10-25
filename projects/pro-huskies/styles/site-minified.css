@@ -181,7 +181,7 @@ a:hover {
 /* Caption text or similar */
 .calm-voice {
   font-family: Open Sans, Helvetica;
-  font-size: 14px;
+  font-size: 0.8em;
 }
 
 /* Fine print text or similar */
@@ -205,6 +205,12 @@ a:hover {
 
 /* Sections and more 
 stuff */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 @media (min-width: 700px) {
   .athletes {
     display: grid;
@@ -226,9 +232,6 @@ stuff */
   .athletes .card-grid {
     grid-column: 2;
     grid-row: 3;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
   }
   .athletes .card-grid li {
     display: block;
@@ -247,31 +250,37 @@ button {
 }
 
 .filter-menu {
-  background-color: grey;
-  padding: 0 10px;
-  margin: 0 2px;
-  min-width: 180px;
-}
-.filter-menu .sportsOptions {
-  display: flex;
-  flex-direction: column;
-}
-.filter-menu .sportsOptions label, .filter-menu .yearsOptions label {
-  display: flex;
-  margin: 5px;
-  padding: 5px 0;
-  border: 1px solid black;
-  max-width: fit-content;
-}
-.filter-menu .yearsSelect {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 180px;
-}
-.filter-menu .yearsSelect label {
-  max-width: fit-content;
+  display: none;
 }
 
+@media (min-width: 700px) {
+  .filter-menu {
+    display: block;
+    background-color: grey;
+    padding: 0 10px;
+    margin: 0 2px;
+    min-width: 180px;
+  }
+  .filter-menu .sportsOptions {
+    display: flex;
+    flex-direction: column;
+  }
+  .filter-menu .sportsOptions label, .filter-menu .yearsOptions label {
+    display: flex;
+    margin: 5px;
+    padding: 5px 0;
+    border: 1px solid black;
+    max-width: fit-content;
+  }
+  .filter-menu .yearsSelect {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 180px;
+  }
+  .filter-menu .yearsSelect label {
+    max-width: fit-content;
+  }
+}
 .sort {
   margin-bottom: 10px;
 }
@@ -322,11 +331,15 @@ athlete-card {
   display: none;
 }
 
+athlete-card {
+  max-width: 250px;
+}
+
 @media (min-width: 700px) {
   athlete-card {
-    max-width: 350px;
-    width: 350px;
-    height: 500px;
+    max-width: none;
+    width: 330px;
+    height: 460px;
     perspective: 1000px;
   }
   .card {
@@ -411,19 +424,20 @@ athlete-card {
     transform: rotateY(180deg);
   }
   .back .headshot {
-    max-width: 130px;
+    display: flex;
+    max-width: 120px;
     margin-left: auto;
     margin-right: auto;
     z-index: 12;
     grid-row: 1;
     grid-column: 1/span 2;
-    self-align: center;
+    align-items: center;
   }
   .back .logo-back {
     position: absolute;
     right: 30%;
-    bottom: 74.4%;
-    max-width: 140px;
+    bottom: 72.4%;
+    max-width: 135px;
     opacity: 0.3;
   }
   .back .name-back {
@@ -488,11 +502,11 @@ athlete-card {
     min-width: 100%;
   }
   .back .stats-table td, .back .stats-table th {
-    padding: 1.5px;
+    padding: 1.2px;
     text-align: center;
   }
   .back .stats-table td p, .back .stats-table th p {
-    font-size: 12px;
+    font-size: 0.7em;
   }
   .back .stats-table th {
     border-bottom: 1px solid hsl(259, 80%, 11%);

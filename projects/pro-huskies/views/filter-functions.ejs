@@ -2,9 +2,9 @@
 	// - - - - FILTER BY SPORT CHECKBOX - - - - - - - - 
 	const cards = document.querySelectorAll('li[class="athlete"]');
 	const sportsCheckboxes = document.querySelectorAll('.sportsOptions input[type="checkbox"]');
-	const yearsCheckboxes = document.querySelectorAll('.yearsSelect input[type="checkbox"]');
-	const yearsLabel = document.querySelectorAll('.yearsSelect label')
-	const visibleLabels = document.querySelectorAll('.yearsSelect label[style="display:block"]');
+	const yearsCheckboxes = document.querySelectorAll('.yearSelect input[type="checkbox"]');
+	const yearsLabel = document.querySelectorAll('.yearSelect label')
+	const visibleLabels = document.querySelectorAll('.yearSelect label[style="display:block"]');
 	
 	const visibleYears = visibleLabels.forEach( function(label) {
 		const year = label.getAttribute('for');

@@ -1,8 +1,12 @@
+athlete-card {
+	max-width: 250px;
+}
+
 @media (min-width: 700px) {
 	athlete-card {
-		max-width: 350px;
-		width: 350px;
-		height: 500px;
+		max-width: none;
+		width: 330px;
+		height: 460px;
 		perspective: 1000px;
 	}
 
@@ -101,20 +105,21 @@
 		transform: rotateY(180deg);
 		
 		.headshot {
-			max-width: 130px;
+			display: flex;
+			max-width: 120px;
 			margin-left: auto;
 			margin-right: auto;
 			z-index: 12;
 			grid-row: 1;
 			grid-column: 1 / span 2;
-			self-align: center;
+			align-items: center;
 		}
 
 		.logo-back {
 			position: absolute;
 			right: 30%;
-			bottom: 74.4%;
-			max-width: 140px;
+			bottom: 72.4%;
+			max-width: 135px;
 			opacity: .3;
 		}
 
@@ -191,11 +196,11 @@
 			min-width: 100%;
 
 			td, th {
-				padding: 1.5px;
+				padding: 1.2px;
 				text-align: center;
 			}
 			td p, th p {
-				font-size: 12px;
+				font-size: .7em;
 			}
 			
 			th {

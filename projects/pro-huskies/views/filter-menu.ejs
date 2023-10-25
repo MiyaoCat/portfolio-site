@@ -53,20 +53,22 @@
 					<p class="normal-voice">(<%=athleteTotal%>)</p>
 				</label>
 
-				<% sportsSorted.forEach( function(sport) { %>	
-					<label for="<%=sport%>">
-						<input 
-							checked
-							type="checkbox" 
-							id="<%=sport%>"
-							data-filter="<%=sport%>"
-						/>
-							<p class="normal-voice">
-								<%=capFirstLetter(sport)%> (<%=sportsCount[sport]%>)
-							</p>
-						
-					</label>
-				<% });%>	
+				<div class="sportSelect">
+					<% sportsSorted.forEach( function(sport) { %>	
+						<label for="<%=sport%>">
+							<input 
+								checked
+								type="checkbox" 
+								id="<%=sport%>"
+								data-filter="<%=sport%>"
+							/>
+								<p class="normal-voice">
+									<%=capFirstLetter(sport)%> (<%=sportsCount[sport]%>)
+								</p>
+							
+						</label>
+					<% });%>
+				</div>
 			</div>
 		</div>
 
@@ -80,7 +82,7 @@
 					<p class="normal-voice">Deselect All</p>
 				</label>
 
-				<div class="yearsSelect">
+				<div class="yearSelect">
 					<% colSeasonsSorted.forEach( function(year) { %>
 					<label for="<%=year%>">
 						<input 
