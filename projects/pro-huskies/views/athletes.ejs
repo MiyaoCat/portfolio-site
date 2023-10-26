@@ -17,9 +17,14 @@
 			<option value="lastName">Last Name</option>
 			
 			<option value="firstName">First Name</option>
-		</select>			
+		</select>		
+
+		<div class="flip-button">
+			<button id='flip-toggle'>Turn Off Hover</button>
+		</div>	
 	</section>
 
+	
 	<%- include('filter-menu.ejs') %>
 	
 	<ul class="card-grid">
@@ -34,7 +39,7 @@
 
 				<div class="card-details">
 					<a href="athlete/<%=athlete.slug%>">Athlete Bio</a>
-					<button id='flipper'>Flip Card</button>
+					<button class='flipper'>Flip Card</button>
 				</div>
 			</li>
 
@@ -107,14 +112,14 @@
 	}
 
 	// - - - - FLIP BUTTON - - - - - - - - - - - -
-	const $athleteCard = document.querySelectorAll('athlete-card');
-	const $button = document.querySelectorAll('button');
+	const $athleteCards = document.querySelectorAll('athlete-card');
+	const $button = document.querySelectorAll('.flipper');
 
 	$button.forEach( function($button, index) {
 		let isFlipped = false;	
 		
 		$button.addEventListener('click', function(event) {
-			$athleteCard[index].classList.toggle('hovered');
+			$athleteCards[index].classList.toggle('hovered');
 			this.innerText = 'flip back';
 
 			if (isFlipped) {
@@ -126,4 +131,24 @@
 			isFlipped = !isFlipped;
 		});
 	});
+
+	// - - - - FLIP TOGGLE - - - - - - - - - - - -
+	const $flipToggle = document.getElementById('flip-toggle');
+	let flipped = false;
+	$flipToggle.addEventListener('click', function() {
+		
+
+		$athleteCards.forEach( function(card) {
+			card.classList.toggle('disable-hover');
+		})
+
+		if (flipped) {
+				$flipToggle.innerText = 'Turn Off Hover';
+		} else {
+				$flipToggle.innerText = 'Turn On Hover';
+			}
+
+		flipped = !flipped;
+
+	})
 </script>

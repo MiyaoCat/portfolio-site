@@ -39,6 +39,10 @@ picture {
 	max-width: 500px;
 }
 
+button, a, input, label, option, select {
+	cursor: pointer;
+}
+
 @media (min-width:400px) {
 	picture {
 		// max-width: 250px;
