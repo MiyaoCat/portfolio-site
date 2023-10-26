@@ -120,6 +120,7 @@
 		
 		$button.addEventListener('click', function(event) {
 			$athleteCards[index].classList.toggle('hovered');
+			$athleteCards[index].classList.toggle('disable-hover');
 			this.innerText = 'flip back';
 
 			if (isFlipped) {
@@ -136,16 +137,16 @@
 	const $flipToggle = document.getElementById('flip-toggle');
 	let flipped = false;
 	$flipToggle.addEventListener('click', function() {
-		
 
 		$athleteCards.forEach( function(card) {
 			card.classList.toggle('disable-hover');
 		})
 
 		if (flipped) {
-				$flipToggle.innerText = 'Turn Off Hover';
+				$flipToggle.innerText = 'Hover is On';
 		} else {
-				$flipToggle.innerText = 'Turn On Hover';
+				$flipToggle.innerText = 'Hover is Off';
+
 			}
 
 		flipped = !flipped;

@@ -30,7 +30,7 @@ athlete-card {
 	athlete-card.disable-hover:hover > .card {
 		transform: none;
 	}
-	
+
 	.front .athlete-info {
 		height: 100%;
 		display: grid;
@@ -104,7 +104,7 @@ athlete-card {
 		display: grid;
 		grid-template-columns: 50% 50%;
 		grid-template-rows: 100px auto auto auto 1fr auto;
-		padding: 10px;
+		padding: $spacing-st;
 		background-color: grey;
 		transform: rotateY(180deg);
 		
@@ -113,16 +113,17 @@ athlete-card {
 			max-width: 120px;
 			margin-left: auto;
 			margin-right: auto;
+			margin-bottom: $spacing-sm;
 			z-index: 12;
 			grid-row: 1;
 			grid-column: 1 / span 2;
-			align-items: center;
+			align-items: flex-end;
 		}
 
 		.logo-back {
 			position: absolute;
 			right: 30%;
-			bottom: 72.4%;
+			bottom: 73%;
 			max-width: 135px;
 			opacity: .3;
 		}
