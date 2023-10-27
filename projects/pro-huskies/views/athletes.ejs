@@ -14,9 +14,11 @@
 		<select id="sortBy">
 			<option value="all">- - Select - -</option>
 
-			<option value="lastName">Last Name</option>
-			
-			<option value="firstName">First Name</option>
+			<option value="lastName">Last Name (A - Z)</option>
+			<option value="lastNameRev">Last Name (Z - A)</option>
+			<!-- <option value="firstName">First Name (A - Z)</option> -->
+			<!-- <option value="firstNameRev">First Name (Z - A)</option> -->
+			<option value="yearDesc">Year (Desc)</option>
 		</select>		
 
 		<div class="flip-button">
@@ -54,7 +56,7 @@
 
 
 
-	// - - - - SORT BY NAME - - - - - - - -
+	// - - - - SORT BY NAME - - - - - - - - - - - - - -
 	const $sort = document.getElementById('sortBy');
 	const $names = document.querySelectorAll('.name');
 
@@ -71,6 +73,26 @@
 		lNamesArray.push(lName);
 	})
 
+	function reorderList(sortedList) {
+		const ul = document.querySelector('.card-grid');
+		const cards = document.querySelectorAll('li[class="athlete"]');
+		const orderedList = [];
+
+		sortedList.forEach( function(nameMatch) {
+			const card = [...cards].find( function(name) {
+				return name.querySelector('.name').innerText.includes(nameMatch);
+			});
+
+			if (card instanceof Element) {
+				orderedList.push(card);
+			}
+		})
+
+		orderedList.forEach(function(card) {
+			ul.appendChild(card);
+		});
+	}
+
 	$sort.addEventListener('change', function() {
 		selectedSort = $sort.value;
 		console.log('change');
@@ -81,35 +103,29 @@
 			reorderList(sortedNames);
 		}
 
+		if (selectedSort == 'lastNameRev') {
+			const sortedNames = lNamesArray.slice().sort();
+			const sortedRev = sortedNames.reverse();
+
+			reorderList(sortedRev);
+		}
+
 		if (selectedSort == 'firstName') {
 			const sortedNames = fNamesArray.slice().sort();
-			console.log('SORTED BY FIRST NAME: ', sortedNames)
 
 			reorderList(sortedNames);
 		}
+
+		if (selectedSort == 'firstNameRev') {
+			const sortedNames = fNamesArray.slice().sort();
+			const sortedRev = sortedNames.reverse();
+
+			reorderList(sortedRev);
+		}
 	})
 
-	function reorderList(sortedList) {
-		const ul = document.querySelector('.card-grid');
-		const cards = document.querySelectorAll('li[class="athlete"]');
-		const newList = [];
 
-		sortedList.forEach( function(name) {
-			const li = [...cards].find( function(li) {
-				return li.querySelector('.name').innerText.includes(name);
-			});
-
-			if (li instanceof Element) {
-				newList.push(li);
-			}
-		})
-
-		// ul.innerHTML = '';
-
-		newList.forEach(function(li) {
-			ul.appendChild(li);
-		});
-	}
+	// - - - - SORT BY YEAR - - - - - - - - - - - - - -
 
 	// - - - - FLIP BUTTON - - - - - - - - - - - -
 	const $athleteCards = document.querySelectorAll('athlete-card');
