@@ -103,8 +103,7 @@ app.get('/athletes', function(request, response) {
 				// 	return rings.file
 				// })
 				return {
-					firstName: item.fields.firstName,
-					lastName: item.fields.lastName,
+					name: item.fields.name,
 					headshot: item.fields.headshot.fields.file.url,
 					heightInFt: item.fields.heightInFeet,
 					heightInIn: item.fields.heightInInches,

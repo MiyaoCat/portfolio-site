@@ -41,7 +41,8 @@
 // - - - - SELECT/DESELECT ALL YEARS - - - - - - - - 
 	const $allYears = document.getElementById('allYears');
 	const selectAllYears = document.querySelector('label[for="allYears"] p');
-
+	const yearsCheckboxes = document.querySelectorAll('.yearSelect input[type="checkbox"]');
+	
 	$allYears.addEventListener('change', function() {
 		if ($allYears.checked == false) {
 			yearsCheckboxes.forEach( function(checkbox) {
