@@ -72,8 +72,6 @@
 		years.push(...yearsArray);
 	})
 
-	// const yearsSplit = years.split(',');
-
 	console.log(years)
 	const fNamesArray = [];
 	const lNamesArray = [];
@@ -88,54 +86,14 @@
 		lNamesArray.push(lName);
 	})
 
-	// function reorderList(sortedList) {
-	// 	const ul = document.querySelector('.card-grid');
-	// 	const cards = document.querySelectorAll('li[class="athlete"]');
-	// 	const orderedList = [];
-
-	// 	sortedList.forEach( function(nameMatch) {
-	// 		const card = [...cards].find( function(athleteName) {
-	// 			return athleteName.querySelector('.name').innerText.includes(nameMatch);
-	// 		});
-
-	// 		if (card instanceof Element) {
-	// 			orderedList.push(card);
-	// 		}
-	// 	})
-
-	// 	orderedList.forEach(function(card) {
-	// 		ul.appendChild(card);
-	// 	});
-	// }
-
-	// function reorderByYear(sortedList) {
-	// 	const ul = document.querySelector('.card-grid');
-	// 	const cards = document.querySelectorAll('li[class="athlete"]');
-	// 	const orderedYears = [];
-
-	// 	sortedList.forEach( function(yearMatch) {
-	// 		const card = [...cards].find( function(year) {
-	// 			return year.querySelector('.years').innerText.includes(yearMatch);
-	// 		});
-
-	// 		if (card instanceof Element) {
-	// 			orderedYears.push(card);
-	// 		}
-	// 	})
-
-	// 	orderedYears.forEach(function(card) {
-	// 		ul.appendChild(card);
-	// 	});
-	// }
-
 	function reorderList(sortedList, selector) {
 		const ul = document.querySelector('.card-grid');
 		const cards = document.querySelectorAll('li[class="athlete"]');
 		const orderedList = [];
 
 		sortedList.forEach( function(match) {
-			const card = [...cards].find( function(athleteName) {
-				return athleteName.querySelector(selector).innerText.includes(match);
+			const card = [...cards].find( function(athlete) {
+				return athlete.querySelector(selector).innerText.includes(match);
 			});
 
 			if (card instanceof Element) {
@@ -147,6 +105,7 @@
 			})
 		})
 	}
+
 	$sort.addEventListener('change', function() {
 		selectedSort = $sort.value;
 
@@ -164,13 +123,13 @@
 		}
 
 		if (selectedSort == 'yearDesc') {
-			const sortedYears = years.slice().sort();	
+			const sortedYears = years.slice().sort((a, b) => b - a);	
 
 			reorderList(sortedYears, '.years');
 		}
 
 		if (selectedSort == 'yearAsc') {
-			const sortedYears = years.slice().sort();	
+			const sortedYears = years.slice().sort((a, b) => b - a);	
 			const sortedRev = sortedYears.reverse();
 			reorderList(sortedYears, '.years');
 		}

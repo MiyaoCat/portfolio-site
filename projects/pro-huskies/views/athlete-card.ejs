@@ -1,13 +1,18 @@
+<%
+	const firstYear = athlete.collegeSeasons[0];
+	const lastyear = athlete.collegeSeasons[athlete.collegeSeasons.length - 1];
+
+%>
 <athlete-card >
 	<div class="card">
 		<div class="front">
 			<div class="athlete-info">
 				<picture class="headshot">
-					<img src="<%=athlete.headshot%>" alt="headshot of <%=athlete.firstName%> <%=athlete.lastName%>">
+					<img src="<%=athlete.headshot%>" alt="headshot of <%=athlete.name%>">
 				</picture>
 
 				<picture class="action-shot">
-					<img src="<%=athlete.actionShots%>" alt="action shot of <%=athlete.firstName%> <%=athlete.lastName%> at UW">
+					<img src="<%=athlete.actionShots%>" alt="action shot of <%=athlete.name%> at UW">
 				</picture>
 
 				<picture class="logo">
@@ -21,7 +26,7 @@
 				<p class="position calm-voice"><%=athlete.position%></p>
 
 				<p class="years calm-voice">
-					<%=athlete.yearStarted%> - <%=athlete.yearEnded%>
+					<%=firstYear%> - <%=lastyear%>
 				</p>						
 			</div>
 		</div>
@@ -36,7 +41,7 @@
 			</picture>
 			
 			<h4 class="name-back alert-voice">
-				<%=athlete.firstName%> <%=athlete.lastName%>
+				<%=athlete.name%>
 			</h4>
 			
 			<div class="personal-info">
@@ -70,9 +75,11 @@
 			<div class="accolades">
 				<p class="quiet-voice"><strong>Awards</strong></p>
 
-				<% athlete.collegeAccolades.forEach(function(accolade) { %>
+				<% if (athlete.collegeAccolades) {
+					athlete.collegeAccolades.forEach(function(accolade) { %>
 					<p class="quiet-voice"><%-accolade %></p>			    
-				<% }); %>
+					<% }); %>
+				<% }; %>	
 			</div>
 			
 			<div class="socials">
