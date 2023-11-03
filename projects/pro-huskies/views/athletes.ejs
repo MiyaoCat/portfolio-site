@@ -49,7 +49,7 @@
 </inner-column>
 
 <%- include('footer.ejs') %>
-<%- include('scripts/filter-menu-script.ejs') %>
+<%- //include('scripts/filter-menu-script.ejs') %>
 <script>
 	// - - - - FILTER BY SPORT CHECKBOX - - - - - - - - 
 
@@ -58,19 +58,28 @@
 	// - - - - SORT BY NAME - - - - - - - - - - - - - -
 	const $sort = document.getElementById('sortBy');
 	const $names = document.querySelectorAll('.name');
-	const $athletes = document.querySelectorAll('.athlete');
+	// const $athletes = document.querySelectorAll('.athlete');
 	
 	const years = [];
 
+	// $athletes.forEach( function(athlete) {
+	// 	const dataYears = athlete.getAttribute('data-year');
+	// 	const yearsArray = dataYears.split(',').map( function(year) {
+	// 		return parseInt(year);
+	// 	})
+	// 	years.push(...yearsArray);
+	// })
+
+	$athletes = document.querySelectorAll('athlete-card');
+
 	$athletes.forEach( function(athlete) {
-		const dataYears = athlete.getAttribute('data-year');
-		const yearsArray = dataYears.split(',').map (function(year) {
-			return parseInt(year);
-		})
-		years.push(...yearsArray);
+		const dataYears = athlete.querySelector('.years').innerText;
+		const firstYears = parseInt(dataYears.split('-')[0]);
+
+		years.push(firstYears);
 	})
 
-	console.log(years)
+	console.log('YEARS: ', years)
 	const fNamesArray = [];
 	const lNamesArray = [];
 
@@ -85,48 +94,93 @@
 	})
 
 	// function reorderList(sortedList, selector) {
-	// 	const ul = document.querySelector('.card-grid');
-	// 	const cards = document.querySelectorAll('li[class="athlete"]');
-	// 	const orderedList = [];
+	//   const ul = document.querySelector('.card-grid');
+	//   const cards = Array.from(document.querySelectorAll('li[class="athlete"]'));
 
-	// 	sortedList.forEach( function(match) {
-	// 		const card = [...cards].find( function(athlete) {
-	// 			return athlete.querySelector(selector).innerText.includes(match);
-	// 		});
+	//   // Sort the cards based on the sortedList order
+	//   const sortedCards = sortedList.map(function(match) {
+	//     return cards.find(function(athlete) {
+	//       return athlete.querySelector(selector).innerText.includes(match);
+	//     });
+	//   });
 
-	// 		if (card instanceof Element) {
-	// 			orderedList.push(card);
-	// 		}
-	// 	})
+	//   // Clear the current content of the ul
+	//   while (ul.firstChild) {
+	//     ul.removeChild(ul.firstChild);
+	//   }
 
-	// 	orderedList.forEach(function (card) {
-	// 		ul.appendChild(card);
-	// 	})
+	//   // Append the sorted cards to the ul, skipping undefined values
+	//   sortedCards.forEach(function(card) {
+	//     if (card) {
+	//       ul.appendChild(card);
+	//     }
+	//   });
 	// }
 	function reorderList(sortedList, selector) {
 	  const ul = document.querySelector('.card-grid');
 	  const cards = Array.from(document.querySelectorAll('li[class="athlete"]'));
 
-	  // Sort the cards based on the sortedList order
-	  const sortedCards = sortedList.map(function(match) {
-	    return cards.find(function(athlete) {
+	  // Append the sorted cards to the ul, skipping undefined values
+	  sortedList.forEach(function (match) {
+	    const card = cards.find(function (athlete) {
 	      return athlete.querySelector(selector).innerText.includes(match);
 	    });
-	  });
 
-	  // Clear the current content of the ul
-	  while (ul.firstChild) {
-	    ul.removeChild(ul.firstChild);
-	  }
-
-	  // Append the sorted cards to the ul, skipping undefined values
-	  sortedCards.forEach(function(card) {
 	    if (card) {
 	      ul.appendChild(card);
 	    }
 	  });
 	}
 
+	// function reorderListNum(sortedList, selector) {
+	//   const ul = document.querySelector('.card-grid');
+	//   const cards = Array.from(document.querySelectorAll('li[class="athlete"]'));
+
+	//   // Append the sorted cards to the ul, skipping undefined values
+	//   sortedList.forEach(function (match) {
+	//     const card = cards.find(function (athlete) {
+	//     	const firstYear = parseInt(athlete.querySelector(selector).innerText.split(' - ')[0])
+	//       return firstYear === match;
+	//     });
+
+	//     if (card) {
+	//       ul.appendChild(card);
+	//     }
+	//   });
+	// }
+
+	function reorderListNum(sortedList, selector) {
+	  const ul = document.querySelector('.card-grid');
+	  const cards = Array.from(document.querySelectorAll('li[class="athlete"]'));
+
+	  // Create a mapping of athlete cards by their year
+	  const cardsByYear = {};
+	  cards.forEach(function (athlete) {
+	    const year = parseInt(athlete.querySelector(selector).innerText.split(' - ')[0]);
+	    if (!cardsByYear[year]) {
+	      cardsByYear[year] = [];
+	    }
+	    cardsByYear[year].push(athlete);
+	  });
+
+	  // Reorder the cards based on the sorted list
+	  const reorderedCards = [];
+	  sortedList.forEach(function (match) {
+	    if (cardsByYear[match]) {
+	      reorderedCards.push(...cardsByYear[match]);
+	    }
+		});
+
+	  // Clear the current content of the ul
+	  while (ul.firstChild) {
+	    ul.removeChild(ul.firstChild);
+	  }
+
+	  // Append the reordered cards to the ul
+	  reorderedCards.forEach(function (card) {
+	    ul.appendChild(card);
+	  });
+	}
 
 	$sort.addEventListener('change', function() {
 		selectedSort = $sort.value;
@@ -149,7 +203,7 @@
 				return b - a;
 			});	
 			console.log('YEARS DESC: ', sortedYearsDesc)
-			reorderList(sortedYearsDesc, '.years');
+			reorderListNum(sortedYearsDesc, '.years');
 		}
 
 		if (selectedSort == 'yearAsc') {
@@ -157,9 +211,8 @@
 			const sortedRev = sortedYears.reverse();
 
 			console.log('YEARS ASC: ', sortedYears)
-			reorderList(sortedYears, '.years');
+			reorderListNum(sortedYears, '.years');
 		}
-
 	})
 
 	// - - - - FLIP BUTTON - - - - - - - - - - - -
