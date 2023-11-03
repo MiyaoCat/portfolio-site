@@ -353,6 +353,10 @@ athlete-card {
   }
   athlete-card:hover > .card {
     cursor: pointer;
+    transform: rotateY(180deg);
+  }
+  athlete-card.hovered > .card {
+    transform: rotateY(180deg);
   }
   athlete-card.disable-hover:hover > .card {
     transform: none;
