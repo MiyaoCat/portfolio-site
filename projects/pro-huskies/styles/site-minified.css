@@ -353,10 +353,6 @@ athlete-card {
   }
   athlete-card:hover > .card {
     cursor: pointer;
-    transform: rotateY(180deg);
-  }
-  athlete-card.hovered > .card {
-    transform: rotateY(180deg);
   }
   athlete-card.disable-hover:hover > .card {
     transform: none;
@@ -397,22 +393,26 @@ athlete-card {
   .front .athlete-info .name {
     font-size: 1.4em;
   }
+  .front .athlete-info .position-container, .front .athlete-info .years-container {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    rotate: 180deg;
+    width: 25px;
+    height: 75px;
+  }
+  .front .athlete-info .position-container {
+    top: 73.5%;
+    left: 4.1%;
+  }
+  .front .athlete-info .years-container {
+    top: 73.5%;
+    left: 88.5%;
+  }
   .front .athlete-info .position, .front .athlete-info .years {
     display: block;
-    position: absolute;
-    writing-mode: vertical-lr;
-    rotate: 180deg;
-    top: 71%;
-    left: 4%;
-    margin-top: auto;
-    margin-bottom: auto;
-    min-height: 100px;
-  }
-  .front .athlete-info .position p, .front .athlete-info .years p {
-    font-size: 15px;
-  }
-  .front .athlete-info .years {
-    right: 4%;
+    writing-mode: vertical-rl;
   }
   .front, .back {
     width: 100%;

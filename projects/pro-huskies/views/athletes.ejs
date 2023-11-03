@@ -123,7 +123,9 @@
 		}
 
 		if (selectedSort == 'yearDesc') {
-			const sortedYears = years.slice().sort((a, b) => b - a);	
+			const sortedYears = years.slice().sort( function(a, b) {
+				return b - a;
+			});	
 
 			reorderList(sortedYears, '.years');
 		}

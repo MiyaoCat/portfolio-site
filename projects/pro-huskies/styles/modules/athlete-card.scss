@@ -20,11 +20,11 @@ athlete-card {
 
 	athlete-card:hover > .card {
 		cursor: pointer;
-		transform: rotateY(180deg);
+		// transform: rotateY(180deg);
 	}
 
 	athlete-card.hovered > .card {
-		transform: rotateY(180deg);
+		// transform: rotateY(180deg);
 	}
 
 	athlete-card.disable-hover:hover > .card {
@@ -72,24 +72,52 @@ athlete-card {
 			font-size: 1.4em;
 		}
 
-		.position, .years {
-			display: block;
-			position: absolute;
-			writing-mode: vertical-lr;
-			rotate: 180deg;
-			top: 71%;
-			left: 4%;
-			margin-top: auto;
-			margin-bottom: auto;
-			min-height:100px;
+		// .position, .years {
+		// 	border: 1px solid red;
+		// 	display: block;
+		// 	position: absolute;
+		// 	writing-mode: vertical-lr;
+		// 	word-wrap: normal;
+		// 	rotate: 180deg;
+		// 	top: 69.5%;
+		// 	left: 4%;
+		// 	margin-top: auto;
+		// 	margin-bottom: auto;
+		// 	min-height: 90px;
 
-			p {
-				font-size: 15px;
-			}
+		// 	p {
+		// 		font-size: 15px;
+		// 	}
+		// }
+
+		// .years {
+		// 	right: 4%;
+		// }
+
+		.position-container, .years-container {
+			// border: 1px solid red;
+			position: absolute;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			rotate: 180deg;
+			width: 25px;
+			height: 75px;
 		}
 
-		.years {
-			right: 4%;
+		.position-container {
+			top: 73.5%;
+			left: 4.1%;
+		}
+
+		.years-container {
+			top: 73.5%;
+			left: 88.5%;
+		}
+
+		.position, .years {
+			display: block;
+			writing-mode: vertical-rl;
 		}
 	}
 
