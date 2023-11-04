@@ -87,21 +87,25 @@
 			</div>
 			
 			<div class="socials">
-				<div class="instagram">
-					<img class="social-icon" src="assets/logos/instagram-logo.svg" alt="">
+				<% if (athlete.instagram) { %>
+					<div class="instagram">
+						<img class="social-icon" src="assets/logos/instagram-logo.svg" alt="">
 
-					<a class="quiet-voice" href="https://instagram.com/<%=athlete.instagram%>" target="_instagram">
-						@<%=athlete.instagram%>
-					</a>
-				</div>
+						<a class="quiet-voice" href="https://instagram.com/<%=athlete.instagram%>" target="_instagram">
+							@<%=athlete.instagram%>
+						</a>
+					</div>
+				<% } %>	
 
-				<div class="twitter">
-					<img class="social-icon" src="assets/logos/twitter-logo.svg" alt="">
+				<% if (athlete.twitter) { %>
+					<div class="twitter">
+						<img class="social-icon" src="assets/logos/twitter-logo.svg" alt="">
 
-					<a class="quiet-voice" href="https://twitter.com/<%=athlete.twitter%>" target="_twitter">
-						@<%=athlete.twitter%>
-					</a>
-				</div>
+						<a class="quiet-voice" href="https://twitter.com/<%=athlete.twitter%>" target="_twitter">
+							@<%=athlete.twitter%>
+						</a>
+					</div>
+				<% } %>	
 			</div>
 
 			<div class="college" data-position=<%=athlete.position%>>

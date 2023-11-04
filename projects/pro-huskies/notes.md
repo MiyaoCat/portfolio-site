@@ -18,3 +18,6 @@
 # Sort Years 
 - Not quite the same as alphabetically. Needs a comparison:
 (a, b) => b - a)
+
+# Array.from
+- Creates a new array from array-like objects or anything that's iterable. In my case, the LI's of athlete-cards
