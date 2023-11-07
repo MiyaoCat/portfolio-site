@@ -59,17 +59,7 @@
 	const $sort = document.getElementById('sortBy');
 	const $names = document.querySelectorAll('.name');
 	const $athletes = document.querySelectorAll('athlete-card');
-	
-	const years = [];
 
-	$athletes.forEach( function(athlete) {
-		const dataYears = athlete.querySelector('.years').innerText;
-		const firstYears = parseInt(dataYears.split('-')[0]);
-
-		years.push(firstYears);
-	})
-
-	console.log('YEARS: ', years)
 	const fNamesArray = [];
 	const lNamesArray = [];
 
@@ -101,37 +91,48 @@
 
 	function reorderListNum(sortedList, selector) {
 	  const ul = document.querySelector('.card-grid');
-	  const cards = Array.from(document.querySelectorAll('li[class="athlete"]'));
+	  const athletes = Array.from(document.querySelectorAll('li[class="athlete"]'));
 
-	  // Create a mapping of athlete cards by their year
 	  const cardsByYear = {};
-	  cards.forEach(function (athlete) {
+
+	  athletes.forEach(function (athlete) {
 	    const year = parseInt(athlete.querySelector(selector).innerText.split(' - ')[0]);
+
 	    if (!cardsByYear[year]) {
 	      cardsByYear[year] = [];
 	    }
+	    
 	    cardsByYear[year].push(athlete);
 	    console.log('cards by year: ', cardsByYear)
 	  });
 
-	  // Reorder the cards based on the sorted list
 	  const reorderedCards = [];
+
 	  sortedList.forEach(function (yearMatch) {
 	    if (cardsByYear[yearMatch]) {
 	      reorderedCards.push(...cardsByYear[yearMatch]);
 	    }
 		});
 
-	  // Clear the current content of the ul
 	  while (ul.firstChild) {
 	    ul.removeChild(ul.firstChild);
 	  }
 
-	  // Append the reordered cards to the ul
 	  reorderedCards.forEach(function (card) {
 	    ul.appendChild(card);
 	  });
 	}
+
+	const years = [];
+
+	$athletes.forEach( function(athlete) {
+		const dataYears = athlete.querySelector('.years').innerText;
+		const firstYears = parseInt(dataYears.split('-')[0]);
+
+		years.push(firstYears);
+	})
+
+	console.log('YEARS: ', years)
 
 	$sort.addEventListener('change', function() {
 		selectedSort = $sort.value;
