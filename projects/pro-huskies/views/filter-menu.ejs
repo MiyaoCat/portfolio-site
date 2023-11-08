@@ -20,6 +20,16 @@
 	})
 	const sportsSorted = uniqueSport.sort();
 
+	// GET UNIQUE POSITIONS
+	const positions = athletes.map( function(athlete) {
+		return athlete.position;
+	})
+
+	const uniquePosition = positions.filter( function(item, i, psoitions) {
+		return i == positions.indexOf(item);
+	})
+
+
 	//COUNT PLAYERS IN EACH SPORT
 	const sportsCount = {};
 	const countEachSport = sportsFlat.forEach(function (sport) {
@@ -75,7 +85,35 @@
 			</div>
 		</div>
 
+		<div class="filterPositions">
+			<label class="alert-voice" for="positionsFilter">
+				Position
+			</label>
+			<input type="checkbox" id="positionsFilter">
+
+			<div class="positionsOptions hidden">
+				<label for="allPositions" class="selectAll">
+					<input checked type="checkbox" id="allPositions">
+					<p class="normal-voice">Deselect All</p>
+				</label>
+
+				<div class="positionsSelect">
+					<% uniquePosition.forEach( function(position) { %>
+					<label for="<%=position%>">
+						<input 
+							checked
+							type="checkbox"
+							id="<%=position%>"
+							data-filter="<%=position%>"
+						>
+						<p class="normal-voice"><%=position%></p>
+					</label>
+					<% }); %>
+				</div>
+		</div>
+
 		<div class="filterYears">
+
 			<label class="alert-voice" for="yearsFilter">Years</label>
 			<input type="checkbox" id="yearsFilter">
 
@@ -102,5 +140,6 @@
 			</div>
 
 		</div>
+
 	</div>
 </section>
