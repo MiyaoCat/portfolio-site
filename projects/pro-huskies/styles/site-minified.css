@@ -267,6 +267,9 @@ button {
     display: flex;
     flex-direction: column;
   }
+  .filter-menu .hidden {
+    display: none;
+  }
   .filter-menu .sportsOptions label,
   .filter-menu .yearsOptions label,
   .filter-menu .positionsOptions label {
