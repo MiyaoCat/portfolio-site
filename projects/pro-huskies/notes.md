@@ -20,4 +20,9 @@
 (a, b) => b - a)
 
 # Array.from
-- Creates a new array from array-like objects or anything that's iterable. In my case, the LI's of athlete-cards
+- Creates a new array from array-like objects or anything that's iterable. In my case, the LI's of athlete-cards. Often used to transform something that's iterable into an array.
+
+# while
+
+- while (condition)
+  statement

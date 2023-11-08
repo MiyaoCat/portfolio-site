@@ -550,7 +550,6 @@ footer {
 /* - - - HEADER - - - */
 .site-header {
   display: flex;
-  width: 100vw;
   position: sticky;
   top: 0;
   z-index: 9;
