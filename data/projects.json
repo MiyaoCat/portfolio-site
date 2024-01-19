@@ -76,7 +76,7 @@
 			{
 				"module": "generic-text",
 				"subHeader": "",
-				"content": "My Layout Garden is a collection of responsive modules I built throughout the course and beyond. They're common modules you see on websites that employ either flexbox, grid or both. If you're on a computer, try expanding and contracting your window to see how the modules <b>respond</b> to the window size :)"
+				"content": "The Layout Garden is a collection of responsive modules I built throughout the course and beyond. They're common modules you see on websites that employ either flexbox, grid or both. If you're on a computer, try expanding and contracting your window to see how the modules <b>respond</b> to the window size :)"
 			},
 			{
 				"module": "button",
