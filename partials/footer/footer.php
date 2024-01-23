@@ -11,6 +11,7 @@
 	<a href="?page=style-guide">Style Guide</a>
 	<a href="?page=resume">Resume</a>
 
+	<p class="quiet-voice">Hi/Bye</p>
 </footer>
 
 
