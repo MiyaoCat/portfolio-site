@@ -6,7 +6,7 @@ var childElements = Array.from(bodyElement.children);
 var elementsToAnimate = childElements.slice(3, -3);
 var footer = gsap.timeline();
 
-const pages = document.querySelectorAll(".home, .contact, .about, .projects, .project, .exercises, .style-guide, .resume");
+const pages = document.querySelectorAll(".home");
 
 if (pages.length > 0) {
 	pageHeader
