@@ -26,7 +26,11 @@
 	grid-row: 7;
 }
 
-.projects project-card.portfolio-site {
+.projects project-card.frontend-mentor {
 	grid-row: 8;
+}
+
+.projects project-card.portfolio-site {
+	grid-row: 9;
 }
 

@@ -242,5 +242,34 @@
 				"caption": "Mockup of my site in Affinity Designer accounting for different screen sizes."
 			}
 		]
-	}
+	},
+	{
+	"title1": "Frontend",
+	"title2": "Mentor",
+	"slug": "frontend-mentor",
+	"intro": "A collection of frontend modules, components and webpages from Frontend Mentor",
+	"image":"images/projects/frontend-mentor.png",
+	"featured": false,
+	"languages": [
+		"HTML", "SASS/SCSS", "Javascript"
+	], 
+
+	"sections": [
+		{	
+			"module": "generic-text",
+			"subHeader": "",
+			"content": "To keep my Frontend skills sharp, I came across <a href='https://www.frontendmentor.io/' target='_blank'>Frontend Mentor</a>. The site provides a collection of different modules, components and webpages you can build at varying levels of skill (beginner, junior, advanced). Since I don't like coming up with the designs, I figured this would be a great place for me to practice and improve my skills. They provide the design files and I just have to build it, which is my favorite part about Frontend development. If you pay for their premium subscription, you recieve actual Figma files, just as you would in the real world.<br>Check out the work I've done, by clicking on the button. It'll take you to my collection of challenges I've completed thus far."
+		},
+		{
+			"module": "button",
+			"content": "See Collection",
+			"link": "https://frontend-mentor-challenges-coral.vercel.app/"
+		},
+		{
+			"module": "button",
+			"content": "GitHub",
+			"link": "https://github.com/MiyaoCat/frontend-mentor-challenges"
+		}
+	]
+}
 ]
