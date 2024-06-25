@@ -228,9 +228,15 @@ sub-header.software {
 	/* - - TECHNICAL SKILLS - - */
 	.resume .skills {
 		grid-row: 5;
-		grid-column: 10 / 14;
+		grid-column: 10;
 		margin-top: 10px;
 		margin-left: 10px;
+	}
+
+	.resume .skills ol {
+		display: grid;
+		grid-template-rows: 1fr auto;
+		grid-template-columns: repeat(2, auto);
 	}
 
 	.resume .skills h2 {
@@ -240,7 +246,7 @@ sub-header.software {
 }
 
 @media (min-width: 1030px) {
-	.software ol {
+	.software ol, .resume .skills ol {
 		grid-template-columns: repeat(3, auto);
 	}
 

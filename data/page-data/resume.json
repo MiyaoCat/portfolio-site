@@ -17,7 +17,7 @@
 				{
 					"company": "<a href=\"https://connectedtravel.com/\" target=\"_blank\">Connected Travel, LLC</a>",
 					"slug": "connected-travel",
-					"role": "Program Manager",
+					"role": "Technical Support",
 					"location": "Remote",
 					"startDate": "January 2018",
 					"endDate": "Present",
@@ -90,7 +90,7 @@
 		{	
 			"type" : "skills",
 			"heading": "Technical Skills",
-			"technologies": ["HTML/CSS", "PHP", "Javascript", "Vue"]
+			"technologies": ["HTML/CSS", "SASS/SCSS", "PHP", "Javascript", "Node.js", "Vue"]
 		}
 	]
 }
